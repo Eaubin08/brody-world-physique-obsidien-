@@ -1,5 +1,7 @@
 # 04 — External Open-Source Component Map
 
+> **Image-first placement and branch-level status (2026-10-08):** [22_IMAGE_BRANCH_AND_DONOR_MAP.md](22_IMAGE_BRANCH_AND_DONOR_MAP.md). This is the original donor candidate inventory, **not** evidence of installations. First goal is to make I1 perception and G1 generation work separately, then IG2 closed-loop comparison; do **not** wait for full Dreaming. The current Jarvis Qwen-VL seam is an optional first visual describer, so MiniCPM-V is not a mandatory second vision LLM.
+
 **Rule:** external components provide capabilities. They never define Obsidia's canonical ontology.
 
 Licences and model terms must be re-verified at install time and recorded in the external manifest.
