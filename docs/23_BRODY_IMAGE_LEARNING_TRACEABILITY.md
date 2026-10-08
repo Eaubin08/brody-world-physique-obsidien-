@@ -3,6 +3,8 @@
 **Date :** 2026-10-08 · **État :** AUDIT DE SOURCES PARTIEL ET PLAN DE TESTS · **Portée :** Brody Image I0 → I1/G1/IG2 puis I3–I7.  
 **Autorité :** aucune modification KX108, aucune auto-promotion mémoire, aucun modèle déclaré installé. `main` ne fait pas partie de cette passe.
 
+> **Priorité Brody Image :** [24 — Audit de fidélité visuel et spécification fonctionnelle](24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md). La section historique des 81 versions dans ce document **ne prescrit aucune architecture du générateur Brody** ; elle est une note de provenance secondaire, hors tests image immédiats.
+
 ## 0. Pourquoi ce document
 
 [21 — plan maître](21_BRODY_IMAGE_MASTER_PLAN.md) relie déjà Brody, perception, monde, génération et re-perception. Cette passe examine les **mécanismes originaux d'apprentissage et de création** et les traduit en **tests falsifiables** plutôt que de supposer qu'ils sont déjà réalisés. Elle n'ajoute pas ces mécanismes à l'Atlas comme preuve de leur existence runtime.
