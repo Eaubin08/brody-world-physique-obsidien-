@@ -94,6 +94,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - [Licences, provenance and boundaries](docs/08_LICENSE_PROVENANCE.md)
 - [PC bring-up checklist](docs/09_PC_BRINGUP.md)
 - [Frozen architecture decisions](docs/10_DECISIONS.md)
+- [Sources and upstream references](docs/11_SOURCES.md)
 
 ## Current milestone
 
