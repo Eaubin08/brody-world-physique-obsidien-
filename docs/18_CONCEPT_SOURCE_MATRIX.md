@@ -104,8 +104,8 @@
 | 79 | ERA — Espace de Raisonnement Assisté | `DIRECT_READ` | [ERA-A carte B9](https://docs.google.com/document/d/1Que8iatRKSCtGwuFaIHAOFQHGU4_aMn4EKRydYktfQU/edit); [ERA-B Reverse](https://docs.google.com/document/d/1L_LG0UE4vyLn-iXF0pvjc94owZCI3McF2SWJo3TG8nY/edit); [ERA runtime not implemented](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_cognitive_modules_adapter.py) |
 | 80 | World Foundry | `DIRECT_READ` | [WFD](https://docs.google.com/document/d/1d5Gf5-r1d43wetqaANCzCff5CPyYckwTw9_AuWwicpg/edit) |
 | 81 | Formule du Savoir Obsidia (FSO) | `DIRECT_READ` | [FSO archive user+AI](https://docs.google.com/document/d/1bpOAmI8uIjbDYdDLBwkoxBDv5WYIMjv0/edit) |
-| 82 | "Build the body before searching for a total brain" | `INDEXED_NOT_VERIFIED` | [V5](https://docs.google.com/document/d/1emMNeq8Lgxckos1B2RoKSISXpTIZHlk4qOYfv7Q9yl8/edit) |
-| 83 | "Structure can replace part of inference" | `INDEXED_NOT_VERIFIED` | [V5](https://docs.google.com/document/d/1emMNeq8Lgxckos1B2RoKSISXpTIZHlk4qOYfv7Q9yl8/edit) |
+| 82 | "Build the body before searching for a total brain" | `DIRECT_READ` | [Obsidia V5 source read](https://docs.google.com/document/d/1emMNeq8Lgxckos1B2RoKSISXpTIZHlk4qOYfv7Q9yl8/edit) |
+| 83 | "Structure can replace part of inference" | `DIRECT_READ` | [Obsidia V5 source read](https://docs.google.com/document/d/1emMNeq8Lgxckos1B2RoKSISXpTIZHlk4qOYfv7Q9yl8/edit) |
 | 84 | Fast Path | `UPSTREAM_CODE_READ` | [Fast path](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_v3_fastpath_response.py) |
 | 85 | Path Compute | `UPSTREAM_CODE_READ` | [Path Compute disabled](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/path_compute_v0/boundary.py); [Path Compute README](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/path_compute_v0/README.md) |
 | 86 | MEMZUM | `UPSTREAM_CODE_READ` | [MEMZUM activation](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_memzum_activation_adapter.py) |
@@ -142,4 +142,4 @@
 - La matrice est volontairement conservatrice : une absence de lien dans cette passe n'est pas une absence historique du concept.
 - Les variantes conflictuelles et extraits examinés sont justifiés dans `docs/17_F0_SOURCE_RECONCILIATION.md`.
 
-**Comptage actuel :** 3 DESCENDANT_HYPOTHESIS, 29 DIRECT_READ, 1 EXTERNAL_DONOR_READ, 2 INDEXED_NOT_VERIFIED, 1 PARTIAL_NAME_COLLISION, 9 PROJECT_DOC_READ, 5 RESEARCH_CODE_READ, 1 REVIEW_REQUIRED, 32 UPSTREAM_CODE_READ, 25 UPSTREAM_DOC_READ.
+**Comptage actuel :** 3 DESCENDANT_HYPOTHESIS, 31 DIRECT_READ, 1 EXTERNAL_DONOR_READ, 1 PARTIAL_NAME_COLLISION, 9 PROJECT_DOC_READ, 5 RESEARCH_CODE_READ, 1 REVIEW_REQUIRED, 32 UPSTREAM_CODE_READ, 25 UPSTREAM_DOC_READ.
