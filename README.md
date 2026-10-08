@@ -113,6 +113,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Image I1/R1 CPU executable baseline — subject isolation, transplant and pixel fidelity report](docs/25_BRODY_IMAGE_I1_R1_PROTOTYPE_CPU.md)**
 - **[Jarvis Qwen-VL local adapter — descriptive candidate, no new model download, fixed/portable setup](docs/26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md)**
 - **[Reverso + World Model + selective learning: source-grounded method and executable first slice](docs/27_REVERSO_WORLD_MODEL_APPRENTISSAGE_SELECTIF.md)**\n- **[Pre-verbal learning: situated world prediction, physics/sensor evidence, scoped knowledge vs truth](docs/28_APPRENTISSAGE_PREVERBAL_MONDE_PHYSIQUE.md)**
+- **[Executable first pre-verbal prediction experiment — held-out future measurement, source/frame constraints and baseline checks](docs/29_PREVERBAL_PREDICTION_EXPERIENCE_V0.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -173,6 +174,23 @@ fixed Windows PC with a personally selected photo; model description and
 file-to-Qwen-description route on that PC only. The photo and output are not
 committed to GitHub. Connecting F16/MMonde/World Model to this receipt, Brody
 reasoning, Binder and genuine generation remain future work.
+
+## First pre-verbal world experiment — independent held-out observation
+
+The module [`preverbal_prediction_v0.py`](brody_world_physique/preverbal_prediction_v0.py)
+tests a **kinematic mathematical candidate**, not learned physical laws: 3 prior
+source-tagged positions -> predict a 4th -> compare against independent held-out
+measurement and static/linear benchmarks. Different frames, units or observed vs
+synthetic source types are rejected; no canonical knowledge or memory write.
+
+```powershell
+py -m examples.demo_preverbal_world_v0 --out build/preverbal-world-demo
+py -m brody_world_physique.preverbal_prediction_v0 --input build/preverbal-world-demo/source_measurements.json --out build/preverbal-world-demo/result.json
+```
+
+This demonstration is SYNTHETIC. Real physical-world understanding,
+reliable measurement extraction from video, transfer and learning are **not
+proven**. See [29 — pre-verbal prediction protocol](docs/29_PREVERBAL_PREDICTION_EXPERIENCE_V0.md).
 
 ## Current milestone
 
