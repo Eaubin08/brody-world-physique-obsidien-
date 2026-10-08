@@ -128,6 +128,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[V4.2 orientation & reciprocity — learn four image-frame directions from labeled geometric episodes, derive reciprocal relations, record unsupported HOLDs and keep pixel vs relational reconstruction scores separate](docs/41_BRODY_V4_2_ORIENTATION_RECIPROQUE_MONDE.md)**
 - **[42 — Cross-audit: spatial vs pixel, time/motion, multirepresentation, multiscale micro/nano/molecular-to-cosmic, with upstream Obsidia contract links](docs/42_AUDIT_TRANSVERSAL_REPRESENTATIONS_MONDE_MULTIECHELLES.md)**
 - **[43 — Preforge experiment protocol: one ball video across image/space/time/motion, held-out preview, ablations, reversibility and evidence/unknown gates](docs/43_EXPERIENCE_COMMUNE_BALLE_REPRESENTATIONS_V0.md)**
+- **[44 — P1 executable multirepresentation ball bridge: source video → sealed forecast → real Reverso images → 4 candidate views + F0 projection/delta/experience + replay](docs/44_P1_PASSERELLE_MULTIREPRESENTATIONS_VIDEO_MONDE.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -497,6 +498,25 @@ under identical held-out observations, with precommits, ablations,
 unknown/HOLD and replay. **Neither document implements the new bridge**:
 no runtime tests, kernel, GPS, B8/Class D, Native Memory, or model
 weights are changed by this documentation step.
+
+## P1 — one synthetic episode with multiple bounded representations
+
+[`multirepresentation_ball_bridge_v5.py`](brody_world_physique/multirepresentation_ball_bridge_v5.py)
+joins **existing** `world_transfer_probe_v1` sealed precommits,
+`iter_video_points` anchored 2D observations and
+`examples/reverso_future_preview_v1.py` generated/restored PNGs.
+Four **nonindependent** views — raster, spatial, temporal and motion —
+point to a **single** simulated video source and are attached to existing
+`WorldTransformationV0`, `WorldStateProjectionV0`,
+`WorldStateDeltaV0` and `WorldExperienceCandidateV0` contracts.
+
+One P1 test case reported center error around 2.91 px; this is **not**
+evidence that combined views outperform isolated ones. The next P2
+experiment must run matched ablations and retain unknown/HOLD before
+any measured fusion-benefit claim. No new canonical WorldState, F16
+real-image object, scientific law, knowledge promotion or Native Memory
+write is implemented. [P1 Windows commands, replay and evidence branch
+publication](docs/44_P1_PASSERELLE_MULTIREPRESENTATIONS_VIDEO_MONDE.md).
 
 ## Current milestone
 
