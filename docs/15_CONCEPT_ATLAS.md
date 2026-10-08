@@ -578,8 +578,13 @@ Those exact primitives are **historical source material** unless confirmed by cu
 
 **CURRENT PRINCIPLE / HISTORICAL DETAILS TO AUDIT**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Source historique OS Trad](https://docs.google.com/document/d/1ZTisSqVwl4SUyp3T_BjZr2OxCkKaMmoUtY9W8X8oyYE/edit).
+- **Lecture / frontière :** Source indexée, lecture de définition exacte à finaliser ; OS Trad n'est pas le kernel.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 16. IR — Internal Representation
 
 ## Definition
@@ -600,8 +605,13 @@ The exact current IR must be derived from present code/contracts, not assumed fr
 
 **CURRENT PRINCIPLE / IMPLEMENTATION EVOLVES**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Source historique OS Trad](https://docs.google.com/document/d/1ZTisSqVwl4SUyp3T_BjZr2OxCkKaMmoUtY9W8X8oyYE/edit).
+- **Lecture / frontière :** Source indexée ; portée actuelle du format IR à auditer sur branche runtime.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 17. Reverse OS / SSR
 
 ## Definition
@@ -639,8 +649,13 @@ It does not decide.
 
 **CURRENT ARCHITECTURAL PRINCIPLE**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Source historique Reverse OS](https://docs.google.com/document/d/1L_LG0UE4vyLn-iXF0pvjc94owZCI3McF2SWJo3TG8nY/edit).
+- **Lecture / frontière :** Source indexée ; ne confondre ni représentation de sortie ni autorisation d'action.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 18. Brody
 
 ## Definition
@@ -684,8 +699,13 @@ A generative model can contribute to Brody without being Brody.
 
 **CURRENT ORGAN / CONTINUING DEVELOPMENT**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Audit historique Brody](https://docs.google.com/document/d/1PmNNst_WVYflLQmCn8z6RrwGpYTHZBMe5F4DULiN7yc/edit).
+- **Lecture / frontière :** Source d'audit historique, ne vaut pas preuve de branchement Brody actuel.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 19. SENS / Cognition
 
 ## Definition
@@ -886,8 +906,13 @@ Exact runtime equivalence must be audited before reviving a separate "Zone Laten
 
 **HISTORICAL CONCEPT / PARTLY ABSORBED**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit) ; [Friction Symbolique](https://docs.google.com/document/d/1Zu6jX4P-RFB8owuCNTs6yWTkC8Yvo5Ef34lYTtcjBFo/edit).
+- **Lecture / frontière :** Le sas latent historique n'est ni mémoire validée ni droit d'écriture. La source Friction montre un exemple, pas une intégration actuelle.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 27. Continuum
 
 ## Definition
@@ -922,8 +947,13 @@ Conceptually close to:
 
 **HISTORICAL CONCEPT / TO MAP**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit).
+- **Lecture / frontière :** Input + État + Résultat attesté comme principe historique ; le grand export Continuum est une archive dialoguée, pas un contrat runtime.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 28. Friction Symbolique
 
 ## Definition
@@ -954,8 +984,13 @@ Random adversarial noise or unbounded self-modification.
 
 **FOUNDATIONAL LEARNING IDEA / NOW MAPPED TO DELTA LOOP**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Friction Symbolique](https://docs.google.com/document/d/1Zu6jX4P-RFB8owuCNTs6yWTkC8Yvo5Ef34lYTtcjBFo/edit) ; [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit).
+- **Lecture / frontière :** La source Friction donne la divergence |logique-diffusif| et un seuil illustratif 0,3 ; ne pas en faire un seuil X108 ni une écriture mémoire canonique.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 29. Shazam Cognitif
 
 ## Definition
@@ -990,8 +1025,13 @@ It produces a candidate signature with uncertainty.
 
 **HISTORICAL PRIMARY CONCEPT / ACTIVE DESIGN SOURCE**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Shazam Cognitif — 34 Arbres](https://docs.google.com/document/d/1KshgP97PKdTZAfRxe9-YfcVnIJceKbgGCyxC-HdRj18/edit) ; [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit).
+- **Lecture / frontière :** Le document Shazam propose extraction de signatures + projection 34 arbres en pseudocode ; aucune preuve de reconnaissance émotionnelle fiable ou de middleware déployé.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 30. 34 Arbres
 
 ## Definition
@@ -1010,8 +1050,13 @@ Current verified runtime unless a branch/code audit says so.
 
 **HISTORICAL COGNITIVE SOURCE**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Shazam Cognitif — 34 Arbres](https://docs.google.com/document/d/1KshgP97PKdTZAfRxe9-YfcVnIJceKbgGCyxC-HdRj18/edit).
+- **Lecture / frontière :** 34 arbres = proposition d'espace d'activation historique ; ne pas déduire que la matrice tourne en production.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 31. VisualFingerprint
 
 ## Definition
@@ -1042,8 +1087,13 @@ A biometric truth claim by default.
 
 **PLANNED**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Shazam Cognitif — 34 Arbres](https://docs.google.com/document/d/1KshgP97PKdTZAfRxe9-YfcVnIJceKbgGCyxC-HdRj18/edit).
+- **Lecture / frontière :** Filiation d'intention seulement : Shazam texte/tonalité ≠ algorithme VisualFingerprint. Implémentation visuelle non attestée.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 32. Invariant rho (ρ)
 
 ## Definition
@@ -1073,8 +1123,13 @@ Every pixel.
 
 **HISTORICAL IDEA / ACTIVE DESIGN SOURCE**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit).
+- **Lecture / frontière :** ρ désigne des propriétés identitaires à préserver selon cette archive ; ce n'est pas une constante physique établie.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 33. VisualInvariant — LOCK / FLEX / IGNORE
 
 ## Definition
@@ -1117,8 +1172,13 @@ IGNORE:
 
 **PLANNED**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit).
+- **Lecture / frontière :** Critères de rigueur historiques (identité versus transformation permise), sans validation de pipeline image.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 34. FaceLock / ID-Lock
 
 ## Definition
@@ -1141,8 +1201,13 @@ VisualInvariant LOCK semantics.
 
 **HISTORICAL CONCEPT / DESIGN SOURCE**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit).
+- **Lecture / frontière :** FaceLock/ID-Lock présent dans l'archive ; l'exigence « pixel par pixel » est une intention historique, pas une fidélité garantie.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 35. Contrôleur de Rigueur
 
 ## Definition
@@ -1161,8 +1226,13 @@ LOCK / FLEX / IGNORE plus tolerances.
 
 **HISTORICAL IDEA / MODERNIZED**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit).
+- **Lecture / frontière :** Contrôle différentiel de rigueur décrit ; aucune connexion exécutable présumée.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 36. Analyse <-> Synthèse / Méthode Réciproque
 
 ## Definition
@@ -1197,8 +1267,13 @@ perception
 
 **FOUNDATIONAL VISUAL LEARNING METHOD / NOT FULLY IMPLEMENTED**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit).
+- **Lecture / frontière :** Décomposer → reconstruire → revérifier : méthode de validation proposée, non démonstration actuelle de conservation d'identité.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 37. Invariant Dynamique
 
 ## Definition
@@ -1233,8 +1308,13 @@ A static visual embedding.
 
 **PRIMARY HISTORICAL IDEA / PARTLY COVERED BY WORLD DYNAMICS**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit).
+- **Lecture / frontière :** Le noyau spatio-temporel vidéo est une idée de continuité ; la branche de dynamique du monde n'en fournit qu'une couverture partielle.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 38. Multimodalité Harmonique
 
 ## Definition
@@ -1263,8 +1343,13 @@ while preserving each modality's clock, provenance, frame and uncertainty.
 
 **HISTORICAL IDEA / CURRENTLY MATERIALIZED IN A MORE BOUNDED FORM**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit).
+- **Lecture / frontière :** La « note pivot » intermodale est un objectif historique ; absence de preuve d'une équivalence mathématique universelle.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 39. Reverse360
 
 ## Definition
@@ -1712,8 +1797,13 @@ History or evidence.
 
 **PLANNED**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Module 5 — Apprentissage et cinématique](https://docs.google.com/document/d/1iVwqEeo2TTa3Mv6wYFdJOq_8-mAfFpz7-AJ46iMxm7o/edit).
+- **Lecture / frontière :** Le Module 5 expose une direction de simulation sans interférence, pas un moteur dreaming connecté.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 58. Weight-last learning
 
 ## Definition
@@ -2177,8 +2267,13 @@ current descendant if any
 
 **MULTI-GENERATION USER CONCEPT / CURRENT LOCAL VARIANTS + HISTORICAL RESEARCH PROTOCOL**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [AVDR Auto-Verifiable Developmental Reasoner](https://docs.google.com/document/d/1uDk3FC6a7aBGmGEul4mHzn9fMitc44xRSgPz2kxDzh4/edit) ; [Protocoles Fondateurs (variante AVDR)](https://docs.google.com/document/d/1R-BkkUUknUUs-C0rUA6LwBAISGIGwx3P8ycOojbjzOk/edit) ; [Friction Symbolique](https://docs.google.com/document/d/1Zu6jX4P-RFB8owuCNTs6yWTkC8Yvo5Ef34lYTtcjBFo/edit).
+- **Lecture / frontière :** Variantes effectivement retrouvées : (i) Auto-Verifiable Developmental Reasoner ; (ii) Apprentissage par Vision-Dérive-Réflexion ; (iii) Observation–Validation–Disruption–Réintégration. Maintenir séparément canon Gencoin Accueil–Vibration–Déploiement–Résolution et AVDR opérationnel Obsidure Audit–Validation–Disruption–Réintégration. Aucune expansion universelle.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 71. ADeLe / A2DR
 
 ## Definition
@@ -2245,8 +2340,13 @@ A Gencoin sandbox balance operator exists, but that does **not** prove that the 
 
 **DOCUMENTED / PARTIAL SANDBOX IMPLEMENTATIONS / NOT GLOBALLY BOUND**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Éveil de l'OS Cognitif](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit) ; [Calcul de la Balance Mathématique](https://docs.google.com/document/d/1SKfhUnnGYKiOM9w8FDPavtEtwqDWb7HH/edit).
+- **Lecture / frontière :** La Balance Proportionnelle Exponentielle (pondération/résonance) **n'est pas** le Calcul de la Balance Mathématique (retrait d'un facteur/réintégration inverse). Rapport formel : NON ÉTABLI.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 73. Veto Harmonique
 
 ## Definition
@@ -2313,8 +2413,13 @@ Preserve sensitivity to asymmetric/critical weakness while keeping the score non
 
 **HISTORICAL IDEA WITH CURRENT READONLY DESCENDANT / KX108 AUTHORITY PRESERVED**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Constitution X-108 historique](https://docs.google.com/document/d/115BlgqjdgU8B1UQiryBvoBxYaXoZu_60uo19CHxEqxs/edit).
+- **Lecture / frontière :** Source constitutionnelle indexée ; tests et formule actuels du descendant readonly restent à vérifier sur branche actuelle avant tout freeze.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 74. Obsidure
 
 ## Definition
@@ -2577,8 +2682,13 @@ Current source-traceability audits therefore classify the ERA formula as **DOC_O
 
 **USER DESIGN SPEC / DOC_ONLY / NOT CURRENT RUNTIME**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Source historique Reverse OS](https://docs.google.com/document/d/1L_LG0UE4vyLn-iXF0pvjc94owZCI3McF2SWJo3TG8nY/edit).
+- **Lecture / frontière :** Source historique indexée, mais ERA demeure DOC_ONLY suivant le statut actuel décrit dans l'Atlas.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 80. World Foundry
 
 ## Definition
@@ -2621,8 +2731,13 @@ Closely related to:
 
 **USER VISION / FUTURE EDUCATIONAL-SIMULATION LAYER**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Archive World Foundry](https://docs.google.com/document/d/1d5Gf5-r1d43wetqaANCzCff5CPyYckwTw9_AuWwicpg/edit).
+- **Lecture / frontière :** WorldSpec (ontology/entities/laws/capabilities/events/initial_state/hidden_state/perturbations/objectives/invariants/renderers) présent dans l'archive ; conception, pas moteur World Foundry installé.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 81. Formule du Savoir Obsidia (FSO)
 
 ## Definition
@@ -2667,8 +2782,13 @@ Its strongest surviving ideas are now distributed across:
 
 **HISTORICAL LEARNING FRAMEWORK / PARTLY ABSORBED**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Formule du Savoir](https://docs.google.com/document/d/1bpOAmI8uIjbDYdDLBwkoxBDv5WYIMjv0/edit).
+- **Lecture / frontière :** Source primaire indexée ; principes pédagogiques transmis partiellement, pas une formule mathématique universelle prouvée.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 82. "Build the body before searching for a total brain"
 
 ## Definition
@@ -2700,8 +2820,13 @@ A rejection of neural models.
 
 **FOUNDATIONAL USER METHOD**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [Obsidia V5](https://docs.google.com/document/d/1emMNeq8Lgxckos1B2RoKSISXpTIZHlk4qOYfv7Q9yl8/edit).
+- **Lecture / frontière :** Source narrative récente indexée ; doctrine, pas preuve opérationnelle de chaque organe.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 83. "Structure can replace part of inference"
 
 ## Definition
@@ -3148,8 +3273,13 @@ Conceptually relevant to:
 
 **HISTORICAL AVDR MODULE / FUTURE LEARNING REFERENCE**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [AVDR Auto-Verifiable Developmental Reasoner](https://docs.google.com/document/d/1uDk3FC6a7aBGmGEul4mHzn9fMitc44xRSgPz2kxDzh4/edit).
+- **Lecture / frontière :** Task Forge apparaît comme module du protocole de recherche AVDR, sans autonomie exécutoire.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 97. Solve Engine
 
 ## Definition
@@ -3168,8 +3298,13 @@ A voting authority.
 
 **HISTORICAL AVDR MODULE / SELECTIVE DESIGN SOURCE**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [AVDR Auto-Verifiable Developmental Reasoner](https://docs.google.com/document/d/1uDk3FC6a7aBGmGEul4mHzn9fMitc44xRSgPz2kxDzh4/edit).
+- **Lecture / frontière :** Solve Engine apparaît comme module de proposition de pistes, sans droit de décision.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 98. Cognitive Evaluator / Context Filter / Reasoning Trace / Cognitive Calibrator
 
 ## Definition
@@ -3216,8 +3351,13 @@ Parts of the intent are now distributed across:
 
 **HISTORICAL AVDR MODULE FAMILY / PARTLY ABSORBED**
 
----
+## Sources et généalogie — F0 (2026-10-08)
 
+- **Documents :** [AVDR Auto-Verifiable Developmental Reasoner](https://docs.google.com/document/d/1uDk3FC6a7aBGmGEul4mHzn9fMitc44xRSgPz2kxDzh4/edit).
+- **Lecture / frontière :** Évaluation/filtrage/trace/calibration explicitement dans l'architecture de recherche, pas connexion actuelle attestée.
+- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+
+---
 # 99. CG9 Global Provider Binder
 
 ## Definition
