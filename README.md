@@ -99,6 +99,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - [F0 cross-audit — SENS / MMonde / Memory / GPS](docs/13_F0_CROSS_AUDIT.md)
 - [F0 learning-loop contract implementation](docs/14_F0_LEARNING_LOOP_IMPLEMENTATION.md)
 - [Obsidia concept atlas / definitions](docs/15_CONCEPT_ATLAS.md)
+- [Concept-definition audit method](docs/16_CONCEPT_AUDIT_METHOD.md)
 
 ## Current milestone
 
