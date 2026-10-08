@@ -47,6 +47,20 @@ Le module apprenant reçoit uniquement un vocabulaire de gestes compatible avec 
 
 Le vérificateur relit les **mémoires V1 puis V2**, recalcule les gestes proposés, leur rendu, les SHA des images et des procédures, les expériences d'interférence et les choix d'instrument. Une référence ou un engagement modifié entraîne un rejet. **Ce mécanisme vérifie la cohérence de l'ordre de la boucle et de ses artefacts, pas une garantie tierce d'horodatage ni une preuve de raisonnement intérieur.**
 
+## Premiers résultats reproductibles — CI Windows et Linux
+
+[GitHub Actions run 37850368241](https://github.com/Eaubin08/brody-world-physique-obsidien-/actions/runs/37850368241) a exécuté **152 tests** sur Python 3.11, 3.12 et **Windows 3.14** ; les scénarios V3 passent sur Linux 3.11 et Windows 3.14 avec `PASS_HIDDEN_REFERENCE_EPISODIC_REPLAY`.
+
+| Niveau | Différence de pixels (XOR sur image binaire) | Face à une page blanche | Interprétation bornée |
+|---|---:|---|---|
+| Immédiat — pentagone synthétique nouveau | **159** | Meilleur | Restitution partielle depuis le contour sauvegardé |
+| Différé — même pentagone après 3 observations interférentes | **159** | Meilleur | Souvenir relu intact, **pas** une progression de dessin ou preuve d'oubli humain |
+| Transfert — carré + triangle en forme nouvelle | **223** | Meilleur | Composition de gestes antérieurs selon placement **donné** par le professeur |
+
+Trois engagements ont été rejoués, leurs images ont été comparées aux références après la production et **aucune écriture Native Memory** n'a eu lieu. Les images sont visibles dans les artefacts du workflow sous `build/drawing-hidden-v3/student_images` (la rétention des artefacts CI est limitée).
+
+Les 159 pixels d'erreur immédiat et différé sont **identiques** : on ne déduit pas que le système s'est amélioré pendant l'interférence. Le chiffre 223 ne constitue pas un taux de réussite de « dessin d'une maison » en compréhension conceptuelle : l'assemblage de gestes et les boîtes de placement sont explicitement demandés. Ces tests restent **SIMULATED** ; l'interface élève ne lit plus la référence pendant le dessin, mais l'expérience est exécutée dans un même processus, sans isolation sécuritaire.
+
 ## Tests de validité à conserver
 
 - Comparer la sortie mémoire à **une feuille blanche** et utiliser la même métrique sur les trois niveaux ;
