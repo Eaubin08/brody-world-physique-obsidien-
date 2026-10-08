@@ -116,6 +116,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Executable first pre-verbal prediction experiment — held-out future measurement, source/frame constraints and baseline checks](docs/29_PREVERBAL_PREDICTION_EXPERIENCE_V0.md)**
 - **[First real-video intake — human annotated 4 positions, forecast sealed before showing frame 4](docs/30_PREMIERE_VIDEO_PHYSIQUE_ANNOTATION_MANUELLE.md)**
 - **[Controlled automatic orange-ball detection on the exact simulated test video (SHA-256 pinned), then held-out evaluation](docs/31_BALLE_AUTO_SOURCE_PINNEE.md)**
+- **[Experiential learning without preloaded physics laws: 8 simulated videos, empty/one/four experiences, holdout and honest benchmarks](docs/32_EXPERIENCES_ZERO_SAVOIR_SANS_LOI.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -226,6 +227,24 @@ py -m brody_world_physique.auto_ball_demo_v0 --video "$env:USERPROFILE\\Download
 ```
 
 See [31 — pinned automatic ball measurement](docs/31_BALLE_AUTO_SOURCE_PINNEE.md).
+
+## Learn motion patterns from experience (not a hardcoded physics law)
+
+[`experiential_video_v0.py`](brody_world_physique/experiential_video_v0.py)
+begins with **empty candidate memory** and `HOLD_NO_EXPERIENCE`. Four TRAIN
+videos yield source-tagged motion histories. The learner matches patterns
+with nearest previously observed transitions, with no built-in gravity,
+bounce, or wind formula. It freezes memory BEFORE four distinct TEST
+videos, emits candidate predictions before future frame decoding, and
+reports both errors and honest HOLD rates. A programmed orange-marker
+detector + numerical association algorithm are still necessary; this is
+**self-supervised on SIMULATED data**, not a learned physical world model.
+No pretrained vision model or new weights are installed.
+
+Download the 8-clip suite archive linked separately in this conversation,
+extract to a local folder, then run `--suite <folder>/suite.json` and
+`--train-videos 0`, `1` and `4` with separate output folders.
+[Complete Windows PowerShell commands and limits](docs/32_EXPERIENCES_ZERO_SAVOIR_SANS_LOI.md).
 
 ## Current milestone
 
