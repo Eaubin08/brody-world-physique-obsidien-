@@ -372,7 +372,7 @@ a new visual model. No Native Memory writes or authority promotion.
 
 ## Hidden-reference drawing school V3
 
-[\`drawing_memory_school_v3.py\`](brody_world_physique/drawing_memory_school_v3.py)
+[`drawing_memory_school_v3.py`](brody_world_physique/drawing_memory_school_v3.py)
 runs three separate tests with **V1 gesture candidates + V2 empirical instrument
 choice**: reproduce a new pentagon from a saved stroke representation after
 the teacher image is removed from the student interface; reload that
@@ -384,10 +384,10 @@ This is an API/order separation, not a secured student sandbox: detailed
 contour gestures retain substantial information from the original, and
 interference is not a wall-clock delay.
 
-\`\`\`powershell
-py -m brody_world_physique.drawing_memory_school_v3 --prior-v2 "build\\existing-instruments" --out "build\\drawing-hidden-v3"
-py -m brody_world_physique.drawing_memory_school_v3 --verify "build\\drawing-hidden-v3"
-\`\`\`
+```powershell
+py -m brody_world_physique.drawing_memory_school_v3 --prior-v2 "build\existing-instruments" --out "build\drawing-hidden-v3"
+py -m brody_world_physique.drawing_memory_school_v3 --verify "build\drawing-hidden-v3"
+```
 
 See [38 — V3 protocol and limitations](docs/38_DESSIN_MEMOIRE_MODELE_CACHE_V3.md).
 
