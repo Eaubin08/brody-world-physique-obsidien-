@@ -215,40 +215,61 @@ def correct_drawing(reference:Image.Image, initial:tuple[GestureV1,...]=(),
     error=_error(truth,gestures)
     proposals=suggest_gestures_from_reference(reference)
     changes=[]
+    rejected_proposals=0
     for iteration in range(max_revisions):
         best=(error,None,None)
         # Always preserve source and label of the proposal. No teacher class
         # name, formula or generator parameter enters the trace extractor.
+        alternatives_evaluated=0
         for i,candidate in enumerate(proposals):
             if candidate in gestures:continue
             candidate_set=gestures+[candidate]
             score=_error(truth,candidate_set)
+            alternatives_evaluated+=1
             if score<best[0]:best=(score,"ADD",i)
         for existing in range(len(gestures)):
             score=_error(truth,gestures[:existing]+gestures[existing+1:])
+            alternatives_evaluated+=1
             if score<best[0]:best=(score,"ERASE",existing)
             for i,candidate in enumerate(proposals):
                 if candidate==gestures[existing]:continue
                 trial=gestures[:existing]+[candidate]+gestures[existing+1:]
                 score=_error(truth,trial)
+                alternatives_evaluated+=1
                 if score<best[0]:best=(score,"REPLACE",(existing,i))
         score,operation,idx=best
+        rejected_proposals+=alternatives_evaluated-int(operation is not None)
         if operation is None:break
         previous=error
+        before_gesture=None
+        applied_gesture=None
         if operation=="ADD":
-            gestures.append(proposals[idx])
+            applied_gesture=proposals[idx]
+            gestures.append(applied_gesture)
         elif operation=="ERASE":
-            gestures.pop(idx)
+            before_gesture=gestures.pop(idx)
         else:
             old,new=idx
-            gestures[old]=proposals[new]
+            before_gesture=gestures[old]
+            applied_gesture=proposals[new]
+            gestures[old]=applied_gesture
         error=score
         changes.append({"revision":iteration+1,"action":operation,
+                        "target_index":len(gestures)-1 if operation=="ADD" else
+                                       idx if operation=="ERASE" else idx[0],
+                        "gesture_before":asdict(before_gesture) if before_gesture else None,
+                        "gesture_applied":asdict(applied_gesture) if applied_gesture else None,
+                        "alternatives_evaluated":alternatives_evaluated,
+                        "choice_rule":"MIN_PIXEL_XOR_STRICT_IMPROVEMENT_FIRST_TIE",
                         "error_before":previous,"error_after":score,
                         "strict_improvement":score<previous})
         if score==0:break
     return {"raw_recall_error":raw_error if initial else None,
             "memory_rejected":rejected,
+            "initial_gestures":[asdict(g) for g in initial],
+            "rejected_alternative_evaluations":rejected_proposals,
+            "proposed_gesture_count":len(proposals),
+            "algorithm_choice_reason":"PIXEL_ERROR_MINIMIZATION_GIVEN_VISIBLE_REFERENCE",
             "blank_error":blank_error,
             "error_after_recall_gate":blank_error if rejected else raw_error,
             "final_error":error,"changes":changes,
