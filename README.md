@@ -1,6 +1,6 @@
 # Brody World Physique Obsidia
 
-**Status:** IMAGE I1/R1 CPU EDITOR IMPLEMENTED; MODEL-BASED GENERATION NOT YET CONNECTED  
+**Status:** IMAGE R1 CPU EDITOR + I1 JARVIS-QWEN-VL LOCAL CLIENT IMPLEMENTED; PHYSICAL-PC CHECK AND GENERATOR NOT YET VALIDATED  
 **Authority:** Obsidia / X108 remains external and unchanged.  
 **Purpose:** visual perception, physical-world learning and **image generation with reverse evaluation**, while keeping Obsidia's existing organs separate.
 
@@ -111,6 +111,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Original learning methods → image experiments, provenance and test gates](docs/23_BRODY_IMAGE_LEARNING_TRACEABILITY.md)**
 - **[Brody Image original vision fidelity: source/IN, layered reconstruction, region rigour and functional tests](docs/24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md)**
 - **[Image I1/R1 CPU executable baseline — subject isolation, transplant and pixel fidelity report](docs/25_BRODY_IMAGE_I1_R1_PROTOTYPE_CPU.md)**
+- **[Jarvis Qwen-VL local adapter — descriptive candidate, no new model download, fixed/portable setup](docs/26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -131,10 +132,27 @@ python -m brody_world_physique.image_v0 --source photo.png --mask masque.png --b
 Outputs: `cutout.png`, `composite.png`, `report.json`. The demonstration fixture is **SYNTHETIC**, not a claim of natural-scene understanding or learned image generation.
 
 
+## Existing Jarvis/Qwen-VL vision model: reuse, not reinstall
+
+The separate Jarvis installation provides the OpenAI-compatible local Qwen-VL
+endpoint (normally `127.0.0.1:8081`). Brody Image now has a small,
+**loopback-only**, file-based client of that **existing** vision API:
+
+```powershell
+py -m brody_world_physique.jarvis_vision_v0 --image "C:\\photos\\test.jpg" --out "build\\vision-candidate.json"
+```
+
+The server must **already be running on the same PC**, or be available over an
+explicit local SSH tunnel. The output is an **unverified text description
+candidate**, not an F16 real-world observation. It does **not** pass through
+Brody chat, Binder, native memory, or a generation model yet. Tests mock the
+local HTTP server; **they are not a successful real Qwen-VL PC connection**.
+See [26 — I1 Jarvis adapter and honest bring-up steps](docs/26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md).
+
 ## Current milestone
 
 **Brody Image I1/R1 CPU:** deterministic isolation and compositing implemented on `main`, with source/output hashing, fidelity controls, synthetic test fixtures and source-preserving boundaries. Details in [25 — executable baseline](docs/25_BRODY_IMAGE_I1_R1_PROTOTYPE_CPU.md).
 
-**Still unproven:** arbitrary background segmentation, image-generating model/weights, reverse visual evaluation, 3D, video/world physics and learned retention. A real photo and mask can be fed through the local CLI; the synthetic demo alone does not establish these capabilities.
+**Still unproven:** live PC Qwen-VL bridge, Brody/Binder/F16 image flow, arbitrary background segmentation, image-generating model/weights, reverse visual evaluation, 3D, video/world physics and learned retention. A real photo and mask can be fed through the local CLI; the synthetic demo alone does not establish these capabilities.
 
 **Historical F0:** the 108-concept archive and source attribution exist for traceability; their complete documentary audit remains open but **does not block the bounded image editor**. Old F0 PR work is consolidated on `main`; obsolete historical PRs have been closed. Keep `KX108_ONLY`, no memory auto-promotion or upstream kernel mutation.
