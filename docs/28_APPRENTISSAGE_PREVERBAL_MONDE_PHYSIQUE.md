@@ -97,7 +97,7 @@ Reverso reste une **route de reconstruction et de contrôle**, associée au mêm
 | Image → Qwen local PC réel → description | **TESTÉ PAR L'UTILISATEUR** ; répétitions/hallucinations possibles |
 | Reverso lossless → reconstruire RGBA décodé | **TESTÉ SUR PHOTO UTILISATEUR**, 64 tuiles, empreinte source/reconstruction identique |
 | État spatio-temporel / contrats F16, F12, MMonde | **EXISTENT DANS D'AUTRES DÉPÔTS**, raccord image à prouver |
-| Prédiction préverbale à partir de frames réelles | **NON IMPLÉMENTÉE / NOT_RUN** |
+| Prédiction préverbale basée sur 3 positions sourcées et 4e cachée | **BENCHMARK NUMÉRIQUE IMPLÉMENTÉ, testé uniquement en synthétique** ; extraction vidéo réelle / capteurs **NOT_RUN** ; voir [29](29_PREVERBAL_PREDICTION_EXPERIENCE_V0.md) |
 | Référentiel GPS + physique + échelles biologiques | **ARCHITECTURE À MAPPER**, aucun modèle unifié opérationnel prouvé |
 | Reverso sémantique / nouveaux points de vue / génération conditionnée | **NON IMPLÉMENTÉ / NOT_RUN** |
 | Révision de modèle basée sur expériences et mémoire sélective | **POLITIQUE CANDIDATE SEULEMENT**, pas d'entraînement ni d'écriture mémoire réelle |
