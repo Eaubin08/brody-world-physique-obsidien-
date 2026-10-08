@@ -414,7 +414,7 @@ This keeps the architecture connected to the user's actual reasoning trajectory 
 
 ## 16. F0 reconciliation evidence and authorship policy — 2026-10-08
 
-This gate is required for **every** entry in the 103-concept Atlas before calling the *documentary* reconciliation complete.
+This gate is required for **every** entry in the 107-concept Atlas before calling the *documentary* reconciliation complete.
 
 ### Source evidence states
 
