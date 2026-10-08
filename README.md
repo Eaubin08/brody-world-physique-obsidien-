@@ -126,6 +126,8 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[V4 world-experience bridge — derive MMonde/F12-compatible observations, transformations, errors and candidate skills from V3 without importing SENS knowledge promotion](docs/39_BRODY_MONDE_EXPERIENCE_V4_BRIDGE.md)**
 - **[V4.1 pixel-derived relations — learn 2-component proximity from observed images, test 90° rotation/translation/scale, expose inverted-layout failure and reconstruct without teacher boxes](docs/40_V4_1_RELATIONS_SPATIALES_INVARIANTS_ET_COMPOSITION.md)**
 - **[V4.2 orientation & reciprocity — learn four image-frame directions from labeled geometric episodes, derive reciprocal relations, record unsupported HOLDs and keep pixel vs relational reconstruction scores separate](docs/41_BRODY_V4_2_ORIENTATION_RECIPROQUE_MONDE.md)**
+- **[42 — Cross-audit: spatial vs pixel, time/motion, multirepresentation, multiscale micro/nano/molecular-to-cosmic, with upstream Obsidia contract links](docs/42_AUDIT_TRANSVERSAL_REPRESENTATIONS_MONDE_MULTIECHELLES.md)**
+- **[43 — Preforge experiment protocol: one ball video across image/space/time/motion, held-out preview, ablations, reversibility and evidence/unknown gates](docs/43_EXPERIENCE_COMMUNE_BALLE_REPRESENTATIONS_V0.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -474,6 +476,27 @@ the selected run and pushes **that evidence branch only**, not `main`.
 World states remain representations, candidate experiences are not canonical
 memory and nothing runs SENS/B8 or mutates the kernel.
 [Protocol and limitations](docs/41_BRODY_V4_2_ORIENTATION_RECIPROQUE_MONDE.md).
+
+## Transversal learning architecture — P0 audit (docs only, 2026-10-09)
+
+The project direction is now **one candidate world referent, multiple typed
+representations and explicit scale/measurement limits**, not another seven
+independent learning engines. The measured V4.2 spatial/pixel gap motivates
+separating raster, shape, position/frame, time, motion and unknown causal
+hypotheses, with a typed source and proof boundary for each. Long-term
+representation targets include atomic/molecular/nano/micro/macro/cosmic regimes
+and material/biological/thermodynamic measurements, **without pretending
+a captured image contains non-identifiable hidden physical details**.
+
+[42 — exact source audit and ownership matrix](docs/42_AUDIT_TRANSVERSAL_REPRESENTATIONS_MONDE_MULTIECHELLES.md)
+preserves existing MMonde F6/F12/F13/F15/F16, pinned F19, local F0,
+Reverso and experimental SENS boundaries. [43 — the next implementable
+test specification](docs/43_EXPERIENCE_COMMUNE_BALLE_REPRESENTATIONS_V0.md)
+will use one source video to compare image/spatial/temporal/motion arms
+under identical held-out observations, with precommits, ablations,
+unknown/HOLD and replay. **Neither document implements the new bridge**:
+no runtime tests, kernel, GPS, B8/Class D, Native Memory, or model
+weights are changed by this documentation step.
 
 ## Current milestone
 
