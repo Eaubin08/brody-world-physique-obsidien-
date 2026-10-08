@@ -409,3 +409,60 @@ what remains only vision
 ~~~
 
 This keeps the architecture connected to the user's actual reasoning trajectory rather than reducing it to a list of current files.
+
+---
+
+## 16. F0 reconciliation evidence and authorship policy — 2026-10-08
+
+This gate is required for **every** entry in the 103-concept Atlas before calling the *documentary* reconciliation complete.
+
+### Source evidence states
+
+```text
+DIRECT_READ
+    The specific source and relevant passage were directly checked.
+    Does NOT prove unique authorship, code execution or scientific novelty.
+
+DESCENDANT_HYPOTHESIS
+    A source supports an older idea; linking it to a newer named module
+    is a hypothesis until a correspondence is shown.
+
+INDEXED_NOT_VERIFIED
+    A source URL is indexed but its matching definition/passage
+    was not checked in this audit pass.
+
+REVIEW_REQUIRED
+    No primary passage was individually attached yet.
+```
+
+A source link by itself is not a definition card. Attach an exact section/excerpt, source version/date if reliable, author-role classification and any disagreement with current code.
+
+### Attribution / collaboration
+
+Separate **who proposed a direction**, **who formulated a written explanation**, **who drafted an algorithm**, **who implemented code**, **who tested it**. A transcript co-authored with an AI assistant may contain mixed-origin suggestions; do not label the whole document as uniquely human-authored or uniquely AI-authored.
+
+When metadata or actual utterances do not disambiguate, use `AUTHORSHIP_UNRESOLVED`. Avoid statements of patentable novelty or scientific priority without external prior-art / evidence work.
+
+### Avoid double-counting archives
+
+Duplicate file titles, copied documents, Word + Google Docs variants and exported ChatGPT sessions can represent the same source. A 2026-10-08 spot check found *Éveil de l'OS Cognitif* and *Architecture Organique et Procédurale* returning identical text. Their link identities remain distinct, their evidence is **not independent**.
+
+### Keep conflicting terms distinct
+
+Examples discovered:
+
+- AVDR research / AVDR pedagogical / AVDR Gencoin / AVDR Obsidure variants;
+- Balance Proportionnelle Exponentielle (weighted multimodal idea) **versus** Calcul de la Balance Mathématique (factor removal/reintegration method);
+- Friction Symbolique historic sample code **versus** current KX108 decision permissions;
+- historic Mémoire Fractale (FAM) **versus** tested Native Memory;
+- historical 34 Arbres / Shazam **versus** planned VisualFingerprint.
+
+A name similarity is not a proof of equivalence. Create a separate card or a name-collision subrecord.
+
+### Completion criterion
+
+Document audit gate can be closed only once `docs/18_CONCEPT_SOURCE_MATRIX.md` has no unreviewed entries **or** each unresolved entry has an explicit, accepted `UNDEFINED / SOURCE_RECOVERY_REQUIRED` decision, including evidence limits.
+
+Prioritise user-generated source definitions first, current code/tests for runtime assertions, and independent external research only for novelty claims. No automatic rewrite of old source material.
+
+See `docs/17_F0_SOURCE_RECONCILIATION.md` and `docs/18_CONCEPT_SOURCE_MATRIX.md`.
