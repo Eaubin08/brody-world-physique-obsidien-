@@ -82,6 +82,12 @@ jobs:
         run: |
           python -m brody_world_physique.drawing_school_v1 --out build/drawing-school-v1
           python -c "import json,pathlib; r=json.loads(pathlib.Path('build/drawing-school-v1/evaluation.json').read_text()); assert len(r['train_lessons'])==4 and len(r['unseen_exams'])==6; assert all(x['final_error']<=x['blank_error'] for x in r['train_lessons']); assert all(x['after_correction_error_pixels']<=x['initial_after_memory_gate'] for x in r['unseen_exams']); assert r['ledger_integrity']['verified_records']>=10 and r['native_memory_write_allowed'] is False and r['semantic_object_understanding'] is False; print('DRAWING_CURVES_ERASER_CANDIDATE_MEMORY_PASS')"
+      - name: Replay code-provenance image experiences and readonly memory selection
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m brody_world_physique.experience_memory_v1 --verify build/drawing-school-v1
+          python -m brody_world_physique.candidate_skill_retrieval_v1 --memory build/drawing-school-v1 --image build/drawing-school-v1/teacher_images/examen_cercle.png --max-distance 64
+          python -c "import json,pathlib; p=pathlib.Path('build/drawing-school-v1'); d=json.loads((p/'evaluation.json').read_text()); e=json.loads((p/'experience_memory_index_v1.json').read_text()); assert e['episode_count']==10; assert d['procedural_experience_memory']['episodes']==10 and d['procedural_experience_memory']['memory_skill_selection_replayed'] is True; assert d['procedural_experience_memory']['all_generated_artifacts_replayed'] is True and d['native_memory_write_allowed'] is False; print('PROCEDURAL_MEMORY_CODE_REPLAY_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
