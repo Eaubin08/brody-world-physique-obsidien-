@@ -2059,3 +2059,852 @@ The source index lives in:
 - `docs/12_OBSIDIA_USER_SOURCES.md`
 
 This atlas explains meaning; those files provide traceability.
+
+
+---
+
+# 70. AVDR
+
+## Definition
+
+AVDR is a user-origin cognitive/process concept whose acronym and operational interpretation **changed across the history of Obsidia**.
+
+That drift must be preserved rather than flattened.
+
+### Historical research usage
+
+Older AVDR research documents describe AVDR as an auto-evolving / auto-verifiable developmental reasoning protocol concerned with:
+
+- self-generated tasks;
+- multi-agent solving;
+- cognitive evaluation;
+- reasoning traces;
+- calibration;
+- structured feedback;
+- controlled cognitive evolution.
+
+Historical expansions include formulations around **Auto-Verifiable Developmental Reasoner** and older phase interpretations such as adaptation/validation/disruption/regulation.
+
+### Current repository canon for the Gencoin sandbox
+
+The current file:
+
+`docs/gencoin/sandbox_pre_freeze/AVDR_CANON.md`
+
+defines:
+
+```text
+A = Accueil
+V = Vibration
+D = Déploiement
+R = Résolution
+```
+
+with:
+
+- **Accueil** = perception / écoute / réception;
+- **Vibration** = friction / reaction / sorting / tension;
+- **Déploiement** = expression / engagement / action phase;
+- **Résolution** = integration / learning / return toward stability.
+
+It describes AVDR as a protocol for reading and transforming a living cognitive state.
+
+### Obsidure implementation usage
+
+The current `AgentObsidure` code uses another operational mapping:
+
+```text
+A = Audit
+V = Validation
+D = Disruption
+R = Réintégration
+```
+
+for its bounded software-building cycle.
+
+## Purpose
+
+AVDR is best treated as a **family of transformation-cycle patterns**, not as one acronym whose historical wording must be forced onto every subsystem.
+
+## It is not
+
+- KX108;
+- one universal decision algorithm;
+- a proof that every historical AVDR variant is active today.
+
+## Audit rule
+
+Whenever AVDR appears, the audit must record:
+
+```text
+which AVDR variant?
+which date/source?
+which subsystem?
+runtime or doctrine?
+```
+
+## Status
+
+**MULTI-GENERATION USER CONCEPT / CURRENT LOCAL VARIANTS EXIST**
+
+---
+
+# 71. ADeLe / A2DR
+
+## Definition
+
+A historical/user concept paired with AVDR in current sandbox documentation.
+
+The current AVDR canon says:
+
+```text
+ADeLe gives the measure.
+AVDR gives the dynamic.
+Obsidia gives the organs and structural meaning.
+```
+
+## Purpose
+
+Separate **measurement/evaluation** from **dynamic transformation**.
+
+## It is not
+
+A current global kernel authority unless independently verified in runtime.
+
+## Status
+
+**HISTORICAL / SANDBOX-LEVEL CONCEPT — NEEDS DEDICATED SOURCE AUDIT**
+
+---
+
+# 72. Balance exponentielle / Balance Proportionnelle Exponentielle
+
+## Definition
+
+A user-origin weighting concept intended to make evaluation **non-linear** rather than treating every signal as having equal importance.
+
+Historical visual/cognitive documents also describe it as a possible common "pivot" between modalities.
+
+## Purpose
+
+Represent that:
+
+- a small critical contradiction may matter more than many weak positive signals;
+- transformations/relations can be weighted non-linearly;
+- cognitive or system balance may depend on proportions rather than simple averages.
+
+## Current repository reality
+
+Current formalisation status explicitly says:
+
+```text
+Balance exponentielle -> domaines formels
+Pondération non-linéaire
+Documentée, non reliée
+```
+
+A Gencoin sandbox balance operator exists, but that does **not** prove that the historical universal Balance is currently bound across Obsidia.
+
+## It is not
+
+- current universal physics;
+- automatically the kernel vote formula;
+- proof of cross-modal equivalence.
+
+## Status
+
+**DOCUMENTED / PARTIAL SANDBOX IMPLEMENTATIONS / NOT GLOBALLY BOUND**
+
+---
+
+# 73. Veto Harmonique
+
+## Definition
+
+Historical governance concept in which a sufficiently severe low score/contradiction can block a consensus rather than being averaged away.
+
+Older source material ties the name to a harmonic-mean style vote plus absolute veto thresholds.
+
+## Purpose
+
+Prevent a majority of moderate positive signals from erasing one critical blocking condition.
+
+## Current repository reality
+
+The F22 source traceability audit states:
+
+- harmonic immutable-vote calculation: **MISSING**;
+- vote structure: present but **CODE_DORMANT** in that historical form;
+- historical harmonic thresholds: **doc-only**.
+
+Current X108/Guard/Sigma governance therefore must not be described as if the old harmonic-veto formula is the active canonical decision mechanism.
+
+## It is not
+
+The same thing as current KX108 decision authority.
+
+## Status
+
+**HISTORICAL GOVERNANCE IDEA / OLD FORMULA NOT CURRENT RUNTIME CANON**
+
+---
+
+# 74. Obsidure
+
+## Definition
+
+Obsidure is Obsidia's bounded **builder / researcher / formalizer organ**.
+
+Current code describes it as:
+
+```text
+CO_PILOTE_CODE
++
+CI_REPO_SURGEON
+```
+
+and gives it responsibilities such as:
+
+- audit a requested objective;
+- build or repair peripheral code;
+- prepare Lean sandbox material;
+- organize bounded memory/session artefacts;
+- test and stabilize proposals;
+- emit patch proposals.
+
+## Current bounded cycle
+
+Current AgentObsidure uses:
+
+```text
+Audit
+-> Validation
+-> Disruption
+-> Réintégration
+```
+
+## Hard boundary
+
+Current code explicitly sets:
+
+```text
+decision_authority = KX108_ONLY
+allowed_to_decide = false
+emits_act = false
+kernel_mutation = false
+x108_merge = false
+sandbox_mode = HUMAN_APPROVED_WRITE
+```
+
+## Purpose
+
+Let an AI organ build, formalize and repair without acquiring sovereignty.
+
+## It is not
+
+- Brody;
+- KX108;
+- automatic main-branch writer;
+- kernel modifier.
+
+## Status
+
+**CURRENT IMPLEMENTED ORGAN**
+
+---
+
+# 75. OS3ProofTicket
+
+## Definition
+
+A structured proof/receipt object linking an action candidate, X108 result and evidence surface through hashes.
+
+Current fields include:
+
+- ticket ID;
+- action ID;
+- domain;
+- X108 gate;
+- reason/severity;
+- scores;
+- unknowns;
+- risk flags;
+- contradictions;
+- evidence refs;
+- input hash;
+- output hash;
+- trace hash;
+- Merkle root;
+- replay status.
+
+## Purpose
+
+Create a replay/audit anchor for the decision path.
+
+## Current implementation detail
+
+Current builder computes SHA-256 hashes for:
+
+```text
+input
+output
+trace
+Merkle-style aggregate root
+```
+
+and currently initializes:
+
+`replay_status = NOT_RUN`
+
+until replay is actually performed.
+
+## It is not
+
+A proof that replay ran merely because a ticket exists.
+
+It is not itself decision authority.
+
+## Status
+
+**CURRENT RUNTIME/RECEIPT BRICK — REPLAY STATUS MUST REMAIN HONEST**
+
+---
+
+# 76. OS3
+
+## Definition
+
+A proof/replay layer/family in Obsidia associated with:
+
+- proof tickets;
+- hashes;
+- receipts;
+- replay status;
+- audit linkage.
+
+## Purpose
+
+Bind the path through the system to evidence that can later be inspected/replayed.
+
+## It is not
+
+The cognitive layer or kernel decision itself.
+
+## Status
+
+**CURRENT PROOF/REPLAY FAMILY — EXACT SUBCOMPONENT STATUS VARIES**
+
+---
+
+# 77. Runtime Binder
+
+## Definition
+
+The Runtime Binder is the layer that turns an already-governed mandate into **bounded capabilities and runtime context**.
+
+Conceptually it answers:
+
+```text
+what may this organ access?
+what may it call?
+what may it write?
+for how long?
+under which limits?
+```
+
+## Purpose
+
+Separate:
+
+```text
+capability detected
+!= authority granted
+!= consequence verified
+```
+
+## It is not
+
+The authority that decides ACT/HOLD/BLOCK.
+
+## Current reality
+
+Binder-related current/recent branches include capability routing, Brody/Obsidure repair, context packets and runtime-boundary work.
+
+## Status
+
+**CURRENT EXECUTION-BOUNDARY ARCHITECTURE**
+
+---
+
+# 78. Provider Cognitive Binder
+
+## Definition
+
+A more specific binder family for external/internal cognitive providers.
+
+It keeps provider identity, runtime result and receipts bound without merging providers into a new sovereign intelligence.
+
+## Purpose
+
+Allow multiple cognitive providers/tools to be used while preserving:
+
+- provider identity;
+- comparison boundaries;
+- receipts;
+- non-sovereignty.
+
+## It is not
+
+A consensus authority.
+
+## Status
+
+**CURRENT / TESTED IN CG9 SURFACES**
+
+---
+
+# 79. ERA — Espace de Raisonnement Assisté
+
+## Definition
+
+Historical cognitive/interface metric or visualization concept used to summarize the relative contribution/tension of memory, reasoning, autonomy/friction or other cognitive factors.
+
+Older Reverse OS material refers to ERA as something that may be **displayed** to the user.
+
+## Purpose
+
+Make internal cognitive balance understandable/visible.
+
+## It is not
+
+A kernel score unless a current runtime contract explicitly says so.
+
+## Current status
+
+No current canonical world-runtime binding was established during this audit.
+
+## Status
+
+**HISTORICAL / UI-COGNITIVE CONCEPT — CURRENT BINDING UNCONFIRMED**
+
+---
+
+# 80. World Foundry
+
+## Definition
+
+User concept for an educational/simulation environment where an intelligence can learn through controlled worlds, exercises, consequences and progressively richer experience.
+
+It is the "school + workshop" idea applied to world learning.
+
+## Purpose
+
+Provide an environment where:
+
+```text
+state
+-> action
+-> consequence
+-> correction
+-> transfer
+```
+
+can be learned without requiring every experiment to happen in the real world.
+
+## It is not
+
+A claim that the full world can be simulated perfectly.
+
+## Relation
+
+Closely related to:
+
+- replay;
+- dreaming;
+- sandbox;
+- Transition learning;
+- MMonde;
+- Oxygen education;
+- Brody/agent skill acquisition.
+
+## Status
+
+**USER VISION / FUTURE EDUCATIONAL-SIMULATION LAYER**
+
+---
+
+# 81. Formule du Savoir Obsidia (FSO)
+
+## Definition
+
+Historical user framework for turning a domain's existing knowledge into a structured learning path rather than making an AI rediscover everything from zero.
+
+The archived document describes a sequence broadly resembling:
+
+```text
+ingest knowledge
+-> normalize vocabulary
+-> extract entities / relations / constraints
+-> derive invariants
+-> represent
+-> analyse <-> synthesize
+-> evaluate
+-> transfer
+```
+
+## Purpose
+
+Use existing human knowledge as a starting curriculum, then move toward independent application and skill.
+
+## It is not
+
+The current canonical memory schema or one universal proven mathematical formula.
+
+## Current relation
+
+Its strongest surviving ideas are now distributed across:
+
+- corpus;
+- OS/IR;
+- MMonde;
+- invariants;
+- learning loops;
+- tests;
+- memory candidates;
+- experience.
+
+## Status
+
+**HISTORICAL LEARNING FRAMEWORK / PARTLY ABSORBED**
+
+---
+
+# 82. "Build the body before searching for a total brain"
+
+## Definition
+
+Core user design strategy: build the organism around intelligence before attempting to create one monolithic model that does everything.
+
+The "body" includes:
+
+- memory;
+- domains;
+- representation;
+- tools;
+- proofs;
+- world-state structures;
+- authority;
+- execution boundaries;
+- replay;
+- learning paths.
+
+## Purpose
+
+Allow intelligence to improve by replacing or adding organs rather than rebuilding the entire system around a larger model.
+
+## It is not
+
+A rejection of neural models.
+
+## Status
+
+**FOUNDATIONAL USER METHOD**
+
+---
+
+# 83. "Structure can replace part of inference"
+
+## Definition
+
+When a route is already known, bounded and validated, Obsidia should reuse the structure rather than asking a large model to rediscover the route probabilistically.
+
+## Purpose
+
+Reduce:
+
+- latency;
+- token use;
+- cost;
+- variability;
+- unnecessary model dependence.
+
+## It is not
+
+A claim that structure replaces all cognition.
+
+## Related mechanisms
+
+- routers;
+- Fast Path;
+- Path Compute;
+- deterministic domains;
+- proof surfaces;
+- cached/validated routes.
+
+## Status
+
+**CURRENT ARCHITECTURAL PRINCIPLE / PARTLY BENCHMARKED**
+
+---
+
+# 84. Fast Path
+
+## Definition
+
+A route for situations whose structure is sufficiently known and bounded that the system can avoid a broad cognitive/model path.
+
+## Purpose
+
+Use the smallest sufficient path.
+
+## It is not
+
+Automatic permission to act.
+
+Fast Path still remains inside governance boundaries.
+
+## Status
+
+**CURRENT ARCHITECTURAL/RUNTIME FAMILY**
+
+---
+
+# 85. Path Compute
+
+## Definition
+
+User/Obsidia idea that compute should follow the **minimal adequate path**, rather than always invoking the most general/expensive intelligence.
+
+## Purpose
+
+Turn compute allocation into a routing decision.
+
+Conceptually:
+
+```text
+known admissible route
+> unnecessary general inference
+```
+
+## It is not
+
+Simply "faster hardware".
+
+The gain is often from avoiding computation rather than accelerating identical computation.
+
+## Status
+
+**CURRENT ARCHITECTURAL PRINCIPLE**
+
+---
+
+# 86. MEMZUM
+
+## Definition
+
+Current Brody memory-activation layer answering a narrow question:
+
+> Does this request currently require memory?
+
+Current docs explicitly distinguish MEMZUM from retrieval itself.
+
+## Purpose
+
+Avoid querying memory unnecessarily.
+
+## It is not
+
+The memory store.
+
+It does not decide what is true.
+
+## Current relation
+
+```text
+cognitive signals
+-> MEMZUM yes/no
+-> Native Memory retrieval if needed
+```
+
+## Status
+
+**CURRENT / BRANCH-SPECIFIC RUNTIME COMPONENT**
+
+---
+
+# 87. Point cloud / cognitive point cloud
+
+## Definition
+
+A structured multi-axis representation used in parts of Brody's cognitive path to summarize the state/tensions relevant to routing/context.
+
+## Purpose
+
+Compress several cognitive signals into a machine-readable structure that downstream components can use.
+
+## It is not
+
+A literal 3D point cloud and not automatically a world-state representation.
+
+## Status
+
+**CURRENT COGNITIVE MECHANISM / EXACT AXES VERSION-SPECIFIC**
+
+---
+
+# 88. True Voice
+
+## Definition
+
+The final expression layer used to turn structured Brody/cognitive state into a readable human-facing response.
+
+## Purpose
+
+Keep phrasing/output separate from the underlying authority and evidence status.
+
+## It is not
+
+The source of truth or decision.
+
+## Status
+
+**CURRENT OUTPUT COMPONENT / BRANCH-SPECIFIC**
+
+---
+
+# 89. SRL — Session Registry Layer
+
+## Definition
+
+A session-organization concept used by Obsidure to classify candidate session material into bounded tiers such as:
+
+- ACTIVE;
+- SEMI_ACTIVE;
+- COLD;
+- GHOST_SIDE_TABLE.
+
+Current Obsidure creates candidate session cards but does not directly write canonical memory.
+
+## Purpose
+
+Organize working/session material without confusing it with durable memory.
+
+## It is not
+
+Native Memory canonical storage.
+
+## Status
+
+**CURRENT OBSIDURE SUPPORT CONCEPT**
+
+---
+
+# 90. "Present != connected != causally useful != tested != proven != frozen != production"
+
+## Definition
+
+A maturity/claim ladder repeatedly used in recent Obsidia master documents.
+
+It prevents a concept or file from being overclaimed merely because it exists.
+
+## Purpose
+
+Force every audit to distinguish:
+
+```text
+idea
+artifact
+component
+connected runtime
+causal contribution
+test
+proof
+freeze
+production
+```
+
+## It is not
+
+A rhetorical disclaimer. It is a project-status discipline.
+
+## Status
+
+**CURRENT AUDIT DOCTRINE**
+
+---
+
+# 91. Concept lineage
+
+## Definition
+
+For a user-origin idea, the atlas must preserve its evolution through time.
+
+Example:
+
+```text
+historical intuition
+-> named concept
+-> architecture document
+-> prototype
+-> current descendant
+-> runtime/test status
+```
+
+## Purpose
+
+Prevent two opposite errors:
+
+1. reviving obsolete ideas as current canon;
+2. losing the user's original idea merely because its implementation was renamed.
+
+## Status
+
+**MANDATORY AUDIT METHOD**
+
+---
+
+# 92. Canon vs source pack vs research source
+
+## Definition
+
+Three different epistemic statuses for project material.
+
+### Canon/current source
+
+Material currently accepted as architecture/runtime truth.
+
+### Source pack
+
+Preserved material used to recover ideas, history or unmerged specifications.
+
+### Research source
+
+Experimental branch/doc useful for selective migration but not directly mergeable/canonical.
+
+## Purpose
+
+Keep a huge historical project intelligible without flattening everything into "current".
+
+## Status
+
+**CURRENT AUDIT CLASSIFICATION**
+
+---
+
+# 93. C10
+
+## Definition
+
+A future concept associated in project materials with long-term cognition/education/Oxygen.
+
+During this audit, no sufficiently precise current runtime definition was recovered to safely assign a stronger meaning.
+
+## Purpose
+
+Unknown until dedicated source recovery.
+
+## Status
+
+**UNDEFINED / SOURCE RECOVERY REQUIRED**
+
+This status is intentional: the atlas must prefer an explicit unknown over reconstructing a definition from neighboring concepts.
