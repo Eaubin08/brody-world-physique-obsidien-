@@ -52,3 +52,25 @@ Pour chaque `episode_id × horizon × arm_id` : `source_sha256`, `split`, `frame
 5. Publier uniquement les reçus sur la branche `evidence/brody-local` après contrôle local; aucun push sur `main` via ce protocole.
 
 **À ce stade : zéro résultat P2 revendiqué.**
+
+
+## Première tranche exécutable (diagnostic, pas fusion)
+
+Implémentée sur cette branche : `brody_world_physique/p2_ablation_diagnostic_v0.py`.
+
+Elle relit le manifeste synthétique et les précommits originaux, récupère les trois observations passées et évalue **sur les mêmes futurs** trois méthodes : `A0_last_observation`, `A1_linear_kinematics` et `P1_experiential_candidate`. Elle conserve les scores par épisode, les couvertures, les HOLD et les empreintes. La troisième méthode n'est pas requalifiée abusivement de fusion : elle est l'ancien prédicteur expérientiel.
+
+Depuis le dossier du dépôt sur le PC où P1 a produit les fichiers :
+
+```powershell
+$run = "build\\ball-multirepresentations-p1-<TON_DOSSIER>"
+$suite = "$run\\suite\\suite.json"
+$forecasts = "$run\\anchored\\forecasts_precommitted.jsonl"
+$out = "build\\p2-baseline-diagnostic.json"
+py -m brody_world_physique.p2_ablation_diagnostic_v0 --suite $suite --forecasts $forecasts --out $out
+py -m brody_world_physique.p2_ablation_diagnostic_v0 --suite $suite --forecasts $forecasts --out $out --verify
+```
+
+Adapter `$run` au dossier P1 réel. Pour les essais répétés, supprimer ou renommer la sortie : le programme refuse d'écraser un reçu. Aucun résultat de fusion `A2–A7` n'est produit. Le verdict demeure `P2_INCONCLUSIVE` même si l'une des trois méthodes gagne, car cette tranche ne teste pas encore la valeur causale de la combinaison des représentations.
+
+**État d'implémentation :** code et tests contractuels committés ; aucun run P2 indépendant attesté à cette étape.
