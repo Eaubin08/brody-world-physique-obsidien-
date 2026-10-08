@@ -160,6 +160,15 @@ def assemble_from_prior_skills(prior_v1:Path, composition:list[dict])->tuple[Ges
     return tuple(output)
 
 
+def teacher_hidden_model()->Image.Image:
+    """Fresh pentagon: not one of V1's teaching/exam raster fixtures."""
+    img=Image.new("L",(SIDE,SIDE),255)
+    d=ImageDraw.Draw(img)
+    d.line(((14,49),(10,26),(30,9),(50,26),(46,49),(14,49)),
+           fill=0,width=3)
+    return img
+
+
 def teacher_new_composition()->Image.Image:
     """Held-out source, created after commitment, independent of learner gestures."""
     img=Image.new("L",(SIDE,SIDE),255)
@@ -245,17 +254,17 @@ def run_school(out:str|Path,*,prior_v2:str|Path)->dict:
     ledger=CandidateExperienceLedgerV0(root/"candidate_experience_ledger.jsonl")
     precommit=root/"committed_before_teacher_reveal.jsonl"
     teacher_refs=dict(teacher_exams())
-    # Source for immediate/delay is novel relative to V1's four TRAIN lessons.
-    source=_source_image(teacher_refs["examen_triangle"])
+    # The fresh teacher model is absent from ALL V1 lesson/exam fixtures.
+    source=_source_image(teacher_hidden_model())
     source_sha=digest_bytes(source.tobytes())
-    original_rep=observe_only(source,"teacher:examen_triangle",source_sha)
+    original_rep=observe_only(source,"teacher:hidden_pentagon_v3",source_sha)
     # Representation is serialized and reloaded before rendering.
     # No original PNG or teacher pixels are part of the student interface.
     records=[]
     evals=[]
     with precommit.open("x",encoding="utf-8") as receipt:
         for level in ("immediate","delayed"):
-            ep=level+"_triangle"
+            ep=level+"_pentagon"
             snapshot=dict(original_rep)
             path=root/"representations"/(ep+".json")
             _write_json(path,snapshot)
@@ -269,8 +278,8 @@ def run_school(out:str|Path,*,prior_v2:str|Path)->dict:
                     distractions.append({"source_ref":exposed["source_ref"],
                                          "representation_sha256":exposed["representation_sha256"],
                                          "task_index":i})
-            # Clear the local in-memory observation reference used during
-            # student phase: only disk stored representation is provided.
+            # The drawing function receives ONLY the disk-loaded representation,
+            # not the source. This is an API separation, NOT process isolation.
             loaded=json.loads(path.read_text(encoding="utf-8"))
             strokes=_verify_representation(loaded,source_sha)
             student=_commit_student(root,ep,level,"UNIFORM",loaded,strokes,
@@ -354,7 +363,7 @@ def verify_school(folder:str|Path)->dict:
         or info.get("decision_authority")!="KX108_ONLY"):
         raise ValueError("untrusted school contract")
     prior=Path(info["prior_v2_source"]).resolve(strict=True)
-    verify_school_v2=verify_school_v2_helper(prior)
+    verify_school_v2(prior)
     frozen=tuple(json.loads((prior/"instrument_skill_memory.json").read_text())["episodes"])
     if _sha(prior/"instrument_skill_memory.json")!=info["prior_v2_memory_sha256"]:
         raise ValueError("prior instrument memory changed")
@@ -371,7 +380,7 @@ def verify_school(folder:str|Path)->dict:
     ledger=verify_candidate_ledger(root/"candidate_experience_ledger.jsonl")
     if len(info.get("results",[]))!=3:
         raise ValueError("evaluation table incomplete")
-    source=teacher_exams_dict()["examen_triangle"]
+    source=teacher_hidden_model()
     source_sha=digest_bytes(source.tobytes())
     prior_v1=Path(json.loads((prior/"instrument_experience_index.json").read_text())["prior_school_source"]).resolve(strict=True)
     verify_memory_bundle(prior_v1)
@@ -453,15 +462,7 @@ def verify_school(folder:str|Path)->dict:
             "native_memory_modified":False,"world_knowledge_validated":False}
 
 
-def verify_school_v2_helper(prior:Path)->dict:
-    return verify_school_instrument(prior)
-
-
-def verify_school_instrument(prior:Path)->dict:
-    return verify_school_v2(prior)
-
-
-# Avoid shadowing this module's verify_school().
+# Do not shadow this module's verification function.
 from .instrument_school_v2 import verify_school as verify_school_v2
 
 
