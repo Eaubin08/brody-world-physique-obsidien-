@@ -132,7 +132,8 @@ def evaluate(suite: Path, receipts: Path) -> dict:
                     outcome["error_px"] = hypot(prediction[0]-target.x,prediction[1]-target.y)
                 outcomes.append(outcome)
     summary = {}
-    for arm in ("A0_last_observation","A1_linear_kinematics","A2_spatial_acceleration",\n                "A5_fixed_past_only_blend","P1_experiential_candidate"):
+    for arm in ("A0_last_observation","A1_linear_kinematics","A2_spatial_acceleration",
+                "A5_fixed_past_only_blend","P1_experiential_candidate"):
         subset = [x for x in outcomes if x["arm"] == arm]
         vals = [x["error_px"] for x in subset if x["error_px"] is not None]
         summary[arm] = {"evaluated":len(vals),"total":len(subset),
@@ -142,7 +143,10 @@ def evaluate(suite: Path, receipts: Path) -> dict:
     return {"schema":SCHEMA, "suite_sha256":_hash(suite),
             "precommit_file_sha256":_hash(receipts),
             "source_kind":"SIMULATED","independent_view_sources":False,
-            "new_fusion_predictor_implemented":False,\n            "past_only_feature_blend_implemented":True,\n            "arm_lineage":{"A2_spatial_acceleration":"three past XY plus timestamps",\n                            "A5_fixed_past_only_blend":"fixed average of A1 and A2, shared XY source"},
+            "new_fusion_predictor_implemented":False,
+            "past_only_feature_blend_implemented":True,
+            "arm_lineage":{"A2_spatial_acceleration":"three past XY plus timestamps",
+                            "A5_fixed_past_only_blend":"fixed average of A1 and A2, shared XY source"},
             "ablation_gain_proven":False,"p2_verdict":"P2_INCONCLUSIVE",
             "limitation":"retrospective scoring of prior precommits; raster-independent and genuine cross-representation A3/A4/A6/A7 not implemented; A5 is a same-source blend",
             "summary":summary,"per_episode":outcomes,
