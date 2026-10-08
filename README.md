@@ -117,6 +117,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[First real-video intake — human annotated 4 positions, forecast sealed before showing frame 4](docs/30_PREMIERE_VIDEO_PHYSIQUE_ANNOTATION_MANUELLE.md)**
 - **[Controlled automatic orange-ball detection on the exact simulated test video (SHA-256 pinned), then held-out evaluation](docs/31_BALLE_AUTO_SOURCE_PINNEE.md)**
 - **[Experiential learning without preloaded physics laws: 8 simulated videos, empty/one/four experiences, holdout and honest benchmarks](docs/32_EXPERIENCES_ZERO_SAVOIR_SANS_LOI.md)**
+- **[Twelve-video transfer probes — new object colors/shapes, mobile viewpoint, surprise, contradictory experience, occlusion, Reverso frame preview](docs/33_EPISODES_TRANSFER_MONDE_INCONNU_V1.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -245,6 +246,31 @@ Download the 8-clip suite archive linked separately in this conversation,
 extract to a local folder, then run `--suite <folder>/suite.json` and
 `--train-videos 0`, `1` and `4` with separate output folders.
 [Complete Windows PowerShell commands and limits](docs/32_EXPERIENCES_ZERO_SAVOIR_SANS_LOI.md).
+
+## Visual-transfer stress battery V1 (no domain-physics formulas in learner)
+
+[12 videos: 6 source experiences + 6 withheld transfer cases](docs/33_EPISODES_TRANSFER_MONDE_INCONNU_V1.md).
+The new [probe](brody_world_physique/world_transfer_probe_v1.py) uses source-tagged
+OpenCV observations with synthetic scene anchors, **not** a universal
+multimodal detector or a learned 3D world model. It checks invariance to
+changed target color/shape, compensates a synthetic moving camera using a
+visible static fiducial, marks surprising outcome changes, abstains on
+conflicting histories and does not hallucinate missing video observations.
+[Reverso-style preview](examples/reverso_future_preview_v1.py) translates a
+predicted location into a synthetic next-frame candidate by reusing OpenCV
+masks/inpainting, then compares it with the held-out frame. The image content
+beyond target position is **not** generated or learned from a world model.
+
+```powershell
+py -m examples.generate_transfer_probes_v1 --out "build\\transfer-suite"
+py -m brody_world_physique.world_transfer_probe_v1 --suite "build\\transfer-suite\\suite.json" --out "build\\transfer-anchored" --camera-mode anchored
+py -m examples.reverso_future_preview_v1 --suite "build\\transfer-suite\\suite.json" --forecasts "build\\transfer-anchored\\forecasts_precommitted.jsonl" --out "build\\transfer-preview"
+```
+
+No model installation, KX108-only fields, no kernel changes or native memory
+writes. The train/test source split remains immutable; all videos are
+**SIMULATED**, and neither physics truth nor human-like understanding is
+established.
 
 ## Current milestone
 
