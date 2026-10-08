@@ -527,3 +527,14 @@ The two Drive documents already indexed in section A — *L’Éveil de l’OS C
 - X108 / MMonde — branche R6 source : https://github.com/Eaubin08/obsidia-x108-proofs/tree/5b9b72452cff7a560db992e57a43fc700dacd923/periphery
 
 **Définitions et distinctions exactes :** [19_F0_SOURCE_TRACE_BATCH2.md](19_F0_SOURCE_TRACE_BATCH2.md), [15_CONCEPT_ATLAS.md](15_CONCEPT_ATLAS.md), [18_CONCEPT_SOURCE_MATRIX.md](18_CONCEPT_SOURCE_MATRIX.md). Aucune écriture runtime ou promotion mémoire n'a été faite.
+
+---
+
+## N. F0 pass 3 — historical C10 / UNKNOWN and unresolved conceptual lineages
+
+- [C10 historical: Bloc 11 — Trace et Immuabilité](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/OBSIDIA_V4_STRUCTURED_FULL/02_BLOCS_17/Bloc_11__Trace_et_Immuabilite_C10.md) — explicit old classification, cryptography/Merkle/audit.
+- [C10 current: Education / Oxygen](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md) — roadmap, not an existing born identity.
+- [UNKNOWN in MMonde code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/mmonde/contracts_v0.py) and [F15 evidence contract](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/PHYSICAL_EVIDENCE_PLANE_V0.md) — epistemic unknown, never an action gate.
+- [Source-gap and attribution audit](20_F0_FINAL_SOURCE_GAPS.md) — includes the still-hypothetical VisualFingerprint, Dreaming, and world quadrillage genealogies, plus carefully marked conversation context not republished in raw form.
+
+**Limit:** a link or matching code symbol proves neither authorship, originality, activation, nor physical truth. `main` untouched.
