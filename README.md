@@ -114,6 +114,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Jarvis Qwen-VL local adapter — descriptive candidate, no new model download, fixed/portable setup](docs/26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md)**
 - **[Reverso + World Model + selective learning: source-grounded method and executable first slice](docs/27_REVERSO_WORLD_MODEL_APPRENTISSAGE_SELECTIF.md)**\n- **[Pre-verbal learning: situated world prediction, physics/sensor evidence, scoped knowledge vs truth](docs/28_APPRENTISSAGE_PREVERBAL_MONDE_PHYSIQUE.md)**
 - **[Executable first pre-verbal prediction experiment — held-out future measurement, source/frame constraints and baseline checks](docs/29_PREVERBAL_PREDICTION_EXPERIENCE_V0.md)**
+- **[First real-video intake — human annotated 4 positions, forecast sealed before showing frame 4](docs/30_PREMIERE_VIDEO_PHYSIQUE_ANNOTATION_MANUELLE.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -190,6 +191,24 @@ py -m brody_world_physique.preverbal_prediction_v0 --input build/preverbal-world
 This demonstration is SYNTHETIC. Real physical-world understanding,
 reliable measurement extraction from video, transfer and learning are **not
 proven**. See [29 — pre-verbal prediction protocol](docs/29_PREVERBAL_PREDICTION_EXPERIENCE_V0.md).
+
+## First source-tagged video experiment (manual object points)
+
+[Video annotation module](brody_world_physique/video_observation_v0.py):
+reuse the optional OpenCV library already used in Jarvis. Choose a local
+video and click a target in three frames; **a forecast is written to disk
+before the fourth frame is opened for annotation**. Then compare against
+the fourth frame, storing source video SHA-256 and explicit camera/time/
+object-identity uncertainty. This is not automatic tracking, a new model
+installation, physical-law proof or an adaptive learned world model.
+Real video observations have NOT been run by CI (mocked GUI/decode tests only).
+
+```powershell
+py -c "import cv2;print(cv2.__version__)"
+py -m brody_world_physique.video_observation_v0 --video "C:\\videos\\balle.mp4" --out "build\\first-real-video" --interval-seconds 0.1
+```
+
+See [30 — first real-video annotation protocol](docs/30_PREMIERE_VIDEO_PHYSIQUE_ANNOTATION_MANUELLE.md).
 
 ## Current milestone
 
