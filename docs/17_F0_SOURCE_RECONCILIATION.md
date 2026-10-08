@@ -1,7 +1,7 @@
 # 17 — F0 Réconciliation des sources et des définitions — 2026-10-08
 
 **Statut : AUDIT DOCUMENTAIRE PARTIEL / NON FREEZE.**  
-**Périmètre :** comparaison de l'Atlas V0 (`docs/15_CONCEPT_ATLAS.md`, entrées 1–108 (1–108 préservées, 104–107 ajoutées, 108 ajoutée par lecture du code F19 après lecture directe)) aux archives utilisateur Google Drive, aux documents de contrat de cette branche et aux sources existantes.  
+**Périmètre :** comparaison de l'Atlas V0 (`docs/15_CONCEPT_ATLAS.md`, entrées 1–108 : les 103 entrées initiales sont préservées ; #104–107 proviennent des archives lues et #108 de la séparation thermodynamique étayée par code F19) aux archives utilisateur Google Drive, aux documents de contrat de cette branche et aux sources existantes.  
 **Modification de runtime / de kernel / de main :** aucune.
 
 ## 1. Objet exact
@@ -118,7 +118,7 @@ Balance Proportionnelle Exponentielle ────────────┘
 
 ## 4. Lacunes encore ouvertes — ne pas appeler cela un audit exhaustif
 
-1. Chaque entrée 1–108 a une définition de travail (les 4 dernières proviennent de cette passe de source) dans l'Atlas, mais **la citation passage/date/source vérifiée entrée par entrée n'est pas encore complète**. La matrice `docs/18_CONCEPT_SOURCE_MATRIX.md` distingue les liens étayés des entrées encore non vérifiées.
+1. Chaque entrée 1–108 a une définition de travail (les cinq dernières sont des ajouts des passes F0) dans l'Atlas, mais **la citation passage/date/source vérifiée entrée par entrée n'est pas encore complète**. La matrice `docs/18_CONCEPT_SOURCE_MATRIX.md` distingue les liens étayés des entrées encore non vérifiées.
 2. Les gros exports de conversations (`Continuum Protocol Core`, `Obsidia V1`, `obsidia suite 29.07 deu`) mélangent paroles de l'utilisateur, propositions assistant, redites et plans. Aucune attribution individuelle d'auteur ni datation exacte ne doit être inventée.
 3. Les documents de calcul physique/thermodynamique sont à examiner comme **recherche historique**, sans dériver de revendications de validité scientifique.
 4. Vérifier dans les branches runtime exactes les descendants mentionnés (notamment AVDR Gencoin, `calculate_immutable_vote()`, mémoire native, actualité de chaque test) avant toute déclaration `VERIFIED/FROZEN`.
@@ -126,4 +126,4 @@ Balance Proportionnelle Exponentielle ────────────┘
 
 ## 5. Décision documentaire
 
-**F0-SOURCE-RECONCILIATION = PARTIAL / OPEN.** Deuxième passe avec codes sources exacts : [19_F0_SOURCE_TRACE_BATCH2.md](19_F0_SOURCE_TRACE_BATCH2.md). Nombre de concepts inventoriés : **108**. État de preuve par catégorie dans [18_CONCEPT_SOURCE_MATRIX.md](18_CONCEPT_SOURCE_MATRIX.md), qui n'est pas un recensement de 108 inventions ni de 108 contrats runtime. Sources supplémentaires cataloguées, principales collisions documentées, atlas enrichi par provenance. Pas de fusion vers `main`, pas de passage à F1 ni d'installation PC avant fermeture explicite de la preuve documentaire/contractuelle.
+**F0-SOURCE-RECONCILIATION = PARTIAL / OPEN.** Deuxième passe : [19_F0_SOURCE_TRACE_BATCH2.md](19_F0_SOURCE_TRACE_BATCH2.md) ; triage final des sources ouvertes : [20_F0_FINAL_SOURCE_GAPS.md](20_F0_FINAL_SOURCE_GAPS.md). Nombre de concepts inventoriés : **108**. État de preuve par catégorie dans [18_CONCEPT_SOURCE_MATRIX.md](18_CONCEPT_SOURCE_MATRIX.md), qui n'est pas un recensement de 108 inventions ni de 108 contrats runtime. Sources supplémentaires cataloguées, principales collisions documentées, atlas enrichi par provenance. Pas de fusion vers `main`, pas de passage à F1 ni d'installation PC avant fermeture explicite de la preuve documentaire/contractuelle.
