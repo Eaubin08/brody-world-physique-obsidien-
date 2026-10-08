@@ -88,6 +88,14 @@ jobs:
           python -m brody_world_physique.experience_memory_v1 --verify build/drawing-school-v1
           python -m brody_world_physique.candidate_skill_retrieval_v1 --memory build/drawing-school-v1 --image build/drawing-school-v1/teacher_images/examen_cercle.png --max-distance 64
           python -c "import json,pathlib; p=pathlib.Path('build/drawing-school-v1'); d=json.loads((p/'evaluation.json').read_text()); e=json.loads((p/'experience_memory_index_v1.json').read_text()); assert e['episode_count']==10; assert d['procedural_experience_memory']['episodes']==10 and d['procedural_experience_memory']['memory_skill_selection_replayed'] is True; assert d['procedural_experience_memory']['all_generated_artifacts_replayed'] is True and d['native_memory_write_allowed'] is False; print('PROCEDURAL_MEMORY_CODE_REPLAY_PASS')"
+      - name: Instrument choice from 0 1 9 experiences without heldout target
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m brody_world_physique.instrument_school_v2 --prior-school build/drawing-school-v1 --out build/instruments-cold --training-lessons 0
+          python -m brody_world_physique.instrument_school_v2 --prior-school build/drawing-school-v1 --out build/instruments-one --training-lessons 1
+          python -m brody_world_physique.instrument_school_v2 --prior-school build/drawing-school-v1 --out build/instruments-full --training-lessons 9
+          python -m brody_world_physique.instrument_school_v2 --verify build/instruments-full
+          python -c "import json,pathlib; p=pathlib.Path('build'); cases=[json.loads((p/n/'evaluation.json').read_text()) for n in ('instruments-cold','instruments-one','instruments-full')]; assert [(x['chosen_count'],x['hold_count']) for x in cases]==[(0,4),(1,3),(3,1)]; assert [v['decision']['chosen_tool'] for v in cases[-1]['exams']]==['PENCIL','PEN','NIB',None]; assert not any(v['memory_mutations_from_test'] for x in cases for v in x['exams']); print('INSTRUMENT_CHOICE_ZERO_ONE_NINE_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
@@ -100,4 +108,7 @@ jobs:
             build/transfer-v1/
             build/drawing-school-v0/
             build/drawing-school-v1/
+            build/instruments-cold/
+            build/instruments-one/
+            build/instruments-full/
           retention-days: 7
