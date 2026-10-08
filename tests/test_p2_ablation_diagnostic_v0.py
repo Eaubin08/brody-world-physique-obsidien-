@@ -33,11 +33,13 @@ class P2DiagnosticTest(unittest.TestCase):
                  "proposal":{"status":"PREDICTION_CANDIDATE",
                              "candidate_xy":[18.0,20.0]}}
             receipts.write_text(json.dumps(row)+"\n",encoding="utf-8")
-            with patch.object(p2,"_load_probe_suite",return_value=([],[("test_01.mp4",video,digest)])), patch.object(p2,"iter_video_points",return_value=iter(samples)):
+            with patch.object(p2,"_load_probe_suite",return_value=([],[("test_01.mp4",video,digest)])), patch.object(p2,"iter_video_points",side_effect=lambda *args, **kwargs: iter(samples)), patch.object(p2,"raster_history_only",return_value=[(0.0,20.0),(6.0,20.0),(12.0,20.0)]):
                 report=p2.evaluate(suite,receipts)
                 self.assertEqual(report["p2_verdict"],"P2_INCONCLUSIVE")
                 self.assertEqual(report["summary"]["A1_linear_kinematics"]["mean_error_px"],0)
                 self.assertFalse(report["ablation_gain_proven"])\n                self.assertEqual(report["summary"]["A2_spatial_acceleration"]["mean_error_px"],0)\n                self.assertEqual(report["summary"]["A5_fixed_past_only_blend"]["mean_error_px"],0)
+                self.assertEqual(report["summary"]["A3_raster_only"]["mean_error_px"],0)
+                self.assertEqual(report["summary"]["A6_raster_spatial_fixed_fusion"]["mean_error_px"],0)
                 row["history_refs"][-1]=samples[-1].source_ref
                 receipts.write_text(json.dumps(row)+"\n",encoding="utf-8")
                 with self.assertRaises(ValueError):
