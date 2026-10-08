@@ -119,6 +119,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Experiential learning without preloaded physics laws: 8 simulated videos, empty/one/four experiences, holdout and honest benchmarks](docs/32_EXPERIENCES_ZERO_SAVOIR_SANS_LOI.md)**
 - **[Twelve-video transfer probes — new object colors/shapes, mobile viewpoint, surprise, contradictory experience, occlusion, Reverso frame preview](docs/33_EPISODES_TRANSFER_MONDE_INCONNU_V1.md)**
 - **[Image-first drawing school and candidate memory — source-guided strokes, pixel feedback, negative-transfer HOLD, episode ledger and unseen drawing exams](docs/34_ECOLE_DE_DESSIN_MEMOIRE_EXPERIENTIELLE.md)**
+- **[Drawing class V1 — erase/replace gestures, raster-traced curves/circles, memory-sourced mistakes and six new exams](docs/35_ECOLE_DESSIN_V1_COURBES_GOMME_MEMOIRE.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -294,6 +295,28 @@ local SHA-256-chained `candidate_experience_ledger.jsonl` and
 `candidate_skill_memory.json`. This is **NOT Obsidia Native Memory**, not
 its canonical Merkle sealing, and it does not promote any skill as truth.
 [Full provenance from original Google Drive documents and roadmap](docs/34_ECOLE_DE_DESSIN_MEMOIRE_EXPERIENTIELLE.md).
+
+## Drawing school V1 — correct old strokes, trace curved outlines
+
+After the user reviewed V0 drawings, V1 adds [motor-gesture
+correction](brody_world_physique/drawing_school_v1.py): `ADD`, `ERASE`
+and `REPLACE` old strokes against a visible teacher reference, and
+reuses experience-derived candidates for new triangles, circles,
+crosses and curves. It includes generic raster thinning/path tracing
+and evaluates 6 distinct unseen image references (visible at exam).
+This is **guided copying**: the drawing correction algorithm is
+engineered, and neither object semantics nor original image generation
+has been learned.
+
+```powershell
+py -m brody_world_physique.drawing_school_v1 --out "build\\school-v1-demo"
+```
+
+`teacher_images/` are never overwritten, `attempts/` show raw recollection
+versus accepted memory and corrected output, and the local SHA-256
+episode ledger records harmful memory transfers as candidates.
+No Native Memory writes. See [35 — measured six-image
+experiment](docs/35_ECOLE_DESSIN_V1_COURBES_GOMME_MEMOIRE.md).
 
 ## Current milestone
 
