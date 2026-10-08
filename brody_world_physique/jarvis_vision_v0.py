@@ -137,11 +137,14 @@ def describe_image(
         raise ValueError("model, prompt and positive timeout <=300 are required")
     if not 16 <= max_tokens <= 1024:
         raise ValueError("max_tokens must be 16..1024")
-    image_path = Path(image_path).resolve(strict=True)
+    selected_path = Path(image_path)
+    if selected_path.is_symlink():
+        raise ValueError("image must not be a symlink")
+    image_path = selected_path.resolve(strict=True)
     if not image_path.is_file():
         raise ValueError("image must be a regular file")
-    if image_path.is_symlink():
-        raise ValueError("image must not be a symlink")
+    if not 0 < image_path.stat().st_size <= MAX_INPUT_BYTES:
+        raise ValueError("input image must be nonempty and <= 25 MiB")
     original_sha256 = hashlib.sha256(image_path.read_bytes()).hexdigest()
     encoded, sent_sha256, dimensions = _jpeg_for_local_model(image_path, max_dimension)
     payload = {
