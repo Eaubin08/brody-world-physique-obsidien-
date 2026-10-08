@@ -96,9 +96,10 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - [Frozen architecture decisions](docs/10_DECISIONS.md)
 - [Sources and upstream references](docs/11_SOURCES.md)
 - [Obsidia / user primary sources](docs/12_OBSIDIA_USER_SOURCES.md)
+- [F0 cross-audit — SENS / MMonde / Memory / GPS](docs/13_F0_CROSS_AUDIT.md)
 
 ## Current milestone
 
-**F0 — Documentation + contract audit.**
+**F0 — Cross-audit complete; contract freeze candidate.**
 
-No model download, runtime installation or weight integration should happen before F0 verifies how the proposed contracts map onto current SENS, MMonde, Native Memory, OS Trad/IR and GPS evidence structures.
+The audit found that most world/vision/evidence contracts already exist upstream. The next implementation gate is limited to the missing learning-loop contracts (`WorldTransformationV0`, `WorldStateProjectionV0`, `WorldStateDeltaV0`, `WorldExperienceCandidateV0`) plus tests. Model downloads remain deferred until after that contract gate and PC hardware inventory.
