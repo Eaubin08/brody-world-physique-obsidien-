@@ -55,6 +55,10 @@ jobs:
         run: |
           python -m brody_world_physique.world_experience_bridge_v4 --v3 build/windows-drawing-hidden-v3 --out build/world-candidate-v4.json
           python -m brody_world_physique.world_experience_bridge_v4 --v3 build/windows-drawing-hidden-v3 --verify build/world-candidate-v4.json
+      - name: Windows 3.14 V4.1 pixel-derived spatial relations
+        run: |
+          python -m brody_world_physique.world_relations_school_v4_1 --prior-v3 build/windows-drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --out build/world-relations-v4-1
+          python -m brody_world_physique.world_relations_school_v4_1 --prior-v3 build/windows-drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --verify build/world-relations-v4-1
   contracts-and-docs:
     runs-on: ubuntu-latest
     strategy:
@@ -133,6 +137,12 @@ jobs:
           python -m brody_world_physique.world_experience_bridge_v4 --v3 build/drawing-hidden-v3 --out build/world-candidate-v4.json
           python -m brody_world_physique.world_experience_bridge_v4 --v3 build/drawing-hidden-v3 --verify build/world-candidate-v4.json
           python -c "import json,pathlib; p=pathlib.Path('build/world-candidate-v4.json'); v=json.loads(p.read_text()); assert len(v['experience_candidates'])==3 and len(v['views']['world_observations'])==6; assert v['semantic_boundary']['sens_pipeline_executed'] is False and v['native_memory_write_allowed'] is False; print('MMONDE_EXPERIENCE_BRIDGE_V4_PASS')"
+      - name: Train world relation candidates from pixels and test blind transfer
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m brody_world_physique.world_relations_school_v4_1 --prior-v3 build/drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --out build/world-relations-v4-1
+          python -m brody_world_physique.world_relations_school_v4_1 --prior-v3 build/drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --verify build/world-relations-v4-1
+          python -c "import json,pathlib; x=json.loads(pathlib.Path('build/world-relations-v4-1/evaluation.json').read_text()); assert x['training_lessons']==6 and len(x['tests'])==6 and x['native_memory_write_allowed'] is False and x['sens_executed'] is False; print('WORLD_RELATIONS_V4_1_REPLAY_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
@@ -150,4 +160,5 @@ jobs:
             build/instruments-full/
             build/drawing-hidden-v3/
             build/world-candidate-v4.json
+            build/world-relations-v4-1/
           retention-days: 7
