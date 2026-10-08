@@ -105,6 +105,12 @@ jobs:
           python -m brody_world_physique.world_transfer_probe_v1 --suite build/transfer-v1/suite/suite.json --out build/transfer-v1/raw --camera-mode raw_diagnostic
           python -m examples.reverso_future_preview_v1 --suite build/transfer-v1/suite/suite.json --forecasts build/transfer-v1/anchored/forecasts_precommitted.jsonl --out build/transfer-v1/reverso-preview --clip test_01.mp4
           python -c "import json,pathlib; r=pathlib.Path('build/transfer-v1'); a=json.loads((r/'anchored'/'evaluation.json').read_text()); b=json.loads((r/'raw'/'evaluation.json').read_text()); e={x['file']:x for x in a['measurements']}; assert len(e)==6 and a['test_memory_mutations']==0; assert all(not a[k] for k in ('world_knowledge_validated','physical_causality_proven','learned_3d_world')); assert e['test_01.mp4']['predictions']>0 and e['test_02.mp4']['predictions']>0; assert e['test_05.mp4']['holds_conflict']>=1; assert e['test_06.mp4']['missing_heldout']>=1; print('TRANSFER_PROBE_12_VIDEO_PASS')"
+      - name: Assemble sealed ball prediction across pixels space time and movement P1
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m brody_world_physique.multirepresentation_ball_bridge_v5 --suite build/transfer-v1/suite/suite.json --forecasts build/transfer-v1/anchored/forecasts_precommitted.jsonl --preview build/transfer-v1/reverso-preview --out build/transfer-v1/shared-representations-p1
+          python -m brody_world_physique.multirepresentation_ball_bridge_v5 --suite build/transfer-v1/suite/suite.json --forecasts build/transfer-v1/anchored/forecasts_precommitted.jsonl --preview build/transfer-v1/reverso-preview --verify build/transfer-v1/shared-representations-p1
+          python -c "import json,pathlib; x=json.loads(pathlib.Path('build/transfer-v1/shared-representations-p1/evaluation.json').read_text()); e=x['experiment_candidate']; assert len(e['representation_views'])==4 and e['independent_source_count']==1 and not e['comparisons']['joint_representation_improvement_proven'] and x['native_memory_write_allowed'] is False and x['physical_truth_proven'] is False; print('BALL_MULTIREPRESENTATION_P1_REPLAY_PASS')"
       - name: Run image-first drawing school with candidate memory and replay
         if: matrix.python-version == '3.11'
         run: |
