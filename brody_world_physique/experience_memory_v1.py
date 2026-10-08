@@ -223,7 +223,7 @@ def record_episode(root:Path, *, source_ref:str, trial:dict,
         "source_kind":"SIMULATED",
         "produced_kind":"GENERATED",
         "observation":{
-            "source_ref":str(source_path.relative_to(root)).replace("\\","/"),
+            "source_ref":source_path.relative_to(root).as_posix(),
             "source_sha256":source_digest,
             "teacher_source_visible":True,
             "intent":"COPY_VISIBLE_REFERENCE_BY_CORRECTING_PIXEL_ERROR",
@@ -270,7 +270,7 @@ def record_episode(root:Path, *, source_ref:str, trial:dict,
             "operations":trial["changes"],
             "replayed_step_count":recipe["replayed_step_count"],
             "final_gestures":recipe["replayed_gestures"],
-            "generated_artifact_ref":str(final_path.relative_to(root)).replace("\\","/"),
+            "generated_artifact_ref":final_path.relative_to(root).as_posix(),
             "generated_artifact_sha256":output_digest,
         },
         "evaluation":{
@@ -309,7 +309,7 @@ def record_episode(root:Path, *, source_ref:str, trial:dict,
     destination=save/(source_ref+".json")
     if destination.exists():raise ValueError("episode already recorded")
     destination.write_text(json.dumps(record,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
-    return {"episode_ref":str(destination.relative_to(root)),
+    return {"episode_ref":destination.relative_to(root).as_posix(),
             "sha256":digest_bytes(destination.read_bytes()),
             "episode_id":source_ref,
             "source_sha256":source_digest,
@@ -361,7 +361,7 @@ def verify_episode(root:Path, entry:dict)->dict:
         raise ValueError("invalid episode descriptor")
     ref=entry["episode_id"]
     loc=root/"experience_episodes_v1"/(ref+".json")
-    if entry.get("episode_ref")!=str(loc.relative_to(root)) or not loc.is_file():
+    if entry.get("episode_ref")!=loc.relative_to(root).as_posix() or not loc.is_file():
         raise ValueError("unsafe episode file or missing source")
     if digest_bytes(loc.read_bytes())!=entry.get("sha256"):
         raise ValueError("modified episode receipt")
@@ -390,7 +390,7 @@ def verify_episode(root:Path, entry:dict)->dict:
     if procedures.get("pillow_version")!=PIL.__version__:
         raise ValueError("raster library changed; reproducible replay unverified")
     img=_source_path(root,ref)
-    if data["observation"].get("source_ref")!=str(img.relative_to(root)) or not img.is_file():
+    if data["observation"].get("source_ref")!=img.relative_to(root).as_posix() or not img.is_file():
         raise ValueError("reference image source mismatch")
     if digest_bytes(img.read_bytes())!=data["observation"]["source_sha256"]:
         raise ValueError("source image changed")
@@ -419,7 +419,7 @@ def verify_episode(root:Path, entry:dict)->dict:
     if replayed["replayed_step_count"]!=rec["replayed_step_count"]:
         raise ValueError("edit sequence length differs")
     expected=_output_path(root,ref,"_apres_correction" if ref.startswith("examen_") else "_dessin")
-    if rec["generated_artifact_ref"]!=str(expected.relative_to(root)) or not expected.is_file():
+    if rec["generated_artifact_ref"]!=expected.relative_to(root).as_posix() or not expected.is_file():
         raise ValueError("untrusted output path")
     if digest_bytes(expected.read_bytes())!=rec["generated_artifact_sha256"]:
         raise ValueError("generated artifact was modified")
