@@ -135,10 +135,14 @@ def _fit_gestures(strokes:tuple[GestureV1,...], rect:tuple[int,int,int,int])->tu
     sx1=max(x for x,y in points);sy1=max(y for x,y in points)
     dx=max(1,sx1-sx0);dy=max(1,sy1-sy0)
     a,b,c,d=rect
-    return tuple(GestureV1(points=tuple(
-        (max(0,min(SIDE-1,round(a+(x-sx0)/dx*(c-a)))),
-         max(0,min(SIDE-1,round(b+(y-sy0)/dy*(d-b))))
-        for x,y in g.points),kind=g.kind) for g in strokes)
+    def move(point:tuple[int,int])->tuple[int,int]:
+        x,y=point
+        nx=round(a+(x-sx0)/dx*(c-a))
+        ny=round(b+(y-sy0)/dy*(d-b))
+        return (max(0,min(SIDE-1,nx)),max(0,min(SIDE-1,ny)))
+    return tuple(GestureV1(
+        points=tuple(move(p) for p in gesture.points),kind=gesture.kind,
+    ) for gesture in strokes)
 
 
 def assemble_from_prior_skills(prior_v1:Path, composition:list[dict])->tuple[GestureV1,...]:
