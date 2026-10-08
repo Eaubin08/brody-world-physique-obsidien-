@@ -120,6 +120,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Twelve-video transfer probes — new object colors/shapes, mobile viewpoint, surprise, contradictory experience, occlusion, Reverso frame preview](docs/33_EPISODES_TRANSFER_MONDE_INCONNU_V1.md)**
 - **[Image-first drawing school and candidate memory — source-guided strokes, pixel feedback, negative-transfer HOLD, episode ledger and unseen drawing exams](docs/34_ECOLE_DE_DESSIN_MEMOIRE_EXPERIENTIELLE.md)**
 - **[Drawing class V1 — erase/replace gestures, raster-traced curves/circles, memory-sourced mistakes and six new exams](docs/35_ECOLE_DESSIN_V1_COURBES_GOMME_MEMOIRE.md)**
+- **[BRODY_EXPERIENCE_MEMORY_V1 — observation, raster interpretation, actual chosen procedure/code fingerprints, executed gestures, mistakes, evaluation and deterministic memory replay](docs/36_BRODY_EXPERIENCE_MEMORY_V1_PROCEDURES_REPLAY.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -317,6 +318,30 @@ versus accepted memory and corrected output, and the local SHA-256
 episode ledger records harmful memory transfers as candidates.
 No Native Memory writes. See [35 — measured six-image
 experiment](docs/35_ECOLE_DESSIN_V1_COURBES_GOMME_MEMOIRE.md).
+
+## Procedure-linked experience memory V1 (non-canonical)
+
+Every drawing-school V1 lesson and exam now emits a
+[`BRODY_EXPERIENCE_MEMORY_V1` episode](brody_world_physique/experience_memory_v1.py)
+containing the source image SHA-256, *measured* raster interpretation (no
+semantic claim), chosen method, whitelisted real Python
+`module_path / function_name / file_sha256`, initial gestures, actual
+`ADD / ERASE / REPLACE` steps, measured results, failed recalled procedures
+and a **candidate** skill. The code fingerprint references actual functions;
+the memory never stores executable code. A fixed-code **independent replay**
+checks every operation, result image, source and module SHA. An
+[isolated readonly procedure recall](brody_world_physique/candidate_skill_retrieval_v1.py)
+shows which previous skill and current code *might* apply to a new visible
+image, with HOLD if absent or unfamiliar. This does not write Obsidia's
+Native Memory, ACT, promote results or train a vision model.
+
+```powershell
+py -m brody_world_physique.drawing_school_v1 --out "build\\new-school-memory"
+py -m brody_world_physique.experience_memory_v1 --verify "build\\new-school-memory"
+py -m brody_world_physique.candidate_skill_retrieval_v1 --memory "build\\new-school-memory" --image "build\\new-school-memory\\teacher_images\\examen_triangle.png"
+```
+
+See [36 — provenance, explicit choice and memory/code boundary](docs/36_BRODY_EXPERIENCE_MEMORY_V1_PROCEDURES_REPLAY.md).
 
 ## Current milestone
 
