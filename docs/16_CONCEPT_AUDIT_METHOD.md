@@ -414,7 +414,7 @@ This keeps the architecture connected to the user's actual reasoning trajectory 
 
 ## 16. F0 reconciliation evidence and authorship policy — 2026-10-08
 
-This gate is required for **every** entry in the 107-concept Atlas before calling the *documentary* reconciliation complete.
+This gate is required for **every** entry in the 108-concept Atlas before calling the *documentary* reconciliation complete.
 
 ### Source evidence states
 
@@ -465,4 +465,6 @@ Document audit gate can be closed only once `docs/18_CONCEPT_SOURCE_MATRIX.md` h
 
 Prioritise user-generated source definitions first, current code/tests for runtime assertions, and independent external research only for novelty claims. No automatic rewrite of old source material.
 
-See `docs/17_F0_SOURCE_RECONCILIATION.md` and `docs/18_CONCEPT_SOURCE_MATRIX.md`.
+See `docs/17_F0_SOURCE_RECONCILIATION.md`, `docs/18_CONCEPT_SOURCE_MATRIX.md` and `docs/19_F0_SOURCE_TRACE_BATCH2.md`.
+
+For sources in a non-ancestral experimental branch, classify `RESEARCH_CODE_READ`, never `CURRENT_RUNTIME`. `UPSTREAM_CODE_READ` only proves source code inspection; it does not establish execution, tests, causal utility, verified scientific claims or the intellectual origin. For mixed AI-user archives, record both the user's messages and assistant suggestions, leaving attribution unresolved if speaker/time is unclear.
