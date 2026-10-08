@@ -730,8 +730,14 @@ Physical truth or evidence.
 
 The strongest current semantic lattice material is still classified as research source / selective-port material on the current R6 line.
 
----
 
+## Preuve de source F0 — 2026-10-08
+
+- [SENS source research](https://github.com/Eaubin08/obsidia-x108-proofs/blob/85d55e3538f1b049f2f9eb7f12892928187d3de4/app/semantic/lattice/events.py) — source inspectée à un commit identifié.
+- **Limite :** La branche source est expérimentale et distincte de R6; une lecture de code ne transforme pas M8-D2 en runtime canonique.
+- **Audit de frontière :** [F0 passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
+
+---
 # 20. EventRef
 
 ## Definition
@@ -753,8 +759,14 @@ Allow language to refer back to an event and build event relations/anaphora.
 
 **RESEARCH SOURCE / SELECTIVE PORT**
 
----
 
+## Preuve de source F0 — 2026-10-08
+
+- [EventRef original](https://github.com/Eaubin08/obsidia-x108-proofs/blob/85d55e3538f1b049f2f9eb7f12892928187d3de4/app/semantic/lattice/events.py) — source inspectée à un commit identifié.
+- **Limite :** Identifiant strictement local au frame/énoncé; ni identité physique, ni mémoire, ni preuve.
+- **Audit de frontière :** [F0 passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
+
+---
 # 21. EventCandidate
 
 ## Definition
@@ -773,8 +785,14 @@ Proof that the event physically happened.
 
 **RESEARCH SOURCE / SELECTIVE PORT**
 
----
 
+## Preuve de source F0 — 2026-10-08
+
+- [EventCandidate experimental](https://github.com/Eaubin08/obsidia-x108-proofs/blob/85d55e3538f1b049f2f9eb7f12892928187d3de4/tests/test_occurrence_migration.py) — source inspectée à un commit identifié.
+- **Limite :** Le test source documente le candidat d'événement et la projection M8-D2; tests non relancés.
+- **Audit de frontière :** [F0 passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
+
+---
 # 22. OccurrenceClaim
 
 ## Definition
@@ -799,8 +817,14 @@ OccurrenceClaim
 
 **M8-D2 SOURCE CONCEPT / SELECTIVE PORT**
 
----
 
+## Preuve de source F0 — 2026-10-08
+
+- [OccurrenceClaim original](https://github.com/Eaubin08/obsidia-x108-proofs/blob/85d55e3538f1b049f2f9eb7f12892928187d3de4/app/semantic/lattice/occurrence_derivation.py) — source inspectée à un commit identifié.
+- **Limite :** Ce que la phrase affirme, pas la réalisation prouvée d'un événement dans le monde.
+- **Audit de frontière :** [F0 passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
+
+---
 # 23. OccurrenceDerivation
 
 ## Definition
@@ -819,8 +843,14 @@ A causal derivation of a physical-world event.
 
 **M8-D2 SOURCE CONCEPT / SELECTIVE PORT**
 
----
 
+## Preuve de source F0 — 2026-10-08
+
+- [OccurrenceDerivation original](https://github.com/Eaubin08/obsidia-x108-proofs/blob/85d55e3538f1b049f2f9eb7f12892928187d3de4/app/semantic/lattice/occurrence_derivation.py) — source inspectée à un commit identifié.
+- **Limite :** La dérivation du claim conserve NO_ASSERTION ≠ UNRESOLVED et la frontière linguistique.
+- **Audit de frontière :** [F0 passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
+
+---
 # 24. Native Memory
 
 ## Definition
@@ -1499,8 +1529,14 @@ It qualifies evidence before governance.
 
 **EXISTING IN GPS DOMAIN**
 
----
 
+## Preuve de source F0 — 2026-10-08
+
+- [GPS public claim matrix](https://github.com/Eaubin08/obsidia-gps-defense-/blob/d1221fce6914274f7b0c445a829739367b0c6abb/docs/CLAIM_MATRIX.md) — source inspectée à un commit identifié.
+- **Limite :** Le Physical Reality Gate classe une observation physique; l'adaptateur `gps_x108_gate.py` transporte une décision KX108 et ne doit pas être confondu avec le gate de recevabilité.
+- **Audit de frontière :** [F0 passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
+
+---
 # 45. Evidence Compatibility
 
 ## Definition
@@ -1603,8 +1639,14 @@ A crash or indecision.
 
 **CURRENT KERNEL AUTHORITY OUTPUT**
 
----
 
+## Preuve de source F0 — 2026-10-08
+
+- [X108 safety doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) — source inspectée à un commit identifié.
+- **Limite :** HOLD = suspension décisionnelle souveraine, non vote advisory Sigma. Domaine GPS: réponse mal formée → HOLD.
+- **Audit de frontière :** [F0 passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
+
+---
 # 49. BLOCK
 
 ## Definition
@@ -1619,8 +1661,14 @@ Merely low confidence.
 
 **CURRENT KERNEL AUTHORITY OUTPUT**
 
----
 
+## Preuve de source F0 — 2026-10-08
+
+- [X108 safety doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) — source inspectée à un commit identifié.
+- **Limite :** BLOCK = refus d'action par autorité du kernel, non valeur émotionnelle ou score de modèle.
+- **Audit de frontière :** [F0 passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
+
+---
 # 50. ACT
 
 ## Definition
@@ -1639,8 +1687,14 @@ Execution can still require Binder/capability/runtime/human conditions.
 
 **CURRENT KERNEL AUTHORITY OUTPUT**
 
----
 
+## Preuve de source F0 — 2026-10-08
+
+- [X108 safety doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) — source inspectée à un commit identifié.
+- **Limite :** ACT représente une décision d'autorité bornée, pas une action automatique émise par les agents, SENS ou Brody.
+- **Audit de frontière :** [F0 passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
+
+---
 # 51. GuardX108
 
 ## Definition
