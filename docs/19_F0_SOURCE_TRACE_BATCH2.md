@@ -132,7 +132,7 @@ The physical adapter treats measurements, physical quantities, model refs and ev
 |---|---|---|
 | #58 Weight-last learning | « Module 5 — cinématique » | La source discute au contraire un ajustement de poids ; elle ne prouve pas la doctrine `weight-last` actuelle. Trouver la source canon d'éducation. |
 | #71 ADeLe / A2DR | « Cartographie Master » | Le texte trouvé contient AVDR mais pas la définition primaire ADeLe/A2DR. Source de l'entrée initiale inadéquate, remplacée par Microsoft + archive fusion Obsidia. |
-| #93 C10 | « Constitution X108 » | Aucun C10 exact repéré dans la lecture correspondante. C10 actuel Éducation/Oxygen sourcé dans `docs/EDUCATION.md`; C10 immuabilité historique à récupérer précisément. |
+| #93 C10 | « Constitution X108 » | Source initiale inadéquate. **Source exacte retrouvée dans la passe suivante** : [Bloc 11 Trace et Immuabilité](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/OBSIDIA_V4_STRUCTURED_FULL/02_BLOCS_17/Bloc_11__Trace_et_Immuabilite_C10.md), distinct du C10 Éducation/Oxygen dans `docs/EDUCATION.md`. Voir [F0 passe 3](20_F0_FINAL_SOURCE_GAPS.md). |
 | #40 RealImageObservationV0 | Master GPS de Drive | Le terme exact absent du support historique. F16 code sert de source contractuelle, pas d'origine intellectuelle de ce type. |
 | #44 Physical Reality Gate | Master GPS | Un support narratif de GPS physique ne suffit pas à établir la gate exacte de runtime. Reste à auditer source du domaine GPS. |
 
@@ -140,7 +140,7 @@ The physical adapter treats measurements, physical quantities, model refs and ev
 
 1. Pour chaque `UPSTREAM_CODE_READ`, ajouter un lien d'origine intellectuelle *seulement si trouvable*, sinon écrire `ORIGIN_NOT_YET_TRACED`.
 2. Vérifier les concepts expérimentaux SENS `EventRef / OccurrenceClaim / OccurrenceDerivation` à partir de la branche source, **sans confondre identité linguistique et événement physique**.
-3. Séparer les collisions historiques ERA / AVDR / C10, comme déjà fait pour Balance.
+3. Conserver les collisions ERA / AVDR / C10 en parallèle. La source précise du C10 historique a été retrouvée dans la passe suivante ; aucune fusion sémantique.
 4. Décomposer les vastes transcriptions Drive par date et par interlocuteur, sans publication publique brute.
 5. Ne pas fusionner les PR F0 et ne pas déclencher F1 sur la seule présence documentaire.
 
