@@ -37,11 +37,26 @@ class P2DiagnosticTest(unittest.TestCase):
                 report=p2.evaluate(suite,receipts)
                 self.assertEqual(report["p2_verdict"],"P2_INCONCLUSIVE")
                 self.assertEqual(report["summary"]["A1_linear_kinematics"]["mean_error_px"],0)
-                self.assertFalse(report["ablation_gain_proven"])
+                self.assertFalse(report["ablation_gain_proven"])\n                self.assertEqual(report["summary"]["A2_spatial_acceleration"]["mean_error_px"],0)\n                self.assertEqual(report["summary"]["A5_fixed_past_only_blend"]["mean_error_px"],0)
                 row["history_refs"][-1]=samples[-1].source_ref
                 receipts.write_text(json.dumps(row)+"\n",encoding="utf-8")
                 with self.assertRaises(ValueError):
                     p2.evaluate(suite,receipts)
+
+    def test_acceleration_from_past_only(self):
+        def p(t,x):
+            return PositionMeasurementV0(
+                entity_ref="simulated:foreground-object",source_ref=f"frame-{t}",
+                frame_ref="fixture:anchored",time_s=float(t),x=float(x),
+                y=0.0,unit="px",source_kind="SIMULATED",
+                uncertainty_refs=("SIMULATED",))
+        # An accelerating past: 0 -> 1 -> 4, with a 1-unit future horizon.
+        predictions=p2.past_only_predictions([p(0,0),p(1,1),p(2,4)],3.0)
+        self.assertEqual(predictions["A1_linear_kinematics"],[7.0,0.0])
+        self.assertEqual(predictions["A2_spatial_acceleration"],[9.0,0.0])
+        self.assertEqual(predictions["A5_fixed_past_only_blend"],[8.0,0.0])
+        with self.assertRaises(ValueError):
+            p2.past_only_predictions([p(0,0),p(1,1),p(2,4)],2.0)
 
     def test_reject_nonfinite_forecast(self):
         self.assertFalse(p2._finite_xy([float("nan"),4]))
