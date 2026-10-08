@@ -103,9 +103,9 @@ class ExperientialLearningTests(TestCase):
         observed=[]
         def fake_frames(path,digest):
             if digest==a:
-                yield from self.samples(a,count=6)
+                yield from self.samples(a,count=12)
             else:
-                for i,sample in enumerate(self.samples(b,count=6,y0=150)):
+                for i,sample in enumerate(self.samples(b,count=12,y0=150)):
                     if i==3:
                         predictions=(output/"predictions_before_heldout.jsonl").read_text().splitlines()
                         self.assertGreaterEqual(len(predictions),1)
@@ -118,16 +118,16 @@ class ExperientialLearningTests(TestCase):
                    side_effect=lambda video,digest: fake_frames(video,digest)):
             result=run_suite(folder/"suite.json",output)
         self.assertEqual(result["cold_start"],"HOLD_NO_EXPERIENCE")
-        self.assertEqual(result["training_candidate_transitions"],3)
-        self.assertEqual(result["test_predictions"],3)
+        self.assertEqual(result["training_candidate_transitions"],9)
+        self.assertEqual(result["test_predictions"],9)
         self.assertEqual(result["test_holds_unknown"],0)
-        self.assertEqual(observed,list(range(6)))
+        self.assertEqual(observed,list(range(12)))
         report=json.loads((output/"evaluation.json").read_text())
         self.assertFalse(report["physics_understood"])
         self.assertFalse(report["world_knowledge_validated"])
         self.assertEqual(report["test_memory_mutations"],0)
         acquired=json.loads((output/"learning_candidates.json").read_text())
-        self.assertEqual(len(acquired["experiences"]),3)
+        self.assertEqual(len(acquired["experiences"]),9)
         self.assertTrue(all(x["source_sha256"]==a for x in acquired["experiences"]))
 
     def test_cannot_reuse_output_over_previous_experiment(self):
