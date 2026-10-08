@@ -18,7 +18,7 @@ Référence primaire : [FSO — « Formule du Savoir Obsidia et apprentissage fu
 - **P (proposition technique, PAS règle psychologique validée) :** les statuts `KEEP_SOURCE_REFERENCE`, `REFERENCE_ONLY`, `REVIEW_VALIDATED_PATTERN`, `REVIEW_HYPOTHESIS` et `OMIT_FROM_LEARNING_CANDIDATE` ci-dessous sont des **gates candidats** déduits des objectifs, pas des paroles textuelles du concepteur.
 - **A (ancienne proposition IA) :** BF/HF, pyramides, FaceLock, exactes formules ρ, etc. ne sont pas revendiqués comme créations originales ou validations empiriques par l'utilisateur.
 
-## 2. La chaîne voulue, sans confondre trois tâches
+> **Complément source utilisateur — priorité à la compréhension préverbale :** voir [28 — Apprentissage préverbal et monde physique](28_APPRENTISSAGE_PREVERBAL_MONDE_PHYSIQUE.md). Le fait de reproduire des pixels identiques n'est qu'un outil de comparaison. La compétence centrale visée est **observer → anticiper une évolution située → agir/essayer ou suivre un événement → mesurer l'écart → transférer → retenir sous conditions**, y compris **avant de savoir nommer la cause**. Les sources GPS, vent, biologie et microscopie sont des signaux spécialisés à intégrer selon leur disponibilité, pas des conditions préalables à toute compréhension.\n\n## 2. La chaîne voulue, sans confondre trois tâches
 
 ```text
 Image/source + IN
