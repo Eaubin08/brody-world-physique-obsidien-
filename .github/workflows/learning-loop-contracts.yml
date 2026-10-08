@@ -46,3 +46,12 @@ jobs:
         run: python -m compileall -q brody_world_physique tests examples
       - name: Unit tests and image documentation checks
         run: python -m unittest discover -s tests -p "test_*.py" -v
+      - name: Run bounded synthetic image demonstration
+        run: python -m examples.demo_image_v0 --out build/brody-image-demo
+      - name: Upload visible demonstration and provenance receipt
+        if: matrix.python-version == '3.11'
+        uses: actions/upload-artifact@v4
+        with:
+          name: brody-image-i1r1-synthetic-demo
+          path: build/brody-image-demo/
+          retention-days: 7
