@@ -200,9 +200,16 @@ def _load_suite(path: Path) -> tuple[dict, list[tuple[str,Path,str]], list[tuple
     return manifest,sets[0],sets[1]
 
 
-def run_suite(suite: str | Path, output: str | Path) -> dict[str, Any]:
-    """Cold start and experience acquisition, then FROZEN transfer on new clips."""
+def run_suite(
+    suite: str | Path, output: str | Path, *, train_videos: int | None = None
+) -> dict[str, Any]:
+    """Cold start (0), few experiences (1), or all (N), then frozen transfer."""
     meta,train_clips,test_clips=_load_suite(Path(suite))
+    if train_videos is None:
+        train_videos=len(train_clips)
+    if not isinstance(train_videos,int) or isinstance(train_videos,bool) or not 0 <= train_videos <= len(train_clips):
+        raise ValueError("train_videos must be 0..number of TRAIN clips")
+    train_clips=train_clips[:train_videos]
     root=Path(output).resolve()
     if root.exists() and any(root.iterdir()):
         raise ValueError("output must be a fresh empty directory")
@@ -314,8 +321,10 @@ def main(argv: list[str] | None=None) -> int:
     parser=argparse.ArgumentParser(description="Brody: empty memory -> self-supervised video experience -> unseen transfer")
     parser.add_argument("--suite",type=Path,required=True)
     parser.add_argument("--out",type=Path,required=True)
+    parser.add_argument("--train-videos",type=int,default=None,
+                        help="0=no prior experience; 1=one experience; omit=all TRAIN videos")
     args=parser.parse_args(argv)
-    result=run_suite(args.suite,args.out)
+    result=run_suite(args.suite,args.out,train_videos=args.train_videos)
     print(json.dumps(result,indent=2,ensure_ascii=False))
     return 0
 
