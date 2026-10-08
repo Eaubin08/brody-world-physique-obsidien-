@@ -99,6 +99,26 @@ class FullWorldRelationTests(TestCase):
         self.assertFalse(output["auto_promotion_allowed"])
         self.assertFalse(output["no_b8_promotion"] is False)
 
+    def test_v4_1_experiences_reuse_existing_world_types_not_another_memory_authority(self):
+        evaluation=json.loads((self.school/"evaluation.json").read_text())
+        records=evaluation["world_experience_candidates"]
+        self.assertEqual(len(records),6)
+        for bundle in records:
+            experience=bundle["experience"]
+            self.assertEqual(experience["schema_version"],"WORLD_EXPERIENCE_CANDIDATE_V0")
+            self.assertEqual(experience["validation_status"],"CANDIDATE")
+            self.assertEqual(experience["memory_eligibility"],"CANDIDATE_ONLY")
+            self.assertFalse(experience["canonical_memory"])
+            self.assertFalse(experience["memory_write_allowed"])
+            self.assertFalse(experience["auto_promotion_allowed"])
+            self.assertFalse(bundle["transformation"]["execution_authority"])
+            self.assertFalse(bundle["delta"]["causal_proof"])
+            self.assertTrue(bundle["no_sens_semantic_claim"])
+            self.assertEqual(bundle["transformation"]["epistemic_class"],"SIMULATED")
+        failed=next(r for r in records if
+                    r["experience"]["experience_id"]=="world-exp:v4-1:reversed_hard_negative")
+        self.assertEqual(failed["experience"]["outcome"],"CONTRADICTED_BY_TEACHER_FEEDBACK")
+
     def test_test_decisions_are_committed_without_ground_truth(self):
         receipts=[json.loads(line) for line in
                   (self.school/"choices_before_teacher_feedback.jsonl").read_text().splitlines()]
