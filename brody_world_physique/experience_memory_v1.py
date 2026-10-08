@@ -121,13 +121,13 @@ def verify_recipe(model:Image.Image, initial:list[dict], trace:list[dict],
         elif action=="ERASE":
             if not 0<=idx<len(drawn) or after is not None or before is None:
                 raise ValueError("ERASE receipt mismatch")
-            if gesture_snapshot(drawn[idx])!=before:
+            if stable_bytes(gesture_snapshot(drawn[idx]))!=stable_bytes(before):
                 raise ValueError("ERASE source gesture differs")
             drawn.pop(idx)
         else:
             if not 0<=idx<len(drawn) or after is None or before is None:
                 raise ValueError("REPLACE receipt mismatch")
-            if gesture_snapshot(drawn[idx])!=before:
+            if stable_bytes(gesture_snapshot(drawn[idx]))!=stable_bytes(before):
                 raise ValueError("REPLACE source gesture differs")
             drawn[idx]=checked_gesture(after)
         next_error=_error(source,drawn)
