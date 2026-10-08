@@ -321,6 +321,10 @@ def _open_fresh(destination:str|Path)->Path:
 
 def run_school(out:str|Path)->dict:
     root=_open_fresh(out)
+    # Import locally: the verifier imports our raster/gesture functions as a
+    # fixed whitelist, while the school only records *executed* episodes.
+    from .experience_memory_v1 import record_episode, finalize_index
+    episode_refs=[]
     teacher_dir=root/"teacher_images"
     attempts=root/"attempts"
     teacher_dir.mkdir();attempts.mkdir()
@@ -350,6 +354,13 @@ def run_school(out:str|Path)->dict:
                        "final_error":trial["final_error"],
                        "canonically_validated":False,
                        "memory_write_allowed":False})
+        receipt=record_episode(root,source_ref=name,trial=trial,
+                               memory_source_ref=None,is_exam=False)
+        episode_refs.append(receipt)
+        ledger.append({"event":"PROCEDURAL_EPISODE_REF",
+                       "episode_ref":receipt["episode_ref"],
+                       "episode_sha256":receipt["sha256"],
+                       "source_ref":name,"memory_write_allowed":False})
         training.append({"lesson":name,"blank_error":trial["blank_error"],
                          "final_error":trial["final_error"],
                          "edit_actions":[s["action"] for s in trial["changes"]],
@@ -392,6 +403,18 @@ def run_school(out:str|Path)->dict:
             ledger.append({"event":"EXAM_CORRECTION_CANDIDATE",
                            "source_ref":name,"edit":edit,
                            "memory_write_allowed":False})
+        # Identical deterministic feature distance as recall(): this
+        # provenance reflects the candidate actually selected.
+        chosen_skill=min(frozen,key=lambda sk:sum(
+            a!=b for a,b in zip(signature_for(ink,bbox_of(ink)),sk.signature)))
+        selected_ref=chosen_skill.lesson_ref if proposed else None
+        episode=record_episode(root,source_ref=name,trial=repaired,
+                               memory_source_ref=selected_ref,is_exam=True)
+        episode_refs.append(episode)
+        ledger.append({"event":"PROCEDURAL_EPISODE_REF",
+                       "episode_ref":episode["episode_ref"],
+                       "episode_sha256":episode["sha256"],
+                       "source_ref":name,"memory_write_allowed":False})
         results.append({"exercise_ref":name,
                         "blank_error_pixels":repaired["blank_error"],
                         "raw_memory_error_pixels":repaired["raw_recall_error"],
@@ -402,6 +425,7 @@ def run_school(out:str|Path)->dict:
                         "curved_gestures":repaired["contains_curved_strokes"],
                         "seen_by_learner_at_exam":True})
     verification=verify_candidate_ledger(ledger.filename)
+    procedural_verification=finalize_index(root,episode_refs)
     report={
         "schema":"BRODY_DRAWING_STUDENT_V1",
         "kind":"SUPERVISED_DRAWING_FROM_VISIBLE_SOURCE",
@@ -410,6 +434,9 @@ def run_school(out:str|Path)->dict:
         "candidate_skills":len(skills),
         "candidate_memory_file":str(memory_file),
         "ledger_integrity":verification,
+        "procedural_experience_memory":procedural_verification,
+        "procedural_experience_index_ref":"experience_memory_index_v1.json",
+        "procedural_registry_ref":"procedure_registry_v1.json",
         "truth_evaluator":"KNOWN_REFERENCE_PIXEL_ERROR",
         "semantic_object_understanding":False,
         "autonomous_image_generation":False,
@@ -433,6 +460,8 @@ def run_school(out:str|Path)->dict:
                       "initial_after_memory_gate","after_correction_error_pixels",
                       "memory_rejected")} for r in results],
             "ledger_events":verification["verified_records"],
+            "procedural_episodes":procedural_verification["episodes"],
+            "procedural_replayed_edits":procedural_verification["edits_verified"],
             "native_memory_write_allowed":False}
 
 
