@@ -15,6 +15,7 @@ from statistics import mean, median
 
 from .world_transfer_probe_v1 import _load_probe_suite, iter_video_points
 from .video_observation_v0 import video_sha256
+from .p2_raster_forecast_v0 import raster_history_only, raster_linear_forecast, raster_spatial_agreement
 
 SCHEMA = "BRODY_P2_PRECOMMIT_BASELINE_DIAGNOSTIC_V0"
 
@@ -119,6 +120,18 @@ def evaluate(suite: Path, receipts: Path) -> dict:
             if status is None or not isinstance(status, str):
                 raise ValueError("missing status")
             scores = past_only_predictions(history, future_index/24)
+            history_indices=tuple(int(round(p.time_s*24)) for p in history)
+            raster_past=raster_history_only(video,digest,history_indices)
+            raster_xy=raster_linear_forecast(raster_past,history_indices,future_index)
+            scores["A3_raster_only"] = raster_xy
+            # A6 is a deliberately fixed, zero-training, cross-view candidate.
+            # Independent extraction paths share the SAME synthetic video.
+            # Reject disagreement rather than selectively weighting on future.
+            if raster_spatial_agreement(raster_xy,scores["A1_linear_kinematics"]):
+                scores["A6_raster_spatial_fixed_fusion"] = [
+                    (a+b)/2 for a,b in zip(raster_xy,scores["A1_linear_kinematics"])]
+            else:
+                scores["A6_raster_spatial_fixed_fusion"] = None
             scores["P1_experiential_candidate"] = xy
             for arm, prediction in scores.items():
                 outcome = {"clip":name,"source_sha256":digest,
@@ -133,7 +146,8 @@ def evaluate(suite: Path, receipts: Path) -> dict:
                 outcomes.append(outcome)
     summary = {}
     for arm in ("A0_last_observation","A1_linear_kinematics","A2_spatial_acceleration",
-                "A5_fixed_past_only_blend","P1_experiential_candidate"):
+                "A3_raster_only","A5_fixed_past_only_blend",
+                "A6_raster_spatial_fixed_fusion","P1_experiential_candidate"):
         subset = [x for x in outcomes if x["arm"] == arm]
         vals = [x["error_px"] for x in subset if x["error_px"] is not None]
         summary[arm] = {"evaluated":len(vals),"total":len(subset),
@@ -143,12 +157,16 @@ def evaluate(suite: Path, receipts: Path) -> dict:
     return {"schema":SCHEMA, "suite_sha256":_hash(suite),
             "precommit_file_sha256":_hash(receipts),
             "source_kind":"SIMULATED","independent_view_sources":False,
-            "new_fusion_predictor_implemented":False,
+            "new_fusion_predictor_implemented":True,
+            "fusion_trained_or_adaptive":False,
+            "raster_and_spatial_share_source_video":True,
             "past_only_feature_blend_implemented":True,
             "arm_lineage":{"A2_spatial_acceleration":"three past XY plus timestamps",
-                            "A5_fixed_past_only_blend":"fixed average of A1 and A2, shared XY source"},
+                            "A5_fixed_past_only_blend":"fixed average of A1 and A2, shared XY source",
+                            "A3_raster_only":"independent raster extraction from past frames of same video",
+                            "A6_raster_spatial_fixed_fusion":"fixed average of raster and XY linear forecast if agreement gate passes"},
             "ablation_gain_proven":False,"p2_verdict":"P2_INCONCLUSIVE",
-            "limitation":"retrospective scoring of prior precommits; raster-independent and genuine cross-representation A3/A4/A6/A7 not implemented; A5 is a same-source blend",
+            "limitation":"retrospective scoring of prior precommits; A3 and A6 are two processing routes over ONE synthetic source, not independent evidence; A4 and leave-one-view-out A7 not implemented; out-of-sample gain unproven",
             "summary":summary,"per_episode":outcomes,
             "native_memory_write_allowed":False,"decision_authority":"KX108_ONLY"}
 
