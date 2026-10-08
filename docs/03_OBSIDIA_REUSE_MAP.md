@@ -1,5 +1,7 @@
 # 03 — Obsidia Reuse Map
 
+> **Detailed branch-level audit for Brody Image:** [22_IMAGE_BRANCH_AND_DONOR_MAP.md](22_IMAGE_BRANCH_AND_DONOR_MAP.md). This file lists conceptual reuse; the audit file distinguishes code actually present, integration pending, and hardware-dependent execution. Image generation and image-learning must drive priorities, not the general Obsidia organ inventory.
+
 This project starts by reusing Obsidia. It must not rebuild existing organs under new names.
 
 ## obsidia-x108-proofs

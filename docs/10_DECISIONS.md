@@ -116,3 +116,16 @@ Over time it may internalize:
 - learned skills.
 
 Progressive internalization must not collapse governance boundaries.
+
+
+---
+
+## D-021 — Brody Image drives the project priority (2026-10-08; proposal, not F0 architecture freeze)
+
+The purpose of this repository is **learning from images and generating / evaluating images**. Obsidia's general conceptual corpus is supporting documentary evidence, not the project's objective. Use [21 — Brody Image Master Plan](21_BRODY_IMAGE_MASTER_PLAN.md).
+
+## D-022 — Reuse already present visual and generative seams (2026-10-08; audit result)
+
+Map each open-source eye/segmenter/depth/generator to the existing Obsidia or Jarvis contract before implementing anything. See [22 — Source/Branch Integration Matrix](22_IMAGE_BRANCH_AND_DONOR_MAP.md). First practical image output G1 and input I1 can be tested in parallel, without breaking the existing F0 kernel/memory separation.
+
+**Neither decision asserts that user hardware, third-party weights, or a Brody image-generation loop is already installed.**

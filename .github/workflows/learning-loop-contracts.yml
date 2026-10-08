@@ -1,0 +1,35 @@
+name: brody-image-f0-checks
+
+on:
+  push:
+    branches:
+      - "f0/**"
+  pull_request:
+    branches:
+      - main
+      - "f0/**"
+    paths:
+      - "brody_world_physique/**"
+      - "tests/**"
+      - "docs/**"
+      - "README.md"
+      - ".github/workflows/learning-loop-contracts.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  contracts-and-docs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile contracts and tests
+        run: python -m compileall -q brody_world_physique tests
+      - name: Unit tests and image documentation checks
+        run: python -m unittest discover -s tests -p "test_*.py" -v
