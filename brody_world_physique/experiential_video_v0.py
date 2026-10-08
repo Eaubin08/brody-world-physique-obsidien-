@@ -281,7 +281,8 @@ def run_suite(
     # No source at TEST is ever added to frozen_memory.
     n_preds=sum(x["learned_predictions"] for x in assessments)
     n_holds=sum(x["unknown_holds"] for x in assessments)
-    all_learned=[e["learned_error_px"] for a in assessments for e in a["errors"] if e["learned_error_px"] is not None]
+    predicted_cases=[e for a in assessments for e in a["errors"] if e["learned_error_px"] is not None]
+    all_learned=[e["learned_error_px"] for e in predicted_cases]
     summary={
         "schema":"BRODY_COLD_START_EXPERIENTIAL_SUITE_V0",
         "cold_start":hold,
@@ -293,6 +294,12 @@ def run_suite(
         "test_episodes_unseen_during_training":len(test_clips),
         "test_predictions":n_preds,"test_holds_unknown":n_holds,
         "mean_learned_error_on_predicted_only_px":mean(all_learned) if all_learned else None,
+        "coverage_on_test_trials":n_preds/(n_preds+n_holds) if n_preds+n_holds else None,
+        "matched_linear_error_px":mean(e["linear_error_px"] for e in predicted_cases) if predicted_cases else None,
+        "matched_fixed_accel_error_px":mean(e["fixed_accel_error_px"] for e in predicted_cases) if predicted_cases else None,
+        "matched_stationary_error_px":mean(e["static_error_px"] for e in predicted_cases) if predicted_cases else None,
+        "wins_against_matched_linear":sum(e["learned_error_px"]<e["linear_error_px"] for e in predicted_cases),
+        "wins_against_matched_fixed_accel":sum(e["learned_error_px"]<e["fixed_accel_error_px"] for e in predicted_cases),
         "test_measures":assessments,
         "test_memory_mutations":0,
         "source_kind":"SIMULATED",
