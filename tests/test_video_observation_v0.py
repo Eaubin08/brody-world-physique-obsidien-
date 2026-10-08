@@ -45,9 +45,9 @@ class VideoObservationTests(TestCase):
     def test_manual_points_are_provenance_candidate_not_physical_truth(self):
         sample=make_measurements(
             (0,6,12,18), ((10,10),(16,11),(22,14),(28,19)),
-            fps=30,video_hash=self.digest,entity_ref="object:ball",
+            fps=30,video_hash=self.digest,entity_ref="object:ball",source_kind="SIMULATED",
         )
-        self.assertEqual(sample[0].source_kind,"OBSERVED_CLAIM")
+        self.assertEqual(sample[0].source_kind,"SIMULATED")
         self.assertEqual(sample[0].frame_ref,"camera-image-plane:sha256:"+self.digest)
         self.assertIn("CAMERA_MOTION_UNVERIFIED",sample[0].uncertainty_refs)
         self.assertEqual(sample[3].time_s,0.6)
@@ -60,16 +60,16 @@ class VideoObservationTests(TestCase):
     def test_reject_malformed_object_metadata_or_clicks(self):
         with self.assertRaisesRegex(ValueError,"one point"):
             make_measurements((0,6,12,18),((1,2),)*3,fps=30,
-                              video_hash=self.digest,entity_ref="ball")
+                              video_hash=self.digest,entity_ref="ball",source_kind="SIMULATED")
         with self.assertRaisesRegex(ValueError,"coordinates"):
             make_measurements((0,6,12),((0,0),(float("nan"),1),(2,4)),
-                              fps=30,video_hash=self.digest,entity_ref="ball")
+                              fps=30,video_hash=self.digest,entity_ref="ball",source_kind="SIMULATED")
         with self.assertRaisesRegex(ValueError,"indices"):
             make_measurements((0,6,6),((0,0),(1,1),(2,2)),
-                              fps=30,video_hash=self.digest,entity_ref="ball")
+                              fps=30,video_hash=self.digest,entity_ref="ball",source_kind="SIMULATED")
         with self.assertRaisesRegex(ValueError,"SHA256"):
             make_measurements((0,6,12),((0,0),(1,1),(2,2)),
-                              fps=30,video_hash="not-hash",entity_ref="ball")
+                              fps=30,video_hash="not-hash",entity_ref="ball",source_kind="SIMULATED")
 
     def test_heldout_is_not_even_annotated_until_forecast_receipt_written(self):
         class Capture:
@@ -98,7 +98,7 @@ class VideoObservationTests(TestCase):
             "brody_world_physique.video_observation_v0._annotate_frame",
             side_effect=fake_annotator
         ):
-            result=annotate_video(self.video,dest,interval_seconds=0.2)
+            result=annotate_video(self.video,dest,interval_seconds=0.2,source_kind="SIMULATED")
         self.assertEqual(observed,[0,6,12,18])
         self.assertTrue(cap.released)
         self.assertEqual(result["comparison"],"BETTER_THAN_LINEAR_BASELINE")
@@ -108,6 +108,20 @@ class VideoObservationTests(TestCase):
                          "FOUR_MANUAL_IMAGE_PLANE_CLICKS")
         self.assertTrue(payload["metadata"]["prediction_precommitted_before_fourth_annotation"])
         self.assertFalse(payload["metadata"]["real_world_proven"])
+        self.assertEqual(payload["metadata"]["source_kind_declared_by_user"],"SIMULATED")
+        self.assertFalse(payload["metadata"]["source_kind_independently_verified"])
+
+    def test_explicit_provenance_required_and_reject_forged_real_claim(self):
+        with self.assertRaisesRegex(ValueError,"source_kind"):
+            make_measurements(
+                (0,3,6), ((1,1),(2,2),(3,3)), fps=30,
+                video_hash=self.digest, entity_ref="ball", source_kind="VERIFIED_REAL",
+            )
+        samples = make_measurements(
+            (0,3,6), ((1,1),(2,2),(3,3)), fps=30,
+            video_hash=self.digest, entity_ref="ball", source_kind="GENERATED",
+        )
+        self.assertTrue(all(x.source_kind == "GENERATED" for x in samples))
 
     def test_early_escape_does_not_forge_prediction_or_experience(self):
         class Capture:
@@ -122,5 +136,5 @@ class VideoObservationTests(TestCase):
             side_effect=RuntimeError("user cancelled")
         ):
             with self.assertRaisesRegex(RuntimeError,"cancelled"):
-                annotate_video(self.video,dest,interval_seconds=.2)
+                annotate_video(self.video,dest,interval_seconds=.2,source_kind="SIMULATED")
         self.assertFalse((dest/"heldout_evaluation.json").exists())
