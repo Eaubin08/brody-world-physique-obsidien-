@@ -59,6 +59,10 @@ jobs:
         run: |
           python -m brody_world_physique.world_relations_school_v4_1 --prior-v3 build/windows-drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --out build/world-relations-v4-1
           python -m brody_world_physique.world_relations_school_v4_1 --prior-v3 build/windows-drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --verify build/world-relations-v4-1
+      - name: Windows Python 3.14 cardinal orientation + inverse world classroom V4.2
+        run: |
+          python -m brody_world_physique.world_orientation_school_v4_2 --prior-v3 build/windows-drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --prior-v4-1 build/world-relations-v4-1 --out build/world-orientation-v4-2
+          python -m brody_world_physique.world_orientation_school_v4_2 --prior-v3 build/windows-drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --prior-v4-1 build/world-relations-v4-1 --verify build/world-orientation-v4-2
   contracts-and-docs:
     runs-on: ubuntu-latest
     strategy:
@@ -143,6 +147,12 @@ jobs:
           python -m brody_world_physique.world_relations_school_v4_1 --prior-v3 build/drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --out build/world-relations-v4-1
           python -m brody_world_physique.world_relations_school_v4_1 --prior-v3 build/drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --verify build/world-relations-v4-1
           python -c "import json,pathlib; x=json.loads(pathlib.Path('build/world-relations-v4-1/evaluation.json').read_text()); assert x['training_lessons']==6 and len(x['tests'])==6 and x['native_memory_write_allowed'] is False and x['sens_executed'] is False; print('WORLD_RELATIONS_V4_1_REPLAY_PASS')"
+      - name: Train reciprocal cardinal relations and reconstruct before teacher reveal V4.2
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m brody_world_physique.world_orientation_school_v4_2 --prior-v3 build/drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --prior-v4-1 build/world-relations-v4-1 --out build/world-orientation-v4-2
+          python -m brody_world_physique.world_orientation_school_v4_2 --prior-v3 build/drawing-hidden-v3 --prior-v4 build/world-candidate-v4.json --prior-v4-1 build/world-relations-v4-1 --verify build/world-orientation-v4-2
+          python -c "import json,pathlib; x=json.loads(pathlib.Path('build/world-orientation-v4-2/evaluation.json').read_text()); assert x['lessons']==8 and len(x['exams'])==11 and len(x['world_experience_candidates'])==11; assert x['native_memory_write_allowed'] is False and x['sens_runtime_executed'] is False; print('V4_2_CARDINAL_RECIPROCAL_WORLD_REPLAY_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
@@ -161,4 +171,5 @@ jobs:
             build/drawing-hidden-v3/
             build/world-candidate-v4.json
             build/world-relations-v4-1/
+            build/world-orientation-v4-2/
           retention-days: 7
