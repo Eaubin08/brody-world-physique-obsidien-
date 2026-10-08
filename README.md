@@ -124,6 +124,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Drawing instruments V2 — learn which pencil/pen/nib tool to route by observed lesson feedback, with 0/1/9 episodes, unknown HOLD and sealed future-target trials](docs/37_ECOLE_INSTRUMENTS_SELECTION_EXPERIENTIELLE_V2.md)**
 - **[Drawing from memory V3 — immediately after hiding a new teacher image, after three intervening exercises, and new composition from prior strokes without a visible answer](docs/38_DESSIN_MEMOIRE_MODELE_CACHE_V3.md)**
 - **[V4 world-experience bridge — derive MMonde/F12-compatible observations, transformations, errors and candidate skills from V3 without importing SENS knowledge promotion](docs/39_BRODY_MONDE_EXPERIENCE_V4_BRIDGE.md)**
+- **[V4.1 pixel-derived relations — learn 2-component proximity from observed images, test 90° rotation/translation/scale, expose inverted-layout failure and reconstruct without teacher boxes](docs/40_V4_1_RELATIONS_SPATIALES_INVARIANTS_ET_COMPOSITION.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -419,6 +420,34 @@ The entire graph and the input evidence are replay-verified. The output
 is not canonical memory, KX108 remains external and no Native Memory write
 or source-branch modification occurs.
 [Detailed source reconciliation and Windows instructions](docs/39_BRODY_MONDE_EXPERIENCE_V4_BRIDGE.md).
+
+## V4.1 - learn a bounded spatial relation from pixels
+
+[`world_relations_school_v4_1.py`](brody_world_physique/world_relations_school_v4_1.py)
+reads independently verified V3/V4 episodes and runs a six-lesson
+simulation where the visual observer receives **only raster pixels**, not
+teacher-provided shape positions or object names. It segments disconnected
+ink components, measures a normalized distance and learns a near/far
+threshold from labeled teacher *feedback*. Six unseen probes cover
+translation, 90° rotation, scaling, remote positions, an unsupported
+one-component case (HOLD), and an intentionally adversarial reversed-order
+composition. The reversed-order case fails because distance alone cannot
+represent "above/below"; **the failure is retained as evidence**.
+
+A separate composition is built with source pixels and relative layout
+recalled from the local candidate memory, **before** an independently
+generated synthetic target is revealed. This is bounded relation learning
+and pixel reuse, **not** semantic object understanding, artistic autonomy,
+multi-view physical identity or a trainable vision model.
+
+```powershell
+py -m brody_world_physique.world_relations_school_v4_1 --prior-v3 "build\\known-v3" --prior-v4 "build\\known-v4.json" --out "build\\relations-v4-1"
+py -m brody_world_physique.world_relations_school_v4_1 --prior-v3 "build\\known-v3" --prior-v4 "build\\known-v4.json" --verify "build\\relations-v4-1"
+```
+
+Source evidence remains unchanged. Native Memory stays read-only; upstream
+MMonde/GPS/F12/F16 and SENS/B8 branches are not imported for execution,
+merged or modified. [Results and Windows commands](docs/40_V4_1_RELATIONS_SPATIALES_INVARIANTS_ET_COMPOSITION.md).
 
 ## Current milestone
 
