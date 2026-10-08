@@ -42,12 +42,13 @@ class DrawingV1Tests(TestCase):
         self.assertEqual(black_pixels(outcome["image"]),set())
 
     def test_replacement_or_erasure_repairs_a_partly_right_attempt(self):
-        model=reference([((10,16),(51,16))])
-        existing=(GestureV1(((10,16),(35,16)),"STRAIGHT_STROKE"),
-                  GestureV1(((12,40),(38,40)),"STRAIGHT_STROKE"))
+        model=reference([((10,16),(51,16)),((10,35),(51,35))])
+        existing=(GestureV1(((10,16),(51,16)),"STRAIGHT_STROKE"),
+                  GestureV1(((12,46),(24,46)),"STRAIGHT_STROKE"))
         before=_error(black_pixels(model),existing)
         outcome=correct_drawing(model,existing,max_revisions=12)
         self.assertLess(outcome["final_error"],before)
+        self.assertFalse(outcome["memory_rejected"])
         self.assertTrue(any(x["action"] in ("ERASE","REPLACE")
                             for x in outcome["changes"]))
 
