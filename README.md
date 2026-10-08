@@ -101,7 +101,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - [Obsidia concept atlas / definitions](docs/15_CONCEPT_ATLAS.md)
 - [Concept-definition audit method](docs/16_CONCEPT_AUDIT_METHOD.md)
 - [F0 reconciliation of user primary sources and conflicting definitions](docs/17_F0_SOURCE_RECONCILIATION.md)
-- [103-concept source traceability matrix](docs/18_CONCEPT_SOURCE_MATRIX.md)
+- [107-concept source traceability matrix](docs/18_CONCEPT_SOURCE_MATRIX.md)
 
 ## Current milestone
 
@@ -109,6 +109,6 @@ It prepares a reusable physical/visual/world layer that can later feed:
 
 The four missing learning-loop contracts are implemented with an additive `TransitionTransformationBindingV0`, explicit schema versions and sovereignty tests. No upstream `TransitionV0` mutation was made.
 
-**Current documentary gate:** reconcile the user's original concept definitions, source excerpts, attribution, genealogy and historical-vs-runtime differences (see docs/17 and docs/18). The atlas covers 103 named concepts but its individual source audit is not closed. The related two previous F0 PRs remain unmerged; new reconciliation work is stacked separately and does **not** affect `main`.
+**Current documentary gate:** reconcile the user's original concept definitions, source excerpts, attribution, genealogy and historical-vs-runtime differences (see docs/17 and docs/18). The atlas covers 107 named concepts (103 retained + 4 recovered from newly read archives) but its individual source audit is not closed. The related two previous F0 PRs remain unmerged; new reconciliation work is stacked separately and does **not** affect `main`.
 
 Model downloads remain deferred. **Do not start F1 / PC installation before the documentary/contract freeze is explicitly decided.**
