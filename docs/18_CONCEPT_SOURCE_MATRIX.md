@@ -1,6 +1,6 @@
-# 18 — Matrice de traçabilité des 103 concepts (F0, 2026-10-08)
+# 18 — Matrice de traçabilité des 107 concepts (F0, 2026-10-08)
 
-**READ_ONLY RECONCILIATION / WORK IN PROGRESS — pas de freeze.** Chaque ligne correspond à l'entrée numérotée dans `docs/15_CONCEPT_ATLAS.md`.
+**READ_ONLY RECONCILIATION / WORK IN PROGRESS — pas de freeze.** Les entrées 1–103 sont préservées, 104–107 sont les nouveaux concepts retrouvés dans les sources directement lues. Chaque ligne correspond à l'entrée numérotée dans `docs/15_CONCEPT_ATLAS.md`.
 
 ## Légende
 
@@ -118,12 +118,17 @@
 | 102 | Maturation | `DESCENDANT_HYPOTHESIS` | [CIN](https://docs.google.com/document/d/1iVwqEeo2TTa3Mv6wYFdJOq_8-mAfFpz7-AJ46iMxm7o/edit) |
 | 103 | One continuity, many organs | `INDEXED_NOT_VERIFIED` | [V5](https://docs.google.com/document/d/1emMNeq8Lgxckos1B2RoKSISXpTIZHlk4qOYfv7Q9yl8/edit) |
 
+| 104 | Calcul de la Balance Mathématique — retrait / réintégration | `DIRECT_READ` | [BAL](https://docs.google.com/document/d/1SKfhUnnGYKiOM9w8FDPavtEtwqDWb7HH/edit) |
+| 105 | Mode Shadow — apprentissage passif / non-interférence | `DIRECT_READ` | [CIN](https://docs.google.com/document/d/1iVwqEeo2TTa3Mv6wYFdJOq_8-mAfFpz7-AJ46iMxm7o/edit) |
+| 106 | Mémoire Fractale (FAM) / L'Expérience Cognitive Intégrée | `DIRECT_READ` | [FAM](https://docs.google.com/document/d/1SdeEtK9zpZoAgnyTSQtjbwTYO0cDG3_iFqgBof5kRPA/edit) |
+| 107 | Curriculum Forge | `DIRECT_READ` | [WFD](https://docs.google.com/document/d/1d5Gf5-r1d43wetqaANCzCff5CPyYckwTw9_AuWwicpg/edit) |
+
 ## Périmètre et précision
 
-- Les 103 lignes ci-dessus sont un **index de travail** et non 103 fiches entièrement certifiées.
+- Les 107 lignes ci-dessus sont un **index de travail** et non 103 fiches entièrement certifiées.
 - Quand une source existe sur Drive mais n'est ici qu'`INDEXED_NOT_VERIFIED`, il faut retrouver passage, date et attribution ; aucune conclusion d'implémentation n'en découle.
 - Les contrats/code actuels restent documentés séparément dans `docs/02_CONTRACTS.md`, `docs/13_F0_CROSS_AUDIT.md` et `docs/14_F0_LEARNING_LOOP_IMPLEMENTATION.md`. Ils ne constituent pas automatiquement une preuve de généalogie intellectuelle.
 - La matrice est volontairement conservatrice : une absence de lien dans cette passe n'est pas une absence historique du concept.
 - Les variantes conflictuelles et extraits examinés sont justifiés dans `docs/17_F0_SOURCE_RECONCILIATION.md`.
 
-**Comptage cette passe :** 18 DIRECT_READ, 5 DESCENDANT_HYPOTHESIS, 18 INDEXED_NOT_VERIFIED, 62 REVIEW_REQUIRED.
+**Comptage cette passe :** 22 DIRECT_READ, 5 DESCENDANT_HYPOTHESIS, 18 INDEXED_NOT_VERIFIED, 62 REVIEW_REQUIRED.
