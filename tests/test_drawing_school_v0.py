@@ -44,6 +44,38 @@ class DrawingSchoolContractsTests(TestCase):
         self.assertLess(after["final_error_pixels"],before["final_error_pixels"])
         self.assertGreater(after["seed_stroke_count"],0)
 
+    def test_harmful_memory_is_rejected_and_failure_remains_visible(self):
+        seen=draw_strokes([(8,16,48,16)])
+        pts=black_pixels(seen)
+        skill=DrawingSkillCandidateV0(
+            source_sha256="a"*64,lesson_ref="old_line",
+            source_bbox=bbox_of(pts),signature=signature_for(pts,bbox_of(pts)),
+            strokes=((8,16,48,16),),final_pixel_error=0,
+        )
+        different=draw_strokes([(8,16,48,16),(12,12,52,52),(12,52,52,12)])
+        observed=practice_drawing(different,memory=(skill,),max_strokes=0,catalog=[])
+        self.assertLessEqual(observed["final_error_pixels"],observed["blank_error_pixels"])
+        self.assertIn(observed["memory_recall_status"],(
+            "ACCEPTED_CANDIDATE","REJECTED_HARMFUL_RECALL"))
+
+    def test_unrelated_mistaken_skill_does_not_force_bad_drawing(self):
+        # Construct a deliberately long stroke, yet reference contains few pixels.
+        points=black_pixels(draw_strokes([(24,24,32,24)]))
+        skill=DrawingSkillCandidateV0(
+            source_sha256="b"*64,lesson_ref="unrelated",
+            source_bbox=(0,0,63,63),
+            signature=signature_for(points,bbox_of(points)),
+            strokes=((0,0,63,63),), final_pixel_error=999,
+        )
+        response=practice_drawing(draw_strokes([(24,24,32,24)]),
+                                  memory=(skill,),max_strokes=0,catalog=[])
+        self.assertTrue(response["memory_recall_rejected_as_harmful"])
+        self.assertEqual(response["memory_recall_status"],"REJECTED_HARMFUL_RECALL")
+        self.assertGreater(response["raw_memory_recall_error_pixels"],
+                           response["blank_error_pixels"])
+        self.assertEqual(response["final_error_pixels"],
+                         response["blank_error_pixels"])
+
     def test_overprinting_must_not_worsen_target(self):
         picture=draw_strokes([(8,20,40,20)])
         noisy=practice_drawing(picture,max_strokes=2,catalog=[
