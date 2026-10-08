@@ -95,6 +95,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - [PC bring-up checklist](docs/09_PC_BRINGUP.md)
 - [Frozen architecture decisions](docs/10_DECISIONS.md)
 - [Sources and upstream references](docs/11_SOURCES.md)
+- [Obsidia / user primary sources](docs/12_OBSIDIA_USER_SOURCES.md)
 
 ## Current milestone
 
