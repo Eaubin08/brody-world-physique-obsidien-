@@ -58,6 +58,23 @@ La translation change les coordonnées sur la page, pas les aires ou l'écart de
 
 **Ne pas confondre avec une compréhension des relations directionnelles.** Une rotation transforme « au-dessus » en « à côté ». Notre critère de proximité ne porte pas l'information de dessus/dessous : une image avec les mêmes parties inversées peut être classée comme une relation connue. Ce cas adversarial est conservé comme **échec explicite**, afin de savoir ce qu'il manque au prochain jalon.
 
+## Résultats observés (CI Linux / Windows)
+
+[Run 37854023079](https://github.com/Eaubin08/brody-world-physique-obsidien-/actions/runs/37854023079) : **170 tests Python PASS** sur Linux 3.11/3.12 et Windows 3.14 ; le simulateur V4.1 a exécuté six leçons et six examens, puis vérifié intégralement les artefacts.
+
+| Examen | Verdict comparé à l'étiquette révélée |
+|---|---|
+| Relation proche translatée | Correct |
+| Relation proche tournée de 90° | Correct |
+| Relation proche agrandie | Correct |
+| Relation éloignée translatée | Correct |
+| Relation avec un seul composant | `HOLD` correct |
+| **Même proximité, composants dans l'ordre inversé** | **ÉCHEC (faux positif)** |
+
+Soit **5 / 6** classements ou abstentions corrects, avec un échec adversarial conservé **dans le rapport**. Cela invalide toute conclusion du type « compréhension complète d'une relation spatiale orientée ». La réutilisation de pixels mémorisés a produit une image avec **262 pixels d'erreur binaire**, meilleure qu'une page blanche contre la variante cible, sans être un dessin exact. Les mesures restent internes à un simulateur 2D ; **ni identité, ni sens, ni invariance 360° générale, ni transfert au monde physique ne sont démontrés**.
+
+Les tests ont notamment contrôlé la séparation non étiquetée des composants, le comportement sous translation/rotation 90°/échelle, le refus `HOLD`, la résistance aux falsifications des images et à une fausse promotion de connaissance, l'ordre des décisions enregistrées et la lecture seule de V3/V4.
+
 ## Composition nouvelle sans boîtes de test
 
 La dernière expérience n'envoie **aucune position de composant au module élève**. Elle lui demande de reproduire un assemblage proche depuis sa mémoire candidate de composants et de leur placement observé. L'élève conserve les pixels des petites formes source et leur disposition mesurée. Il recentre sa production sur le canevas 64×64 et écrit `composition_before_reveal.json` avec le SHA de l'image et la procédure.
