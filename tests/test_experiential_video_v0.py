@@ -129,6 +129,19 @@ class ExperientialLearningTests(TestCase):
         acquired=json.loads((output/"learning_candidates.json").read_text())
         self.assertEqual(len(acquired["experiences"]),9)
         self.assertTrue(all(x["source_sha256"]==a for x in acquired["experiences"]))
+        cold_output=self.root/"cold"
+        with patch("brody_world_physique.experiential_video_v0._video_points",
+                   side_effect=lambda video,digest: fake_frames(video,digest)):
+            # No learned experiences, so the learner MUST abstain.
+            cold=run_suite(folder/"suite.json",cold_output,train_videos=0)
+        self.assertEqual(cold["cold_start"],"HOLD_NO_EXPERIENCE")
+        self.assertEqual(cold["training_candidate_transitions"],0)
+        self.assertEqual(cold["test_predictions"],0)
+        self.assertEqual(cold["test_holds_unknown"],9)
+        cold_report=json.loads((cold_output/"evaluation.json").read_text())
+        self.assertIsNone(cold_report["mean_learned_error_on_predicted_only_px"])
+        with self.assertRaisesRegex(ValueError,"train_videos"):
+            run_suite(folder/"suite.json",self.root/"invalid",train_videos=2)
 
     def test_cannot_reuse_output_over_previous_experiment(self):
         self.assertEqual(propose_from_experiences([],self.samples("a"*64)[:3])["status"],
