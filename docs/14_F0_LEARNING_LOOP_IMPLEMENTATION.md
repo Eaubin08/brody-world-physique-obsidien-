@@ -90,7 +90,7 @@ Stdlib-only `unittest` suite covers:
 
 GitHub Actions runs the suite on Python 3.11 and 3.12.
 
-First completed CI after the four core contracts: **19 tests, OK** on Python 3.11 and 3.12. The binding addition adds two further tests; final branch CI is the closing gate.
+Final implementation CI after the additive binding: **21 tests, OK** on Python 3.11 and **21 tests, OK** on Python 3.12. Compile step also passed on both versions.
 
 ## Deliberately not implemented
 
