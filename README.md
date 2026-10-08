@@ -147,8 +147,7 @@ py -m brody_world_physique.jarvis_vision_v0 --image "C:\\photos\\test.jpg" --out
 The server must **already be running on the same PC**, or be available over an
 explicit local SSH tunnel. The output is an **unverified text description
 candidate**, not an F16 real-world observation. It does **not** pass through
-Brody chat, Binder, native memory, or a generation model yet. Tests mock the
-local HTTP server; **they are not a successful real Qwen-VL PC connection**.
+Brody chat, Binder, native memory, or a generation model yet. CI tests mock the local HTTP server; **the user's later Windows PC run additionally validated the real Qwen-VL connection**.
 See [26 — I1 Jarvis adapter and honest bring-up steps](docs/26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md).
 
 ## Reverso pixel roundtrip (new bounded method experiment)
@@ -196,6 +195,6 @@ proven**. See [29 — pre-verbal prediction protocol](docs/29_PREVERBAL_PREDICTI
 
 **Brody Image I1/R1 CPU:** deterministic isolation and compositing implemented on `main`, with source/output hashing, fidelity controls, synthetic test fixtures and source-preserving boundaries. Details in [25 — executable baseline](docs/25_BRODY_IMAGE_I1_R1_PROTOTYPE_CPU.md).
 
-**Still unproven:** live PC Qwen-VL bridge, Brody/Binder/F16 image flow, arbitrary background segmentation, image-generating model/weights, reverse visual evaluation, 3D, video/world physics and learned retention. A real photo and mask can be fed through the local CLI; the synthetic demo alone does not establish these capabilities.
+**Still unproven:** Brody/Binder/F16 image flow, arbitrary background segmentation, image-generating model/weights, reverse visual evaluation, 3D, video/world physics and learned retention. A real photo and mask can be fed through the local CLI; the synthetic demo alone does not establish these capabilities.
 
 **Historical F0:** the 108-concept archive and source attribution exist for traceability; their complete documentary audit remains open but **does not block the bounded image editor**. Old F0 PR work is consolidated on `main`; obsolete historical PRs have been closed. Keep `KX108_ONLY`, no memory auto-promotion or upstream kernel mutation.
