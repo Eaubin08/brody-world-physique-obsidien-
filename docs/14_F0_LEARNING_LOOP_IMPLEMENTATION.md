@@ -5,12 +5,14 @@
 
 ## Scope
 
-Implemented only the four missing contracts isolated by F0:
+Implemented the four missing learning-loop contracts isolated by F0:
 
 - `WorldTransformationV0`
 - `WorldStateProjectionV0`
 - `WorldStateDeltaV0`
 - `WorldExperienceCandidateV0`
+
+Plus the additive `TransitionTransformationBindingV0` chosen to avoid mutating the already verified upstream `TransitionV0` during V0.
 
 No external model, runtime, weight or PC dependency was added.
 
@@ -88,10 +90,11 @@ Stdlib-only `unittest` suite covers:
 
 GitHub Actions runs the suite on Python 3.11 and 3.12.
 
+First completed CI after the four core contracts: **19 tests, OK** on Python 3.11 and 3.12. The binding addition adds two further tests; final branch CI is the closing gate.
+
 ## Deliberately not implemented
 
-- `TransitionTransformationBindingV0`: still an architecture decision.
-- upstream modification of `TransitionV0`;
+- upstream modification of `TransitionV0` — deliberately rejected for V0 in favor of `TransitionTransformationBindingV0`;
 - experience -> Native Memory adapter;
 - VisualInvariant / VisualFingerprint;
 - perception models;
