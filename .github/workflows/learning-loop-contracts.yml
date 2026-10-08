@@ -77,6 +77,11 @@ jobs:
         run: |
           python -m brody_world_physique.drawing_school_v0 --out build/drawing-school-v0
           python -c "import json,pathlib; r=json.loads(pathlib.Path('build/drawing-school-v0/evaluation.json').read_text()); assert len(r['train_lessons'])==3 and len(r['exams'])==4; assert all(x['last_error_pixels']<=x['first_error_pixels'] for x in r['train_lessons']); assert all(x['after_feedback_error_pixels']<=x['candidate_replay_error_pixels'] for x in r['exams']); assert r['ledger_integrity']['verified_records']>3 and r['native_memory_write_allowed'] is False; print('DRAWING_SCHOOL_CANDIDATE_MEMORY_PASS')"
+      - name: Run guided pen eraser and curved drawing workshop V1
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m brody_world_physique.drawing_school_v1 --out build/drawing-school-v1
+          python -c "import json,pathlib; r=json.loads(pathlib.Path('build/drawing-school-v1/evaluation.json').read_text()); assert len(r['train_lessons'])==4 and len(r['unseen_exams'])==6; assert all(x['final_error']<=x['blank_error'] for x in r['train_lessons']); assert all(x['after_correction_error_pixels']<=x['initial_after_memory_gate'] for x in r['unseen_exams']); assert r['ledger_integrity']['verified_records']>=10 and r['native_memory_write_allowed'] is False and r['semantic_object_understanding'] is False; print('DRAWING_CURVES_ERASER_CANDIDATE_MEMORY_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
@@ -88,4 +93,5 @@ jobs:
             build/experience-demo/
             build/transfer-v1/
             build/drawing-school-v0/
+            build/drawing-school-v1/
           retention-days: 7
