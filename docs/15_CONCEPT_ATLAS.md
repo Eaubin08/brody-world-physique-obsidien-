@@ -3498,3 +3498,153 @@ A claim that Oxygen currently exists.
 
 **FUTURE IDENTITY DOCTRINE / CURRENT ARCHITECTURAL CONSTRAINT**
 
+---
+
+# 104. Calcul de la Balance Mathématique — retrait / réintégration
+
+## Définition historique
+
+Méthode documentée qui retire provisoirement un facteur ou une difficulté d'un calcul, traite la forme réduite, puis réintroduit exactement l'élément retiré par opération inverse ou réciproque.
+
+## Pourquoi
+
+Explorer des transformations réversibles qui rendent les calculs plus maniables sans oublier les facteurs écartés.
+
+## Mécanisme d'exemple de la source
+
+```text
+X = (A × B × C) / (D × E × F)
+X' = (A × B × C) / (D × F)
+X = X' / E, sous hypothèse E != 0
+```
+
+L'exemple confirme une **réintégration algébrique élémentaire**, pas un théorème d'accélération universelle : les conditions de définition, le coût du calcul et le gain réel doivent être démontrés séparément.
+
+## Ce que ce n'est pas
+
+- La Balance Proportionnelle Exponentielle (#72) ;
+- une opération déjà prouvée pour tous les domaines ;
+- le vote Sigma ou le gate KX108.
+
+## Relations et autorité
+
+Méthode mathématique candidate pour traitements spécialisés; **aucune décision, aucun ACT ni mutation kernel**. Correspondance avec la Balance exponentielle : `NOT ESTABLISHED`.
+
+## Origine vérifiée
+
+[Obsidia_Dossier_Technique_Balance_Mathematique](https://docs.google.com/document/d/1SKfhUnnGYKiOM9w8FDPavtEtwqDWb7HH/edit) — section « Algorithme – Le Calcul de la Balance Mathématique ». Attribution personnelle exclusive / date originale exacte non établies.
+
+## Statut
+
+**HISTORICAL DOCUMENTED ALGORITHM SKETCH / MATHEMATICAL GENERALITY UNPROVEN / RUNTIME UNKNOWN**
+
+---
+
+# 105. Mode Shadow — apprentissage passif / non-interférence
+
+## Définition historique
+
+Observer des flux réels (télémétrie, capteurs, interactions), produire des actions *théoriques* en parallèle et comparer aux résultats sans émettre d'action dans l'environnement.
+
+## Pourquoi
+
+Permettre l'évaluation et l'entraînement candidat sur signaux réels tout en protégeant le système en exploitation de l'expérimentation.
+
+## Chaîne décrite
+
+```text
+captation non intrusive
+→ proposition / simulation interne
+→ comparaison avec système observé
+→ écart et correction candidate
+```
+
+## Ce que ce n'est pas
+
+- un mode LIVE actif ;
+- une licence pour capter des données privées sans cadre ;
+- un mécanisme d'écriture automatique de poids/mémoire ;
+- une preuve que LiteRT, JAX ou les capteurs concernés sont branchés.
+
+## Relations et frontière d'autorité
+
+MMonde, observations datées, WorldStateDelta, Shadow evaluation, expérience candidate. **KX108_ONLY**, `emits_act=false`, mémoire candidate non promue automatiquement. La source emploie des formules de « correction de poids » comme intention historique, non politique de runtime validée.
+
+## Origine vérifiée
+
+[Rapport Technique : Architecture de l'Apprentissage et Sécurité Cinématique (Module 5)](https://docs.google.com/document/d/1iVwqEeo2TTa3Mv6wYFdJOq_8-mAfFpz7-AJ46iMxm7o/edit) — section « Le Mode Shadow ».
+
+## Statut
+
+**HISTORICAL DESIGN / SHADOW MODE NOT VERIFIED AS CONNECTED**
+
+---
+
+# 106. Mémoire Fractale (FAM) / L'Expérience Cognitive Intégrée
+
+## Définition historique
+
+Proposition de mémoire articulant un buffer actif linéaire de type `Map FIFO`, un historique ou archive diachronique et des mécanismes de rangement/scellement. Le document nomme l'ensemble « L'Expérience » et présente la `FAM`.
+
+## Pourquoi
+
+Séparer contexte réactif et continuité durable, maîtriser la saturation et distinguer ce qui reste provisoire de ce qui mérite une conservation longue.
+
+## Ce que ce n'est pas
+
+- la `Native Memory` courante par équivalence de nom ;
+- la preuve d'une mémoire autonome, consciente ou inaltérable ;
+- une autorité sur la décision ou sur la vérité du monde ;
+- l'autorisation d'écrire des souvenirs sans validation.
+
+## Relations et frontière d'autorité
+
+Filiation conceptuelle possible avec Zone Latente (#26), Continuum (#27), MemoryCandidate (#25) et Native Memory (#24), **sans fusion de schémas**. Scellés/Merkle mentionnés dans l'archive : effets actuels à vérifier dans les tests runtime, non supposés.
+
+## Origine vérifiée
+
+[Architecture du Système de Mémoire Obsidia : L'Expérience Cognitive Intégrée](https://docs.google.com/document/d/1SdeEtK9zpZoAgnyTSQtjbwTYO0cDG3_iFqgBof5kRPA/edit) — sections « Fondations », « Mémoire Vive », « Map FIFO ».
+
+## Statut
+
+**HISTORICAL ARCHITECTURE / PARTIAL INTENT ONLY / NOT NATIVE MEMORY CANON**
+
+---
+
+# 107. Curriculum Forge
+
+## Définition historique
+
+Composant éducatif proposé dans le dispositif World Foundry : choisir une prochaine situation d'apprentissage selon l'état de l'agent, ses compétences déjà prouvées, ses lacunes et dépendances, la nouveauté et le risque.
+
+## Pourquoi
+
+Construire une progression par exercices et conséquences plutôt que faire sélectionner arbitrairement les prochains sujets par un LLM.
+
+## Entrées / sortie
+
+```text
+agent state + proven skills + gaps
++ dependencies + novelty + risk
+→ next educational situation candidate
+```
+
+## Ce que ce n'est pas
+
+- `Task Forge` de l'AVDR recherche (#96), qui crée des tensions/tâches internes ;
+- un arbitre souverain de missions ;
+- un simulateur complet World Foundry ;
+- une preuve d'implémentation.
+
+## Relations et autorité
+
+World Foundry (#80), Oxygen et éducation, Skill Forge/Experience Ledger comme éléments du même *design source*. Les propositions restent non exécutables sans contrats et permissions ; décision `KX108_ONLY`.
+
+## Origine vérifiée
+
+[Archive « obsidia suite 29.07 deu »](https://docs.google.com/document/d/1d5Gf5-r1d43wetqaANCzCff5CPyYckwTw9_AuWwicpg/edit) — section « Architecture cible pour la Sandbox Obsidia », juste après `WorldSpec`. Source dialoguée ; attribution et date exacte de la proposition à réconcilier.
+
+## Statut
+
+**HISTORICAL / EDUCATIONAL DESIGN SOURCE / NOT IMPLEMENTED**
+
