@@ -59,8 +59,11 @@ def professor_scene(kind:str,*,dx:int=0,dy:int=0,scale:float=1.0,
         roof=[(22,13),(32,3),(42,13)]
         body=(22,43,42,55)
     if kind=="REVERSED":
-        roof=[(22,52),(32,40),(42,52)]
-        body=(22,9,42,23)
+        # Deliberate hard negative: same two close components but vertical
+        # order inverted. A rotation-invariant distance feature cannot see
+        # that categorical ordering; a false positive remains measurable.
+        roof=[(22,48),(32,35),(42,48)]
+        body=(22,12,42,29)
     def map_point(p:tuple[int,int])->tuple[int,int]:
         x,y=p
         return (round(32+(x-32)*scale+dx),round(32+(y-32)*scale+dy))
@@ -194,7 +197,7 @@ def _teacher_exams()->list[tuple[str,str,Image.Image]]:
         ("far_shifted","FAR",professor_scene("FAR",dx=6,dy=-1)),
         # A known adversarial case: proximity alone does not encode
         # orientation/order. Keep a failure when it happens.
-        ("reversed_hard_negative","FAR",professor_scene("REVERSED")),
+        ("reversed_hard_negative","NONMATCHING_ARRANGEMENT",professor_scene("REVERSED")),
         ("single_component","HOLD",Image.new("L",(SIDE,SIDE),255)),
     ]
 
