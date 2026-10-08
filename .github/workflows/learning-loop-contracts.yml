@@ -46,6 +46,11 @@ jobs:
           python -m brody_world_physique.instrument_school_v2 --out build/windows-instrument-school --training-lessons 9
           python -m brody_world_physique.instrument_school_v2 --verify build/windows-instrument-school
           python -c "import json,pathlib; p=pathlib.Path('build/windows-instrument-school'); r=json.loads((p/'evaluation.json').read_text()); assert r['training_lessons']==9 and r['chosen_count']==3 and r['hold_count']==1; assert (p/'instrument_art'/'exam_01_prediction.png').is_file(); print('WINDOWS_314_INSTRUMENT_MEMORY_PASS')"
+      - name: Windows 3.14 hidden reference drawing and memory replay
+        run: |
+          python -m brody_world_physique.drawing_memory_school_v3 --prior-v2 build/windows-instrument-school --out build/windows-drawing-hidden-v3
+          python -m brody_world_physique.drawing_memory_school_v3 --verify build/windows-drawing-hidden-v3
+          python -c "import json,pathlib; p=pathlib.Path('build/windows-drawing-hidden-v3'); x=json.loads((p/'evaluation.json').read_text()); assert x['episodes']==3 and x['reference_visible_during_drawing']==False and x['native_memory_write_allowed']==False; print('WINDOWS_314_HIDDEN_REFERENCE_DRAWING_PASS')"
   contracts-and-docs:
     runs-on: ubuntu-latest
     strategy:
@@ -112,6 +117,12 @@ jobs:
           python -m brody_world_physique.instrument_school_v2 --prior-school build/drawing-school-v1 --out build/instruments-full --training-lessons 9
           python -m brody_world_physique.instrument_school_v2 --verify build/instruments-full
           python -c "import json,pathlib; p=pathlib.Path('build'); cases=[json.loads((p/n/'evaluation.json').read_text()) for n in ('instruments-cold','instruments-one','instruments-full')]; assert [(x['chosen_count'],x['hold_count']) for x in cases]==[(0,4),(1,3),(3,1)]; assert [v['decision']['chosen_tool'] for v in cases[-1]['exams']]==['PENCIL','PEN','NIB',None]; assert not any(v['memory_mutations_from_test'] for x in cases for v in x['exams']); print('INSTRUMENT_CHOICE_ZERO_ONE_NINE_PASS')"
+      - name: Immediate delayed and composed drawing from hidden references
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m brody_world_physique.drawing_memory_school_v3 --prior-v2 build/instruments-full --out build/drawing-hidden-v3
+          python -m brody_world_physique.drawing_memory_school_v3 --verify build/drawing-hidden-v3
+          python -c "import json,pathlib; p=pathlib.Path('build/drawing-hidden-v3'); x=json.loads((p/'evaluation.json').read_text()); assert [e['level'] for e in x['results']]==['immediate','delayed','transfer']; assert x['episodes']==3 and x['reference_visible_during_drawing']==False; print('HIDDEN_REFERENCE_DRAWING_V3_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
@@ -127,4 +138,5 @@ jobs:
             build/instruments-cold/
             build/instruments-one/
             build/instruments-full/
+            build/drawing-hidden-v3/
           retention-days: 7
