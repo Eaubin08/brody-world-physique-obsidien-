@@ -461,10 +461,10 @@ A name similarity is not a proof of equivalence. Create a separate card or a nam
 
 ### Completion criterion
 
-Document audit gate can be closed only once `docs/18_CONCEPT_SOURCE_MATRIX.md` has no unreviewed entries **or** each unresolved entry has an explicit, accepted `UNDEFINED / SOURCE_RECOVERY_REQUIRED` decision, including evidence limits.
+Documentary *triage* can be closed when every Atlas entry has a reasoned source state, including explicitly unresolved genealogies. A **full documentary freeze** requires a second, stronger gate: source passage/version/date and human-versus-AI attribution wherever claimable; current-code-to-contract correspondence and required recent tests for runtime assertions; an explicit approved unresolved register for irreducible provenance gaps. Merely having 108 nonempty matrix rows is **not** a freeze.
 
 Prioritise user-generated source definitions first, current code/tests for runtime assertions, and independent external research only for novelty claims. No automatic rewrite of old source material.
 
-See `docs/17_F0_SOURCE_RECONCILIATION.md`, `docs/18_CONCEPT_SOURCE_MATRIX.md` and `docs/19_F0_SOURCE_TRACE_BATCH2.md`.
+See `docs/17_F0_SOURCE_RECONCILIATION.md`, `docs/18_CONCEPT_SOURCE_MATRIX.md`  , `docs/19_F0_SOURCE_TRACE_BATCH2.md` and `docs/20_F0_FINAL_SOURCE_GAPS.md`.
 
 For sources in a non-ancestral experimental branch, classify `RESEARCH_CODE_READ`, never `CURRENT_RUNTIME`. `UPSTREAM_CODE_READ` only proves source code inspection; it does not establish execution, tests, causal utility, verified scientific claims or the intellectual origin. For mixed AI-user archives, record both the user's messages and assistant suggestions, leaving attribution unresolved if speaker/time is unclear.
