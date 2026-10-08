@@ -2274,31 +2274,50 @@ current descendant if any
 - **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
 
 ---
-# 71. ADeLe / A2DR
+# 71. ADeLe / A2DR — donateurs externes et rapprochement avec AVDR
 
-## Definition
+## Définition exacte — ADeLe externe
 
-A historical/user concept paired with AVDR in current sandbox documentation.
+**ADeLe n'est pas un concept créé par Obsidia.** C'est un cadre d'évaluation d'IA issu d'une collaboration de chercheurs (notamment Microsoft Research et institutions universitaires), fondé sur des niveaux d'exigence des tâches et profils de capacités de modèles.
 
-The current AVDR canon says:
+Selon les sources primaires et générations, ADeLe est développé comme *Annotated-Demand-Levels* et présenté également comme *AI Evaluation with Demand Levels*. Il utilise 18 dimensions de capacité/demande avec des niveaux de difficulté pour expliquer/prédire la performance.
 
-```text
-ADeLe gives the measure.
-AVDR gives the dynamic.
-Obsidia gives the organs and structural meaning.
-```
+## Définition de la proposition Obsidia
 
-## Purpose
+La source dialoguée sur **ADeLe × AVDR × Obsidia** propose de juxtaposer :
 
-Separate **measurement/evaluation** from **dynamic transformation**.
+- ADeLe : mesures des exigences de tâches et profils de capacités (**méthode externe**) ;
+- AVDR : phases de régulation/évaluation/progression selon la version (**protocole historique Obsidia**) ;
+- Obsidia : organes, mémoire, contrats, preuves, gouvernance (**architecture projet**).
 
-## It is not
+Il s'agit d'une **proposition de composition**, pas de preuve que la fusion est actuellement implémentée, équivalente mathématiquement ou validée expérimentalement.
 
-A current global kernel authority unless independently verified in runtime.
+## A2DR — point non réconcilié
 
-## Status
+Le sigle A2DR apparaît dans des archives conversationnelles à proximité de ADeLe et d'une référence à un papier externe, mais son expansion, son équipe d'origine et son rapport exact avec ADeLe ne sont pas documentés ici par une source primaire vérifiée.
 
-**HISTORICAL / SANDBOX-LEVEL CONCEPT — NEEDS DEDICATED SOURCE AUDIT**
+**Statut A2DR : SOURCE_RECOVERY_REQUIRED.** Aucune identification ou fusion automatique.
+
+## Ce que ce n'est pas
+
+- l'invention d'ADeLe par Obsidia ;
+- le mécanisme de décision KX108 ;
+- une mesure déjà branchée en runtime ;
+- une démonstration que l'association est nouvelle, supérieure ou fonctionnelle.
+
+## Origines
+
+- [Microsoft Research — présentation initiale (2025)](https://www.microsoft.com/en-us/research/blog/predicting-and-explaining-ai-model-performance-a-new-approach-to-evaluation/)
+- [Microsoft Research — bilan et article scientifique (2026)](https://www.microsoft.com/en-us/research/blog/adele-predicting-and-explaining-ai-performance-across-tasks/)
+- [Projet de recherche ADeLe](https://kinds-of-intelligence-cfi.github.io/ADELE/)
+- [Archive Obsidia — Fusion AVDR × ADeLe](https://docs.google.com/document/d/15pZLOlYVu2POMMbU6nztWlAOIaGlnhjIa5-X9q4dtE4/edit)
+- [Archive où A2DR est cité, sans source primaire isolée](https://docs.google.com/document/d/1eHi6LmYA-1XG94u_jau1f8vqv7Zgy76dzI1vxz-cGss/edit)
+
+## Frontière et statut
+
+**EXTERNAL DONOR (ADeLe) + USER-PROJECT COMPOSITION IDEA (ADeLe×AVDR×Obsidia) / HISTORICAL PROPOSAL ONLY / A2DR UNRESOLVED / KX108_ONLY**.
+
+Voir [audit F0, passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
 
 ---
 
@@ -2634,61 +2653,66 @@ A consensus authority.
 
 ---
 
-# 79. ERA — Espace de Raisonnement Assisté
+# 79. ERA — Espace de Raisonnement Assisté (collision de définitions)
 
-## Definition
+## ERA-A : atelier cognitif temporaire (carte B9)
 
-A user-origin cognitive/interface metric intended to make the balance of assisted reasoning visible.
+La source **Carte B9 ERA** définit un espace mental de travail borné créé à la demande pour réunir contexte, mémoires et agents spécialisés autour d'une tâche complexe. C'est un **dispositif de collaboration / interface / contexte**, pas un score arithmétique. La carte parle d'« arbitrages » au sens d'usage humain/agentique historique ; elle ne confère aucune décision souveraine dans le runtime actuel.
 
-Historical Reverse OS material gives the formula:
+## ERA-B : indicateur de balance de raisonnement (Reverse OS)
+
+La source **Reverse OS — L'Éloquence Sémantique** utilise le même sigle pour un ratio de projection de l'état cognitif :
 
 ```text
 ERA = (M + R + A) / F
 ```
 
-with historical labels around:
+M = mémoire ; R = raisonnement ; A = contribution dite « Auto » selon la variante ; F = friction. Un ratio écrit dans une archive ne fournit ni étalonnage, ni preuve de performance, ni preuve de mise en production. La définition des variables et les domaines de validité exigent l'analyse de la version source.
 
-- M = Memory;
-- R = Reasoning;
-- A = Auto/autonomy-related contribution;
-- F = Friction.
+## Collision et évolution
 
-The exact semantic meaning of each term must always be read from the source version being audited.
-
-## Purpose
-
-Provide a **human-readable projection of cognitive balance/tension**, especially in UI/Reverse OS contexts.
-
-## It is not
-
-- KX108 confidence;
-- a proof metric;
-- a world-state variable;
-- current kernel authority.
-
-## Current repository status
-
-Current `apps/obsidia_api/brody_cognitive_modules_adapter.py` explicitly classifies ERA as:
+Les deux usages partagent le nom, **mais ne désignent pas un objet identique**. Le dossier doit conserver deux variantes identifiées par document/version :
 
 ```text
-DESIGN_SPEC_NOT_IMPLEMENTED
+ERA_A_WORKSPACE_B9 (atelier temporaire)
+ERA_B_REVERSE_METRIC (projection / ratio)
+```
+
+Aucune équivalence prouvée. Si un composant porte le seul label ERA, déterminer d'abord son contexte.
+
+## Runtime exact observé
+
+Dans `apps/obsidia_api/brody_cognitive_modules_adapter.py` à la révision de code vérifiée en F0, le module ERA est :
+
+```text
+resolution = DESIGN_SPEC_NOT_IMPLEMENTED
 active = false
 needs_operator_spec = true
 ```
 
-Current source-traceability audits therefore classify the ERA formula as **DOC_ONLY**.
+Le snapshot générique n'arbitre pas entre ERA-A et ERA-B ; ce n'est pas un moteur ERA fonctionnel.
 
-## Status
+## Ce que ce n'est pas
 
-**USER DESIGN SPEC / DOC_ONLY / NOT CURRENT RUNTIME**
+- une même implémentation deux fois décrite ;
+- le kernel KX108 ;
+- une mesure scientifique universelle du raisonnement ;
+- une preuve qu'un groupe d'agents dispose d'un espace de réflexion actif.
 
-## Sources et généalogie — F0 (2026-10-08)
+## Sources
 
-- **Documents :** [Source historique Reverse OS](https://docs.google.com/document/d/1L_LG0UE4vyLn-iXF0pvjc94owZCI3McF2SWJo3TG8nY/edit).
-- **Lecture / frontière :** Source historique indexée, mais ERA demeure DOC_ONLY suivant le statut actuel décrit dans l'Atlas.
-- **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 103 concepts](18_CONCEPT_SOURCE_MATRIX.md).
+- [Carte B9 — ERA atelier cognitif](https://docs.google.com/document/d/1Que8iatRKSCtGwuFaIHAOFQHGU4_aMn4EKRydYktfQU/edit)
+- [Reverse OS — ERA indicateur](https://docs.google.com/document/d/1L_LG0UE4vyLn-iXF0pvjc94owZCI3McF2SWJo3TG8nY/edit)
+- [Statut courant du module Brody](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_cognitive_modules_adapter.py)
+
+## Statut
+
+**NAME_COLLISION / TWO HISTORICAL DEFINITIONS / DESIGN_SPEC_NOT_IMPLEMENTED (CURRENT GENERIC MODULE)**.
+
+Voir [audit F0, passe 2](19_F0_SOURCE_TRACE_BATCH2.md).
 
 ---
+
 # 80. World Foundry
 
 ## Definition
@@ -3648,3 +3672,55 @@ World Foundry (#80), Oxygen et éducation, Skill Forge/Experience Ledger comme �
 
 **HISTORICAL / EDUCATIONAL DESIGN SOURCE / NOT IMPLEMENTED**
 
+---
+
+# 108. Deux thermodynamiques — physique mesurable vs signaux computationnels
+
+## Définition
+
+Obsidia distingue explicitement **la thermodynamique du monde physique**, portant sur des grandeurs mesurées avec unités, sources, modèles, contraintes et incertitudes, de **la thermodynamique computationnelle / cognitive**, où des scores de coût, d'entropie informative ou de dissipation servent à caractériser des processus de calcul.
+
+Ce ne sont **pas** deux interprétations identiques d'une même mesure.
+
+## Pourquoi cette frontière existe
+
+Éviter qu'une valeur comme `entropy_score`, `coherence_temperature`, `dissipation_score`, `thermo_debt`, `compute_cost` ou `attention_cost` soit vendue comme température thermodynamique, chaleur, travail, énergie interne ou entropie physique mesurée.
+
+## Mécanisme actuel (source code et documentation)
+
+Le contrat F19 définit des références de système/mesure et une liaison à des lois/modèles scientifiques. Les évaluations restent **candidates**, conservant unités, erreurs, références et conditions.
+
+```text
+signal physique + mesure située + modèle scientifique
+      -> contrainte / état thermodynamique candidat
+      != vérité physique automatiquement démontrée
+
+métriques internes de cognition / compute
+      -> coût, route, alerte / pilotage non souverain
+      != grandeur physique
+```
+
+## Relations et frontières
+
+- F13 : mesures situées ;
+- F18 : références scientifiques, équations, invariants et contraintes ;
+- F19 : `PhysicalThermodynamicStateCandidateV0` et objets spécialisés ;
+- MMonde et preuve physique sans promotion automatique ;
+- Brody peut exploiter les états pour comprendre/proposer, pas décider ;
+- **KX108_ONLY**, pas de fusion forcée avec la « Balance exponentielle » historique.
+
+## Origine source vérifiée
+
+- [F19 contrat de thermodynamique physique](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/PHYSICAL_THERMODYNAMICS_ADAPTER_V0.md)
+- [F19 code `periphery/physical_thermodynamics/contracts_v0.py`](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/physical_thermodynamics/contracts_v0.py)
+- [Piste d'archive sur les régimes physiques (non prouvée)](https://docs.google.com/document/d/1cUJjRYhfn6Sg837G-8GvvTLntNvaLHd3LbwtKF2P6ew/edit)
+
+## Ce que ce n'est pas
+
+- une théorie du tout validée ;
+- une identité formelle entre loi physique et score cognitif ;
+- une preuve de fonctionnement d'un simulateur thermodynamique autonome.
+
+## Statut
+
+**CURRENT PHYSICAL ADAPTER CODE + DOC READ / NOT A PROOF OF PHYSICAL TRUTH OR SCIENTIFIC NOVELTY**.
