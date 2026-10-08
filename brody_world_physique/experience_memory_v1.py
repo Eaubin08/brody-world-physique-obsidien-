@@ -22,8 +22,11 @@ from typing import Any
 from PIL import Image
 import PIL
 
-from .drawing_school_v0 import SIDE, bbox_of, black_pixels, digest_bytes, signature_for
-from .drawing_school_v1 import GestureV1, SkillV1, _error, render
+from .drawing_school_v0 import (
+    SIDE, bbox_of, black_pixels, digest_bytes, signature_for,
+    verify_candidate_ledger,
+)
+from .drawing_school_v1 import GestureV1, SkillV1, _error, recall, render
 
 SCHEMA = "BRODY_EXPERIENCE_MEMORY_V1"
 INDEX_SCHEMA = "BRODY_EXPERIENCE_INDEX_V1"
@@ -338,6 +341,10 @@ def finalize_index(root:Path, episodes:list[dict])->dict:
         "episodes":episodes,
         "procedure_registry_ref":registry_path.name,
         "procedure_registry_sha256":digest_bytes(registry_path.read_bytes()),
+        "candidate_skill_memory_ref":"candidate_skill_memory.json",
+        "candidate_skill_memory_sha256":digest_bytes((root/"candidate_skill_memory.json").read_bytes()),
+        "candidate_experience_ledger_ref":"candidate_experience_ledger.jsonl",
+        "candidate_experience_ledger_sha256":digest_bytes((root/"candidate_experience_ledger.jsonl").read_bytes()),
         "read_only_export":True,
         "native_memory_write_allowed":False,
         "auto_promotion_allowed":False,
@@ -456,9 +463,58 @@ def verify_memory_bundle(root:str|Path)->dict:
                              "interpretation_is_observation_only":True,
                              "decision_authority":"KX108_ONLY"}:
         raise ValueError("procedure authority policy mismatch")
+    skills_path=root/"candidate_skill_memory.json"
+    events_path=root/"candidate_experience_ledger.jsonl"
+    if (data.get("candidate_skill_memory_ref")!=skills_path.name or
+        digest_bytes(skills_path.read_bytes())!=data.get("candidate_skill_memory_sha256") or
+        data.get("candidate_experience_ledger_ref")!=events_path.name or
+        digest_bytes(events_path.read_bytes())!=data.get("candidate_experience_ledger_sha256")):
+        raise ValueError("candidate skill memory or event ledger was changed")
+    skill_pack=json.loads(skills_path.read_text(encoding="utf-8"))
+    if (skill_pack.get("schema")!="BRODY_DRAWING_SCHOOL_SKILL_MEMORY_V1" or
+        skill_pack.get("native_memory_write_allowed") is not False or
+        skill_pack.get("canonical_memory") is not False):
+        raise ValueError("untrusted skill memory semantics")
+    parsed_skills=[]
+    for skill in skill_pack.get("skills",[]):
+        if len(parsed_skills)>=MAX_EPISODES:raise ValueError("too many skills")
+        parsed_skills.append(SkillV1(
+            source_sha256=skill["source_sha256"],lesson_ref=skill["lesson_ref"],
+            bbox=tuple(skill["bbox"]),signature=tuple(skill["signature"]),
+            gestures=tuple(checked_gesture(g) for g in skill["gestures"]),
+            last_error_pixels=skill["last_error_pixels"],status=skill["status"],
+        ))
+    frozen=tuple(parsed_skills)
+    if len(frozen)<1:raise ValueError("no initial experience skills")
+    ledger_proof=verify_candidate_ledger(events_path)
+    events=[json.loads(line)["event"] for line in events_path.read_text(encoding="utf-8").splitlines()]
+    links={(x["episode_ref"],x["episode_sha256"])
+           for x in events if x.get("event")=="PROCEDURAL_EPISODE_REF"}
+    if links!={(entry["episode_ref"],entry["sha256"]) for entry in entries}:
+        raise ValueError("procedural episode link missing from event ledger")
     checked=[verify_episode(root,e) for e in entries]
+    for entry in entries:
+        name=entry["episode_id"]
+        episode=json.loads((root/entry["episode_ref"]).read_text(encoding="utf-8"))
+        choice=episode["choice"]
+        if name.startswith("cours_"):
+            if choice["memory_source_ref"] is not None or episode["execution_trace"]["initial_recalled_gestures"]:
+                raise ValueError("training source was contaminated by previous seed")
+        else:
+            source=_source_path(root,name)
+            with Image.open(source) as img:
+                pixels=black_pixels(img.convert("L"))
+            selected=min(frozen,key=lambda skill:sum(
+                a!=b for a,b in zip(signature_for(pixels,bbox_of(pixels)),skill.signature)))
+            memory_ref=selected.lesson_ref
+            reactivated=[gesture_snapshot(g) for g in recall(frozen,pixels)]
+            if (choice["memory_source_ref"]!=memory_ref or
+                stable_bytes(episode["execution_trace"]["initial_recalled_gestures"])!=stable_bytes(reactivated)):
+                raise ValueError("chosen memory procedure does not match stored training skills")
     return {"status":"PASS_LOCAL_REPLAY_ONLY","episodes":len(checked),
             "edits_verified":sum(x["verified_edits"] for x in checked),
+            "candidate_ledger_records_verified":ledger_proof["verified_records"],
+            "memory_skill_selection_replayed":True,
             "code_identity_verified":True,
             "native_memory_modified":False,
             "all_generated_artifacts_replayed":True,
