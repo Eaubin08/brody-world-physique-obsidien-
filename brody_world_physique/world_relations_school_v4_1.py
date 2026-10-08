@@ -16,6 +16,7 @@ action. The V4 source bridge is verified, not modified.
 from __future__ import annotations
 
 import argparse
+from dataclasses import dataclass
 import json
 from pathlib import Path
 from math import hypot, sqrt
@@ -27,11 +28,115 @@ from PIL import Image, ImageDraw
 from .drawing_school_v0 import digest_bytes
 from .experience_memory_v1 import stable_bytes
 from .world_experience_bridge_v4 import verify_world_bundle
+from .contracts_v0 import (
+    ExperienceValidationStatusV0, MemoryEligibilityV0,
+    TransformationEpistemicClassV0, WorldExperienceCandidateV0,
+    WorldTransformationV0, WorldStateDeltaV0,
+)
 
 SCHEMA="BRODY_WORLD_RELATIONS_SCHOOL_V4_1"
 SIDE=64
 KINDS=("NEAR","FAR")
 MODULE=Path(__file__).resolve()
+
+
+@dataclass(frozen=True)
+class _SyntheticTime:
+    observed_at:str
+
+
+def world_episode_candidate(ref:str,source_sha:str,observed:dict,decision:dict,
+                            feedback:str,correct:bool,episode_index:int)->dict:
+    """Existing Brody F0 world experience/delta types; no new world root."""
+    if not ref.startswith(("shifted","quarter_turn","scaled","far_shifted",
+                           "reversed_hard_negative","single_component")):
+        raise ValueError("unrecognized classroom episode")
+    before=f"world:simulated:v4-1:{ref}:observation"
+    after=f"world:simulated:v4-1:{ref}:feedback"
+    transition=WorldTransformationV0(
+        transformation_id=f"transformation:relation-probe:{ref}",
+        transformation_kind="INFER_SPATIAL_PROXIMITY_FROM_RASTER",
+        time=_SyntheticTime(f"synthetic-test-index-{episode_index:02d}"),
+        target_refs=(before,),
+        parameters={"learner_method":"MIDPOINT_BETWEEN_OBSERVED_CLASSES",
+                    "candidate_relation":decision["candidate"],
+                    "image_component_count":observed["component_count"]},
+        provenance_refs=(f"v4-1:precommit:{ref}",),
+        evidence_refs=(f"sha256:{source_sha}",),
+        epistemic_class=TransformationEpistemicClassV0.SIMULATED,
+    )
+    change=WorldStateDeltaV0(
+        delta_id=f"world-delta:v4-1:{ref}",
+        baseline_state_ref=before,
+        observed_world_state_ref=after,
+        metric_deltas={"feedback_match":int(correct)},
+        continuity_status="UNKNOWN",
+        uncertainty=("TEACHER_SUPERVISED_NOT_SEMANTIC_TRUTH",
+                     "SIMULATED_RASTER_ONLY"),
+        provenance_refs=(f"sha256:{source_sha}",),
+    )
+    experience=WorldExperienceCandidateV0(
+        experience_id=f"world-exp:v4-1:{ref}",
+        state_before_ref=before,state_after_ref=after,
+        outcome="MATCHED_TEACHER_FEEDBACK" if correct
+                else "CONTRADICTED_BY_TEACHER_FEEDBACK",
+        transformation_ref=transition.transformation_id,
+        delta_ref=change.delta_id,
+        context_refs=(before,),
+        replay_refs=(f"v4-1:precommit:{ref}",),
+        evidence_refs=(f"sha256:{source_sha}",),
+        provenance_refs=(f"v4-1:teacher-feedback:{ref}",),
+        validation_status=ExperienceValidationStatusV0.CANDIDATE,
+        memory_eligibility=MemoryEligibilityV0.CANDIDATE_ONLY,
+    )
+    return {
+        "world_observation":{
+            "observation_id":before,
+            "source_kind":"SIMULATED",
+            "image_sha256":source_sha,
+            "feature_kind":"PIXEL_COMPONENTS_NOT_SEMANTIC_OBJECTS",
+            "component_count":observed["component_count"],
+            "relation_candidate":decision["candidate"],
+            "readonly":True,"world_state_is_memory":False,
+        },
+        "transformation":{
+            "schema_version":transition.schema_version,
+            "transformation_id":transition.transformation_id,
+            "epistemic_class":transition.epistemic_class.value,
+            "target_refs":list(transition.target_refs),
+            "parameters":dict(transition.parameters),
+            "time_basis":"SYNTHETIC_ORDER_NOT_CLOCK",
+            "decision_authority":transition.decision_authority,
+            "execution_authority":transition.execution_authority,
+        },
+        "delta":{
+            "schema_version":change.schema_version,
+            "delta_id":change.delta_id,
+            "metric_deltas":dict(change.metric_deltas),
+            "causal_proof":change.causal_proof,
+            "continuity_status":change.continuity_status,
+            "decision_authority":change.decision_authority,
+        },
+        "experience":{
+            "schema_version":experience.schema_version,
+            "experience_id":experience.experience_id,
+            "state_before_ref":experience.state_before_ref,
+            "state_after_ref":experience.state_after_ref,
+            "outcome":experience.outcome,
+            "transformation_ref":experience.transformation_ref,
+            "delta_ref":experience.delta_ref,
+            "evidence_refs":list(experience.evidence_refs),
+            "validation_status":experience.validation_status.value,
+            "memory_eligibility":experience.memory_eligibility.value,
+            "memory_write_allowed":experience.memory_write_allowed,
+            "auto_promotion_allowed":experience.auto_promotion_allowed,
+            "canonical_memory":experience.canonical_memory,
+            "decision_authority":experience.decision_authority,
+        },
+        "feedback_attribution":"SUPERVISED_AFTER_PRECOMMIT",
+        "teacher_label":feedback,
+        "no_sens_semantic_claim":True,
+    }
 
 
 def digest(path:Path)->str:
@@ -330,8 +435,16 @@ def run_school(out:str|Path,*,prior_v3:str|Path,prior_v4:str|Path)->dict:
         "novel_composition_is_rearranged_stored_pixels":True,
         "semantic_structure_discovered":False,
     }
+    linked_world_episodes=[
+        world_episode_candidate(
+            row["test_ref"],row["source_sha256"],
+            inspect_pixels(Image.open(images/("exam_"+row["test_ref"]+".png"))),
+            row["decision"],row["truth"],row["correct"],i)
+        for i,row in enumerate(results)
+    ]
     candidate_world={
         "schema":SCHEMA,
+        "world_experience_candidates":linked_world_episodes,
         "upstream_world_v4_sha256":digest(prior4),
         "upstream_v3_sha256":digest(prior3/"evaluation.json"),
         "code_sha256":digest(MODULE),
@@ -432,6 +545,15 @@ def verify_school(folder:str|Path,*,prior_v3:str|Path,prior_v4:str|Path)->dict:
             or stable_bytes(eval_row["decision"])!=stable_bytes(decision)
             or eval_row["truth"]!=truth or eval_row["correct"]!=expected_correct):
             raise ValueError("test decision/source/teacher feedback not replayable")
+    expected_world=[
+        world_episode_candidate(
+            row["test_ref"],row["source_sha256"],
+            inspect_pixels(Image.open(root/"images"/("exam_"+row["test_ref"]+".png"))),
+            row["decision"],row["truth"],row["correct"],i)
+        for i,row in enumerate(index["tests"])
+    ]
+    if stable_bytes(index.get("world_experience_candidates"))!=stable_bytes(expected_world):
+        raise ValueError("world experiences not derived from actual episodes")
     rec=json.loads(composition_ref.read_text(encoding="utf-8"))
     target=professor_scene("NEAR",dx=-4,dy=3,scale=1.1)
     student=compose_from_experience(training,policy)
@@ -454,6 +576,7 @@ def verify_school(folder:str|Path,*,prior_v3:str|Path,prior_v4:str|Path)->dict:
     return {
         "status":"PASS_WORLD_RELATION_V4_1_BOUNDED_REPLAY",
         "training_verified":len(training),"exams_verified":len(exams),
+        "world_experience_candidates_verified":len(expected_world),
         "positive_tests":sum(r["correct"] for r in index["tests"]),
         "known_failure_count":sum(not r["correct"] for r in index["tests"]),
         "student_has_no_test_teacher_boxes":True,
