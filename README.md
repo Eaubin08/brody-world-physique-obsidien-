@@ -201,11 +201,11 @@ before the fourth frame is opened for annotation**. Then compare against
 the fourth frame, storing source video SHA-256 and explicit camera/time/
 object-identity uncertainty. This is not automatic tracking, a new model
 installation, physical-law proof or an adaptive learned world model.
-Real video observations have NOT been run by CI (mocked GUI/decode tests only).
+Real video observations have NOT been run by CI (mocked GUI/decode tests only). **Video origin must be declared** with `--source-kind SIMULATED`, `GENERATED` or `OBSERVED_CLAIM`. The manual GUI now shows a click marker and requires **Enter/Space confirmation** (R retry, Esc cancel).
 
 ```powershell
 py -c "import cv2;print(cv2.__version__)"
-py -m brody_world_physique.video_observation_v0 --video "C:\\videos\\balle.mp4" --out "build\\first-real-video" --interval-seconds 0.1
+py -m brody_world_physique.video_observation_v0 --video "C:\\videos\\balle.mp4" --out "build\\first-real-video" --interval-seconds 0.1 --source-kind SIMULATED
 ```
 
 See [30 — first real-video annotation protocol](docs/30_PREMIERE_VIDEO_PHYSIQUE_ANNOTATION_MANUELLE.md).
