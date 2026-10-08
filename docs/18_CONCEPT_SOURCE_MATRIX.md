@@ -1,10 +1,18 @@
-# 18 — Matrice de traçabilité des 107 concepts (F0, 2026-10-08)
+<!-- Source and code statuses classify documentation evidence, NOT originality or successful current test execution. -->
+# 18 — Matrice de traçabilité des 108 concepts (F0, 2026-10-08)
 
-**READ_ONLY RECONCILIATION / WORK IN PROGRESS — pas de freeze.** Les entrées 1–103 sont préservées, 104–107 sont les nouveaux concepts retrouvés dans les sources directement lues. Chaque ligne correspond à l'entrée numérotée dans `docs/15_CONCEPT_ATLAS.md`.
+**READ_ONLY RECONCILIATION / WORK IN PROGRESS — pas de freeze.** Les entrées 1–103 sont préservées, 104–107 proviennent d'archives lues en première passe et 108 de la distinction thermodynamique prouvée par documentation/code F19. Chaque ligne correspond à l'entrée numérotée dans `docs/15_CONCEPT_ATLAS.md`.
 
 ## Légende
 
 - `DIRECT_READ`: archive Drive lue et concept/terme examiné directement ; **n'atteste ni auteur exclusif, ni preuve de code, ni originalité scientifique**.
+- `UPSTREAM_CODE_READ`: fichier code ou contrat précis inspecté dans le dépôt Obsidia ou Brody ; pas de test relancé, pas de preuve de runtime connecté, pas de preuve d'origine intellectuelle.
+- `UPSTREAM_DOC_READ`: doctrine/audit upstream inspecté ; le niveau de connexion et d'exécution dépend des tests associés.
+- `PROJECT_DOC_READ`: spécification ou règle du présent dépôt relue ; elle peut être seulement vision/design.
+- `CROSS_AUDIT_REPORTED`: un audit F0 cite la branche source ; passage original pas encore revérifié ici.
+- `EXTERNAL_DONOR_READ`: source indépendante à attribuer à ses auteurs externes, non à Obsidia.
+- `PARTIAL_NAME_COLLISION`: une variante vérifiée, une autre attend son passage primaire exact.
+
 - `DESCENDANT_HYPOTHESIS`: lien d'inspiration plausible et documenté, pas une identité technique.
 - `INDEXED_NOT_VERIFIED`: document déjà référencé dans `docs/12_OBSIDIA_USER_SOURCES.md`, mais définition exacte non recroisée dans cette passe.
 - `REVIEW_REQUIRED`: aucun passage primaire individuellement attribué pendant cette passe. Ne pas combler depuis le nom.
@@ -14,31 +22,31 @@
 
 | # | Concept de l'Atlas | État de rattachement | Sources originales ou piste |
 |---:|---|---|---|
-| 1 | Obsidia | `REVIEW_REQUIRED` | — |
-| 2 | "Each layer speaks its own language" | `REVIEW_REQUIRED` | — |
-| 3 | Skill before encyclopedic knowledge | `REVIEW_REQUIRED` | — |
-| 4 | State -> transformation/action -> consequence | `REVIEW_REQUIRED` | — |
-| 5 | WorldObservationV0 | `REVIEW_REQUIRED` | — |
-| 6 | WorldStateV0 | `REVIEW_REQUIRED` | — |
-| 7 | MMonde | `REVIEW_REQUIRED` | — |
-| 8 | WorldTransformationV0 | `REVIEW_REQUIRED` | — |
-| 9 | WorldAction | `REVIEW_REQUIRED` | — |
-| 10 | WorldStateProjectionV0 | `REVIEW_REQUIRED` | — |
-| 11 | WorldStateDeltaV0 | `REVIEW_REQUIRED` | — |
-| 12 | WorldExperienceCandidateV0 | `REVIEW_REQUIRED` | — |
-| 13 | TransitionV0 | `REVIEW_REQUIRED` | — |
-| 14 | TransitionTransformationBindingV0 | `REVIEW_REQUIRED` | — |
-| 15 | OS Trad / inward translation | `INDEXED_NOT_VERIFIED` | [OS](https://docs.google.com/document/d/1ZTisSqVwl4SUyp3T_BjZr2OxCkKaMmoUtY9W8X8oyYE/edit) |
-| 16 | IR — Internal Representation | `INDEXED_NOT_VERIFIED` | [OS](https://docs.google.com/document/d/1ZTisSqVwl4SUyp3T_BjZr2OxCkKaMmoUtY9W8X8oyYE/edit) |
-| 17 | Reverse OS / SSR | `INDEXED_NOT_VERIFIED` | [ROS](https://docs.google.com/document/d/1L_LG0UE4vyLn-iXF0pvjc94owZCI3McF2SWJo3TG8nY/edit) |
-| 18 | Brody | `INDEXED_NOT_VERIFIED` | [BRO](https://docs.google.com/document/d/1PmNNst_WVYflLQmCn8z6RrwGpYTHZBMe5F4DULiN7yc/edit) |
-| 19 | SENS / Cognition | `REVIEW_REQUIRED` | — |
-| 20 | EventRef | `REVIEW_REQUIRED` | — |
-| 21 | EventCandidate | `REVIEW_REQUIRED` | — |
-| 22 | OccurrenceClaim | `REVIEW_REQUIRED` | — |
-| 23 | OccurrenceDerivation | `REVIEW_REQUIRED` | — |
-| 24 | Native Memory | `REVIEW_REQUIRED` | — |
-| 25 | MemoryCandidate | `REVIEW_REQUIRED` | — |
+| 1 | Obsidia | `UPSTREAM_DOC_READ` | [Comprendre Obsidia](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/COMPRENDRE_OBSIDIA.md) |
+| 2 | "Each layer speaks its own language" | `UPSTREAM_DOC_READ` | [Comprendre Obsidia](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/COMPRENDRE_OBSIDIA.md) |
+| 3 | Skill before encyclopedic knowledge | `UPSTREAM_DOC_READ` | [Education / capacity](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [MMonde transitions](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/SITUATED_WORLD_DYNAMICS_V0.md) |
+| 4 | State -> transformation/action -> consequence | `UPSTREAM_DOC_READ` | [Education / capacity](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [MMonde transitions](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/SITUATED_WORLD_DYNAMICS_V0.md) |
+| 5 | WorldObservationV0 | `UPSTREAM_CODE_READ` | [MMonde contracts](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/mmonde/contracts_v0.py); [MMonde doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/MMONDE_V0_CONTRACT.md) |
+| 6 | WorldStateV0 | `UPSTREAM_CODE_READ` | [MMonde contracts](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/mmonde/contracts_v0.py); [MMonde doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/MMONDE_V0_CONTRACT.md) |
+| 7 | MMonde | `UPSTREAM_CODE_READ` | [MMonde contracts](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/mmonde/contracts_v0.py); [MMonde doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/MMONDE_V0_CONTRACT.md) |
+| 8 | WorldTransformationV0 | `UPSTREAM_CODE_READ` | [F0 new contracts](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/brody_world_physique/contracts_v0.py); [F0 tests source](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/tests/test_contracts_v0.py) |
+| 9 | WorldAction | `UPSTREAM_CODE_READ` | [World Action dry-run gate](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/engine_gates/world_action_gateway.py) |
+| 10 | WorldStateProjectionV0 | `UPSTREAM_CODE_READ` | [F0 new contracts](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/brody_world_physique/contracts_v0.py); [F0 tests source](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/tests/test_contracts_v0.py) |
+| 11 | WorldStateDeltaV0 | `UPSTREAM_CODE_READ` | [F0 new contracts](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/brody_world_physique/contracts_v0.py); [F0 tests source](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/tests/test_contracts_v0.py) |
+| 12 | WorldExperienceCandidateV0 | `UPSTREAM_CODE_READ` | [F0 new contracts](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/brody_world_physique/contracts_v0.py); [F0 tests source](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/tests/test_contracts_v0.py) |
+| 13 | TransitionV0 | `UPSTREAM_CODE_READ` | [World Dynamics](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/world_dynamics/contracts_v0.py); [F12 report](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/SITUATED_WORLD_DYNAMICS_V0.md) |
+| 14 | TransitionTransformationBindingV0 | `UPSTREAM_CODE_READ` | [F0 new contracts](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/brody_world_physique/contracts_v0.py); [F0 tests source](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/tests/test_contracts_v0.py) |
+| 15 | OS Trad / inward translation | `DIRECT_READ` | [OS](https://docs.google.com/document/d/1ZTisSqVwl4SUyp3T_BjZr2OxCkKaMmoUtY9W8X8oyYE/edit); [OS Trad / IR pipeline audit](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/F72_OS_TRAD_IR_REVERSE_DEEP_PIPELINE_AUDIT.md) |
+| 16 | IR — Internal Representation | `DIRECT_READ` | [OS](https://docs.google.com/document/d/1ZTisSqVwl4SUyp3T_BjZr2OxCkKaMmoUtY9W8X8oyYE/edit); [OS Trad / IR pipeline audit](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/F72_OS_TRAD_IR_REVERSE_DEEP_PIPELINE_AUDIT.md) |
+| 17 | Reverse OS / SSR | `DIRECT_READ` | [Reverse/SSR](https://docs.google.com/document/d/1L_LG0UE4vyLn-iXF0pvjc94owZCI3McF2SWJo3TG8nY/edit); [F72](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/F72_OS_TRAD_IR_REVERSE_DEEP_PIPELINE_AUDIT.md) |
+| 18 | Brody | `DIRECT_READ` | [Brody historical audit](https://docs.google.com/document/d/1PmNNst_WVYflLQmCn8z6RrwGpYTHZBMe5F4DULiN7yc/edit); [no-decision policy](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/brody/BRODY_NO_DECISION_POLICY_V1.md) |
+| 19 | SENS / Cognition | `CROSS_AUDIT_REPORTED` | [R6/SENS audit](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/13_F0_CROSS_AUDIT.md); [R6 source audit](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/R6_SENS_COGNITION_CANONICAL_AUDIT_V0.md) |
+| 20 | EventRef | `CROSS_AUDIT_REPORTED` | [R6/SENS audit](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/13_F0_CROSS_AUDIT.md); [R6 source audit](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/R6_SENS_COGNITION_CANONICAL_AUDIT_V0.md) |
+| 21 | EventCandidate | `CROSS_AUDIT_REPORTED` | [R6/SENS audit](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/13_F0_CROSS_AUDIT.md); [R6 source audit](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/R6_SENS_COGNITION_CANONICAL_AUDIT_V0.md) |
+| 22 | OccurrenceClaim | `CROSS_AUDIT_REPORTED` | [R6/SENS audit](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/13_F0_CROSS_AUDIT.md); [R6 source audit](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/R6_SENS_COGNITION_CANONICAL_AUDIT_V0.md) |
+| 23 | OccurrenceDerivation | `CROSS_AUDIT_REPORTED` | [R6/SENS audit](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/13_F0_CROSS_AUDIT.md); [R6 source audit](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/R6_SENS_COGNITION_CANONICAL_AUDIT_V0.md) |
+| 24 | Native Memory | `UPSTREAM_CODE_READ` | [Native Memory readonly reader](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_obsidia_native_memory.py); [Memory candidate ledger](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/memory/memory_candidate_ledger.py) |
+| 25 | MemoryCandidate | `UPSTREAM_CODE_READ` | [MemoryCandidate code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/memory/memory_candidate.py); [no-promotion test](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/tests/non_sovereignty/test_memory_candidate_ledger_no_promotion.py) |
 | 26 | Zone Latente | `DIRECT_READ` | [EVE](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit), [FRI](https://docs.google.com/document/d/1Zu6jX4P-RFB8owuCNTs6yWTkC8Yvo5Ef34lYTtcjBFo/edit) |
 | 27 | Continuum | `DIRECT_READ` | [EVE](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit), [CONT](https://docs.google.com/document/d/13jSPWFtRvbjHd5X9zjl012e_flqrQKWHXzDmjyNTK4Q/edit) |
 | 28 | Friction Symbolique | `DIRECT_READ` | [FRI](https://docs.google.com/document/d/1Zu6jX4P-RFB8owuCNTs6yWTkC8Yvo5Ef34lYTtcjBFo/edit), [EVE](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit) |
@@ -52,83 +60,85 @@
 | 36 | Analyse <-> Synthèse / Méthode Réciproque | `DIRECT_READ` | [EVE](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit) |
 | 37 | Invariant Dynamique | `DIRECT_READ` | [EVE](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit) |
 | 38 | Multimodalité Harmonique | `DIRECT_READ` | [EVE](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit) |
-| 39 | Reverse360 | `REVIEW_REQUIRED` | — |
-| 40 | RealImageObservationV0 | `INDEXED_NOT_VERIFIED` | [GP](https://docs.google.com/document/d/1GfPSoTjPZQtktvKpuq00U-eteNdeCYA7/edit) |
-| 41 | GeneratedArtifactV0 | `REVIEW_REQUIRED` | — |
-| 42 | ReverseEvaluationV0 | `REVIEW_REQUIRED` | — |
-| 43 | Physical Signal Periphery | `INDEXED_NOT_VERIFIED` | [GP](https://docs.google.com/document/d/1GfPSoTjPZQtktvKpuq00U-eteNdeCYA7/edit) |
+| 39 | Reverse360 | `PROJECT_DOC_READ` | [Canonical F0 design](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/02_CONTRACTS.md); [Audit method](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/16_CONCEPT_AUDIT_METHOD.md) |
+| 40 | RealImageObservationV0 | `UPSTREAM_CODE_READ` | [Real Image code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/vision/contracts_v0.py); [F16 document](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/VISION_REAL_IMAGE_V0.md) |
+| 41 | GeneratedArtifactV0 | `PROJECT_DOC_READ` | [Canonical F0 design](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/02_CONTRACTS.md); [Audit method](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/16_CONCEPT_AUDIT_METHOD.md) |
+| 42 | ReverseEvaluationV0 | `PROJECT_DOC_READ` | [Canonical F0 design](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/02_CONTRACTS.md); [Audit method](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/16_CONCEPT_AUDIT_METHOD.md) |
+| 43 | Physical Signal Periphery | `UPSTREAM_CODE_READ` | [Physical Signal code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/physical_signal/contracts_v0.py) |
 | 44 | Physical Reality Gate | `INDEXED_NOT_VERIFIED` | [GP](https://docs.google.com/document/d/1GfPSoTjPZQtktvKpuq00U-eteNdeCYA7/edit) |
-| 45 | Evidence Compatibility | `INDEXED_NOT_VERIFIED` | [GP](https://docs.google.com/document/d/1GfPSoTjPZQtktvKpuq00U-eteNdeCYA7/edit) |
-| 46 | Provenance | `REVIEW_REQUIRED` | — |
+| 45 | Evidence Compatibility | `UPSTREAM_CODE_READ` | [Physical Evidence code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/physical_evidence/contracts_v0.py); [F15 doc](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/PHYSICAL_EVIDENCE_PLANE_V0.md) |
+| 46 | Provenance | `UPSTREAM_CODE_READ` | [MMonde contracts](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/mmonde/contracts_v0.py); [MMonde doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/MMONDE_V0_CONTRACT.md) |
 | 47 | UNKNOWN | `REVIEW_REQUIRED` | — |
 | 48 | HOLD | `REVIEW_REQUIRED` | — |
 | 49 | BLOCK | `REVIEW_REQUIRED` | — |
 | 50 | ACT | `REVIEW_REQUIRED` | — |
-| 51 | GuardX108 | `REVIEW_REQUIRED` | — |
-| 52 | KX108_ONLY | `REVIEW_REQUIRED` | — |
-| 53 | Sigma | `REVIEW_REQUIRED` | — |
-| 54 | Binder / Runtime Binder | `REVIEW_REQUIRED` | — |
-| 55 | Receipt | `REVIEW_REQUIRED` | — |
-| 56 | Replay | `REVIEW_REQUIRED` | — |
+| 51 | GuardX108 | `UPSTREAM_DOC_READ` | [F7 Governed World → GuardX108](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/GOVERNED_WORLD_KX108_V0.md); [security](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 52 | KX108_ONLY | `UPSTREAM_CODE_READ` | [KX108 authority code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/scripts/kernel/kx108_decision_authority_v1.py); [security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 53 | Sigma | `UPSTREAM_CODE_READ` | [Sigma code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/sigma/contracts.py); [post Guard boundary](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/core_import/P56D_SIGMA_POST_GUARD_VETO_BOUNDARY.md) |
+| 54 | Binder / Runtime Binder | `UPSTREAM_DOC_READ` | [CG9 architecture](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/CG9_GLOBAL_PROVIDER_BINDER_V1.md); [F72 audit](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/F72_OS_TRAD_IR_REVERSE_DEEP_PIPELINE_AUDIT.md) |
+| 55 | Receipt | `UPSTREAM_CODE_READ` | [OS3 ticket code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/os3_ticket.py); [OS3 test source](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/tests/periphery/test_os3_ticket.py) |
+| 56 | Replay | `UPSTREAM_CODE_READ` | [OS3 ticket code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/os3_ticket.py); [OS3 test source](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/tests/periphery/test_os3_ticket.py) |
 | 57 | Dreaming / internal simulation | `DESCENDANT_HYPOTHESIS` | [CIN](https://docs.google.com/document/d/1iVwqEeo2TTa3Mv6wYFdJOq_8-mAfFpz7-AJ46iMxm7o/edit) |
-| 58 | Weight-last learning | `INDEXED_NOT_VERIFIED` | [CIN](https://docs.google.com/document/d/1iVwqEeo2TTa3Mv6wYFdJOq_8-mAfFpz7-AJ46iMxm7o/edit) |
+| 58 | Weight-last learning | `PROJECT_DOC_READ` | [Learning policy design](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/05_LEARNING_MEMORY.md); Previous CIN source did not independently substantiate weight-last |
 | 59 | World quadrillage | `DESCENDANT_HYPOTHESIS` | [GP](https://docs.google.com/document/d/1GfPSoTjPZQtktvKpuq00U-eteNdeCYA7/edit) |
-| 60 | Physical world model in Obsidia | `INDEXED_NOT_VERIFIED` | [GP](https://docs.google.com/document/d/1GfPSoTjPZQtktvKpuq00U-eteNdeCYA7/edit) |
-| 61 | "The model is an organ" | `REVIEW_REQUIRED` | — |
-| 62 | Oxygen | `REVIEW_REQUIRED` | — |
-| 63 | "One birth" | `REVIEW_REQUIRED` | — |
-| 64 | Education vs training | `REVIEW_REQUIRED` | — |
-| 65 | Status against eloquence | `REVIEW_REQUIRED` | — |
-| 66 | Proof before and after action | `REVIEW_REQUIRED` | — |
-| 67 | Current concept graph | `REVIEW_REQUIRED` | — |
-| 68 | Audit drift policy | `REVIEW_REQUIRED` | — |
-| 69 | Source policy | `REVIEW_REQUIRED` | — |
+| 60 | Physical world model in Obsidia | `UPSTREAM_DOC_READ` | [MMonde/physical bridge](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/MMONDE_V0_CONTRACT.md); [Physical thermo](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/PHYSICAL_THERMODYNAMICS_ADAPTER_V0.md) |
+| 61 | "The model is an organ" | `UPSTREAM_DOC_READ` | [Education — doctrine/code/vision distinct](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [Security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 62 | Oxygen | `UPSTREAM_DOC_READ` | [Education — doctrine/code/vision distinct](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [Security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 63 | "One birth" | `UPSTREAM_DOC_READ` | [Education — doctrine/code/vision distinct](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [Security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 64 | Education vs training | `UPSTREAM_DOC_READ` | [Education — doctrine/code/vision distinct](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [Security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 65 | Status against eloquence | `UPSTREAM_DOC_READ` | [Education — doctrine/code/vision distinct](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [Security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 66 | Proof before and after action | `UPSTREAM_DOC_READ` | [Education — doctrine/code/vision distinct](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [Security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 67 | Current concept graph | `PROJECT_DOC_READ` | [Canonical F0 design](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/02_CONTRACTS.md); [Audit method](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/16_CONCEPT_AUDIT_METHOD.md) |
+| 68 | Audit drift policy | `PROJECT_DOC_READ` | [Canonical F0 design](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/02_CONTRACTS.md); [Audit method](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/16_CONCEPT_AUDIT_METHOD.md) |
+| 69 | Source policy | `PROJECT_DOC_READ` | [Canonical F0 design](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/02_CONTRACTS.md); [Audit method](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/16_CONCEPT_AUDIT_METHOD.md) |
 | 70 | AVDR | `DIRECT_READ` | [AVDR](https://docs.google.com/document/d/1uDk3FC6a7aBGmGEul4mHzn9fMitc44xRSgPz2kxDzh4/edit), [FOND](https://docs.google.com/document/d/1R-BkkUUknUUs-C0rUA6LwBAISGIGwx3P8ycOojbjzOk/edit), [FRI](https://docs.google.com/document/d/1Zu6jX4P-RFB8owuCNTs6yWTkC8Yvo5Ef34lYTtcjBFo/edit) |
-| 71 | ADeLe / A2DR | `INDEXED_NOT_VERIFIED` | [MAI](https://docs.google.com/document/d/14WUSNQPcZ4MsNP0lfpHT2PkfEJxiHhGvdcdNefqSbOE/edit) |
+| 71 | ADeLe / A2DR | `EXTERNAL_DONOR_READ` | [ADeLe official](https://kinds-of-intelligence-cfi.github.io/ADELE/); [AVDR×ADeLe archive](https://docs.google.com/document/d/15pZLOlYVu2POMMbU6nztWlAOIaGlnhjIa5-X9q4dtE4/edit); [A2DR mention only](https://docs.google.com/document/d/1eHi6LmYA-1XG94u_jau1f8vqv7Zgy76dzI1vxz-cGss/edit) |
 | 72 | Balance exponentielle / Balance Proportionnelle Exponentielle | `DIRECT_READ` | [EVE](https://docs.google.com/document/d/1ZwONI-YnrpHgMQW_iQiIlx4gaI57IEgfUOa8By6iMDU/edit) |
-| 73 | Veto Harmonique | `INDEXED_NOT_VERIFIED` | [CON](https://docs.google.com/document/d/115BlgqjdgU8B1UQiryBvoBxYaXoZu_60uo19CHxEqxs/edit) |
-| 74 | Obsidure | `REVIEW_REQUIRED` | — |
-| 75 | OS3ProofTicket | `REVIEW_REQUIRED` | — |
-| 76 | OS3 | `REVIEW_REQUIRED` | — |
-| 77 | Runtime Binder | `REVIEW_REQUIRED` | — |
-| 78 | Provider Cognitive Binder | `REVIEW_REQUIRED` | — |
-| 79 | ERA — Espace de Raisonnement Assisté | `INDEXED_NOT_VERIFIED` | [ROS](https://docs.google.com/document/d/1L_LG0UE4vyLn-iXF0pvjc94owZCI3McF2SWJo3TG8nY/edit) |
+| 73 | Veto Harmonique | `DIRECT_READ` | [constitution / veto](https://docs.google.com/document/d/115BlgqjdgU8B1UQiryBvoBxYaXoZu_60uo19CHxEqxs/edit); [immutable vote code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/sigma/contracts.py) |
+| 74 | Obsidure | `UPSTREAM_DOC_READ` | [Obsidure Runtime architecture](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/OBSIDURE_RUNTIME_ARCHITECTURE_V1.md) |
+| 75 | OS3ProofTicket | `UPSTREAM_CODE_READ` | [OS3 ticket code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/os3_ticket.py); [OS3 test source](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/tests/periphery/test_os3_ticket.py) |
+| 76 | OS3 | `UPSTREAM_CODE_READ` | [OS3 ticket code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/os3_ticket.py); [OS3 test source](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/tests/periphery/test_os3_ticket.py) |
+| 77 | Runtime Binder | `UPSTREAM_DOC_READ` | [CG9 architecture](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/CG9_GLOBAL_PROVIDER_BINDER_V1.md); [F72 audit](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/F72_OS_TRAD_IR_REVERSE_DEEP_PIPELINE_AUDIT.md) |
+| 78 | Provider Cognitive Binder | `UPSTREAM_DOC_READ` | [CG9 architecture](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/CG9_GLOBAL_PROVIDER_BINDER_V1.md); [F72 audit](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/F72_OS_TRAD_IR_REVERSE_DEEP_PIPELINE_AUDIT.md) |
+| 79 | ERA — Espace de Raisonnement Assisté | `DIRECT_READ` | [ERA-A carte B9](https://docs.google.com/document/d/1Que8iatRKSCtGwuFaIHAOFQHGU4_aMn4EKRydYktfQU/edit); [ERA-B Reverse](https://docs.google.com/document/d/1L_LG0UE4vyLn-iXF0pvjc94owZCI3McF2SWJo3TG8nY/edit); [ERA runtime not implemented](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_cognitive_modules_adapter.py) |
 | 80 | World Foundry | `DIRECT_READ` | [WFD](https://docs.google.com/document/d/1d5Gf5-r1d43wetqaANCzCff5CPyYckwTw9_AuWwicpg/edit) |
-| 81 | Formule du Savoir Obsidia (FSO) | `INDEXED_NOT_VERIFIED` | [FSO](https://docs.google.com/document/d/1bpOAmI8uIjbDYdDLBwkoxBDv5WYIMjv0/edit) |
+| 81 | Formule du Savoir Obsidia (FSO) | `DIRECT_READ` | [FSO archive user+AI](https://docs.google.com/document/d/1bpOAmI8uIjbDYdDLBwkoxBDv5WYIMjv0/edit) |
 | 82 | "Build the body before searching for a total brain" | `INDEXED_NOT_VERIFIED` | [V5](https://docs.google.com/document/d/1emMNeq8Lgxckos1B2RoKSISXpTIZHlk4qOYfv7Q9yl8/edit) |
 | 83 | "Structure can replace part of inference" | `INDEXED_NOT_VERIFIED` | [V5](https://docs.google.com/document/d/1emMNeq8Lgxckos1B2RoKSISXpTIZHlk4qOYfv7Q9yl8/edit) |
-| 84 | Fast Path | `REVIEW_REQUIRED` | — |
-| 85 | Path Compute | `REVIEW_REQUIRED` | — |
-| 86 | MEMZUM | `REVIEW_REQUIRED` | — |
-| 87 | Point cloud / cognitive point cloud | `REVIEW_REQUIRED` | — |
-| 88 | True Voice | `REVIEW_REQUIRED` | — |
-| 89 | SRL — Session Registry Layer | `REVIEW_REQUIRED` | — |
-| 90 | "Present != connected != causally useful != tested != proven != frozen != production" | `REVIEW_REQUIRED` | — |
-| 91 | Concept lineage | `REVIEW_REQUIRED` | — |
-| 92 | Canon vs source pack vs research source | `REVIEW_REQUIRED` | — |
-| 93 | C10 | `INDEXED_NOT_VERIFIED` | [CON](https://docs.google.com/document/d/115BlgqjdgU8B1UQiryBvoBxYaXoZu_60uo19CHxEqxs/edit) |
-| 94 | Immutable Vote / SIGMA_IMMUTABLE_VOTE_V1 | `REVIEW_REQUIRED` | — |
-| 95 | Balance Obsidienne | `REVIEW_REQUIRED` | — |
+| 84 | Fast Path | `UPSTREAM_CODE_READ` | [Fast path](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_v3_fastpath_response.py) |
+| 85 | Path Compute | `UPSTREAM_CODE_READ` | [Path Compute disabled](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/path_compute_v0/boundary.py); [Path Compute README](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/path_compute_v0/README.md) |
+| 86 | MEMZUM | `UPSTREAM_CODE_READ` | [MEMZUM activation](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_memzum_activation_adapter.py) |
+| 87 | Point cloud / cognitive point cloud | `UPSTREAM_CODE_READ` | [Point cloud 21D](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_point_cloud_21d_selector.py) |
+| 88 | True Voice | `UPSTREAM_CODE_READ` | [True Voice adapter](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_true_voice_adapter.py) |
+| 89 | SRL — Session Registry Layer | `UPSTREAM_DOC_READ` | [SRL audit: foundation not canonical](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/runtime/OBSIDIA_SRL_SESSION_REGISTRY_LAYER_AUDIT_V0.md) |
+| 90 | "Present != connected != causally useful != tested != proven != frozen != production" | `UPSTREAM_DOC_READ` | [Education — doctrine/code/vision distinct](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [Security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 91 | Concept lineage | `PROJECT_DOC_READ` | [Canonical F0 design](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/02_CONTRACTS.md); [Audit method](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/16_CONCEPT_AUDIT_METHOD.md) |
+| 92 | Canon vs source pack vs research source | `PROJECT_DOC_READ` | [Canonical F0 design](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/02_CONTRACTS.md); [Audit method](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/docs/16_CONCEPT_AUDIT_METHOD.md) |
+| 93 | C10 | `PARTIAL_NAME_COLLISION` | [C10 education/Oxygen](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); C10 immutability historical exact passage still to locate |
+| 94 | Immutable Vote / SIGMA_IMMUTABLE_VOTE_V1 | `UPSTREAM_CODE_READ` | [calculate_immutable_vote](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/sigma/contracts.py); [test source](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/tests/sigma/test_f25b_immutable_vote_minimal.py) |
+| 95 | Balance Obsidienne | `UPSTREAM_CODE_READ` | [Brody 11-balance engine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_balance_engine.py) |
 | 96 | Task Forge | `DIRECT_READ` | [AVDR](https://docs.google.com/document/d/1uDk3FC6a7aBGmGEul4mHzn9fMitc44xRSgPz2kxDzh4/edit) |
 | 97 | Solve Engine | `DIRECT_READ` | [AVDR](https://docs.google.com/document/d/1uDk3FC6a7aBGmGEul4mHzn9fMitc44xRSgPz2kxDzh4/edit) |
 | 98 | Cognitive Evaluator / Context Filter / Reasoning Trace / Cognitive Calibrator | `DIRECT_READ` | [AVDR](https://docs.google.com/document/d/1uDk3FC6a7aBGmGEul4mHzn9fMitc44xRSgPz2kxDzh4/edit) |
-| 99 | CG9 Global Provider Binder | `REVIEW_REQUIRED` | — |
-| 100 | OS3 proof scope | `REVIEW_REQUIRED` | — |
-| 101 | Calibration | `DESCENDANT_HYPOTHESIS` | [CIN](https://docs.google.com/document/d/1iVwqEeo2TTa3Mv6wYFdJOq_8-mAfFpz7-AJ46iMxm7o/edit) |
-| 102 | Maturation | `DESCENDANT_HYPOTHESIS` | [CIN](https://docs.google.com/document/d/1iVwqEeo2TTa3Mv6wYFdJOq_8-mAfFpz7-AJ46iMxm7o/edit) |
-| 103 | One continuity, many organs | `INDEXED_NOT_VERIFIED` | [V5](https://docs.google.com/document/d/1emMNeq8Lgxckos1B2RoKSISXpTIZHlk4qOYfv7Q9yl8/edit) |
+| 99 | CG9 Global Provider Binder | `UPSTREAM_CODE_READ` | [CG9 provider binder code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/scripts/providers/provider_binder_v0.py); [CG9 architecture](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/CG9_GLOBAL_PROVIDER_BINDER_V1.md) |
+| 100 | OS3 proof scope | `UPSTREAM_CODE_READ` | [OS3 ticket code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/os3_ticket.py); [OS3 test source](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/tests/periphery/test_os3_ticket.py) |
+| 101 | Calibration | `UPSTREAM_DOC_READ` | [Education — doctrine/code/vision distinct](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [Security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 102 | Maturation | `UPSTREAM_DOC_READ` | [Education — doctrine/code/vision distinct](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [Security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
+| 103 | One continuity, many organs | `UPSTREAM_DOC_READ` | [Education — doctrine/code/vision distinct](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md); [Security doctrine](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/SECURITE.md) |
 
 | 104 | Calcul de la Balance Mathématique — retrait / réintégration | `DIRECT_READ` | [BAL](https://docs.google.com/document/d/1SKfhUnnGYKiOM9w8FDPavtEtwqDWb7HH/edit) |
 | 105 | Mode Shadow — apprentissage passif / non-interférence | `DIRECT_READ` | [CIN](https://docs.google.com/document/d/1iVwqEeo2TTa3Mv6wYFdJOq_8-mAfFpz7-AJ46iMxm7o/edit) |
 | 106 | Mémoire Fractale (FAM) / L'Expérience Cognitive Intégrée | `DIRECT_READ` | [FAM](https://docs.google.com/document/d/1SdeEtK9zpZoAgnyTSQtjbwTYO0cDG3_iFqgBof5kRPA/edit) |
 | 107 | Curriculum Forge | `DIRECT_READ` | [WFD](https://docs.google.com/document/d/1d5Gf5-r1d43wetqaANCzCff5CPyYckwTw9_AuWwicpg/edit) |
 
+| 108 | Deux thermodynamiques — physique vs cognition | `UPSTREAM_CODE_READ` | [F19 thermo code](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/physical_thermodynamics/contracts_v0.py); [F19 doc](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/PHYSICAL_THERMODYNAMICS_ADAPTER_V0.md) |
+
 ## Périmètre et précision
 
-- Les 107 lignes ci-dessus sont un **index de travail** et non 103 fiches entièrement certifiées.
+- Les 108 lignes ci-dessus sont un **index de travail** et non 103 fiches entièrement certifiées.
 - Quand une source existe sur Drive mais n'est ici qu'`INDEXED_NOT_VERIFIED`, il faut retrouver passage, date et attribution ; aucune conclusion d'implémentation n'en découle.
 - Les contrats/code actuels restent documentés séparément dans `docs/02_CONTRACTS.md`, `docs/13_F0_CROSS_AUDIT.md` et `docs/14_F0_LEARNING_LOOP_IMPLEMENTATION.md`. Ils ne constituent pas automatiquement une preuve de généalogie intellectuelle.
 - La matrice est volontairement conservatrice : une absence de lien dans cette passe n'est pas une absence historique du concept.
 - Les variantes conflictuelles et extraits examinés sont justifiés dans `docs/17_F0_SOURCE_RECONCILIATION.md`.
 
-**Comptage cette passe :** 22 DIRECT_READ, 5 DESCENDANT_HYPOTHESIS, 18 INDEXED_NOT_VERIFIED, 62 REVIEW_REQUIRED.
+**Comptage actuel :** 5 CROSS_AUDIT_REPORTED, 3 DESCENDANT_HYPOTHESIS, 29 DIRECT_READ, 1 EXTERNAL_DONOR_READ, 3 INDEXED_NOT_VERIFIED, 1 PARTIAL_NAME_COLLISION, 9 PROJECT_DOC_READ, 4 REVIEW_REQUIRED, 32 UPSTREAM_CODE_READ, 21 UPSTREAM_DOC_READ.
