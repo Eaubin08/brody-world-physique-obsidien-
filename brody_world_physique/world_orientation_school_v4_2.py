@@ -399,6 +399,32 @@ def pixel_score(reference:Image.Image,student:Image.Image)->dict:
             "pixel_iou":len(ref&pred)/len(ref|pred) if ref|pred else 1.0}
 
 
+def relation_score(target:Image.Image,student:Image.Image,policy:dict,goal:str)->dict:
+    """World-level relation metric, separate from raw raster coincidence.
+
+    It is evaluated AFTER the student image was written. It never changes the
+    committed raster or selection. Separate pixel_xor is retained unchanged.
+    """
+    teacher=classify_oriented(inspect_pixels(target),policy)
+    pupil=classify_oriented(inspect_pixels(student),policy)
+    return {
+        "intended_orientation":goal,
+        "student_candidate":pupil["candidate"],
+        "teacher_candidate":teacher["candidate"],
+        "student_recipient_reciprocal":pupil["reciprocal"],
+        "teacher_recipient_reciprocal":teacher["reciprocal"],
+        "both_match_direction": (
+            pupil.get("direction")==goal and teacher.get("direction")==goal
+        ),
+        "both_match_reciprocal": (
+            pupil.get("reciprocal_direction")==teacher.get("reciprocal_direction")
+            and pupil.get("reciprocal_direction") is not None
+        ),
+        "semantic_object_recognition_proven":False,
+        "canonical_world_state_proven":False,
+    }
+
+
 def _load_upstream(v3:Path,v4:Path,v41:Path)->dict:
     prior=verify_v41(v41,prior_v3=v3,prior_v4=v4)
     if (prior["exams_verified"]!=6 or
@@ -517,6 +543,7 @@ def build(out:str|Path,*,v3:str|Path,v4:str|Path,v41:str|Path)->dict:
         "teacher_ref":"images/composition_teacher_revealed.png",
         "teacher_sha256":truth_sha,
         "score":pixel_score(target,student),
+        "relation_score":relation_score(target,student,policy,goal),
         "student_saw_target_before_render":False,
         "role_masks_transformed_by_programmed_motor":True,
         "semantic_understanding_proven":False,
@@ -555,6 +582,7 @@ def build(out:str|Path,*,v3:str|Path,v4:str|Path,v41:str|Path)->dict:
             "reciprocal_predictions":sum(x["decision"]["reciprocal"] is not None for x in tests),
             "composition_pixel_xor":composition["score"]["pixel_xor"],
             "composition_better_than_blank":composition["score"]["better_than_blank"],
+            "composition_relation_match":composition["relation_score"]["both_match_direction"],
             "status":checked["status"],
             "native_memory_write_allowed":False}
 
@@ -659,6 +687,7 @@ def verify(folder:str|Path,*,v3:str|Path,v4:str|Path,v41:str|Path)->dict:
         "teacher_ref":"images/composition_teacher_revealed.png",
         "teacher_sha256":sha(teacher),
         "score":pixel_score(target,student),
+        "relation_score":relation_score(target,student,policy,goal),
         "student_saw_target_before_render":False,
         "role_masks_transformed_by_programmed_motor":True,
         "semantic_understanding_proven":False,
