@@ -52,6 +52,17 @@ jobs:
         run: |
           python -m examples.demo_preverbal_world_v0 --out build/preverbal-world-demo
           python -m brody_world_physique.preverbal_prediction_v0 --input build/preverbal-world-demo/source_measurements.json --out build/preverbal-world-demo/verified.json
+      - name: Install existing OpenCV decoder for 8-video experiential smoke
+        if: matrix.python-version == '3.11'
+        run: python -m pip install "opencv-python-headless>=4.8,<5"
+      - name: Generate eight videos and test cold one four experiences
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m examples.generate_experience_suite_v0 --out build/experience-demo/suite
+          python -m brody_world_physique.experiential_video_v0 --suite build/experience-demo/suite/suite.json --out build/experience-demo/cold --train-videos 0
+          python -m brody_world_physique.experiential_video_v0 --suite build/experience-demo/suite/suite.json --out build/experience-demo/one --train-videos 1
+          python -m brody_world_physique.experiential_video_v0 --suite build/experience-demo/suite/suite.json --out build/experience-demo/four --train-videos 4
+          python -c "import json,pathlib; p=pathlib.Path('build/experience-demo'); results={n:json.loads((p/n/'evaluation.json').read_text()) for n in ('cold','one','four')}; assert results['cold']['test_predictions']==0 and results['cold']['test_holds_unknown']>0; assert results['one']['training_candidate_transitions']>0 and results['four']['training_candidate_transitions']>results['one']['training_candidate_transitions']; assert all(r['test_memory_mutations']==0 and r['source_kind']=='SIMULATED' and not r['world_knowledge_validated'] for r in results.values()); print('EXPERIENTIAL_SUITE_COLD_ONE_FOUR_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
@@ -60,4 +71,5 @@ jobs:
           path: |
             build/brody-image-demo/
             build/preverbal-world-demo/
+            build/experience-demo/
           retention-days: 7
