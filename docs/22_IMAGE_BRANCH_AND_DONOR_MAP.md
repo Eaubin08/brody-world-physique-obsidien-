@@ -1,6 +1,6 @@
 # 22 — CARTE DE BRANCHEMENT : TES BRANCHES, NOS CONTRATS, LES MOTEURS OPEN SOURCE
 
-**Audit : 2026-10-08.** Vérification par lecture de fichiers des branches indiquées, et liens de donneurs externes officiels. **Présence dans GitHub ≠ déploiement PC ≠ moteur raccordé ≠ capacité évaluée.** Aucun composant tiers téléchargé durant cette passe.
+> **Mise à jour I1 (2026-10-08) :** l'utilisateur confirme que Qwen-VL fonctionne déjà avec Jarvis sur le PC fixe. Un [client local compatible Jarvis](../brody_world_physique/jarvis_vision_v0.py) est maintenant codé dans ce dépôt et testé par **service simulé**. La description JSON reste une candidate non vérifiée. **Connexion physique PC, admission F16, passage Binder/Brody et mémoire non testés/non raccordés.** Voir [26 — Qwen-VL existant](26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md). Aucun poids téléchargé.\n\n**Audit : 2026-10-08.** Vérification par lecture de fichiers des branches indiquées, et liens de donneurs externes officiels. **Présence dans GitHub ≠ déploiement PC ≠ moteur raccordé ≠ capacité évaluée.** Aucun composant tiers téléchargé durant cette passe.
 
 ## 1. Dépôts et branches retenus pour **Brody Image**
 
