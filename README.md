@@ -123,6 +123,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[BRODY_EXPERIENCE_MEMORY_V1 — observation, raster interpretation, actual chosen procedure/code fingerprints, executed gestures, mistakes, evaluation and deterministic memory replay](docs/36_BRODY_EXPERIENCE_MEMORY_V1_PROCEDURES_REPLAY.md)**
 - **[Drawing instruments V2 — learn which pencil/pen/nib tool to route by observed lesson feedback, with 0/1/9 episodes, unknown HOLD and sealed future-target trials](docs/37_ECOLE_INSTRUMENTS_SELECTION_EXPERIENTIELLE_V2.md)**
 - **[Drawing from memory V3 — immediately after hiding a new teacher image, after three intervening exercises, and new composition from prior strokes without a visible answer](docs/38_DESSIN_MEMOIRE_MODELE_CACHE_V3.md)**
+- **[V4 world-experience bridge — derive MMonde/F12-compatible observations, transformations, errors and candidate skills from V3 without importing SENS knowledge promotion](docs/39_BRODY_MONDE_EXPERIENCE_V4_BRIDGE.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -390,6 +391,34 @@ py -m brody_world_physique.drawing_memory_school_v3 --verify "build\drawing-hidd
 ```
 
 See [38 — V3 protocol and limitations](docs/38_DESSIN_MEMOIRE_MODELE_CACHE_V3.md).
+
+## World experience V4 — link drawing memory to world representation
+
+[`world_experience_bridge_v4.py`](brody_world_physique/world_experience_bridge_v4.py)
+reads **three verified V3 image episodes**, then builds a bounded candidate
+world view from both the SIMULATED teacher sources and the GENERATED student
+pictures. It instantiates the *existing* Brody F0
+`WorldTransformationV0`, `WorldStateDeltaV0` and
+`WorldExperienceCandidateV0` types, while providing structurally
+MMonde-style readonly observation views. It does **not** create a second
+WorldState ontology, make a real F16 image observation from generated art,
+execute the experimental SENS grammar or claim B8/B10 validation.
+
+It records relationships between source references and productions. A
+roof-above-base link is **derived from a known teacher composition task**,
+not discovered by Brody's visual perception. Immediate and delayed images
+share a SHA-identical teacher reference, which is **not** object identity
+tracking. Time is synthetic test sequence, not clock-based epistemic freshness.
+
+```powershell
+py -m brody_world_physique.world_experience_bridge_v4 --v3 "build\\existing-v3" --out "build\\world-candidate-v4.json"
+py -m brody_world_physique.world_experience_bridge_v4 --v3 "build\\existing-v3" --verify "build\\world-candidate-v4.json"
+```
+
+The entire graph and the input evidence are replay-verified. The output
+is not canonical memory, KX108 remains external and no Native Memory write
+or source-branch modification occurs.
+[Detailed source reconciliation and Windows instructions](docs/39_BRODY_MONDE_EXPERIENCE_V4_BRIDGE.md).
 
 ## Current milestone
 
