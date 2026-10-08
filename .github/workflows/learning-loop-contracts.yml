@@ -72,6 +72,11 @@ jobs:
           python -m brody_world_physique.world_transfer_probe_v1 --suite build/transfer-v1/suite/suite.json --out build/transfer-v1/raw --camera-mode raw_diagnostic
           python -m examples.reverso_future_preview_v1 --suite build/transfer-v1/suite/suite.json --forecasts build/transfer-v1/anchored/forecasts_precommitted.jsonl --out build/transfer-v1/reverso-preview --clip test_01.mp4
           python -c "import json,pathlib; r=pathlib.Path('build/transfer-v1'); a=json.loads((r/'anchored'/'evaluation.json').read_text()); b=json.loads((r/'raw'/'evaluation.json').read_text()); e={x['file']:x for x in a['measurements']}; assert len(e)==6 and a['test_memory_mutations']==0; assert all(not a[k] for k in ('world_knowledge_validated','physical_causality_proven','learned_3d_world')); assert e['test_01.mp4']['predictions']>0 and e['test_02.mp4']['predictions']>0; assert e['test_05.mp4']['holds_conflict']>=1; assert e['test_06.mp4']['missing_heldout']>=1; print('TRANSFER_PROBE_12_VIDEO_PASS')"
+      - name: Run image-first drawing school with candidate memory and replay
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m brody_world_physique.drawing_school_v0 --out build/drawing-school-v0
+          python -c "import json,pathlib; r=json.loads(pathlib.Path('build/drawing-school-v0/evaluation.json').read_text()); assert len(r['train_lessons'])==3 and len(r['exams'])==4; assert all(x['last_error_pixels']<=x['first_error_pixels'] for x in r['train_lessons']); assert all(x['after_feedback_error_pixels']<=x['candidate_replay_error_pixels'] for x in r['exams']); assert r['ledger_integrity']['verified_records']>3 and r['native_memory_write_allowed'] is False; print('DRAWING_SCHOOL_CANDIDATE_MEMORY_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
@@ -82,4 +87,5 @@ jobs:
             build/preverbal-world-demo/
             build/experience-demo/
             build/transfer-v1/
+            build/drawing-school-v0/
           retention-days: 7
