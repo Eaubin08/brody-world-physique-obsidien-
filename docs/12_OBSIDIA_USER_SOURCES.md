@@ -325,3 +325,86 @@ VisualFingerprint
 ```
 
 This keeps Brody World Physique Obsidia connected to the real Obsidia trajectory rather than turning into an isolated new project.
+
+
+---
+
+## K. Additional concept-definition sources
+
+### AVDR : Protocole Cognitif Auto-Évolutif pour une Intelligence Traçable et Interprétable
+
+Google Drive:  
+https://docs.google.com/document/d/1uDk3FC6a7aBGmGEul4mHzn9fMitc44xRSgPz2kxDzh4/edit?usp=drivesdk
+
+Role:
+
+- historical AVDR research definition;
+- reasoning trace / calibration / cognitive feedback;
+- useful for documenting AVDR name drift.
+
+Status: **HISTORICAL PRIMARY CONCEPT SOURCE**
+
+### AVDR — Revue Finale Réorganisée
+
+Google Drive:  
+https://docs.google.com/document/d/19AGt14N8c4AixJga32kkOBuMo2XviBxT/edit?usp=drivesdk
+
+Role:
+
+- consolidated historical AVDR publication material;
+- source for original scientific framing.
+
+Status: **HISTORICAL PRIMARY CONCEPT SOURCE**
+
+### Obsidia — Civilisation Cognitive Complète (Cartographie Master)
+
+Google Drive:  
+https://docs.google.com/document/d/14WUSNQPcZ4MsNP0lfpHT2PkfEJxiHhGvdcdNefqSbOE/edit?usp=drivesdk
+
+Role:
+
+- historical map of agents, cognitive protocols, memory, symbols and internal organization;
+- source for AVDR / OBAN / cognitive-era terminology.
+
+Status: **HISTORICAL CARTOGRAPHY SOURCE**
+
+### Formule du Savoir Obsidia et apprentissage full auto
+
+Google Drive:  
+https://docs.google.com/document/d/1bpOAmI8uIjbDYdDLBwkoxBDv5WYIMjv0/edit?usp=drivesdk
+
+Role:
+
+- historical learning curriculum;
+- knowledge -> invariants -> representation -> reciprocal analysis/synthesis -> evaluation;
+- source for "learn from human knowledge without starting from zero".
+
+Status: **HISTORICAL LEARNING SOURCE**
+
+### OBSIDIA V5 — Texte Continu — Edition Livre — 2026-08-18
+
+Google Drive:  
+https://docs.google.com/document/d/1emMNeq8Lgxckos1B2RoKSISXpTIZHlk4qOYfv7Q9yl8/edit?usp=drivesdk
+
+Role:
+
+- recent narrative architecture;
+- method of building the body before the total brain;
+- explicit maturity ladder:
+  `present != connected != causally useful != tested != proven != frozen != production`.
+
+Status: **RECENT MASTER NARRATIVE / NON-FREEZE CANON**
+
+### Constitution Obsidia X-108 — Protocoles et Lois Déterministes
+
+Google Drive:  
+https://docs.google.com/document/d/115BlgqjdgU8B1UQiryBvoBxYaXoZu_60uo19CHxEqxs/edit?usp=drivesdk
+
+Role:
+
+- historical source for Reflex/Emergency Gate;
+- temporal coherence;
+- non-action doctrine;
+- Veto Harmonique descriptions.
+
+Status: **HISTORICAL CONSTITUTION SOURCE — CURRENT RUNTIME MUST OVERRIDE WHERE DIFFERENT**
