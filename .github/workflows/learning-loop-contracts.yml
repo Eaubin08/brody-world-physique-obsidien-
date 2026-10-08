@@ -64,6 +64,13 @@ jobs:
           python -m brody_world_physique.experiential_video_v0 --suite build/experience-demo/suite/suite.json --out build/experience-demo/four --train-videos 4
           python -m examples.compare_experience_stages_v0 --cold build/experience-demo/cold/evaluation.json --one build/experience-demo/one/evaluation.json --many build/experience-demo/four/evaluation.json --out build/experience-demo/matched_comparison.json
           python -c "import json,pathlib; p=pathlib.Path('build/experience-demo'); results={n:json.loads((p/n/'evaluation.json').read_text()) for n in ('cold','one','four')}; assert results['cold']['test_predictions']==0 and results['cold']['test_holds_unknown']>0; assert results['one']['training_candidate_transitions']>0 and results['four']['training_candidate_transitions']>results['one']['training_candidate_transitions']; assert all(r['test_memory_mutations']==0 and r['source_kind']=='SIMULATED' and not r['world_knowledge_validated'] for r in results.values()); print('EXPERIENTIAL_SUITE_COLD_ONE_FOUR_PASS')"
+      - name: Generate novel transfer videos and assess withheld movement
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m examples.generate_transfer_probes_v1 --out build/transfer-v1/suite
+          python -m brody_world_physique.world_transfer_probe_v1 --suite build/transfer-v1/suite/suite.json --out build/transfer-v1/anchored --camera-mode anchored
+          python -m brody_world_physique.world_transfer_probe_v1 --suite build/transfer-v1/suite/suite.json --out build/transfer-v1/raw --camera-mode raw_diagnostic
+          python -c "import json,pathlib; r=pathlib.Path('build/transfer-v1'); a=json.loads((r/'anchored'/'evaluation.json').read_text()); b=json.loads((r/'raw'/'evaluation.json').read_text()); e={x['file']:x for x in a['measurements']}; assert len(e)==6 and a['test_memory_mutations']==0; assert all(not a[k] for k in ('world_knowledge_validated','physical_causality_proven','learned_3d_world')); assert e['test_01.mp4']['predictions']>0 and e['test_02.mp4']['predictions']>0; assert e['test_05.mp4']['holds_conflict']>=1; assert e['test_06.mp4']['missing_heldout']>=1; print('TRANSFER_PROBE_12_VIDEO_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
@@ -73,4 +80,5 @@ jobs:
             build/brody-image-demo/
             build/preverbal-world-demo/
             build/experience-demo/
+            build/transfer-v1/
           retention-days: 7
