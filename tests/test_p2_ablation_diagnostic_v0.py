@@ -37,7 +37,9 @@ class P2DiagnosticTest(unittest.TestCase):
                 report=p2.evaluate(suite,receipts)
                 self.assertEqual(report["p2_verdict"],"P2_INCONCLUSIVE")
                 self.assertEqual(report["summary"]["A1_linear_kinematics"]["mean_error_px"],0)
-                self.assertFalse(report["ablation_gain_proven"])\n                self.assertEqual(report["summary"]["A2_spatial_acceleration"]["mean_error_px"],0)\n                self.assertEqual(report["summary"]["A5_fixed_past_only_blend"]["mean_error_px"],0)
+                self.assertFalse(report["ablation_gain_proven"])
+                self.assertEqual(report["summary"]["A2_spatial_acceleration"]["mean_error_px"],0)
+                self.assertEqual(report["summary"]["A5_fixed_past_only_blend"]["mean_error_px"],0)
                 self.assertEqual(report["summary"]["A3_raster_only"]["mean_error_px"],0)
                 self.assertEqual(report["summary"]["A6_raster_spatial_fixed_fusion"]["mean_error_px"],0)
                 row["history_refs"][-1]=samples[-1].source_ref
