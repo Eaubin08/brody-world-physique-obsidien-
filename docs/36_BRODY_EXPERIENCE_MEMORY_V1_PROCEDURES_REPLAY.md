@@ -83,6 +83,20 @@ Les images que l'utilisateur a réellement fait traiter en V1 sur son PC révèl
 
 Dans le protocole d'intégration, **4 leçons + 6 examens = 10 épisodes**, et les échecs de rappel, notamment sur une croix et une courbe, restent des événements sourcés. Ce sont des exercices **avec l'image référence visible**, pas du dessin libre. Les 10 épisodes et leurs gestes font l'objet d'un rejeu indépendant via le lecteur vérificateur ; l'intégrité des SHA n'implique pas une compréhension du monde.
 
+**Résultat de la CI intégrale** — [GitHub Actions 37846975396](https://github.com/Eaubin08/brody-world-physique-obsidien-/actions/runs/37846975396) : **131 tests unitaires PASS** sur Python 3.11 et 3.12 ; sous Python 3.11, atelier et vérificateur de procédure exécutés de bout en bout :
+
+| Contrôle | Résultat réellement observé |
+|---|---:|
+| Épisodes dessin / examen réconciliés | **10 / 10** |
+| Révisions effectivement rejouées et scorées | **11** |
+| Événements du ledger JSONL contrôlés | **37** |
+| SHA des modules d'exécution et des sources | **PASS** |
+| Choix de compétence initiale recalculé | **PASS** |
+| Fichiers image reproduits par gestes | **PASS** |
+| Modification de Native Memory | **Aucune** |
+
+Les tests négatifs refusent une image-source modifiée, une image générée falsifiée, une opération modifiée, une référence de code invalide, une élévation de droits, une mémoire de compétences altérée et une entrée vide. Une chaîne locale SHA-256 **ne prouve pas une résistance à un attaquant qui peut recalculer tous les fichiers**.
+
 **Ce qui n'est pas implémenté ou validé ici :** compréhension du nom « triangle » sans professeur, auto-découverte d'un moteur vectoriel, apprentissage de la sélection de méthodes sans scoring fourni, apprentissage de poids de génération d'image, mémoire diachronique canonique, raisonnement d'OS Trad-IR intégré, créativité libre, composition peinture en couches, vue 360° et lois physiques.
 
 ## 5 — Compatibilité avec la vraie Native Memory d'Obsidia
