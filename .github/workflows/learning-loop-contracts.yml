@@ -30,6 +30,22 @@ permissions:
   contents: read
 
 jobs:
+  windows-path-and-instrument-compatibility:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Install Pillow for Windows
+        run: python -m pip install -r requirements-image.txt
+      - name: Windows Python 3.14 drawing memory contracts
+        run: python -m unittest discover -s tests -p "test_*.py" -q
+      - name: Windows Python 3.14 end-to-end instrument school
+        run: |
+          python -m brody_world_physique.instrument_school_v2 --out build/windows-instrument-school --training-lessons 9
+          python -m brody_world_physique.instrument_school_v2 --verify build/windows-instrument-school
+          python -c "import json,pathlib; p=pathlib.Path('build/windows-instrument-school'); r=json.loads((p/'evaluation.json').read_text()); assert r['training_lessons']==9 and r['chosen_count']==3 and r['hold_count']==1; assert (p/'instrument_art'/'exam_01_prediction.png').is_file(); print('WINDOWS_314_INSTRUMENT_MEMORY_PASS')"
   contracts-and-docs:
     runs-on: ubuntu-latest
     strategy:
