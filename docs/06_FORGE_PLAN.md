@@ -1,5 +1,7 @@
 # 06 — Forge Plan F0 -> F10
 
+> **Archived sequencing / 2026-10-08 priority change:** The product focus is **Brody image learning + image generation**, not completion of an encyclopedic Obsidia audit. See [21_BRODY_IMAGE_MASTER_PLAN.md](21_BRODY_IMAGE_MASTER_PLAN.md) for the active I0/I1/G1/IG2 image-first gates and [22_IMAGE_BRANCH_AND_DONOR_MAP.md](22_IMAGE_BRANCH_AND_DONOR_MAP.md) for verified own-repo seams and donor placement. In particular first generation **G1 is brought forward alongside perception I1**, rather than blocked behind full Dreaming and memory integration. This historical F0–F10 schedule remains here as a source, not the operative installation order.
+
 ## F0 — Contract and source audit
 
 **No model installation.**
