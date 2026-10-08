@@ -488,3 +488,42 @@ Identified by Drive metadata as *L'Algorithme Shazam Cognitif et la Matrice des 
 ### Duplicate-file caution
 
 The two Drive documents already indexed in section A — *L’Éveil de l’OS Cognitif* and *L’Architecture Organique et Procédurale de l’OS Cognitif* — yielded identical returned text in the 2026-10-08 audit. Retain both archival references but **do not count them as independent evidence** without version history / authorship verification.
+
+---
+
+## M. F0 second pass — corrections d'attribution et de provenance (2026-10-08)
+
+**Ce registre contient aussi des sources externes : il ne revendique pas leur création par l'utilisateur.** Les fichiers Drive avec conversation IA mélangent propositions utilisateur, explications générées, réponses et parfois références citées ; l'attribution doit être vérifiée message par message.
+
+### ADeLe : source de recherche externe, pas création Obsidia
+
+- Source académique : https://kinds-of-intelligence-cfi.github.io/ADELE/
+- Rapport Microsoft Research (2025) : https://www.microsoft.com/en-us/research/blog/predicting-and-explaining-ai-model-performance-a-new-approach-to-evaluation/
+- Publication Microsoft Research (2026) : https://www.microsoft.com/en-us/research/blog/adele-predicting-and-explaining-ai-performance-across-tasks/
+- Repository de recherche : https://github.com/Kinds-of-Intelligence-CFI/ADeLe-AIEvaluation
+- Proposition Obsidia de rapprochement ADeLe × AVDR : https://docs.google.com/document/d/15pZLOlYVu2POMMbU6nztWlAOIaGlnhjIa5-X9q4dtE4/edit
+
+**Statut : EXTERNAL DONOR + HISTORICAL OBSIDIA COMPOSITION IDEA.** `A2DR` est mentionné séparément ici : https://docs.google.com/document/d/1eHi6LmYA-1XG94u_jau1f8vqv7Zgy76dzI1vxz-cGss/edit — **source externe originale / définition exacte non retrouvées**.
+
+### ERA : deux significations historiquement attestées
+
+- Carte B9 ERA, atelier temporaire d'agents : https://docs.google.com/document/d/1Que8iatRKSCtGwuFaIHAOFQHGU4_aMn4EKRydYktfQU/edit
+- Reverse OS, ratio de balance cognitive : https://docs.google.com/document/d/1L_LG0UE4vyLn-iXF0pvjc94owZCI3McF2SWJo3TG8nY/edit
+- Actuel : https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_cognitive_modules_adapter.py (`ERA` non implémenté dans le snapshot).
+
+**Statut : NAME_COLLISION / DESIGN_ONLY CURRENT.**
+
+### F19 : thermodynamique physique distincte de thermodynamique cognitive
+
+- Spécification F19 : https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/PHYSICAL_THERMODYNAMICS_ADAPTER_V0.md
+- Code F19 : https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/physical_thermodynamics/contracts_v0.py
+
+**Statut : CODE + DOC SOURCE READ ; PAS DE THÉORÈME PHYSIQUE UNIVERSEL.**
+
+### Branches de code sources retrouvées
+
+- SENS — expérimental : https://github.com/Eaubin08/obsidia-x108-proofs/tree/85d55e3538f1b049f2f9eb7f12892928187d3de4/app/semantic/lattice
+- GPS — public : https://github.com/Eaubin08/obsidia-gps-defense-/tree/d1221fce6914274f7b0c445a829739367b0c6abb/evidence-pipeline/public_domain_bridge
+- X108 / MMonde — branche R6 source : https://github.com/Eaubin08/obsidia-x108-proofs/tree/5b9b72452cff7a560db992e57a43fc700dacd923/periphery
+
+**Définitions et distinctions exactes :** [19_F0_SOURCE_TRACE_BATCH2.md](19_F0_SOURCE_TRACE_BATCH2.md), [15_CONCEPT_ATLAS.md](15_CONCEPT_ATLAS.md), [18_CONCEPT_SOURCE_MATRIX.md](18_CONCEPT_SOURCE_MATRIX.md). Aucune écriture runtime ou promotion mémoire n'a été faite.
