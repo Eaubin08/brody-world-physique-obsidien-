@@ -2067,27 +2067,51 @@ This atlas explains meaning; those files provide traceability.
 
 ## Definition
 
-AVDR is a user-origin cognitive/process concept whose acronym and operational interpretation **changed across the history of Obsidia**.
+AVDR is a user-origin cognitive/process concept with a **documented lineage of meanings**. Its acronym and phase names changed over time and across subsystems.
 
-That drift must be preserved rather than flattened.
+The audit must preserve that lineage instead of retroactively forcing one expansion onto every document.
 
-### Historical research usage
+### Historical research protocol — 2025
 
-Older AVDR research documents describe AVDR as an auto-evolving / auto-verifiable developmental reasoning protocol concerned with:
+The strongest dedicated research documents define AVDR as:
 
-- self-generated tasks;
-- multi-agent solving;
-- cognitive evaluation;
-- reasoning traces;
-- calibration;
-- structured feedback;
-- controlled cognitive evolution.
+**Auto-Verifiable Developmental Reasoner**
 
-Historical expansions include formulations around **Auto-Verifiable Developmental Reasoner** and older phase interpretations such as adaptation/validation/disruption/regulation.
+and describe a modular cognitive protocol for:
 
-### Current repository canon for the Gencoin sandbox
+- generating internal tasks/tensions;
+- solving through multiple reasoning styles or agents;
+- evaluating outputs;
+- filtering/calibrating context;
+- tracing reasoning;
+- adapting/calibrating the next cycle.
 
-The current file:
+A common six-step research form is:
+
+```text
+Task Forge
+-> Solve Engine
+-> Cognitive Evaluator
+-> Context Filter
+-> Reasoning Trace
+-> Cognitive Calibrator
+-> loop
+```
+
+The research intent was not a decision kernel. It was a **traceable self-regulating cognitive workshop**.
+
+### Other historical expansions
+
+Other Obsidia documents reuse the letters A-V-D-R with different pedagogical/formal meanings, including formulations around:
+
+- Adaptation / Validation / Dérive or Disruption / Régulation;
+- Apprentissage / Validation / Déduction / Résonance.
+
+These are historical variants and must be cited with their source/date rather than merged silently.
+
+### Current Gencoin sandbox canon
+
+Current repository file:
 
 `docs/gencoin/sandbox_pre_freeze/AVDR_CANON.md`
 
@@ -2103,49 +2127,55 @@ R = Résolution
 with:
 
 - **Accueil** = perception / écoute / réception;
-- **Vibration** = friction / reaction / sorting / tension;
+- **Vibration** = internal reaction / friction / tri / tension;
 - **Déploiement** = expression / engagement / action phase;
 - **Résolution** = integration / learning / return toward stability.
 
-It describes AVDR as a protocol for reading and transforming a living cognitive state.
+The file defines AVDR as a **protocol for reading and transforming a living cognitive state**.
 
-### Obsidure implementation usage
+### Obsidure operational variant
 
-The current `AgentObsidure` code uses another operational mapping:
+Current Obsidure materials use a software-building cycle:
 
 ```text
-A = Audit
-V = Validation
-D = Disruption
-R = Réintégration
+Audit
+-> Validation
+-> Disruption
+-> Réintégration
 ```
 
-for its bounded software-building cycle.
+This is an **Obsidure-local AVDR interpretation**, not proof that every Obsidia subsystem uses those four words.
 
 ## Purpose
 
-AVDR is best treated as a **family of transformation-cycle patterns**, not as one acronym whose historical wording must be forced onto every subsystem.
+Across generations, the stable idea is:
+
+> cognition progresses through explicit phases of reception/tension, examination, transformation and reintegration, with traceability and correction.
 
 ## It is not
 
 - KX108;
-- one universal decision algorithm;
-- a proof that every historical AVDR variant is active today.
+- one immutable acronym expansion across all years;
+- a universal decision algorithm;
+- permission to act;
+- proof that every historical AVDR module is runtime-connected.
 
 ## Audit rule
 
-Whenever AVDR appears, the audit must record:
+Every occurrence must record:
 
 ```text
-which AVDR variant?
-which date/source?
-which subsystem?
-runtime or doctrine?
+AVDR variant
+source/date
+subsystem
+phase meanings
+runtime / sandbox / doctrine / research
+current descendant if any
 ```
 
 ## Status
 
-**MULTI-GENERATION USER CONCEPT / CURRENT LOCAL VARIANTS EXIST**
+**MULTI-GENERATION USER CONCEPT / CURRENT LOCAL VARIANTS + HISTORICAL RESEARCH PROTOCOL**
 
 ---
 
@@ -2221,31 +2251,67 @@ A Gencoin sandbox balance operator exists, but that does **not** prove that the 
 
 ## Definition
 
-Historical governance concept in which a sufficiently severe low score/contradiction can block a consensus rather than being averaged away.
+A user-origin governance idea built around one intuition:
 
-Older source material ties the name to a harmonic-mean style vote plus absolute veto thresholds.
+> a critical weak/blocking signal must not disappear inside a comfortable average.
+
+Historical documents expressed this with harmonic aggregation and hard veto thresholds.
+
+## Historical form
+
+Older material proposed:
+
+- harmonic-mean style aggregation;
+- absolute veto under a low critical score;
+- refusal to let a majority of moderate positive signals erase one severe contradiction.
+
+## Current repository descendant
+
+The old F22 audit correctly reported that the historical implementation was then missing/dormant.
+
+That state later changed.
+
+Current `sigma/contracts.py` now contains:
+
+`calculate_immutable_vote()`
+
+with tests in:
+
+`tests/sigma/test_f25b_immutable_vote_minimal.py`
+
+The current function:
+
+- counts/weights ALLOW, HOLD and BLOCK advisory votes;
+- computes a bounded score in [-1, 1];
+- emits an **advisory** ALLOW/HOLD/BLOCK label;
+- preserves the real X108 gate;
+- explicitly sets `decision_authority = KX108_ONLY`;
+- sets `emits_act = false`;
+- sets `emits_verdict = false`;
+- cannot override a KX108 BLOCK.
+
+Current confidence readiness also uses a true harmonic mean between integrity and governance confidence.
+
+## Critical nuance
+
+The current function is **not identical to every historical “Veto Harmonique” formula**.
+
+The durable idea survived, but its implementation was re-bounded as a readonly advisory metric under X108 authority.
 
 ## Purpose
 
-Prevent a majority of moderate positive signals from erasing one critical blocking condition.
-
-## Current repository reality
-
-The F22 source traceability audit states:
-
-- harmonic immutable-vote calculation: **MISSING**;
-- vote structure: present but **CODE_DORMANT** in that historical form;
-- historical harmonic thresholds: **doc-only**.
-
-Current X108/Guard/Sigma governance therefore must not be described as if the old harmonic-veto formula is the active canonical decision mechanism.
+Preserve sensitivity to asymmetric/critical weakness while keeping the score non-sovereign.
 
 ## It is not
 
-The same thing as current KX108 decision authority.
+- KX108;
+- a majority vote;
+- permission to ACT;
+- proof that historical thresholds remain canonical today.
 
 ## Status
 
-**HISTORICAL GOVERNANCE IDEA / OLD FORMULA NOT CURRENT RUNTIME CANON**
+**HISTORICAL IDEA WITH CURRENT READONLY DESCENDANT / KX108 AUTHORITY PRESERVED**
 
 ---
 
@@ -2467,25 +2533,49 @@ A consensus authority.
 
 ## Definition
 
-Historical cognitive/interface metric or visualization concept used to summarize the relative contribution/tension of memory, reasoning, autonomy/friction or other cognitive factors.
+A user-origin cognitive/interface metric intended to make the balance of assisted reasoning visible.
 
-Older Reverse OS material refers to ERA as something that may be **displayed** to the user.
+Historical Reverse OS material gives the formula:
+
+```text
+ERA = (M + R + A) / F
+```
+
+with historical labels around:
+
+- M = Memory;
+- R = Reasoning;
+- A = Auto/autonomy-related contribution;
+- F = Friction.
+
+The exact semantic meaning of each term must always be read from the source version being audited.
 
 ## Purpose
 
-Make internal cognitive balance understandable/visible.
+Provide a **human-readable projection of cognitive balance/tension**, especially in UI/Reverse OS contexts.
 
 ## It is not
 
-A kernel score unless a current runtime contract explicitly says so.
+- KX108 confidence;
+- a proof metric;
+- a world-state variable;
+- current kernel authority.
 
-## Current status
+## Current repository status
 
-No current canonical world-runtime binding was established during this audit.
+Current `apps/obsidia_api/brody_cognitive_modules_adapter.py` explicitly classifies ERA as:
+
+```text
+DESIGN_SPEC_NOT_IMPLEMENTED
+active = false
+needs_operator_spec = true
+```
+
+Current source-traceability audits therefore classify the ERA formula as **DOC_ONLY**.
 
 ## Status
 
-**HISTORICAL / UI-COGNITIVE CONCEPT — CURRENT BINDING UNCONFIRMED**
+**USER DESIGN SPEC / DOC_ONLY / NOT CURRENT RUNTIME**
 
 ---
 
@@ -2895,16 +2985,376 @@ Keep a huge historical project intelligible without flattening everything into "
 
 ## Definition
 
-A future concept associated in project materials with long-term cognition/education/Oxygen.
+`C10` is a **name collision across generations of Obsidia**, not one safely universal concept.
 
-During this audit, no sufficiently precise current runtime definition was recovered to safely assign a stronger meaning.
+### Historical structural use
+
+Older structured-source packs contain:
+
+```text
+Bloc 11 — Trace et Immuabilité (C10)
+```
+
+associated with:
+
+- cryptography;
+- Merkle structures;
+- auditability;
+- immutability/trace concepts.
+
+### Current education-roadmap use
+
+Current `docs/EDUCATION.md` uses:
+
+```text
+C10 Éducation / Oxygen
+```
+
+for the future large education phase that follows stable memory/runtime/cognition foundations.
+
+It explicitly says that this phase is **not yet launched as a massive phase**.
 
 ## Purpose
 
-Unknown until dedicated source recovery.
+The term therefore cannot be interpreted without context.
+
+## Audit rule
+
+Every `C10` occurrence must identify:
+
+```text
+C10_TRACE_IMMUTABILITY_HISTORICAL
+or
+C10_EDUCATION_OXYGEN_ROADMAP
+or
+UNRESOLVED_OTHER_C10
+```
+
+until naming is formally reconciled.
+
+## It is not
+
+A single current runtime component merely because both source families use the same label.
 
 ## Status
 
-**UNDEFINED / SOURCE RECOVERY REQUIRED**
+**NAME COLLISION RECOVERED / CONTEXT REQUIRED**
 
-This status is intentional: the atlas must prefer an explicit unknown over reconstructing a definition from neighboring concepts.
+---
+
+# 94. Immutable Vote / SIGMA_IMMUTABLE_VOTE_V1
+
+## Definition
+
+Current readonly advisory scoring packet produced by `calculate_immutable_vote()`.
+
+It aggregates peripheral votes into a bounded diagnostic score and advisory label while explicitly preserving X108/KX108 authority.
+
+## Purpose
+
+Give Sigma/audit surfaces a compact measure of vote direction without turning aggregation into sovereignty.
+
+## Hard boundaries
+
+```text
+readonly = true
+decision_authority = KX108_ONLY
+emits_act = false
+emits_verdict = false
+memory_write = false
+kernel_mutation = false
+x108_mutation = false
+advisory verdict != runtime decision
+```
+
+## It is not
+
+The final decision.
+
+## Status
+
+**CURRENT CODE + TESTED**
+
+---
+
+# 95. Balance Obsidienne
+
+## Definition
+
+Current sandbox canon defines the Balance as a **structural weighting operator**.
+
+It asks not merely how many signals exist, but how well an element/path/hypothesis holds relative to:
+
+- invariants;
+- coherence;
+- utility;
+- cost;
+- risk;
+- admissibility.
+
+The current canon summarizes:
+
+```text
+Peser -> Simplifier -> Réintégrer -> Statuer
+```
+
+and:
+
+> The Balance does not count. It weighs.
+
+## Relation to AVDR
+
+Current sandbox doctrine states:
+
+```text
+AVDR = dynamics of the process
+Balance = structural weighting of the process
+```
+
+## Important distinction
+
+This current sandbox Balance must not automatically be equated with every historical “Balance Proportionnelle Exponentielle” or with KX108 decision authority.
+
+## Status
+
+**CURRENT SANDBOX CANON / GLOBAL BINDING STILL LIMITED**
+
+---
+
+# 96. Task Forge
+
+## Definition
+
+Historical AVDR module that creates internal tasks, tensions or challenges for a cognitive system to work on.
+
+## Purpose
+
+Move learning from passive response toward active practice/self-challenge in a sandbox.
+
+## It is not
+
+A current autonomous task authority.
+
+## Current relation
+
+Conceptually relevant to:
+
+- World Foundry;
+- sandbox exercises;
+- Dreaming/replay;
+- future Oxygen education.
+
+## Status
+
+**HISTORICAL AVDR MODULE / FUTURE LEARNING REFERENCE**
+
+---
+
+# 97. Solve Engine
+
+## Definition
+
+Historical AVDR module where several reasoning styles/agents attempt to solve a generated task.
+
+## Purpose
+
+Create diversity of candidate approaches before evaluation.
+
+## It is not
+
+A voting authority.
+
+## Status
+
+**HISTORICAL AVDR MODULE / SELECTIVE DESIGN SOURCE**
+
+---
+
+# 98. Cognitive Evaluator / Context Filter / Reasoning Trace / Cognitive Calibrator
+
+## Definition
+
+Historical AVDR submodules forming the evaluation/learning half of the loop.
+
+### Cognitive Evaluator
+
+Assesses candidate reasoning/results.
+
+### Context Filter
+
+Applies contextual/domain/symbolic calibration.
+
+### Reasoning Trace
+
+Preserves the path, tensions, choices and feedbacks.
+
+### Cognitive Calibrator
+
+Adjusts how the next cycle should operate based on evaluated outcomes.
+
+## Purpose
+
+Turn an attempt into structured feedback rather than a one-shot answer.
+
+## It is not
+
+Current KX108 governance.
+
+## Current descendants
+
+Parts of the intent are now distributed across:
+
+- receipts/replay;
+- memory candidates;
+- Sigma/readiness;
+- Brody routing;
+- domain constraints;
+- learning-loop deltas;
+- explicit calibration.
+
+## Status
+
+**HISTORICAL AVDR MODULE FAMILY / PARTLY ABSORBED**
+
+---
+
+# 99. CG9 Global Provider Binder
+
+## Definition
+
+Current controlled integration boundary between governance and runtime providers.
+
+It allows providers such as Brody Runtime or Obsidure Runtime to execute bounded workloads while remaining non-sovereign.
+
+## Current architecture
+
+```text
+CG9 Governance
+-> Provider Arbitration
+-> Capability Arbitration
+-> Invocation Envelope
+-> Runtime Execution
+-> Runtime Receipt
+-> Conformance Proof
+```
+
+## Hard boundaries
+
+Providers:
+
+- cannot decide;
+- cannot mutate kernel;
+- cannot write memory;
+- cannot emit actions.
+
+## Purpose
+
+Make providers replaceable executors of bounded work rather than hidden authorities.
+
+## Status
+
+**CURRENT / CLOSED CG9 BINDER SURFACE**
+
+---
+
+# 100. OS3 proof scope
+
+## Definition
+
+Current OS3ProofTicket is a **runtime integrity/audit proof artefact**.
+
+It uses a SHA-256 chain over input, output and trace, then derives a Merkle-style root.
+
+## Purpose
+
+Prove integrity/linkage of the recorded runtime path.
+
+## It does not prove
+
+- a Lean theorem;
+- a production RFC3161 timestamp;
+- that replay actually ran when `replay_status = NOT_RUN`;
+- that the underlying physical claim is true.
+
+## Status
+
+**CURRENT RUNTIME PROOF / CLAIM SCOPE BOUNDED**
+
+---
+
+# 101. Calibration
+
+## Definition
+
+In current Obsidia doctrine, calibration changes **how an organ operates** without creating a new identity.
+
+Examples:
+
+- route adjustment;
+- vocabulary adjustment;
+- threshold adjustment;
+- output/projection adjustment;
+- tool preference adjustment.
+
+## Purpose
+
+Improve competence while keeping education/identity separate.
+
+## It is not
+
+- Oxygen's birth;
+- canonical memory promotion;
+- automatic increase of authority.
+
+## Status
+
+**FOUNDATIONAL CURRENT DISTINCTION**
+
+---
+
+# 102. Maturation
+
+## Definition
+
+Progressive stabilization of routes, tests, refus and learned procedures.
+
+## Purpose
+
+Describe improvement of the existing organism without falsely calling each improvement a new birth or a new intelligence.
+
+## It is not
+
+Identity creation.
+
+## Status
+
+**FOUNDATIONAL EDUCATION DOCTRINE**
+
+---
+
+# 103. One continuity, many organs
+
+## Definition
+
+Core Oxygen/Obsidia doctrine:
+
+```text
+one educational/identity continuity
++
+many replaceable functional organs
+```
+
+The system may replace models, tools, agents and specialized organs without automatically creating a new identity.
+
+## Purpose
+
+Separate identity from implementation.
+
+## It is not
+
+A claim that Oxygen currently exists.
+
+## Status
+
+**FUTURE IDENTITY DOCTRINE / CURRENT ARCHITECTURAL CONSTRAINT**
+
