@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from .preverbal_prediction_v0 import (
-    PositionMeasurementV0, evaluate_with_heldout, predict_from_three,
+    SOURCE_KINDS, PositionMeasurementV0, evaluate_with_heldout, predict_from_three,
 )
 
 
@@ -57,7 +57,7 @@ def choose_frame_indices(
 def make_measurements(
     indices: tuple[int, int, int, int] | tuple[int, int, int],
     points: Iterable[tuple[float, float]],
-    *, fps: float, video_hash: str, entity_ref: str
+    *, fps: float, video_hash: str, entity_ref: str, source_kind: str
 ) -> tuple[PositionMeasurementV0, ...]:
     """Create candidate observations from a user's manual clicks.
 
@@ -73,6 +73,8 @@ def make_measurements(
         raise ValueError("valid SHA256 of source video required")
     if not entity_ref or not entity_ref.strip():
         raise ValueError("entity_ref is required")
+    if source_kind not in SOURCE_KINDS:
+        raise ValueError("source_kind must be explicitly classified")
     if tuple(indices) != tuple(sorted(set(indices))):
         raise ValueError("frame indices must be distinct and increasing")
     samples = []
@@ -89,7 +91,7 @@ def make_measurements(
             frame_ref=f"camera-image-plane:sha256:{video_hash}",
             time_s=idx / fps,
             x=float(x), y=float(y), unit="px",
-            source_kind="OBSERVED_CLAIM",
+            source_kind=source_kind,
             uncertainty_refs=("MANUAL_POINT_APPROXIMATE", "VIDEO_FPS_METADATA_UNVERIFIED",
                               "CAMERA_MOTION_UNVERIFIED", "OBJECT_IDENTITY_USER_ASSERTED"),
         ))
@@ -130,6 +132,7 @@ def annotate_video(
     start_seconds: float = 0,
     interval_seconds: float = 0.2,
     entity_ref: str = "user-selected-object-01",
+    source_kind: str,
 ) -> dict[str, Any]:
     """Manual experiment; no model weights, automatic segmentation, or cloud."""
     try:
@@ -167,7 +170,8 @@ def annotate_video(
             for j, index in enumerate(selected[:3])
         ]
         history = make_measurements(
-            selected[:3], points, fps=fps, video_hash=source_hash, entity_ref=entity_ref
+            selected[:3], points, fps=fps, video_hash=source_hash,
+            entity_ref=entity_ref, source_kind=source_kind
         )
         forecast = predict_from_three(history, selected[3] / fps)
         destination.mkdir(parents=True, exist_ok=True)
@@ -182,12 +186,14 @@ def annotate_video(
         )
         all_samples = make_measurements(
             selected, points + [heldout_xy], fps=fps,
-            video_hash=source_hash, entity_ref=entity_ref
+            video_hash=source_hash, entity_ref=entity_ref, source_kind=source_kind
         )
         evaluation = evaluate_with_heldout(forecast, all_samples[-1])
         metadata = {
             "schema_version": "BRODY_MANUAL_VIDEO_ANNOTATION_V0",
             "source_video_sha256": source_hash,
+            "source_kind_declared_by_user": source_kind,
+            "source_kind_independently_verified": False,
             "source_video_bytes": source.stat().st_size,
             "fps_from_decoder_unverified": fps,
             "frame_indices": selected,
@@ -231,10 +237,13 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--start-seconds", type=float, default=0)
     parser.add_argument("--interval-seconds", type=float, default=0.2)
     parser.add_argument("--entity-ref", default="user-selected-object-01")
+    parser.add_argument("--source-kind", choices=sorted(SOURCE_KINDS), required=True,
+                        help="Required provenance declaration; SIMULATED for our test video")
     args = parser.parse_args(argv)
     result = annotate_video(
         args.video, args.out, start_seconds=args.start_seconds,
         interval_seconds=args.interval_seconds, entity_ref=args.entity_ref,
+        source_kind=args.source_kind,
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return 0
