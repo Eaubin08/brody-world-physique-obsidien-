@@ -2,7 +2,7 @@
 
 > **Mise à jour I1 (2026-10-08) :** l'utilisateur confirme que Qwen-VL fonctionne déjà avec Jarvis sur le PC fixe. Un [client local compatible Jarvis](../brody_world_physique/jarvis_vision_v0.py) est maintenant codé dans ce dépôt et testé par **service simulé**. La description JSON reste une candidate non vérifiée. **Connexion physique PC, admission F16, passage Binder/Brody et mémoire non testés/non raccordés.** Voir [26 — Qwen-VL existant](26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md). Aucun poids téléchargé.\n\n**Date :** 2026-10-08 · **Position :** document directeur pour ce dépôt · **État :** DESIGN / GATES NON GELÉS · **Aucune installation modèle ni modification des autres dépôts.**
 
-## 1. Mission, objet du projet
+> **Clarification directrice 2026-10-08 — expérience avant les mots :** l'apprentissage de Brody ne doit pas dépendre d'abord d'une description linguistique. Le système doit apprendre à **anticiper des changements du monde** à partir d'observations situées, confronter ses prédictions à l'expérience, transférer les régularités dans d'autres contextes et distinguer **compréhension / savoir / vérité / confiance**. Réutiliser les moteurs de décodage de pixels, F16, MMonde, F12 et les capteurs physiques/GPS pertinents au lieu de reconstruire leurs routes. L'analogie des 34 arbres est une piste d'organisation des relations physiques, non un runtime physique existant. **Spécification complète et tests cibles : [28 — Apprentissage préverbal et monde physique](28_APPRENTISSAGE_PREVERBAL_MONDE_PHYSIQUE.md).** Le succès Reverso `RGBA` n'est pas une preuve de physique apprise.\n\n## 1. Mission, objet du projet
 
 Le but principal est de faire évoluer **Brody Image** :
 
