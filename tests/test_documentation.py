@@ -13,7 +13,7 @@ DOCS = ROOT / "docs"
 
 class BrodyImageDocumentationTests(TestCase):
     def test_image_master_plan_and_branch_map_exist(self):
-        for name in ("21_BRODY_IMAGE_MASTER_PLAN.md", "22_IMAGE_BRANCH_AND_DONOR_MAP.md"):
+        for name in ("21_BRODY_IMAGE_MASTER_PLAN.md", "22_IMAGE_BRANCH_AND_DONOR_MAP.md", "23_BRODY_IMAGE_LEARNING_TRACEABILITY.md"):
             with self.subTest(name=name):
                 self.assertTrue((DOCS / name).is_file(), f"Missing {name}")
 
@@ -22,6 +22,15 @@ class BrodyImageDocumentationTests(TestCase):
         self.assertIn("BRODY IMAGE", readme)
         self.assertIn("21_BRODY_IMAGE_MASTER_PLAN.md", readme)
         self.assertIn("22_IMAGE_BRANCH_AND_DONOR_MAP.md", readme)
+        self.assertIn("23_BRODY_IMAGE_LEARNING_TRACEABILITY.md", readme)
+
+    def test_learning_traceability_preserves_source_boundaries(self):
+        matrix = (DOCS / "23_BRODY_IMAGE_LEARNING_TRACEABILITY.md").read_text(encoding="utf-8")
+        for required in ("U — formulation utilisateur", "A — élaboration de l'assistant",
+                         "Fibonacci", "T-R1", "T-G1", "T-M1",
+                         "GeneratedArtifactV0", "UNKNOWN", "pas un F0 gelé"):
+            with self.subTest(required=required):
+                self.assertIn(required, matrix)
 
     def test_atlas_keeps_numbered_concepts(self):
         atlas = (DOCS / "15_CONCEPT_ATLAS.md").read_text(encoding="utf-8")
