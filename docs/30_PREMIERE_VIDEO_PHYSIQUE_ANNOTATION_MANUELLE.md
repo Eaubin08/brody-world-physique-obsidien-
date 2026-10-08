@@ -1,6 +1,6 @@
 # 30 — Première vidéo observée : quatre instants, première prévision précommittée
 
-**Statut 2026-10-08 :** entrée vidéo OpenCV + annotation utilisateur implémentée et tests avec faux décodeur ; **AUCUNE vidéo physique réelle n'a encore été testée par le projet**. Les nouvelles données sont `OBSERVED_CLAIM`, non vérité admise automatiquement. Aucun modèle neuf ni changement au kernel.
+**Statut 2026-10-08 :** entrée vidéo OpenCV + annotation utilisateur implémentée et tests avec faux décodeur ; **AUCUNE vidéo physique réelle n'a encore été testée par le projet**. La provenance doit maintenant être indiquée explicitement via `--source-kind` : `SIMULATED` pour la vidéo de test, `GENERATED` pour un rendu génératif, `OBSERVED_CLAIM` pour une prise de vue prétendue réelle, qui n'est pas automatiquement certifiée. Aucun modèle neuf ni changement au kernel.
 
 ## Raison et origine
 
@@ -51,11 +51,11 @@ $d = New-Object System.Windows.Forms.OpenFileDialog
 $d.Filter = "Vidéos|*.mp4;*.avi;*.mov;*.mkv"
 if ($d.ShowDialog() -eq "OK") {
   $out = "build\\video-reelle-$(Get-Date -Format yyyyMMdd-HHmmss)"
-  py -m brody_world_physique.video_observation_v0 --video $d.FileName --out $out --interval-seconds 0.1
+  py -m brody_world_physique.video_observation_v0 --video $d.FileName --out $out --interval-seconds 0.1 --source-kind SIMULATED
 }
 ```
 
-Une fenêtre OpenCV s'ouvre **quatre fois** : cliquer l'objet. `Échap` annule. Si la balle n'apparaît pas sur la frame 1, relancer avec `--start-seconds 0.5` (ou autre valeur). Si les frames se répètent ou sont trop rapprochées, ajuster `--interval-seconds` en fonction de la vidéo. Le fichier original n'est ni modifié ni publié.
+Une fenêtre OpenCV s'ouvre **quatre fois** : cliquer le centre de la balle, vérifier la croix, puis appuyer sur **Entrée**. `R` réinitialise la sélection, `Échap` annule. Si l'on choisit une vidéo physique personnelle au lieu de la simulation, remplacer `--source-kind SIMULATED` par `--source-kind OBSERVED_CLAIM` ; cela ne prouve pas l'authenticité de la vidéo. Si la balle n'apparaît pas sur la frame 1, relancer avec `--start-seconds 0.5` (ou autre valeur). Si les frames se répètent ou sont trop rapprochées, ajuster `--interval-seconds` en fonction de la vidéo. Le fichier original n'est ni modifié ni publié.
 
 **Interprétation honnête :** le module ne sait pas dire seul « ceci est une balle », ne mesure ni le GPS, ni la force, ni le vent. Il prédit seulement une position dans le plan image `px` à partir d'annotations humaines. C'est une observation *candidate* ; on doit encore auditer mouvement de caméra, erreur d'annotation, temps FPS, occlusions et identité du sujet.
 
@@ -68,3 +68,7 @@ Une fenêtre OpenCV s'ouvre **quatre fois** : cliquer l'objet. `Échap` annule. 
 - Tester enfin si l'ajout de signaux physiques (caméra, profondeur, GPS approprié, vent mesuré) améliore le score hors échantillon.
 
 **Doctrine :** ne pas appeler `PASS` physique un test synthétique ou manuel à lui seul ; `KX108_ONLY`, aucune modification de mémoire/native weights automatiquement.
+
+## Diagnostic du premier essai vidéo (sortie utilisateur)
+
+Sur le run `build/video-test-20261008-204125`, erreurs : candidat **628,47 px**, vitesse constante **321,02 px**, position immobile **227,54 px**. Le modèle est **WORSE_THAN_LINEAR_BASELINE** ; il ne faut ni apprendre une loi ni modifier les poids. Pour la vidéo simulée distribuée pour cet exercice, les images 0, 3, 6 et 9 montrent approximativement des positions de centre `(276,106)`, `(281,109)`, `(286,116)`, `(291,129)` en pixels natifs. Cet écart indique un **problème probable dans la sélection des points, la vidéo effectivement choisie ou les coordonnées d'affichage**, à confirmer avec `source_measurements.json`. Aucune hypothèse sur le vrai fichier choisi ne doit être présentée comme un fait. Le premier outil acceptait les clics sans confirmation ; désormais la sélection est visible et confirmée explicitement. Anciennes sorties `OBSERVED_CLAIM` d'une vidéo simulée doivent être traitées comme provenance insuffisante.
