@@ -34,11 +34,11 @@ Code : [`world_orientation_school_v4_2.py`](../brody_world_physique/world_orient
 
 ## Résultats reproductibles et lecture honnête
 
-La première batterie CI du cours a obtenu **8 leçons, 11 examens, 11 réponses/abstentions conformes, 5 HOLD et 6 relations réciproques** (Windows Python 3.14 et Linux 3.11/3.12). Elle a également mesuré une **reconstruction non meilleure qu'une page blanche en comparaison pixel exacte** : 536 pixels de différence, contre 536 pixels d'encre sur la référence. Ceci constitue un **échec de fidélité pixel**, et non un problème de rejeu. Il reste enregistré.
+La batterie CI vérifiée a obtenu **8 leçons, 11 examens, 11 réponses/abstentions conformes, 5 HOLD et 6 relations réciproques**, ainsi que **184 tests Python réussis** (Windows Python 3.14 et Linux 3.11/3.12). Elle a également mesuré une **reconstruction non meilleure qu'une page blanche en comparaison pixel exacte** : 536 pixels de différence, contre 536 pixels d'encre sur la référence. Ceci constitue un **échec de fidélité pixel**, et non un problème de rejeu. Il reste enregistré.
 
-Pour la reconstruction, une deuxième métrique structurelle vérifie séparément, après révélation de la référence, si les deux images satisfont l'orientation relative LEFT et son inverse RIGHT. Ce test ne doit **jamais** masquer l'échec de fidélité pixel. Des formes éloignées de quelques pixels peuvent respecter la relation tout en étant mal alignées dans la métrique XOR.
+Pour la reconstruction, une deuxième métrique structurelle vérifie séparément, après révélation de la référence, si les deux images satisfont l'orientation relative LEFT et son inverse RIGHT. **Résultat mesuré : `composition_relation_match=true`**, tandis que **`composition_better_than_blank=false`** et `composition_pixel_xor=536`. Le critère spatial relationnel est donc respecté, mais **pas** le critère de fidélité raster : c'est une limite persistante, **pas un succès total du dessin**. Des formes éloignées de quelques pixels peuvent respecter la relation tout en étant mal alignées dans la métrique XOR.
 
-Voir [l'exécution CI](https://github.com/Eaubin08/brody-world-physique-obsidien-/actions/runs/37858203571).
+Voir [l'exécution CI incluant les deux métriques](https://github.com/Eaubin08/brody-world-physique-obsidien-/actions/runs/37858585850).
 
 ## Commandes sur ton PC fixe (reprise des preuves existantes)
 
