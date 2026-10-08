@@ -13,6 +13,7 @@ from hashlib import sha256
 import json
 from math import hypot, isclose
 from pathlib import Path
+from shutil import copyfile
 from types import SimpleNamespace
 
 from PIL import Image, ImageChops, ImageStat
@@ -289,6 +290,14 @@ def build(suite:Path,forecasts:Path,preview:Path,out:Path)->dict:
     if root.exists() and any(root.iterdir()):
         raise ValueError("output must be fresh")
     proposal=_recompute(suite,forecasts,preview)
+    images_dir=root/"images"
+    images_dir.mkdir(parents=True,exist_ok=False)
+    for name in IMAGES:
+        original=Path(preview).resolve(strict=True)/name
+        copied=images_dir/name
+        copyfile(original,copied)
+        if digest(copied)!=proposal["pixel_evidence"]["artifact_sha256"][name]:
+            raise ValueError("copied synthetic image changed")
     _write_json(root/"evaluation.json",proposal)
     return {"status":"P1_MULTIREPRESENTATION_BOUNDED_BRIDGE_CREATED",
             "evaluation":str(root/"evaluation.json"),
@@ -302,6 +311,11 @@ def verify(suite:Path,forecasts:Path,preview:Path,out:Path)->dict:
     expected=_recompute(suite,forecasts,preview)
     if actual!=expected:
         raise ValueError("world representation evidence does not replay")
+    for name in IMAGES:
+        copied=Path(out).resolve(strict=True)/"images"/name
+        if (digest(copied)!=actual["pixel_evidence"]["artifact_sha256"][name]
+            or digest(copied)!=digest(Path(preview).resolve(strict=True)/name)):
+            raise ValueError("published candidate images are inconsistent")
     return {"status":"PASS_P1_MULTIREPRESENTATION_BOUNDED_REPLAY",
             "view_count":len(actual["experiment_candidate"]["representation_views"]),
             "independent_source_count":actual["experiment_candidate"]["independent_source_count"],
