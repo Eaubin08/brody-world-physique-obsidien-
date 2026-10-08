@@ -1,0 +1,30 @@
+name: learning-loop-contracts
+
+on:
+  push:
+    branches:
+      - "f0/learning-loop-contracts-v0"
+  pull_request:
+    paths:
+      - "brody_world_physique/**"
+      - "tests/**"
+      - ".github/workflows/learning-loop-contracts.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile
+        run: python -m compileall -q brody_world_physique tests
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
