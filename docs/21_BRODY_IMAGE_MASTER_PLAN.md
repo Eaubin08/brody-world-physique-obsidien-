@@ -86,6 +86,8 @@ E. APPRENTISSAGE         F. PLAN DE GÉNÉRATION
 | **Friction / évaluation** | Rejeter changements incohérents et conserver erreur utile | corpus utilisateur et ReverseEvaluation | mécanisme projet, pas test établi |
 | **Mémoire / expériences** | Retenir contexte et échecs validés, pas images brutes ni vérité | Native Memory + Candidate | source présente ; bridge image non réalisé |
 
+**Contrôle de fidélité avant forge :** [23 — Traçabilité des méthodes d'apprentissage vers les tests](23_BRODY_IMAGE_LEARNING_TRACEABILITY.md). Les méthodes **isolation/restitution/transposition**, **Fibonacci et grilles de composition**, **curriculum humain**, **variantes d'entraînement**, et **non-répétition des échecs** ont des voies et tests séparés. Il s'agit de cibles documentées, non de fonctions implémentées ; la liste originale complète des variantes est encore à retrouver.
+
 **Secondaires maintenant :** GNSS/RF, reconnaissance gestuelle, interface Pokémon, agents bureaucratiques, ERA, AVDR/Gencoin, anciens packs scientifiques. Ils peuvent fournir un contrat, une preuve ou une interface, mais **ne dirigent pas la roadmap image**. **Trading hors périmètre.**
 
 ## 4. Deux voies de réalisation en parallèle
