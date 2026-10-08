@@ -1123,7 +1123,14 @@ A biometric truth claim by default.
 - **Lecture / frontière :** Filiation d'intention seulement : Shazam texte/tonalité ≠ algorithme VisualFingerprint. Implémentation visuelle non attestée.
 - **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 108 concepts](18_CONCEPT_SOURCE_MATRIX.md).
 
+
+## F0 généalogie précisée (2026-10-08)
+
+- Discussion utilisateur du 25 juillet 2026 : apprentissage visuel du réel, contexte physique, Shazam Cognitif (`CONVERSATION_CONTEXT_UNEXPORTED`, paraphrase non verbatim).
+- Shazam/34 Arbres et les invariants visuels proposent des signatures de natures différentes. **Algorithme identique NON établi**. `DESCENDANT_HYPOTHESIS`. [Audit](20_F0_FINAL_SOURCE_GAPS.md).
+
 ---
+
 # 32. Invariant rho (ρ)
 
 ## Definition
@@ -1619,6 +1626,13 @@ An error to hide.
 
 **FOUNDATIONAL**
 
+
+## F0 source : UNKNOWN (2026-10-08)
+
+- [MMonde contracts](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/mmonde/contracts_v0.py) : `causal_status="UNKNOWN"` et `unknowns`.
+- [F15 evidence compatibility](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/architecture/PHYSICAL_EVIDENCE_PLANE_V0.md) : causalité et repère non prouvés = UNKNOWN.
+- **Distinction :** UNKNOWN = état épistémique, pas verdict kernel ACT/HOLD/BLOCK. `UPSTREAM_CODE_READ`, tests non relancés. [Audit](20_F0_FINAL_SOURCE_GAPS.md).
+
 ---
 
 # 48. HOLD
@@ -1857,7 +1871,14 @@ History or evidence.
 - **Lecture / frontière :** Le Module 5 expose une direction de simulation sans interférence, pas un moteur dreaming connecté.
 - **Statut de preuve :** lien documentaire; pas une preuve de runtime, de priorité intellectuelle ni de validité scientifique. Voir [réconciliation F0](17_F0_SOURCE_RECONCILIATION.md) et [matrice 108 concepts](18_CONCEPT_SOURCE_MATRIX.md).
 
+
+## F0 généalogie précisée (2026-10-08)
+
+- Module 5 Shadow et World Foundry proposent simulation éducative sans action réelle. `WorldStateProjectionV0` = contrat candidat, **pas** Dreaming opérationnel.
+- Approches world model externes préexistantes ; attribution individuelle d'une archive dialoguée non démontrée. `PLANNED/DESCENDANT_HYPOTHESIS`. [Audit](20_F0_FINAL_SOURCE_GAPS.md).
+
 ---
+
 # 58. Weight-last learning
 
 ## Definition
@@ -1926,6 +1947,13 @@ MMonde is the current architectural home for much of this idea.
 ## Status
 
 **FOUNDATIONAL USER IDEA / PARTLY MATERIALIZED**
+
+
+## F0 origine utilisateur et descendants (2026-10-08)
+
+- Conversation 8 octobre 2026 vers 02:37–02:38 UTC : quadrillage du monde, classification, mémoire et contexte, espace/temps, géométrie, puis analogie enfant/trajectoire/gravitée. `CONVERSATION_CONTEXT_UNEXPORTED` : paraphrase, pas verbatim certifié.
+- Primitives proches : [MMonde](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/mmonde/contracts_v0.py), [F12 world dynamics](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/world_dynamics/contracts_v0.py), [F15 evidence](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/physical_evidence/contracts_v0.py), [F0 contracts](../brody_world_physique/contracts_v0.py).
+- **Filiation causale exacte NON démontrée** malgré alignement fonctionnel. `DESCENDANT_HYPOTHESIS`. [Audit](20_F0_FINAL_SOURCE_GAPS.md).
 
 ---
 
@@ -3248,6 +3276,13 @@ A single current runtime component merely because both source families use the s
 ## Status
 
 **NAME COLLISION RECOVERED / CONTEXT REQUIRED**
+
+
+## F0 sources : deux C10 (2026-10-08)
+
+- [Bloc 11 C10 Trace et Immuabilité](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/OBSIDIA_V4_STRUCTURED_FULL/02_BLOCS_17/Bloc_11__Trace_et_Immuabilite_C10.md) : cryptographie, Merkle, auditabilité, pépites P13–P18.
+- [C10 Éducation/Oxygen](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/docs/EDUCATION.md) : phase massive future non lancée.
+- **Statut :** `NAME_COLLISION_SOURCES_VERIFIED`. Les statuts des anciennes pépites ne prouvent ni fonctionnement ni théorèmes actuels. [Audit](20_F0_FINAL_SOURCE_GAPS.md).
 
 ---
 
