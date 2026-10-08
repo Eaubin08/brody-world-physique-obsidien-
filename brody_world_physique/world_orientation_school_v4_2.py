@@ -687,7 +687,7 @@ def verify(folder:str|Path,*,v3:str|Path,v4:str|Path,v41:str|Path)->dict:
         "teacher_ref":"images/composition_teacher_revealed.png",
         "teacher_sha256":sha(teacher),
         "score":pixel_score(target,student),
-        "relation_score":relation_score(target,student,policy,goal),
+        "relation_score":relation_score(target,student,policy,"LEFT"),
         "student_saw_target_before_render":False,
         "role_masks_transformed_by_programmed_motor":True,
         "semantic_understanding_proven":False,
