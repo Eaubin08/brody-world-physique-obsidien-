@@ -62,6 +62,7 @@ jobs:
           python -m brody_world_physique.experiential_video_v0 --suite build/experience-demo/suite/suite.json --out build/experience-demo/cold --train-videos 0
           python -m brody_world_physique.experiential_video_v0 --suite build/experience-demo/suite/suite.json --out build/experience-demo/one --train-videos 1
           python -m brody_world_physique.experiential_video_v0 --suite build/experience-demo/suite/suite.json --out build/experience-demo/four --train-videos 4
+          python -m examples.compare_experience_stages_v0 --cold build/experience-demo/cold/evaluation.json --one build/experience-demo/one/evaluation.json --many build/experience-demo/four/evaluation.json --out build/experience-demo/matched_comparison.json
           python -c "import json,pathlib; p=pathlib.Path('build/experience-demo'); results={n:json.loads((p/n/'evaluation.json').read_text()) for n in ('cold','one','four')}; assert results['cold']['test_predictions']==0 and results['cold']['test_holds_unknown']>0; assert results['one']['training_candidate_transitions']>0 and results['four']['training_candidate_transitions']>results['one']['training_candidate_transitions']; assert all(r['test_memory_mutations']==0 and r['source_kind']=='SIMULATED' and not r['world_knowledge_validated'] for r in results.values()); print('EXPERIENTIAL_SUITE_COLD_ONE_FOUR_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
