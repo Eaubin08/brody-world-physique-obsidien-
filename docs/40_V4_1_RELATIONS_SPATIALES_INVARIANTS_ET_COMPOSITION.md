@@ -75,6 +75,14 @@ Soit **5 / 6** classements ou abstentions corrects, avec un échec adversarial c
 
 Les tests ont notamment contrôlé la séparation non étiquetée des composants, le comportement sous translation/rotation 90°/échelle, le refus `HOLD`, la résistance aux falsifications des images et à une fausse promotion de connaissance, l'ordre des décisions enregistrées et la lecture seule de V3/V4.
 
+## Continuité avec MMonde : six nouvelles expériences candidates
+
+Chaque décision d'examen V4.1 est maintenant projetée dans les **classes F0 déjà existantes** `WorldTransformationV0`, `WorldStateDeltaV0` et `WorldExperienceCandidateV0`. Le résultat est enregistré dans `evaluation.json > world_experience_candidates`, avec une observation raster synthétique, un état avant/après référencé, un geste de classification, un verdict de conformité au retour du professeur, et la référence SHA de la source.
+
+Même le contre-exemple d'ordre inversé conserve un **candidat d'expérience contradictoire** (`CONTRADICTED_BY_TEACHER_FEEDBACK`) plutôt que disparaître du journal. Tous portent `CANDIDATE_ONLY`, `auto_promotion_allowed=False`, `memory_write_allowed=False`, `causal_proof=False`. Le code **réinstancie les classes contractuelles existantes** ; il ne fabrique pas un autre type racine de mémoire. Le vérificateur les recalcule depuis les images, les sorties et les étiquettes effectivement révélées.
+
+Il s'agit d'un **prolongement local de la vue du monde** liée à V4, pas d'un runtime `WorldStateV0` ni d'une connexion à la vraie mémoire Native Memory. La qualification/promotion de savoir reste extérieure chez SENS/B8.
+
 ## Composition nouvelle sans boîtes de test
 
 La dernière expérience n'envoie **aucune position de composant au module élève**. Elle lui demande de reproduire un assemblage proche depuis sa mémoire candidate de composants et de leur placement observé. L'élève conserve les pixels des petites formes source et leur disposition mesurée. Il recentre sa production sur le canevas 64×64 et écrit `composition_before_reveal.json` avec le SHA de l'image et la procédure.
