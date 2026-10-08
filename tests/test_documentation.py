@@ -37,10 +37,8 @@ class BrodyImageDocumentationTests(TestCase):
         audit = (DOCS / "24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md").read_text(encoding="utf-8")
         master = (DOCS / "21_BRODY_IMAGE_MASTER_PLAN.md").read_text(encoding="utf-8")
         for required in ("IMG-01", "IMG-03", "IMG-04", "IMG-05", "IMG-07",
-                         "SOURCE & IN", "méthode « peintre »", "BIMG-01", "BIMG-10",
-                         "FORMULE", "provenance", "NOT_RUN"):
-            if required == "FORMULE":
-                continue  # Read-back assertions target the actual audit headings and tests.
+                         "SOURCE & IN", "MÉTHODE DU PEINTRE", "BIMG-01", "BIMG-10",
+                         "provenance", "NOT_RUN"):
             with self.subTest(required=required):
                 self.assertIn(required, audit)
         self.assertIn("24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md", master)
