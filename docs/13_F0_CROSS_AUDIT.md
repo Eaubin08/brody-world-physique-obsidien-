@@ -597,3 +597,34 @@ It is:
 4. only then perform PC hardware inventory and F1 perception installation.
 
 No external model is required for that next contract implementation gate.
+
+
+## 12. Mandatory concept-definition rule for future audits
+
+F0 showed that finding a name in a document is not enough.
+
+Every future document/source audit must also explain each relevant user concept with:
+
+```text
+definition in Obsidia
+purpose
+what it is not
+inputs / outputs when applicable
+relations to neighboring concepts
+authority boundary
+current implementation status
+historical source
+current code/test source
+drift from older definitions
+```
+
+The canonical explanatory companion is:
+
+`docs/15_CONCEPT_ATLAS.md`
+
+If an audit discovers a new user-origin concept, the audit must either:
+
+1. add it to the atlas; or
+2. mark it `UNDEFINED / SOURCE RECOVERY REQUIRED`.
+
+No concept may be silently redefined from generic AI terminology when the user has a specific Obsidia meaning.
