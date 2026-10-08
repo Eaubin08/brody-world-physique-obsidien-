@@ -203,10 +203,16 @@ def practice_drawing(image:Image.Image, *,
     if not 0<=max_strokes<=MAX_STROKES:
         raise ValueError("stroke budget outside bound")
     teacher=black_pixels(image)
-    starter=choose_memory_seed(memory,teacher)
+    recalled=choose_memory_seed(memory,teacher)
+    raw_recall_ink=black_pixels(draw_strokes(recalled))
+    raw_recall_error=_error(teacher,raw_recall_ink)
+    original_black=len(teacher)
+    # Seeing a visual example means checking whether recalled strokes are
+    # helpful before accepting them. Preserve a failed recall for experience.
+    rejection=bool(recalled and raw_recall_error>original_black)
+    starter=() if rejection else recalled
     ink=black_pixels(draw_strokes(starter))
     before=_error(teacher,ink)
-    original_black=len(teacher)
     steps=[]
     chosen=list(starter)
     catalogue=_stroke_catalog() if catalog is None else catalog
@@ -234,6 +240,10 @@ def practice_drawing(image:Image.Image, *,
     if actual>before or actual>original_black+len(black_pixels(draw_strokes(starter))):
         raise ValueError("drawing correction unexpectedly worsened")
     return {"initial_error_pixels":before,"blank_error_pixels":original_black,
+            "raw_memory_recall_error_pixels":raw_recall_error if recalled else None,
+            "memory_recall_rejected_as_harmful":rejection,
+            "memory_recall_status":("REJECTED_HARMFUL_RECALL" if rejection else
+                                    "ACCEPTED_CANDIDATE" if recalled else "HOLD_NO_SKILL"),
             "final_error_pixels":actual,"correction_steps":steps,
             "seed_stroke_count":len(starter),"strokes":tuple(chosen),
             "candidate_image":final_image,
@@ -333,6 +343,14 @@ def run_school(out_dir:str|Path)->dict:
         repaired=practice_drawing(reference,memory=frozen,max_strokes=8,catalog=catalog)
         seed["candidate_image"].save(results/(name+"_from_memory.png"))
         repaired["candidate_image"].save(results/(name+"_after_feedback.png"))
+        if seed["memory_recall_rejected_as_harmful"]:
+            ledger.append({"event":"FAILURE_PATTERN_CANDIDATE",
+                           "lesson_ref":name,"source_sha256":digest,
+                           "failure_kind":"RECALLED_DRAWING_WORSE_THAN_EMPTY_PAGE",
+                           "raw_memory_error_pixels":seed["raw_memory_recall_error_pixels"],
+                           "blank_error_pixels":cold["final_error_pixels"],
+                           "recovery":"ABSTAIN_ON_RECALL_AND_START_FROM_BLANK",
+                           "do_not_promote":True,"memory_write_allowed":False})
         ledger.append({"event":"UNSEEN_EXERCISE_MEMORY_REPLAY",
                        "lesson_ref":name,"source_sha256":digest,
                        "reference_was_visible_before_seed":True,
@@ -345,6 +363,9 @@ def run_school(out_dir:str|Path)->dict:
             "exercise_ref":name,"source_sha256":digest,
             "cold_blank_error_pixels":cold["final_error_pixels"],
             "candidate_replay_error_pixels":seed["final_error_pixels"],
+            "raw_memory_recall_error_pixels":seed["raw_memory_recall_error_pixels"],
+            "memory_recall_rejected_as_harmful":seed["memory_recall_rejected_as_harmful"],
+            "memory_recall_status":seed["memory_recall_status"],
             "after_feedback_error_pixels":repaired["final_error_pixels"],
             "improved_initially_over_blank":seed["final_error_pixels"] < cold["final_error_pixels"],
             "feedback_revision_count":len(repaired["correction_steps"]),
@@ -380,7 +401,8 @@ def run_school(out_dir:str|Path)->dict:
     return {"evaluation":str(output/"evaluation.json"),
             "train_lessons":len(train_reports),"unseen_exams":len(exams),
             "exam_scores":[{k:r[k] for k in ("exercise_ref",
-                        "cold_blank_error_pixels","candidate_replay_error_pixels",
+                        "cold_blank_error_pixels","raw_memory_recall_error_pixels",
+                        "memory_recall_status","candidate_replay_error_pixels",
                         "after_feedback_error_pixels")} for r in exams],
             "ledger_records":integrity["verified_records"],
             "native_memory_write_allowed":False}
