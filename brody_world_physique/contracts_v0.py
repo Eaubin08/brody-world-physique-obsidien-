@@ -373,3 +373,40 @@ class WorldExperienceCandidateV0:
             "candidate_invariant_refs",
         ):
             object.__setattr__(self, name, _normalize_tuple(getattr(self, name)))
+
+
+@dataclass(frozen=True)
+class TransitionTransformationBindingV0:
+    """Additive binding between upstream TransitionV0 and WorldTransformationV0.
+
+    V0 intentionally avoids modifying the already verified upstream TransitionV0
+    schema. The binding carries references only and has no authority.
+    """
+
+    binding_id: str
+    transition_ref: str
+    transformation_ref: str
+    provenance_refs: tuple[str, ...] = ()
+    schema_version: str = field(
+        default="TRANSITION_TRANSFORMATION_BINDING_V0", init=False
+    )
+    readonly: bool = True
+    decision_authority: str = DECISION_AUTHORITY
+    allowed_to_decide: bool = False
+    allowed_to_act: bool = False
+    kernel_mutation: bool = False
+
+    def __post_init__(self) -> None:
+        _require_nonempty(self.binding_id, "binding_id")
+        _require_nonempty(self.transition_ref, "transition_ref")
+        _require_nonempty(self.transformation_ref, "transformation_ref")
+        _assert_non_sovereign(
+            readonly=self.readonly,
+            decision_authority=self.decision_authority,
+            allowed_to_decide=self.allowed_to_decide,
+            allowed_to_act=self.allowed_to_act,
+            kernel_mutation=self.kernel_mutation,
+        )
+        object.__setattr__(
+            self, "provenance_refs", _normalize_tuple(self.provenance_refs)
+        )
