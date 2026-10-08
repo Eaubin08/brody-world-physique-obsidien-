@@ -103,6 +103,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - [F0 reconciliation of user primary sources and conflicting definitions](docs/17_F0_SOURCE_RECONCILIATION.md)
 - [108-concept source traceability matrix](docs/18_CONCEPT_SOURCE_MATRIX.md)
 - [F0 source trace batch 2 — ADeLe, ERA, SENS/GPS, runtime contracts](docs/19_F0_SOURCE_TRACE_BATCH2.md)
+- [F0 source-gap triage — C10, UNKNOWN, visual, Dreaming, quadrillage](docs/20_F0_FINAL_SOURCE_GAPS.md)
 
 ## Current milestone
 
@@ -110,6 +111,6 @@ It prepares a reusable physical/visual/world layer that can later feed:
 
 The four missing learning-loop contracts are implemented with an additive `TransitionTransformationBindingV0`, explicit schema versions and sovereignty tests. No upstream `TransitionV0` mutation was made.
 
-**Current documentary gate:** reconcile the user's original concept definitions, source excerpts, attribution, genealogy and historical-vs-runtime differences (see docs/17 and docs/18). The atlas covers 108 named concepts (103 retained, 4 recovered from archives, 1 thermodynamic separation) but its individual source audit is not closed. The related two previous F0 PRs remain unmerged; new reconciliation work is stacked separately and does **not** affect `main`.
+**Current documentary gate:** reconcile the user's original concept definitions, source excerpts, attribution, genealogy and historical-vs-runtime differences (see docs/17 and docs/18). The atlas covers 108 named concepts (103 retained, 4 recovered from archives, 1 thermodynamic separation) and all previously flagged concepts now have explicit triage states. The strict original-passage/author/date source audit is **still not closed**. The related two previous F0 PRs remain unmerged; new reconciliation work is stacked separately and does **not** affect `main`.
 
 Model downloads remain deferred. **Do not start F1 / PC installation before the documentary/contract freeze is explicitly decided.**
