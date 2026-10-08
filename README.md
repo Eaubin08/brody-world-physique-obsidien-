@@ -115,6 +115,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Reverso + World Model + selective learning: source-grounded method and executable first slice](docs/27_REVERSO_WORLD_MODEL_APPRENTISSAGE_SELECTIF.md)**\n- **[Pre-verbal learning: situated world prediction, physics/sensor evidence, scoped knowledge vs truth](docs/28_APPRENTISSAGE_PREVERBAL_MONDE_PHYSIQUE.md)**
 - **[Executable first pre-verbal prediction experiment — held-out future measurement, source/frame constraints and baseline checks](docs/29_PREVERBAL_PREDICTION_EXPERIENCE_V0.md)**
 - **[First real-video intake — human annotated 4 positions, forecast sealed before showing frame 4](docs/30_PREMIERE_VIDEO_PHYSIQUE_ANNOTATION_MANUELLE.md)**
+- **[Controlled automatic orange-ball detection on the exact simulated test video (SHA-256 pinned), then held-out evaluation](docs/31_BALLE_AUTO_SOURCE_PINNEE.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -209,6 +210,22 @@ py -m brody_world_physique.video_observation_v0 --video "C:\\videos\\balle.mp4" 
 ```
 
 See [30 — first real-video annotation protocol](docs/30_PREMIERE_VIDEO_PHYSIQUE_ANNOTATION_MANUELLE.md).
+
+## Controlled automatic detection of the demo ball (no manual clicks)
+
+For the **single known simulated video** with SHA-256
+`a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f`,
+[`auto_ball_demo_v0.py`](brody_world_physique/auto_ball_demo_v0.py)
+extracts ball centers by color/shape directly from native image pixels.
+OpenCV decodes the local MP4; Pillow analyzes HSV. The forecast is written
+*before the fourth video frame is read*; the source remains `SIMULATED`.
+No generative model, universal object detector, learned physics or memory write.
+
+```powershell
+py -m brody_world_physique.auto_ball_demo_v0 --video "$env:USERPROFILE\\Downloads\\brody_balle_chute_simulee.mp4" --out "build\\auto-ball-$(Get-Date -Format yyyyMMdd-HHmmss)"
+```
+
+See [31 — pinned automatic ball measurement](docs/31_BALLE_AUTO_SOURCE_PINNEE.md).
 
 ## Current milestone
 
