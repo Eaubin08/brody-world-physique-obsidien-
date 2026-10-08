@@ -118,6 +118,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Controlled automatic orange-ball detection on the exact simulated test video (SHA-256 pinned), then held-out evaluation](docs/31_BALLE_AUTO_SOURCE_PINNEE.md)**
 - **[Experiential learning without preloaded physics laws: 8 simulated videos, empty/one/four experiences, holdout and honest benchmarks](docs/32_EXPERIENCES_ZERO_SAVOIR_SANS_LOI.md)**
 - **[Twelve-video transfer probes — new object colors/shapes, mobile viewpoint, surprise, contradictory experience, occlusion, Reverso frame preview](docs/33_EPISODES_TRANSFER_MONDE_INCONNU_V1.md)**
+- **[Image-first drawing school and candidate memory — source-guided strokes, pixel feedback, negative-transfer HOLD, episode ledger and unseen drawing exams](docs/34_ECOLE_DE_DESSIN_MEMOIRE_EXPERIENTIELLE.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -271,6 +272,28 @@ No model installation, KX108-only fields, no kernel changes or native memory
 writes. The train/test source split remains immutable; all videos are
 **SIMULATED**, and neither physics truth nor human-like understanding is
 established.
+
+## First drawing-school V0 — images before videos
+
+[Drawing school](brody_world_physique/drawing_school_v0.py) implements bounded
+**teacher image -> pupil pen strokes -> measured correction -> candidate
+episodic/skill memory -> new unseen drawing tests**. It reuses Pillow and
+existing Reverso/learning source policy, not an image foundation model.
+The learner is not given shape labels or domain-physics formulas; its
+pen gestures, pixel-feedback search, reference feature matching and
+translation/scaling are **programmed**. It can learn/replay a series of
+strokes for small synthetic line drawings; an unseen shape can cause
+**negative transfer**, which is recorded and rejected before repetition.
+
+```powershell
+py -m brody_world_physique.drawing_school_v0 --out "build\\drawing-first-school"
+```
+
+The output contains PNG models, attempts and corrections; a replay-verified
+local SHA-256-chained `candidate_experience_ledger.jsonl` and
+`candidate_skill_memory.json`. This is **NOT Obsidia Native Memory**, not
+its canonical Merkle sealing, and it does not promote any skill as truth.
+[Full provenance from original Google Drive documents and roadmap](docs/34_ECOLE_DE_DESSIN_MEMOIRE_EXPERIENTIELLE.md).
 
 ## Current milestone
 
