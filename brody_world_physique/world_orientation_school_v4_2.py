@@ -126,12 +126,12 @@ def learn_frame_policy(lessons: list[dict], prior_v41: dict) -> dict:
     if len(lessons) != 8 or {x["teacher_direction"] for x in lessons} != set(DIRS):
         raise ValueError("must teach all four directions without exam labels")
     fill_proto = {
-        name: mean(row["features"][f"{name}_fill_ratio"] for row in lessons)
+        name: mean(row.get("observed_features",row.get("features"))[f"{name}_fill_ratio"] for row in lessons)
         for name in ("pointed","block")
     }
     vecs = {}
     for direction in DIRS:
-        vals = [row["features"]["unit_xy"] for row in lessons
+        vals = [row.get("observed_features",row.get("features"))["unit_xy"] for row in lessons
                 if row["teacher_direction"] == direction]
         vx = mean(v[0] for v in vals);vy = mean(v[1] for v in vals)
         n = hypot(vx, vy)
