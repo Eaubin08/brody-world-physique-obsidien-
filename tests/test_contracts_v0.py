@@ -6,6 +6,7 @@ from brody_world_physique import (
     MemoryEligibilityV0,
     ProjectionKindV0,
     TransformationEpistemicClassV0,
+    TransitionTransformationBindingV0,
     WorldExperienceCandidateV0,
     WorldStateDeltaV0,
     WorldStateProjectionV0,
@@ -238,4 +239,30 @@ class SovereigntyNegativeTests(TestCase):
         with self.assertRaisesRegex(ValueError, "readonly"):
             WorldTransformationV0(
                 **self._base_transformation(readonly=False)
+            )
+
+
+class TransitionTransformationBindingTests(TestCase):
+    def test_binding_links_existing_transition_without_mutating_upstream(self):
+        item = TransitionTransformationBindingV0(
+            binding_id="bind-1",
+            transition_ref="transition:upstream-1",
+            transformation_ref="tx-1",
+            provenance_refs=("audit:f0",),
+        )
+        self.assertEqual(item.transition_ref, "transition:upstream-1")
+        self.assertEqual(item.transformation_ref, "tx-1")
+        self.assertEqual(
+            item.schema_version, "TRANSITION_TRANSFORMATION_BINDING_V0"
+        )
+        self.assertFalse(item.allowed_to_act)
+        self.assertEqual(item.decision_authority, "KX108_ONLY")
+
+    def test_binding_cannot_gain_action_authority(self):
+        with self.assertRaisesRegex(ValueError, "cannot act"):
+            TransitionTransformationBindingV0(
+                binding_id="bind-bad",
+                transition_ref="transition:1",
+                transformation_ref="tx-1",
+                allowed_to_act=True,
             )
