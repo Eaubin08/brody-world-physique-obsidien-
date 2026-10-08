@@ -134,7 +134,7 @@ L'**analyse ↔ synthèse / Reverso** devient une batterie de deux parcours vér
 
 **P1 (prochain code Brody uniquement)** : assembleur *readonly* d'une expérience de balle déjà disponible : `video/frame→observation/repère→trajectoire→prediction→rendu/Reverso→re-perception→delta→candidate experience`. Ne PAS recoder les décodeurs, `TransitionV0`, `WorldStateV0` ou un solver physique.
 
-**P2 (évaluation)** : ablations pixel seul, géométrie seule, temps+mouvement, jointure, avec origines identiques, séquences tenues à l'écart, changement de caméra, occlusion, contradiction et source insuffisante. Exiger preuve de gain *mesuré*, pas supposé. Détails dans [43 — protocole expérimental](43_EXPERIENCE_COMMUNE_BALLe_REPRESENTATIONS_V0.md).
+**P2 (évaluation)** : ablations pixel seul, géométrie seule, temps+mouvement, jointure, avec origines identiques, séquences tenues à l'écart, changement de caméra, occlusion, contradiction et source insuffisante. Exiger preuve de gain *mesuré*, pas supposé. Détails dans [43 — protocole expérimental](43_EXPERIENCE_COMMUNE_BALLE_REPRESENTATIONS_V0.md).
 
 **P3 (extension contrôlée)** : protocole d'échelle `MICRO↔MACRO` lié à une mesure et à un modèle *bornés* (matériau/élasticité/thermo), puis seulement moléculaire/atomique/quantique/cosmique selon preuves d'instruments et contrats applicables. **Aucune loi ou propriété cachée fabriquée à partir des images**.
 
