@@ -96,7 +96,8 @@ def verify_candidate_ledger(filename:Path)->dict:
 def black_pixels(image:Image.Image)->set[int]:
     if image.size!=(SIDE,SIDE):
         raise ValueError("only 64x64 lessons allowed in V0")
-    return {i for i,p in enumerate(image.convert("L").getdata()) if p<128}
+    # Grayscale L is one byte per pixel: stable across Pillow versions, unlike deprecated getdata().
+    return {i for i,p in enumerate(image.convert("L").tobytes()) if p<128}
 
 
 def bbox_of(points:set[int])->tuple[int,int,int,int]:
