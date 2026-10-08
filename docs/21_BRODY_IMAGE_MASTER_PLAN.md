@@ -1,6 +1,6 @@
 # 21 — BRODY IMAGE : PLAN MAÎTRE VISUEL / APPRENTISSAGE / GÉNÉRATION
 
-**Date :** 2026-10-08 · **Position :** document directeur pour ce dépôt · **État :** DESIGN / GATES NON GELÉS · **Aucune installation modèle ni modification des autres dépôts.**
+> **Mise à jour I1 (2026-10-08) :** l'utilisateur confirme que Qwen-VL fonctionne déjà avec Jarvis sur le PC fixe. Un [client local compatible Jarvis](../brody_world_physique/jarvis_vision_v0.py) est maintenant codé dans ce dépôt et testé par **service simulé**. La description JSON reste une candidate non vérifiée. **Connexion physique PC, admission F16, passage Binder/Brody et mémoire non testés/non raccordés.** Voir [26 — Qwen-VL existant](26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md). Aucun poids téléchargé.\n\n**Date :** 2026-10-08 · **Position :** document directeur pour ce dépôt · **État :** DESIGN / GATES NON GELÉS · **Aucune installation modèle ni modification des autres dépôts.**
 
 ## 1. Mission, objet du projet
 
