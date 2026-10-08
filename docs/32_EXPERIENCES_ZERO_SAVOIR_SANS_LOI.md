@@ -27,9 +27,9 @@ Conditions contrôlées : 480×320, 24 FPS, 72 frames/clip, marqueur orange uniq
 
 ## Les six questions réellement testées
 
-1. **Zéro expérience :** la mémoire initiale est vide ; `HOLD_NO_EXPERIENCE` plutôt qu'une prédiction gratuite.
+1. **Zéro expérience :** la mémoire initiale est vide ; `HOLD_NO_EXPERIENCE` plutôt qu'une prédiction gratuite. `--train-videos 0` mesure réellement ce cas.
 2. **Premiers essais :** chaque clip TRAIN est observé en source, 3 instants de contexte puis un quatrième résultat connu : on retient une **relation de déplacement mesurée**, pas l'étiquette « gravité ».
-3. **Accumulation :** après 4 clips, la mémoire de candidats contient des signatures de déplacements passés et leur suite observée (environ 36 transitions pour ce lot).
+3. **Accumulation :** comparer `--train-videos 1` à `--train-videos 4`. Après 4 clips, la mémoire de candidats contient des signatures de déplacements passés et leur suite observée (environ 36 transitions pour ce lot).
 4. **Généralisation :** pour chaque nouvelle vidéo TEST, on prédit à partir des seules positions antérieures et d'exemples TRAIN ; l'observation suivante n'est décodée qu'**après l'enregistrement de la proposition**. Aucun échantillon TEST n'entre en mémoire pendant l'évaluation.
 5. **Hésitation raisonnable :** une situation trop différente des traces connues retourne `HOLD_UNFAMILIAR_CHANGE`. La couverture et le nombre d'abstentions sont mesurés ; l'absence de prédiction n'est pas comptée comme une victoire.
 6. **Comparaison honnête :** erreurs face à l'immobilité, à la vitesse constante et à l'extrapolation fixe avec accélération (celle testée précédemment). **Ces formules ne nourrissent pas le chemin d'apprentissage par voisinage** ; elles ne servent qu'au score.
@@ -66,12 +66,17 @@ git pull --ff-only origin main
 Expand-Archive -Path "$env:USERPROFILE\Downloads\brody_experiences_sans_lois_v1.zip" -DestinationPath "$env:USERPROFILE\Downloads\brody_suite" -Force
 
 $suite = "$env:USERPROFILE\Downloads\brody_suite\brody_experiences_sans_lois_v1\suite.json"
-$out = "build\experience-zero-$(Get-Date -Format yyyyMMdd-HHmmss)"
+# Trois essais distincts : aucune expérience / une vidéo / quatre vidéos
+$prefix = "build\experience-$(Get-Date -Format yyyyMMdd-HHmmss)"
+py -m brody_world_physique.experiential_video_v0 --suite $suite --out "$prefix-cold" --train-videos 0
+py -m brody_world_physique.experiential_video_v0 --suite $suite --out "$prefix-one" --train-videos 1
+py -m brody_world_physique.experiential_video_v0 --suite $suite --out "$prefix-four" --train-videos 4
 
-py -m brody_world_physique.experiential_video_v0 --suite $suite --out $out
-
-$j = Get-Content "$out\evaluation.json" -Raw | ConvertFrom-Json
-$j.test_measures | Select-Object file,learned_predictions,unknown_holds,learned_mae_px,linear_mae_px,fixed_accel_mae_px | Format-Table -AutoSize
+foreach ($stage in @('cold','one','four')) {
+  $j = Get-Content "$prefix-$stage\evaluation.json" -Raw | ConvertFrom-Json
+  Write-Host "=== $stage ===" $j.test_predictions "predictions /" $j.test_holds_unknown "HOLD"
+  $j.test_measures | Select-Object file,learned_predictions,unknown_holds,learned_mae_px,linear_mae_px,fixed_accel_mae_px | Format-Table -AutoSize
+}
 ```
 
 Le programme requiert `cv2` (OpenCV déjà installé pour le test précédent sur ce même PC). Aucun modèle à télécharger et aucune nouvelle API cloud.
