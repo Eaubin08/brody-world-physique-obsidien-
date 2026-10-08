@@ -77,6 +77,9 @@ foreach ($stage in @('cold','one','four')) {
   Write-Host "=== $stage ===" $j.test_predictions "predictions /" $j.test_holds_unknown "HOLD"
   $j.test_measures | Select-Object file,learned_predictions,unknown_holds,learned_mae_px,linear_mae_px,fixed_accel_mae_px | Format-Table -AutoSize
 }
+
+# Compare seulement les instants prédits par LES DEUX expériences
+py -m examples.compare_experience_stages_v0 --cold "$prefix-cold\evaluation.json" --one "$prefix-one\evaluation.json" --many "$prefix-four\evaluation.json" --out "$prefix-matched.json"
 ```
 
 **Si le ZIP n'est plus disponible**, les huit fichiers peuvent être recréés directement depuis le dépôt, avec les codecs locaux (les SHA-256 du MP4 peuvent varier selon l'encodeur, mais le générateur construit un manifeste cohérent) :
@@ -90,7 +93,7 @@ Le code du **générateur** contient nécessairement les trajectoires synthétiq
 
 Le programme requiert `cv2` (OpenCV déjà installé pour le test précédent sur ce même PC). Aucun modèle à télécharger et aucune nouvelle API cloud.
 
-**Sorties locales :** `learning_candidates.json` (expériences candidates à audit, pas mémoire native), `predictions_before_heldout.jsonl` (engagements datés par source vidéo et index), `evaluation.json` (scores, couverture, abstentions, résultats tous cas). Aucune photo/vidéo privée n'est commitée.
+**Lecture honnête des chiffres :** le nombre d'abstentions (couverture) change lorsque la mémoire augmente. Une erreur moyenne sur 13 prédictions ne se compare pas directement à une erreur moyenne sur 34 prédictions différentes. Le script `compare_experience_stages_v0` évalue donc les **mêmes images tenues secrètes aux deux variantes**, puis sépare victoires, défaites, baselines et couverture. Cela peut montrer qu'une variante plus entraînée répond davantage mais se trompe plus souvent sur certains cas ; ce n'est pas une anomalie à masquer.\n\n**Sorties locales :** `learning_candidates.json` (expériences candidates à audit, pas mémoire native), `predictions_before_heldout.jsonl` (engagements datés par source vidéo et index), `evaluation.json` (scores, couverture, abstentions, résultats tous cas). Aucune photo/vidéo privée n'est commitée.
 
 ## Statut et ce qui reste non prouvé
 
