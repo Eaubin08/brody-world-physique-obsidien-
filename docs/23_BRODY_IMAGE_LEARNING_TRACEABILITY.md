@@ -88,10 +88,53 @@ Re-percevoir une image générée mesure d'abord la **cohérence et les erreurs 
 
 ### Les lacunes toujours ouvertes
 
-- **La liste exacte des 81 / 100+ variantes** n'est **pas reconstruite** : le passage consulté mentionne « une 100 » et propose des axes, pas un registre numéroté complet. Retrouver le catalogue original avant de geler les variantes, sans calculer 81 à partir de l'archive.
+- **Les 81 variantes : SOURCE HISTORIQUE RETROUVÉE** : l'archive de Civilisation Cognitive présente explicitement les 3 couches (9 blocs perceptifs × 9 paradigmes = 81 combinaisons) et une matrice proposée par l'assistant. Toutefois la liste intégralement **validée par l'utilisateur** et l'extension exacte à 90 / 100+ ne sont pas gelées ; voir §6. Ne pas présenter les 81 comme un programme d'entraînement déjà exécuté.
 - **Fibonacci / symétrie** sont bien présents dans une source utilisateur, mais leurs paramètres, domaines d'application et priorités ne sont **pas déjà validés** scientifiquement ni comme moteur.
 - **Reverse360**, **Shazam visuel/VisualFingerprint**, et les filiations historiques mentionnées par [20](20_F0_FINAL_SOURCE_GAPS.md) conservent leurs incertitudes ; pas de réparation par reformulation.
 - **I1/G1/IG2** restent non exécutés sur images et modèles réels. Les tests Python F0 actuels vérifient schémas / documentation, pas les résultats visuels.
 - **Tout choix de modèle, weights/licence, GPU et performance** demeure conditionnel au PC.
 
 **Décision documentaire :** ce document est une **base d'exécution testable**, pas un F0 gelé, ni un moteur Brody Image fonctionnel. Les preuves observables seront livrées gate par gate.
+
+
+## 6. RÉCONCILIATION ADDITIVE : source retrouvée sur les « 81 versions et + » (2026-10-08)
+
+**Source primaire retrouvée :** [🧠 Obsidia – Civilisation Cognitive Complète (Cartographie Master)](https://docs.google.com/document/d/14WUSNQPcZ4MsNP0lfpHT2PkfEJxiHhGvdcdNefqSbOE/edit) ; source recoupée : [Obsidia – Architecture Cognitive Multiverselle](https://docs.google.com/document/d/1lsxNC3K_3rACpnZQkzj4L9oqPM8I6mqJBnZSOB5SWnA/edit) et [Matrice des Cerveaux — 100 versions](https://docs.google.com/document/d/15mn-qh0SDUWkqDUFAgB-RbsWFtp_fGqv/edit). **Documents conversationnels : texte « Vous avez dit » = formulation utilisateur ; « ChatGPT a dit » = construction de l'assistant.** Pas de fusion anachronique avec le runtime actuel.
+
+### 6.1 Ce que l'utilisateur définit explicitement (U)
+
+- Passage proche de **« Vous avez dit : » avant 1919–1922** : les **modules/cerveaux internes d'une même Obsidia peuvent coopérer** ; **les versions entraînées d'Obsidia ne coopèrent pas entre elles**. Cette correction explicite de l'utilisateur prévaut sur les résumés contradictoires de l'assistant.
+- Passages « Vous avez dit » proches de **1795, 2003–2007 et 2245** : approches multiples, blocs sensoriels distincts comparables aux parties du cerveau humain, paradigmes (fractal, ludique, empathique, lymphatique, moteur, symbolique, quantique, diffusif, token), et distinction entre les couches nécessaires pour former des versions d'Obsidia.
+- Passage **2585–2591** : l'utilisateur juge encore les reformulations inexactes et demande les **trois couches et leur titre** ; donc une réponse IA qui suit n'est pas automatiquement une validation canonique par l'auteur.
+- Passage **3838–3840** : l'utilisateur demande de produire rapidement une matrice ; celle-ci est ensuite décrite par l'assistant, non attestée comme registre de 81 entraînements effectivement réalisés.
+
+### 6.2 Structure des trois couches **décrite par l'assistant historique (A)**
+
+| Couche | Fonction décrite dans l'archive | 9 familles proposées dans la réponse historique (à qualifier, non figer comme choix définitifs auteur) |
+|---|---|---|
+| **1 — Blocs perceptifs internes** | Organes de perception et traitement des entrées dans une même Obsidia | textuel ; visuel/spatial ; sonore/tonal ; moteur/action ; émotionnel ; symbolique/archétypal ; sensoriel brut ; social/intentionnel ; méta-réflexif |
+| **2 — Paradigmes d'apprentissage** | Style dominant de traitement/entraînement de ces blocs | tokenisé ; diffusif ; quantique ; symbolique ; fractal ; ludique ; moteur ; lymphatique ; empathique |
+| **3 — Versions entraînées** | Instances formées par combinaison d'un bloc perceptif dominant et d'un paradigme dominant | **9 × 9 = 81 combinaisons théoriques** ; peut s'étendre après définition vérifiée d'autres axes |
+
+**Frontière décisive :** les 81 sont ici une **matrice combinatoire d'architectures/entraînements proposés**, pas 81 modèles déployés, ni un essaim de 81 agents connectés, ni une garantie que toutes les variantes sont utiles. Le document historique mélange par endroits « 81 », « 90 » et « 100 versions » dans des réponses IA ; ces nombres **ne doivent pas être normalisés artificiellement**. En particulier, les appels à « faire coopérer les versions » dans des réponses historiques ultérieures **contredisent la correction utilisateur** : ils restent marqués **A-DRIFT**, et non doctrine.
+
+### 6.3 Traduction utile au seul moteur Brody Image (P)
+
+**Une version complète d'Obsidia entraînée ≠ un simple modèle d'image.** Pour Brody Image, le registre doit garder trois clés sans confondre leurs niveaux :
+
+```text
+ImageTrainingCandidate
+  user_source_ref
+  perceptual_block_ref    # une partie perceptive, ex. visuel/spatial
+  learning_paradigm_ref   # forme d'entraînement, ex. diffusif / symbolique
+  version_ref?            # version entraînée distincte, PAS agent coopérant par défaut
+  input_domain            # image / vidéo / scène située
+  episode_and_replay_refs
+  evaluation_protocol_ref
+  result_status           # NOT_RUN / INCONCLUSIVE / FAIL / PASS
+  promotion_authority     # aucun apprentissage canonique automatique
+```
+
+**Première preuve à demander, sans entraîner 81 modèles :** deux voies bornées pour le même objet et même jeu de contrôle, avec segmentation/source/provenance constantes, métriques d'identité/transfert/temps/VRAM, différence de paradigme explicite et comparaisons archivées. Si l'essai n'est pas réalisé : `NOT_RUN`. `Quantique` ne désigne pas par défaut un ordinateur quantique installé.
+
+**Reste non résolu :** savoir si l'utilisateur a ultérieurement validé la matrice 9×9 telle que proposée, quelles familles s'ajoutent pour « 81+ », et quelle est la **liste finale** approuvée. Le document FSO et ces archives ne suffisent pas à attribuer tous les paramètres proposés par les IA à la doctrine de l'utilisateur.
