@@ -61,6 +61,28 @@ class ExperienceContractTests(TestCase):
         self.assertEqual(data["procedure_ref"]["executed_capabilities"][1],
                          code_fingerprint("pixel-feedback-revision"))
 
+    def test_path_receipts_are_portable_and_replayable_on_windows(self):
+        # The student records portable POSIX relative refs even when the
+        # host platform (Windows pathlib) returns backslash paths.
+        # This would fail under Windows with str(Path.relative_to(...)).
+        expected_index_refs=[]
+        for item in self.index["episodes"]:
+            _, episode=self._read_episode(item["episode_id"])
+            name=item["episode_id"]
+            expected_ref=(Path("teacher_images")/(name+".png")).as_posix()
+            suffix="_apres_correction" if name.startswith("examen_") else "_dessin"
+            expected_output=(Path("attempts")/(name+suffix+".png")).as_posix()
+            self.assertEqual(episode["observation"]["source_ref"],expected_ref)
+            self.assertEqual(episode["execution_trace"]["generated_artifact_ref"],
+                             expected_output)
+            self.assertEqual(item["episode_ref"],
+                             (Path("experience_episodes_v1")/(name+".json")).as_posix())
+            for ref in (expected_ref,expected_output,item["episode_ref"]):
+                self.assertNotIn("\\\\",ref)
+            expected_index_refs.append(item["episode_ref"])
+        self.assertEqual(len(expected_index_refs),10)
+        self.assertEqual(verify_memory_bundle(self.root)["episodes"],10)
+
     def test_harmful_memory_is_preserved_as_rejected_path(self):
         _,episode=self._read_episode("examen_croix")
         self.assertEqual(episode["choice"]["recall_gate"],"REJECTED_HARMFUL")
