@@ -43,7 +43,7 @@ class BrodyImageDocumentationTests(TestCase):
         self.assertEqual(numbers, list(range(1, 109)))
 
     def test_image_documents_local_links_resolve(self):
-        for name in ("21_BRODY_IMAGE_MASTER_PLAN.md", "22_IMAGE_BRANCH_AND_DONOR_MAP.md"):
+        for name in ("21_BRODY_IMAGE_MASTER_PLAN.md", "22_IMAGE_BRANCH_AND_DONOR_MAP.md", "23_BRODY_IMAGE_LEARNING_TRACEABILITY.md"):
             file = DOCS / name
             content = file.read_text(encoding="utf-8")
             links = re.findall(r"\]\(([^)]+)\)", content)
