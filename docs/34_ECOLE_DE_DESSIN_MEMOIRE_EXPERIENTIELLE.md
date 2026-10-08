@@ -47,6 +47,21 @@ Le rôle du professeur (externe au learner) est de proposer un **cours** et un *
 6. Il sauvegarde des PNG : source du professeur, première tentative, copie initiale de mémoire et reprise corrigée. Aucune vidéo n'est nécessaire pour apprendre ces gestes.
 7. Il écrit des événements distincts dans une **chaîne locale JSONL chaînée SHA-256**, vérifiable contre les modifications accidentelles : observation, corrections et suggestion de compétence. Ce **n'est pas** le Merkle Seal historique ni une authentification sécurisée.
 
+### Premiers résultats exécutés en CI — essai guidé sur images synthétiques
+
+Sur quatre **nouvelles références visibles** (64 × 64 px), après trois leçons et en mode comparateur de pixels, l'erreur est le nombre de pixels noirs/blancs non conformes à l'exemple. Ce **n'est pas** une métrique perceptive ni un apprentissage de style :
+
+| Examen | Page blanche | Souvenir brut | Souvenir accepté | Après correction |
+|---|---:|---:|---:|---:|
+| 01 — trait déplacé | 123 | 0 | 0 | 0 |
+| 02 — contour déplacé | 380 | 0 | 0 | 0 |
+| 03 — forme oblique | 316 | 168 | 168 | 168 |
+| 04 — forme inconnue | 393 | **659 (mauvais rappel)** | **393 (rejet du rappel)** | 0 |
+
+**Le contre-exemple 04 est conservé :** une compétence rappelée donne initialement **plus d'erreurs qu'une feuille blanche**. Le système écrit `FAILURE_PATTERN_CANDIDATE` avec l'erreur brute et refuse ce transfert préjudiciable avant de recommencer à dessiner depuis une feuille blanche. Il ne supprime pas le souvenir original ni la trace de cet échec. Le cas 03 montre aussi une limite : **aucune amélioration malgré la correction proposée**, car le crayon actuel n'a pas encore une véritable gomme / révision des gestes anciens. Ces résultats sont des tests de **copie guidée de primitives préparées par un humain**, et non de création visuelle libre.
+
+La chaîne candidate locale enregistre **26 événements** dans cette exécution ; sa vérification d'intégrité a réussi. Les **113 tests** de l'ensemble du dépôt ont passé Python 3.11 et 3.12 lors de [l'exécution CI](https://github.com/Eaubin08/brody-world-physique-obsidien-/actions/runs/37842164590), et la démo Pillow a été exécutée sur GitHub. La reproduction locale Windows reste à vérifier séparément.
+
 **Ce qui est encore programmé :** l'outil de trait, la fonction d'erreur, la recherche gloutonne des traits, la normalisation d'échelle/position, la signature visuelle et la sélection de souvenir proche. Le V0 n'apprend pas les lois de l'image, la profondeur 3D, un concept verbal ni la meilleure méthode d'étude. Il n'a pas de mémoire de poids entraînés. Le professeur corrige explicitement par la comparaison à la référence. Toute affirmation « il apprend tout seul à partir de rien » serait fausse.
 
 ## 4. Où va chaque type de mémoire — et surtout où il ne va PAS
