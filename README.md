@@ -1,6 +1,6 @@
 # Brody World Physique Obsidia
 
-**Status:** FOUNDATION / DOC-FIRST / NO RUNTIME YET  
+**Status:** IMAGE I1/R1 CPU EDITOR IMPLEMENTED; MODEL-BASED GENERATION NOT YET CONNECTED  
 **Authority:** Obsidia / X108 remains external and unchanged.  
 **Purpose:** visual perception, physical-world learning and **image generation with reverse evaluation**, while keeping Obsidia's existing organs separate.
 
@@ -110,15 +110,31 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Real upstream branches, code seams and open-source donors](docs/22_IMAGE_BRANCH_AND_DONOR_MAP.md)**
 - **[Original learning methods → image experiments, provenance and test gates](docs/23_BRODY_IMAGE_LEARNING_TRACEABILITY.md)**
 - **[Brody Image original vision fidelity: source/IN, layered reconstruction, region rigour and functional tests](docs/24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md)**
+- **[Image I1/R1 CPU executable baseline — subject isolation, transplant and pixel fidelity report](docs/25_BRODY_IMAGE_I1_R1_PROTOTYPE_CPU.md)**
+
+## First actual image editor (I1/R1 CPU)
+
+This baseline preserves known source pixels and creates a real edited PNG; it **does not yet synthesize new images with an ML model**.
+
+```sh
+python -m pip install -r requirements-image.txt
+python -m unittest discover -s tests -p "test_*.py" -v
+python -m examples.demo_image_v0 --out build/brody-image-demo
+```
+
+With personal files and a prepared mask:
+
+```sh
+python -m brody_world_physique.image_v0 --source photo.png --mask masque.png --background scene.png --x 80 --y 35 --out build/essai
+```
+
+Outputs: `cutout.png`, `composite.png`, `report.json`. The demonstration fixture is **SYNTHETIC**, not a claim of natural-scene understanding or learned image generation.
+
 
 ## Current milestone
 
-**Brody Image I0:** source/code branch map and open-source candidate map checked; preparation only. **No image-generation runtime, cross-repo visual loop or model installation proved.**
+**Brody Image I1/R1 CPU:** deterministic isolation and compositing implemented on `main`, with source/output hashing, fidelity controls, synthetic test fixtures and source-preserving boundaries. Details in [25 — executable baseline](docs/25_BRODY_IMAGE_I1_R1_PROTOTYPE_CPU.md).
 
-**Original F0:** Cross-audit + learning-loop contracts implemented; source reconciliation in progress (NOT DOCUMENTARY FREEZE).
+**Still unproven:** arbitrary background segmentation, image-generating model/weights, reverse visual evaluation, 3D, video/world physics and learned retention. A real photo and mask can be fed through the local CLI; the synthetic demo alone does not establish these capabilities.
 
-The four missing learning-loop contracts are implemented with an additive `TransitionTransformationBindingV0`, explicit schema versions and sovereignty tests. No upstream `TransitionV0` mutation was made.
-
-**Current documentary gate:** reconcile the user's original concept definitions, source excerpts, attribution, genealogy and historical-vs-runtime differences (see docs/17 and docs/18). The atlas covers 108 named concepts (103 retained, 4 recovered from archives, 1 thermodynamic separation) and all previously flagged concepts now have explicit triage states. The strict original-passage/author/date source audit is **still not closed**. The related two previous F0 PRs remain unmerged; new reconciliation work is stacked separately and does **not** affect `main`.
-
-Model downloads remain deferred. **Do not start F1 / PC installation before the documentary/contract freeze is explicitly decided.**
+**Historical F0:** the 108-concept archive and source attribution exist for traceability; their complete documentary audit remains open but **does not block the bounded image editor**. Old F0 PR work is consolidated on `main`; obsolete historical PRs have been closed. Keep `KX108_ONLY`, no memory auto-promotion or upstream kernel mutation.
