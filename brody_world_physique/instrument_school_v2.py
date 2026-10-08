@@ -361,6 +361,17 @@ def verify_school(root:str|Path)->dict:
     candidate=json.loads(memory.read_text(encoding="utf-8"))
     if candidate.get("schema")!="BRODY_INSTRUMENT_EPISODIC_CANDIDATES_V2" or candidate.get("native_memory_write_allowed") is not False or candidate.get("no_auto_promotion") is not True:
         raise ValueError("memory promotion boundary missing")
+    # Bind instrument experiences to the exact, independently replayed prior
+    # drawing lessons: reject a changed training source instead of trusting
+    # the self-reported source hash in the V2 report.
+    prior=Path(meta["prior_school_source"]).resolve(strict=True)
+    prior_proof=verify_memory_bundle(prior)
+    if meta.get("prior_school_replay_verified") is not True or (
+        candidate.get("prior_v1_episode_count")!=prior_proof["episodes"]
+        or candidate.get("code_identity")!=meta["procedure"]
+    ):
+        raise ValueError("prior lesson source/code chain unverified")
+    original_training=_training_specs(prior)
     verify_candidate_ledger(ledger)
     report=json.loads((root/"evaluation.json").read_text(encoding="utf-8"))
     if report.get("schema")!=SCHEMA or report.get("native_memory_write_allowed") is not False:
@@ -375,20 +386,35 @@ def verify_school(root:str|Path)->dict:
     if any(s["id"]!=f"training_{i+1:02d}" for i,s in enumerate(training)):
         raise ValueError("training order corruption")
     for i,entry in enumerate(training):
+        source=original_training[i]
         goal=entry["goal"]
-        if goal not in TRAIN_GOALS or set(entry["trial_losses"])!=set(TOOLS):
+        if (entry["id"]!=source["id"] or goal!=source["goal"]
+            or goal not in TRAIN_GOALS or set(entry["trial_losses"])!=set(TOOLS)
+            or entry.get("all_three_tools_tried") is not True):
             raise ValueError("training feedback corrupted")
-        actual=Image.open(images/(entry["id"]+"_teacher_target.png")).convert("L")
-        if entry["teacher_target_sha256"]!=source_hash(images/(entry["id"]+"_teacher_target.png")):
+        teacher_path=images/(entry["id"]+"_teacher_target.png")
+        sketch_path=images/(entry["id"]+"_sketch.png")
+        if entry["teacher_target_sha256"]!=source_hash(teacher_path):
             raise ValueError("training target altered")
-        if entry["sketch_sha256"]!=source_hash(images/(entry["id"]+"_sketch.png")):
+        if entry["sketch_sha256"]!=source_hash(sketch_path):
             raise ValueError("training sketch altered")
+        if (Image.open(sketch_path).convert("L").tobytes()
+            !=source["image"].convert("L").tobytes()):
+            raise ValueError("training source does not match the prior V1 lesson")
+        actual=Image.open(teacher_path).convert("L")
+        if actual.tobytes()!=_teacher_targets(source).tobytes():
+            raise ValueError("training teacher target not reproduced from frozen lesson")
         for tool in TOOLS:
             path=images/(entry["id"]+"_"+tool.lower()+".png")
-            if abs(_gray_pixel_loss(Image.open(path),actual)-entry["trial_losses"][tool])>1e-10:
+            art=Image.open(path).convert("L")
+            if art.tobytes()!=render_instrument(source["gestures"],tool).tobytes():
+                raise ValueError("stored instrument trial cannot be replayed")
+            if abs(_gray_pixel_loss(art,actual)-entry["trial_losses"][tool])>1e-10:
                 raise ValueError("training loss does not match archived tool trial")
     frozen=tuple(training)
+    original_exams=_exam_specs()
     for ix,(receipt,r) in enumerate(zip(rows,report["exams"])):
+        true_scene=original_exams[ix]
         if (receipt.get("episode_id")!=f"exam_{ix+1:02d}" or r["id"]!=receipt["episode_id"]
             or receipt.get("schema")!=SCHEMA or receipt.get("target_accessed_before_decision") is not False
             or receipt.get("instrument_memory_sha256")!=meta["memory_sha256"]
@@ -396,6 +422,11 @@ def verify_school(root:str|Path)->dict:
             or receipt.get("native_memory_write_allowed") is not False
             or receipt.get("sketch_sha256")!=source_hash(images/(r["id"]+"_sketch.png"))):
             raise ValueError("invalid precommitted receipt")
+        if receipt["goal"]!=true_scene["goal"]:
+            raise ValueError("test goal changed after source preparation")
+        sketch=Image.open(images/(r["id"]+"_sketch.png")).convert("L")
+        if sketch.tobytes()!=true_scene["image"].convert("L").tobytes():
+            raise ValueError("heldout test source cannot be reproduced")
         decision=select_tool(frozen,receipt["goal"])
         if receipt["decision"]!=decision or r["decision"]!=decision or receipt["goal"]!=r["goal"]:
             raise ValueError("stored decision is not reproducible from frozen memory")
@@ -403,11 +434,16 @@ def verify_school(root:str|Path)->dict:
         if source_hash(target_path)!=r["heldout_target_sha256"]:
             raise ValueError("heldout artifact was modified")
         target=Image.open(target_path).convert("L")
+        if target.tobytes()!=_teacher_targets(true_scene).tobytes():
+            raise ValueError("heldout target cannot be reproduced from fixture")
         test_art={}
         for tool in TOOLS:
             path=images/(r["id"]+"_tool_"+tool.lower()+".png")
             if not path.is_file():raise ValueError("tool trial missing")
-            loss=_gray_pixel_loss(Image.open(path),target)
+            tool_art=Image.open(path).convert("L")
+            if tool_art.tobytes()!=render_instrument(true_scene["gestures"],tool).tobytes():
+                raise ValueError("heldout tool trial was altered")
+            loss=_gray_pixel_loss(tool_art,target)
             if abs(loss-r["available_tool_errors_after_holdout"][tool])>1e-10:
                 raise ValueError("heldout feedback modified")
             test_art[tool]=loss
