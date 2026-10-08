@@ -104,7 +104,7 @@ def _verify_representation(rep:dict,expected_source:str)->tuple[GestureV1,...]:
 
 
 def _load_v2(prior:Path)->tuple[tuple[dict,...],dict]:
-    info=verify_school(prior)
+    info=verify_school_v2(prior)
     episode=json.loads((prior/"instrument_skill_memory.json").read_text(encoding="utf-8"))
     lessons=episode["episodes"]
     if len(lessons)!=9 or len({x["id"] for x in lessons})!=9:
