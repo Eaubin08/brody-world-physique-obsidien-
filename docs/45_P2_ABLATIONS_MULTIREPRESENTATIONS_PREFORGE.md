@@ -74,3 +74,15 @@ py -m brody_world_physique.p2_ablation_diagnostic_v0 --suite $suite --forecasts 
 Adapter `$run` au dossier P1 réel. Pour les essais répétés, supprimer ou renommer la sortie : le programme refuse d'écraser un reçu. Aucun résultat de fusion `A2–A7` n'est produit. Le verdict demeure `P2_INCONCLUSIVE` même si l'une des trois méthodes gagne, car cette tranche ne teste pas encore la valeur causale de la combinaison des représentations.
 
 **État d'implémentation :** code et tests contractuels committés ; aucun run P2 indépendant attesté à cette étape.
+
+
+## Tranche P2.1 — Contrôles d'ablation sur historique commun (2026-10-09)
+
+Deux contrôles supplémentaires sont implémentés dans `p2_ablation_diagnostic_v0.py` :
+- `A2_spatial_acceleration` extrapole le déplacement à partir des deux vitesses successives et de l'accélération estimée sur les **trois seules observations passées**.
+- `A5_fixed_past_only_blend` prend la moyenne à coefficients figés 50/50 des prévisions linéaire et accélérée. Ce n'est **pas** une fusion multimodale : les deux entrées viennent de la même détection XY.
+- Les cinq bras évaluables sont maintenant `A0`, `A1`, `A2`, `A5` (fusion de caractéristiques corrélées uniquement) et le candidat expérientiel P1. Les bras raster natif et fusion multireprésentation `A3/A4/A6/A7` restent **à implémenter**. Ils ne reçoivent pas de scores fictifs.
+- Tous les paramètres de ces contrôles sont fixés par code **avant** révélation de la cible, mais l'évaluation reste un rejeu rétrospectif des engagements de P1, pas un nouveau run de pré-engagement par bras.
+- Aucune valeur moyenne ni victoire P2 n'est revendiquée tant que la CI et les exécutions sur épisodes indépendants ne sont pas inspectées.
+
+**Statut épistémique immuable :** `P2_INCONCLUSIVE`, `new_fusion_predictor_implemented=false`, `ablation_gain_proven=false`.
