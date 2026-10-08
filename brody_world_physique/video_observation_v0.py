@@ -100,29 +100,50 @@ def make_measurements(
 
 def _annotate_frame(cv2: Any, capture: Any, frame_index: int,
                     window_name: str, prompt: str) -> tuple[float, float]:
+    """Manual image-coordinate annotation, preview and explicit confirmation.
+
+    WINDOW_AUTOSIZE preserves the image's native pixel grid; a freely
+    resized window can lead to ambiguous mouse-image coordinate transforms.
+    A click is not final until the user presses Enter/Space.
+    """
     capture.set(cv2.CAP_PROP_POS_FRAMES, frame_index)
     ok, frame = capture.read()
     if not ok or frame is None:
         raise RuntimeError(f"cannot decode frame {frame_index}")
+    height, width = frame.shape[:2]
     selected: dict[str, tuple[float, float]] = {}
 
     def mouse(event: int, x: int, y: int, flags: int, param: Any) -> None:
-        if event == cv2.EVENT_LBUTTONDOWN:
+        if event == cv2.EVENT_LBUTTONDOWN and 0 <= x < width and 0 <= y < height:
             selected["xy"] = (float(x), float(y))
 
-    cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
+    cv2.namedWindow(window_name, cv2.WINDOW_AUTOSIZE)
     cv2.setMouseCallback(window_name, mouse)
     try:
-        while "xy" not in selected:
+        while True:
             canvas = frame.copy()
             cv2.putText(
-                canvas, prompt[:95], (15, 30), cv2.FONT_HERSHEY_SIMPLEX,
+                canvas, prompt[:92], (15, 30), cv2.FONT_HERSHEY_SIMPLEX,
                 0.55, (255, 255, 255), 2, cv2.LINE_AA,
             )
+            if "xy" in selected:
+                x, y = (int(q) for q in selected["xy"])
+                cv2.drawMarker(canvas, (x, y), (0, 255, 255),
+                               markerType=cv2.MARKER_CROSS, markerSize=24,
+                               thickness=2)
+                cv2.putText(canvas, f"Click: x={x} y={y} | Enter=OK R=redo",
+                            (15, height - 18), cv2.FONT_HERSHEY_SIMPLEX,
+                            0.55, (255, 255, 255), 2, cv2.LINE_AA)
             cv2.imshow(window_name, canvas)
-            if (cv2.waitKey(25) & 0xFF) == 27:
+            key = cv2.waitKey(25) & 0xFF
+            if key == 27:
                 raise RuntimeError("user cancelled annotation with Escape")
-        return selected["xy"]
+            if key in (ord("r"), ord("R")):
+                selected.clear()
+            if key in (13, 10, 32) and "xy" in selected:
+                point = selected["xy"]
+                print(f"FRAME {frame_index}: confirmed pixel position x={point[0]:.0f}, y={point[1]:.0f}")
+                return point
     finally:
         cv2.destroyWindow(window_name)
 
