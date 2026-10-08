@@ -112,7 +112,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Brody Image original vision fidelity: source/IN, layered reconstruction, region rigour and functional tests](docs/24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md)**
 - **[Image I1/R1 CPU executable baseline — subject isolation, transplant and pixel fidelity report](docs/25_BRODY_IMAGE_I1_R1_PROTOTYPE_CPU.md)**
 - **[Jarvis Qwen-VL local adapter — descriptive candidate, no new model download, fixed/portable setup](docs/26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md)**
-- **[Reverso + World Model + selective learning: source-grounded method and executable first slice](docs/27_REVERSO_WORLD_MODEL_APPRENTISSAGE_SELECTIF.md)**
+- **[Reverso + World Model + selective learning: source-grounded method and executable first slice](docs/27_REVERSO_WORLD_MODEL_APPRENTISSAGE_SELECTIF.md)**\n- **[Pre-verbal learning: situated world prediction, physics/sensor evidence, scoped knowledge vs truth](docs/28_APPRENTISSAGE_PREVERBAL_MONDE_PHYSIQUE.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
