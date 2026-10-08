@@ -28,6 +28,36 @@ def _finite_xy(value):
             and all(type(x) in (int, float) and isfinite(x) for x in value))
 
 
+def past_only_predictions(history, future_time):
+    """Deterministic candidate arms, conditioned ONLY on three past points.
+
+    These are all derived from the same already-detected XY history. This is a
+    diagnostic feature ablation, NOT proof of independent raster/spatial fusion.
+    """
+    if len(history) != 3 or not history[0].time_s < history[1].time_s < history[2].time_s < future_time:
+        raise ValueError("invalid chronology")
+    a,b,c = history
+    dt1 = b.time_s-a.time_s
+    dt2 = c.time_s-b.time_s
+    horizon = future_time-c.time_s
+    if min(dt1,dt2,horizon) <= 0:
+        raise ValueError("invalid time interval")
+    linear=[]
+    accelerated=[]
+    for axis in ("x","y"):
+        va=(getattr(b,axis)-getattr(a,axis))/dt1
+        vb=(getattr(c,axis)-getattr(b,axis))/dt2
+        acceleration=(vb-va)/((dt1+dt2)/2)
+        linear.append(getattr(c,axis)+vb*horizon)
+        accelerated.append(getattr(c,axis)+vb*horizon+acceleration*horizon*(horizon+dt2)/2)
+    # Fixed coefficients declared before seeing any target, not fitted on TEST.
+    blended=[(p+q)/2 for p,q in zip(linear,accelerated)]
+    return {"A0_last_observation":[c.x,c.y],
+            "A1_linear_kinematics":linear,
+            "A2_spatial_acceleration":accelerated,
+            "A5_fixed_past_only_blend":blended}
+
+
 def evaluate(suite: Path, receipts: Path) -> dict:
     """Independent scoring of existing P1 learner and two strict baselines.
 
@@ -88,15 +118,8 @@ def evaluate(suite: Path, receipts: Path) -> dict:
                 raise ValueError("invalid sealed prediction")
             if status is None or not isinstance(status, str):
                 raise ValueError("missing status")
-            dt = history[2].time_s-history[1].time_s
-            horizon = future_index/24-history[2].time_s
-            if dt <= 0 or horizon <= 0:
-                raise ValueError("invalid cadence")
-            linear = [history[2].x + (history[2].x-history[1].x)*horizon/dt,
-                      history[2].y + (history[2].y-history[1].y)*horizon/dt]
-            scores = {"A0_last_observation": [history[2].x, history[2].y],
-                      "A1_linear_kinematics": linear,
-                      "P1_experiential_candidate": xy}
+            scores = past_only_predictions(history, future_index/24)
+            scores["P1_experiential_candidate"] = xy
             for arm, prediction in scores.items():
                 outcome = {"clip":name,"source_sha256":digest,
                            "heldout_frame_index":future_index,
@@ -109,7 +132,7 @@ def evaluate(suite: Path, receipts: Path) -> dict:
                     outcome["error_px"] = hypot(prediction[0]-target.x,prediction[1]-target.y)
                 outcomes.append(outcome)
     summary = {}
-    for arm in ("A0_last_observation","A1_linear_kinematics","P1_experiential_candidate"):
+    for arm in ("A0_last_observation","A1_linear_kinematics","A2_spatial_acceleration",\n                "A5_fixed_past_only_blend","P1_experiential_candidate"):
         subset = [x for x in outcomes if x["arm"] == arm]
         vals = [x["error_px"] for x in subset if x["error_px"] is not None]
         summary[arm] = {"evaluated":len(vals),"total":len(subset),
@@ -119,9 +142,9 @@ def evaluate(suite: Path, receipts: Path) -> dict:
     return {"schema":SCHEMA, "suite_sha256":_hash(suite),
             "precommit_file_sha256":_hash(receipts),
             "source_kind":"SIMULATED","independent_view_sources":False,
-            "new_fusion_predictor_implemented":False,
+            "new_fusion_predictor_implemented":False,\n            "past_only_feature_blend_implemented":True,\n            "arm_lineage":{"A2_spatial_acceleration":"three past XY plus timestamps",\n                            "A5_fixed_past_only_blend":"fixed average of A1 and A2, shared XY source"},
             "ablation_gain_proven":False,"p2_verdict":"P2_INCONCLUSIVE",
-            "limitation":"retrospective scoring of prior precommits; A2-A7 not implemented",
+            "limitation":"retrospective scoring of prior precommits; raster-independent and genuine cross-representation A3/A4/A6/A7 not implemented; A5 is a same-source blend",
             "summary":summary,"per_episode":outcomes,
             "native_memory_write_allowed":False,"decision_authority":"KX108_ONLY"}
 
