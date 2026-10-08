@@ -63,7 +63,7 @@ class DrawingSchoolContractsTests(TestCase):
         points=black_pixels(draw_strokes([(24,24,32,24)]))
         skill=DrawingSkillCandidateV0(
             source_sha256="b"*64,lesson_ref="unrelated",
-            source_bbox=(0,0,63,63),
+            source_bbox=bbox_of(points),
             signature=signature_for(points,bbox_of(points)),
             strokes=((0,0,63,63),), final_pixel_error=999,
         )
