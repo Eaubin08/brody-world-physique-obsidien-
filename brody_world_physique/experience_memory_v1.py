@@ -63,6 +63,12 @@ def code_fingerprint(capability:str)->dict[str,str]:
             "version_note":"CURRENT_LOCAL_FILE_CONTENT_SHA256"}
 
 
+def gesture_snapshot(gesture:GestureV1)->dict:
+    # JSON-stable coordinates: dataclasses.asdict keeps tuple values in
+    # Python, but serialized receipts must remain verifiable after parsing.
+    return {"kind":gesture.kind,"points":[list(p) for p in gesture.points]}
+
+
 def checked_gesture(value:dict)->GestureV1:
     if not isinstance(value,dict) or set(value)!={"points","kind"}:
         raise ValueError("invalid gesture structure")
@@ -115,13 +121,13 @@ def verify_recipe(model:Image.Image, initial:list[dict], trace:list[dict],
         elif action=="ERASE":
             if not 0<=idx<len(drawn) or after is not None or before is None:
                 raise ValueError("ERASE receipt mismatch")
-            if asdict(drawn[idx])!=before:
+            if gesture_snapshot(drawn[idx])!=before:
                 raise ValueError("ERASE source gesture differs")
             drawn.pop(idx)
         else:
             if not 0<=idx<len(drawn) or after is None or before is None:
                 raise ValueError("REPLACE receipt mismatch")
-            if asdict(drawn[idx])!=before:
+            if gesture_snapshot(drawn[idx])!=before:
                 raise ValueError("REPLACE source gesture differs")
             drawn[idx]=checked_gesture(after)
         next_error=_error(source,drawn)
@@ -133,7 +139,7 @@ def verify_recipe(model:Image.Image, initial:list[dict], trace:list[dict],
     if current!=expected_final_error:
         raise ValueError("final score does not replay")
     return {"replayed_step_count":len(trace),"replayed_final_pixel_error":current,
-            "replayed_gestures":[asdict(x) for x in drawn],
+            "replayed_gestures":[gesture_snapshot(x) for x in drawn],
             "replayed_png_sha256":None}
 
 
