@@ -50,10 +50,11 @@ def chroma_key_mask(
         raise ValueError("tolerance must be in 0..255")
     rgb = source.convert("RGB")
     mask = Image.new("L", rgb.size)
-    mask.putdata(
-        0 if max(abs(pixel[c] - key[c]) for c in range(3)) <= tolerance else 255
-        for pixel in rgb.getdata()
-    )
+    pixels = rgb.load()
+    mask.putdata([
+        0 if max(abs(pixels[xx, yy][c] - key[c]) for c in range(3)) <= tolerance else 255
+        for yy in range(rgb.height) for xx in range(rgb.width)
+    ])
     return mask
 
 
