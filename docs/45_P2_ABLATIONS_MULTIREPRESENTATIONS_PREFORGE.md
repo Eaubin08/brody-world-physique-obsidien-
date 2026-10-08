@@ -86,3 +86,20 @@ Deux contrôles supplémentaires sont implémentés dans `p2_ablation_diagnostic
 - Aucune valeur moyenne ni victoire P2 n'est revendiquée tant que la CI et les exécutions sur épisodes indépendants ne sont pas inspectées.
 
 **Statut épistémique immuable :** `P2_INCONCLUSIVE`, `new_fusion_predictor_implemented=false`, `ablation_gain_proven=false`.
+
+
+## Tranche P2.2 — Raster → spatial (implémentation de laboratoire)
+
+- **A3 raster seul** : extrait trois centres directement des frames vidéo jusqu'au cutoff autorisé, avec segmentation HSV/contours et hypothèse explicite de fiduciel synthétique. Ne consulte pas les positions du prédicteur spatial pendant l'extraction. Extrapolation linéaire depuis les centres raster.
+- **A6 fusion fixe raster + spatial** : accepte les deux prédictions seulement lorsqu'elles sont compatibles à **3 px** ; calcule alors leur moyenne 50/50. Sinon **HOLD**. Règle figée avant les futurs. Ce n'est ni un entraînement appris, ni un moteur général de fusion.
+- Les deux organes utilisent **une même vidéo synthétique** ; routes de calcul séparées ≠ deux sources indépendantes. Le détecteur raster reste également conçu pour les propriétés du fixture.
+- Il s'agit d'un **diagnostic rétrospectif** par rapport aux précommits P1 : les sorties A3/A6 ne possèdent pas encore de pré-engagement autonome avant décodage de la future frame par le comparateur.
+- **Non démontré** : A4 multimodal autonome, A7 leave-one-view-out complet, vrai transfert inter-générateurs, génération Reverso ROI conditionnée sur A6, calibration des seuils et estimation de l'incertitude inter-sources.
+
+**Commande tests ciblés :**
+
+```powershell
+py -m unittest tests.test_p2_ablation_diagnostic_v0 tests.test_p2_raster_forecast_v0 -v
+```
+
+Les ajouts restent candidats en PR, sans fusion dans main. **Aucun gain P2 certifié** et `P2_INCONCLUSIVE` reste le seul verdict valide.
