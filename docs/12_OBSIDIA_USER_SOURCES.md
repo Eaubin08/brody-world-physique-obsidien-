@@ -408,3 +408,83 @@ Role:
 - Veto Harmonique descriptions.
 
 Status: **HISTORICAL CONSTITUTION SOURCE — CURRENT RUNTIME MUST OVERRIDE WHERE DIFFERENT**
+
+---
+
+## L. F0 additional source reads — 2026-10-08
+
+**Mode:** supplementary document/source index only, not current-runtime validation. Drive archives can contain conversations, assistant-generated drafts or pseudocode. Their presence does not establish implementation, exclusive authorship or scientific priority. Detailed findings: [17_F0_SOURCE_RECONCILIATION.md](17_F0_SOURCE_RECONCILIATION.md). Entry-by-entry traceability: [18_CONCEPT_SOURCE_MATRIX.md](18_CONCEPT_SOURCE_MATRIX.md).
+
+### Protocole de Friction Symbolique et Apprentissage Autonome d'Obsidia
+
+Google Drive:  
+https://docs.google.com/document/d/1Zu6jX4P-RFB8owuCNTs6yWTkC8Yvo5Ef34lYTtcjBFo/edit
+
+Read-back findings: historic divergence example (logical/diffusive scores), illustrative `FRICTION_NODE`, Continuum staging, AVDR variant *Observation → Validation → Disruption → Réintégration*. **Status: HISTORICAL DESIGN + CODE EXAMPLE / NOT RUNTIME PROOF.**
+
+### Rapport Technique : Architecture de l'Apprentissage et Sécurité Cinématique (Module 5)
+
+Google Drive:  
+https://docs.google.com/document/d/1iVwqEeo2TTa3Mv6wYFdJOq_8-mAfFpz7-AJ46iMxm7o/edit
+
+Read-back findings: passive Shadow learning, separation from physical action, FAM memory proposals, LiteRT/JAX cited as intended techniques. **Status: TECHNICAL DESIGN SOURCE / RUNTIME UNVERIFIED.**
+
+### Obsidia – Continuum Protocol Core
+
+Google Drive:  
+https://docs.google.com/document/d/13jSPWFtRvbjHd5X9zjl012e_flqrQKWHXzDmjyNTK4Q/edit
+
+Read-back finding: large conversation export. **Status: HISTORICAL CONVERSATION SOURCE PACK; DATE/AUTHOR RECONSTRUCTION REQUIRED.**
+
+### Obsidia V1 — Intelligence humaine vs IA / Intelligence expérientielle / modules nouveaux / cognition musicale / réciprocité
+
+Google Drive:  
+https://docs.google.com/document/d/1ANycxJuuRVCIVjbUySDME1bE_Q3Pdt3qX7oVVXLIJYk/edit
+
+Read-back finding: large dialogue-style history, including evolving proposals. **Status: HISTORICAL CONVERSATION SOURCE PACK / NO CANON ASSUMED.**
+
+### Obsidia suite 29.07 deu — World Foundry passage
+
+Google Drive:  
+https://docs.google.com/document/d/1d5Gf5-r1d43wetqaANCzCff5CPyYckwTw9_AuWwicpg/edit
+
+Read-back finding: a `WorldSpec` proposal (ontology, entities, laws, events, initial/hidden states, perturbations, objectives, invariants, renderers), `Curriculum Forge` concept. **Status: WORLD FOUNDRY SOURCE PACK / DESIGN ONLY.**
+
+### Obsidia – Les Protocoles Fondateurs & Méthodes de Création
+
+Google Drive:  
+https://docs.google.com/document/d/1R-BkkUUknUUs-C0rUA6LwBAISGIGwx3P8ycOojbjzOk/edit
+
+Read-back finding: historic AVDR expansion *Apprentissage par Vision-Dérive-Réflexion*, plus creative protocols. **Status: HISTORICAL NAME-VARIANT SOURCE; DO NOT OVERWRITE RESEARCH OR GENCOIN AVDR.**
+
+### Architecture du Système de Mémoire Obsidia : L'Expérience Cognitive Intégrée
+
+Google Drive:  
+https://docs.google.com/document/d/1SdeEtK9zpZoAgnyTSQtjbwTYO0cDG3_iFqgBof5kRPA/edit
+
+Read-back finding: FAM, historical identity/archive/memory proposals and Merkle-like sealing; strong source claims require code/testing confirmation. **Status: HISTORICAL MEMORY DESIGN / NOT NATIVE MEMORY CANON.**
+
+### Obsidia_Dossier_Technique_Balance_Mathematique
+
+Google Drive:  
+https://docs.google.com/document/d/1SKfhUnnGYKiOM9w8FDPavtEtwqDWb7HH/edit
+
+Read-back finding: remove a factor temporarily, simplify, then reintroduce by inverse transformation. **Status: HISTORICAL MATH METHOD, DISTINCT FROM BALANCE PROPORTIONNELLE EXPONENTIELLE UNTIL PROVED OTHERWISE.**
+
+### Ta vision comme MOTEUR UNIVERSEL capable de générer les grands régimes physiques
+
+Google Drive:  
+https://docs.google.com/document/d/1cUJjRYhfn6Sg837G-8GvvTLntNvaLHd3LbwtKF2P6ew/edit
+
+Read-back finding: speculative modeling and methodological proposals across physical regimes, including thermodynamic context. **Status: PHYSICAL-RESEARCH SOURCE ONLY / NO SCIENTIFIC CLAIM VALIDATED.**
+
+### Complementary Shazam algorithm document — identified, direct audit pending
+
+Google Drive:  
+https://docs.google.com/document/d/1wcjlLs1r8t_bANzCtaFK57kTidUgG2IruaF-NCswT4k/edit
+
+Identified by Drive metadata as *L'Algorithme Shazam Cognitif et la Matrice des 34 Arbres*. **Status: DISCOVERED / CONTENT NOT YET RECONCILED.**
+
+### Duplicate-file caution
+
+The two Drive documents already indexed in section A — *L’Éveil de l’OS Cognitif* and *L’Architecture Organique et Procédurale de l’OS Cognitif* — yielded identical returned text in the 2026-10-08 audit. Retain both archival references but **do not count them as independent evidence** without version history / authorship verification.
