@@ -1,6 +1,6 @@
 # Brody World Physique Obsidia
 
-**Status:** IMAGE R1 CPU EDITOR + I1 JARVIS-QWEN-VL LOCAL CLIENT IMPLEMENTED; PHYSICAL-PC CHECK AND GENERATOR NOT YET VALIDATED  
+**Status:** BRODY IMAGE: REAL PC QWEN-VL DESCRIPTION VERIFIED BY USER; CPU IMAGE EDITOR + LOSSLESS REVERSO EXPERIMENT + RETENTION CANDIDATE GATES IMPLEMENTED; WORLD MODEL / GENERATOR / LEARNING RUNTIME NOT CONNECTED  
 **Authority:** Obsidia / X108 remains external and unchanged.  
 **Purpose:** visual perception, physical-world learning and **image generation with reverse evaluation**, while keeping Obsidia's existing organs separate.
 
@@ -112,6 +112,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Brody Image original vision fidelity: source/IN, layered reconstruction, region rigour and functional tests](docs/24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md)**
 - **[Image I1/R1 CPU executable baseline — subject isolation, transplant and pixel fidelity report](docs/25_BRODY_IMAGE_I1_R1_PROTOTYPE_CPU.md)**
 - **[Jarvis Qwen-VL local adapter — descriptive candidate, no new model download, fixed/portable setup](docs/26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md)**
+- **[Reverso + World Model + selective learning: source-grounded method and executable first slice](docs/27_REVERSO_WORLD_MODEL_APPRENTISSAGE_SELECTIF.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -148,6 +149,30 @@ candidate**, not an F16 real-world observation. It does **not** pass through
 Brody chat, Binder, native memory, or a generation model yet. Tests mock the
 local HTTP server; **they are not a successful real Qwen-VL PC connection**.
 See [26 — I1 Jarvis adapter and honest bring-up steps](docs/26_BRODY_IMAGE_I1_JARVIS_QWEN_VL_ADAPTER.md).
+
+## Reverso pixel roundtrip (new bounded method experiment)
+
+This is a **literal decoded RGBA pixel identity** baseline, not semantic
+segmentation, AI generative reconstruction or learned world physics. The source
+is decomposed into lossless spatial layers and reconstructed *from saved
+layers*, then validated pixel by pixel / using an exact decoded pixel digest.
+
+```powershell
+py -m brody_world_physique.reverso_learning_v0 --image "C:\\photos\\reference.jpg" --out "build\\reverso-photo"
+```
+
+Result: `manifest.json`, independent `lossless_layers/*.png`, and
+`reconstructed.png`. The module also defines **candidate** world relations and
+a proposed `triage_learning` classification of source, raw outputs, skills,
+invariants, errors and hypotheses, with NO native-memory writes. See
+[27 — Reverso, world model and selective learning](docs/27_REVERSO_WORLD_MODEL_APPRENTISSAGE_SELECTIF.md).
+
+**Physical confirmation:** the user ran the Jarvis Qwen-VL endpoint on their
+fixed Windows PC with a personally selected photo; model description and
+`build/vision-candidate.json` were produced. This proves the local
+file-to-Qwen-description route on that PC only. The photo and output are not
+committed to GitHub. Connecting F16/MMonde/World Model to this receipt, Brody
+reasoning, Binder and genuine generation remain future work.
 
 ## Current milestone
 
