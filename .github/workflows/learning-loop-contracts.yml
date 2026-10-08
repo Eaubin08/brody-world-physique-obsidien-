@@ -48,10 +48,16 @@ jobs:
         run: python -m unittest discover -s tests -p "test_*.py" -v
       - name: Run bounded synthetic image demonstration
         run: python -m examples.demo_image_v0 --out build/brody-image-demo
+      - name: Run bounded synthetic preverbal world experiment
+        run: |
+          python -m examples.demo_preverbal_world_v0 --out build/preverbal-world-demo
+          python -m brody_world_physique.preverbal_prediction_v0 --input build/preverbal-world-demo/source_measurements.json --out build/preverbal-world-demo/verified.json
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
         with:
           name: brody-image-i1r1-synthetic-demo
-          path: build/brody-image-demo/
+          path: |
+            build/brody-image-demo/
+            build/preverbal-world-demo/
           retention-days: 7
