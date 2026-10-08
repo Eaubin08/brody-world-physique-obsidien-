@@ -163,6 +163,11 @@ class EndToEndOrientationReplayTests(TestCase):
         evaluation=json.loads((self.v42/"evaluation.json").read_text())
         self.assertFalse(evaluation["composition"]["student_saw_target_before_render"])
         self.assertTrue(evaluation["composition"]["role_masks_transformed_by_programmed_motor"])
+        self.assertTrue(evaluation["composition"]["relation_score"]["both_match_direction"])
+        self.assertTrue(evaluation["composition"]["relation_score"]["both_match_reciprocal"])
+        # Raw pixel mismatch is deliberately reported separately and may
+        # fail even when orientation structure is correctly reconstructed.
+        self.assertIn("better_than_blank", evaluation["composition"]["score"])
 
     def test_mutation_of_negative_reciprocal_receipt_rejected(self):
         filename=self.v42/"evaluation.json"
