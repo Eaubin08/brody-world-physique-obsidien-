@@ -81,6 +81,28 @@ Conserver **source + IN + essai + erreur + correction + test de réemploi + stat
 
 Une **compétence candidate** doit franchir des tests séparés : `premier dessin`, `correction`, `nouvelle référence`, `transfert stable sur plusieurs contextes`, `source vérifiée`, `revue de promotion`. Aujourd'hui seules les premières étapes sont implémentées. Comme le spécifie [05 — mémoire existante](05_LEARNING_MEMORY.md), une image copiée n'est pas un savoir général.
 
+### Réconciliation du vrai contrat Native Memory (audit source en lecture seule)
+
+Le dépôt Obsidia audité dans [02 — Contrats](02_CONTRACTS.md) contient réellement :
+
+- [`periphery/memory/memory_candidate.py`](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/memory/memory_candidate.py) : `MemoryCandidate(candidate_id, source_id, source_type, content_hash, content_summary, status, memory_write_allowed=False, auto_promotion_allowed=False, created_at, risk_flags)` ;
+- [`memory_source_types.py`](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/memory/memory_source_types.py) : `MemorySourceType` (BRODY_RUNTIME, DOCUMENT_INGESTION, FEEDBACK_CAPTURE, OPERATOR_SESSION, etc.) et `MemoryCandidateStatus` (dont CANDIDATE_ONLY, NEEDS_REVIEW, FROZEN, PROMOTED_MANUAL_ONLY) ;
+- [`brody_obsidia_native_memory.py`](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/apps/obsidia_api/brody_obsidia_native_memory.py) : **retrieval local readonly** d'un index validé ; il ne décide pas l'activation, n'écrit rien et conserve `KX108_ONLY`.
+
+**Écart explicite :** le `MemorySourceType` de cet instantané n'a pas d'entrée visuelle `DRAWING_EXPERIENCE` ou `WORLD_EXPERIENCE`. Même si `FEEDBACK_CAPTURE` est présent, le choix du type doit être validé contractuellement. Par conséquent, le JSONL de cours est une **mémoire candidate expérimentale isolée**, **PAS** un `MemoryCandidate` officiellement ingéré. Ne jamais pousser vers l'index Native Memory sans analyse de la branche active, revue humaine, mapping de source et voie d'écriture autorisée.
+
+Correspondance à préparer, et non mutation réalisée :
+
+```text
+teacher image SHA + IN
+ -> drawing attempts + corrected errors + failed recall
+ -> episode/skill candidate + verified local replay
+ -> source_type review + trusted source_id + risk_flags
+ -> existing MemoryCandidate lifecycle (CANDIDATE_ONLY)
+ -> evaluation independent + human review
+ -> only existing promotion path can consider canonization
+```
+
 ### Invariants de gouvernance
 
 - `KX108_ONLY`, `memory_write=False`, `kernel_mutation=False`, `emits_act=False`. Aucune modification de Sigma, Binder, Graphiti (obsolète runtime) ou Native Memory.
