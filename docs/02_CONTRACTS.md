@@ -1,6 +1,6 @@
 # 02 — Canonical Contracts — F0 Freeze Candidate
 
-**Status:** F0 AUDITED / FREEZE CANDIDATE  
+**Status:** F0 AUDITED / IMPLEMENTED FREEZE CANDIDATE  
 **Date:** 2026-10-08  
 **Authority:** KX108_ONLY remains external and unchanged.
 
@@ -177,7 +177,7 @@ The term **VisualIR** may remain as a project-level name for a serialized/derive
 
 ## 2. What F0 still needs to add
 
-The audit found four genuinely missing/common contracts for the learning loop.
+The audit found four genuinely missing/common contracts for the learning loop. They are now implemented and CI-tested on the F0 implementation branch.
 
 ### 2.1 WorldTransformationV0 — NEW
 
@@ -486,13 +486,11 @@ F0 does **not** fork `TransitionV0`.
 
 Two acceptable implementation paths exist:
 
-### Preferred
+### V0 decision — additive compatibility binding
 
-Add an optional `transformation_ref` upstream to `TransitionV0` after dedicated regression/audit.
+Do **not** mutate the already verified upstream `TransitionV0` during F0.
 
-### Compatibility path
-
-Create a small additive binding:
+Use the implemented additive binding:
 
 ```text
 TransitionTransformationBindingV0
@@ -501,7 +499,7 @@ TransitionTransformationBindingV0
   provenance_refs[]
 ```
 
-until upstream migration is accepted.
+This preserves the verified F12 contract while making the transformation link explicit. A later upstream migration may replace the binding only after dedicated regression/audit.
 
 No hidden action semantics may be stuffed into `relation_refs`.
 
@@ -693,11 +691,11 @@ WorldStateV0 / WorldStateCandidateV0
 | VisualPrimitiveV0 | EXISTING / ADOPT |
 | ObservedStateV0 | REJECT — DUPLICATE |
 | generic VisualIR root | HOLD — NOT NEEDED YET |
-| WorldTransformationV0 | NEW / BUILD |
-| WorldStateProjectionV0 | NEW / BUILD |
-| WorldStateDeltaV0 | NEW / BUILD |
-| WorldExperienceCandidateV0 | NEW / BUILD |
-| TransitionTransformationBindingV0 | NEW ONLY IF upstream field not added |
+| WorldTransformationV0 | IMPLEMENTED / CI VERIFIED |
+| WorldStateProjectionV0 | IMPLEMENTED / CI VERIFIED |
+| WorldStateDeltaV0 | IMPLEMENTED / CI VERIFIED |
+| WorldExperienceCandidateV0 | IMPLEMENTED / CI VERIFIED |
+| TransitionTransformationBindingV0 | IMPLEMENTED / V0 COMPATIBILITY DECISION |
 | SENS EventRef/EventCandidate | RESEARCH SOURCE / SELECTIVE PORT |
 | OccurrenceClaim/Derivation | RESEARCH SOURCE / SELECTIVE PORT |
 | MemoryCandidate lifecycle | EXISTING / REUSE |
@@ -727,4 +725,4 @@ temporal relation != causal proof
 semantic occurrence claim != physical occurrence proof
 ```
 
-This is the F0 contract freeze candidate.
+All new F0 contracts carry explicit `schema_version` fields. This is the F0 implemented freeze candidate.
