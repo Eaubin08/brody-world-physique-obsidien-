@@ -125,6 +125,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[Drawing from memory V3 — immediately after hiding a new teacher image, after three intervening exercises, and new composition from prior strokes without a visible answer](docs/38_DESSIN_MEMOIRE_MODELE_CACHE_V3.md)**
 - **[V4 world-experience bridge — derive MMonde/F12-compatible observations, transformations, errors and candidate skills from V3 without importing SENS knowledge promotion](docs/39_BRODY_MONDE_EXPERIENCE_V4_BRIDGE.md)**
 - **[V4.1 pixel-derived relations — learn 2-component proximity from observed images, test 90° rotation/translation/scale, expose inverted-layout failure and reconstruct without teacher boxes](docs/40_V4_1_RELATIONS_SPATIALES_INVARIANTS_ET_COMPOSITION.md)**
+- **[V4.2 orientation & reciprocity — learn four image-frame directions from labeled geometric episodes, derive reciprocal relations, record unsupported HOLDs and keep pixel vs relational reconstruction scores separate](docs/41_BRODY_V4_2_ORIENTATION_RECIPROQUE_MONDE.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
@@ -448,6 +449,31 @@ py -m brody_world_physique.world_relations_school_v4_1 --prior-v3 "build\\known-
 Source evidence remains unchanged. Native Memory stays read-only; upstream
 MMonde/GPS/F12/F16 and SENS/B8 branches are not imported for execution,
 merged or modified. [Results and Windows commands](docs/40_V4_1_RELATIONS_SPATIALES_INVARIANTS_ET_COMPOSITION.md).
+
+## V4.2 — oriented visual relations, reciprocity, heldout reconstruction
+
+[`world_orientation_school_v4_2.py`](brody_world_physique/world_orientation_school_v4_2.py)
+verifies the prior V3, V4, V4.1 experiments and learns role/direction
+prototypes from **eight supervised synthetic raster lessons**. Eleven
+holdouts cover 0°, 90°, 180°, 270°, translation, scale, inversion, mirror,
+unsupported diagonal poses, distant parts, duplicate parts and occlusion.
+It derives reciprocal directions by **reversing vectors**, not by semantic
+knowledge, and keeps evidence for HOLD/contradiction. The final student
+composition is committed before a target is generated and evaluated on
+**two separate metrics**: exact-pixel error vs structural relation.
+
+```powershell
+py -m brody_world_physique.world_orientation_school_v4_2 --prior-v3 "build\\known-v3" --prior-v4 "build\\known-v4.json" --prior-v4-1 "build\\known-v4-1" --out "build\\orientation-v4-2"
+py -m brody_world_physique.world_orientation_school_v4_2 --prior-v3 "build\\known-v3" --prior-v4 "build\\known-v4.json" --prior-v4-1 "build\\known-v4-1" --verify "build\\orientation-v4-2"
+.\\scripts\\publish_local_evidence.ps1 -RunPath "build\\orientation-v4-2"
+```
+
+Publishing requires the user's existing `evidence/brody-local` worktree;
+the allowlisted script copies only JSON/JSONL and generated PNGs from
+the selected run and pushes **that evidence branch only**, not `main`.
+World states remain representations, candidate experiences are not canonical
+memory and nothing runs SENS/B8 or mutates the kernel.
+[Protocol and limitations](docs/41_BRODY_V4_2_ORIENTATION_RECIPROQUE_MONDE.md).
 
 ## Current milestone
 
