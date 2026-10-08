@@ -123,6 +123,7 @@ class WorldTransformationV0:
     transformation_id: str
     transformation_kind: str
     time: Any
+    schema_version: str = field(default="WORLD_TRANSFORMATION_V0", init=False)
     actor_ref: str | None = None
     target_refs: tuple[str, ...] = ()
     parameters: Mapping[str, Any] = field(default_factory=dict)
@@ -186,6 +187,7 @@ class WorldStateProjectionV0:
     projection_kind: ProjectionKindV0
     model_or_rule_ref: str
     generated_at: str
+    schema_version: str = field(default="WORLD_STATE_PROJECTION_V0", init=False)
     transformation_ref: str | None = None
     prediction_horizon: str | None = None
     assumptions: tuple[str, ...] = ()
@@ -236,6 +238,7 @@ class WorldStateDeltaV0:
 
     delta_id: str
     observed_world_state_ref: str
+    schema_version: str = field(default="WORLD_STATE_DELTA_V0", init=False)
     projected_state_ref: str | None = None
     baseline_state_ref: str | None = None
     matched_invariant_refs: tuple[str, ...] = ()
@@ -299,6 +302,7 @@ class WorldExperienceCandidateV0:
     state_before_ref: str
     state_after_ref: str
     outcome: str
+    schema_version: str = field(default="WORLD_EXPERIENCE_CANDIDATE_V0", init=False)
     context_refs: tuple[str, ...] = ()
     transformation_ref: str | None = None
     projection_ref: str | None = None
