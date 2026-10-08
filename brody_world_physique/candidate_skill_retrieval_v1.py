@@ -43,8 +43,9 @@ def propose_stored_procedure(
     if not isinstance(skills,list) or not 1<=len(skills)<=MAX_EPISODES:
         raise ValueError("invalid candidate skill memory")
     ranked=sorted(
-        (sum(a!=b for a,b in zip(feat,s["signature"])),s)
-        for s in skills
+        ((sum(a!=b for a,b in zip(feat,skill["signature"])),skill)
+         for skill in skills),
+        key=lambda item:item[0],
     )
     nearest=ranked[:max_alternatives]
     options=[
