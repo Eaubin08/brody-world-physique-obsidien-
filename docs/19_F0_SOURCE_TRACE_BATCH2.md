@@ -145,3 +145,30 @@ The physical adapter treats measurements, physical quantities, model refs and ev
 5. Ne pas fusionner les PR F0 et ne pas déclencher F1 sur la seule présence documentaire.
 
 **Conclusion de cette passe :** de nombreuses fiches disposent maintenant d'une preuve de *source* ou de *code*, mais cela ne complète ni la recherche d'origine individuelle ni une revalidation des tests runtime.
+
+
+## 8. Vérification de la branche SENS expérimentale originale
+
+**Source exacte :** `obsidia-x108-proofs` commit [`85d55e3538f1`](https://github.com/Eaubin08/obsidia-x108-proofs/commit/85d55e3538f1b049f2f9eb7f12892928187d3de4), branche de recherche `exp/semantic-grammar-cognitive-lattice-v0` sans ancêtre commun avec la ligne runtime dominante. **Aucune fusion implicite.**
+
+- [EventRef / identités locales](https://github.com/Eaubin08/obsidia-x108-proofs/blob/85d55e3538f1b049f2f9eb7f12892928187d3de4/app/semantic/lattice/events.py) : `EVENT_ID_SCOPE="frame_local"`; ni identité de mémoire ni identité physique.
+- [OccurrenceClaim / OccurrenceDerivation](https://github.com/Eaubin08/obsidia-x108-proofs/blob/85d55e3538f1b049f2f9eb7f12892928187d3de4/app/semantic/lattice/occurrence_derivation.py) : *affirmation linguistique* sur la réalisation; `NO_ASSERTION` distinct de `UNRESOLVED`. Ne détermine ni vérité du monde ni gouvernance.
+- [Référence événementielle/anaphore](https://github.com/Eaubin08/obsidia-x108-proofs/blob/85d55e3538f1b049f2f9eb7f12892928187d3de4/app/semantic/lattice/event_reference_resolution.py) : réf démonstrative nominale dans une frame du parser, pas de résolution cross-message/mémoire.
+- [Tests M8-D2 (fichier vérifié)](https://github.com/Eaubin08/obsidia-x108-proofs/blob/85d55e3538f1b049f2f9eb7f12892928187d3de4/tests/test_occurrence_migration.py) : conservation de l'ancien `occurrence_status`, ajout du claim/derivation, préservation identité `EventRef`.
+
+**Statut : RESEARCH_CODE_READ, NON CANONICAL RUNTIME.** Présence du code et des tests constatée ; résultats de test non rejoués ici. Une migration peut sélectionner des idées mais doit prouver son propre contrat.
+
+## 9. Chaîne GPS : gate physique ≠ réponse kernel
+
+Source commit [`d1221fce6914`](https://github.com/Eaubin08/obsidia-gps-defense-/commit/d1221fce6914274f7b0c445a829739367b0c6abb) du domaine public GPS.
+
+- [Matrice des allégations GPS](https://github.com/Eaubin08/obsidia-gps-defense-/blob/d1221fce6914274f7b0c445a829739367b0c6abb/docs/CLAIM_MATRIX.md) : mentionne le **Physical Reality Gate** comme classe de recevabilité `AUTHENTICATED / DEGRADED / UNKNOWN / REJECTED`. Elle précise expressément que le gate physique **ne décide pas**.
+- [Adaptateur réponse X108](https://github.com/Eaubin08/obsidia-gps-defense-/blob/d1221fce6914274f7b0c445a829739367b0c6abb/evidence-pipeline/public_domain_bridge/gps_x108_gate.py) : normalise les réponses du kernel en `ACT / HOLD / BLOCK`; les champs incohérents/mal formés deviennent `HOLD`. Ce n'est **pas** le Physical Reality Gate.
+- [Quarantaine des claims RF](https://github.com/Eaubin08/obsidia-gps-defense-/blob/d1221fce6914274f7b0c445a829739367b0c6abb/evidence-pipeline/public_domain_bridge/gps_public_claim_guard_v0.py) : l'étiquette `RECORDED_RF_ATTACK` ne constitue pas une attribution causale d'attaque; elle est quarantinée.
+
+**Statut : UPSTREAM_DOC_READ + CODE RELEVANT VERIFIED / physical gate implementation exact path to review.** Il serait erroné de confondre l'adaptateur kernel avec le gate de recevabilité physique.
+
+## 10. Conséquence documentaire
+
+Le rapprochement de la recherche SENS et des preuves GPS est **conceptuel et contractuel**, pas une fusion de code. `OccurrenceClaim` décrit ce qu'une phrase affirme ; `Physical Evidence` décrit l'admissibilité des signaux ; `KX108` tranche uniquement dans son périmètre de décision. Changer les frontières de ces trois objets imposerait un nouveau contrat et des preuves dédiées.
+
