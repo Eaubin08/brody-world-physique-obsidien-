@@ -81,10 +81,10 @@ foreach ($stage in @('cold','one','four')) {
 
 **Si le ZIP n'est plus disponible**, les huit fichiers peuvent être recréés directement depuis le dépôt, avec les codecs locaux (les SHA-256 du MP4 peuvent varier selon l'encodeur, mais le générateur construit un manifeste cohérent) :
 
-\`\`\`powershell
+```powershell
 py -m examples.generate_experience_suite_v0 --out "build\videos-neuves"
 py -m brody_world_physique.experiential_video_v0 --suite "build\videos-neuves\suite.json" --out "build\essai-videos-neuves" --train-videos 4
-\`\`\`
+```
 
 Le code du **générateur** contient nécessairement les trajectoires synthétiques ayant servi à fabriquer les vidéos ; **le code du learner ne l'importe pas**. Ces formules ne sont ni des données physiques réelles, ni des lois accessibles à l'agent pendant le test.
 
