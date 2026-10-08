@@ -21,22 +21,22 @@ It builds a system that can:
 9. modify model weights only when accumulated evidence justifies it.
 
 ```text
-WorldState(t)
-    + Action
+WorldStateV0(t)
+    + WorldTransformationV0
         |
         v
-Transition Model
+prediction / transition model
         |
         v
-PredictedState(t+1)
+WorldStateProjectionV0(t+1)
         |
-        +---- compare ---- ObservedState(t+1)
+        +---- compare ---- WorldStateV0(t+1 observed/candidate)
                            |
                            v
-                        StateDelta
+                    WorldStateDeltaV0
                            |
                            v
-                   ExperienceCandidate
+              WorldExperienceCandidateV0
                            |
               +------------+------------+
               |            |            |
@@ -97,9 +97,10 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - [Sources and upstream references](docs/11_SOURCES.md)
 - [Obsidia / user primary sources](docs/12_OBSIDIA_USER_SOURCES.md)
 - [F0 cross-audit — SENS / MMonde / Memory / GPS](docs/13_F0_CROSS_AUDIT.md)
+- [F0 learning-loop contract implementation](docs/14_F0_LEARNING_LOOP_IMPLEMENTATION.md)
 
 ## Current milestone
 
-**F0 — Cross-audit complete; contract freeze candidate.**
+**F0 — Cross-audit + learning-loop contracts implemented; freeze candidate.**
 
-The audit found that most world/vision/evidence contracts already exist upstream. The next implementation gate is limited to the missing learning-loop contracts (`WorldTransformationV0`, `WorldStateProjectionV0`, `WorldStateDeltaV0`, `WorldExperienceCandidateV0`) plus tests. Model downloads remain deferred until after that contract gate and PC hardware inventory.
+The four missing learning-loop contracts are implemented with an additive `TransitionTransformationBindingV0`, explicit schema versions and sovereignty tests. No upstream `TransitionV0` mutation was made. Model downloads remain deferred; the next practical gate is the PC hardware inventory before F1 perception.
