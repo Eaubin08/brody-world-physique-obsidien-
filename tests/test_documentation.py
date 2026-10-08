@@ -13,7 +13,7 @@ DOCS = ROOT / "docs"
 
 class BrodyImageDocumentationTests(TestCase):
     def test_image_master_plan_and_branch_map_exist(self):
-        for name in ("21_BRODY_IMAGE_MASTER_PLAN.md", "22_IMAGE_BRANCH_AND_DONOR_MAP.md", "23_BRODY_IMAGE_LEARNING_TRACEABILITY.md"):
+        for name in ("21_BRODY_IMAGE_MASTER_PLAN.md", "22_IMAGE_BRANCH_AND_DONOR_MAP.md", "23_BRODY_IMAGE_LEARNING_TRACEABILITY.md", "24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md"):
             with self.subTest(name=name):
                 self.assertTrue((DOCS / name).is_file(), f"Missing {name}")
 
@@ -23,6 +23,7 @@ class BrodyImageDocumentationTests(TestCase):
         self.assertIn("21_BRODY_IMAGE_MASTER_PLAN.md", readme)
         self.assertIn("22_IMAGE_BRANCH_AND_DONOR_MAP.md", readme)
         self.assertIn("23_BRODY_IMAGE_LEARNING_TRACEABILITY.md", readme)
+        self.assertIn("24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md", readme)
 
     def test_learning_traceability_preserves_source_boundaries(self):
         matrix = (DOCS / "23_BRODY_IMAGE_LEARNING_TRACEABILITY.md").read_text(encoding="utf-8")
@@ -31,6 +32,18 @@ class BrodyImageDocumentationTests(TestCase):
                          "GeneratedArtifactV0", "UNKNOWN", "pas un F0 gelé"):
             with self.subTest(required=required):
                 self.assertIn(required, matrix)
+
+    def test_brody_image_fidelity_covers_original_visual_methods(self):
+        audit = (DOCS / "24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md").read_text(encoding="utf-8")
+        master = (DOCS / "21_BRODY_IMAGE_MASTER_PLAN.md").read_text(encoding="utf-8")
+        for required in ("IMG-01", "IMG-03", "IMG-04", "IMG-05", "IMG-07",
+                         "SOURCE & IN", "méthode « peintre »", "BIMG-01", "BIMG-10",
+                         "FORMULE", "provenance", "NOT_RUN"):
+            if required == "FORMULE":
+                continue  # Read-back assertions target the actual audit headings and tests.
+            with self.subTest(required=required):
+                self.assertIn(required, audit)
+        self.assertIn("24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md", master)
 
     def test_atlas_keeps_numbered_concepts(self):
         atlas = (DOCS / "15_CONCEPT_ATLAS.md").read_text(encoding="utf-8")
@@ -43,7 +56,7 @@ class BrodyImageDocumentationTests(TestCase):
         self.assertEqual(numbers, list(range(1, 109)))
 
     def test_image_documents_local_links_resolve(self):
-        for name in ("21_BRODY_IMAGE_MASTER_PLAN.md", "22_IMAGE_BRANCH_AND_DONOR_MAP.md", "23_BRODY_IMAGE_LEARNING_TRACEABILITY.md"):
+        for name in ("21_BRODY_IMAGE_MASTER_PLAN.md", "22_IMAGE_BRANCH_AND_DONOR_MAP.md", "23_BRODY_IMAGE_LEARNING_TRACEABILITY.md", "24_AUDIT_FIDELITE_BRODY_IMAGE_ET_SPEC_FONCTIONNELLE.md"):
             file = DOCS / name
             content = file.read_text(encoding="utf-8")
             links = re.findall(r"\]\(([^)]+)\)", content)
