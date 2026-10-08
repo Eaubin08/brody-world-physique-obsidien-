@@ -51,6 +51,10 @@ jobs:
           python -m brody_world_physique.drawing_memory_school_v3 --prior-v2 build/windows-instrument-school --out build/windows-drawing-hidden-v3
           python -m brody_world_physique.drawing_memory_school_v3 --verify build/windows-drawing-hidden-v3
           python -c "import json,pathlib; p=pathlib.Path('build/windows-drawing-hidden-v3'); x=json.loads((p/'evaluation.json').read_text()); assert x['episodes']==3 and x['reference_visible_during_drawing']==False and x['native_memory_write_allowed']==False; print('WINDOWS_314_HIDDEN_REFERENCE_DRAWING_PASS')"
+      - name: Windows 3.14 world-candidate bridge from checked image episodes
+        run: |
+          python -m brody_world_physique.world_experience_bridge_v4 --v3 build/windows-drawing-hidden-v3 --out build/world-candidate-v4.json
+          python -m brody_world_physique.world_experience_bridge_v4 --v3 build/windows-drawing-hidden-v3 --verify build/world-candidate-v4.json
   contracts-and-docs:
     runs-on: ubuntu-latest
     strategy:
@@ -123,6 +127,12 @@ jobs:
           python -m brody_world_physique.drawing_memory_school_v3 --prior-v2 build/instruments-full --out build/drawing-hidden-v3
           python -m brody_world_physique.drawing_memory_school_v3 --verify build/drawing-hidden-v3
           python -c "import json,pathlib; p=pathlib.Path('build/drawing-hidden-v3'); x=json.loads((p/'evaluation.json').read_text()); assert [e['level'] for e in x['results']]==['immediate','delayed','transfer']; assert x['episodes']==3 and x['reference_visible_during_drawing']==False; print('HIDDEN_REFERENCE_DRAWING_V3_PASS')"
+      - name: Bridge recorded drawing experiences to MMonde/F12 world candidates
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m brody_world_physique.world_experience_bridge_v4 --v3 build/drawing-hidden-v3 --out build/world-candidate-v4.json
+          python -m brody_world_physique.world_experience_bridge_v4 --v3 build/drawing-hidden-v3 --verify build/world-candidate-v4.json
+          python -c "import json,pathlib; p=pathlib.Path('build/world-candidate-v4.json'); v=json.loads(p.read_text()); assert len(v['experience_candidates'])==3 and len(v['views']['world_observations'])==6; assert v['semantic_boundary']['sens_pipeline_executed'] is False and v['native_memory_write_allowed'] is False; print('MMONDE_EXPERIENCE_BRIDGE_V4_PASS')"
       - name: Upload visible demonstration and provenance receipt
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
@@ -139,4 +149,5 @@ jobs:
             build/instruments-one/
             build/instruments-full/
             build/drawing-hidden-v3/
+            build/world-candidate-v4.json
           retention-days: 7
