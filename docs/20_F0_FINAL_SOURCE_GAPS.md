@@ -40,7 +40,7 @@ Le rapprochement entre école virtuelle gouvernée et apprentissage par simulati
 Ce sont des **paraphrases contextuelles** de messages attribués à l'utilisateur, **pas des citations verbatim signées ni des archives exportées**. Ne pas afficher dans un dépôt public l'intégralité d'une conversation privée.
 
 Descendants fonctionnellement compatibles :
-- [MMonde]( https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/mmonde/contracts_v0.py ) — état, observations, temps, espace, relations, provenance et incertitude ;
+- [MMonde](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/mmonde/contracts_v0.py) — état, observations, temps, espace, relations, provenance et incertitude ;
 - [F12 world dynamics](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/world_dynamics/contracts_v0.py) — transitions, trajectoires, repères et continuité ;
 - [F15 evidence](https://github.com/Eaubin08/obsidia-x108-proofs/blob/5b9b72452cff7a560db992e57a43fc700dacd923/periphery/physical_evidence/contracts_v0.py) — compatibilité et provenance ;
 - [Brody World Physique F0](https://github.com/Eaubin08/brody-world-physique-obsidien-/blob/f0/learning-loop-contracts-v0/brody_world_physique/contracts_v0.py) — projection, delta et expérience candidate.
