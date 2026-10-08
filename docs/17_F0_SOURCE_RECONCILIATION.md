@@ -1,7 +1,7 @@
 # 17 — F0 Réconciliation des sources et des définitions — 2026-10-08
 
 **Statut : AUDIT DOCUMENTAIRE PARTIEL / NON FREEZE.**  
-**Périmètre :** comparaison de l'Atlas V0 (`docs/15_CONCEPT_ATLAS.md`, entrées 1–103) aux archives utilisateur Google Drive, aux documents de contrat de cette branche et aux sources existantes.  
+**Périmètre :** comparaison de l'Atlas V0 (`docs/15_CONCEPT_ATLAS.md`, entrées 1–107 (1–103 préservées, 104–107 ajoutées après lecture directe)) aux archives utilisateur Google Drive, aux documents de contrat de cette branche et aux sources existantes.  
 **Modification de runtime / de kernel / de main :** aucune.
 
 ## 1. Objet exact
@@ -88,6 +88,10 @@ Ne jamais transformer « mentionné dans une archive » en « inventé », « im
 - [Obsidia V1 — Intelligence humaine/IA, cognition musicale et réciprocité](https://docs.google.com/document/d/1ANycxJuuRVCIVjbUySDME1bE_Q3Pdt3qX7oVVXLIJYk/edit) : large archive dialoguée ; **source pack**, pas validation indépendante.
 - [Moteur universel et régimes physiques](https://docs.google.com/document/d/1cUJjRYhfn6Sg837G-8GvvTLntNvaLHd3LbwtKF2P6ew/edit) : hypothèses de formalisation multi-domaines ; **RESEARCH-SOURCE / UNVERIFIED**, ne pas confondre avec un théorème de physique ou un simulateur réel.
 
+## 2J. Quatre concepts supplémentaires ajoutés à l'Atlas
+
+Les documents directement lus ont révélé quatre objets documentaires suffisamment définis pour une fiche distincte, sans démonstration de runtime : **#104 Calcul de la Balance Mathématique**, **#105 Mode Shadow**, **#106 Mémoire Fractale (FAM)**, **#107 Curriculum Forge**. Ils ne remplacent ni #72 Balance Proportionnelle Exponentielle, ni Native Memory, ni Task Forge. Les fiches détaillent leur mécanisme, frontière et source.
+
 ## 3. Généalogies retenues sans identité forcée
 
 ```text
@@ -114,7 +118,7 @@ Balance Proportionnelle Exponentielle ────────────┘
 
 ## 4. Lacunes encore ouvertes — ne pas appeler cela un audit exhaustif
 
-1. Chaque entrée 1–103 a déjà une définition de travail dans l'Atlas, mais **la citation passage/date/source vérifiée entrée par entrée n'est pas encore complète**. La matrice `docs/18_CONCEPT_SOURCE_MATRIX.md` distingue les liens étayés des entrées encore non vérifiées.
+1. Chaque entrée 1–107 a une définition de travail (les 4 dernières proviennent de cette passe de source) dans l'Atlas, mais **la citation passage/date/source vérifiée entrée par entrée n'est pas encore complète**. La matrice `docs/18_CONCEPT_SOURCE_MATRIX.md` distingue les liens étayés des entrées encore non vérifiées.
 2. Les gros exports de conversations (`Continuum Protocol Core`, `Obsidia V1`, `obsidia suite 29.07 deu`) mélangent paroles de l'utilisateur, propositions assistant, redites et plans. Aucune attribution individuelle d'auteur ni datation exacte ne doit être inventée.
 3. Les documents de calcul physique/thermodynamique sont à examiner comme **recherche historique**, sans dériver de revendications de validité scientifique.
 4. Vérifier dans les branches runtime exactes les descendants mentionnés (notamment AVDR Gencoin, `calculate_immutable_vote()`, mémoire native, actualité de chaque test) avant toute déclaration `VERIFIED/FROZEN`.
