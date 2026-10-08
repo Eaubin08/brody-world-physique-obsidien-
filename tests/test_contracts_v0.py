@@ -42,6 +42,7 @@ class WorldTransformationTests(TestCase):
             epistemic_class=TransformationEpistemicClassV0.OBSERVED,
         )
         self.assertEqual(item.epistemic_class, TransformationEpistemicClassV0.OBSERVED)
+        self.assertEqual(item.schema_version, "WORLD_TRANSFORMATION_V0")
         self.assertFalse(item.allowed_to_act)
         self.assertFalse(item.execution_authority)
         self.assertEqual(item.decision_authority, "KX108_ONLY")
@@ -89,6 +90,7 @@ class WorldStateProjectionTests(TestCase):
         )
         self.assertEqual(item.projected_state.world_state_id, "world:t1:predicted")
         self.assertEqual(item.projection_kind, ProjectionKindV0.PREDICTED)
+        self.assertEqual(item.schema_version, "WORLD_STATE_PROJECTION_V0")
         self.assertFalse(item.allowed_to_act)
 
     def test_observed_is_not_a_projection_kind(self):
@@ -126,6 +128,7 @@ class WorldStateDeltaTests(TestCase):
             explanation_candidates=("CAMERA_DRIFT",),
         )
         self.assertEqual(item.metric_deltas["position_error_m"], 0.12)
+        self.assertEqual(item.schema_version, "WORLD_STATE_DELTA_V0")
         self.assertFalse(item.causal_proof)
 
     def test_delta_requires_comparison_anchor(self):
@@ -161,6 +164,7 @@ class WorldExperienceCandidateTests(TestCase):
             candidate_skill_refs=("skill:predict-translation",),
         )
         self.assertEqual(item.validation_status, ExperienceValidationStatusV0.VALIDATED)
+        self.assertEqual(item.schema_version, "WORLD_EXPERIENCE_CANDIDATE_V0")
         self.assertFalse(item.canonical_memory)
         self.assertFalse(item.memory_write_allowed)
         self.assertFalse(item.auto_promotion_allowed)
