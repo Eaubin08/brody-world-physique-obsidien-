@@ -50,3 +50,19 @@ Ne pas retoucher le choix hybride à la vue du score. Tester sur nouvelles famil
 
 ## Correction de rejeu P2.9j — observation future absente
 Le run réel P2.9h contient au moins une prédiction pré-engagée dont l'image future est manquante (score `null`). Cette situation **ne constitue pas un HOLD du prédicteur** et ne doit pas être une erreur artificielle à 0 px. Le rapport P2.9j conserve le choix pré-engagé, distingue `issued_predictions` et `unscorable_predictions`, calcule `coverage` sur les cas où une frame future a effectivement été observée, et fournit `issued_coverage` sur tous les épisodes. Le code refuse toujours un score absent pour la méthode choisie **si une autre méthode prouve que la frame future était observable**. Tests de non-régression ajoutés. Aucun changement P2.9h/P2.9i.
+
+## Retour utilisateur : échecs utiles, boucles réversibles, non-irréversibilité
+L'utilisateur précise que les erreurs sont une composante du développement des compétences, non une raison de bloquer systématiquement toute progression. Ce principe s'applique aux **erreurs de prédiction, reconstruction ou choix de méthode** et aux frictions observées, pas à la falsification des preuves ou à une autorisation d'action. Proposition de contrat d'apprentissage, **pas encore un moteur runtime** :
+
+1. **Observer / situer** — garder source, scène, point de vue, intervalle et niveau de représentation.
+2. **Proposer / pré-engager** — choisir méthode et chemin, enregistrer l'hypothèse sans voir le résultat futur.
+3. **Tenter / reconstruire** — utiliser la capacité déjà disponible (Reverso, outil de dessin, prédicteur, etc.).
+4. **Comparer / qualifier l'écart** — distinguer erreur de procédure, écart physique, observation manquante, contradiction et erreur technique du banc; ne pas écraser une observation utile sous l'étiquette « bruit ».
+5. **Diagnostiquer le chemin** — conserver succès, échec, raison, contexte, version de la capacité et possibilité de reprendre une étape intermédiaire.
+6. **Réessayer sélectivement** — changer une méthode, une vue ou une hypothèse à la fois; reprendre un acquis stabilisé sans tout refaire; garder aussi l'ancien essai.
+7. **Tester sur un autre épisode indépendant** avant d'attribuer un gain; ni l'intention ni la simulation auto-générée ne fabriquent une vérité.
+
+Arrêts nécessaires : budget d'essais, stagnation, information absente → demander autre observation/UNKNOWN/HOLD, dérive de source/référentiel → revenir au dernier point vérifié; aucun écrasement automatique du savoir, aucune promotion B8 et aucune écriture Native Memory. Réversibilité = pouvoir *revenir à un état de travail et réviser l'hypothèse*, pas effacer l'historique ni contourner KX108_ONLY.
+
+### Retour expérimental P2.9j, 2026-10-09
+50 épisodes, 50 prédictions émises, 49 scorables, hybride 3.368161194972157 px, 2 erreurs >10 px, 39 choix mémoire et 11 spatiaux; rapport rejoué avec succès. **Échec des tests 5/6 non expérimental** : `test_replay_and_mutation` fixait `coverage=1.0`, devenue la vraie couverture sur les 49 observables. Mutation changée en `0.12345` afin d'exercer effectivement la détection de rapport altéré. À revalider PC.
