@@ -54,7 +54,7 @@ def verify(output,source,initial,mask):
     m=m.point(lambda v:255 if v>=128 else 0)
     if a.size!=b.size or c.size!=a.size or m.size!=a.size:raise ValueError("dimension mismatch")
     expected=Image.composite(a,b,m)
-    if ImageChops.difference(expected,c).getbbox():raise ValueError("candidate replay mismatch")
+    if ImageChops.difference(expected,c).convert('RGB').getbbox():raise ValueError("candidate replay mismatch")
     before=pixel_error(a,b);after=pixel_error(a,c)
     verdict="ACCEPTED" if after<before else "HOLD_EQUAL" if after==before else "ROLLED_BACK"
     best=output if verdict=="ACCEPTED" else initial
