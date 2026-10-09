@@ -56,7 +56,20 @@ def run(images,out,previous=None,limit=100,interrupt_after=None):
     else:
         if receipts.exists() or (dest/"MASTER_REPORT.json").exists():
             raise ValueError("PRESERVE_EXISTING_EVIDENCE")
-        state=load(previous) if previous else fresh()
+        if previous:
+            previous_path=Path(previous)
+            envelope=json.loads(previous_path.read_text(encoding="utf-8"))
+            if "source_manifest" in envelope:
+                sig=envelope.pop("digest",None)
+                if sig!=digest(envelope) or envelope.get("source_manifest")!=manifest:
+                    raise ValueError("INVALID_PREVIOUS_VISUAL_SNAPSHOT")
+                if envelope.get("native_memory_write") is not False or envelope.get("canonical_promotion") is not False:
+                    raise ValueError("FORBIDDEN_PREVIOUS_MEMORY_AUTHORITY")
+                state=envelope["state"]
+            else:
+                state=load(previous)
+        else:
+            state=fresh()
         start=0;previous_hash=None
     for i in range(start,len(paths)):
         p=paths[i];target=reference(p)
