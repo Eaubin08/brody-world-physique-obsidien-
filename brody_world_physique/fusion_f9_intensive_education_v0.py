@@ -35,7 +35,8 @@ def predict(stats,key):
 def update(stats,key,losses):
     record=stats.setdefault(key,{t:{"sum":0.0,"n":0} for t in TOOLS})
     for tool in TOOLS:
-        record[tool]["sum"]+=losses[tool];record[tool]["n"]+=1
+        record[tool]["sum"]=record[tool]["sum"]*0.75+losses[tool]
+        record[tool]["n"]=record[tool]["n"]*0.75+1
 def snapshot(stats):
     return json.loads(json.dumps(stats,sort_keys=True))
 def blind_exam(stats,seed,stage,seen,episodes):
@@ -136,7 +137,7 @@ def run(out,episodes=1000,seed=20261009,checkpoint=100):
             forgetting.append({"at":checkpoint_result["at_train_episode"],
                                "context":key,"delta_from_first_test":outcome["error"]-baseline})
     summary={"schema":"BRODY_F9_INTENSIVE_1000_V0","requested_episodes":episodes,
-             "completed_episodes":count,"seed":seed,"training_contexts":len(stats),
+             "completed_episodes":count,"seed":seed,"training_contexts":len(stats),"train_update_rule":"EWMA_DECAY_0_75",
              "policy_changes_on_train":corrections,
              "contradictory_train_episodes":regime_change_episodes,
              "checkpoints":[{"at":x["at_train_episode"],"mean_error":x["mean_error"],
