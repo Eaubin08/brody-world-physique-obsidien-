@@ -77,6 +77,7 @@ def run(suite:Path,out:Path)->dict:
     out.mkdir(parents=True,exist_ok=True)
     receipts=out/"forecasts_precommitted.jsonl"
     scores=[]
+    first_visual=None
     # The only operations performed before writing forecasts concern past frames.
     with receipts.open("w",encoding="utf-8") as handle:
         for name,video,digest in tests:
@@ -103,6 +104,8 @@ def run(suite:Path,out:Path)->dict:
                                       if obj is not None else None)
                         except ValueError:
                             observed=None
+                        if first_visual is None and observed is not None and name=="test_01.mp4":
+                            first_visual=(frame.copy(),observed,pending["predictions"].copy())
                         for arm,proposal in pending["predictions"].items():
                             error=(hypot(proposal[0]-observed[0],proposal[1]-observed[1])
                                    if proposal is not None and observed is not None else None)
@@ -141,6 +144,21 @@ def run(suite:Path,out:Path)->dict:
                     raise ValueError("unresolved prediction")
             finally:
                 cap.release()
+    if first_visual is not None:
+        image,observed,forecasts=first_visual
+        images=out/"images"
+        images.mkdir()
+        cv2.circle(image,(round(observed[0]),round(observed[1])),5,(255,255,255),2)
+        # Annotate only after prediction receipts were flushed and future seen.
+        for index,(arm,xy) in enumerate(forecasts.items()):
+            if xy is None:
+                continue
+            color=((index*59+40)%255,(index*83+70)%255,(index*113+100)%255)
+            cv2.circle(image,(round(xy[0]),round(xy[1])),5,color,2)
+            cv2.putText(image,arm.split("_")[0],(round(xy[0])+6,round(xy[1])+6),
+                        cv2.FONT_HERSHEY_SIMPLEX,.35,color,1)
+        if not cv2.imwrite(str(images/"p2_prediction_overlay.png"),image):
+            raise ValueError("failed to write prediction overlay")
     metrics={}
     for arm in ARMS:
         rows=[r for r in scores if r["arm"]==arm]
