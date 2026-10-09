@@ -12,7 +12,7 @@ from .drawing_school_v0 import SIDE
 from .fusion_f3_integrated_visual_lesson_v0 import lesson
 
 LESSONS=(
- ("01-line","line",[[6,7,51,7]],"E0"),
+ ("01-line","line",[[6,7,51,9]],"E0"),
  ("02-rectangle","rectangle",[[7,8,30,32],[36,33,57,54]],"E0"),
  ("03-triangle","triangle",[[7,5,30,31],[35,34,57,57]],"E1"),
  ("04-circle","ellipse",[[6,10,28,32],[34,31,58,55]],"E1"),
@@ -31,6 +31,10 @@ def draw_shape(draw,shape,box,width=2):
 def school(out_dir):
     root=Path(out_dir)
     if root.exists():raise ValueError("output exists")
+    for label,shape,boxes,stage in LESSONS:
+        for box in boxes:
+            if len(box)!=4 or not (0<=box[0]<box[2]<SIDE and 0<=box[1]<box[3]<SIDE):
+                raise ValueError("invalid curriculum box: "+label)
     root.mkdir(parents=True)
     rows=[]
     # Identical learning budget for each exercise: one TRAIN exemplar, one
