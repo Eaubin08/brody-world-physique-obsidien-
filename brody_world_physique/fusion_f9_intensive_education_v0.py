@@ -84,7 +84,7 @@ def run(out,episodes=1000,seed=20261009,checkpoint=100):
     if root.exists():raise ValueError("output exists: keep evidence")
     root.mkdir(parents=True)
     rng=random.Random(seed)
-    stats={};history=[];prior=None
+    stats={};history=[];prior=None;corrections=0;regime_change_episodes=0
     tests=[]
     ledger=root/"receipts.jsonl"
     with ledger.open("x",encoding="utf-8") as stream:
@@ -93,13 +93,19 @@ def run(out,episodes=1000,seed=20261009,checkpoint=100):
             key=style+"|"+shape
             gestures=geometry(rng,shape)
             old=predict(stats,key)
-            reference=render_instrument(gestures,TRAIN_TOOLS[style])
+            # Change teacher preference on one previously learned context.
+            conflicting=(key=="LIGHT|line" and i>episodes//2)
+            expected_tool="PEN" if conflicting else TRAIN_TOOLS[style]
+            if conflicting:regime_change_episodes+=1
+            reference=render_instrument(gestures,expected_tool)
             losses={t:error(gestures,t,reference) for t in TOOLS}
             update(stats,key,losses)
             new=predict(stats,key)
+            if old is not None and old!=new:corrections+=1
             event={"index":i,"previous":prior,"kind":"TRAIN","episode":i,
                    "skill_context":key,"prior_choice":old,"new_choice":new,
-                   "train_tool_losses":losses,"corrected":old is not None and old!=new,
+                   "train_tool_losses":losses,"target_tool_train_only":expected_tool,
+                   "contradictory_train":conflicting,"corrected":old is not None and old!=new,
                    "native_memory_write":False,"canonical_promotion":False,
                    "decision_authority":"KX108_ONLY"}
             event["digest"]=digest(event)
@@ -131,6 +137,8 @@ def run(out,episodes=1000,seed=20261009,checkpoint=100):
                                "context":key,"delta_from_first_test":outcome["error"]-baseline})
     summary={"schema":"BRODY_F9_INTENSIVE_1000_V0","requested_episodes":episodes,
              "completed_episodes":count,"seed":seed,"training_contexts":len(stats),
+             "policy_changes_on_train":corrections,
+             "contradictory_train_episodes":regime_change_episodes,
              "checkpoints":[{"at":x["at_train_episode"],"mean_error":x["mean_error"],
                              "held":x["held"],"evaluated":x["evaluated"],
                              "snapshot_digest":x["snapshot_digest"]} for x in tests],
