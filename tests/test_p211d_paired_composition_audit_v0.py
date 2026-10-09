@@ -22,7 +22,7 @@ class PairedCompositionTests(unittest.TestCase):
             reference=root/f"target{i}.png"
             target=Image.new("L",(SIDE,SIDE),255)
             if i==0:ImageDraw.Draw(target).line((3,3,20,20),fill=0,width=3)
-            reference.save(target if False else reference)
+            target.save(reference)
             cases.append({"layout":str(layout),"reference":str(reference)})
         cfg=root/"manifest.json"
         cfg.write_text(json.dumps({"schema":"BRODY_P211D_MANIFEST_V0",
