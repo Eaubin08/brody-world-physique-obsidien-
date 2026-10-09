@@ -46,7 +46,7 @@ def _raster_frame(frame):
 def _predictions(spatial, raster, frames):
     """Caller guarantees only three past observed frames are supplied."""
     from .preverbal_prediction_v0 import PositionMeasurementV0
-    if len(spatial)!=len(raster)!=3:
+    if len(spatial)!=3 or len(raster)!=3 or len(frames)!=3:
         raise ValueError("invalid history")
     if any(x is None for x in spatial):
         return {arm:None for arm in ARMS}
