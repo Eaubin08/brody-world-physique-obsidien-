@@ -12,7 +12,7 @@ class CompositionTests(unittest.TestCase):
         ImageDraw.Draw(image).line((9,12,50,42),fill=0,width=3)
         image.save(src);learn(src,memory)
         layout.write_text(json.dumps({"schema":"BRODY_P211C_LAYOUT_V0",
-            "boxes":[[8,8,34,30],[48,48,83,76]]}),encoding="utf-8")
+            "boxes":[[8,8,34,30],[SIDE//2,SIDE//2,SIDE-5,SIDE-5]]}),encoding="utf-8")
         return memory,layout
 
     def test_recomposition_generates_png_and_blank(self):
