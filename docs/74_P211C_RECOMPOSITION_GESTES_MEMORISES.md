@@ -19,7 +19,7 @@ if ($LASTEXITCODE -ne 0) { throw "Tests P2.11c échoués" }
 ## Exemple de contrat d'entrée
 Créer un manifeste JSON `composition.json` :
 ```json
-{"schema":"BRODY_P211C_LAYOUT_V0","boxes":[[8,8,34,30],[48,48,83,76]]}
+{"schema":"BRODY_P211C_LAYOUT_V0","boxes":[[8,8,34,30],[35,35,60,60]]}
 ```
 Avec la mémoire P2.11b déjà produite :
 ```powershell
