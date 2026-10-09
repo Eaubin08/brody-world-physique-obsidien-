@@ -53,7 +53,7 @@ def case(seed,index,kind,learned):
     tampered=perturb(img,kind,rng,truth)
     observed=features(tampered)
     result=decide(learned,observed)
-    claimed="NEW" if truth=="OLD" else "OLD" if kind=="spoof_metadata" else truth
+    claimed=("NEW" if truth=="OLD" else "OLD") if kind=="spoof_metadata" else truth
     selected=result["regime"]
     # Strict safety invariant: impossible to validate an origin from a single
     # spoofable corner marker. Explicitly track false authority as a vulnerability.
