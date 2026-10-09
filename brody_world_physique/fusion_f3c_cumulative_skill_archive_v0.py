@@ -74,8 +74,6 @@ def exam(root,version,skill_id,layout_path,teacher_path,output):
     if len(entries)!=1:raise ValueError("unknown learned skill")
     entry=entries[0];out=Path(output)
     if out.exists():raise ValueError("exam exists")
-    # Defend from accidental TRAIN-as-TEST reuse without opening target pixels.
-    if digest(teacher_path)==entry["training_sha256"]:raise ValueError("target equals train")
     out.mkdir(parents=True)
     candidate=out/"candidate.png"
     report=compose(root/entry["memory_path"],layout_path,candidate)
@@ -84,6 +82,8 @@ def exam(root,version,skill_id,layout_path,teacher_path,output):
             "candidate_sha256":digest(candidate),"sealed_before_teacher":True,
             "target_used_to_select_memory":False,"memory_reused_from_previous_lesson":True,
             "native_memory_write":False,"decision_authority":"KX108_ONLY"}
+    # TEST is first accessed only after the candidate is sealed and persisted.
+    if digest(teacher_path)==entry["training_sha256"]:raise ValueError("target equals train")
     target=open_rgba(teacher_path);actual=open_rgba(candidate);blank=open_rgba(out/"candidate-blank.png")
     result["candidate_error"]=pixel_error(target,actual)
     result["blank_error"]=pixel_error(target,blank)
