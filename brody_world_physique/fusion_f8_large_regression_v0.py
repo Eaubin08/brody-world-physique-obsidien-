@@ -46,7 +46,7 @@ def run(repo,out,timeout=240):
         results.append({"name":key,"test_file":name,"status":status,"exit_code":code,
                         "duration_seconds":duration,"log":log.name})
         print(f"{key}: {status} ({duration}s)",flush=True)
-    summary={"schema":"BRODY_F8_LARGE_REGRESSION_V0",
+    # Execute actual F2 historical regression suites, not only tests of its runner.\n    cmd=[sys.executable,"-m","brody_world_physique.fusion_f2_school_regression_v0",\n         "--repo",str(repo),"--out",str(out/"f2-historical")]\n    started=time.monotonic()\n    try:\n        replay=subprocess.run(cmd,cwd=repo,capture_output=True,text=True,\n                              timeout=max(timeout,360),errors="replace")\n        status="PASS" if replay.returncode==0 else "FAIL"\n        log_text=replay.stdout+"\\n"+replay.stderr\n        exit_code=replay.returncode\n    except subprocess.TimeoutExpired as exc:\n        status="TIMEOUT";log_text=str(exc);exit_code=None\n    (out/"F2_HISTORICAL_15.log").write_text(log_text,encoding="utf-8")\n    results.append({"name":"F2_HISTORICAL_15","status":status,\n                    "exit_code":exit_code,"duration_seconds":round(time.monotonic()-started,3),\n                    "log":"F2_HISTORICAL_15.log"})\n    print("F2_HISTORICAL_15: "+status,flush=True)\n    summary={"schema":"BRODY_F8_LARGE_REGRESSION_V0",
              "suites_run":len(results),"passed":sum(x["status"]=="PASS" for x in results),
              "failed":sum(x["status"]=="FAIL" for x in results),
              "missing":sum(x["status"]=="MISSING" for x in results),
