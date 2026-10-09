@@ -52,7 +52,7 @@ class HybridTests(unittest.TestCase):
             p.write_text(json.dumps(example()))
             produce(p,out)
             self.assertTrue(produce(p,out,True)["verified"])
-            x=json.loads(out.read_text());x["coverage"]=1.
+            x=json.loads(out.read_text());x["coverage"]=0.12345
             out.write_text(json.dumps(x))
             with self.assertRaises(ValueError):produce(p,out,True)
     def test_fail_closed_missing_proof(self):
