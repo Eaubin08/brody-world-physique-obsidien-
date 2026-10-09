@@ -112,6 +112,11 @@ def verify(out):
     from tempfile import TemporaryDirectory
     out=Path(out).resolve(strict=True)
     original=json.loads((out/"evaluation.json").read_text(encoding="utf-8"))
+    for row in original.get("per_case",[]):
+        for index,expected in enumerate(row["image_sha256"]):
+            frame=out/"images"/row["case"]/f"frame_{index}.png"
+            if not frame.is_file() or sha256(frame.read_bytes()).hexdigest()!=expected:
+                raise ValueError("published pixel evidence mutated")
     with TemporaryDirectory() as tmp:
         fresh=run(Path(tmp)/"replay")
         if fresh!=original:raise ValueError("evaluation replay mismatch")
