@@ -60,3 +60,13 @@ notepad "$out/evaluation.json"
 NOTE : le script de publication historique `publish_local_evidence.ps1` exige au moins un PNG. Ici le test est **non visuel**, donc ne pas feindre une preuve image ou publier avec ce script tant qu'un artefact PNG réel correspondant à la piste n'est pas produit. Le rapport JSON doit être conservé localement. La publication de preuves doit être adaptée explicitement pour cette expérience.
 
 **Décision :** test de principe uniquement, résultat terrain en attente, aucune preuve d'apprentissage, pas de mémoire native, KX108_ONLY.
+
+## Mise à jour — publication de preuve JSON sans image
+
+Le script historique de publication accepte maintenant le paramètre explicite \`-AllowNoImages\`, pour ce test de contrat qui ne génère aucun PNG. Par défaut, le contrôle de présence d'images reste inchangé. Après vérification locale :
+
+\`\`\`powershell
+.\scripts\publish_local_evidence.ps1 -RunPath $out -AllowNoImages
+\`\`\`
+
+Publier uniquement le JSON authentique ; aucune image de preuve artificielle.
