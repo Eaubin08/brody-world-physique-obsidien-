@@ -47,3 +47,6 @@ Write-Host "RESULTATS=$out"
 
 ## GATE suivant
 Ne pas retoucher le choix hybride à la vue du score. Tester sur nouvelles familles d'images et changements d'environnement, en réintroduisant effectivement P1 raster, Reverso et les outils F12/F16/MMonde avant de déclarer un gain multimodal. Aucun B8/B10 write et KX108_ONLY.
+
+## Correction de rejeu P2.9j — observation future absente
+Le run réel P2.9h contient au moins une prédiction pré-engagée dont l'image future est manquante (score `null`). Cette situation **ne constitue pas un HOLD du prédicteur** et ne doit pas être une erreur artificielle à 0 px. Le rapport P2.9j conserve le choix pré-engagé, distingue `issued_predictions` et `unscorable_predictions`, calcule `coverage` sur les cas où une frame future a effectivement été observée, et fournit `issued_coverage` sur tous les épisodes. Le code refuse toujours un score absent pour la méthode choisie **si une autre méthode prouve que la frame future était observable**. Tests de non-régression ajoutés. Aucun changement P2.9h/P2.9i.
