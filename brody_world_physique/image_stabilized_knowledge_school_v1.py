@@ -45,12 +45,12 @@ def observe(state,context,procedure,teacher_ref,example_ref,correction=False):
         # Correction replaces the local provisional method, but does not
         # instantly certify a reflex based on one lesson.
         record["procedure"]=procedure;record["status"]="LEARNING"
-    elif previous is None or record["status"]=="DOUBT":
+    elif previous is None:
         record["procedure"]=procedure;record["status"]="LEARNING"
     compatible={e["example_ref"] for e in record["lessons"]
                 if e["procedure"]==record["procedure"]}
     # Teacher corroboration on distinct examples, no reward threshold.
-    if record["status"]=="LEARNING" and len(compatible)>=3 and not record["exceptions"]:
+    if record["status"]=="LEARNING" and len(compatible)>=3 and (not record["exceptions"] or correction):
         record["status"]="STABLE"
     state["revision"]+=1
     return record["status"]
