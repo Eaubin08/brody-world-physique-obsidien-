@@ -12,7 +12,7 @@ from .fusion_f9_intensive_education_v0 import (STYLES,SHAPES,TOOLS,geometry,
 REGIMES=("OLD","NEW","MIXED")
 def teacher_tool(style,shape,regime):
     if regime not in REGIMES:raise ValueError("untrusted context")
-    if regime=="MIXED":return None
+    if regime=="MIXED" and style=="LIGHT" and shape=="line":return None
     if style=="LIGHT" and shape=="line":
         return "PENCIL" if regime=="OLD" else "PEN"
     return {"LIGHT":"PENCIL","UNIFORM":"PEN","EXPRESSIVE":"NIB"}[style]
