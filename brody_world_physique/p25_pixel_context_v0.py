@@ -28,7 +28,7 @@ CASES=(
 def render(case, ball_world_dx, camera_dx, corrupted, root):
     import cv2
     import numpy as np
-    root.mkdir(parents=True,exist_ok=False)
+    root.mkdir(parents=True,exist_ok=True)
     files=[]
     for step in (0,1):
         image=np.zeros((220,360,3),dtype=np.uint8)
@@ -38,7 +38,7 @@ def render(case, ball_world_dx, camera_dx, corrupted, root):
             cv2.rectangle(image,(x-5,45),(x+5,55),(25,215,245),-1)
         ball_x=80+(ball_world_dx+camera_dx)*step
         cv2.circle(image,(ball_x,145),11,(40,100,245),-1)
-        file=root/f"frame_{step}.png"
+        file=root/f"{case}_frame_{step}.png"
         if not cv2.imwrite(str(file),image): raise ValueError("image write failed")
         files.append(file)
     return files
@@ -87,7 +87,7 @@ def run(out):
     out.mkdir(parents=True,exist_ok=True)
     rows=[]
     for name,world,camera,corrupted in CASES:
-        files=render(name,world,camera,corrupted,out/"images"/name)
+        files=render(name,world,camera,corrupted,out/"images")
         # Evaluate measured pixels, only then compare against fixture truth.
         response=evaluate_one(files)
         candidate=response["contextual"]
@@ -114,7 +114,7 @@ def verify(out):
     original=json.loads((out/"evaluation.json").read_text(encoding="utf-8"))
     for row in original.get("per_case",[]):
         for index,expected in enumerate(row["image_sha256"]):
-            frame=out/"images"/row["case"]/f"frame_{index}.png"
+            frame=out/"images"/f"{row['case']}_frame_{index}.png"
             if not frame.is_file() or sha256(frame.read_bytes()).hexdigest()!=expected:
                 raise ValueError("published pixel evidence mutated")
     with TemporaryDirectory() as tmp:
