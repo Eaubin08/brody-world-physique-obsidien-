@@ -34,7 +34,7 @@ def render(case, ball_world_dx, camera_dx, corrupted, root):
         image=np.zeros((220,360,3),dtype=np.uint8)
         image[:]=(24,27,31)
         for i in range(5):
-            x=35+i*58+camera_dx*step+(53*step if i<corrupted else 0)
+            x=35+i*58+camera_dx*step+(25*step if i<corrupted else 0)
             cv2.rectangle(image,(x-5,45),(x+5,55),(25,215,245),-1)
         ball_x=80+(ball_world_dx+camera_dx)*step
         cv2.circle(image,(ball_x,145),11,(40,100,245),-1)
