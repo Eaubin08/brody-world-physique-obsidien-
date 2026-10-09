@@ -16,14 +16,13 @@ from .p24_contextual_fluctuation_v0 import interpret, SCHEMA as P24_SCHEMA
 SCHEMA="BRODY_P25_PIXEL_CONTEXT_V0"
 CASES=(
  ("object_only",10,0,0),
- ("camera_only",0,-10,0),
- ("both",6,-4,0),
- ("one_corrupt_landmark",6,-4,1),
- ("three_corrupt_landmarks",6,-4,3),
+ ("camera_only",0,10,0),
+ ("both",6,4,0),
+ ("one_corrupt_landmark",6,4,1),
+ ("three_corrupt_landmarks",6,4,3),
 )
-# Camera shifts in rendered pixels are negative of the P2.4 positive
-# background displacement convention; the observation is computed directly
-# from measured frame-to-frame image motion, not passed from labels.
+# All five fixtures have the same apparent ball displacement (+10 px).
+# Context shifts are measured from images, never supplied by fixture labels.
 
 
 def render(case, ball_world_dx, camera_dx, corrupted, root):
@@ -50,7 +49,6 @@ def detect(file):
     frame=cv2.imread(str(file))
     if frame is None or frame.shape!=(220,360,3):
         raise ValueError("frame shape unsupported")
-    hsv=cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
     # Saturated orange ball and yellow landmarks, constrained fixture colors.
     ball_mask=cv2.inRange(frame,(35,90,235),(45,110,255))
     landmark_mask=cv2.inRange(frame,(20,210,240),(30,220,250))
