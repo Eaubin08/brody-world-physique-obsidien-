@@ -1,0 +1,1200 @@
+{"baseline": null, "contextual": null, "id": 0, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1, "status": "HOLD_OBJECT"}
+{"baseline": -22.0, "contextual": null, "id": 2, "status": "HOLD_CONFLICT"}
+{"baseline": -10.0, "contextual": -34.0, "id": 3, "measured_shifts": [24.0, 24.0, 24.0, 24.0, -2.0], "status": "CANDIDATE"}
+{"baseline": 6.0, "contextual": null, "id": 4, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 5, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 6, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 7, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 8, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": -30.0, "id": 9, "measured_shifts": [29.0, 30.0, 31.0, 29.0, 4.0], "status": "CANDIDATE"}
+{"baseline": 20.0, "contextual": null, "id": 10, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 11, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 12, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 13, "status": "HOLD_OBJECT"}
+{"baseline": 15.0, "contextual": 6.0, "id": 14, "measured_shifts": [9.0, 9.0, 9.0, 9.0, 9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 15, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 16, "status": "HOLD_OBJECT"}
+{"baseline": 14.0, "contextual": null, "id": 17, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 18, "status": "HOLD_OBJECT"}
+{"baseline": -21.0, "contextual": null, "id": 19, "status": "HOLD_CONFLICT"}
+{"baseline": 14.0, "contextual": -18.0, "id": 20, "measured_shifts": [32.0, 32.0, 32.0, 32.0, 6.0], "status": "CANDIDATE"}
+{"baseline": -16.0, "contextual": -11.0, "id": 21, "measured_shifts": [-5.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": 3.0, "contextual": -4.0, "id": 22, "measured_shifts": [7.0, 7.0, 7.0, 7.0, 7.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": null, "id": 23, "status": "HOLD_CONFLICT"}
+{"baseline": 4.0, "contextual": 10.0, "id": 24, "measured_shifts": [-6.0, -5.0, -6.0, -5.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 25, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 26, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 27, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 28, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 29, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 30, "status": "HOLD_OBJECT"}
+{"baseline": -16.0, "contextual": -6.0, "id": 31, "measured_shifts": [16.0, -10.0, -10.0, -10.0, -10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 32, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 33, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 34, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 35, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 36, "status": "HOLD_OBJECT"}
+{"baseline": 2.0, "contextual": 0.0, "id": 37, "measured_shifts": [-1.0, 2.0, 2.0, 2.0, 1.0], "status": "CANDIDATE"}
+{"baseline": 0.0, "contextual": -7.0, "id": 38, "measured_shifts": [33.0, 7.0, 7.0, 7.0, 7.0], "status": "CANDIDATE"}
+{"baseline": -9.0, "contextual": null, "id": 39, "status": "HOLD_CONFLICT"}
+{"baseline": -3.0, "contextual": -8.0, "id": 40, "measured_shifts": [5.0, 5.0, 5.0, 5.0, 5.0], "status": "CANDIDATE"}
+{"baseline": -4.0, "contextual": 5.0, "id": 41, "measured_shifts": [17.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": 2.0, "contextual": null, "id": 42, "status": "HOLD_CONFLICT"}
+{"baseline": 13.0, "contextual": 12.0, "id": 43, "measured_shifts": [1.0, 1.0, 1.0, 1.0, 1.0], "status": "CANDIDATE"}
+{"baseline": -9.0, "contextual": null, "id": 44, "status": "HOLD_CONFLICT"}
+{"baseline": -9.0, "contextual": null, "id": 45, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 46, "status": "HOLD_OBJECT"}
+{"baseline": -16.0, "contextual": -8.0, "id": 47, "measured_shifts": [-8.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": 12.0, "contextual": null, "id": 48, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 49, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 50, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 51, "status": "HOLD_OBJECT"}
+{"baseline": -6.0, "contextual": -8.0, "id": 52, "measured_shifts": [2.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 53, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 54, "status": "HOLD_OBJECT"}
+{"baseline": -9.0, "contextual": -5.0, "id": 55, "measured_shifts": [-4.0, -4.0, -4.0, -4.0, -4.0], "status": "CANDIDATE"}
+{"baseline": -2.0, "contextual": -8.0, "id": 56, "measured_shifts": [32.0, 6.0, 6.0, 6.0, 6.0], "status": "CANDIDATE"}
+{"baseline": 18.0, "contextual": null, "id": 57, "status": "HOLD_CONFLICT"}
+{"baseline": -1.0, "contextual": -10.0, "id": 58, "measured_shifts": [9.0, 9.0, 9.0, 9.0, 9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 59, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 60, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 61, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 62, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 63, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 64, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 65, "status": "HOLD_OBJECT"}
+{"baseline": -2.0, "contextual": -8.0, "id": 66, "measured_shifts": [6.0, 6.0, 6.0, 6.0, 6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 67, "status": "HOLD_OBJECT"}
+{"baseline": -5.0, "contextual": null, "id": 68, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 69, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 70, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": -37.0, "id": 71, "measured_shifts": [36.0, 36.0, 36.0, 34.0, 10.0], "status": "CANDIDATE"}
+{"baseline": 6.0, "contextual": null, "id": 72, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 73, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 74, "status": "HOLD_OBJECT"}
+{"baseline": -9.0, "contextual": null, "id": 75, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 76, "status": "HOLD_OBJECT"}
+{"baseline": -18.0, "contextual": -7.0, "id": 77, "measured_shifts": [-11.0, -9.0, -11.0, -11.0, -11.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 78, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 79, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 80, "status": "HOLD_OBJECT"}
+{"baseline": -17.0, "contextual": -12.0, "id": 81, "measured_shifts": [-5.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 82, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": 1.0, "id": 83, "measured_shifts": [-5.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": -8.0, "contextual": null, "id": 84, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 85, "status": "HOLD_OBJECT"}
+{"baseline": 6.0, "contextual": null, "id": 86, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 87, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 88, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 89, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 90, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 91, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 92, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 93, "status": "HOLD_OBJECT"}
+{"baseline": -12.0, "contextual": -12.0, "id": 94, "measured_shifts": [0.0, 0.0, 0.0, 0.0, 0.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 95, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": -6.0, "id": 96, "measured_shifts": [3.0, 3.0, 3.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 97, "status": "HOLD_OBJECT"}
+{"baseline": -12.0, "contextual": -3.0, "id": 98, "measured_shifts": [17.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": -10.0, "contextual": -2.0, "id": 99, "measured_shifts": [-8.0, -8.0, -9.0, -8.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 100, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 101, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": null, "id": 102, "status": "HOLD_CONFLICT"}
+{"baseline": 6.0, "contextual": -3.0, "id": 103, "measured_shifts": [9.0, 9.0, 9.0, 9.0, 9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 104, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 105, "status": "HOLD_OBJECT"}
+{"baseline": 5.0, "contextual": -2.0, "id": 106, "measured_shifts": [7.0, 7.0, 7.0, 7.0, 7.0], "status": "CANDIDATE"}
+{"baseline": 4.0, "contextual": null, "id": 107, "status": "HOLD_CONFLICT"}
+{"baseline": 11.0, "contextual": 1.0, "id": 108, "measured_shifts": [10.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": 4.0, "id": 109, "measured_shifts": [22.0, -7.0, -8.0, -7.0, -6.0], "status": "CANDIDATE"}
+{"baseline": -1.0, "contextual": -11.0, "id": 110, "measured_shifts": [9.0, 10.0, 9.0, 11.0, 11.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 111, "status": "HOLD_OBJECT"}
+{"baseline": 10.0, "contextual": null, "id": 112, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 113, "status": "HOLD_OBJECT"}
+{"baseline": 4.0, "contextual": null, "id": 114, "status": "HOLD_CONFLICT"}
+{"baseline": 4.0, "contextual": null, "id": 115, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 116, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 117, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 118, "status": "HOLD_OBJECT"}
+{"baseline": 2.0, "contextual": null, "id": 119, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 120, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 121, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 122, "status": "HOLD_OBJECT"}
+{"baseline": 14.0, "contextual": null, "id": 123, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 124, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 125, "status": "HOLD_OBJECT"}
+{"baseline": -8.0, "contextual": 0.0, "id": 126, "measured_shifts": [16.0, -8.0, -9.0, -8.0, -10.0], "status": "CANDIDATE"}
+{"baseline": -13.0, "contextual": -8.0, "id": 127, "measured_shifts": [21.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": 9.0, "contextual": -14.0, "id": 128, "measured_shifts": [23.0, 23.0, 23.0, 23.0, -3.0], "status": "CANDIDATE"}
+{"baseline": 14.0, "contextual": 12.0, "id": 129, "measured_shifts": [2.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": 2.0, "contextual": null, "id": 130, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 131, "status": "HOLD_OBJECT"}
+{"baseline": -7.0, "contextual": 0.0, "id": 132, "measured_shifts": [19.0, -7.0, -7.0, -7.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 133, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 134, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 135, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 136, "status": "HOLD_OBJECT"}
+{"baseline": 4.0, "contextual": 11.0, "id": 137, "measured_shifts": [-7.0, -7.0, -7.0, -7.0, -7.0], "status": "CANDIDATE"}
+{"baseline": -2.0, "contextual": 5.0, "id": 138, "measured_shifts": [17.0, -9.0, -7.0, -7.0, -8.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": 5.0, "id": 139, "measured_shifts": [-8.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 140, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": -7.0, "id": 141, "measured_shifts": [7.0, 9.0, 8.0, 5.0, 9.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": -20.0, "id": 142, "measured_shifts": [19.0, 16.0, 18.0, 17.0, -10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 143, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 144, "status": "HOLD_OBJECT"}
+{"baseline": -7.0, "contextual": -3.0, "id": 145, "measured_shifts": [22.0, -4.0, -4.0, -4.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 146, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": null, "id": 147, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 148, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 149, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 150, "status": "HOLD_OBJECT"}
+{"baseline": 5.0, "contextual": 2.0, "id": 151, "measured_shifts": [3.0, 3.0, 3.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 152, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 153, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 154, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 155, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": -28.0, "id": 156, "measured_shifts": [27.0, 27.0, 27.0, 27.0, 1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 157, "status": "HOLD_OBJECT"}
+{"baseline": -10.0, "contextual": -12.0, "id": 158, "measured_shifts": [2.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 159, "status": "HOLD_OBJECT"}
+{"baseline": 5.0, "contextual": -5.0, "id": 160, "measured_shifts": [36.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": -19.0, "contextual": -11.0, "id": 161, "measured_shifts": [-8.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": 16.0, "contextual": 6.0, "id": 162, "measured_shifts": [9.0, 11.0, 9.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": -14.0, "contextual": null, "id": 163, "status": "HOLD_CONFLICT"}
+{"baseline": -6.0, "contextual": -10.0, "id": 164, "measured_shifts": [32.0, 6.0, 4.0, 4.0, 4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 165, "status": "HOLD_OBJECT"}
+{"baseline": -2.0, "contextual": -3.0, "id": 166, "measured_shifts": [1.0, 1.0, 1.0, 1.0, 1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 167, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 168, "status": "HOLD_OBJECT"}
+{"baseline": 4.0, "contextual": 7.0, "id": 169, "measured_shifts": [23.0, -3.0, -4.0, -3.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 170, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 171, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 172, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 173, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 174, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 175, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": -4.0, "id": 176, "measured_shifts": [7.0, 7.0, 8.0, 8.0, 6.0], "status": "CANDIDATE"}
+{"baseline": -1.0, "contextual": null, "id": 177, "status": "HOLD_CONFLICT"}
+{"baseline": -1.0, "contextual": null, "id": 178, "status": "HOLD_CONFLICT"}
+{"baseline": -12.0, "contextual": null, "id": 179, "status": "HOLD_CONFLICT"}
+{"baseline": 1.0, "contextual": 1.0, "id": 180, "measured_shifts": [0.0, 0.0, 0.0, 0.0, 0.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 181, "status": "HOLD_OBJECT"}
+{"baseline": -9.0, "contextual": null, "id": 182, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 183, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": -4.0, "id": 184, "measured_shifts": [24.0, -1.0, 0.0, 0.0, -1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 185, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 186, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 187, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 188, "status": "HOLD_OBJECT"}
+{"baseline": 16.0, "contextual": null, "id": 189, "status": "HOLD_CONFLICT"}
+{"baseline": 0.0, "contextual": -9.0, "id": 190, "measured_shifts": [35.0, 9.0, 9.0, 9.0, 9.0], "status": "CANDIDATE"}
+{"baseline": -13.0, "contextual": -6.0, "id": 191, "measured_shifts": [-7.0, -8.0, -8.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 192, "status": "HOLD_OBJECT"}
+{"baseline": -5.0, "contextual": null, "id": 193, "status": "HOLD_CONFLICT"}
+{"baseline": -22.0, "contextual": -11.0, "id": 194, "measured_shifts": [-11.0, -8.0, -12.0, -9.0, -12.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 195, "status": "HOLD_OBJECT"}
+{"baseline": -8.0, "contextual": null, "id": 196, "status": "HOLD_CONFLICT"}
+{"baseline": -12.0, "contextual": null, "id": 197, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 198, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 199, "status": "HOLD_OBJECT"}
+{"baseline": 2.0, "contextual": 8.0, "id": 200, "measured_shifts": [-5.0, -6.0, -6.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": -6.0, "contextual": 0.0, "id": 201, "measured_shifts": [19.0, -7.0, -6.0, -8.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 202, "status": "HOLD_OBJECT"}
+{"baseline": -5.0, "contextual": null, "id": 203, "status": "HOLD_CONFLICT"}
+{"baseline": -11.0, "contextual": -2.0, "id": 204, "measured_shifts": [17.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 205, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 206, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 207, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 208, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 209, "status": "HOLD_OBJECT"}
+{"baseline": -14.0, "contextual": null, "id": 210, "status": "HOLD_CONFLICT"}
+{"baseline": 3.0, "contextual": 1.0, "id": 211, "measured_shifts": [2.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": 4.0, "contextual": null, "id": 212, "status": "HOLD_CONFLICT"}
+{"baseline": 7.0, "contextual": null, "id": 213, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 214, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": -27.0, "id": 215, "measured_shifts": [30.0, 30.0, 31.0, 30.0, 5.0], "status": "CANDIDATE"}
+{"baseline": -1.0, "contextual": -4.0, "id": 216, "measured_shifts": [3.0, 3.0, 3.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 217, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": null, "id": 218, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 219, "status": "HOLD_OBJECT"}
+{"baseline": 11.0, "contextual": -18.0, "id": 220, "measured_shifts": [30.0, 29.0, 29.0, 29.0, 4.0], "status": "CANDIDATE"}
+{"baseline": 7.0, "contextual": -3.0, "id": 221, "measured_shifts": [36.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": 12.0, "contextual": null, "id": 222, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 223, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 224, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 225, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 226, "status": "HOLD_OBJECT"}
+{"baseline": 2.0, "contextual": -2.0, "id": 227, "measured_shifts": [30.0, 4.0, 4.0, 4.0, 4.0], "status": "CANDIDATE"}
+{"baseline": -5.0, "contextual": null, "id": 228, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 229, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": -29.0, "id": 230, "measured_shifts": [28.0, 28.0, 28.0, 28.0, 2.0], "status": "CANDIDATE"}
+{"baseline": -12.0, "contextual": -31.0, "id": 231, "measured_shifts": [18.0, 19.0, 21.0, 19.0, -5.0], "status": "CANDIDATE"}
+{"baseline": -10.0, "contextual": -37.0, "id": 232, "measured_shifts": [27.0, 27.0, 27.0, 27.0, 1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 233, "status": "HOLD_OBJECT"}
+{"baseline": 9.0, "contextual": -19.0, "id": 234, "measured_shifts": [28.0, 28.0, 28.0, 28.0, 2.0], "status": "CANDIDATE"}
+{"baseline": -1.0, "contextual": null, "id": 235, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 236, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 237, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 238, "status": "HOLD_OBJECT"}
+{"baseline": -12.0, "contextual": -27.0, "id": 239, "measured_shifts": [17.0, 16.0, 15.0, 15.0, -9.0], "status": "CANDIDATE"}
+{"baseline": 3.0, "contextual": 8.0, "id": 240, "measured_shifts": [-5.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": 7.0, "contextual": 7.0, "id": 241, "measured_shifts": [0.0, 0.0, 0.0, 0.0, 0.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 242, "status": "HOLD_OBJECT"}
+{"baseline": -6.0, "contextual": null, "id": 243, "status": "HOLD_CONFLICT"}
+{"baseline": 2.0, "contextual": null, "id": 244, "status": "HOLD_CONFLICT"}
+{"baseline": 2.0, "contextual": -30.0, "id": 245, "measured_shifts": [33.0, 31.0, 32.0, 32.0, 6.0], "status": "CANDIDATE"}
+{"baseline": 14.0, "contextual": -18.0, "id": 246, "measured_shifts": [32.0, 32.0, 32.0, 32.0, 6.0], "status": "CANDIDATE"}
+{"baseline": -9.0, "contextual": -6.0, "id": 247, "measured_shifts": [23.0, -3.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 248, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 249, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 250, "status": "HOLD_OBJECT"}
+{"baseline": -9.0, "contextual": null, "id": 251, "status": "HOLD_CONFLICT"}
+{"baseline": -5.0, "contextual": -7.0, "id": 252, "measured_shifts": [24.0, 0.0, 2.0, 0.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 253, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 254, "status": "HOLD_OBJECT"}
+{"baseline": 6.0, "contextual": null, "id": 255, "status": "HOLD_CONFLICT"}
+{"baseline": 14.0, "contextual": null, "id": 256, "status": "HOLD_CONFLICT"}
+{"baseline": 3.0, "contextual": 11.0, "id": 257, "measured_shifts": [18.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 258, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 259, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 260, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 261, "status": "HOLD_OBJECT"}
+{"baseline": -2.0, "contextual": null, "id": 262, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 263, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 264, "status": "HOLD_OBJECT"}
+{"baseline": 14.0, "contextual": 4.0, "id": 265, "measured_shifts": [36.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": 5.0, "contextual": null, "id": 266, "status": "HOLD_CONFLICT"}
+{"baseline": -14.0, "contextual": null, "id": 267, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 268, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 269, "status": "HOLD_OBJECT"}
+{"baseline": -20.0, "contextual": -36.0, "id": 270, "measured_shifts": [16.0, 16.0, 16.0, 16.0, -10.0], "status": "CANDIDATE"}
+{"baseline": 12.0, "contextual": null, "id": 271, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 272, "status": "HOLD_OBJECT"}
+{"baseline": -11.0, "contextual": -6.0, "id": 273, "measured_shifts": [-5.0, -5.0, -8.0, -5.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 274, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 275, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 276, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 277, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 278, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 279, "status": "HOLD_OBJECT"}
+{"baseline": -13.0, "contextual": -4.0, "id": 280, "measured_shifts": [-9.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 281, "status": "HOLD_OBJECT"}
+{"baseline": -5.0, "contextual": -5.0, "id": 282, "measured_shifts": [1.0, 0.0, 0.0, 1.0, -3.0], "status": "CANDIDATE"}
+{"baseline": 14.0, "contextual": null, "id": 283, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 284, "status": "HOLD_OBJECT"}
+{"baseline": -11.0, "contextual": -38.0, "id": 285, "measured_shifts": [27.0, 27.0, 27.0, 27.0, 1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 286, "status": "HOLD_OBJECT"}
+{"baseline": -12.0, "contextual": -12.0, "id": 287, "measured_shifts": [0.0, 0.0, 0.0, 0.0, 0.0], "status": "CANDIDATE"}
+{"baseline": -12.0, "contextual": -3.0, "id": 288, "measured_shifts": [17.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": 1.0, "contextual": 6.0, "id": 289, "measured_shifts": [-2.0, -6.0, -6.0, -4.0, -5.0], "status": "CANDIDATE"}
+{"baseline": 17.0, "contextual": null, "id": 290, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 291, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 292, "status": "HOLD_OBJECT"}
+{"baseline": 9.0, "contextual": null, "id": 293, "status": "HOLD_CONFLICT"}
+{"baseline": 3.0, "contextual": -22.0, "id": 294, "measured_shifts": [25.0, 25.0, 25.0, 25.0, -1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 295, "status": "HOLD_OBJECT"}
+{"baseline": 21.0, "contextual": 11.0, "id": 296, "measured_shifts": [36.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": 0.0, "contextual": -8.0, "id": 297, "measured_shifts": [8.0, 8.0, 7.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 298, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 299, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 300, "status": "HOLD_OBJECT"}
+{"baseline": -12.0, "contextual": -3.0, "id": 301, "measured_shifts": [-9.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 302, "status": "HOLD_OBJECT"}
+{"baseline": -19.0, "contextual": -10.0, "id": 303, "measured_shifts": [-8.0, -9.0, -9.0, -8.0, -9.0], "status": "CANDIDATE"}
+{"baseline": 12.0, "contextual": -15.0, "id": 304, "measured_shifts": [26.0, 29.0, 29.0, 27.0, 0.0], "status": "CANDIDATE"}
+{"baseline": -6.0, "contextual": 0.0, "id": 305, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 306, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 307, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 308, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 309, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 310, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 311, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 312, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": -9.0, "id": 313, "measured_shifts": [10.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 314, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 315, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 316, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 317, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": null, "id": 318, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 319, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 320, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 321, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 322, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 323, "status": "HOLD_OBJECT"}
+{"baseline": 0.0, "contextual": 10.0, "id": 324, "measured_shifts": [16.0, -10.0, -10.0, -10.0, -10.0], "status": "CANDIDATE"}
+{"baseline": 5.0, "contextual": -28.0, "id": 325, "measured_shifts": [33.0, 35.0, 35.0, 33.0, 7.0], "status": "CANDIDATE"}
+{"baseline": -16.0, "contextual": -11.0, "id": 326, "measured_shifts": [-5.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 327, "status": "HOLD_OBJECT"}
+{"baseline": -13.0, "contextual": null, "id": 328, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 329, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 330, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 331, "status": "HOLD_OBJECT"}
+{"baseline": 4.0, "contextual": 6.0, "id": 332, "measured_shifts": [-1.0, -2.0, -2.0, -2.0, -1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 333, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": 2.0, "id": 334, "measured_shifts": [1.0, 1.0, 1.0, 1.0, 1.0], "status": "CANDIDATE"}
+{"baseline": 11.0, "contextual": null, "id": 335, "status": "HOLD_CONFLICT"}
+{"baseline": 8.0, "contextual": null, "id": 336, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 337, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 338, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 339, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 340, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 341, "status": "HOLD_OBJECT"}
+{"baseline": 7.0, "contextual": 1.0, "id": 342, "measured_shifts": [6.0, 6.0, 6.0, 6.0, 6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 343, "status": "HOLD_OBJECT"}
+{"baseline": -13.0, "contextual": null, "id": 344, "status": "HOLD_CONFLICT"}
+{"baseline": 0.0, "contextual": -10.0, "id": 345, "measured_shifts": [10.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": 1.0, "contextual": null, "id": 346, "status": "HOLD_CONFLICT"}
+{"baseline": -10.0, "contextual": -10.0, "id": 347, "measured_shifts": [0.0, 0.0, 0.0, 0.0, 0.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 348, "status": "HOLD_OBJECT"}
+{"baseline": -13.0, "contextual": null, "id": 349, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 350, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 351, "status": "HOLD_OBJECT"}
+{"baseline": -6.0, "contextual": null, "id": 352, "status": "HOLD_CONFLICT"}
+{"baseline": 3.0, "contextual": -27.0, "id": 353, "measured_shifts": [30.0, 30.0, 30.0, 30.0, 4.0], "status": "CANDIDATE"}
+{"baseline": 4.0, "contextual": null, "id": 354, "status": "HOLD_CONFLICT"}
+{"baseline": 13.0, "contextual": 3.0, "id": 355, "measured_shifts": [10.0, 10.0, 10.0, 9.0, 10.0], "status": "CANDIDATE"}
+{"baseline": -1.0, "contextual": -9.0, "id": 356, "measured_shifts": [9.0, 7.0, 8.0, 7.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 357, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 358, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 359, "status": "HOLD_OBJECT"}
+{"baseline": -2.0, "contextual": -8.0, "id": 360, "measured_shifts": [6.0, 6.0, 6.0, 6.0, 6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 361, "status": "HOLD_OBJECT"}
+{"baseline": 12.0, "contextual": -15.0, "id": 362, "measured_shifts": [27.0, 27.0, 27.0, 27.0, 1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 363, "status": "HOLD_OBJECT"}
+{"baseline": 16.0, "contextual": 7.0, "id": 364, "measured_shifts": [9.0, 9.0, 9.0, 9.0, 9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 365, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 366, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 367, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 368, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": 2.0, "id": 369, "measured_shifts": [-7.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 370, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": null, "id": 371, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 372, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 373, "status": "HOLD_OBJECT"}
+{"baseline": -8.0, "contextual": -36.0, "id": 374, "measured_shifts": [28.0, 28.0, 28.0, 28.0, 2.0], "status": "CANDIDATE"}
+{"baseline": 20.0, "contextual": 12.0, "id": 375, "measured_shifts": [36.0, 8.0, 8.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 376, "status": "HOLD_OBJECT"}
+{"baseline": -14.0, "contextual": -8.0, "id": 377, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 378, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 379, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 380, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 381, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 382, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 383, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 384, "status": "HOLD_OBJECT"}
+{"baseline": -19.0, "contextual": null, "id": 385, "status": "HOLD_CONFLICT"}
+{"baseline": 7.0, "contextual": 10.0, "id": 386, "measured_shifts": [-3.0, 0.0, -4.0, -3.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 387, "status": "HOLD_OBJECT"}
+{"baseline": 11.0, "contextual": null, "id": 388, "status": "HOLD_CONFLICT"}
+{"baseline": -6.0, "contextual": null, "id": 389, "status": "HOLD_CONFLICT"}
+{"baseline": 2.0, "contextual": null, "id": 390, "status": "HOLD_CONFLICT"}
+{"baseline": 3.0, "contextual": -21.0, "id": 391, "measured_shifts": [25.0, 22.0, 25.0, 24.0, -3.0], "status": "CANDIDATE"}
+{"baseline": 1.0, "contextual": 10.0, "id": 392, "measured_shifts": [17.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 393, "status": "HOLD_OBJECT"}
+{"baseline": -6.0, "contextual": 2.0, "id": 394, "measured_shifts": [18.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 395, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 396, "status": "HOLD_OBJECT"}
+{"baseline": -6.0, "contextual": null, "id": 397, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 398, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 399, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 400, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 401, "status": "HOLD_OBJECT"}
+{"baseline": -5.0, "contextual": -2.0, "id": 402, "measured_shifts": [-3.0, -3.0, -4.0, -4.0, -3.0], "status": "CANDIDATE"}
+{"baseline": -15.0, "contextual": -8.0, "id": 403, "measured_shifts": [-5.0, -7.0, -7.0, -6.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 404, "status": "HOLD_OBJECT"}
+{"baseline": 8.0, "contextual": 11.0, "id": 405, "measured_shifts": [-2.0, -4.0, -3.0, -1.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 406, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 407, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 408, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 409, "status": "HOLD_OBJECT"}
+{"baseline": -14.0, "contextual": -9.0, "id": 410, "measured_shifts": [-5.0, -6.0, -4.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": -19.0, "contextual": -10.0, "id": 411, "measured_shifts": [-8.0, -10.0, -9.0, -8.0, -9.0], "status": "CANDIDATE"}
+{"baseline": 0.0, "contextual": -16.0, "id": 412, "measured_shifts": [16.0, 16.0, 16.0, 16.0, -10.0], "status": "CANDIDATE"}
+{"baseline": -16.0, "contextual": -12.0, "id": 413, "measured_shifts": [22.0, -4.0, -4.0, -4.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 414, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 415, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 416, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 417, "status": "HOLD_OBJECT"}
+{"baseline": 15.0, "contextual": 6.0, "id": 418, "measured_shifts": [9.0, 9.0, 9.0, 9.0, 9.0], "status": "CANDIDATE"}
+{"baseline": -7.0, "contextual": -12.0, "id": 419, "measured_shifts": [5.0, 5.0, 5.0, 5.0, 5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 420, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 421, "status": "HOLD_OBJECT"}
+{"baseline": 5.0, "contextual": 4.0, "id": 422, "measured_shifts": [28.0, 1.0, 1.0, 1.0, 0.0], "status": "CANDIDATE"}
+{"baseline": -11.0, "contextual": -4.0, "id": 423, "measured_shifts": [-7.0, -7.0, -7.0, -7.0, -7.0], "status": "CANDIDATE"}
+{"baseline": -4.0, "contextual": 0.0, "id": 424, "measured_shifts": [22.0, -4.0, -4.0, -4.0, -4.0], "status": "CANDIDATE"}
+{"baseline": 14.0, "contextual": 11.0, "id": 425, "measured_shifts": [29.0, 2.0, 3.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": 12.0, "contextual": 3.0, "id": 426, "measured_shifts": [9.0, 9.0, 9.0, 9.0, 9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 427, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 428, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 429, "status": "HOLD_OBJECT"}
+{"baseline": -7.0, "contextual": -10.0, "id": 430, "measured_shifts": [3.0, 5.0, 3.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": -24.0, "id": 431, "measured_shifts": [21.0, 21.0, 21.0, 21.0, -5.0], "status": "CANDIDATE"}
+{"baseline": 4.0, "contextual": 6.0, "id": 432, "measured_shifts": [-2.0, -2.0, -2.0, -2.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 433, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 434, "status": "HOLD_OBJECT"}
+{"baseline": 8.0, "contextual": 2.0, "id": 435, "measured_shifts": [6.0, 6.0, 6.0, 6.0, 6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 436, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 437, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 438, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 439, "status": "HOLD_OBJECT"}
+{"baseline": 0.0, "contextual": -19.0, "id": 440, "measured_shifts": [19.0, 20.0, 21.0, 19.0, -6.0], "status": "CANDIDATE"}
+{"baseline": -13.0, "contextual": -4.0, "id": 441, "measured_shifts": [17.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 442, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 443, "status": "HOLD_OBJECT"}
+{"baseline": 12.0, "contextual": -21.0, "id": 444, "measured_shifts": [33.0, 33.0, 35.0, 33.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 445, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 446, "status": "HOLD_OBJECT"}
+{"baseline": 14.0, "contextual": null, "id": 447, "status": "HOLD_CONFLICT"}
+{"baseline": 1.0, "contextual": null, "id": 448, "status": "HOLD_CONFLICT"}
+{"baseline": 14.0, "contextual": null, "id": 449, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 450, "status": "HOLD_OBJECT"}
+{"baseline": 4.0, "contextual": 3.0, "id": 451, "measured_shifts": [1.0, 1.0, 1.0, 1.0, 1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 452, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 453, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 454, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 455, "status": "HOLD_OBJECT"}
+{"baseline": 16.0, "contextual": null, "id": 456, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 457, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 458, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": 2.0, "id": 459, "measured_shifts": [21.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 460, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 461, "status": "HOLD_OBJECT"}
+{"baseline": 10.0, "contextual": null, "id": 462, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 463, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": -31.0, "id": 464, "measured_shifts": [32.0, 33.0, 33.0, 31.0, 7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 465, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 466, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": -28.0, "id": 467, "measured_shifts": [27.0, 27.0, 27.0, 27.0, 1.0], "status": "CANDIDATE"}
+{"baseline": -6.0, "contextual": null, "id": 468, "status": "HOLD_CONFLICT"}
+{"baseline": -20.0, "contextual": -11.0, "id": 469, "measured_shifts": [-9.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": -11.0, "contextual": -4.0, "id": 470, "measured_shifts": [-7.0, -7.0, -6.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 471, "status": "HOLD_OBJECT"}
+{"baseline": -17.0, "contextual": -9.0, "id": 472, "measured_shifts": [-8.0, -6.0, -7.0, -8.0, -10.0], "status": "CANDIDATE"}
+{"baseline": -18.0, "contextual": -12.0, "id": 473, "measured_shifts": [-7.0, -6.0, -5.0, -7.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 474, "status": "HOLD_OBJECT"}
+{"baseline": 13.0, "contextual": 5.0, "id": 475, "measured_shifts": [8.0, 8.0, 8.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 476, "status": "HOLD_OBJECT"}
+{"baseline": 2.0, "contextual": 6.0, "id": 477, "measured_shifts": [-4.0, -4.0, -6.0, -4.0, -6.0], "status": "CANDIDATE"}
+{"baseline": 2.0, "contextual": 12.0, "id": 478, "measured_shifts": [-10.0, -10.0, -10.0, -10.0, -10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 479, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 480, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 481, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 482, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 483, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 484, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 485, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 486, "status": "HOLD_OBJECT"}
+{"baseline": 16.0, "contextual": 12.0, "id": 487, "measured_shifts": [4.0, 4.0, 5.0, 3.0, 4.0], "status": "CANDIDATE"}
+{"baseline": -6.0, "contextual": -11.0, "id": 488, "measured_shifts": [5.0, 6.0, 7.0, 3.0, 5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 489, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 490, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 491, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 492, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 493, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 494, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 495, "status": "HOLD_OBJECT"}
+{"baseline": 19.0, "contextual": null, "id": 496, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 497, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 498, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 499, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 500, "status": "HOLD_OBJECT"}
+{"baseline": 11.0, "contextual": null, "id": 501, "status": "HOLD_CONFLICT"}
+{"baseline": -5.0, "contextual": -7.0, "id": 502, "measured_shifts": [2.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 503, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 504, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 505, "status": "HOLD_OBJECT"}
+{"baseline": 4.0, "contextual": 10.0, "id": 506, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": -17.0, "contextual": null, "id": 507, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 508, "status": "HOLD_OBJECT"}
+{"baseline": 18.0, "contextual": 11.0, "id": 509, "measured_shifts": [7.0, 7.0, 7.0, 7.0, 7.0], "status": "CANDIDATE"}
+{"baseline": -4.0, "contextual": null, "id": 510, "status": "HOLD_CONFLICT"}
+{"baseline": -15.0, "contextual": null, "id": 511, "status": "HOLD_CONFLICT"}
+{"baseline": 9.0, "contextual": -1.0, "id": 512, "measured_shifts": [36.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": -15.0, "contextual": -9.0, "id": 513, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": 2.0, "contextual": null, "id": 514, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 515, "status": "HOLD_OBJECT"}
+{"baseline": 15.0, "contextual": null, "id": 516, "status": "HOLD_CONFLICT"}
+{"baseline": 22.0, "contextual": 13.0, "id": 517, "measured_shifts": [9.0, 12.0, 9.0, 10.0, 9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 518, "status": "HOLD_OBJECT"}
+{"baseline": -9.0, "contextual": null, "id": 519, "status": "HOLD_CONFLICT"}
+{"baseline": -14.0, "contextual": -8.0, "id": 520, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": -8.0, "contextual": null, "id": 521, "status": "HOLD_CONFLICT"}
+{"baseline": 0.0, "contextual": -2.0, "id": 522, "measured_shifts": [27.0, 0.0, 2.0, 2.0, 0.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 523, "status": "HOLD_OBJECT"}
+{"baseline": 12.0, "contextual": 10.0, "id": 524, "measured_shifts": [2.0, 1.0, 2.0, 0.0, 2.0], "status": "CANDIDATE"}
+{"baseline": 16.0, "contextual": 8.0, "id": 525, "measured_shifts": [8.0, 7.0, 9.0, 7.0, 8.0], "status": "CANDIDATE"}
+{"baseline": 21.0, "contextual": 11.0, "id": 526, "measured_shifts": [10.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 527, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 528, "status": "HOLD_OBJECT"}
+{"baseline": 8.0, "contextual": null, "id": 529, "status": "HOLD_CONFLICT"}
+{"baseline": 2.0, "contextual": null, "id": 530, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 531, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 532, "status": "HOLD_OBJECT"}
+{"baseline": 18.0, "contextual": null, "id": 533, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 534, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 535, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 536, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 537, "status": "HOLD_OBJECT"}
+{"baseline": -13.0, "contextual": -8.0, "id": 538, "measured_shifts": [-5.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 539, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 540, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": null, "id": 541, "status": "HOLD_CONFLICT"}
+{"baseline": -18.0, "contextual": -12.0, "id": 542, "measured_shifts": [20.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 543, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 544, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 545, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 546, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 547, "status": "HOLD_OBJECT"}
+{"baseline": 13.0, "contextual": null, "id": 548, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 549, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 550, "status": "HOLD_OBJECT"}
+{"baseline": 4.0, "contextual": 0.0, "id": 551, "measured_shifts": [4.0, 4.0, 4.0, 4.0, 4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 552, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 553, "status": "HOLD_OBJECT"}
+{"baseline": -14.0, "contextual": -11.0, "id": 554, "measured_shifts": [-3.0, -3.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": -12.0, "contextual": -5.0, "id": 555, "measured_shifts": [-7.0, -7.0, -7.0, -7.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 556, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": 8.0, "id": 557, "measured_shifts": [19.0, -6.0, -5.0, -4.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 558, "status": "HOLD_OBJECT"}
+{"baseline": -10.0, "contextual": null, "id": 559, "status": "HOLD_CONFLICT"}
+{"baseline": -4.0, "contextual": -34.0, "id": 560, "measured_shifts": [30.0, 30.0, 29.0, 30.0, 4.0], "status": "CANDIDATE"}
+{"baseline": 17.0, "contextual": -17.0, "id": 561, "measured_shifts": [35.0, 33.0, 35.0, 34.0, 11.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 562, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 563, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 564, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 565, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 566, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 567, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 568, "status": "HOLD_OBJECT"}
+{"baseline": 0.0, "contextual": 6.0, "id": 569, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": 17.0, "contextual": 9.0, "id": 570, "measured_shifts": [8.0, 8.0, 8.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 571, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 572, "status": "HOLD_OBJECT"}
+{"baseline": -7.0, "contextual": -1.0, "id": 573, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -5.0], "status": "CANDIDATE"}
+{"baseline": 6.0, "contextual": 10.0, "id": 574, "measured_shifts": [22.0, -4.0, -4.0, -4.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 575, "status": "HOLD_OBJECT"}
+{"baseline": -11.0, "contextual": -33.0, "id": 576, "measured_shifts": [24.0, 22.0, 22.0, 23.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 577, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 578, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 579, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 580, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": -2.0, "id": 581, "measured_shifts": [-1.0, -1.0, -1.0, -1.0, -1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 582, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": null, "id": 583, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 584, "status": "HOLD_OBJECT"}
+{"baseline": -5.0, "contextual": null, "id": 585, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 586, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 587, "status": "HOLD_OBJECT"}
+{"baseline": -22.0, "contextual": -12.0, "id": 588, "measured_shifts": [-10.0, -10.0, -11.0, -11.0, -10.0], "status": "CANDIDATE"}
+{"baseline": 14.0, "contextual": 5.0, "id": 589, "measured_shifts": [9.0, 9.0, 9.0, 9.0, 9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 590, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 591, "status": "HOLD_OBJECT"}
+{"baseline": -14.0, "contextual": -11.0, "id": 592, "measured_shifts": [-3.0, -3.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 593, "status": "HOLD_OBJECT"}
+{"baseline": 14.0, "contextual": null, "id": 594, "status": "HOLD_CONFLICT"}
+{"baseline": 12.0, "contextual": 5.0, "id": 595, "measured_shifts": [7.0, 7.0, 7.0, 9.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 596, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 597, "status": "HOLD_OBJECT"}
+{"baseline": -8.0, "contextual": null, "id": 598, "status": "HOLD_CONFLICT"}
+{"baseline": 3.0, "contextual": 12.0, "id": 599, "measured_shifts": [-9.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": -7.0, "contextual": -3.0, "id": 600, "measured_shifts": [22.0, -4.0, -4.0, -4.0, -4.0], "status": "CANDIDATE"}
+{"baseline": 1.0, "contextual": -6.0, "id": 601, "measured_shifts": [7.0, 7.0, 7.0, 7.0, 7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 602, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 603, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 604, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 605, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 606, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 607, "status": "HOLD_OBJECT"}
+{"baseline": 0.0, "contextual": null, "id": 608, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 609, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 610, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 611, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 612, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 613, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": -6.0, "id": 614, "measured_shifts": [28.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": -9.0, "contextual": null, "id": 615, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 616, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 617, "status": "HOLD_OBJECT"}
+{"baseline": -7.0, "contextual": -31.0, "id": 618, "measured_shifts": [24.0, 24.0, 24.0, 24.0, -2.0], "status": "CANDIDATE"}
+{"baseline": 3.0, "contextual": 2.0, "id": 619, "measured_shifts": [1.0, 1.0, 1.0, 1.0, 1.0], "status": "CANDIDATE"}
+{"baseline": -1.0, "contextual": null, "id": 620, "status": "HOLD_CONFLICT"}
+{"baseline": -7.0, "contextual": -4.0, "id": 621, "measured_shifts": [-3.0, -3.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 622, "status": "HOLD_OBJECT"}
+{"baseline": 6.0, "contextual": 12.0, "id": 623, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": -1.0, "contextual": -8.0, "id": 624, "measured_shifts": [6.0, 6.0, 7.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 625, "status": "HOLD_OBJECT"}
+{"baseline": -15.0, "contextual": null, "id": 626, "status": "HOLD_CONFLICT"}
+{"baseline": 6.0, "contextual": 3.0, "id": 627, "measured_shifts": [28.0, 3.0, 3.0, 1.0, 2.0], "status": "CANDIDATE"}
+{"baseline": -10.0, "contextual": -9.0, "id": 628, "measured_shifts": [-1.0, -1.0, -1.0, -1.0, -1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 629, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 630, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 631, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": null, "id": 632, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 633, "status": "HOLD_OBJECT"}
+{"baseline": -7.0, "contextual": -6.0, "id": 634, "measured_shifts": [-1.0, -1.0, -1.0, -1.0, -1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 635, "status": "HOLD_OBJECT"}
+{"baseline": 22.0, "contextual": 13.0, "id": 636, "measured_shifts": [11.0, 12.0, 9.0, 9.0, 8.0], "status": "CANDIDATE"}
+{"baseline": -6.0, "contextual": null, "id": 637, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 638, "status": "HOLD_OBJECT"}
+{"baseline": -11.0, "contextual": -7.0, "id": 639, "measured_shifts": [-4.0, -4.0, -4.0, -4.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 640, "status": "HOLD_OBJECT"}
+{"baseline": -6.0, "contextual": null, "id": 641, "status": "HOLD_CONFLICT"}
+{"baseline": 14.0, "contextual": null, "id": 642, "status": "HOLD_CONFLICT"}
+{"baseline": -7.0, "contextual": null, "id": 643, "status": "HOLD_CONFLICT"}
+{"baseline": 5.0, "contextual": null, "id": 644, "status": "HOLD_CONFLICT"}
+{"baseline": 20.0, "contextual": -16.0, "id": 645, "measured_shifts": [36.0, 36.0, 36.0, 36.0, 10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 646, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 647, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 648, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 649, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 650, "status": "HOLD_OBJECT"}
+{"baseline": -5.0, "contextual": null, "id": 651, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 652, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": -5.0, "id": 653, "measured_shifts": [28.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 654, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 655, "status": "HOLD_OBJECT"}
+{"baseline": -8.0, "contextual": -3.0, "id": 656, "measured_shifts": [-8.0, -7.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": -6.0, "contextual": null, "id": 657, "status": "HOLD_CONFLICT"}
+{"baseline": 7.0, "contextual": null, "id": 658, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 659, "status": "HOLD_OBJECT"}
+{"baseline": 6.0, "contextual": null, "id": 660, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 661, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 662, "status": "HOLD_OBJECT"}
+{"baseline": 6.0, "contextual": -4.0, "id": 663, "measured_shifts": [36.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 664, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 665, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": null, "id": 666, "status": "HOLD_CONFLICT"}
+{"baseline": -11.0, "contextual": -9.0, "id": 667, "measured_shifts": [23.0, -3.0, -2.0, -3.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 668, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": 9.0, "id": 669, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": 11.0, "contextual": 5.0, "id": 670, "measured_shifts": [32.0, 6.0, 6.0, 6.0, 6.0], "status": "CANDIDATE"}
+{"baseline": -1.0, "contextual": 0.0, "id": 671, "measured_shifts": [-1.0, -1.0, -1.0, -1.0, -1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 672, "status": "HOLD_OBJECT"}
+{"baseline": 19.0, "contextual": 12.0, "id": 673, "measured_shifts": [33.0, 7.0, 7.0, 7.0, 7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 674, "status": "HOLD_OBJECT"}
+{"baseline": -2.0, "contextual": null, "id": 675, "status": "HOLD_CONFLICT"}
+{"baseline": -5.0, "contextual": -7.0, "id": 676, "measured_shifts": [2.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": -4.0, "contextual": -34.0, "id": 677, "measured_shifts": [30.0, 29.0, 31.0, 30.0, 4.0], "status": "CANDIDATE"}
+{"baseline": 14.0, "contextual": null, "id": 678, "status": "HOLD_CONFLICT"}
+{"baseline": -10.0, "contextual": null, "id": 679, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 680, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 681, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": 2.0, "id": 682, "measured_shifts": [21.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 683, "status": "HOLD_OBJECT"}
+{"baseline": 15.0, "contextual": null, "id": 684, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 685, "status": "HOLD_OBJECT"}
+{"baseline": 7.0, "contextual": 10.0, "id": 686, "measured_shifts": [24.0, -1.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 687, "status": "HOLD_OBJECT"}
+{"baseline": 9.0, "contextual": 3.0, "id": 688, "measured_shifts": [6.0, 6.0, 6.0, 6.0, 6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 689, "status": "HOLD_OBJECT"}
+{"baseline": 5.0, "contextual": null, "id": 690, "status": "HOLD_CONFLICT"}
+{"baseline": 5.0, "contextual": null, "id": 691, "status": "HOLD_CONFLICT"}
+{"baseline": 3.0, "contextual": null, "id": 692, "status": "HOLD_CONFLICT"}
+{"baseline": -6.0, "contextual": null, "id": 693, "status": "HOLD_CONFLICT"}
+{"baseline": 1.0, "contextual": -3.0, "id": 694, "measured_shifts": [30.0, 2.0, 2.0, 4.0, 4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 695, "status": "HOLD_OBJECT"}
+{"baseline": -2.0, "contextual": null, "id": 696, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 697, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 698, "status": "HOLD_OBJECT"}
+{"baseline": -16.0, "contextual": null, "id": 699, "status": "HOLD_CONFLICT"}
+{"baseline": -14.0, "contextual": null, "id": 700, "status": "HOLD_CONFLICT"}
+{"baseline": -12.0, "contextual": -2.0, "id": 701, "measured_shifts": [-10.0, -10.0, -10.0, -10.0, -10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 702, "status": "HOLD_OBJECT"}
+{"baseline": 0.0, "contextual": -2.0, "id": 703, "measured_shifts": [2.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": 5.0, "contextual": null, "id": 704, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 705, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 706, "status": "HOLD_OBJECT"}
+{"baseline": 18.0, "contextual": null, "id": 707, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 708, "status": "HOLD_OBJECT"}
+{"baseline": -11.0, "contextual": -2.0, "id": 709, "measured_shifts": [-9.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": -6.0, "contextual": 4.0, "id": 710, "measured_shifts": [-10.0, -10.0, -10.0, -10.0, -10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 711, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 712, "status": "HOLD_OBJECT"}
+{"baseline": 14.0, "contextual": -12.0, "id": 713, "measured_shifts": [27.0, 26.0, 26.0, 27.0, 2.0], "status": "CANDIDATE"}
+{"baseline": 9.0, "contextual": 6.0, "id": 714, "measured_shifts": [2.0, 4.0, 4.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 715, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 716, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 717, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 718, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 719, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 720, "status": "HOLD_OBJECT"}
+{"baseline": 14.0, "contextual": 8.0, "id": 721, "measured_shifts": [6.0, 8.0, 8.0, 6.0, 6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 722, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 723, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 724, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 725, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 726, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 727, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 728, "status": "HOLD_OBJECT"}
+{"baseline": 8.0, "contextual": 0.0, "id": 729, "measured_shifts": [9.0, 8.0, 9.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": 18.0, "contextual": 9.0, "id": 730, "measured_shifts": [9.0, 9.0, 9.0, 9.0, 9.0], "status": "CANDIDATE"}
+{"baseline": 6.0, "contextual": -24.0, "id": 731, "measured_shifts": [30.0, 30.0, 30.0, 30.0, 4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 732, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 733, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": -22.0, "id": 734, "measured_shifts": [19.0, 19.0, 19.0, 19.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 735, "status": "HOLD_OBJECT"}
+{"baseline": 5.0, "contextual": 7.0, "id": 736, "measured_shifts": [-2.0, -2.0, -2.0, -2.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 737, "status": "HOLD_OBJECT"}
+{"baseline": 7.0, "contextual": -1.0, "id": 738, "measured_shifts": [8.0, 8.0, 8.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": 10.0, "contextual": null, "id": 739, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 740, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 741, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 742, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 743, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 744, "status": "HOLD_OBJECT"}
+{"baseline": 17.0, "contextual": 8.0, "id": 745, "measured_shifts": [9.0, 11.0, 9.0, 9.0, 11.0], "status": "CANDIDATE"}
+{"baseline": 6.0, "contextual": -3.0, "id": 746, "measured_shifts": [35.0, 9.0, 9.0, 9.0, 9.0], "status": "CANDIDATE"}
+{"baseline": -1.0, "contextual": 1.0, "id": 747, "measured_shifts": [-2.0, -2.0, -2.0, -2.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 748, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 749, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 750, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 751, "status": "HOLD_OBJECT"}
+{"baseline": -7.0, "contextual": -31.0, "id": 752, "measured_shifts": [24.0, 25.0, 26.0, 24.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 753, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 754, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 755, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 756, "status": "HOLD_OBJECT"}
+{"baseline": -13.0, "contextual": null, "id": 757, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 758, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 759, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 760, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 761, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 762, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 763, "status": "HOLD_OBJECT"}
+{"baseline": -12.0, "contextual": -12.0, "id": 764, "measured_shifts": [0.0, 0.0, 0.0, 0.0, 0.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 765, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": -2.0, "id": 766, "measured_shifts": [3.0, 3.0, 2.0, 2.0, 3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 767, "status": "HOLD_OBJECT"}
+{"baseline": -9.0, "contextual": -10.0, "id": 768, "measured_shifts": [27.0, 1.0, 3.0, 1.0, 1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 769, "status": "HOLD_OBJECT"}
+{"baseline": 8.0, "contextual": -25.0, "id": 770, "measured_shifts": [33.0, 35.0, 33.0, 34.0, 7.0], "status": "CANDIDATE"}
+{"baseline": -13.0, "contextual": -7.0, "id": 771, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 772, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": null, "id": 773, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 774, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 775, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 776, "status": "HOLD_OBJECT"}
+{"baseline": -10.0, "contextual": null, "id": 777, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 778, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 779, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 780, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 781, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 782, "status": "HOLD_OBJECT"}
+{"baseline": -14.0, "contextual": -35.0, "id": 783, "measured_shifts": [21.0, 21.0, 21.0, 21.0, -5.0], "status": "CANDIDATE"}
+{"baseline": -4.0, "contextual": 3.0, "id": 784, "measured_shifts": [-8.0, -7.0, -8.0, -7.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 785, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": -7.0, "id": 786, "measured_shifts": [3.0, 1.0, 4.0, 0.0, 3.0], "status": "CANDIDATE"}
+{"baseline": -6.0, "contextual": -3.0, "id": 787, "measured_shifts": [25.0, -5.0, -5.0, -1.0, -3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 788, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 789, "status": "HOLD_OBJECT"}
+{"baseline": 6.0, "contextual": -1.0, "id": 790, "measured_shifts": [7.0, 7.0, 7.0, 7.0, 7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 791, "status": "HOLD_OBJECT"}
+{"baseline": -11.0, "contextual": -2.0, "id": 792, "measured_shifts": [-9.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": -4.0, "contextual": -6.0, "id": 793, "measured_shifts": [28.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 794, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": 1.0, "id": 795, "measured_shifts": [-5.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 796, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 797, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 798, "status": "HOLD_OBJECT"}
+{"baseline": -11.0, "contextual": null, "id": 799, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 800, "status": "HOLD_OBJECT"}
+{"baseline": 0.0, "contextual": null, "id": 801, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 802, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 803, "status": "HOLD_OBJECT"}
+{"baseline": 10.0, "contextual": 2.0, "id": 804, "measured_shifts": [8.0, 8.0, 8.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 805, "status": "HOLD_OBJECT"}
+{"baseline": 8.0, "contextual": 6.0, "id": 806, "measured_shifts": [2.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 807, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": -4.0, "id": 808, "measured_shifts": [26.0, -1.0, 1.0, 0.0, -1.0], "status": "CANDIDATE"}
+{"baseline": -15.0, "contextual": null, "id": 809, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 810, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 811, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 812, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 813, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 814, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 815, "status": "HOLD_OBJECT"}
+{"baseline": 8.0, "contextual": -24.0, "id": 816, "measured_shifts": [32.0, 32.0, 34.0, 33.0, 6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 817, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 818, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 819, "status": "HOLD_OBJECT"}
+{"baseline": 0.0, "contextual": -7.0, "id": 820, "measured_shifts": [7.0, 7.0, 7.0, 7.0, 7.0], "status": "CANDIDATE"}
+{"baseline": -9.0, "contextual": -1.0, "id": 821, "measured_shifts": [-8.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": -2.0, "id": 822, "measured_shifts": [0.0, 0.0, -2.0, -1.0, -1.0], "status": "CANDIDATE"}
+{"baseline": 5.0, "contextual": 14.0, "id": 823, "measured_shifts": [-9.0, -7.0, -5.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 824, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 825, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 826, "status": "HOLD_OBJECT"}
+{"baseline": 2.0, "contextual": null, "id": 827, "status": "HOLD_CONFLICT"}
+{"baseline": 21.0, "contextual": null, "id": 828, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 829, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 830, "status": "HOLD_OBJECT"}
+{"baseline": 14.0, "contextual": 3.0, "id": 831, "measured_shifts": [12.0, 8.0, 11.0, 11.0, 10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 832, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 833, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 834, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 835, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 836, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 837, "status": "HOLD_OBJECT"}
+{"baseline": 0.0, "contextual": null, "id": 838, "status": "HOLD_CONFLICT"}
+{"baseline": -9.0, "contextual": null, "id": 839, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 840, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 841, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 842, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 843, "status": "HOLD_OBJECT"}
+{"baseline": -5.0, "contextual": -35.0, "id": 844, "measured_shifts": [30.0, 31.0, 31.0, 29.0, 7.0], "status": "CANDIDATE"}
+{"baseline": 16.0, "contextual": 10.0, "id": 845, "measured_shifts": [32.0, 6.0, 6.0, 6.0, 6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 846, "status": "HOLD_OBJECT"}
+{"baseline": -15.0, "contextual": -37.0, "id": 847, "measured_shifts": [22.0, 22.0, 22.0, 22.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 848, "status": "HOLD_OBJECT"}
+{"baseline": 12.0, "contextual": null, "id": 849, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 850, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 851, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 852, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": null, "id": 853, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 854, "status": "HOLD_OBJECT"}
+{"baseline": -2.0, "contextual": -27.0, "id": 855, "measured_shifts": [27.0, 26.0, 25.0, 25.0, 1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 856, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 857, "status": "HOLD_OBJECT"}
+{"baseline": 8.0, "contextual": -26.0, "id": 858, "measured_shifts": [34.0, 34.0, 34.0, 34.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 859, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 860, "status": "HOLD_OBJECT"}
+{"baseline": -17.0, "contextual": null, "id": 861, "status": "HOLD_CONFLICT"}
+{"baseline": 15.0, "contextual": null, "id": 862, "status": "HOLD_CONFLICT"}
+{"baseline": 15.0, "contextual": -18.0, "id": 863, "measured_shifts": [33.0, 33.0, 33.0, 33.0, 7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 864, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": 11.0, "id": 865, "measured_shifts": [-11.0, -10.0, -9.0, -11.0, -10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 866, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": -19.0, "id": 867, "measured_shifts": [20.0, 20.0, 19.0, 21.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 868, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": 8.0, "id": 869, "measured_shifts": [-8.0, -8.0, -7.0, -5.0, -6.0], "status": "CANDIDATE"}
+{"baseline": -2.0, "contextual": -30.0, "id": 870, "measured_shifts": [28.0, 28.0, 28.0, 28.0, 2.0], "status": "CANDIDATE"}
+{"baseline": -11.0, "contextual": -31.0, "id": 871, "measured_shifts": [20.0, 20.0, 20.0, 20.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 872, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 873, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": null, "id": 874, "status": "HOLD_CONFLICT"}
+{"baseline": -5.0, "contextual": -9.0, "id": 875, "measured_shifts": [30.0, 4.0, 4.0, 4.0, 4.0], "status": "CANDIDATE"}
+{"baseline": -16.0, "contextual": null, "id": 876, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 877, "status": "HOLD_OBJECT"}
+{"baseline": 9.0, "contextual": null, "id": 878, "status": "HOLD_CONFLICT"}
+{"baseline": -9.0, "contextual": -6.0, "id": 879, "measured_shifts": [23.0, -3.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": -1.0, "contextual": -6.0, "id": 880, "measured_shifts": [31.0, 4.0, 5.0, 5.0, 3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 881, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 882, "status": "HOLD_OBJECT"}
+{"baseline": -15.0, "contextual": -4.0, "id": 883, "measured_shifts": [-11.0, -9.0, -11.0, -10.0, -11.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 884, "status": "HOLD_OBJECT"}
+{"baseline": 0.0, "contextual": null, "id": 885, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 886, "status": "HOLD_OBJECT"}
+{"baseline": 4.0, "contextual": -16.0, "id": 887, "measured_shifts": [20.0, 19.0, 21.0, 20.0, -6.0], "status": "CANDIDATE"}
+{"baseline": -11.0, "contextual": -2.0, "id": 888, "measured_shifts": [-9.0, -8.0, -8.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": 19.0, "contextual": 11.0, "id": 889, "measured_shifts": [34.0, 8.0, 8.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 890, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": -9.0, "id": 891, "measured_shifts": [6.0, 6.0, 6.0, 6.0, 6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 892, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 893, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 894, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": -23.0, "id": 895, "measured_shifts": [20.0, 20.0, 20.0, 20.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 896, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 897, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 898, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 899, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 900, "status": "HOLD_OBJECT"}
+{"baseline": -7.0, "contextual": -7.0, "id": 901, "measured_shifts": [0.0, 0.0, 0.0, 0.0, 0.0], "status": "CANDIDATE"}
+{"baseline": -14.0, "contextual": null, "id": 902, "status": "HOLD_CONFLICT"}
+{"baseline": -16.0, "contextual": null, "id": 903, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 904, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 905, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": -35.0, "id": 906, "measured_shifts": [34.0, 34.0, 34.0, 34.0, 8.0], "status": "CANDIDATE"}
+{"baseline": 5.0, "contextual": 12.0, "id": 907, "measured_shifts": [-7.0, -7.0, -7.0, -7.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 908, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 909, "status": "HOLD_OBJECT"}
+{"baseline": -10.0, "contextual": null, "id": 910, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 911, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": 8.0, "id": 912, "measured_shifts": [-9.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 913, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 914, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 915, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 916, "status": "HOLD_OBJECT"}
+{"baseline": -12.0, "contextual": -8.0, "id": 917, "measured_shifts": [-4.0, -4.0, -4.0, -4.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 918, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 919, "status": "HOLD_OBJECT"}
+{"baseline": -12.0, "contextual": -3.0, "id": 920, "measured_shifts": [-9.0, -9.0, -9.0, -9.0, -9.0], "status": "CANDIDATE"}
+{"baseline": 1.0, "contextual": 3.0, "id": 921, "measured_shifts": [-2.0, -1.0, -2.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": null, "id": 922, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 923, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 924, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 925, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 926, "status": "HOLD_OBJECT"}
+{"baseline": 6.0, "contextual": 9.0, "id": 927, "measured_shifts": [-3.0, -3.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": 4.0, "contextual": null, "id": 928, "status": "HOLD_CONFLICT"}
+{"baseline": -1.0, "contextual": -10.0, "id": 929, "measured_shifts": [9.0, 8.0, 9.0, 8.0, 9.0], "status": "CANDIDATE"}
+{"baseline": 8.0, "contextual": null, "id": 930, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 931, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 932, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 933, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": null, "id": 934, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 935, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 936, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 937, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 938, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 939, "status": "HOLD_OBJECT"}
+{"baseline": -2.0, "contextual": null, "id": 940, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 941, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 942, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 943, "status": "HOLD_OBJECT"}
+{"baseline": 17.0, "contextual": 9.0, "id": 944, "measured_shifts": [6.0, 8.0, 8.0, 6.0, 8.0], "status": "CANDIDATE"}
+{"baseline": 2.0, "contextual": -5.0, "id": 945, "measured_shifts": [7.0, 7.0, 7.0, 7.0, 7.0], "status": "CANDIDATE"}
+{"baseline": 14.0, "contextual": 11.0, "id": 946, "measured_shifts": [3.0, 3.0, 3.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 947, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 948, "status": "HOLD_OBJECT"}
+{"baseline": 7.0, "contextual": -26.0, "id": 949, "measured_shifts": [33.0, 33.0, 33.0, 33.0, 7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 950, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 951, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 952, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 953, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 954, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 955, "status": "HOLD_OBJECT"}
+{"baseline": 12.0, "contextual": 9.0, "id": 956, "measured_shifts": [27.0, 2.0, 3.0, 2.0, 3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 957, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": null, "id": 958, "status": "HOLD_CONFLICT"}
+{"baseline": -13.0, "contextual": -8.0, "id": 959, "measured_shifts": [21.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": 9.0, "contextual": null, "id": 960, "status": "HOLD_CONFLICT"}
+{"baseline": -7.0, "contextual": null, "id": 961, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 962, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 963, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 964, "status": "HOLD_OBJECT"}
+{"baseline": -9.0, "contextual": -6.0, "id": 965, "measured_shifts": [-3.0, -3.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": -38.0, "id": 966, "measured_shifts": [35.0, 35.0, 35.0, 35.0, 9.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 967, "status": "HOLD_OBJECT"}
+{"baseline": 5.0, "contextual": 11.0, "id": 968, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 969, "status": "HOLD_OBJECT"}
+{"baseline": -10.0, "contextual": -28.0, "id": 970, "measured_shifts": [18.0, 18.0, 18.0, 18.0, -8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 971, "status": "HOLD_OBJECT"}
+{"baseline": 11.0, "contextual": 10.0, "id": 972, "measured_shifts": [1.0, 0.0, 1.0, 0.0, 1.0], "status": "CANDIDATE"}
+{"baseline": -10.0, "contextual": -26.0, "id": 973, "measured_shifts": [16.0, 16.0, 16.0, 16.0, -10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 974, "status": "HOLD_OBJECT"}
+{"baseline": 14.0, "contextual": null, "id": 975, "status": "HOLD_CONFLICT"}
+{"baseline": 12.0, "contextual": -24.0, "id": 976, "measured_shifts": [36.0, 36.0, 36.0, 36.0, 10.0], "status": "CANDIDATE"}
+{"baseline": -8.0, "contextual": -4.0, "id": 977, "measured_shifts": [-4.0, -4.0, -4.0, -4.0, -4.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 978, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": null, "id": 979, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 980, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 981, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": null, "id": 982, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 983, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 984, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 985, "status": "HOLD_OBJECT"}
+{"baseline": -8.0, "contextual": -10.0, "id": 986, "measured_shifts": [29.0, 4.0, 1.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 987, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 988, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": -7.0, "id": 989, "measured_shifts": [9.0, 12.0, 9.0, 12.0, 10.0], "status": "CANDIDATE"}
+{"baseline": 12.0, "contextual": null, "id": 990, "status": "HOLD_CONFLICT"}
+{"baseline": -9.0, "contextual": -35.0, "id": 991, "measured_shifts": [26.0, 26.0, 26.0, 26.0, 0.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 992, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 993, "status": "HOLD_OBJECT"}
+{"baseline": 2.0, "contextual": 0.0, "id": 994, "measured_shifts": [27.0, 2.0, 1.0, 2.0, 1.0], "status": "CANDIDATE"}
+{"baseline": 11.0, "contextual": 12.0, "id": 995, "measured_shifts": [-1.0, -1.0, -1.0, -1.0, -1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 996, "status": "HOLD_OBJECT"}
+{"baseline": -5.0, "contextual": -29.0, "id": 997, "measured_shifts": [24.0, 25.0, 25.0, 24.0, 0.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 998, "status": "HOLD_OBJECT"}
+{"baseline": -16.0, "contextual": -10.0, "id": 999, "measured_shifts": [-6.0, -6.0, -6.0, -6.0, -6.0], "status": "CANDIDATE"}
+{"baseline": -20.0, "contextual": null, "id": 1000, "status": "HOLD_CONFLICT"}
+{"baseline": 16.0, "contextual": null, "id": 1001, "status": "HOLD_CONFLICT"}
+{"baseline": 5.0, "contextual": 5.0, "id": 1002, "measured_shifts": [24.0, -1.0, 0.0, 0.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1003, "status": "HOLD_OBJECT"}
+{"baseline": -14.0, "contextual": null, "id": 1004, "status": "HOLD_CONFLICT"}
+{"baseline": -8.0, "contextual": null, "id": 1005, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1006, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1007, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1008, "status": "HOLD_OBJECT"}
+{"baseline": 6.0, "contextual": 9.0, "id": 1009, "measured_shifts": [-3.0, -3.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1010, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": 4.0, "id": 1011, "measured_shifts": [-5.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1012, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": null, "id": 1013, "status": "HOLD_CONFLICT"}
+{"baseline": -5.0, "contextual": 3.0, "id": 1014, "measured_shifts": [-8.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": -2.0, "contextual": null, "id": 1015, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1016, "status": "HOLD_OBJECT"}
+{"baseline": -14.0, "contextual": -11.0, "id": 1017, "measured_shifts": [-5.0, -3.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1018, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1019, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1020, "status": "HOLD_OBJECT"}
+{"baseline": -14.0, "contextual": -12.0, "id": 1021, "measured_shifts": [-2.0, -2.0, -2.0, -2.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1022, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1023, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1024, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1025, "status": "HOLD_OBJECT"}
+{"baseline": 2.0, "contextual": null, "id": 1026, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1027, "status": "HOLD_OBJECT"}
+{"baseline": 13.0, "contextual": 10.0, "id": 1028, "measured_shifts": [3.0, 3.0, 3.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1029, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1030, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1031, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1032, "status": "HOLD_OBJECT"}
+{"baseline": 11.0, "contextual": null, "id": 1033, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1034, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1035, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1036, "status": "HOLD_OBJECT"}
+{"baseline": -11.0, "contextual": -2.0, "id": 1037, "measured_shifts": [16.0, -11.0, -9.0, -9.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1038, "status": "HOLD_OBJECT"}
+{"baseline": 16.0, "contextual": null, "id": 1039, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1040, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1041, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1042, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1043, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1044, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1045, "status": "HOLD_OBJECT"}
+{"baseline": -6.0, "contextual": -4.0, "id": 1046, "measured_shifts": [-1.0, -4.0, -3.0, -2.0, -1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1047, "status": "HOLD_OBJECT"}
+{"baseline": 4.0, "contextual": null, "id": 1048, "status": "HOLD_CONFLICT"}
+{"baseline": -22.0, "contextual": -38.0, "id": 1049, "measured_shifts": [16.0, 16.0, 16.0, 16.0, -10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1050, "status": "HOLD_OBJECT"}
+{"baseline": -14.0, "contextual": null, "id": 1051, "status": "HOLD_CONFLICT"}
+{"baseline": -14.0, "contextual": -9.0, "id": 1052, "measured_shifts": [-4.0, -5.0, -5.0, -5.0, -3.0], "status": "CANDIDATE"}
+{"baseline": 19.0, "contextual": 11.0, "id": 1053, "measured_shifts": [34.0, 8.0, 8.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": -19.0, "contextual": null, "id": 1054, "status": "HOLD_CONFLICT"}
+{"baseline": 9.0, "contextual": -25.0, "id": 1055, "measured_shifts": [34.0, 34.0, 34.0, 34.0, 8.0], "status": "CANDIDATE"}
+{"baseline": 1.0, "contextual": null, "id": 1056, "status": "HOLD_CONFLICT"}
+{"baseline": 2.0, "contextual": 9.0, "id": 1057, "measured_shifts": [-8.0, -8.0, -7.0, -5.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1058, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1059, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": -1.0, "id": 1060, "measured_shifts": [0.0, 1.0, 2.0, -1.0, 0.0], "status": "CANDIDATE"}
+{"baseline": -16.0, "contextual": -9.0, "id": 1061, "measured_shifts": [-7.0, -7.0, -7.0, -7.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1062, "status": "HOLD_OBJECT"}
+{"baseline": -2.0, "contextual": -10.0, "id": 1063, "measured_shifts": [8.0, 8.0, 8.0, 8.0, 8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1064, "status": "HOLD_OBJECT"}
+{"baseline": -5.0, "contextual": null, "id": 1065, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1066, "status": "HOLD_OBJECT"}
+{"baseline": 16.0, "contextual": null, "id": 1067, "status": "HOLD_CONFLICT"}
+{"baseline": -15.0, "contextual": -8.0, "id": 1068, "measured_shifts": [-7.0, -7.0, -7.0, -7.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1069, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": 5.0, "id": 1070, "measured_shifts": [24.0, -2.0, -2.0, -2.0, -2.0], "status": "CANDIDATE"}
+{"baseline": 10.0, "contextual": 8.0, "id": 1071, "measured_shifts": [2.0, 2.0, 1.0, 1.0, 2.0], "status": "CANDIDATE"}
+{"baseline": 6.0, "contextual": 3.0, "id": 1072, "measured_shifts": [3.0, 3.0, 3.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1073, "status": "HOLD_OBJECT"}
+{"baseline": 0.0, "contextual": 8.0, "id": 1074, "measured_shifts": [18.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1075, "status": "HOLD_OBJECT"}
+{"baseline": 5.0, "contextual": null, "id": 1076, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1077, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1078, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1079, "status": "HOLD_OBJECT"}
+{"baseline": -9.0, "contextual": -35.0, "id": 1080, "measured_shifts": [26.0, 28.0, 26.0, 27.0, 1.0], "status": "CANDIDATE"}
+{"baseline": 11.0, "contextual": null, "id": 1081, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1082, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1083, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1084, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": null, "id": 1085, "status": "HOLD_CONFLICT"}
+{"baseline": -2.0, "contextual": 5.0, "id": 1086, "measured_shifts": [-7.0, -7.0, -7.0, -7.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1087, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1088, "status": "HOLD_OBJECT"}
+{"baseline": -7.0, "contextual": null, "id": 1089, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1090, "status": "HOLD_OBJECT"}
+{"baseline": 4.0, "contextual": 12.0, "id": 1091, "measured_shifts": [-8.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1092, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": 7.0, "id": 1093, "measured_shifts": [-8.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": -11.0, "contextual": -12.0, "id": 1094, "measured_shifts": [1.0, 1.0, 1.0, 1.0, 1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1095, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1096, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1097, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1098, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1099, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1100, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1101, "status": "HOLD_OBJECT"}
+{"baseline": 7.0, "contextual": 9.0, "id": 1102, "measured_shifts": [-3.0, -2.0, -2.0, -2.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1103, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1104, "status": "HOLD_OBJECT"}
+{"baseline": 8.0, "contextual": 7.0, "id": 1105, "measured_shifts": [1.0, 1.0, 1.0, 1.0, 1.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1106, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1107, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1108, "status": "HOLD_OBJECT"}
+{"baseline": 13.0, "contextual": 11.0, "id": 1109, "measured_shifts": [28.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1110, "status": "HOLD_OBJECT"}
+{"baseline": -9.0, "contextual": -3.0, "id": 1111, "measured_shifts": [-5.0, -6.0, -6.0, -6.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1112, "status": "HOLD_OBJECT"}
+{"baseline": 6.0, "contextual": null, "id": 1113, "status": "HOLD_CONFLICT"}
+{"baseline": 5.0, "contextual": null, "id": 1114, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1115, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1116, "status": "HOLD_OBJECT"}
+{"baseline": -4.0, "contextual": null, "id": 1117, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1118, "status": "HOLD_OBJECT"}
+{"baseline": -8.0, "contextual": -9.0, "id": 1119, "measured_shifts": [1.0, 1.0, 1.0, 1.0, 1.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": null, "id": 1120, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1121, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1122, "status": "HOLD_OBJECT"}
+{"baseline": 11.0, "contextual": 4.0, "id": 1123, "measured_shifts": [7.0, 7.0, 7.0, 7.0, 7.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": -1.0, "id": 1124, "measured_shifts": [-2.0, -2.0, -1.0, 2.0, -2.0], "status": "CANDIDATE"}
+{"baseline": -12.0, "contextual": -8.0, "id": 1125, "measured_shifts": [22.0, -4.0, -4.0, -4.0, -4.0], "status": "CANDIDATE"}
+{"baseline": -5.0, "contextual": null, "id": 1126, "status": "HOLD_CONFLICT"}
+{"baseline": 3.0, "contextual": null, "id": 1127, "status": "HOLD_CONFLICT"}
+{"baseline": 3.0, "contextual": null, "id": 1128, "status": "HOLD_CONFLICT"}
+{"baseline": -6.0, "contextual": -4.0, "id": 1129, "measured_shifts": [-2.0, -2.0, -2.0, -2.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1130, "status": "HOLD_OBJECT"}
+{"baseline": -10.0, "contextual": null, "id": 1131, "status": "HOLD_CONFLICT"}
+{"baseline": -6.0, "contextual": -4.0, "id": 1132, "measured_shifts": [-2.0, -2.0, -2.0, -2.0, -2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1133, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1134, "status": "HOLD_OBJECT"}
+{"baseline": 12.0, "contextual": null, "id": 1135, "status": "HOLD_CONFLICT"}
+{"baseline": -19.0, "contextual": -11.0, "id": 1136, "measured_shifts": [-8.0, -8.0, -8.0, -8.0, -8.0], "status": "CANDIDATE"}
+{"baseline": -9.0, "contextual": null, "id": 1137, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1138, "status": "HOLD_OBJECT"}
+{"baseline": -6.0, "contextual": null, "id": 1139, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1140, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1141, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1142, "status": "HOLD_OBJECT"}
+{"baseline": 1.0, "contextual": null, "id": 1143, "status": "HOLD_CONFLICT"}
+{"baseline": -6.0, "contextual": -8.0, "id": 1144, "measured_shifts": [2.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": 11.0, "contextual": null, "id": 1145, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1146, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1147, "status": "HOLD_OBJECT"}
+{"baseline": 14.0, "contextual": null, "id": 1148, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1149, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1150, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1151, "status": "HOLD_OBJECT"}
+{"baseline": 10.0, "contextual": 6.0, "id": 1152, "measured_shifts": [4.0, 4.0, 4.0, 4.0, 4.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": -3.0, "id": 1153, "measured_shifts": [0.0, 0.0, 0.0, 0.0, 0.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1154, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1155, "status": "HOLD_OBJECT"}
+{"baseline": -10.0, "contextual": -12.0, "id": 1156, "measured_shifts": [2.0, 2.0, 2.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1157, "status": "HOLD_OBJECT"}
+{"baseline": -3.0, "contextual": 4.0, "id": 1158, "measured_shifts": [-7.0, -7.0, -7.0, -7.0, -7.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1159, "status": "HOLD_OBJECT"}
+{"baseline": 17.0, "contextual": 7.0, "id": 1160, "measured_shifts": [10.0, 10.0, 10.0, 10.0, 10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1161, "status": "HOLD_OBJECT"}
+{"baseline": -19.0, "contextual": -9.0, "id": 1162, "measured_shifts": [-10.0, -10.0, -10.0, -10.0, -10.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1163, "status": "HOLD_OBJECT"}
+{"baseline": 6.0, "contextual": 6.0, "id": 1164, "measured_shifts": [26.0, 0.0, 0.0, 0.0, 0.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1165, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1166, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1167, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1168, "status": "HOLD_OBJECT"}
+{"baseline": -8.0, "contextual": -11.0, "id": 1169, "measured_shifts": [29.0, 3.0, 3.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": 1.0, "contextual": 2.0, "id": 1170, "measured_shifts": [-1.0, -1.0, -1.0, -1.0, -1.0], "status": "CANDIDATE"}
+{"baseline": 1.0, "contextual": 4.0, "id": 1171, "measured_shifts": [-3.0, -3.0, -3.0, -3.0, -3.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1172, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1173, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": 0.0, "id": 1174, "measured_shifts": [3.0, 3.0, 3.0, 3.0, 3.0], "status": "CANDIDATE"}
+{"baseline": -9.0, "contextual": null, "id": 1175, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1176, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1177, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1178, "status": "HOLD_OBJECT"}
+{"baseline": 3.0, "contextual": 1.0, "id": 1179, "measured_shifts": [4.0, 2.0, 4.0, 2.0, 2.0], "status": "CANDIDATE"}
+{"baseline": -3.0, "contextual": -5.0, "id": 1180, "measured_shifts": [26.0, 2.0, 2.0, 1.0, 2.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1181, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1182, "status": "HOLD_OBJECT"}
+{"baseline": -1.0, "contextual": -5.0, "id": 1183, "measured_shifts": [4.0, 6.0, 3.0, 6.0, 3.0], "status": "CANDIDATE"}
+{"baseline": 0.0, "contextual": null, "id": 1184, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1185, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1186, "status": "HOLD_OBJECT"}
+{"baseline": -2.0, "contextual": -24.0, "id": 1187, "measured_shifts": [22.0, 22.0, 22.0, 22.0, -4.0], "status": "CANDIDATE"}
+{"baseline": 2.0, "contextual": null, "id": 1188, "status": "HOLD_CONFLICT"}
+{"baseline": -7.0, "contextual": null, "id": 1189, "status": "HOLD_CONFLICT"}
+{"baseline": 3.0, "contextual": null, "id": 1190, "status": "HOLD_CONFLICT"}
+{"baseline": null, "contextual": null, "id": 1191, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1192, "status": "HOLD_OBJECT"}
+{"baseline": 9.0, "contextual": -26.0, "id": 1193, "measured_shifts": [33.0, 36.0, 36.0, 35.0, 9.0], "status": "CANDIDATE"}
+{"baseline": 4.0, "contextual": 9.0, "id": 1194, "measured_shifts": [21.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": -12.0, "contextual": -7.0, "id": 1195, "measured_shifts": [-5.0, -5.0, -5.0, -5.0, -5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1196, "status": "HOLD_OBJECT"}
+{"baseline": null, "contextual": null, "id": 1197, "status": "HOLD_OBJECT"}
+{"baseline": 10.0, "contextual": -21.0, "id": 1198, "measured_shifts": [31.0, 31.0, 31.0, 31.0, 5.0], "status": "CANDIDATE"}
+{"baseline": null, "contextual": null, "id": 1199, "status": "HOLD_OBJECT"}
