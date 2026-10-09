@@ -44,18 +44,29 @@ def audit(original):
         if (key,MEM) not in scores or (key,SPATIAL) not in scores:
             raise ValueError("missing scored arm")
         err=scores[(key,item["arm"])] if item["arm"] else None
-        if item["xy"] is not None and err is None:
-            raise ValueError("accepted prediction has no scored frame")
+        # A missing future observation produces a null score even when a
+        # prediction was validly sealed. This is not a HOLD or a zero error.
+        # Both arm scores must be null when the future observation is absent.
+        observed = scores[(key,MEM)] is not None or scores[(key,SPATIAL)] is not None
+        if observed and item["arm"] is not None and err is None:
+            raise ValueError("selected arm has no score despite observed future")
         results.append({"clip":key[0],"frame":key[1],"chosen_arm":item["arm"],
-                        "prediction_xy":item["xy"],"error_px":err})
+                        "prediction_xy":item["xy"],"future_observed":observed,
+                        "error_px":err})
     errors=[r["error_px"] for r in results if r["error_px"] is not None]
+    observable=[r for r in results if r["future_observed"]]
+    issued=sum(r["chosen_arm"] is not None for r in results)
+    unscorable=sum(r["chosen_arm"] is not None and not r["future_observed"] for r in results)
     choices={MEM:sum(r["chosen_arm"]==MEM for r in results),
              SPATIAL:sum(r["chosen_arm"]==SPATIAL for r in results),
              "HOLD":sum(r["chosen_arm"] is None for r in results)}
     return {"schema":SCHEMA,"policy":"USE_FROZEN_MEMORY_IF_PROPOSED_ELSE_SPATIAL_ELSE_HOLD",
             "status":"POSTHOC_POLICY_REPLAY_NOT_PROSPECTIVE_VALIDATION",
-            "total":len(results),"accepted":len(errors),
-            "coverage":len(errors)/len(results) if results else 0,
+            "total":len(results),"issued_predictions":issued,
+            "issued_coverage":issued/len(results) if results else 0,
+            "future_observed_cases":len(observable),"unscorable_predictions":unscorable,
+            "accepted":len(errors),
+            "coverage":len(errors)/len(observable) if observable else 0,
             "mean_error_px":mean(errors) if errors else None,
             "catastrophic_over_10px":sum(e>10 for e in errors),
             "choices":choices,"rows":results,"changed_original_proposals":False,
@@ -75,7 +86,7 @@ def produce(source,out,verify=False):
     if dest.exists():raise ValueError("output exists")
     dest.parent.mkdir(parents=True,exist_ok=True)
     dest.write_text(json.dumps(result,sort_keys=True,indent=2)+"\n",encoding="utf-8")
-    return {k:result[k] for k in ("status","total","accepted","coverage","mean_error_px","catastrophic_over_10px","choices")}
+    return {k:result[k] for k in ("status","total","issued_predictions","issued_coverage","future_observed_cases","unscorable_predictions","accepted","coverage","mean_error_px","catastrophic_over_10px","choices")}
 
 def main():
     p=argparse.ArgumentParser()
