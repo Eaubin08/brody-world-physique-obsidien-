@@ -70,7 +70,8 @@ def run(images,out,max_images=100):
                 row={"index":len(rows)+1,"previous":prev,"file":path.name,
                     "source_sha256":src_hash,"transform":mode,**event,
                     "source_kind":"ARCHIVED_PROJECT_IMAGE_UNVERIFIED_ORIGIN",
-                    "memory_write":False,"kernel_mutation":False,"decision_authority":"KX108_ONLY"}
+                    "native_memory_write":False,"canonical_promotion":False,
+                    "kernel_mutation":False,"decision_authority":"KX108_ONLY"}
                 row["digest"]=digest(row);prev=row["digest"]
                 handle.write(json.dumps(row,sort_keys=True)+"\n");rows.append(row)
     count,tip=verify_chain(root/"receipts.jsonl")
@@ -86,7 +87,8 @@ def run(images,out,max_images=100):
         "baseline":"FIXED_PENCIL_NOT_LEARNED_POLICY",
         "correction":"VISIBLE_REFERENCE_EXHAUSTIVE_THREE_TOOL_SEARCH",
         "image_origin_authenticated":False,"semantic_vision_proven":False,
-        "blind_generalization_proven":False,"memory_write":False,
+        "blind_generalization_proven":False,"native_memory_write":False,
+        "canonical_promotion":False,
         "kernel_mutation":False,"decision_authority":"KX108_ONLY",
         "status":"VISUAL_ERROR_GALLERY_RECORDED_SYNTHETIC_TOOLS"}
     (root/"MASTER_REPORT.json").write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
