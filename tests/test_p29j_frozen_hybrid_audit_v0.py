@@ -24,6 +24,28 @@ class HybridTests(unittest.TestCase):
         self.assertEqual(r["mean_error_px"],5.)
         self.assertFalse(r["test_errors_used_to_choose"])
         self.assertFalse(r["independent_data_validation"])
+    def test_precommitted_prediction_with_missing_future_is_unscorable(self):
+        x=example()
+        # The sealed spatial proposal exists, but its future observation is missing.
+        for row in x["scores"]:
+            if row["frame"]==4:
+                row["error_px"]=None
+        result=audit(x)
+        self.assertEqual(result["issued_predictions"],2)
+        self.assertEqual(result["unscorable_predictions"],1)
+        self.assertEqual(result["future_observed_cases"],1)
+        self.assertEqual(result["accepted"],1)
+        self.assertEqual(result["mean_error_px"],2.)
+        self.assertEqual(result["choices"]["A1_SPATIAL_DELTA"],1)
+
+    def test_observed_future_with_missing_selected_score_rejected(self):
+        x=example()
+        for row in x["scores"]:
+            if row["frame"]==3 and row["arm"]=="A4_FROZEN_MEMORY":
+                row["error_px"]=None
+        with self.assertRaises(ValueError):
+            audit(x)
+
     def test_replay_and_mutation(self):
         with tempfile.TemporaryDirectory() as td:
             p=Path(td)/"source.json";out=Path(td)/"out.json"
