@@ -1,0 +1,2462 @@
+{
+  "ablation_gain_proven": false,
+  "cross_source_independence": false,
+  "decision_authority": "KX108_ONLY",
+  "genuine_learned_fusion": false,
+  "matched_all_arms_mean_error_px": {
+    "A0_last_observation": 17.542829632656435,
+    "A1_linear_kinematics": 4.092253992245754,
+    "A2_spatial_acceleration": 7.1545829771108576,
+    "A3_raster_only": 4.092253992245754,
+    "A5_fixed_past_only_blend": 5.441091359936606,
+    "A6_raster_spatial_fixed_fusion": 4.092253992245754
+  },
+  "matched_case_count": 49,
+  "native_memory_write_allowed": false,
+  "p2_verdict": "P2_INCONCLUSIVE",
+  "per_case": [
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 10.424108391929217,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 1.836019251143009,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 2.4884082584403466,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 1.9198159966808392,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 1.836019251143009,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 1.836019251143009,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 14.564014256939435,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 4.247983037386795,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 5.124188520417007,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 4.616123077508631,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 4.247983037386795,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 4.247983037386795,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 16.492386753847697,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 2.053938711269702,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 2.7443964787599207,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 1.167839098360535,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 2.053938711269702,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 2.053938711269702,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 20.216008252949532,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 3.82020111210007,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 1.7802269441881455,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 2.7976608438906556,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 3.82020111210007,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 3.82020111210007,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 20.223195064628577,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 0.057174784330691494,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 3.8021794562309754,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 1.892467873558602,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 0.057174784330691494,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 0.057174784330691494,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 22.728356633656063,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 2.506043637761598,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 2.497823889262763,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 2.50177381253337,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 2.506043637761598,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 2.506043637761598,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 26.141663828941063,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 3.5107832926124267,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 1.21132907990829,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 2.3078984065958488,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 3.5107832926124267,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 3.5107832926124267,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 28.251946540085672,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 2.1315620170429903,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 1.3935496671090761,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 0.40170738315155724,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 2.1315620170429903,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 2.1315620170429903,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 28.25586321782262,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 1.8994494044949055,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 2.703201346188566,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 2.078873161357077,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 1.8994494044949055,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 1.8994494044949055,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 15.028281406295832,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 0.8509935866694375,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 0.8048467346058827,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 0.7583282599351386,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 0.8509935866694375,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 0.8509935866694375,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 16.172706713974247,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 1.4345259716822911,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 2.2052224345051177,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 1.8109080190334685,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 1.4345259716822911,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 1.4345259716822911,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 16.18079214058265,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 0.19452370287031281,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 1.550356956070807,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 0.8403909151400812,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 0.19452370287031281,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 0.19452370287031281,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 15.001974330995289,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 1.3423989023478224,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 1.2734496536553783,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 1.3047584255199345,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 1.3423989023478224,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 1.3423989023478224,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 15.970351846826198,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 0.9858352230084239,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 2.184849177188232,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 1.5563450143640918,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 0.9858352230084239,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 0.9858352230084239,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 16.200360780182248,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 1.2307148257370546,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 1.6015514234714379,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 1.3404645465006555,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 1.2307148257370546,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 1.2307148257370546,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 16.04349188940742,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 0.38006603666797156,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 1.6043448282447383,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 0.9902128632268189,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 0.38006603666797156,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 0.38006603666797156,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 16.111510979374764,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 0.7328466485926711,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 0.4343715267640032,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 0.5716282609802379,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 0.7328466485926711,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 0.7328466485926711,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 14.991149384659222,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 1.120553848832911,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 1.3974957274769761,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 1.2124568304220082,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 1.120553848832911,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 1.120553848832911,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 11.28200799830247,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 3.4430844266177636,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 4.623122220273534,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 3.9296634613084307,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 3.4430844266177636,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 3.4430844266177636,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 14.797736459120786,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 4.0176294608776475,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 5.6653847760319325,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 4.599484534216722,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 4.0176294608776475,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 4.0176294608776475,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 16.240856938080963,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 2.5578267810618756,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 4.554117258487652,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 3.0993377198618197,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 2.5578267810618756,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 2.5578267810618756,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 19.402186872627155,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 3.1671200024150625,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 2.3963834370255914,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 2.500206368081396,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 3.1671200024150625,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 3.1671200024150625,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 21.10392391637752,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 1.8615561252304642,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 1.5970338505886195,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 0.7073131458060758,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 1.8615561252304642,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 1.8615561252304642,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 22.746908326865896,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 2.148650162505025,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 2.1634895336077897,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 1.9448250408676533,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 2.148650162505025,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 2.148650162505025,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 25.9805090990144,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 4.012399849310373,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 4.122695840036983,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 3.923494920334914,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 4.012399849310373,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 4.012399849310373,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 27.58170566950457,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 2.263606834507919,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 4.262218046070795,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 2.7605019741081107,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 2.263606834507919,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 2.263606834507919,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 29.06334458911649,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 3.3180622405818987,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 4.60711912339239,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 3.8518259111029107,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 3.3180622405818987,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 3.3180622405818987,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 14.302862203891141,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 2.476459579064125,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 3.9932045343289997,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 3.188046237244917,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 2.476459579064125,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 2.476459579064125,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.060329288860867,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 1.7607300072551382,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 3.8851994211428384,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 2.7503198611368886,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 1.7607300072551382,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 1.7607300072551382,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.169166190549877,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 0.12484374024790904,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 1.6570886213723754,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 0.7782813049715855,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 0.12484374024790904,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 0.12484374024790904,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 67.90649904873507,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 63.98581487838316,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 63.911945864322576,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 63.948860571690716,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 63.98581487838316,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 63.98581487838316,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.122121182737935,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 64.03217018707166,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 128.0179782819504,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 96.02507310447277,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 64.03217018707166,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 64.03217018707166,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.017537077515115,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 1.8655110575985483,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 62.166720781712435,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 30.15063759545035,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 1.8655110575985483,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 1.8655110575985483,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.089377882534695,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 1.6708759835961697,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 3.5363649684399845,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 2.6036165222202725,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 1.6708759835961697,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 1.6708759835961697,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.052772942544113,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 0.2186239984437087,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 1.461329497526418,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 0.6274420597780689,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 0.2186239984437087,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 0.2186239984437087,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 14.326044640281502,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 1.7517297683139894,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 1.6954425035911918,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 1.7203465112926075,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 1.7517297683139894,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 1.7517297683139894,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.503310345421623,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.178397677972515,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.3888493677321246,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.27672257734353106,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.178397677972515,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.178397677972515,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.43817862121818,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.21834248935995001,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.34973422038060714,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.277555941939764,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.21834248935995001,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.21834248935995001,
+      "frame": 24,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.493071461657602,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.22432905487549087,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.4424968899257711,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.33338438860072694,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.22432905487549087,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.22432905487549087,
+      "frame": 30,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.488427389655284,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.17512181918394415,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.3970095387312335,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.2855892706030917,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.17512181918394415,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.17512181918394415,
+      "frame": 36,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.533105333753412,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.14058049867862735,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.312220815242234,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.22573312594977032,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.14058049867862735,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.14058049867862735,
+      "frame": 42,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.432573187957173,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.14667432835980201,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.28063299797660723,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.21258739361586293,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.14667432835980201,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.14667432835980201,
+      "frame": 48,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.490833768026839,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.09049118549740277,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.16242094533184037,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.10911585319125656,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.09049118549740277,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.09049118549740277,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.488220865762987,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.21482354503925485,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.29082223218048353,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.2516271039726336,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.21482354503925485,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.21482354503925485,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.452491758483319,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.0416521685799465,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.23885549852814586,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.13362685840225846,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.0416521685799465,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.0416521685799465,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_06.mp4",
+      "error_px": 16.002597925905103,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_06.mp4",
+      "error_px": 1.9716997919141734,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_06.mp4",
+      "error_px": 1.955326841148532,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_06.mp4",
+      "error_px": 1.9634832474583075,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_06.mp4",
+      "error_px": 1.9716997919141734,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_06.mp4",
+      "error_px": 1.9716997919141734,
+      "frame": 18,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "frame": 24,
+      "hold": false,
+      "target_missing": true
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "frame": 24,
+      "hold": false,
+      "target_missing": true
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "frame": 24,
+      "hold": false,
+      "target_missing": true
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "frame": 24,
+      "hold": false,
+      "target_missing": true
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "frame": 24,
+      "hold": false,
+      "target_missing": true
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "frame": 24,
+      "hold": false,
+      "target_missing": true
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_06.mp4",
+      "error_px": 16.093630889205002,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_06.mp4",
+      "error_px": 0.31939407119630087,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_06.mp4",
+      "error_px": 2.478000644212846,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_06.mp4",
+      "error_px": 1.3984375286655195,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_06.mp4",
+      "error_px": 0.31939407119630087,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_06.mp4",
+      "error_px": 0.31939407119630087,
+      "frame": 54,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_06.mp4",
+      "error_px": 16.045574584091742,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_06.mp4",
+      "error_px": 0.09263598501224986,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_06.mp4",
+      "error_px": 0.39292161186131785,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_06.mp4",
+      "error_px": 0.23660360566695943,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_06.mp4",
+      "error_px": 0.09263598501224986,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_06.mp4",
+      "error_px": 0.09263598501224986,
+      "frame": 60,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_06.mp4",
+      "error_px": 15.892583129268784,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_06.mp4",
+      "error_px": 1.6939939267387705,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_06.mp4",
+      "error_px": 1.7666436127900838,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_06.mp4",
+      "error_px": 1.730080108778253,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_06.mp4",
+      "error_px": 1.6939939267387705,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_06.mp4",
+      "error_px": 1.6939939267387705,
+      "frame": 66,
+      "hold": false,
+      "target_missing": false
+    }
+  ],
+  "precommit_sha256": "320b61427250d28c426838024796a58cb07a909aafcad591c35988af8b0dc14d",
+  "schema": "BRODY_P2_STREAMING_PRECOMMIT_V0",
+  "source_kind": "SIMULATED",
+  "streaming_precommit_before_future_decode": true,
+  "suite_sha256": "e0d0a2075f2d8b6b555c9d1a765302937291d5b78d50df4e8956404a5c39899d",
+  "summary": {
+    "A0_last_observation": {
+      "coverage": 0.98,
+      "episodes": 50,
+      "evaluated": 49,
+      "mean_error_px": 17.542829632656435
+    },
+    "A1_linear_kinematics": {
+      "coverage": 0.98,
+      "episodes": 50,
+      "evaluated": 49,
+      "mean_error_px": 4.092253992245754
+    },
+    "A2_spatial_acceleration": {
+      "coverage": 0.98,
+      "episodes": 50,
+      "evaluated": 49,
+      "mean_error_px": 7.1545829771108576
+    },
+    "A3_raster_only": {
+      "coverage": 0.98,
+      "episodes": 50,
+      "evaluated": 49,
+      "mean_error_px": 4.092253992245754
+    },
+    "A5_fixed_past_only_blend": {
+      "coverage": 0.98,
+      "episodes": 50,
+      "evaluated": 49,
+      "mean_error_px": 5.441091359936606
+    },
+    "A6_raster_spatial_fixed_fusion": {
+      "coverage": 0.98,
+      "episodes": 50,
+      "evaluated": 49,
+      "mean_error_px": 4.092253992245754
+    }
+  }
+}
