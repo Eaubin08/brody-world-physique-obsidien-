@@ -24,7 +24,7 @@ def analyze(report):
         raise ValueError("invalid provenance or authority")
     rows=defaultdict(dict)
     for row in report["scores"]:
-        key=(row["clip"],row["frame"])
+        key=(row["clip"],row["frame"]*6)
         if row["arm"] in rows[key]:
             raise ValueError("duplicate arm on episode")
         rows[key][row["arm"]]=row["error_px"]
