@@ -103,3 +103,30 @@ py -m unittest tests.test_p2_ablation_diagnostic_v0 tests.test_p2_raster_forecas
 ```
 
 Les ajouts restent candidats en PR, sans fusion dans main. **Aucun gain P2 certifié** et `P2_INCONCLUSIVE` reste le seul verdict valide.
+
+
+## P2.3 — Prédiction *streaming* par bras et contrôle à couverture identique
+
+Implémentation : `brody_world_physique/p2_streaming_precommit_v0.py`.
+
+Le programme lit séquentiellement chaque vidéo TEST. Pour chaque fenêtre de trois images passées admissibles, il calcule A0/A1/A2/A3/A5/A6, écrit une ligne par bras dans `forecasts_precommitted.jsonl` et force le flush **avant de décoder l'image future**. Le futur n'est ensuite utilisé que pour calculer les erreurs, jamais pour préparer ces prédictions. Aucune sélection des fenêtres d'après les résultats futurs. Les parties visibles du futur antérieur deviennent historiquement admissibles pour une étape ultérieure, comme dans le prédicteur initial.
+
+Rapports : `evaluation.json` (erreurs par épisode, couverture et moyenne à intersections comparables), `forecasts_precommitted.jsonl`, `images/p2_prediction_overlay.png` (visualisation post-révélation d'un cas TEST, elle ne constitue pas le précommit). `--verify` recalcule et compare rapport et reçus dans un répertoire temporaire neuf.
+
+Exemple PowerShell depuis la racine du dépôt sur la branche P2 :
+
+```powershell
+$run = "build/brody-p2-20261009-015858"
+$suite = "$run/suite/suite.json"
+$out = "build/p2-streaming-$(Get-Date -Format yyyyMMdd-HHmmss)"
+py -m brody_world_physique.p2_streaming_precommit_v0 --suite $suite --out $out
+if ($LASTEXITCODE -ne 0) { throw "P2.3 streaming failed" }
+py -m brody_world_physique.p2_streaming_precommit_v0 --suite $suite --out $out --verify
+if ($LASTEXITCODE -ne 0) { throw "P2.3 replay failed" }
+Invoke-Item "$out/images"
+.\\scripts\\publish_local_evidence.ps1 -RunPath $out
+```
+
+Les vidéos restent synthétiques et les deux traitements de perception partagent leur source. A3 n'est pas un apprentissage raster autonome. P1 expérientiel reste évalué séparément et n'est **pas** artificiellement requalifié comme un septième bras précommitté par ce moteur. Reverso complet *par bras* et évaluation inter-générateurs restent à produire ; l'overlay est un diagnostic visualisé, pas une génération d'image.
+
+**Statut attendu avant vérification terrain :** code publié, tests de contrat ajoutés, exécution PC en attente. Ne pas confondre avec PASS scientifique ; `P2_INCONCLUSIVE`.
