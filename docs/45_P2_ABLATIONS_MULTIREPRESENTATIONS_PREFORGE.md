@@ -1,0 +1,132 @@
+# 45 — Brody P2 : protocole d'ablation multireprésentation (PRÉ-FORGE)
+
+**Statut :** contrat expérimental, pas résultat. **Parent :** [44 — P1](44_P1_PASSERELLE_MULTIREPRESENTATIONS_VIDEO_MONDE.md). **Branche :** `exp/p2-multirepresentation-ablation-20261009`.
+
+## Question falsifiable
+L'utilisation conjointe des vues RASTER / SPATIAL / TEMPORAL / MOTION améliore-t-elle la prédiction hors échantillon ou la reconstruction Reverso par rapport au meilleur système autorisé utilisant une seule vue, à budget d'information et d'expérience comparable ?
+
+## Définition et équité des bras
+- **A0 Immobile** : dernière position observée, témoin naïf.
+- **A1 Cinématique** : positions XY + timestamps du passé; extrapolation à vitesse constante (aucune image brute).
+- **A2 Spatial** : géométrie et repère ancré passés, sans dérivées de mouvement ni prévisions issues des autres bras.
+- **A3 Raster** : images passées uniquement, avec détection propre au bras; ne doit pas recevoir la série XY du bras spatial déjà nettoyée.
+- **A4 Motion** : états de mouvement observables avant le cutoff, dérivés selon le contrat de ce bras; aucune future observation.
+- **A5 Fusion partielle** : SPATIAL + MOTION; même budget historique, sans accès à la future frame.
+- **A6 Fusion complète** : RASTER + SPATIAL + TEMPORAL + MOTION; même budget, même cutoff.
+- **A7 A6 privé d'une vue** (quatre retraits un par un) : déterminer quelle vue est utile, inutile ou nuisible.
+
+**Contrôle anticontamination :** si A3 utilise le même détecteur que A2, déclarer explicitement la dépendance commune; ne pas attribuer le gain à l'indépendance des modalités. Aucun bras ne peut avoir accès aux positions vérifiées après cutoff, aux étiquettes du professeur ou à la cible Reverso pendant sa prédiction. Si un bras manque d'implémentation réelle, statut `NOT_IMPLEMENTED` et aucun score fabriqué.
+
+## Jeux d'essais
+- Conserver le jeu P1 pour **régression uniquement**, pas comme test indépendant de découverte.
+- Nouveaux épisodes synthétiques à graines retenues et génération traçable : déplacements et vitesses inconnus, accélérations différentes, formes/couleurs, changement d'échelle, caméra mobile, repère manquant, occlusion, mouvement imprévisible.
+- Même liste d'ID d'épisode, mêmes horizons, timestamps, partitions TRAIN/VALIDATION/TEST et seeds pour tous les bras; tous les paramètres et règles de sélection sont gelés avant TEST.
+- Les transformations d'une vidéo restent **une seule source dépendante**. Pour généraliser : regrouper l'analyse et les intervalles de confiance par vidéo/épisode source, non par frame.
+- Prévoir ensuite une vidéo extérieure à ce générateur, retenue jusqu'au gel, pour une première vérification de transfert. Ne pas appeler cela « réel » avant réception et vérification de la source.
+
+## Reçu pré-engagé et rejeu
+Pour chaque `episode_id × horizon × arm_id` : `source_sha256`, `split`, `frame_ids`, `cutoff`, `view_inputs`, `procedure_ref`, `code_sha256`, `prediction`, `HOLD`, `reason`, `forecast_sha256`, `commit_index`. Écrire l'engagement avant de décoder/révéler la frame cible. Rejeu SHA exact de l'artefact et de l'évaluation. Un simple JSON fabriqué après le futur n'est pas une preuve indépendante du pré-engagement.
+
+## Métriques séparées
+1. **Prédiction** : erreur euclidienne du centre en px, médiane, moyenne, quantiles 90/95 et écart par épisode.
+2. **Disponibilité** : couverture des prévisions, HOLD corrects/incorrects, abstentions opportunistes; comparer les erreurs à couverture égale ET rapporter les refus.
+3. **Reconstruction** : différence dans une ROI objet décidée avant révélation, IoU des masques, fidélité du fond séparée; MAE frame entière seulement comme diagnostic secondaire. Ne pas aligner sur la cible future.
+4. **Relations** : orientation, continuité et invariants corrects, séparément de l'erreur pixel.
+5. **Coût** : calcul, latence, mémoire et dépendances réellement mesurés, sans supposer qu'une fusion plus complexe est gratuite.
+
+## Règle de verdict
+- `P2_PASS_GAIN` : A6 améliore le **meilleur bras isolé sur TEST indépendant**, à couverture comparable, avec amélioration vérifiée sur plusieurs sources/conditions et sans violation d'accès aux données futures. Fixer les seuils quantitatifs et un protocole d'incertitude **avant** la première exécution TEST.
+- `P2_NO_GAIN` : aucune amélioration démontrable, ou gain limité à une métrique de fond/à un unique épisode.
+- `P2_INCONCLUSIVE` : échantillon insuffisant, variabilité ou dépendance non résolue, comparaison de bras non équitable.
+- `P2_BLOCKED` : fuite de futur, provenance non contrôlée, pré-engagement rompu, mismatch de repère/split.
+- Si A5 > A6, documenter la **fusion nuisible** ; ne pas effacer ce résultat. Un avantage sur A0 seulement n'est pas un gain multireprésentation.
+
+## Frontières
+`WORLD_STATE != MEMORY`; `OBSERVATION != TRUTH`; `CANDIDATE != PROMOTED`. Reverso peut reconstruire une image sans compréhension physique prouvée. Pas de promotion de savoir, d'écriture Native Memory, d'exécution SENS/B8, de mutation GPS ou kernel, ni d'autorité autre que `KX108_ONLY`. Les 4 vues P1 restent 4 projections corrélées d'une unique source synthétique, pas 4 preuves indépendantes.
+
+## Prochaines tâches d'implémentation
+1. Inventorier les prédicteurs de `world_transfer_probe_v1` et les formes d'entrées : marquer chaque bras exécutable/non exécutable.
+2. Introduire un runner déterministe d'ablations sans dupliquer les méthodes existantes, sorties JSONL/JSON et commandes `--verify`.
+3. Ajouter tests de non-fuite, ordre précommit, parité des splits, traitement HOLD, répétabilité SHA et score sans target leak.
+4. Exécuter d'abord les tests contractuels et de régression P1, puis seulement la batterie TEST P2 après gel des seuils.
+5. Publier uniquement les reçus sur la branche `evidence/brody-local` après contrôle local; aucun push sur `main` via ce protocole.
+
+**À ce stade : zéro résultat P2 revendiqué.**
+
+
+## Première tranche exécutable (diagnostic, pas fusion)
+
+Implémentée sur cette branche : `brody_world_physique/p2_ablation_diagnostic_v0.py`.
+
+Elle relit le manifeste synthétique et les précommits originaux, récupère les trois observations passées et évalue **sur les mêmes futurs** trois méthodes : `A0_last_observation`, `A1_linear_kinematics` et `P1_experiential_candidate`. Elle conserve les scores par épisode, les couvertures, les HOLD et les empreintes. La troisième méthode n'est pas requalifiée abusivement de fusion : elle est l'ancien prédicteur expérientiel.
+
+Depuis le dossier du dépôt sur le PC où P1 a produit les fichiers :
+
+```powershell
+$run = "build\\ball-multirepresentations-p1-<TON_DOSSIER>"
+$suite = "$run\\suite\\suite.json"
+$forecasts = "$run\\anchored\\forecasts_precommitted.jsonl"
+$out = "build\\p2-baseline-diagnostic.json"
+py -m brody_world_physique.p2_ablation_diagnostic_v0 --suite $suite --forecasts $forecasts --out $out
+py -m brody_world_physique.p2_ablation_diagnostic_v0 --suite $suite --forecasts $forecasts --out $out --verify
+```
+
+Adapter `$run` au dossier P1 réel. Pour les essais répétés, supprimer ou renommer la sortie : le programme refuse d'écraser un reçu. Aucun résultat de fusion `A2–A7` n'est produit. Le verdict demeure `P2_INCONCLUSIVE` même si l'une des trois méthodes gagne, car cette tranche ne teste pas encore la valeur causale de la combinaison des représentations.
+
+**État d'implémentation :** code et tests contractuels committés ; aucun run P2 indépendant attesté à cette étape.
+
+
+## Tranche P2.1 — Contrôles d'ablation sur historique commun (2026-10-09)
+
+Deux contrôles supplémentaires sont implémentés dans `p2_ablation_diagnostic_v0.py` :
+- `A2_spatial_acceleration` extrapole le déplacement à partir des deux vitesses successives et de l'accélération estimée sur les **trois seules observations passées**.
+- `A5_fixed_past_only_blend` prend la moyenne à coefficients figés 50/50 des prévisions linéaire et accélérée. Ce n'est **pas** une fusion multimodale : les deux entrées viennent de la même détection XY.
+- Les cinq bras évaluables sont maintenant `A0`, `A1`, `A2`, `A5` (fusion de caractéristiques corrélées uniquement) et le candidat expérientiel P1. Les bras raster natif et fusion multireprésentation `A3/A4/A6/A7` restent **à implémenter**. Ils ne reçoivent pas de scores fictifs.
+- Tous les paramètres de ces contrôles sont fixés par code **avant** révélation de la cible, mais l'évaluation reste un rejeu rétrospectif des engagements de P1, pas un nouveau run de pré-engagement par bras.
+- Aucune valeur moyenne ni victoire P2 n'est revendiquée tant que la CI et les exécutions sur épisodes indépendants ne sont pas inspectées.
+
+**Statut épistémique immuable :** `P2_INCONCLUSIVE`, `new_fusion_predictor_implemented=false`, `ablation_gain_proven=false`.
+
+
+## Tranche P2.2 — Raster → spatial (implémentation de laboratoire)
+
+- **A3 raster seul** : extrait trois centres directement des frames vidéo jusqu'au cutoff autorisé, avec segmentation HSV/contours et hypothèse explicite de fiduciel synthétique. Ne consulte pas les positions du prédicteur spatial pendant l'extraction. Extrapolation linéaire depuis les centres raster.
+- **A6 fusion fixe raster + spatial** : accepte les deux prédictions seulement lorsqu'elles sont compatibles à **3 px** ; calcule alors leur moyenne 50/50. Sinon **HOLD**. Règle figée avant les futurs. Ce n'est ni un entraînement appris, ni un moteur général de fusion.
+- Les deux organes utilisent **une même vidéo synthétique** ; routes de calcul séparées ≠ deux sources indépendantes. Le détecteur raster reste également conçu pour les propriétés du fixture.
+- Il s'agit d'un **diagnostic rétrospectif** par rapport aux précommits P1 : les sorties A3/A6 ne possèdent pas encore de pré-engagement autonome avant décodage de la future frame par le comparateur.
+- **Non démontré** : A4 multimodal autonome, A7 leave-one-view-out complet, vrai transfert inter-générateurs, génération Reverso ROI conditionnée sur A6, calibration des seuils et estimation de l'incertitude inter-sources.
+
+**Commande tests ciblés :**
+
+```powershell
+py -m unittest tests.test_p2_ablation_diagnostic_v0 tests.test_p2_raster_forecast_v0 -v
+```
+
+Les ajouts restent candidats en PR, sans fusion dans main. **Aucun gain P2 certifié** et `P2_INCONCLUSIVE` reste le seul verdict valide.
+
+
+## P2.3 — Prédiction *streaming* par bras et contrôle à couverture identique
+
+Implémentation : `brody_world_physique/p2_streaming_precommit_v0.py`.
+
+Le programme lit séquentiellement chaque vidéo TEST. Pour chaque fenêtre de trois images passées admissibles, il calcule A0/A1/A2/A3/A5/A6, écrit une ligne par bras dans `forecasts_precommitted.jsonl` et force le flush **avant de décoder l'image future**. Le futur n'est ensuite utilisé que pour calculer les erreurs, jamais pour préparer ces prédictions. Aucune sélection des fenêtres d'après les résultats futurs. Les parties visibles du futur antérieur deviennent historiquement admissibles pour une étape ultérieure, comme dans le prédicteur initial.
+
+Rapports : `evaluation.json` (erreurs par épisode, couverture et moyenne à intersections comparables), `forecasts_precommitted.jsonl`, `images/p2_prediction_overlay.png` (visualisation post-révélation d'un cas TEST, elle ne constitue pas le précommit). `--verify` recalcule et compare rapport et reçus dans un répertoire temporaire neuf.
+
+Exemple PowerShell depuis la racine du dépôt sur la branche P2 :
+
+```powershell
+$run = "build/brody-p2-20261009-015858"
+$suite = "$run/suite/suite.json"
+$out = "build/p2-streaming-$(Get-Date -Format yyyyMMdd-HHmmss)"
+py -m brody_world_physique.p2_streaming_precommit_v0 --suite $suite --out $out
+if ($LASTEXITCODE -ne 0) { throw "P2.3 streaming failed" }
+py -m brody_world_physique.p2_streaming_precommit_v0 --suite $suite --out $out --verify
+if ($LASTEXITCODE -ne 0) { throw "P2.3 replay failed" }
+Invoke-Item "$out/images"
+.\\scripts\\publish_local_evidence.ps1 -RunPath $out
+```
+
+Les vidéos restent synthétiques et les deux traitements de perception partagent leur source. A3 n'est pas un apprentissage raster autonome. P1 expérientiel reste évalué séparément et n'est **pas** artificiellement requalifié comme un septième bras précommitté par ce moteur. Reverso complet *par bras* et évaluation inter-générateurs restent à produire ; l'overlay est un diagnostic visualisé, pas une génération d'image.
+
+**Statut attendu avant vérification terrain :** code publié, tests de contrat ajoutés, exécution PC en attente. Ne pas confondre avec PASS scientifique ; `P2_INCONCLUSIVE`.

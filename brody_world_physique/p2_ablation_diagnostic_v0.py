@@ -1,0 +1,197 @@
+"""P2 retrospective ablation diagnostic on P1's sealed stream.
+
+Only methods that can be recomputed from *past references* are scored.
+This is NOT an independent multi-view fusion experiment: future-score
+evaluation is retrospective, source is synthetic and correlated.
+"""
+from __future__ import annotations
+
+import argparse
+from hashlib import sha256
+import json
+from math import hypot, isfinite
+from pathlib import Path
+from statistics import mean, median
+
+from .world_transfer_probe_v1 import _load_probe_suite, iter_video_points
+from .video_observation_v0 import video_sha256
+from .p2_raster_forecast_v0 import raster_history_only, raster_linear_forecast, raster_spatial_agreement
+
+SCHEMA = "BRODY_P2_PRECOMMIT_BASELINE_DIAGNOSTIC_V0"
+
+
+def _hash(path: Path) -> str:
+    return sha256(path.read_bytes()).hexdigest()
+
+
+def _finite_xy(value):
+    return (isinstance(value, (list, tuple)) and len(value) == 2
+            and all(type(x) in (int, float) and isfinite(x) for x in value))
+
+
+def past_only_predictions(history, future_time):
+    """Deterministic candidate arms, conditioned ONLY on three past points.
+
+    These are all derived from the same already-detected XY history. This is a
+    diagnostic feature ablation, NOT proof of independent raster/spatial fusion.
+    """
+    if len(history) != 3 or not history[0].time_s < history[1].time_s < history[2].time_s < future_time:
+        raise ValueError("invalid chronology")
+    a,b,c = history
+    dt1 = b.time_s-a.time_s
+    dt2 = c.time_s-b.time_s
+    horizon = future_time-c.time_s
+    if min(dt1,dt2,horizon) <= 0:
+        raise ValueError("invalid time interval")
+    linear=[]
+    accelerated=[]
+    for axis in ("x","y"):
+        va=(getattr(b,axis)-getattr(a,axis))/dt1
+        vb=(getattr(c,axis)-getattr(b,axis))/dt2
+        acceleration=(vb-va)/((dt1+dt2)/2)
+        linear.append(getattr(c,axis)+vb*horizon)
+        accelerated.append(getattr(c,axis)+vb*horizon+acceleration*horizon*(horizon+dt2)/2)
+    # Fixed coefficients declared before seeing any target, not fitted on TEST.
+    blended=[(p+q)/2 for p,q in zip(linear,accelerated)]
+    return {"A0_last_observation":[c.x,c.y],
+            "A1_linear_kinematics":linear,
+            "A2_spatial_acceleration":accelerated,
+            "A5_fixed_past_only_blend":blended}
+
+
+def evaluate(suite: Path, receipts: Path) -> dict:
+    """Independent scoring of existing P1 learner and two strict baselines.
+
+    NOTE: The upstream forecast producer, not this evaluator, guarantees that
+    its receipt was emitted before decoding the future frame.
+    """
+    suite = suite.resolve(strict=True)
+    receipts = receipts.resolve(strict=True)
+    _train, test = _load_probe_suite(suite)
+    if receipts.stat().st_size > 2_000_000:
+        raise ValueError("oversized receipt")
+    rows = [json.loads(line) for line in receipts.read_text(encoding="utf-8").splitlines()]
+    if len(rows) > 1000 or not rows:
+        raise ValueError("empty or excessive receipts")
+    by_clip = {}
+    for row in rows:
+        name = row.get("clip")
+        if name is None or row.get("camera_mode") != "anchored":
+            raise ValueError("invalid receipt provenance")
+        by_clip.setdefault(name, []).append(row)
+    if set(by_clip) != {name for name, _, _ in test}:
+        raise ValueError("receipt clips differ from manifest test split")
+    outcomes = []
+    for name, video, digest in test:
+        if video_sha256(video) != digest:
+            raise ValueError("source mismatch")
+        observed = list(iter_video_points(video, digest, camera_mode="anchored"))
+        points = {p.source_ref: p for p in observed if p is not None}
+        seen_futures = set()
+        for receipt in by_clip[name]:
+            refs = receipt.get("history_refs")
+            future_index = receipt.get("next_frame_index")
+            if not isinstance(refs, list) or len(refs) != 3 or len(set(refs)) != 3:
+                raise ValueError("invalid history")
+            if type(future_index) is not int or future_index not in range(6,72,6):
+                raise ValueError("invalid future index")
+            if future_index in seen_futures:
+                raise ValueError("duplicate prediction horizon")
+            seen_futures.add(future_index)
+            if any(ref not in points for ref in refs):
+                raise ValueError("unrecognized or unavailable historical observation")
+            history = [points[ref] for ref in refs]
+            if any(p.frame_ref != history[0].frame_ref for p in history):
+                raise ValueError("incompatible reference frames")
+            if any(p.source_kind != "SIMULATED" for p in history):
+                raise ValueError("unsupported source")
+            if not history[0].time_s < history[1].time_s < history[2].time_s < future_index/24:
+                raise ValueError("future leakage or temporal mismatch")
+            if any(f"#frame:{future_index}#" in ref for ref in refs):
+                raise ValueError("future included in history")
+            target = points.get(f"sha256:{digest}#frame:{future_index}#visual_candidate")
+            proposal = receipt.get("proposal")
+            if not isinstance(proposal, dict):
+                raise ValueError("missing precommit proposal")
+            status = proposal.get("status")
+            xy = proposal.get("candidate_xy")
+            if xy is not None and not _finite_xy(xy):
+                raise ValueError("invalid sealed prediction")
+            if status is None or not isinstance(status, str):
+                raise ValueError("missing status")
+            scores = past_only_predictions(history, future_index/24)
+            history_indices=tuple(int(round(p.time_s*24)) for p in history)
+            raster_past=raster_history_only(video,digest,history_indices)
+            raster_xy=raster_linear_forecast(raster_past,history_indices,future_index)
+            scores["A3_raster_only"] = raster_xy
+            # A6 is a deliberately fixed, zero-training, cross-view candidate.
+            # Independent extraction paths share the SAME synthetic video.
+            # Reject disagreement rather than selectively weighting on future.
+            if raster_spatial_agreement(raster_xy,scores["A1_linear_kinematics"]):
+                scores["A6_raster_spatial_fixed_fusion"] = [
+                    (a+b)/2 for a,b in zip(raster_xy,scores["A1_linear_kinematics"])]
+            else:
+                scores["A6_raster_spatial_fixed_fusion"] = None
+            scores["P1_experiential_candidate"] = xy
+            for arm, prediction in scores.items():
+                outcome = {"clip":name,"source_sha256":digest,
+                           "heldout_frame_index":future_index,
+                           "arm":arm,"status":"NOT_SCORED" if prediction is None else "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY",
+                           "hold":prediction is None, "error_px":None}
+                if target is None:
+                    outcome["status"] = "TARGET_OCCLUDED"
+                    outcome["hold"] = True
+                elif prediction is not None:
+                    outcome["error_px"] = hypot(prediction[0]-target.x,prediction[1]-target.y)
+                outcomes.append(outcome)
+    summary = {}
+    for arm in ("A0_last_observation","A1_linear_kinematics","A2_spatial_acceleration",
+                "A3_raster_only","A5_fixed_past_only_blend",
+                "A6_raster_spatial_fixed_fusion","P1_experiential_candidate"):
+        subset = [x for x in outcomes if x["arm"] == arm]
+        vals = [x["error_px"] for x in subset if x["error_px"] is not None]
+        summary[arm] = {"evaluated":len(vals),"total":len(subset),
+                        "coverage":len(vals)/len(subset) if subset else 0,
+                        "mean_error_px":mean(vals) if vals else None,
+                        "median_error_px":median(vals) if vals else None}
+    return {"schema":SCHEMA, "suite_sha256":_hash(suite),
+            "precommit_file_sha256":_hash(receipts),
+            "source_kind":"SIMULATED","independent_view_sources":False,
+            "new_fusion_predictor_implemented":True,
+            "fusion_trained_or_adaptive":False,
+            "raster_and_spatial_share_source_video":True,
+            "past_only_feature_blend_implemented":True,
+            "arm_lineage":{"A2_spatial_acceleration":"three past XY plus timestamps",
+                            "A5_fixed_past_only_blend":"fixed average of A1 and A2, shared XY source",
+                            "A3_raster_only":"independent raster extraction from past frames of same video",
+                            "A6_raster_spatial_fixed_fusion":"fixed average of raster and XY linear forecast if agreement gate passes"},
+            "ablation_gain_proven":False,"p2_verdict":"P2_INCONCLUSIVE",
+            "limitation":"retrospective scoring of prior precommits; A3 and A6 are two processing routes over ONE synthetic source, not independent evidence; A4 and leave-one-view-out A7 not implemented; out-of-sample gain unproven",
+            "summary":summary,"per_episode":outcomes,
+            "native_memory_write_allowed":False,"decision_authority":"KX108_ONLY"}
+
+
+def main(argv=None):
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--suite",required=True,type=Path)
+    parser.add_argument("--forecasts",required=True,type=Path)
+    parser.add_argument("--out",required=True,type=Path)
+    parser.add_argument("--verify",action="store_true")
+    args=parser.parse_args(argv)
+    report=evaluate(args.suite,args.forecasts)
+    serial=json.dumps(report,sort_keys=True,indent=2,ensure_ascii=False)+"\n"
+    if args.verify:
+        if args.out.read_text(encoding="utf-8")!=serial:
+            raise ValueError("P2 diagnostic replay mismatch")
+    else:
+        if args.out.exists():
+            raise ValueError("refuse overwrite")
+        args.out.parent.mkdir(parents=True,exist_ok=True)
+        args.out.write_text(serial,encoding="utf-8")
+    print(json.dumps({"verdict":report["p2_verdict"],"summary":report["summary"],
+                      "verified":args.verify},ensure_ascii=False))
+    return 0
+
+
+if __name__=="__main__":
+    raise SystemExit(main())
