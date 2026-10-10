@@ -18,7 +18,7 @@ def context_of(image):
     im=image.convert("L")
     lo,hi=im.getextrema()
     if hi-lo<20:return "flat"
-    if sum(1 for v in im.getdata() if v<100)>2500:return "dark-dense"
+    if sum(1 for v in im.tobytes() if v<100)>2500:return "dark-dense"
     return "drawing"
 
 def atomic_json(path,body):
@@ -88,9 +88,14 @@ def run(images,out,previous=None,limit=100,interrupt_after=None):
         correction=min(candidates,key=lambda s:(losses[s],candidates.index(s)))
         # Teacher here is a supervised pixel comparator; not an authenticated human.
         # Distinct examples support procedural consolidation only.
-        status=observe(state,context,correction,"pixel-feedback-simulated",manifest[p.name],
-                       correction=(correction!=chosen))
-        event={"index":i+1,"previous":previous_hash,"source":p.name,
+        existing=state["concepts"].get(context,{}).get("lessons",[])
+        repeated=any(e["example_ref"]==manifest[p.name] for e in existing)
+        if repeated:
+            status=state["concepts"][context]["status"]
+        else:
+            status=observe(state,context,correction,"pixel-feedback-simulated",manifest[p.name],
+                           correction=(correction!=chosen))
+        event={"duplicate_evidence_skipped":repeated,"index":i+1,"previous":previous_hash,"source":p.name,
                "source_sha256":manifest[p.name],"context":context,"mode":method["mode"],
                "procedure_before_feedback":chosen,"candidate_sha256":initial_sha,
                "pixel_loss":loss,"teacher_corrected_to":correction,
