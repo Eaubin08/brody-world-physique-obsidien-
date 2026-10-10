@@ -22,6 +22,8 @@ def run(manifest,out):
     target=Path(out)
     if target.exists():raise ValueError("PRESERVE_PREVIOUS_EVIDENCE")
     roots=json.loads(Path(manifest).read_text(encoding="utf-8-sig"))
+    if isinstance(roots,dict) and "identity" in roots and "examples" in roots:
+        roots=[roots]
     if not isinstance(roots,list) or not roots:raise ValueError("NO_TAUGHT_IDENTITIES")
     target.mkdir(parents=True)
     seen_ids=set();rows=[];prev=None
