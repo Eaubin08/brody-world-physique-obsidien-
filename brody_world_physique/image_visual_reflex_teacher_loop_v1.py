@@ -8,6 +8,7 @@ import argparse,hashlib,json,os,random
 from pathlib import Path
 from PIL import Image
 from .image_external_source_school_v0 import load_sources,reference
+from .image_structural_observation_v1 import describe
 from .image_continuous_learning_cycle_v0 import reconstruct
 from .image_stabilized_knowledge_school_v1 import fresh,load,observe,apply,PROCEDURES
 from .instrument_school_v2 import _gray_pixel_loss
@@ -73,7 +74,8 @@ def run(images,out,previous=None,limit=100,interrupt_after=None):
         start=0;previous_hash=None
     for i in range(start,len(paths)):
         p=paths[i];target=reference(p)
-        context=context_of(target)
+        description=describe(target)
+        context=description["context"]
         method=apply(state,context)
         chosen=method["procedure"] if method["mode"]=="REFLEX" else (
             method["hypotheses"][0] if method["hypotheses"] else "raw")
@@ -96,7 +98,10 @@ def run(images,out,previous=None,limit=100,interrupt_after=None):
             status=observe(state,context,correction,"pixel-feedback-simulated",manifest[p.name],
                            correction=(correction!=chosen))
         event={"duplicate_evidence_skipped":repeated,"index":i+1,"previous":previous_hash,"source":p.name,
-               "source_sha256":manifest[p.name],"context":context,"mode":method["mode"],
+               "source_sha256":manifest[p.name],"context":context,
+               "observed_properties":description["properties"],
+               "observed_parts":description["parts"],
+               "observed_relations":description["relations"],"mode":method["mode"],
                "procedure_before_feedback":chosen,"candidate_sha256":initial_sha,
                "pixel_loss":loss,"teacher_corrected_to":correction,
                "post_lesson_status":status,"native_memory_write":False,
@@ -122,6 +127,7 @@ def run(images,out,previous=None,limit=100,interrupt_after=None):
                 {**candidate,"digest":digest(candidate)})
     report={"schema":"BRODY_VISUAL_REFLEX_TEACHER_LOOP_V1",
             "lessons":n,"contexts":len(state["concepts"]),
+            "context_engine":"PIXEL_COMPONENTS_PROPERTIES_RELATIONS_V1",
             "stable":sum(x["status"]=="STABLE" for x in state["concepts"].values()),
             "doubt":sum(x["status"]=="DOUBT" for x in state["concepts"].values()),
             "receipt_tip":tip,"checkpoint_each_lesson":True,
