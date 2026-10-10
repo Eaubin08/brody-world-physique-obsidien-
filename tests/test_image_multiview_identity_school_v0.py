@@ -15,6 +15,15 @@ class MultiviewIdentityTests(unittest.TestCase):
    self.assertEqual(r["heldout_views"],2)
    self.assertFalse(r["identity_learned_from_pixels"])
    self.assertFalse(r["native_memory_write"])
+ def test_powershell_single_object_manifest(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d);p=root/"shape.png"
+   Image.new("L",(64,64),255).save(p)
+   manifest=root/"single.json"
+   manifest.write_text(json.dumps({"identity":"single","examples":[str(p)]}))
+   r=run(manifest,root/"result")
+   self.assertEqual(r["taught_identities"],1)
+   self.assertEqual(r["heldout_views"],2)
  def test_refuse_previous_output(self):
   with tempfile.TemporaryDirectory() as d:
    root=Path(d);(root/"results").mkdir()
