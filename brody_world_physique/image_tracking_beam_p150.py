@@ -65,9 +65,18 @@ def observe(im):
     marks=components(im,lambda r,g,b:g>110 and r<65 and b<90)
     return sorted([(x,y,0) for x,y,n in red]+[(x,y,1) for x,y,n in blue]),sorted((x,y) for x,y,n in marks)
 def camera_from_marks(marks):
-    # Landmark at the top left; no use of simulator-provided offset.
-    top=[(x,y) for x,y in marks if y<16 and x<25]
-    return 7-min(top,key=lambda q:abs(q[1]-7))[0] if top else None
+    # Track all three image-visible static markers, not just the left one.
+    # Left marker leaves the field under rightward camera pan.
+    anchors=((7,7),(104,9),(96,63))
+    candidates=[]
+    for x,y in marks:
+        anchor=min(anchors,key=lambda a:abs(y-a[1]))
+        if abs(y-anchor[1])<=3:
+            offset=anchor[0]-x
+            if abs(offset)<=24:candidates.append(offset)
+    if not candidates:return None
+    candidates.sort()
+    return candidates[len(candidates)//2]
 def candidates(track,obs,dt=1):
     if not track:return [(o,0.) for o in obs]
     px,py,vx,vy,cost=track
