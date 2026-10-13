@@ -44,7 +44,7 @@ def synthesize(memory,prompt):
 def run(manifest,out):
  dest=Path(out)
  if dest.exists():raise ValueError("PRESERVE_EVIDENCE")
- rows=json.loads(Path(manifest).read_text(encoding="utf8-sig"))
+ rows=json.loads(Path(manifest).read_text(encoding="utf-8-sig"))
  if not isinstance(rows,list) or not rows:raise ValueError("EMPTY_MANIFEST")
  train=[r for r in rows if r.get("split")=="train"]
  exam=[r for r in rows if r.get("split")=="exam"]
