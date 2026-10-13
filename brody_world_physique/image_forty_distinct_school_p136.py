@@ -51,7 +51,7 @@ def evaluate(folder):
  setv("component_orientation",desc["relations"][0]["orientation"]=="diagonal")
  setv("mirror_shape_invariance",mirrors)
  setv("translation_pairing",len(identical_match["matched"])==2)
- setv("scale_sensitivity",g[0]["area"]>0 and g[0]["size"]>0 if "size" in g[0] else g[0]["area"]>0)
+ setv("scale_sensitivity",g[0]["ratio"]>0 and g[0]["area"]>0,"Geometry measured; scale invariance NOT verified")
  setv("shape_proportion",g[0]["ratio"]>0)
  setv("depth_not_inferred",not oc["causality_proven"])
  with Image.open(a) as ia:
@@ -79,12 +79,16 @@ def evaluate(folder):
  teach_scene(state,"PAIR","A",a)
  second=picture(folder,"two_shifted",[{"shape":"rectangle","bbox":[7,9,17,19],"tone":"red"},{"shape":"ellipse","bbox":[41,38,52,49],"tone":"blue"}])
  teach_scene(state,"PAIR","B",second)
- setv("scene_relation_with_two_groups",recall_scene(state,describe(Image.open(a)))["mode"]=="CANDIDATE")
+ with Image.open(a) as ia:
+  setv("scene_relation_with_two_groups",recall_scene(state,describe(ia))["mode"]=="CANDIDATE")
  state_one=blank();teach_scene(state_one,"PAIR","A",a)
  with Image.open(a) as ia:setv("one_group_scene_doubt",recall_scene(state_one,describe(ia))["mode"]=="DOUBT")
  seal=digest(mem)
  setv("integrity_digest",isinstance(seal,str) and len(seal)==64)
- setv("contradictory_teacher",True,"P132 independently rejects contradictory labels on exact evidence; regression retained")
+ rejected=False
+ try:teach_scene(state,"OTHER","C",a)
+ except ValueError:rejected=True
+ setv("contradictory_teacher",rejected,"Same exact image may not be retaught under another label")
  def motion(vals):
   obs=[{"t":i,"x":30.0,"y":float(y),"radius":3.0} for i,y in enumerate(vals)]
   return context(obs)["event"]
