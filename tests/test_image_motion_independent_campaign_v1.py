@@ -10,7 +10,8 @@ class CampaignTests(unittest.TestCase):
   for i,y in enumerate(ys):
    p=directory/f"{i}.png"
    im=Image.new("RGB",(64,64),"white")
-   ImageDraw.Draw(im).ellipse((23,y-3,29,y+3),fill="black")
+   x={"train1":18,"train2":25,"exam1":36}[group]
+   ImageDraw.Draw(im).ellipse((x,y-3,x+6,y+3),fill="black")
    im.save(p)
    if i<4:obs.append({"t":i,"file":str(p)})
   return {"source_group":group,"origin":"synthetic","split":split,
