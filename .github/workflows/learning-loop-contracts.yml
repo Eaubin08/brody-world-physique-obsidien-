@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - "f0/**"
+      - "reconcile/**"
     paths:
       - "brody_world_physique/**"
       - "tests/**"
@@ -38,7 +39,7 @@ jobs:
         with:
           python-version: "3.14"
       - name: Install Pillow for Windows
-        run: python -m pip install -r requirements-image.txt
+        run: python -m pip install -r requirements-image.txt "opencv-python-headless>=4.8,<5"
       - name: Windows Python 3.14 drawing memory contracts
         run: python -m unittest discover -s tests -p "test_*.py" -q
       - name: Windows Python 3.14 end-to-end instrument school
@@ -74,7 +75,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install image baseline dependency
-        run: python -m pip install -r requirements-image.txt
+        run: python -m pip install -r requirements-image.txt "opencv-python-headless>=4.8,<5"
       - name: Compile contracts and tests
         run: python -m compileall -q brody_world_physique tests examples
       - name: Unit tests and image documentation checks
