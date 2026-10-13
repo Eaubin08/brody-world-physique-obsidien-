@@ -44,7 +44,7 @@ def run(out,minutes=10,seed=147,lessons=150,exam_per_condition=1500):
     stats={}
     with (dest/"EXAMS.jsonl").open("w",encoding="utf8") as log:
         for condition in ("none","partial","full"):
-            entry={"n":0,"answered":0,"correct":0,"holds":0,"counterfactual_collisions":0}
+            entry={"n":0,"answered":0,"correct":0,"holds":0,"counterfactual_collisions":None}
             for i in range(exam_per_condition):
                 if time.monotonic()>=deadline:break
                 im,label,col=render(rng_exam,condition)
@@ -52,15 +52,8 @@ def run(out,minutes=10,seed=147,lessons=150,exam_per_condition=1500):
                 # for many latent shapes. It is therefore not identifiable.
                 if condition=="full":response="HOLD";reason="FULLY_HIDDEN_OBJECT"
                 else:response=guess(memory,im);reason="LEARNED_VISIBLE_SHAPE"
-                if condition=="full" and i<12:
-                    # Same image pixels, different hidden object labels:
-                    # perturb only the hidden shape with preserved screen.
-                    other=Image.new("RGB",(96,96),(245,245,245))
-                    # Pixel-equivalence check is deterministic for full screen
-                    # when screen placement is identical.
-                    for alt in SHAPES:
-                        if alt!=label:entry["counterfactual_collisions"]+=1;break
-                    other.close()
+                # Counterfactual pixel equality requires a separate paired
+                # renderer with fixed location; not measured in this run.
                 entry["n"]+=1;entry["holds"]+=int(response=="HOLD")
                 entry["answered"]+=int(response!="HOLD")
                 entry["correct"]+=int(response==label)
