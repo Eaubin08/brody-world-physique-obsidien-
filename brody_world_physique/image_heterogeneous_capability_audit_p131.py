@@ -44,13 +44,18 @@ def run(out):
        {"before":describe(horizontal)["context"],"after":describe(vertical)["context"]})
     # 4: generation from representation rather than source.
     output=root/"reconstructed.png";decode([0,0,0]*8+[7,0,0]*8,output)
-    generated=Image.open(output)
+    with Image.open(output) as rendered:
+        generated=rendered.copy()
     record("G-01","generation","produce RGB image from abstract 4x4 learned-format grid",
        generated.size==(64,64) and generated.getpixel((8,8))!=generated.getpixel((8,56)),
        {"rendered":"reconstructed.png","resolution":"64x64","quality":"coarse RGB tiles"})
     # 5: memory refuses two incompatible labels for exactly same evidence.
-    state=new_state();first=remember(state,hashlib.sha256(red.read_bytes()).hexdigest(),"A",Image.open(red),"teacher")
-    second=remember(state,hashlib.sha256(red.read_bytes()).hexdigest(),"B",Image.open(red),"teacher")
+    state=new_state()
+    with Image.open(red) as source:
+        image=source.copy()
+    image_hash=hashlib.sha256(red.read_bytes()).hexdigest()
+    first=remember(state,image_hash,"A",image,"teacher")
+    second=remember(state,image_hash,"B",image,"teacher")
     record("M-01","memory","contradictory identity evidence quarantined",
         first=="TEACHER_EXAMPLE_ADDED" and second=="HOLD_CONTRADICTION" and len(state["identities"])==1,
         {"first":first,"second":second})
@@ -60,7 +65,7 @@ def run(out):
     record("R-01","reasoning","observed direction reversal extracted from successive velocities",
         ev["event"]=="REVERSAL",{"event":ev["event"],"axis":ev["axis"]})
     # 7: prevent exact source evidence from being counted twice in memory.
-    dup=remember(state,hashlib.sha256(red.read_bytes()).hexdigest(),"A",Image.open(red),"teacher")
+    dup=remember(state,image_hash,"A",image,"teacher")
     record("E-01","education","identical example not counted as independent lesson",
         dup=="DUPLICATE_NOT_NEW_EVIDENCE" and len(state["seen_hashes"])==1,
         {"outcome":dup})
