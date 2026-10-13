@@ -10,7 +10,10 @@ class ContextTransitionTests(unittest.TestCase):
    ImageDraw.Draw(im).ellipse((x-3,y-3,x+3,y+3),fill="black");im.save(p)
    obs.append({"t":i,"file":str(p)})
   actual=root/f"{group}_actual.png";im=Image.new("RGB",(64,64),"white")
-  ImageDraw.Draw(im).ellipse((x-3,ys[-1]-3,x+3,ys[-1]+3),fill="black");im.save(actual)
+  ImageDraw.Draw(im).ellipse((x-3,ys[-1]-3,x+3,ys[-1]+3),fill="black")
+  # Distinct exposure at a bright corner: preserves tracked geometry, not a reused image.
+  im.putpixel((0,0),(230,230,230))
+  im.save(actual)
   m=root/f"{group}.json";m.write_text(json.dumps({"source_group":group,"observations":obs,"predict_t":4}))
   return m,actual
  def test_cross_group_context_transition_transfer(self):
