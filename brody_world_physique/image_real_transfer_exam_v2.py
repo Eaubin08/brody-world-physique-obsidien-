@@ -22,7 +22,7 @@ def features(p):
     for y in range(4):
         for x in range(4):
             tile=im.crop((x*16,y*16,(x+1)*16,(y+1)*16))
-            px=list(tile.getdata())
+            px=list(tile.get_flattened_data() if hasattr(tile, 'get_flattened_data') else tile.getdata())
             colours.extend([round(sum(q[c] for q in px)/len(px)/32) for c in range(3)])
     shape=describe(im)
     return {"colour_grid":colours,"context":shape["context"],
