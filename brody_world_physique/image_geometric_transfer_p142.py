@@ -38,9 +38,8 @@ def descriptor(image):
     centy=sum(c[4] for c in components)/n if n else .5
     sx=math.sqrt(sum((c[3]-centx)**2 for c in components)/n) if n else 0
     sy=math.sqrt(sum((c[4]-centy)**2 for c in components)/n) if n else 0
-    if n:
-        mean=[sum(p[x,y][channel] for x in range(48) for y in range(48) if min(p[x,y])<220)/(sum(1 for x in range(48) for y in range(48) if min(p[x,y])<220)*255) for channel in range(3)]
-    else:mean=[0,0,0]
+    foreground=[p[x,y] for y in range(48) for x in range(48) if min(p[x,y])<220]
+    mean=[sum(rgb[channel] for rgb in foreground)/(255*len(foreground)) for channel in range(3)] if foreground else [0,0,0]
     return [n/3,area,occupancy,aspect,abs(aspect),centx,centy,sx,sy]+mean
 def feat_for(im,family):
     v=descriptor(im)
