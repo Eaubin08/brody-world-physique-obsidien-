@@ -8,7 +8,8 @@
 [CmdletBinding()]
 param(
   [Parameter(Mandatory=$true)][string]$RunPath,
-  [string]$Branch = "evidence/brody-local"
+  [string]$Branch = "evidence/brody-local",
+  [switch]$AllowNoImages
 )
 $ErrorActionPreference = "Stop"
 $repo = (git rev-parse --show-toplevel).Trim()
@@ -17,11 +18,14 @@ $source = (Resolve-Path -LiteralPath $RunPath).Path
 if (-not (Test-Path -LiteralPath (Join-Path $source "evaluation.json"))) {
   throw "Missing evaluation.json in source experiment"
 }
-if (-not (Test-Path -LiteralPath (Join-Path $source "images") -PathType Container)) {
-  throw "Missing images folder in source experiment"
+$imageFolder = Join-Path $source "images"
+$pngs = @()
+if (Test-Path -LiteralPath $imageFolder -PathType Container) {
+  $pngs = @(Get-ChildItem -LiteralPath $imageFolder -File -Filter "*.png")
 }
-$pngs = @(Get-ChildItem -LiteralPath (Join-Path $source "images") -File -Filter "*.png")
-if ($pngs.Count -eq 0) { throw "No image evidence to publish" }
+if ($pngs.Count -eq 0 -and -not $AllowNoImages) {
+  throw "No image evidence to publish. Pass -AllowNoImages explicitly for non-image experiments"
+}
 $root = Split-Path -Parent $repo
 $worktree = Join-Path $root "brody-image-evidence"
 if (-not (Test-Path -LiteralPath $worktree)) {
@@ -37,11 +41,16 @@ $name = Split-Path -Leaf $source
 if ($name -notmatch "^[a-zA-Z0-9_.-]+$") { throw "Unsafe experiment directory name" }
 $target = Join-Path $worktree "evidence\$name"
 if (Test-Path -LiteralPath $target) { throw "Evidence already exists: $name" }
-New-Item -ItemType Directory -Path (Join-Path $target "images") -Force | Out-Null
+New-Item -ItemType Directory -Path $target -Force | Out-Null
+if ($pngs.Count -gt 0) {
+  New-Item -ItemType Directory -Path (Join-Path $target "images") -Force | Out-Null
+}
 Get-ChildItem -LiteralPath $source -File |
   Where-Object { $_.Extension -in @(".json",".jsonl") } |
   Copy-Item -Destination $target
-$pngs | Copy-Item -Destination (Join-Path $target "images")
+if ($pngs.Count -gt 0) {
+  $pngs | Copy-Item -Destination (Join-Path $target "images")
+}
 $rel = "evidence/$name"
 git -C $worktree add -- $rel
 if ($LASTEXITCODE -ne 0) { throw "Failed to stage evidence" }
