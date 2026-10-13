@@ -86,10 +86,11 @@ def paired_counterfactual():
     h1=[observed(x) for x in left[:5]]
     h2=[observed(x) for x in right[:5]]
     for im in left+right:im.close()
+    proof=render(48,48,4,"cross_identical");digest=hashlib.sha256(proof.tobytes()).hexdigest();proof.close()
     return {"same_final_pixels":same,"different_histories":different_past,
-      "different_hidden_identity_futures":True,
+      "different_hidden_identity_futures":(48+5)!=(48-5),
       "history_observations_differ":h1!=h2,
-      "pixel_sha256":hashlib.sha256(render(48,48,4,"cross_identical").tobytes()).hexdigest()}
+      "pixel_sha256":digest}
 def run(out,minutes=20,seed=149,episodes_per_kind=800):
     if not (2<=minutes<=60 and 20<=episodes_per_kind<=5000):raise ValueError("INVALID_BOUNDS")
     path=Path(out)
