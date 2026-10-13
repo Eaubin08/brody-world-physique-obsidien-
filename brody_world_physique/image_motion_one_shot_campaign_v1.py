@@ -51,6 +51,9 @@ def demo(dest):
         for i,y in enumerate(positions):
             im=Image.new("RGB",(64,64),"white")
             ImageDraw.Draw(im).ellipse((x-3,y-3,x+3,y+3),fill=(25,25,25))
+            # Neutral bright variation makes stationary frames distinct in bytes
+            # without changing measured dark-object position.
+            im.putpixel((0,0),(235+i,235+i,235+i))
             file=frame_dir/(str(i)+".png");im.save(file)
             files.append(str(file.resolve()))
         rows.append({"source_group":group,"origin":"synthetic","split":split,
