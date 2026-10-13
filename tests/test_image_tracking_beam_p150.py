@@ -13,6 +13,13 @@ class TestP150(unittest.TestCase):
   result=infer(imgs[:8])
   self.assertTrue(result["camera_observed"])
   for im in imgs:im.close()
+ def test_pan_directions_with_marker_dropout(self):
+  for seed in range(12,32):
+   images,truth,cam=build(random.Random(seed),"camera_pan")
+   observed=[camera_from_marks(observe(im)[1]) for im in images[:8]]
+   self.assertTrue(all(v is not None for v in observed),(seed,cam,observed))
+   self.assertLess(max(abs(v-i*cam) for i,v in enumerate(observed)),1.1)
+   for im in images:im.close()
  def test_sealed_run_and_distinct_scoring(self):
   with tempfile.TemporaryDirectory() as d:
    dest=Path(d)/"run"
