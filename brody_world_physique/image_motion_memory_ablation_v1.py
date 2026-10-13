@@ -22,9 +22,6 @@ def run(manifest,memory_path,out):
         train_set.add(episode["feedback_sha256"])
     for idx,case in enumerate(cases,1):
         obs=track(case)
-        actual=analyze(case["actual"])
-        if actual["source_sha256"] in train_set or actual["source_sha256"] in {x["source_sha256"] for x in obs}:
-            raise ValueError("HELDOUT_LEAKAGE")
         if any(x["source_sha256"] in train_set for x in obs):
             raise ValueError("TRAINING_SEQUENCE_LEAKAGE")
         t=float(case["predict_t"])
@@ -32,6 +29,10 @@ def run(manifest,memory_path,out):
         raw=decision(obs,{"experiences":[]})
         guided=decision(obs,memory)
         futures={k:position(obs,k,t) for k in KINDS}
+        # Evaluate withheld truth only AFTER both prediction choices are fixed.
+        actual=analyze(case["actual"])
+        if actual["source_sha256"] in train_set or actual["source_sha256"] in {x["source_sha256"] for x in obs}:
+            raise ValueError("HELDOUT_LEAKAGE")
         model_errors={k:round(math.hypot(p["x"]-actual["x"],p["y"]-actual["y"]),5)
                       for k,p in futures.items()}
         def result(choice):
