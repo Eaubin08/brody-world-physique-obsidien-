@@ -10,6 +10,7 @@ from .image_multihypothesis_motion_memory_v1 import read,write
 def campaign(manifest,out):
     target=Path(out)
     if target.exists():raise ValueError("PRESERVE_PRIOR_CAMPAIGN")
+    if not Path(manifest).is_file():raise ValueError("CAMPAIGN_MANIFEST_MISSING")
     target.mkdir(parents=True)
     audit(manifest,target/"split")
     lessons=read(target/"split"/"train_cases.json")
