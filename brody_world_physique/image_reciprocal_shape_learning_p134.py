@@ -76,8 +76,8 @@ def hypothesize(mem,obs,group):
             return {"mode":"DOUBT","reason":"NO_SOURCE_INDEPENDENT_EXEMPLARS","parts":[]}
         cost,best=ranked[0]
         # Matching is shape-only; target geometry/position is observed but mask comes from memory.
-        eligible=[e for val,e in ranked if val<=0.4 and e["signature"]==best["signature"]]
-        if cost>0.45 or len({e["group"] for e in eligible})<2:
+        eligible=[e for val,e in ranked if val<=0.12 and e["signature"]==best["signature"]]
+        if cost>0.12 or len({e["group"] for e in eligible})<2:
             return {"mode":"DOUBT","reason":"SHAPE_NOT_REPLICATED","parts":[]}
         proto=best["part"]
         ow,oh=proto["size"];nw,nh=part["size"]
