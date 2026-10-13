@@ -11,7 +11,7 @@ from .fusion_f9_intensive_education_v0 import digest,verify_chain
 
 def analyze(path):
     im=ImageOps.exif_transpose(Image.open(path)).convert("RGB").resize((64,64))
-    pixels=list(im.getdata())
+    pixels=list(im.get_flattened_data() if hasattr(im,"get_flattened_data") else im.getdata())
     fg=[(i%64,i//64) for i,p in enumerate(pixels) if min(p)<170 and max(p)-min(p)<90]
     if len(fg)<4 or len(fg)>3000:raise ValueError("NO_SINGLE_SEGMENTABLE_OBJECT")
     x=sum(p[0] for p in fg)/len(fg);y=sum(p[1] for p in fg)/len(fg)
@@ -65,11 +65,22 @@ def run(manifest,out,feedback=None):
     model=fit(observations)
     next_time=float(spec["predict_t"])
     prediction=anticipate(model,next_time)
+    correction=None
+    if feedback:
+        truth=analyze(feedback)
+        if truth["source_sha256"] in {o["source_sha256"] for o in observations}:
+            raise ValueError("FEEDBACK_IMAGE_LEAK")
+        appended={**truth,"t":next_time}
+        corrected_model=fit(observations+[appended])
+        ex=prediction["x"]-truth["x"];ey=prediction["y"]-truth["y"]
+        correction={"actual":truth,"error_px":round(math.hypot(ex,ey),4),
+                    "corrected_fitted_model":corrected_model,
+                    "correction_applied_to_candidate_model":True}
     target.mkdir(parents=True)
     render(prediction,target/"predicted_next.png")
     body={"schema":"BRODY_OBSERVED_2D_MOTION_SCHOOL_V1",
           "observations":observations,"fitted_model":model,
-          "prediction":prediction,"next_image_generated_from_model":True,
+          "prediction":prediction,"correction":correction,"next_image_generated_from_model":True,
           "model_is_fitted_not_gravity_hardcoded":True,"native_memory_write":False,
           "canonical_promotion":False,"decision_authority":"KX108_ONLY"}
     body["digest"]=digest(body)
@@ -78,17 +89,10 @@ def run(manifest,out,feedback=None):
         "frames":len(observations),"predicted_t":next_time,
         "predicted_x":prediction["x"],"predicted_y":prediction["y"],
         "generated_image":"predicted_next.png",
-        "correction_applied":False,"native_memory_write":False,
+        "correction_applied":correction is not None,"native_memory_write":False,
         "canonical_promotion":False,"decision_authority":"KX108_ONLY",
         "status":"MEASURED_2D_TRAJECTORY_CANDIDATE"}
-    if feedback:
-        truth=analyze(feedback)
-        if truth["source_sha256"] in {o["source_sha256"] for o in observations}:
-            raise ValueError("FEEDBACK_IMAGE_LEAK")
-        ex=prediction["x"]-truth["x"];ey=prediction["y"]-truth["y"]
-        report["feedback"]={"actual":truth,"error_px":round(math.hypot(ex,ey),4),
-           "corrected_trajectory_estimate":"PENDING_NEW_FIT"}
-        report["correction_applied"]=False
+    if correction:report["feedback"]=correction
     (target/"MASTER_REPORT.json").write_text(json.dumps(report,indent=2)+"\n")
     return report
 def main():
