@@ -50,7 +50,7 @@ def run(out):
         raise ValueError("TRAIN_INDEPENDENCE_FAILED")
     records=[]
     for name,ys in TEST:
-        manifest,truth=episode(root,name,ys)
+        manifest,truth=episode(root,name,ys,x=39)
         obs=read(manifest)["observations"]
         hashes={hashlib.sha256(Path(x["file"]).read_bytes()).hexdigest() for x in obs}
         truth_hash=hashlib.sha256(truth.read_bytes()).hexdigest()
