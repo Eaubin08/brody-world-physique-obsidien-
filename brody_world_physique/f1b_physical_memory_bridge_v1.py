@@ -24,7 +24,7 @@ def episode(root,name,ys):
         image(file,y)
         if i<4:rows.append({"t":i,"file":str(file.resolve())})
     spec=path/"manifest.json"
-    spec.write_text(json.dumps({"observations":rows,"predict_t":3}),encoding="utf8")
+    spec.write_text(json.dumps({"observations":rows,"predict_t":4}),encoding="utf8")
     return spec,path/"frame_4.png"
 
 def measured_forecast(folder,truth):
