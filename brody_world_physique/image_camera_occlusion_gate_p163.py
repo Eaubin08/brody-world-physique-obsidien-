@@ -13,10 +13,15 @@ def camera_evidence(frames):
     offsets=[]
     for im in frames:
         pix=im.load();xs=[]
-        for x in range(168):
+        # Read the CENTRAL fiducial only. The outer fiducial at x=12 may
+        # be clipped by negative camera motion, biasing a global pixel median.
+        # The central marker stays fully in bounds for every fixture shift.
+        for x in range(55,126):
             r,g,b=pix[x,13]
             if 30<r<90 and g>155 and b<110:xs.append(x)
-        offsets.append(statistics.median(xs) if xs else None)
+        # A complete central marker spans three pixels; reject partial/noisy
+        # evidence rather than silently infer a camera offset.
+        offsets.append(statistics.median(xs) if len(xs)==3 else None)
     if len(offsets)<3 or offsets[0] is None or any(v is None for v in offsets):
         return None
     return [v-offsets[0] for v in offsets]
