@@ -7,6 +7,7 @@ import argparse,json,math,time
 from pathlib import Path
 from .hard_scene_angles_p165d2 import spec_from_index,draw
 from .color_agnostic_perception_p165d3 import detect_sequence
+from .persistent_world_state_p165d4 import initial,update,propagate
 
 def associate(frames, beam_size=8):
     observations=detect_sequence(frames)
@@ -41,6 +42,23 @@ def associate(frames, beam_size=8):
     return {"tracks":paths,"candidate_counts":[len(s) for s in observations],
             "uses_fixture_labels":False,"uses_oracle":False}
 
+def state_from_path(path):
+    """Feed a candidate image path to D4, explicitly in image pixel frame.
+
+    D4 only accepts world_1d, so this is an ADAPTER with named synthetic
+    pixel_1d convention, not proof of physical world coordinates.
+    """
+    state=initial("visual_candidate")
+    # Explicitly interpreted as synthetic aligned 1D pixel coordinates.
+    for t,x in enumerate(path):
+        if x is None:
+            state=propagate(state,float(t))
+        else:
+            state=update(state,{"time":float(t),"position":float(x),
+                "frame":"world_1d","source":"SIMULATED_SENSOR"})
+    return {"state":state,"coordinate_system":"IMAGE_X_AS_SYNTHETIC_1D",
+            "camera_compensated":False,"identity_proven":False}
+
 def adjudicate(result):
     tracks=result["tracks"];counts=result["candidate_counts"]
     if not tracks:return {"status":"HOLD","reason":"NO_TRACK"}
@@ -71,6 +89,7 @@ def run(out,seeds=2,limit=0,beam=8):
                 finally:
                     for im in images:im.close()
                 decision=adjudicate(result)
+                adapter=state_from_path(result["tracks"][0]["xs"])
                 name=spec["appearance"]+"/"+spec["occlusion"]
                 m=groups.setdefault(name,{"n":0,"holds":0,"multis":0,
                                           "candidates":0,"topk_truth_recall":0,
@@ -89,12 +108,15 @@ def run(out,seeds=2,limit=0,beam=8):
                            for tr in result["tracks"])
                 m["topk_truth_recall"]+=int(recall)
                 f.write(json.dumps({"spec":spec,"seed":seed,"decision":decision,
-                                    "tracks":result["tracks"],"truth_exam_only":truth})+"\n")
+                                    "tracks":result["tracks"],"persistent_state_adapter":adapter,
+                                    "truth_exam_only":truth})+"\n")
     report={"schema":"BRODY_P165D5_IMAGE_TO_PERSISTENT_HYPOTHESES",
             "conditions":total,"episodes":total*seeds,"run_complete":total==675,
             "beam_size":beam,"groups":groups,
             "inference_receives_truth":False,"inference_receives_fixture_labels":False,
             "track_positions_persist_across_frames":True,
+            "d4_state_adapter_connected":True,
+            "d4_frame_is_synthetic_image_1d":True,
             "true_identity_established":False,
             "camera_and_scene_graph_connected":False,
             "physical_event_causality_proven":False,
