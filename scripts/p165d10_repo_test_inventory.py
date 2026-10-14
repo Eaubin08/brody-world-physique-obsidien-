@@ -3,10 +3,10 @@
 Lists all test*.py files, test methods/functions, unittest classes, imports,
 and P161-P165 historical presence. Writes new audit folder (no overwrite).
 """
-import argparse,ast,hashlib,json,subprocess
+import argparse,ast,hashlib,json
 from pathlib import Path
 
-LEGACY=("p161","p162","p163","p164","p165a","p165b","p165c","p165d")
+LEGACY={"p161":"test_image_hard_visual_ood_p161.py","p162":"test_image_math_physical_bridge_p162.py","p163":"test_image_camera_occlusion_gate_p163.py","p164":"test_image_identity_occlusion_p164.py","p165a":"test_image_scene_adversarial_p165a.py","p165b":"test_modal_signature_fusion_p165b.py","p165c":"test_contextual_scene_graph_p165c.py","p165d":"test_scene_event_epistemic_p165d.py"}
 def inventory(root):
     root=Path(root).resolve()
     files=sorted((root/"tests").rglob("test*.py"))
@@ -31,9 +31,9 @@ def inventory(root):
             record={"file":rel,"sha256":hashlib.sha256(content).hexdigest(),
                     "syntax":"ERROR","error":str(exc),"declared_tests":0}
         records.append(record)
-    legacy={tag:{"files":[r["file"] for r in records if tag in Path(r["file"]).stem.lower()],
-                  "declared_tests":sum(r["declared_tests"] for r in records if tag in Path(r["file"]).stem.lower())}
-            for tag in LEGACY}
+    legacy={tag:{"files":[r["file"] for r in records if Path(r["file"]).name==name],
+                  "declared_tests":sum(r["declared_tests"] for r in records if Path(r["file"]).name==name)}
+            for tag,name in LEGACY.items()}
     return {"schema":"BRODY_P165D10_REPOSITORY_AST_TEST_INVENTORY",
        "files":records,"test_files":len(records),
        "declared_tests":sum(r["declared_tests"] for r in records),
