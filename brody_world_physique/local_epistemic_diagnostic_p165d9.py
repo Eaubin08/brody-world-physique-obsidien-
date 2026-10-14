@@ -14,7 +14,6 @@ def local_view(goal,claims):
     focus=[c for c in global_view["retained_all_claims"] if c["id"] in global_view["focused"]]
     contradictions={x for c in focus for x in c["contradicts"]}
     contradictions.update(c["id"] for c in focus if c["contradicts"])
-    referenced={c["id"]:c for c in claims}
     for c in claims:
         if c["id"] in {x["id"] for x in focus}:continue
         if any(c["id"] in x["contradicts"] for x in focus):
@@ -35,10 +34,10 @@ def diagnose(frames,truth_eval_only,beam=8):
     # Truth ONLY used for diagnostics AFTER infer; causal attribution not proven.
     fail=not metrics["same_path_pre_post_recall"]
     hypotheses=result["raw"]["tracks"]
-    post_candidates=sum(len(result["raw"]["tracks"][0]["xs"])>=7 for _ in [0]) if hypotheses else 0
+    post_candidates=any(any(path["xs"][i] is not None for i in (5,6)) for path in hypotheses)
     return {"failed_continuity":fail,"scores_eval_only":metrics,
             "local_views":views,"tracks_count":len(hypotheses),
-            "post_candidate_present":bool(post_candidates),
+            "post_candidate_present":post_candidates,
             "cause_established":False}
 def run(out,seeds=2,limit=0,beam=8):
     if not(1<=seeds<=20 and 0<=limit<=675 and 2<=beam<=32):raise ValueError("INVALID_BOUNDS")
@@ -81,5 +80,5 @@ def main():
     p.add_argument("--beam",type=int,default=8)
     a=p.parse_args();r=run(a.out,a.seeds,a.limit,a.beam)
     print(json.dumps({k:v for k,v in r.items() if k!="groups"},indent=2))
-    print("Report:",p)
+    print("Report:",str(Path(a.out)/"MASTER_REPORT.json"))
 if __name__=="__main__":main()
