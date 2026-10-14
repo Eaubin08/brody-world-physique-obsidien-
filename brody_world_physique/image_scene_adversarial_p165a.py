@@ -15,7 +15,8 @@ def make_case(kind,seed):
     rng=random.Random(seed);imlist=[]
     # Two entities are initially separate. Their simulator IDs are hidden
     # from inference and used solely by the evaluation oracle.
-    a=[32+4*t for t in range(7)];b=[91-4*t for t in range(7)]
+    speed=6 if kind=="crossing_indistinguishable" else 4
+    a=[32+speed*t for t in range(7)];b=[92-speed*t for t in range(7)]
     unknown_identity=kind in ("crossing_indistinguishable","substitution")
     world={"A":a[:],"B":b[:],"case":kind,
            "identity_identifiable":not unknown_identity,
