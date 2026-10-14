@@ -13,10 +13,10 @@ class D8Tests(unittest.TestCase):
    self.assertEqual(len(r["views"]),len(GOALS))
   finally:
    for im in ims:im.close()
- def test_symbol_without_user_interpretation_holds(self):
+ def test_symbol_without_user_interpretation_does_not_fabricate(self):
   s=dict(angle=0,motion="still",occlusion="full",appearance="blue",background="plain")
   ims,_=draw(s,43)
-  try:self.assertEqual(views_from_frames(ims)["views"]["INTERPRET_SYMBOL"]["status"],"HOLD")
+  try:self.assertEqual(views_from_frames(ims)["views"]["INTERPRET_SYMBOL"]["focused"],[])
   finally:
    for im in ims:im.close()
  def test_repeatability(self):
