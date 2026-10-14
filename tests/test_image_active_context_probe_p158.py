@@ -24,7 +24,7 @@ class P158Tests(unittest.TestCase):
   seq=trajectory("flat","uninformative",random.Random(4))
   self.assertEqual(decide(seq[:4],bank,"single",False)["decision"],"HOLD")
   self.assertEqual(decide(seq[:4],bank,"possibilities")["decision"],"MULTI")
-  self.assertEqual(decide(seq[:4],bank,"single",after=seq)["decision"],"SELECT")
+  self.assertEqual(decide(seq[:4],bank,"single",after=seq,probe_informative=False)["decision"],"HOLD")
   for im in seq:im.close()
  def test_full_campaign_sealed(self):
   with tempfile.TemporaryDirectory() as d:
