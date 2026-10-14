@@ -8,9 +8,20 @@ class F1CMemoryUtilityTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             report=run(Path(temp)/"audit")
             self.assertEqual(report["paired_cases"],len(TEST))
-            self.assertEqual(report["comparable_cases"],len(TEST))
+            # DOUBT/HOLD without a selected model must not be counted as comparable.
+            comparable=sum(row["utility_px"] is not None for row in report["test"])
+            abstained=sum(row["utility_px"] is None for row in report["test"])
+            self.assertEqual(report["comparable_cases"],comparable)
+            self.assertEqual(comparable+abstained,len(TEST))
             self.assertEqual(report["improved_cases"]+report["degraded_cases"]+
-                             report["unchanged_cases"],len(TEST))
+                             report["unchanged_cases"],comparable)
+            for row in report["test"]:
+                if row["utility_px"] is None:
+                    self.assertTrue(row["no_memory"]["selected"] is None or
+                                    row["with_memory"]["selected"] is None)
+                else:
+                    self.assertIsNotNone(row["no_memory"]["selected_error_px"])
+                    self.assertIsNotNone(row["with_memory"]["selected_error_px"])
             self.assertTrue(report["all_forecasts_sealed"])
             self.assertTrue(report["source_hash_separation_checked"])
             self.assertFalse(report["physics_discovery_proven"])
