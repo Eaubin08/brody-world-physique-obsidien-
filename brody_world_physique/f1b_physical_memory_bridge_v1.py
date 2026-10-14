@@ -22,10 +22,10 @@ def episode(root,name,ys):
     for i,y in enumerate(ys):
         file=path/f"frame_{i}.png"
         image(file,y)
-        if i<3:rows.append({"t":i,"file":str(file.resolve())})
+        if i<4:rows.append({"t":i,"file":str(file.resolve())})
     spec=path/"manifest.json"
     spec.write_text(json.dumps({"observations":rows,"predict_t":3}),encoding="utf8")
-    return spec,path/"frame_3.png"
+    return spec,path/"frame_4.png"
 
 def measured_forecast(folder,truth):
     sealed=read(folder/"sealed_forecast.json")
@@ -37,10 +37,10 @@ def run(out):
     root=Path(out)
     if root.exists():raise ValueError("PRESERVE_PRIOR_EVIDENCE")
     root.mkdir(parents=True)
-    # TRAIN: two separate sequences, same motion regime, feedback after forecast.
+    # TRAIN: two sequences with four observed frames; fifth held out for feedback.
     memory=None
     training=[]
-    for i,ys in enumerate(([10,14,20,28],[17,21,27,35])):
+    for i,ys in enumerate(([10,14,20,28,38],[17,21,27,35,45])):
         spec,truth=episode(root,"train_"+str(i),ys)
         f=root/("forecast_train_"+str(i))
         forecast(spec,f,previous=memory)
@@ -50,7 +50,7 @@ def run(out):
         training.append({"case":i,"experiences":result["experiences"],
                          "forecast":str(f.relative_to(root))})
     # TEST: target frame exists on disk, but engine gets only past-frame manifest.
-    spec,truth=episode(root,"test_unseen",[24,28,34,42])
+    spec,truth=episode(root,"test_unseen",[24,28,34,42,52])
     without=root/"test_no_memory";withmem=root/"test_with_memory"
     base=forecast(spec,without)
     guided=forecast(spec,withmem,previous=memory)
