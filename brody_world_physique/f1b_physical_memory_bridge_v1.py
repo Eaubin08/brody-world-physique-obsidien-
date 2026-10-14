@@ -16,12 +16,12 @@ def image(path,y,x=32):
     ImageDraw.Draw(im).ellipse((x-4,y-4,x+4,y+4),fill=(40,40,40))
     im.save(path)
 
-def episode(root,name,ys):
+def episode(root,name,ys,x=32):
     path=root/name;path.mkdir()
     rows=[]
     for i,y in enumerate(ys):
         file=path/f"frame_{i}.png"
-        image(file,y)
+        image(file,y,x=x)
         if i<4:rows.append({"t":i,"file":str(file.resolve())})
     spec=path/"manifest.json"
     spec.write_text(json.dumps({"observations":rows,"predict_t":4}),encoding="utf8")
