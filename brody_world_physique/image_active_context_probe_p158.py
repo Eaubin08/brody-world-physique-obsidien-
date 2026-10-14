@@ -49,7 +49,10 @@ def decide(before,bank,request,probe_available=True,after=None,tol=.32,probe_inf
         if request=="possibilities":return {"decision":"MULTI","hypotheses":list(choices),"reason":"OBSERVATIONALLY_EQUIVALENT"}
         if probe_available:return {"decision":"PROBE","action":"observe_after_discriminating_intervention","reason":"INFORMATION_GAIN"}
         return {"decision":"HOLD","reason":"UNIDENTIFIABLE_WITHOUT_PROBE","hypotheses":list(choices)}
-    if not probe_informative:\n        return {"decision":"MULTI" if request=="possibilities" else "HOLD","reason":"PROBE_NON_DISCRIMINATING","hypotheses":list(choices)}\n    measured=observed(after)
+    if not probe_informative:
+        return {"decision":"MULTI" if request=="possibilities" else "HOLD",
+                "reason":"PROBE_NON_DISCRIMINATING","hypotheses":list(choices)}
+    measured=observed(after)
     # The first four time slices cannot discriminate. Acceleration estimated
     # only from the intervention response after t=3.
     if len(measured)<7 or any(x is None for x in measured[3:7]):
