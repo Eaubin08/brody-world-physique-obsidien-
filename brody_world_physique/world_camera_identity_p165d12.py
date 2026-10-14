@@ -17,7 +17,7 @@ def world(case,seed):
     steps=[]
     for t in range(7):
         camera=(5*t if case=="CAMERA_MOVES" else (4*t if case=="COMPENSATED_MOTION" else 0))
-        obj=(x+(5*t if case in ("OBJECT_MOVES","COMPENSATED_MOTION") else 0))
+        obj=(x+(5*t if case=="OBJECT_MOVES" else (4*t if case=="COMPENSATED_MOTION" else 0)))
         identity="A"
         if case=="IDENTITY_SWAP" and t>=4:
             obj=other-5*t
