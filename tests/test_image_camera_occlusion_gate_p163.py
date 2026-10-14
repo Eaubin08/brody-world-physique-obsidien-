@@ -13,6 +13,16 @@ class P163Tests(unittest.TestCase):
   self.assertIsNotNone(shifts)
   self.assertAlmostEqual(shifts[6],6*cam)
   for im in original+stamped:im.close()
+ def test_negative_and_positive_camera_clipping_regression(self):
+  # The left marker becomes clipped at -12px, but the central marker must
+  # give an unbiased shift. Neither test supplies true motion to estimator.
+  from PIL import Image
+  for speed in (-2.,2.):
+   blanks=[Image.new("RGB",(168,96),(235,233,225)) for _ in range(7)]
+   marked=annotate_fiducials(blanks,"camera",speed)
+   inferred=camera_evidence(marked)
+   self.assertEqual(inferred,[speed*t for t in range(7)])
+   for im in blanks+marked:im.close()
  def test_camera_unobservable_must_hold(self):
   self.assertEqual(decide([30.,32.,34.,36.,38.,40.,42.],"UNOBSERVABLE_FRAME")["status"],"HOLD")
  def test_event_hidden_must_hold(self):
