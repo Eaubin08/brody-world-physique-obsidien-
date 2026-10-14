@@ -41,7 +41,7 @@ def learn(rng,n=30):
             for frame in frames:frame.close()
         bank[regime]=sum(series)/len(series) if series else None
     return bank
-def decide(before,bank,request,probe_available=True,after=None,tol=.32):
+def decide(before,bank,request,probe_available=True,after=None,tol=.32,probe_informative=True):
     # Decision before probing: competing futures equally compatible.
     choices={k:v for k,v in bank.items() if v is not None}
     if len(choices)<2:return {"decision":"HOLD","reason":"INSUFFICIENT_MODELS"}
@@ -49,7 +49,7 @@ def decide(before,bank,request,probe_available=True,after=None,tol=.32):
         if request=="possibilities":return {"decision":"MULTI","hypotheses":list(choices),"reason":"OBSERVATIONALLY_EQUIVALENT"}
         if probe_available:return {"decision":"PROBE","action":"observe_after_discriminating_intervention","reason":"INFORMATION_GAIN"}
         return {"decision":"HOLD","reason":"UNIDENTIFIABLE_WITHOUT_PROBE","hypotheses":list(choices)}
-    measured=observed(after)
+    if not probe_informative:\n        return {"decision":"MULTI" if request=="possibilities" else "HOLD","reason":"PROBE_NON_DISCRIMINATING","hypotheses":list(choices)}\n    measured=observed(after)
     # The first four time slices cannot discriminate. Acceleration estimated
     # only from the intervention response after t=3.
     if len(measured)<7 or any(x is None for x in measured[3:7]):
@@ -85,7 +85,7 @@ def run(out,minutes=12,seed=158,lessons_each=30,exam_each=140):
                 expected=("MULTI" if condition=="uninformative_probe" else "HOLD" if condition=="no_probe" else "PROBE")
                 row["pre_probe_correct"]+=int(pre["decision"]==expected)
                 if condition in ("no_probe","uninformative_probe"):
-                    post=pre if condition=="no_probe" else decide(first,bank,"single",after=imgs)
+                    post=pre if condition=="no_probe" else decide(first,bank,"single",after=imgs,probe_informative=False)
                 else:post=decide(first,bank,"single",after=imgs)
                 row["n"]+=1
                 row["post_select"]+=int(post["decision"]=="SELECT")
