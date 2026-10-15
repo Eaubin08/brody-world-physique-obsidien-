@@ -48,10 +48,13 @@ def exam(root,state,name,kind,seed):
         if corrected is not None:
             out=root/(name+"_predicted.png");raster(corrected).save(out)
             err=abs(corrected-truth)
-        else:err=None
+            predicted_pixels=list(raster(corrected).getdata())
+            actual_pixels=list(raster(truth).getdata())
+            image_mae=round(sum(abs(a-b) for p,q in zip(predicted_pixels,actual_pixels) for a,b in zip(p,q))/(len(predicted_pixels)*3),6)
+        else:err=None;image_mae=None
         return {"name":name,"inferred_context":context,
              "baseline_error":abs(baseline-truth),"candidate_error":err,
-             "target_x":truth,"candidate_image_generated":corrected is not None}
+             "target_x":truth,"image_mae_rgb":image_mae,"candidate_image_generated":corrected is not None}
     finally:
         for im in ims:im.close()
 
