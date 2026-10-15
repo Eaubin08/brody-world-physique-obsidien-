@@ -24,7 +24,7 @@ function Invoke-Test([string]$Name,[string[]]$CommandArgs) {
   $meta.tests[$Name]=@{exit_code=$code; log=$log; passed=($code -eq 0)}
   if ($code -ne 0) {
     $meta | ConvertTo-Json -Depth 10 | Set-Content (Join-Path $Out "CAMPAIGN_FAILURE.json")
-    throw "TEST_FAILED: $Name — see $log"
+    throw "TEST_FAILED: $Name - see $log"
   }
 }
 if (!$SkipFullRegression) {
