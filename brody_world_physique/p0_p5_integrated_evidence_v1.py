@@ -26,7 +26,7 @@ def make_scene(path,cx,shape="square"):
 
 def structural_reciprocity(root):
     tr=root/"training.png";exam=root/"unseen.png"
-    make_scene(tr,5);make_scene(exam,15)
+    make_scene(tr,5,"square");make_scene(exam,15,"circle")
     learned=scene(tr)
     target=scene(exam)
     # P1: structural mask generation with observed bounding boxes; compare to
