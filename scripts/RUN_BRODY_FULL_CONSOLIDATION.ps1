@@ -16,9 +16,9 @@ $meta=@{ schema="BRODY_FULL_CONSOLIDATION_V1"; git_revision=$revision;
  tests=@{}; video_evidence="HOLD_NO_INDEPENDENT_VIDEO";
  decision_authority="KX108_ONLY"; native_memory_write=$false; canonical_promotion=$false }
 $meta | ConvertTo-Json -Depth 10 | Set-Content (Join-Path $Out "CAMPAIGN_STARTED.json")
-function Invoke-Test([string]$Name,[string[]]$Args) {
+function Invoke-Test([string]$Name,[string[]]$CommandArgs) {
   $log=Join-Path $Out ("TEST_"+$Name+".log")
-  & py @Args 2>&1 | Out-File -FilePath $log -Encoding utf8
+  & py @CommandArgs 2>&1 | Out-File -FilePath $log -Encoding utf8
   $code=$LASTEXITCODE
   Get-Content $log | Select-Object -Last 12
   $meta.tests[$Name]=@{exit_code=$code; log=$log; passed=($code -eq 0)}
