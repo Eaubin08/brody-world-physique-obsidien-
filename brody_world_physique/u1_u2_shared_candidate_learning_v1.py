@@ -36,12 +36,12 @@ def run(out):
         for im in frames:im.close()
     accel_values=[measurements[i+2]-2*measurements[i+1]+measurements[i] for i in (3,4)]
     measured=sum(accel_values)/len(accel_values)
-    verdict=decide([],bank,"single",after=[render(x,random.Random(1)) for x in measurements])
+    observed_response={"decision":"OBSERVED_PIXEL_ACCELERATION","acceleration":measured}
     # No hidden regime label consulted for any decision.
     old_acc=state["acceleration"]
     feedback=[(x,x+measured) for x in (11.,21.,31.)]
     clean=[(x,x) for x in (12.,22.,32.)]
-    accepted,reason=choose(measured,feedback,clean,retention_tolerance if False else .03)
+    accepted,reason=choose(measured,feedback,clean,.03)
     # Global correction is legitimately blocked by retention. Instead learn
     # context-scoped parameter while preserving old clean-world candidate.
     state["lessons"].append({"context":"observed_intervention","measured_acceleration":measured,
