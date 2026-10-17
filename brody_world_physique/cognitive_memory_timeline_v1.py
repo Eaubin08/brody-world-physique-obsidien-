@@ -46,23 +46,23 @@ class TreeDefinitionV1:
 
 CANONICAL_34_TREES: Mapping[str, TreeDefinitionV1] = MappingProxyType({
     # I_FONDAMENTAUX (01-05)
-    "01": TreeDefinitionV1("01", "Arbre de l'Humain", TreeFamilyV1.I_FONDAMENTAUX, "ARBRE_01__Arbre_de_l_Humain"),
+    "01": TreeDefinitionV1("01", "Arbre de l’Humain", TreeFamilyV1.I_FONDAMENTAUX, "ARBRE_01__Arbre_de_l_Humain"),
     "02": TreeDefinitionV1("02", "Arbre de la Conscience", TreeFamilyV1.I_FONDAMENTAUX, "ARBRE_02__Arbre_de_la_Conscience"),
     "03": TreeDefinitionV1("03", "Arbre de la Perception", TreeFamilyV1.I_FONDAMENTAUX, "ARBRE_03__Arbre_de_la_Perception"),
     "04": TreeDefinitionV1("04", "Arbre du Sens", TreeFamilyV1.I_FONDAMENTAUX, "ARBRE_04__Arbre_du_Sens"),
-    "05": TreeDefinitionV1("05", "Arbre de l'Identité", TreeFamilyV1.I_FONDAMENTAUX, "ARBRE_05__Arbre_de_l_Identite"),
+    "05": TreeDefinitionV1("05", "Arbre de l’Identité", TreeFamilyV1.I_FONDAMENTAUX, "ARBRE_05__Arbre_de_l_Identite"),
 
     # II_COGNITIFS (06-10)
     "06": TreeDefinitionV1("06", "Arbre de la Compréhension", TreeFamilyV1.II_COGNITIFS, "ARBRE_06__Arbre_de_la_Comprehension"),
-    "07": TreeDefinitionV1("07", "Arbre de l'Organisation", TreeFamilyV1.II_COGNITIFS, "ARBRE_07__Arbre_de_l_Organisation"),
+    "07": TreeDefinitionV1("07", "Arbre de l’Organisation", TreeFamilyV1.II_COGNITIFS, "ARBRE_07__Arbre_de_l_Organisation"),
     "08": TreeDefinitionV1("08", "Arbre de la Pensée", TreeFamilyV1.II_COGNITIFS, "ARBRE_08__Arbre_de_la_Pensee"),
-    "09": TreeDefinitionV1("09", "Arbre de l'Intelligence", TreeFamilyV1.II_COGNITIFS, "ARBRE_09__Arbre_de_l_Intelligence"),
+    "09": TreeDefinitionV1("09", "Arbre de l’Intelligence", TreeFamilyV1.II_COGNITIFS, "ARBRE_09__Arbre_de_l_Intelligence"),
     "10": TreeDefinitionV1("10", "Arbre du Langage", TreeFamilyV1.II_COGNITIFS, "ARBRE_10__Arbre_du_Langage"),
 
     # III_CONNAISSANCE (11-15)
     "11": TreeDefinitionV1("11", "Arbre de la Science", TreeFamilyV1.III_CONNAISSANCE, "ARBRE_11__Arbre_de_la_Science"),
     "12": TreeDefinitionV1("12", "Arbre de la Technique", TreeFamilyV1.III_CONNAISSANCE, "ARBRE_12__Arbre_de_la_Technique"),
-    "13": TreeDefinitionV1("13", "Arbre de l'Art", TreeFamilyV1.III_CONNAISSANCE, "ARBRE_13__Arbre_de_l_Art"),
+    "13": TreeDefinitionV1("13", "Arbre de l’Art", TreeFamilyV1.III_CONNAISSANCE, "ARBRE_13__Arbre_de_l_Art"),
     "14": TreeDefinitionV1("14", "Arbre de la Philosophie", TreeFamilyV1.III_CONNAISSANCE, "ARBRE_14__Arbre_de_la_Philosophie"),
     "15": TreeDefinitionV1("15", "Arbre de la Spiritualité", TreeFamilyV1.III_CONNAISSANCE, "ARBRE_15__Arbre_de_la_Spiritualite"),
 
@@ -73,14 +73,14 @@ CANONICAL_34_TREES: Mapping[str, TreeDefinitionV1] = MappingProxyType({
     "19": TreeDefinitionV1("19", "Arbre de la Culture", TreeFamilyV1.IV_RELATIONNELS_SOCIAUX, "ARBRE_19__Arbre_de_la_Culture"),
 
     # V_ACTION_TRANSFORMATION (20-22)
-    "20": TreeDefinitionV1("20", "Arbre de l'Action", TreeFamilyV1.V_ACTION_TRANSFORMATION, "ARBRE_20__Arbre_de_l_Action"),
+    "20": TreeDefinitionV1("20", "Arbre de l’Action", TreeFamilyV1.V_ACTION_TRANSFORMATION, "ARBRE_20__Arbre_de_l_Action"),
     "21": TreeDefinitionV1("21", "Arbre de la Création", TreeFamilyV1.V_ACTION_TRANSFORMATION, "ARBRE_21__Arbre_de_la_Creation"),
     "22": TreeDefinitionV1("22", "Arbre de la Transformation", TreeFamilyV1.V_ACTION_TRANSFORMATION, "ARBRE_22__Arbre_de_la_Transformation"),
 
     # VI_TEMPORELS_MEMORIELS (23-25)
     "23": TreeDefinitionV1("23", "Arbre du Temps", TreeFamilyV1.VI_TEMPORELS_MEMORIELS, "ARBRE_23__Arbre_du_Temps"),
     "24": TreeDefinitionV1("24", "Arbre de la Mémoire", TreeFamilyV1.VI_TEMPORELS_MEMORIELS, "ARBRE_24__Arbre_de_la_Memoire"),
-    "25": TreeDefinitionV1("25", "Arbre de l'Histoire", TreeFamilyV1.VI_TEMPORELS_MEMORIELS, "ARBRE_25__Arbre_de_l_Histoire"),
+    "25": TreeDefinitionV1("25", "Arbre de l’Histoire", TreeFamilyV1.VI_TEMPORELS_MEMORIELS, "ARBRE_25__Arbre_de_l_Histoire"),
 
     # VII_META_STRUCTURELS (26-29)
     "26": TreeDefinitionV1("26", "Arbre de la Cohérence", TreeFamilyV1.VII_META_STRUCTURELS, "ARBRE_26__Arbre_de_la_Coherence"),
@@ -92,9 +92,10 @@ CANONICAL_34_TREES: Mapping[str, TreeDefinitionV1] = MappingProxyType({
     "30": TreeDefinitionV1("30", "Arbre Cognitif Global", TreeFamilyV1.VIII_OBSIDIA_AGI, "ARBRE_30__Arbre_Cognitif_Global"),
     "31": TreeDefinitionV1("31", "Arbre des Flux", TreeFamilyV1.VIII_OBSIDIA_AGI, "ARBRE_31__Arbre_des_Flux"),
     "32": TreeDefinitionV1("32", "Arbre des Connexions", TreeFamilyV1.VIII_OBSIDIA_AGI, "ARBRE_32__Arbre_des_Connexions"),
-    "33": TreeDefinitionV1("33", "Arbre de l'Optimisation", TreeFamilyV1.VIII_OBSIDIA_AGI, "ARBRE_33__Arbre_de_l_Optimisation"),
+    "33": TreeDefinitionV1("33", "Arbre de l’Optimisation", TreeFamilyV1.VIII_OBSIDIA_AGI, "ARBRE_33__Arbre_de_l_Optimisation"),
     "34": TreeDefinitionV1("34", "Arbre de la Stabilité", TreeFamilyV1.VIII_OBSIDIA_AGI, "ARBRE_34__Arbre_de_la_Stabilite"),
 })
+
 
 
 @dataclass(frozen=True)
