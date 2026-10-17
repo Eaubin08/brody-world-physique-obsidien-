@@ -25,16 +25,32 @@ from .cognitive_memory_timeline_v1 import (
     TreeFamilyV1,
     TreeProjectionV1,
 )
+from .multidimensional_retrieval_v2 import (
+    ExperienceRelationLinkV1,
+    MeaningQueryIntentV1,
+    MeaningQueryResultItemV1,
+    MeaningQueryResponseV1,
+    MultidimensionalCognitiveMemoryEngineV1,
+    MultidimensionalRelationTypeV1,
+    VisualTaskAdmissibilityRequestV1,
+    VisualTaskAdmissibilityVerdictV1,
+)
 
 __all__ = [
     "CANONICAL_34_TREES",
     "CognitiveMemoryIndexV1",
     "DomainEngagementV1",
     "EpistemicCalibrationV1",
+    "ExperienceRelationLinkV1",
     "ExperienceValidationStatusV0",
     "HistoricalBeliefRevisionV1",
+    "MeaningQueryIntentV1",
+    "MeaningQueryResultItemV1",
+    "MeaningQueryResponseV1",
     "MemoryEligibilityV0",
+    "MultidimensionalCognitiveMemoryEngineV1",
     "MultidimensionalExperienceV1",
+    "MultidimensionalRelationTypeV1",
     "NativeMemoryAdmissibilityReportV1",
     "ProjectionKindV0",
     "SpecializedDomainV1",
@@ -44,9 +60,12 @@ __all__ = [
     "TreeDefinitionV1",
     "TreeFamilyV1",
     "TreeProjectionV1",
+    "VisualTaskAdmissibilityRequestV1",
+    "VisualTaskAdmissibilityVerdictV1",
     "WorldExperienceCandidateV0",
     "WorldStateDeltaV0",
     "WorldStateProjectionV0",
     "WorldTransformationV0",
 ]
+
 
