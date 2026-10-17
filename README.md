@@ -129,6 +129,7 @@ It prepares a reusable physical/visual/world layer that can later feed:
 - **[42 — Cross-audit: spatial vs pixel, time/motion, multirepresentation, multiscale micro/nano/molecular-to-cosmic, with upstream Obsidia contract links](docs/42_AUDIT_TRANSVERSAL_REPRESENTATIONS_MONDE_MULTIECHELLES.md)**
 - **[43 — Preforge experiment protocol: one ball video across image/space/time/motion, held-out preview, ablations, reversibility and evidence/unknown gates](docs/43_EXPERIENCE_COMMUNE_BALLE_REPRESENTATIONS_V0.md)**
 - **[44 — P1 executable multirepresentation ball bridge: source video → sealed forecast → real Reverso images → 4 candidate views + F0 projection/delta/experience + replay](docs/44_P1_PASSERELLE_MULTIREPRESENTATIONS_VIDEO_MONDE.md)**
+- **[45 — Audit comparatif F00–F03 & Architecture mémoire multidimensionnelle M01–M09: 6 temporalités, 34 arbres, 8 familles, domaines spécialisés, 7 requêtes de sens et admissibilité](docs/45_AUDIT_COMPARATIF_F00_F03_ET_CHANTIER_MEMOIRE_M01_M09.md)**
 
 ## First actual image editor (I1/R1 CPU)
 
