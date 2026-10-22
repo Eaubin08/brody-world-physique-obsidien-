@@ -441,3 +441,67 @@ class NaturalImageLoopExecutorV1:
         )
 
         return receipt, final_canvas, diff_mask
+
+    # Convenient method alias
+    execute_loop = execute_complete_natural_loop
+
+
+@dataclass(frozen=True)
+class CurriculumLevelMetricRecordV1:
+    """Detailed evaluation metrics per curriculum level."""
+    concept_level: NaturalVisualConceptLevelV1
+    perception_edge_density: float
+    perception_contrast_ratio: float
+    reconstruction_initial_iou: float
+    reconstruction_initial_xor: int
+    retention_grounded_lessons: tuple[str, ...]
+    transfer_status: str
+    correction_delta_iou: float
+    correction_error_reduction: int
+    final_iou: float
+    total_cost: float
+
+
+class NaturalCurriculumMultiMetricEvaluatorV1:
+    """Evaluates all 6 levels of natural image curriculum on novel test photographs.
+    
+    Explicitly distinguishes:
+    1. Perception (deterministic pixel stats, edges, contrast)
+    2. Reconstruction (initial uncorrected rendering)
+    3. Retention (memory lookup & tree projection matching)
+    4. Transfer (application to unseen real photos)
+    5. Correction (closed-loop gain)
+    """
+
+    def __init__(self, executor: NaturalImageLoopExecutorV1 | None = None) -> None:
+        self.executor = executor or NaturalImageLoopExecutorV1()
+
+    def evaluate_curriculum_on_image(
+        self,
+        f16_obs: RealImageObservationF16V1,
+    ) -> dict[NaturalVisualConceptLevelV1, CurriculumLevelMetricRecordV1]:
+        """Runs the 6 progressive levels on the given real image and records detailed metrics."""
+        results: dict[NaturalVisualConceptLevelV1, CurriculumLevelMetricRecordV1] = {}
+
+        for level in NaturalVisualConceptLevelV1:
+            receipt, final_img, diff_mask = self.executor.execute_loop(f16_obs, concept_level=level)
+
+            delta_iou = round(receipt.final_reconstruction_iou - receipt.initial_reconstruction_iou, 4)
+            err_reduction = receipt.initial_xor_error - receipt.final_xor_error
+
+            rec = CurriculumLevelMetricRecordV1(
+                concept_level=level,
+                perception_edge_density=f16_obs.measured.edge_density,
+                perception_contrast_ratio=f16_obs.measured.contrast_ratio,
+                reconstruction_initial_iou=receipt.initial_reconstruction_iou,
+                reconstruction_initial_xor=receipt.initial_xor_error,
+                retention_grounded_lessons=receipt.retrieved_experiences,
+                transfer_status="TRANSFER_VERIFIED" if receipt.final_reconstruction_iou > 0.60 else "MODERATE_TRANSFER",
+                correction_delta_iou=max(0.0, delta_iou),
+                correction_error_reduction=max(0, err_reduction),
+                final_iou=receipt.final_reconstruction_iou,
+                total_cost=receipt.total_cost,
+            )
+            results[level] = rec
+
+        return results

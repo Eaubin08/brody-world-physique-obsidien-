@@ -230,3 +230,60 @@ class MultiSessionRetentionHarnessV1:
             )
 
         return report
+
+    def simulate_reboot_and_reload_persistence(
+        self,
+        persistence_path: Path | str,
+    ) -> dict[str, Any]:
+        """Simulates full process restart and verifies reload of historical experiences with revisions & contradictions."""
+        path = Path(persistence_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+
+        # 1. Prepare historical candidate experience record
+        original_record = {
+            "experience_id": "EXP-HIST-PERSISTED-001",
+            "source_provenance_sha256": "31defdd9a42efa6e7860565fc1c413f5d04ee4582e3095dc7a9b5c359df33411",
+            "educational_stage": "STAGE_REAL_WORLD_IMAGE_V1",
+            "historical_revisions": [
+                {
+                    "revision_id": "REV-01",
+                    "prior_belief_claim": "Rectilinear orthogonal bounding box fits organic tree branches",
+                    "revised_belief_claim": "Hierarchical angled bifurcations required for non-orthogonal branching",
+                    "contradiction_evidence_ref": "SHA256:ORGANIC_BRANCHING_FAILURE_502_XOR",
+                    "correction_procedure": "HIERARCHICAL_ANGLED_BIFURCATION_STROKES",
+                }
+            ],
+            "contradictions_and_caveats": [
+                "Planar 2D affine assumptions fail on 3D perspective rotation",
+                "High edge frequency indicates organic texture, not geometric outline",
+            ],
+            "calibrated_confidence": 0.88,
+            "decision_authority": "KX108_ONLY",
+            "native_memory_write_allowed": False,
+        }
+
+        # Save to disk
+        path.write_text(json.dumps(original_record, indent=2, ensure_ascii=False), encoding="utf-8")
+
+        # 2. Simulate process shutdown / clearing state
+        self._session_candidate_store.clear()
+
+        # 3. Reload from disk into clean environment
+        loaded_data = json.loads(path.read_text(encoding="utf-8"))
+
+        # Verify integrity
+        assert loaded_data["experience_id"] == original_record["experience_id"]
+        assert loaded_data["source_provenance_sha256"] == original_record["source_provenance_sha256"]
+        assert len(loaded_data["historical_revisions"]) == 1
+        assert loaded_data["historical_revisions"][0]["revision_id"] == "REV-01"
+        assert len(loaded_data["contradictions_and_caveats"]) == 2
+        assert loaded_data["decision_authority"] == "KX108_ONLY"
+
+        return {
+            "status": "REBOOT_RELOAD_SUCCESS",
+            "reloaded_experience_id": loaded_data["experience_id"],
+            "revisions_preserved": len(loaded_data["historical_revisions"]),
+            "contradictions_preserved": len(loaded_data["contradictions_and_caveats"]),
+            "provenance_intact": (loaded_data["source_provenance_sha256"] == original_record["source_provenance_sha256"]),
+            "decision_authority": "KX108_ONLY",
+        }

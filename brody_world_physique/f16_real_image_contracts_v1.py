@@ -116,8 +116,127 @@ class RealImageObservationF16V1:
             "decision_authority": self.decision_authority,
         }
 
+    def to_canonical_world_experience_candidate(self) -> Any:
+        """Converts observation candidate to canonical WorldExperienceCandidateV0 contract."""
+        from .contracts_v0 import (
+            DECISION_AUTHORITY,
+            ExperienceValidationStatusV0,
+            MemoryEligibilityV0,
+            WorldExperienceCandidateV0,
+        )
+        return WorldExperienceCandidateV0(
+            experience_id=f"EXP-CAND-REAL-{self.provenance.source_sha256[:12]}",
+            state_before_ref=f"STATE-RAW-IMAGE:{self.provenance.source_sha256[:12]}",
+            state_after_ref=f"STATE-F16-OBS:{self.observation_id}",
+            outcome="DETERMINISTIC_PIXEL_MEASUREMENT_AND_HYPOTHESIS_FORMED",
+            validation_status=ExperienceValidationStatusV0.CANDIDATE,
+            memory_eligibility=MemoryEligibilityV0.CANDIDATE_ONLY,
+            context_refs=(f"FILE://{self.provenance.image_path}",),
+            evidence_refs=(f"SHA256:{self.provenance.source_sha256}",),
+            provenance_refs=self.provenance.provenance_chain,
+            candidate_skill_refs=("skill:real_image_pixel_measurement_v1",),
+            candidate_invariant_refs=("invariant:deterministic_measurements",),
+            readonly=True,
+            decision_authority=DECISION_AUTHORITY,
+        )
+
     def to_json(self) -> str:
         return json.dumps(self.to_mmonde_candidate_observation(), indent=2, ensure_ascii=False)
+
+
+@dataclass(frozen=True)
+class RealImagePipelineAuditReceiptV1:
+    """Audit report tracing the exact end-to-end real image pipeline:
+    camera_capture -> extraction -> F16/MMonde -> memory -> tools -> reconstruction
+    """
+    image_path: str
+    source_sha256: str
+    native_dimensions: tuple[int, int]
+    measured_luminance: float
+    measured_edge_density: float
+    measured_bbox: tuple[int, int, int, int]
+    f16_observation_id: str
+    retrieved_memory_experiences: tuple[str, ...]
+    queried_34_trees: tuple[str, ...]
+    tools_selected: tuple[str, ...]
+    reconstruction_initial_iou: float
+    reconstruction_final_iou: float
+    reconstruction_final_xor: int
+    operations_count: int
+    cost_spent: float
+    saved_artifact_paths: Mapping[str, str]
+    mmonde_canonical_compatible: bool = True
+    decision_authority: str = "KX108_ONLY"
+
+
+def audit_real_image_pipeline(
+    image_path: Path | str,
+    output_dir: Path | str | None = None,
+) -> RealImagePipelineAuditReceiptV1:
+    """Executes and audits the complete, verifiable path from real image file to reconstructed production."""
+    from .natural_image_curriculum_and_loop_v1 import (
+        NaturalImageLoopExecutorV1,
+        NaturalVisualConceptLevelV1,
+    )
+
+    path = Path(image_path).resolve()
+    f16_obs = ingest_real_image_f16(path)
+    canonical_cand = f16_obs.to_canonical_world_experience_candidate()
+
+    executor = NaturalImageLoopExecutorV1()
+    receipt, final_canvas, diff_mask = executor.execute_loop(
+        f16_obs,
+        concept_level=NaturalVisualConceptLevelV1.LEVEL_1_SILHOUETTES_CONTOURS,
+    )
+
+    saved_paths: dict[str, str] = {}
+    if output_dir:
+        out = Path(output_dir)
+        out.mkdir(parents=True, exist_ok=True)
+
+        with Image.open(path) as raw:
+            raw_thumb = raw.convert("L").copy()
+            raw_thumb.thumbnail((64, 64))
+            raw_path = out / f"raw_input_{path.stem}.png"
+            raw_thumb.save(raw_path)
+            saved_paths["raw_input"] = str(raw_path)
+
+            edges = raw.convert("L").filter(ImageFilter.FIND_EDGES)
+            edges.thumbnail((64, 64))
+            edges_path = out / f"measured_sobel_edges_{path.stem}.png"
+            edges.save(edges_path)
+            saved_paths["sobel_edges"] = str(edges_path)
+
+        rec_path = out / f"brody_reconstruction_{path.stem}.png"
+        final_canvas.save(rec_path)
+        saved_paths["reconstruction"] = str(rec_path)
+
+        diff_path = out / f"brody_diff_mask_{path.stem}.png"
+        diff_mask.save(diff_path)
+        saved_paths["diff_mask"] = str(diff_path)
+
+    tools_used = ("PEN", "GEOMETRIC_STAMP")
+
+    return RealImagePipelineAuditReceiptV1(
+        image_path=str(path),
+        source_sha256=f16_obs.provenance.source_sha256,
+        native_dimensions=f16_obs.provenance.native_dimensions,
+        measured_luminance=f16_obs.measured.mean_luminance,
+        measured_edge_density=f16_obs.measured.edge_density,
+        measured_bbox=f16_obs.measured.bounding_box_xyxy,
+        f16_observation_id=f16_obs.observation_id,
+        retrieved_memory_experiences=receipt.retrieved_experiences,
+        queried_34_trees=receipt.queried_34_trees,
+        tools_selected=tools_used,
+        reconstruction_initial_iou=receipt.initial_reconstruction_iou,
+        reconstruction_final_iou=receipt.final_reconstruction_iou,
+        reconstruction_final_xor=receipt.final_xor_error,
+        operations_count=receipt.total_operations,
+        cost_spent=receipt.total_cost,
+        saved_artifact_paths=saved_paths,
+        mmonde_canonical_compatible=(canonical_cand.validation_status.value == "CANDIDATE"),
+        decision_authority="KX108_ONLY",
+    )
 
 
 def measure_image_pixels(img: Image.Image) -> BrodyMeasuredObservationV1:

@@ -64,10 +64,26 @@ from .real_learning_audit_v1 import (
     generate_learning_audit_artifacts,
 )
 
+from .temporal_video_learning_v1 import (
+    MotionAttributionV1,
+    PreverbalForecastV1,
+    TemporalConfrontationReceiptV1,
+    TemporalFrameObservationV1,
+    TemporalVideoCognitiveEngineV1,
+)
+from .f16_real_image_contracts_v1 import (
+    BrodyMeasuredObservationV1,
+    RealImageObservationF16V1,
+    RealImagePipelineAuditReceiptV1,
+    audit_real_image_pipeline,
+    ingest_real_image_f16,
+)
+
 __all__ = [
     "AutonomousVisualFeatureExtractorV1",
     "BrodyCognitiveCycleReceiptV1",
     "BrodyImageCognitiveLoopV1",
+    "BrodyMeasuredObservationV1",
     "CANONICAL_34_TREES",
     "CognitiveMemoryIndexV1",
     "DomainEngagementV1",
@@ -80,20 +96,27 @@ __all__ = [
     "MeaningQueryResultItemV1",
     "MeaningQueryResponseV1",
     "MemoryEligibilityV0",
+    "MotionAttributionV1",
     "MultidimensionalCognitiveMemoryEngineV1",
     "MultidimensionalExperienceV1",
     "MultidimensionalRelationTypeV1",
     "NativeMemoryAdmissibilityReportV1",
     "NegativeTransferDetectorV1",
     "NegativeTransferDiagnosticV1",
+    "PreverbalForecastV1",
     "ProgrammaticBoundedOrchestratorO04",
     "ProgrammaticExecutionReceiptO04",
     "ProjectionKindV0",
+    "RealImageObservationF16V1",
+    "RealImagePipelineAuditReceiptV1",
     "RealLearningAuditorV1",
     "SVGVisualPlanV1",
     "ShadedVisualObjectV1",
     "SpecializedDomainV1",
     "TeacherVisualCurriculumV1",
+    "TemporalConfrontationReceiptV1",
+    "TemporalFrameObservationV1",
+    "TemporalVideoCognitiveEngineV1",
     "TimelineEnvelopeV1",
     "TransformationEpistemicClassV0",
     "TransitionTransformationBindingV0",
@@ -109,8 +132,10 @@ __all__ = [
     "WorldStateDeltaV0",
     "WorldStateProjectionV0",
     "WorldTransformationV0",
+    "audit_real_image_pipeline",
     "convert_object_to_svg_plan",
     "generate_learning_audit_artifacts",
+    "ingest_real_image_f16",
     "render_shaded_object",
 ]
 

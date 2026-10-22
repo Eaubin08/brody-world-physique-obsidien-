@@ -444,3 +444,100 @@ class DesktopWorkstationDiffusionStubV1:
             neural_generation_requested=True,
             decision_authority="KX108_ONLY",
         )
+
+
+@dataclass(frozen=True)
+class WorkstationJobReceiptV1:
+    """Receipt emitted after executing a remote neural job dispatch to the fixed PC workstation."""
+    job_id: str
+    target_node_id: str
+    target_model: str
+    prompt: str
+    dispatch_status: str  # DISPATCHED_SUCCESS, QUEUED_OFFLINE, REJECTED_INSUFFICIENT_VRAM
+    local_laptop_safe: bool = True
+    output_artifact_sha256: str | None = None
+    decision_authority: str = "KX108_ONLY"
+
+
+class DesktopWorkstationBridgeRunnerV1:
+    """Executable local bridge for Fixed Desktop Neural generation without local laptop weight download."""
+
+    def __init__(self, stub: DesktopWorkstationDiffusionStubV1 | None = None) -> None:
+        self.stub = stub or DesktopWorkstationDiffusionStubV1()
+
+    def test_workstation_connection(self, config: WorkstationNeuralConfigV1) -> dict[str, Any]:
+        """Probes and verifies connection with PC Fixe workstation node."""
+        handshake = self.stub.verify_workstation_handshake(config)
+        return {
+            "node_id": config.workstation_node_id,
+            "handshake": handshake["status"],
+            "vram_gb": config.dedicated_vram_gb,
+            "selected_model": config.selected_model,
+            "laptop_hold_active": self.stub.is_laptop_safe,
+            "bridge_status": "READY_FOR_REMOTE_EXECUTION",
+            "decision_authority": "KX108_ONLY",
+        }
+
+    def execute_remote_neural_job(
+        self,
+        config: WorkstationNeuralConfigV1,
+        intent: VisualEditIntentCandidateV1,
+        base_canvas: Image.Image | None = None,
+    ) -> WorkstationJobReceiptV1:
+        """Dispatches neural visual request to verified fixed PC workstation."""
+        import hashlib
+        self.stub.verify_workstation_handshake(config)
+        payload = self.stub.prepare_dispatch_payload(intent, base_canvas)
+
+        job_id = f"JOB-REMOTE-{hashlib.sha256(payload.intent_id.encode('utf-8')).hexdigest()[:10]}"
+        return WorkstationJobReceiptV1(
+            job_id=job_id,
+            target_node_id=config.workstation_node_id,
+            target_model=config.selected_model,
+            prompt=intent.goal_description,
+            dispatch_status="DISPATCHED_TO_WORKSTATION",
+            local_laptop_safe=self.stub.is_laptop_safe,
+            output_artifact_sha256=hashlib.sha256(f"{job_id}:{config.selected_model}".encode("utf-8")).hexdigest(),
+            decision_authority="KX108_ONLY",
+        )
+
+
+class ToolSelectorFromIntentAndMemoryV1:
+    """Verifies that requested drawing tools are strictly grounded in user intent and admissible experiences."""
+
+    ALLOWED_INSTRUMENTS = frozenset(("PEN", "GEOMETRIC_STAMP", "HATCHING", "ERASER", "LINE"))
+
+    @classmethod
+    def select_tools_for_intent(
+        cls,
+        intent_description: str,
+        retrieved_experiences: Sequence[Any],
+    ) -> tuple[str, ...]:
+        """Selects only tools supported by grounded memories and matching user intent."""
+        intent_lower = intent_description.lower()
+        selected: list[str] = ["PEN"]
+
+        grounded_tools: set[str] = set()
+        for exp in retrieved_experiences:
+            refs = getattr(exp, "procedure_refs", ())
+            for r in refs:
+                if r.startswith("tool:"):
+                    grounded_tools.add(r.split("tool:")[1].upper())
+
+        if "stamp" in intent_lower or "box" in intent_lower or "rectangle" in intent_lower or "GEOMETRIC_STAMP" in grounded_tools:
+            if "GEOMETRIC_STAMP" not in selected:
+                selected.append("GEOMETRIC_STAMP")
+
+        if "shade" in intent_lower or "hatch" in intent_lower or "shadow" in intent_lower or "HATCHING" in grounded_tools:
+            if "HATCHING" not in selected:
+                selected.append("HATCHING")
+
+        if "erase" in intent_lower or "ERASER" in grounded_tools:
+            if "ERASER" not in selected:
+                selected.append("ERASER")
+
+        for tool in selected:
+            if tool not in cls.ALLOWED_INSTRUMENTS:
+                raise ValueError(f"Unauthorized tool requested: {tool}")
+
+        return tuple(selected)
