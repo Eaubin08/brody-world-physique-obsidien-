@@ -221,12 +221,13 @@ class TestDesktopWorkstationDiffusionStub:
         # Laptop remains strictly protected on HOLD
         assert stub.is_laptop_safe is True
 
-        # Handshake fails if workstation does not have enough VRAM
+        # Handshake fails if workstation does not have enough VRAM for selected model
         with pytest.raises(ValueError, match="Workstation VRAM must be >="):
             WorkstationNeuralConfigV1(
                 workstation_node_id="NODE-UNDERPOWERED",
                 target_gpu_model="GTX 1650",
-                dedicated_vram_gb=4.0,
+                dedicated_vram_gb=2.0,
+                selected_model="STABLE_DIFFUSION_1_5",
             )
 
         # Valid high-end workstation config

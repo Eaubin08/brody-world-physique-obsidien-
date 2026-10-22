@@ -192,19 +192,74 @@ class GeneratedArtifactV0:
 
 
 @dataclass(frozen=True)
+class TargetDiffusionModelProfileV1:
+    """Hardware requirements profile tailored to a specific neural diffusion model."""
+    model_identifier: str
+    required_vram_gb: float
+    minimum_cuda_compute: str = "7.5"
+    supports_cpu_offload: bool = True
+    quantization_supported: bool = True
+    notes: str = ""
+
+
+# Canonical model profiles registry
+STANDARD_DIFFUSION_MODELS: Mapping[str, TargetDiffusionModelProfileV1] = {
+    "TINY_SD_DISTILLED": TargetDiffusionModelProfileV1(
+        model_identifier="TINY_SD_DISTILLED",
+        required_vram_gb=3.5,
+        minimum_cuda_compute="7.5",
+        notes="Ultra-light distilled model, deployable on modest GPUs (4GB VRAM)",
+    ),
+    "STABLE_DIFFUSION_1_5": TargetDiffusionModelProfileV1(
+        model_identifier="STABLE_DIFFUSION_1_5",
+        required_vram_gb=4.0,
+        minimum_cuda_compute="7.5",
+        notes="Standard SD 1.5 baseline, requires ~4GB VRAM",
+    ),
+    "SDXL_BASE": TargetDiffusionModelProfileV1(
+        model_identifier="SDXL_BASE",
+        required_vram_gb=8.0,
+        minimum_cuda_compute="8.0",
+        notes="High-resolution SDXL model, requires 8GB VRAM",
+    ),
+    "FLUX_1_SCHNELL": TargetDiffusionModelProfileV1(
+        model_identifier="FLUX_1_SCHNELL",
+        required_vram_gb=12.0,
+        minimum_cuda_compute="8.6",
+        notes="Next-gen rectified flow model, requires 12GB+ VRAM",
+    ),
+}
+
+
+@dataclass(frozen=True)
 class WorkstationNeuralConfigV1:
     """Explicit configuration for high-end Workstation / PC Fixe neural generation."""
     workstation_node_id: str
     target_gpu_model: str
     dedicated_vram_gb: float
+    selected_model: str = "STABLE_DIFFUSION_1_5"
     local_weights_dir: str | None = None
-    cuda_compute_capability: str = "8.9"
+    cuda_compute_capability: str = "8.0"
     local_weights_present: bool = False
     decision_authority: str = "KX108_ONLY"
 
+    def get_model_profile(self) -> TargetDiffusionModelProfileV1:
+        return STANDARD_DIFFUSION_MODELS.get(
+            self.selected_model,
+            TargetDiffusionModelProfileV1(
+                model_identifier=self.selected_model,
+                required_vram_gb=4.0,
+                minimum_cuda_compute="7.5",
+            ),
+        )
+
     def __post_init__(self) -> None:
-        if self.dedicated_vram_gb < MIN_VRAM_GB_FOR_HEAVY_DIFFUSION:
-            raise ValueError(f"Workstation VRAM must be >= {MIN_VRAM_GB_FOR_HEAVY_DIFFUSION} GB")
+        profile = self.get_model_profile()
+        if self.dedicated_vram_gb < profile.required_vram_gb:
+            raise ValueError(
+                f"Workstation VRAM must be >= {profile.required_vram_gb} GB for model {profile.model_identifier}, "
+                f"got {self.dedicated_vram_gb} GB"
+            )
 
 
 class DiffusionGeneratorAdapterV1:
@@ -330,11 +385,12 @@ class DesktopWorkstationDiffusionStubV1:
         self,
         config: WorkstationNeuralConfigV1,
     ) -> dict[str, Any]:
-        """Validates that target workstation meets hardware requirements (VRAM >= 6GB, CUDA 8.9+)."""
-        if config.dedicated_vram_gb < MIN_VRAM_GB_FOR_HEAVY_DIFFUSION:
+        """Validates that target workstation meets hardware requirements tailored to selected model."""
+        profile = config.get_model_profile()
+        if config.dedicated_vram_gb < profile.required_vram_gb:
             raise ValueError(
                 f"Workstation {config.workstation_node_id} rejected: VRAM {config.dedicated_vram_gb} GB "
-                f"< minimum {MIN_VRAM_GB_FOR_HEAVY_DIFFUSION} GB"
+                f"< minimum {profile.required_vram_gb} GB for model {profile.model_identifier}"
             )
         self._verified_workstation = config
         return {
@@ -342,6 +398,8 @@ class DesktopWorkstationDiffusionStubV1:
             "workstation_node_id": config.workstation_node_id,
             "target_gpu": config.target_gpu_model,
             "dedicated_vram_gb": config.dedicated_vram_gb,
+            "selected_model": profile.model_identifier,
+            "required_vram_gb": profile.required_vram_gb,
             "cuda_compute_capability": config.cuda_compute_capability,
             "local_laptop_hold_preserved": self.is_laptop_safe,
             "decision_authority": "KX108_ONLY",
