@@ -89,3 +89,109 @@ def test_learning_audit_artifacts_generation(tmp_path: Path) -> None:
     summary = json.loads((tmp_path / "audit_comparative_results.json").read_text(encoding="utf-8"))
     bridge_metrics = summary["comparative_metrics"]["EXAM_ARCHED_BRIDGE"]
     assert bridge_metrics["memory_on"]["final_iou"] > bridge_metrics["memory_off"]["final_iou"]
+
+
+def test_controlled_comparative_budget_equal_ceilings() -> None:
+    teacher = TeacherVisualCurriculumV1()
+    auditor = RealLearningAuditorV1()
+
+    bridge_img = teacher.render_exam_unseen_arched_bridge()
+    res_full, _ = auditor.run_controlled_exam(
+        "EXAM_ARCHED_BRIDGE", "VISIBLE_REPRODUCTION", "FULL_MULTIDIMENSIONAL_MEMORY", target_image=bridge_img
+    )
+    res_flat, _ = auditor.run_controlled_exam(
+        "EXAM_ARCHED_BRIDGE", "VISIBLE_REPRODUCTION", "FLAT_PROCEDURAL_MEMORY", target_image=bridge_img
+    )
+    res_off, _ = auditor.run_controlled_exam(
+        "EXAM_ARCHED_BRIDGE", "VISIBLE_REPRODUCTION", "MEMORY_DISABLED", target_image=bridge_img
+    )
+
+    # 1. Budget Ceilings strictly equal
+    assert res_full.total_operations_count <= 8
+    assert res_flat.total_operations_count <= 8
+    assert res_off.total_operations_count <= 8
+    assert res_full.total_cost_incurred <= 25.0
+    assert res_flat.total_cost_incurred <= 25.0
+    assert res_off.total_cost_incurred <= 25.0
+
+    # 2. Performance hierarchy: Full M01-M09 > Flat Procedural > Memory Disabled
+    assert res_full.final_iou > res_flat.final_iou
+    assert res_full.final_iou > res_off.final_iou
+    assert res_full.final_iou >= 0.70  # High fidelity
+
+    # 3. Trajectory curves isolate initial recall from iterative compute
+    full_curve = res_full.trajectory_curve
+    off_curve = res_off.trajectory_curve
+    assert len(full_curve) >= 4
+    assert len(off_curve) >= 4
+
+    # Recall advantage is already clear at step 4 before re-perception finishes
+    assert full_curve[3].iou > off_curve[3].iou
+
+
+def test_three_distinct_educational_evaluations() -> None:
+    teacher = TeacherVisualCurriculumV1()
+    auditor = RealLearningAuditorV1()
+
+    # Exam 1: Visible reproduction (Bridge)
+    bridge_img = teacher.render_exam_unseen_arched_bridge()
+    res_vis, prod_vis = auditor.run_controlled_exam(
+        "EXAM_ARCHED_BRIDGE", "VISIBLE_REPRODUCTION", "FULL_MULTIDIMENSIONAL_MEMORY", target_image=bridge_img
+    )
+    assert res_vis.evaluation_mode == "VISIBLE_REPRODUCTION"
+    assert res_vis.final_iou >= 0.70
+    assert prod_vis.size == (64, 64)
+
+    # Exam 2: Occluded retention (Chalice)
+    # Target image is inspected during perception, then completely removed during execution
+    chalice_img = teacher.render_exam_unseen_chalice()
+    res_ret, prod_ret = auditor.run_controlled_exam(
+        "EXAM_CHALICE", "OCCLUDED_RETENTION", "FULL_MULTIDIMENSIONAL_MEMORY", target_image=chalice_img
+    )
+    assert res_ret.evaluation_mode == "OCCLUDED_RETENTION"
+    assert res_ret.final_iou >= 0.60
+    assert prod_ret.size == (64, 64)
+
+    # Exam 3: Intent-only creation (Monumental Portal)
+    # Zero target image provided to Brody!
+    res_create, prod_create = auditor.run_controlled_exam(
+        "EXAM_MONUMENTAL_PORTAL",
+        "INTENT_ONLY_CREATION",
+        "FULL_MULTIDIMENSIONAL_MEMORY",
+        creation_intent_text="Create an architectural portal with a solid horizontal lintel spanning two vertical pillars and a curved vault",
+    )
+    assert res_create.evaluation_mode == "INTENT_ONLY_CREATION"
+    assert res_create.target_sha256 == "INTENT_ONLY_NO_IMAGE_PROVIDED"
+    assert res_create.final_iou == 1.0  # Intent satisfaction criterion
+    assert len(black_pixels(prod_create)) > 100
+
+
+def test_canonical_tree_associations_and_meaning_routing() -> None:
+    from brody_world_physique.cognitive_memory_timeline_v1 import CANONICAL_34_TREES
+
+    # Verify that Tree 12 is Technique and Tree 13 is Art in the canonical Obsidia stack
+    assert "Technique" in CANONICAL_34_TREES["12"].name
+    assert "Art" in CANONICAL_34_TREES["13"].name
+    assert "Perception" in CANONICAL_34_TREES["03"].name
+    assert "Action" in CANONICAL_34_TREES["20"].name
+    assert "Création" in CANONICAL_34_TREES["21"].name
+    assert "Mémoire" in CANONICAL_34_TREES["24"].name
+    assert "Cohérence" in CANONICAL_34_TREES["26"].name
+
+    auditor = RealLearningAuditorV1()
+    teacher = TeacherVisualCurriculumV1()
+    res, _ = auditor.run_controlled_exam(
+        "EXAM_ARCHED_BRIDGE", "VISIBLE_REPRODUCTION", "FULL_MULTIDIMENSIONAL_MEMORY", target_image=teacher.render_exam_unseen_arched_bridge()
+    )
+
+    # Queried canonical trees must match architectural and artistic competence
+    assert "03" in res.canonical_trees_queried  # Perception
+    assert "12" in res.canonical_trees_queried  # Technique / tools
+    assert "13" in res.canonical_trees_queried  # Art / hatching / modeling
+    assert "21" in res.canonical_trees_queried  # Création
+    assert "24" in res.canonical_trees_queried  # Mémoire
+    assert "26" in res.canonical_trees_queried  # Cohérence
+
+    # Meaning intents must be actively queried
+    assert "HOW_DID_I_SUCCEED" in res.meaning_intents_used
+    assert "WHICH_METHOD_IS_TRANSFERABLE" in res.meaning_intents_used

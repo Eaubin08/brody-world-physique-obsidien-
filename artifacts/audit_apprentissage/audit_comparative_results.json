@@ -1,61 +1,685 @@
 {
-  "audit_version": "BRODY_REAL_LEARNING_AUDIT_V1",
+  "audit_version": "BRODY_CORRECTIVE_LEARNING_AUDIT_V2",
   "training_lessons": [
-    "train_lesson_arch.png",
-    "train_lesson_bowl.png",
-    "train_lesson_strut.png"
+    "LESSON_ARCH",
+    "LESSON_BOWL",
+    "LESSON_DIAGONAL_STRUT"
   ],
   "unseen_exams": [
-    "exam_unseen_bridge_reference.png",
-    "exam_unseen_chalice_reference.png"
+    "EXAM_ARCHED_BRIDGE",
+    "EXAM_CHALICE",
+    "EXAM_MONUMENTAL_PORTAL"
   ],
+  "canonical_tree_associations_verified": {
+    "03": "Arbre de la Perception (I_FONDAMENTAUX) -> contours, extraction contrastes",
+    "12": "Arbre de la Technique (III_CONNAISSANCE) -> outils, montants, géométrie paramétrique",
+    "13": "Arbre de l'Art (III_CONNAISSANCE) -> modelé pictural, hachures tonales",
+    "20": "Arbre de l'Action (V_ACTION_TRANSFORMATION) -> exécution motrice",
+    "21": "Arbre de la Création (V_ACTION_TRANSFORMATION) -> composition originale sans cible",
+    "24": "Arbre de la Mémoire (VI_TEMPORELS_MEMORIELS) -> rétention d'expériences",
+    "26": "Arbre de la Cohérence (VII_META_STRUCTURELS) -> invariants de proportions"
+  },
   "comparative_metrics": {
     "EXAM_ARCHED_BRIDGE": {
       "memory_on": {
-        "final_iou": 0.5246,
-        "final_xor": 726,
-        "proportions_dev": 0.0776,
-        "centroid_drift_px": 1.0,
-        "operations": 6,
-        "cost": 14.0,
+        "exam_id": "EXAM_ARCHED_BRIDGE",
+        "evaluation_mode": "VISIBLE_REPRODUCTION",
+        "condition_name": "FULL_MULTIDIMENSIONAL_MEMORY",
+        "final_iou": 0.7085,
+        "final_xor": 413,
+        "proportions_dev": 0.0398,
+        "centroid_drift_px": 0.5,
+        "total_operations": 8,
+        "total_cost": 15.5,
         "retrieved_experiences": [
           "EXP-LESSON-ARCH-STRUCTURAL",
           "EXP-LESSON-BOWL-CURVILINEAR"
+        ],
+        "canonical_trees_queried": [
+          "03",
+          "12",
+          "13",
+          "21",
+          "24",
+          "26"
+        ],
+        "meaning_intents_used": [
+          "HOW_DID_I_SUCCEED",
+          "WHICH_METHOD_IS_TRANSFERABLE"
+        ],
+        "trajectory_curve": [
+          {
+            "step": 1,
+            "tool": "SELECT_TOOL",
+            "cost": 0.5,
+            "iou": 0.0,
+            "xor_error": 1306,
+            "proportions_dev": 0.5135
+          },
+          {
+            "step": 2,
+            "tool": "GEOMETRIC_STAMP",
+            "cost": 3.5,
+            "iou": 0.2292,
+            "xor_error": 1026,
+            "proportions_dev": 5.9151
+          },
+          {
+            "step": 3,
+            "tool": "GEOMETRIC_STAMP",
+            "cost": 6.5,
+            "iou": 0.3787,
+            "xor_error": 827,
+            "proportions_dev": 0.0691
+          },
+          {
+            "step": 4,
+            "tool": "GEOMETRIC_STAMP",
+            "cost": 9.5,
+            "iou": 0.5282,
+            "xor_error": 628,
+            "proportions_dev": 0.0691
+          },
+          {
+            "step": 5,
+            "tool": "DRAW_STROKE",
+            "cost": 11.0,
+            "iou": 0.5904,
+            "xor_error": 557,
+            "proportions_dev": 0.0691
+          },
+          {
+            "step": 6,
+            "tool": "DRAW_STROKE",
+            "cost": 12.5,
+            "iou": 0.6069,
+            "xor_error": 557,
+            "proportions_dev": 0.0398
+          },
+          {
+            "step": 7,
+            "tool": "DRAW_STROKE",
+            "cost": 14.0,
+            "iou": 0.6577,
+            "xor_error": 485,
+            "proportions_dev": 0.0398
+          },
+          {
+            "step": 8,
+            "tool": "DRAW_STROKE",
+            "cost": 15.5,
+            "iou": 0.7085,
+            "xor_error": 413,
+            "proportions_dev": 0.0398
+          }
         ]
       },
-      "memory_off": {
-        "final_iou": 0.1419,
-        "final_xor": 1252,
-        "proportions_dev": 0.5135,
-        "centroid_drift_px": 2.5,
-        "operations": 2,
-        "cost": 3.5,
-        "retrieved_experiences": []
-      }
-    },
-    "EXAM_CHALICE": {
-      "memory_on": {
-        "final_iou": 0.3333,
-        "final_xor": 378,
-        "proportions_dev": 0.05,
-        "centroid_drift_px": 0.0,
-        "operations": 3,
-        "cost": 5.0,
-        "retrieved_experiences": [
-          "EXP-LESSON-ARCH-STRUCTURAL",
-          "EXP-LESSON-BOWL-CURVILINEAR"
-        ]
-      },
-      "memory_off": {
-        "final_iou": 0.1122,
-        "final_xor": 625,
-        "proportions_dev": 0.3,
+      "memory_flat": {
+        "exam_id": "EXAM_ARCHED_BRIDGE",
+        "evaluation_mode": "VISIBLE_REPRODUCTION",
+        "condition_name": "FLAT_PROCEDURAL_MEMORY",
+        "final_iou": 0.2933,
+        "final_xor": 1296,
+        "proportions_dev": 0.0,
         "centroid_drift_px": 2.0,
-        "operations": 2,
-        "cost": 3.5,
-        "retrieved_experiences": []
+        "total_operations": 8,
+        "total_cost": 15.5,
+        "retrieved_experiences": [
+          "EXP-LESSON-ARCH-STRUCTURAL"
+        ],
+        "canonical_trees_queried": [],
+        "meaning_intents_used": [],
+        "trajectory_curve": [
+          {
+            "step": 1,
+            "tool": "SELECT_TOOL",
+            "cost": 0.5,
+            "iou": 0.0,
+            "xor_error": 1306,
+            "proportions_dev": 0.5135
+          },
+          {
+            "step": 2,
+            "tool": "GEOMETRIC_STAMP",
+            "cost": 3.5,
+            "iou": 0.1225,
+            "xor_error": 1218,
+            "proportions_dev": 5.1532
+          },
+          {
+            "step": 3,
+            "tool": "GEOMETRIC_STAMP",
+            "cost": 6.5,
+            "iou": 0.1674,
+            "xor_error": 1243,
+            "proportions_dev": 0.4024
+          },
+          {
+            "step": 4,
+            "tool": "GEOMETRIC_STAMP",
+            "cost": 9.5,
+            "iou": 0.2065,
+            "xor_error": 1268,
+            "proportions_dev": 0.4024
+          },
+          {
+            "step": 5,
+            "tool": "DRAW_STROKE",
+            "cost": 11.0,
+            "iou": 0.216,
+            "xor_error": 1292,
+            "proportions_dev": 0.3243
+          },
+          {
+            "step": 6,
+            "tool": "DRAW_STROKE",
+            "cost": 12.5,
+            "iou": 0.2516,
+            "xor_error": 1279,
+            "proportions_dev": 0.0
+          },
+          {
+            "step": 7,
+            "tool": "DRAW_STROKE",
+            "cost": 14.0,
+            "iou": 0.2747,
+            "xor_error": 1294,
+            "proportions_dev": 0.0
+          },
+          {
+            "step": 8,
+            "tool": "DRAW_STROKE",
+            "cost": 15.5,
+            "iou": 0.2933,
+            "xor_error": 1296,
+            "proportions_dev": 0.0
+          }
+        ]
+      },
+      "memory_off": {
+        "exam_id": "EXAM_ARCHED_BRIDGE",
+        "evaluation_mode": "VISIBLE_REPRODUCTION",
+        "condition_name": "MEMORY_DISABLED",
+        "final_iou": 0.311,
+        "final_xor": 1205,
+        "proportions_dev": 0.1335,
+        "centroid_drift_px": 1.5,
+        "total_operations": 8,
+        "total_cost": 12.5,
+        "retrieved_experiences": [],
+        "canonical_trees_queried": [],
+        "meaning_intents_used": [],
+        "trajectory_curve": [
+          {
+            "step": 1,
+            "tool": "SELECT_TOOL",
+            "cost": 0.5,
+            "iou": 0.0,
+            "xor_error": 1306,
+            "proportions_dev": 0.5135
+          },
+          {
+            "step": 2,
+            "tool": "GEOMETRIC_STAMP",
+            "cost": 3.5,
+            "iou": 0.1419,
+            "xor_error": 1252,
+            "proportions_dev": 0.5135
+          },
+          {
+            "step": 3,
+            "tool": "DRAW_STROKE",
+            "cost": 5.0,
+            "iou": 0.1936,
+            "xor_error": 1229,
+            "proportions_dev": 0.2365
+          },
+          {
+            "step": 4,
+            "tool": "DRAW_STROKE",
+            "cost": 6.5,
+            "iou": 0.2195,
+            "xor_error": 1262,
+            "proportions_dev": 0.2365
+          },
+          {
+            "step": 5,
+            "tool": "DRAW_STROKE",
+            "cost": 8.0,
+            "iou": 0.2478,
+            "xor_error": 1272,
+            "proportions_dev": 0.1335
+          },
+          {
+            "step": 6,
+            "tool": "DRAW_STROKE",
+            "cost": 9.5,
+            "iou": 0.2527,
+            "xor_error": 1307,
+            "proportions_dev": 0.1335
+          },
+          {
+            "step": 7,
+            "tool": "DRAW_STROKE",
+            "cost": 11.0,
+            "iou": 0.2819,
+            "xor_error": 1256,
+            "proportions_dev": 0.1335
+          },
+          {
+            "step": 8,
+            "tool": "DRAW_STROKE",
+            "cost": 12.5,
+            "iou": 0.311,
+            "xor_error": 1205,
+            "proportions_dev": 0.1335
+          }
+        ]
       }
     }
+  },
+  "exam_1_visible_reproduction_bridge": {
+    "full_multidimensional_memory": {
+      "exam_id": "EXAM_ARCHED_BRIDGE",
+      "evaluation_mode": "VISIBLE_REPRODUCTION",
+      "condition_name": "FULL_MULTIDIMENSIONAL_MEMORY",
+      "final_iou": 0.7085,
+      "final_xor": 413,
+      "proportions_dev": 0.0398,
+      "centroid_drift_px": 0.5,
+      "total_operations": 8,
+      "total_cost": 15.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-ARCH-STRUCTURAL",
+        "EXP-LESSON-BOWL-CURVILINEAR"
+      ],
+      "canonical_trees_queried": [
+        "03",
+        "12",
+        "13",
+        "21",
+        "24",
+        "26"
+      ],
+      "meaning_intents_used": [
+        "HOW_DID_I_SUCCEED",
+        "WHICH_METHOD_IS_TRANSFERABLE"
+      ],
+      "trajectory_curve": [
+        {
+          "step": 1,
+          "tool": "SELECT_TOOL",
+          "cost": 0.5,
+          "iou": 0.0,
+          "xor_error": 1306,
+          "proportions_dev": 0.5135
+        },
+        {
+          "step": 2,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 3.5,
+          "iou": 0.2292,
+          "xor_error": 1026,
+          "proportions_dev": 5.9151
+        },
+        {
+          "step": 3,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 6.5,
+          "iou": 0.3787,
+          "xor_error": 827,
+          "proportions_dev": 0.0691
+        },
+        {
+          "step": 4,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 9.5,
+          "iou": 0.5282,
+          "xor_error": 628,
+          "proportions_dev": 0.0691
+        },
+        {
+          "step": 5,
+          "tool": "DRAW_STROKE",
+          "cost": 11.0,
+          "iou": 0.5904,
+          "xor_error": 557,
+          "proportions_dev": 0.0691
+        },
+        {
+          "step": 6,
+          "tool": "DRAW_STROKE",
+          "cost": 12.5,
+          "iou": 0.6069,
+          "xor_error": 557,
+          "proportions_dev": 0.0398
+        },
+        {
+          "step": 7,
+          "tool": "DRAW_STROKE",
+          "cost": 14.0,
+          "iou": 0.6577,
+          "xor_error": 485,
+          "proportions_dev": 0.0398
+        },
+        {
+          "step": 8,
+          "tool": "DRAW_STROKE",
+          "cost": 15.5,
+          "iou": 0.7085,
+          "xor_error": 413,
+          "proportions_dev": 0.0398
+        }
+      ]
+    },
+    "flat_procedural_memory": {
+      "exam_id": "EXAM_ARCHED_BRIDGE",
+      "evaluation_mode": "VISIBLE_REPRODUCTION",
+      "condition_name": "FLAT_PROCEDURAL_MEMORY",
+      "final_iou": 0.2933,
+      "final_xor": 1296,
+      "proportions_dev": 0.0,
+      "centroid_drift_px": 2.0,
+      "total_operations": 8,
+      "total_cost": 15.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-ARCH-STRUCTURAL"
+      ],
+      "canonical_trees_queried": [],
+      "meaning_intents_used": [],
+      "trajectory_curve": [
+        {
+          "step": 1,
+          "tool": "SELECT_TOOL",
+          "cost": 0.5,
+          "iou": 0.0,
+          "xor_error": 1306,
+          "proportions_dev": 0.5135
+        },
+        {
+          "step": 2,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 3.5,
+          "iou": 0.1225,
+          "xor_error": 1218,
+          "proportions_dev": 5.1532
+        },
+        {
+          "step": 3,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 6.5,
+          "iou": 0.1674,
+          "xor_error": 1243,
+          "proportions_dev": 0.4024
+        },
+        {
+          "step": 4,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 9.5,
+          "iou": 0.2065,
+          "xor_error": 1268,
+          "proportions_dev": 0.4024
+        },
+        {
+          "step": 5,
+          "tool": "DRAW_STROKE",
+          "cost": 11.0,
+          "iou": 0.216,
+          "xor_error": 1292,
+          "proportions_dev": 0.3243
+        },
+        {
+          "step": 6,
+          "tool": "DRAW_STROKE",
+          "cost": 12.5,
+          "iou": 0.2516,
+          "xor_error": 1279,
+          "proportions_dev": 0.0
+        },
+        {
+          "step": 7,
+          "tool": "DRAW_STROKE",
+          "cost": 14.0,
+          "iou": 0.2747,
+          "xor_error": 1294,
+          "proportions_dev": 0.0
+        },
+        {
+          "step": 8,
+          "tool": "DRAW_STROKE",
+          "cost": 15.5,
+          "iou": 0.2933,
+          "xor_error": 1296,
+          "proportions_dev": 0.0
+        }
+      ]
+    },
+    "memory_disabled": {
+      "exam_id": "EXAM_ARCHED_BRIDGE",
+      "evaluation_mode": "VISIBLE_REPRODUCTION",
+      "condition_name": "MEMORY_DISABLED",
+      "final_iou": 0.311,
+      "final_xor": 1205,
+      "proportions_dev": 0.1335,
+      "centroid_drift_px": 1.5,
+      "total_operations": 8,
+      "total_cost": 12.5,
+      "retrieved_experiences": [],
+      "canonical_trees_queried": [],
+      "meaning_intents_used": [],
+      "trajectory_curve": [
+        {
+          "step": 1,
+          "tool": "SELECT_TOOL",
+          "cost": 0.5,
+          "iou": 0.0,
+          "xor_error": 1306,
+          "proportions_dev": 0.5135
+        },
+        {
+          "step": 2,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 3.5,
+          "iou": 0.1419,
+          "xor_error": 1252,
+          "proportions_dev": 0.5135
+        },
+        {
+          "step": 3,
+          "tool": "DRAW_STROKE",
+          "cost": 5.0,
+          "iou": 0.1936,
+          "xor_error": 1229,
+          "proportions_dev": 0.2365
+        },
+        {
+          "step": 4,
+          "tool": "DRAW_STROKE",
+          "cost": 6.5,
+          "iou": 0.2195,
+          "xor_error": 1262,
+          "proportions_dev": 0.2365
+        },
+        {
+          "step": 5,
+          "tool": "DRAW_STROKE",
+          "cost": 8.0,
+          "iou": 0.2478,
+          "xor_error": 1272,
+          "proportions_dev": 0.1335
+        },
+        {
+          "step": 6,
+          "tool": "DRAW_STROKE",
+          "cost": 9.5,
+          "iou": 0.2527,
+          "xor_error": 1307,
+          "proportions_dev": 0.1335
+        },
+        {
+          "step": 7,
+          "tool": "DRAW_STROKE",
+          "cost": 11.0,
+          "iou": 0.2819,
+          "xor_error": 1256,
+          "proportions_dev": 0.1335
+        },
+        {
+          "step": 8,
+          "tool": "DRAW_STROKE",
+          "cost": 12.5,
+          "iou": 0.311,
+          "xor_error": 1205,
+          "proportions_dev": 0.1335
+        }
+      ]
+    }
+  },
+  "exam_2_occluded_retention_chalice": {
+    "exam_id": "EXAM_CHALICE",
+    "evaluation_mode": "OCCLUDED_RETENTION",
+    "condition_name": "FULL_MULTIDIMENSIONAL_MEMORY",
+    "final_iou": 0.6989,
+    "final_xor": 162,
+    "proportions_dev": 0.0317,
+    "centroid_drift_px": 0.5,
+    "total_operations": 6,
+    "total_cost": 12.5,
+    "retrieved_experiences": [
+      "EXP-LESSON-ARCH-STRUCTURAL",
+      "EXP-LESSON-BOWL-CURVILINEAR"
+    ],
+    "canonical_trees_queried": [
+      "03",
+      "12",
+      "13",
+      "21",
+      "24",
+      "26"
+    ],
+    "meaning_intents_used": [
+      "HOW_DID_I_SUCCEED",
+      "WHICH_METHOD_IS_TRANSFERABLE"
+    ],
+    "trajectory_curve": [
+      {
+        "step": 1,
+        "tool": "SELECT_TOOL",
+        "cost": 0.5,
+        "iou": 0.0,
+        "xor_error": 423,
+        "proportions_dev": 0.3
+      },
+      {
+        "step": 2,
+        "tool": "GEOMETRIC_STAMP",
+        "cost": 3.5,
+        "iou": 0.2313,
+        "xor_error": 359,
+        "proportions_dev": 2.8
+      },
+      {
+        "step": 3,
+        "tool": "DRAW_STROKE",
+        "cost": 5.0,
+        "iou": 0.3852,
+        "xor_error": 308,
+        "proportions_dev": 0.5
+      },
+      {
+        "step": 4,
+        "tool": "GEOMETRIC_STAMP",
+        "cost": 8.0,
+        "iou": 0.4584,
+        "xor_error": 280,
+        "proportions_dev": 0.2091
+      },
+      {
+        "step": 5,
+        "tool": "DRAW_STROKE",
+        "cost": 9.5,
+        "iou": 0.5397,
+        "xor_error": 238,
+        "proportions_dev": 0.1571
+      },
+      {
+        "step": 6,
+        "tool": "GEOMETRIC_STAMP",
+        "cost": 12.5,
+        "iou": 0.6989,
+        "xor_error": 162,
+        "proportions_dev": 0.0317
+      }
+    ]
+  },
+  "exam_3_intent_only_creation_portal": {
+    "exam_id": "EXAM_MONUMENTAL_PORTAL",
+    "evaluation_mode": "INTENT_ONLY_CREATION",
+    "condition_name": "FULL_MULTIDIMENSIONAL_MEMORY",
+    "final_iou": 1.0,
+    "final_xor": 0,
+    "proportions_dev": 0.0,
+    "centroid_drift_px": 0.0,
+    "total_operations": 5,
+    "total_cost": 11.0,
+    "retrieved_experiences": [
+      "EXP-LESSON-ARCH-STRUCTURAL",
+      "EXP-LESSON-BOWL-CURVILINEAR"
+    ],
+    "canonical_trees_queried": [
+      "03",
+      "12",
+      "13",
+      "21",
+      "24",
+      "26"
+    ],
+    "meaning_intents_used": [
+      "HOW_DID_I_SUCCEED",
+      "WHICH_METHOD_IS_TRANSFERABLE"
+    ],
+    "trajectory_curve": [
+      {
+        "step": 1,
+        "tool": "SELECT_TOOL",
+        "cost": 0.5,
+        "iou": 0.0,
+        "xor_error": 0,
+        "proportions_dev": 0.0
+      },
+      {
+        "step": 2,
+        "tool": "GEOMETRIC_STAMP",
+        "cost": 3.5,
+        "iou": 1.0,
+        "xor_error": 0,
+        "proportions_dev": 0.0
+      },
+      {
+        "step": 3,
+        "tool": "GEOMETRIC_STAMP",
+        "cost": 6.5,
+        "iou": 1.0,
+        "xor_error": 0,
+        "proportions_dev": 0.0
+      },
+      {
+        "step": 4,
+        "tool": "GEOMETRIC_STAMP",
+        "cost": 9.5,
+        "iou": 1.0,
+        "xor_error": 0,
+        "proportions_dev": 0.0
+      },
+      {
+        "step": 5,
+        "tool": "DRAW_STROKE",
+        "cost": 11.0,
+        "iou": 1.0,
+        "xor_error": 0,
+        "proportions_dev": 0.0
+      }
+    ]
   },
   "epistemic_invariants": {
     "decision_authority": "KX108_ONLY",
