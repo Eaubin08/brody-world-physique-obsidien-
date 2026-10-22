@@ -35,8 +35,14 @@ from .multidimensional_retrieval_v2 import (
     VisualTaskAdmissibilityRequestV1,
     VisualTaskAdmissibilityVerdictV1,
 )
+from .brody_image_cognitive_loop_v1 import (
+    BrodyCognitiveCycleReceiptV1,
+    BrodyImageCognitiveLoopV1,
+)
 
 __all__ = [
+    "BrodyCognitiveCycleReceiptV1",
+    "BrodyImageCognitiveLoopV1",
     "CANONICAL_34_TREES",
     "CognitiveMemoryIndexV1",
     "DomainEngagementV1",
