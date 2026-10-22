@@ -158,6 +158,48 @@ class MultidimensionalCognitiveMemoryEngineV1:
     def add_relation(self, link: ExperienceRelationLinkV1) -> None:
         self._links.append(link)
 
+    def find_analogies(self, experience_id: str) -> list[tuple[MultidimensionalExperienceV1, float, str]]:
+        """M04: Search for analogical or similarity links connected to this experience."""
+        results = []
+        for link in self._links:
+            target_id = None
+            if link.source_experience_id == experience_id and link.relation_type in (
+                MultidimensionalRelationTypeV1.ANALOGY,
+                MultidimensionalRelationTypeV1.SIMILARITY,
+            ):
+                target_id = link.target_experience_id
+            elif link.target_experience_id == experience_id and link.relation_type in (
+                MultidimensionalRelationTypeV1.ANALOGY,
+                MultidimensionalRelationTypeV1.SIMILARITY,
+            ):
+                target_id = link.source_experience_id
+            if target_id:
+                exp = self.index.get(target_id)
+                if exp:
+                    results.append((exp, link.strength, link.rationale))
+        return results
+
+    def find_oppositions(self, experience_id: str) -> list[tuple[MultidimensionalExperienceV1, float, str]]:
+        """M04: Search for oppositions, differences, or contradictory limits connected to this experience."""
+        results = []
+        for link in self._links:
+            target_id = None
+            if link.source_experience_id == experience_id and link.relation_type in (
+                MultidimensionalRelationTypeV1.OPPOSITION,
+                MultidimensionalRelationTypeV1.DIFFERENCE,
+            ):
+                target_id = link.target_experience_id
+            elif link.target_experience_id == experience_id and link.relation_type in (
+                MultidimensionalRelationTypeV1.OPPOSITION,
+                MultidimensionalRelationTypeV1.DIFFERENCE,
+            ):
+                target_id = link.source_experience_id
+            if target_id:
+                exp = self.index.get(target_id)
+                if exp:
+                    results.append((exp, link.strength, link.rationale))
+        return results
+
     def search_by_meaning(
         self,
         intent: MeaningQueryIntentV1,

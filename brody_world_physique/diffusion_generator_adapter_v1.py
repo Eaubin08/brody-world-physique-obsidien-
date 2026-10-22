@@ -191,11 +191,46 @@ class GeneratedArtifactV0:
         return Image.open(io.BytesIO(self.image_bytes))
 
 
+@dataclass(frozen=True)
+class WorkstationNeuralConfigV1:
+    """Explicit configuration for high-end Workstation / PC Fixe neural generation."""
+    workstation_node_id: str
+    target_gpu_model: str
+    dedicated_vram_gb: float
+    local_weights_dir: str | None = None
+    cuda_compute_capability: str = "8.9"
+    local_weights_present: bool = False
+    decision_authority: str = "KX108_ONLY"
+
+    def __post_init__(self) -> None:
+        if self.dedicated_vram_gb < MIN_VRAM_GB_FOR_HEAVY_DIFFUSION:
+            raise ValueError(f"Workstation VRAM must be >= {MIN_VRAM_GB_FOR_HEAVY_DIFFUSION} GB")
+
+
 class DiffusionGeneratorAdapterV1:
     """Adapter managing generation candidates while enforcing hardware barriers."""
 
     def __init__(self, hardware_profile: HardwareProfileV1 | None = None) -> None:
         self.hardware = hardware_profile or probe_hardware_profile()
+        self._workstation_config: WorkstationNeuralConfigV1 | None = None
+
+    def configure_workstation_neural_environment(
+        self,
+        config: WorkstationNeuralConfigV1,
+    ) -> dict[str, Any]:
+        """Prepares the neural adapter for deployment on a verified fixed workstation.
+        
+        Strict distinction: procedural fallback success does NOT validate neural generation.
+        """
+        self._workstation_config = config
+        return {
+            "workstation_node_id": config.workstation_node_id,
+            "gpu_model": config.target_gpu_model,
+            "vram_gb": config.dedicated_vram_gb,
+            "hold_active": not config.local_weights_present,
+            "status": "WORKSTATION_NEURAL_STANDBY" if config.local_weights_present else "HOLD_AWAITING_LOCAL_WEIGHTS",
+            "decision_authority": "KX108_ONLY",
+        }
 
     def request_heavy_model_download(self, model_identifier: str) -> None:
         """Enforces barrier against downloading heavy models without capable hardware."""

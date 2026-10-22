@@ -563,6 +563,37 @@ class CognitiveMemoryIndexV1:
             if exp.calibration.counter_examples
         ]
 
+    def query_by_validity_interval(self, valid_at_iso: str) -> list[MultidimensionalExperienceV1]:
+        """Exact temporal interval query: retrieve knowledge valid at an exact timestamp."""
+        results = []
+        for exp in self._experiences.values():
+            start_ok = (exp.timeline.validity_start_iso <= valid_at_iso)
+            end_ok = (exp.timeline.validity_end_iso is None or valid_at_iso < exp.timeline.validity_end_iso)
+            if start_ok and end_ok:
+                results.append(exp)
+        return results
+
+    def query_by_observation_interval(self, start_iso: str, end_iso: str) -> list[MultidimensionalExperienceV1]:
+        """Query experiences observed within a specific chronological window [start, end]."""
+        return [
+            exp for exp in self._experiences.values()
+            if start_iso <= exp.timeline.t_observation_iso <= end_iso
+        ]
+
+    def verify_tree_projections_against_canon(self, exp: MultidimensionalExperienceV1) -> list[str]:
+        """Ensures tree projections remain strictly anchored in the 34-tree canon without degrading into flat tags."""
+        violations = []
+        for p in exp.tree_projections:
+            if p.tree_id not in CANONICAL_34_TREES:
+                violations.append(f"Tree ID {p.tree_id} not in CANONICAL_34_TREES")
+                continue
+            canonical = CANONICAL_34_TREES[p.tree_id]
+            if p.family != canonical.family:
+                violations.append(f"Family mismatch for tree {p.tree_id}: {p.family} != {canonical.family}")
+            if not p.projection_rationale or len(p.projection_rationale.strip()) < 5:
+                violations.append(f"Tree {p.tree_id} has insufficient epistemological rationale (degrading to flat tag)")
+        return violations
+
     def save_to_directory(self, dir_path: Path | str) -> dict[str, Any]:
         """Persists all registered experiences into an immutable JSONL ledger on disk."""
         p = Path(dir_path)
@@ -598,3 +629,50 @@ class CognitiveMemoryIndexV1:
                 self.register_experience(exp)
                 count += 1
         return count
+
+
+class MultiSessionMemoryJournalV1:
+    """Manages persistent logging of learning sessions across process lifetimes.
+    
+    Ensures that additions, revisions, and relation updates accumulate deterministically
+    across multiple independent educational sessions.
+    """
+
+    def __init__(self, root_dir: Path | str) -> None:
+        self.root_dir = Path(root_dir)
+        self.root_dir.mkdir(parents=True, exist_ok=True)
+        self.journal_file = self.root_dir / "sessions.jsonl"
+
+    def record_session(
+        self,
+        session_id: str,
+        started_at_iso: str,
+        closed_at_iso: str,
+        experience_ids: Sequence[str],
+        relation_count: int,
+        metadata: Mapping[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        entry = {
+            "session_id": session_id,
+            "started_at_iso": started_at_iso,
+            "closed_at_iso": closed_at_iso,
+            "experience_ids": list(experience_ids),
+            "relation_count": relation_count,
+            "metadata": dict(metadata or {}),
+            "decision_authority": DECISION_AUTHORITY,
+            "native_memory_write_allowed": False,
+        }
+        with self.journal_file.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+        return entry
+
+    def load_session_history(self) -> list[dict[str, Any]]:
+        if not self.journal_file.is_file():
+            return []
+        sessions = []
+        with self.journal_file.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    sessions.append(json.loads(line))
+        return sessions
