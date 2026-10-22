@@ -418,6 +418,185 @@ class OperationalBrodyImagePipelineEngineV3:
             artifact_paths=artifacts,
         )
 
+    def run_pipeline_on_arbitrary_image(
+        self,
+        target_scene: Image.Image,
+        output_dir: Path | str,
+        goal_description: str = "Reconstruct perceived visual scene",
+    ) -> OperationalPipelineReceiptV3:
+        """Executes the operational pipeline on an arbitrary unknown visual image.
+
+        Derives all nodes, features, and corrections dynamically from perceived pixels,
+        with zero hardcoded coordinates, zero assumptions on scene name, and dynamic tool selection.
+        """
+        out = Path(output_dir)
+        out.mkdir(parents=True, exist_ok=True)
+        artifacts: dict[str, str] = {}
+
+        # 1. Observation
+        obs_img = target_scene.copy().convert("L")
+        if obs_img.size != (SIDE, SIDE):
+            obs_img = obs_img.resize((SIDE, SIDE), Image.Resampling.NEAREST)
+        p_obs = out / "01_observation_input.png"
+        obs_img.save(p_obs)
+        artifacts["01_observation"] = str(p_obs)
+        obs_sha = digest_bytes(obs_img.tobytes())
+
+        # 2. Internal Representation (Derived from pixels)
+        target_pix = black_pixels(obs_img)
+        if not target_pix:
+            bx0, by0, bx1, by1 = 0, 0, SIDE - 1, SIDE - 1
+            key_nodes = [(SIDE // 2, SIDE // 2)]
+        else:
+            bx0, by0, bx1, by1 = bbox_of(target_pix)
+            # Dynamic key points: centroid, top-most, bottom-most, left-most, right-most
+            cx = sum(p % SIDE for p in target_pix) // len(target_pix)
+            cy = sum(p // SIDE for p in target_pix) // len(target_pix)
+            top_pt = min(((p % SIDE, p // SIDE) for p in target_pix), key=lambda pt: (pt[1], pt[0]))
+            bot_pt = max(((p % SIDE, p // SIDE) for p in target_pix), key=lambda pt: (pt[1], pt[0]))
+            left_pt = min(((p % SIDE, p // SIDE) for p in target_pix), key=lambda pt: (pt[0], pt[1]))
+            right_pt = max(((p % SIDE, p // SIDE) for p in target_pix), key=lambda pt: (pt[0], pt[1]))
+            key_nodes = list({top_pt, bot_pt, left_pt, right_pt, (cx, cy)})
+
+        rep_img = Image.new("L", (SIDE, SIDE), 255)
+        draw_rep = ImageDraw.Draw(rep_img)
+        draw_rep.rectangle([bx0, by0, bx1, by1], outline=160, width=1)
+        for nx, ny in key_nodes:
+            draw_rep.ellipse([nx - 2, ny - 2, nx + 2, ny + 2], fill=0)
+        p_rep = out / "02_spatial_representation_graph.png"
+        rep_img.save(p_rep)
+        artifacts["02_representation"] = str(p_rep)
+
+        # 3. Memory Retrieval
+        density = len(target_pix) / float(SIDE * SIDE)
+        query_kw = "dense area brush fill" if density > 0.25 else "precision contour line stroke"
+        selected_tool = self.select_tool_from_memory(query_kw)
+
+        q_proc = self.memory_engine.search_by_meaning(
+            intent=MeaningQueryIntentV1.WHICH_METHOD_IS_TRANSFERABLE,
+            target_tree_id="12",
+            query_text=goal_description,
+        )
+        selected_proc_id = q_proc.results[0].experience_id if q_proc.results else "EXP-ARBITRARY-TRANSFER-V1"
+
+        # 4. Plan Generation (Dynamic outline from perceived bounding box and anchor points)
+        orch = ProgrammaticBoundedOrchestratorO04(max_cost_budget=30.0, max_total_steps=12)
+        plan_instructions: list[WorkflowInstructionV1] = [
+            WorkflowInstructionV1("p0", "CALL_TOOL", tool_step=HeterogeneousStepV1(0, "SELECT_TOOL", {"tool": selected_tool})),
+        ]
+
+        sorted_nodes = sorted(key_nodes, key=lambda p: p[0])
+        if len(sorted_nodes) >= 2:
+            plan_instructions.append(
+                WorkflowInstructionV1(
+                    "p1",
+                    "CALL_TOOL",
+                    tool_step=HeterogeneousStepV1(1, "DRAW_STROKE", {"points": sorted_nodes, "width": 2}, selected_tool),
+                )
+            )
+        if (bx1 - bx0) > 8:
+            plan_instructions.append(
+                WorkflowInstructionV1(
+                    "p2",
+                    "CALL_TOOL",
+                    tool_step=HeterogeneousStepV1(2, "DRAW_STROKE", {"points": [(bx0, by1), (bx1, by1)], "width": 2}, selected_tool),
+                )
+            )
+
+        # 5. Procedural Generation
+        for instr in plan_instructions:
+            orch._execute_instruction(instr)
+
+        init_pix = black_pixels(orch.canvas)
+        init_iou = round(len(target_pix.intersection(init_pix)) / max(1, len(target_pix.union(init_pix))), 4)
+        p_gen = out / "03_procedural_initial_production.png"
+        orch.canvas.save(p_gen)
+        artifacts["03_initial_production"] = str(p_gen)
+
+        # 6. Re-perception & Error Evaluation
+        intent = VisualEditIntentCandidateV1(
+            intent_id="INTENT-ARBITRARY-V1",
+            goal_description=goal_description,
+            rigor_profile=RigorProfileV1.STRICT_GEOMETRIC,
+            region_constraints=(
+                RegionConstraintV1("lock_target_bbox", (bx0, by0, bx1, by1), ConstraintKindV1.LOCK, rationale="Perceived boundary"),
+            ),
+        )
+        reperceiver = VisualReperceiverEvaluatorV1()
+        rep_report = reperceiver.evaluate_and_locate_errors(orch.canvas, intent, ideal_target=obs_img)
+        err_patches_count = len(rep_report.error_patches)
+        primary_err_box = rep_report.error_patches[0].bbox_xyxy if err_patches_count > 0 else (bx0, by0, bx1, by1)
+
+        err_mask = Image.new("L", (SIDE, SIDE), 255)
+        draw_err = ImageDraw.Draw(err_mask)
+        draw_err.rectangle(list(primary_err_box), fill=128, outline=0, width=1)
+        p_err = out / "04_reperceived_error_patches.png"
+        err_mask.save(p_err)
+        artifacts["04_reperceived_errors"] = str(p_err)
+
+        # 7. Motor Correction (Target missing pixels dynamically)
+        missing_pix = target_pix - init_pix
+        if missing_pix:
+            mcx = sum(p % SIDE for p in missing_pix) // len(missing_pix)
+            mcy = sum(p // SIDE for p in missing_pix) // len(missing_pix)
+            corr_points = [(primary_err_box[0], mcy), (mcx, mcy), (primary_err_box[2], mcy)]
+            corr_instr = WorkflowInstructionV1(
+                "p_corr",
+                "CALL_TOOL",
+                tool_step=HeterogeneousStepV1(len(plan_instructions), "DRAW_STROKE", {"points": corr_points, "width": 2}, selected_tool),
+            )
+            orch._execute_instruction(corr_instr)
+            corr_id = corr_instr.instruction_id
+        else:
+            corr_id = "no_correction_needed"
+
+        final_pix = black_pixels(orch.canvas)
+        final_iou = round(len(target_pix.intersection(final_pix)) / max(1, len(target_pix.union(final_pix))), 4)
+        p_corr = out / "05_corrected_production.png"
+        orch.canvas.save(p_corr)
+        artifacts["05_corrected_production"] = str(p_corr)
+
+        # 8. Candidate Experience Emission
+        cand_exp_id = f"EXP-CANDIDATE-ARBITRARY-{obs_sha[:8]}"
+        cand_receipt = {
+            "experience_id": cand_exp_id,
+            "decision_authority": DECISION_AUTHORITY,
+            "native_memory_write_allowed": False,
+            "provenance": "LOCAL_CANDIDATE_LEDGER",
+            "observation_sha256": obs_sha,
+            "initial_iou": init_iou,
+            "final_iou": final_iou,
+            "selected_tool": selected_tool,
+            "retrieved_procedure_id": selected_proc_id,
+            "error_patches_detected": err_patches_count,
+            "correction_applied": bool(missing_pix),
+        }
+        p_json = out / "06_candidate_experience_receipt.json"
+        p_json.write_text(json.dumps(cand_receipt, indent=2, ensure_ascii=False), encoding="utf-8")
+        artifacts["06_candidate_receipt"] = str(p_json)
+
+        return OperationalPipelineReceiptV3(
+            pipeline_id=f"PIPELINE-ARBITRARY-{obs_sha[:8]}",
+            observation_sha256=obs_sha,
+            observation_source_kind="ARBITRARY_IMAGE_OBSERVATION",
+            spatial_nodes_count=len(key_nodes),
+            bounding_box=(bx0, by0, bx1, by1),
+            retrieved_procedure_id=selected_proc_id,
+            retrieved_tool=selected_tool,
+            meaning_query_intent=MeaningQueryIntentV1.WHICH_METHOD_IS_TRANSFERABLE.value,
+            plan_instructions_count=len(plan_instructions),
+            budget_allocated=30.0,
+            initial_canvas_sha256=digest_bytes(Image.open(p_gen).tobytes()),
+            initial_iou=init_iou,
+            error_patches_count=err_patches_count,
+            primary_error_region=primary_err_box,
+            correction_instruction_id=corr_id,
+            corrected_canvas_sha256=digest_bytes(orch.canvas.tobytes()),
+            final_iou=final_iou,
+            candidate_experience_id=cand_exp_id,
+            artifact_paths=artifacts,
+        )
+
     # =========================================================================
     # RECONCILED AUDIT MATRIX OF THE 32 CHANTIERS (Docs 21 & Historical Plan)
     # =========================================================================

@@ -1,0 +1,134 @@
+{
+  "report_id": "INVENTORY-1792693685",
+  "timestamp_iso": "2026-10-22T18:28:05Z",
+  "hostname": "DESKTOP-Q5MD7J7",
+  "os_name": "Windows",
+  "os_release": "11",
+  "python_version": "3.13.3",
+  "cpu_model": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+  "cpu_cores": 6,
+  "ram_total_gb": 15.73,
+  "gpu_detected": false,
+  "gpu_name": "NONE",
+  "vram_total_gb": 0.0,
+  "nvidia_driver_version": "NONE",
+  "cuda_available_torch": false,
+  "cuda_device_count": 0,
+  "port_probes": [
+    {
+      "port": 8080,
+      "service_label": "llama-server default HTTP API",
+      "is_open": false,
+      "response_hint": null
+    },
+    {
+      "port": 8081,
+      "service_label": "Jarvis Qwen-VL endpoint",
+      "is_open": false,
+      "response_hint": null
+    },
+    {
+      "port": 11434,
+      "service_label": "Ollama local API",
+      "is_open": false,
+      "response_hint": null
+    },
+    {
+      "port": 5000,
+      "service_label": "Flask / SD-WebUI API",
+      "is_open": false,
+      "response_hint": null
+    },
+    {
+      "port": 7860,
+      "service_label": "Gradio / ComfyUI web interface",
+      "is_open": false,
+      "response_hint": null
+    },
+    {
+      "port": 8000,
+      "service_label": "vLLM / FastAPI local endpoint",
+      "is_open": false,
+      "response_hint": null
+    }
+  ],
+  "active_ports_count": 0,
+  "cached_models": [
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--unsloth--gemma-4-E2B-it-GGUF\\snapshots\\90f9618340396838ee7ff5b0ba2da27da62953d3\\gemma-4-E2B-it-UD-Q4_K_XL.gguf",
+      "file_name": "gemma-4-E2B-it-UD-Q4_K_XL.gguf",
+      "size_mb": 3036.97,
+      "category": "OTHER_GGUF"
+    },
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--unsloth--gemma-4-E2B-it-GGUF\\snapshots\\90f9618340396838ee7ff5b0ba2da27da62953d3\\mmproj-F16.gguf",
+      "file_name": "mmproj-F16.gguf",
+      "size_mb": 939.99,
+      "category": "MMPROJ"
+    },
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--Systran--faster-whisper-tiny.en\\snapshots\\0d3d19a32d3338f10357c0889762bd8d64bbdeba\\model.bin",
+      "file_name": "model.bin",
+      "size_mb": 72.04,
+      "category": "PYTORCH_WEIGHTS"
+    },
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--Systran--faster-whisper-tiny\\snapshots\\d90ca5fe260221311c53c58e660288d3deb8d356\\model.bin",
+      "file_name": "model.bin",
+      "size_mb": 72.04,
+      "category": "PYTORCH_WEIGHTS"
+    },
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--Systran--faster-whisper-small\\snapshots\\536b0662742c02347bc0e980a01041f333bce120\\model.bin",
+      "file_name": "model.bin",
+      "size_mb": 461.15,
+      "category": "PYTORCH_WEIGHTS"
+    },
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--Qwen--Qwen2.5-3B-Instruct-GGUF\\snapshots\\7dabda4d13d513e3e842b20f0d435c732f172cbe\\qwen2.5-3b-instruct-q4_k_m.gguf",
+      "file_name": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "size_mb": 2007.42,
+      "category": "OTHER_GGUF"
+    },
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--hexgrad--Kokoro-82M\\snapshots\\f3ff3571791e39611d31c381e3a41a3af07b4987\\voices\\af_heart.pt",
+      "file_name": "af_heart.pt",
+      "size_mb": 0.5,
+      "category": "PYTORCH_WEIGHTS"
+    },
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--hexgrad--Kokoro-82M\\snapshots\\f3ff3571791e39611d31c381e3a41a3af07b4987\\voices\\ff_siwis.pt",
+      "file_name": "ff_siwis.pt",
+      "size_mb": 0.5,
+      "category": "PYTORCH_WEIGHTS"
+    },
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--ggml-org--Qwen2.5-VL-3B-Instruct-GGUF\\snapshots\\5037fcf163dd95d1e41d1974465f0898ed108ca2\\mmproj-Qwen2.5-VL-3B-Instruct-Q8_0.gguf",
+      "file_name": "mmproj-Qwen2.5-VL-3B-Instruct-Q8_0.gguf",
+      "size_mb": 805.62,
+      "category": "MMPROJ"
+    },
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--ggml-org--Qwen2.5-VL-3B-Instruct-GGUF\\snapshots\\5037fcf163dd95d1e41d1974465f0898ed108ca2\\Qwen2.5-VL-3B-Instruct-Q4_K_M.gguf",
+      "file_name": "Qwen2.5-VL-3B-Instruct-Q4_K_M.gguf",
+      "size_mb": 1840.5,
+      "category": "QWEN_VL"
+    },
+    {
+      "file_path": "C:\\Users\\User\\.cache\\huggingface\\hub\\models--ggerganov--whisper.cpp\\snapshots\\5359861c739e955e79d9a303bcbc70fb988958b1\\ggml-tiny.bin",
+      "file_name": "ggml-tiny.bin",
+      "size_mb": 74.09,
+      "category": "PYTORCH_WEIGHTS"
+    }
+  ],
+  "has_qwen_vl_weights": true,
+  "has_mmproj_projector": true,
+  "has_sd_gguf_weights": false,
+  "qwen_vl_engine_status": "LOCAL_WEIGHTS_AND_MMPROJ_PRESENT_SERVER_IDLE",
+  "sd_cpp_gtx1050ti_compatibility": "CPU_ONLY_INFERENCE_REQUIRED",
+  "recommended_sd_config": "No CUDA GPU detected: Use CPU inference with 4 threads or execute on PC Fixe.",
+  "hold_reasons": [
+    "CUDA_GPU_ABSENT_ON_CURRENT_HOST"
+  ],
+  "decision_authority": "KX108_ONLY"
+}
