@@ -185,7 +185,10 @@ class TemporalVideoCognitiveEngineV1:
                 cam_dy = round(anchor_entity.centroid_xy[1] - self._last_anchor_xy[1], 2)
             self._last_anchor_xy = anchor_entity.centroid_xy
 
-        if abs(cam_dx) > 2.0 or abs(cam_dy) > 2.0:
+        if anchor_entity is None and target_entity is None:
+            attribution = MotionAttributionV1.UNKNOWN
+            notes = "Ambiguous visual signal: neither anchor nor target recognizable."
+        elif abs(cam_dx) > 2.0 or abs(cam_dy) > 2.0:
             attribution = MotionAttributionV1.CAMERA_MOTION
             notes = f"Global camera motion detected: displacement ({cam_dx}, {cam_dy}) px"
         elif target_entity is None and self._history_frames:
@@ -215,9 +218,12 @@ class TemporalVideoCognitiveEngineV1:
             else:
                 attribution = MotionAttributionV1.OBJECT_MOTION
                 notes = "Target emerged after occlusion"
-        else:
+        elif target_entity is not None:
             attribution = MotionAttributionV1.OBJECT_MOTION
             notes = "Base initial frame"
+        else:
+            attribution = MotionAttributionV1.UNKNOWN
+            notes = "Ambiguous visual frame"
 
         entities = []
         if anchor_entity:

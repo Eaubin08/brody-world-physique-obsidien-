@@ -79,15 +79,33 @@ from .f16_real_image_contracts_v1 import (
     ingest_real_image_f16,
 )
 
+from .real_stack_connection_audit_v1 import (
+    RealStackConnectionAuditorV1,
+    StackConnectionAuditReportV1,
+    SubsystemConnectionStatusV1,
+)
+from .temporal_multiclip_evaluation_v1 import (
+    ClipEvaluationReportV1,
+    MultiClipVideoEvaluatorV1,
+)
+from .novel_situation_transfer_loop_v1 import (
+    EmpiricalTransferProofReportV1,
+    ExerciseOutcomeReceiptV1,
+    NovelSituationTransferHarnessV1,
+)
+
 __all__ = [
     "AutonomousVisualFeatureExtractorV1",
     "BrodyCognitiveCycleReceiptV1",
     "BrodyImageCognitiveLoopV1",
     "BrodyMeasuredObservationV1",
     "CANONICAL_34_TREES",
+    "ClipEvaluationReportV1",
     "CognitiveMemoryIndexV1",
     "DomainEngagementV1",
+    "EmpiricalTransferProofReportV1",
     "EpistemicCalibrationV1",
+    "ExerciseOutcomeReceiptV1",
     "ExperienceRelationLinkV1",
     "ExperienceValidationStatusV0",
     "HistoricalBeliefRevisionV1",
@@ -97,12 +115,14 @@ __all__ = [
     "MeaningQueryResponseV1",
     "MemoryEligibilityV0",
     "MotionAttributionV1",
+    "MultiClipVideoEvaluatorV1",
     "MultidimensionalCognitiveMemoryEngineV1",
     "MultidimensionalExperienceV1",
     "MultidimensionalRelationTypeV1",
     "NativeMemoryAdmissibilityReportV1",
     "NegativeTransferDetectorV1",
     "NegativeTransferDiagnosticV1",
+    "NovelSituationTransferHarnessV1",
     "PreverbalForecastV1",
     "ProgrammaticBoundedOrchestratorO04",
     "ProgrammaticExecutionReceiptO04",
@@ -110,9 +130,12 @@ __all__ = [
     "RealImageObservationF16V1",
     "RealImagePipelineAuditReceiptV1",
     "RealLearningAuditorV1",
+    "RealStackConnectionAuditorV1",
     "SVGVisualPlanV1",
     "ShadedVisualObjectV1",
     "SpecializedDomainV1",
+    "StackConnectionAuditReportV1",
+    "SubsystemConnectionStatusV1",
     "TeacherVisualCurriculumV1",
     "TemporalConfrontationReceiptV1",
     "TemporalFrameObservationV1",
