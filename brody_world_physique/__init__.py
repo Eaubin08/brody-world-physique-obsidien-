@@ -93,6 +93,41 @@ from .novel_situation_transfer_loop_v1 import (
     ExerciseOutcomeReceiptV1,
     NovelSituationTransferHarnessV1,
 )
+from .generic_transfer_benchmark_v1 import (
+    ConditionAggregateMetricsV1,
+    GenericTransferBenchmarkHarnessV1,
+    GenericTransferBenchmarkReportV1,
+    TaskEvaluationOutcomeV1,
+)
+from .persistent_process_restart_test_v1 import (
+    PersistentProcessRestartHarnessV1,
+    ProcessRestartProofReceiptV1,
+)
+from .obsidia_interstack_connection_tracer_v1 import (
+    InterstackTraceAuditReportV1,
+    ObsidiaConnectionTierV1,
+    ObsidiaInterstackConnectionTracerV1,
+    StackCallTraceV1,
+)
+from .filmed_video_evaluation_v1 import (
+    FilmedClipEvaluationV1,
+    FilmedVideoEvaluationReportV1,
+    FilmedVideoEvaluatorV1,
+    FilmedVideoFrameV1,
+    VideoProvenanceV1,
+)
+from .observation_to_creation_loop_v1 import (
+    CreativeExecutionReceiptV1,
+    ObservationToCreationLoopV1,
+    ObservationToCreationReportV1,
+)
+from .workstation_neural_generation_auditor_v1 import (
+    LocalBoundedNeuralGeneratorV1,
+    LocalHardwareModelAuditReceiptV1,
+    NeuralExecutionReceiptV1,
+    NeuralGenerationAuditAndExecutionReportV1,
+    WorkstationNeuralGenerationAuditorV1,
+)
 
 __all__ = [
     "AutonomousVisualFeatureExtractorV1",
