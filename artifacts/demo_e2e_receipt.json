@@ -1,0 +1,41 @@
+{
+  "demonstration_id": "DEMO-BRODY-E2E-PROGRESSIVE-V1",
+  "input_observation": {
+    "path": "demo_e2e_input_observation.png",
+    "sha256": "7e2b25ddfaae5c49667ed58d832d8c3bdc9b47bbaac6b25d8cfdb0dea85f0c36",
+    "black_pixels": 520
+  },
+  "step1_reconstruction": {
+    "path": "demo_e2e_step1_reconstruction.png",
+    "sha256": "c612a13ee3e6097fd1ee61d320f27fc4cc3c4eb67f5f0a5730554320e39ee256",
+    "cost_incurred": 4.5
+  },
+  "step2_reperception_errors": {
+    "path": "demo_e2e_step2_reperception_errors.png",
+    "discrepancy_xor_before_correction": 465,
+    "missing_pixels_count": 328,
+    "unwanted_pixels_count": 137
+  },
+  "step3_corrected_production": {
+    "path": "demo_e2e_step3_corrected_production.png",
+    "sha256": "544fc1032a0bb7484494bd0f4dae283bc8722a8732e149dfa3f5ea9af49e561a",
+    "final_xor_error": 355,
+    "final_iou": 0.467,
+    "total_workflow_cost": 12.5
+  },
+  "vector_export": {
+    "path": "demo_e2e_vector_export.svg",
+    "elements_count": 8
+  },
+  "epistemic_invariants": {
+    "unobserved_surfaces": [
+      "BACK_FACING_SURFACE",
+      "INTERIOR_BOTTOM",
+      "OCCLUDED_INTERIOR_VOLUME"
+    ],
+    "epistemic_surface_status": "UNKNOWN_FOR_OCCLUDED_FACES",
+    "decision_authority": "KX108_ONLY",
+    "native_memory_write_allowed": false,
+    "is_candidate": true
+  }
+}
