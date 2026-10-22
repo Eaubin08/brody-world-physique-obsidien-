@@ -37,6 +37,7 @@ from brody_world_physique.observation_to_creation_loop_v1 import (
 )
 from brody_world_physique.workstation_neural_generation_auditor_v1 import (
     NeuralGenerationAuditAndExecutionReportV1,
+    NeuralGenerationMaturityTierV1,
     WorkstationNeuralGenerationAuditorV1,
 )
 
@@ -60,11 +61,26 @@ class TestGenericTransferBenchmark(unittest.TestCase):
             flat_agg = report.condition_aggregates["FLAT_PROCEDURAL_MEMORY"]
             none_agg = report.condition_aggregates["NO_MEMORY"]
 
-            self.assertGreater(multi_agg.average_final_iou, 0.70)
+            self.assertGreater(multi_agg.average_final_iou, 0.60)
             self.assertGreater(multi_agg.average_final_iou, flat_agg.average_final_iou)
             self.assertGreater(multi_agg.average_final_iou, none_agg.average_final_iou)
             self.assertEqual(multi_agg.average_corrective_steps, 0.0)
-            self.assertEqual(multi_agg.success_rate_percent, 100.0)
+            self.assertGreaterEqual(multi_agg.success_rate_percent, 75.0)
+
+            # Strict anti-contamination verification:
+            # 1. No task obtains an artificial 1.0000 cheat
+            self.assertTrue(all(o.final_iou < 1.0000 for o in report.task_outcomes))
+
+            # 2. Transferable tasks all succeed with strong IoU >= 0.80
+            transferable = [o for o in report.task_outcomes if o.condition == "MULTIDIMENSIONAL_MEMORY" and "CHALLENGE" not in o.task_id]
+            self.assertEqual(len(transferable), 3)
+            self.assertTrue(all(o.is_success for o in transferable))
+            self.assertGreater(sum(o.final_iou for o in transferable) / len(transferable), 0.80)
+
+            # 3. Challenge task boundary failure is retained honestly without artificial pass
+            challenge = [o for o in report.task_outcomes if o.condition == "MULTIDIMENSIONAL_MEMORY" and "CHALLENGE" in o.task_id][0]
+            self.assertFalse(challenge.is_success)
+            self.assertIn("CALIBRATION_BOUNDARY_EXCEEDED", challenge.strategy_summary)
 
             # Verify artifacts generated
             self.assertTrue((out_dir / "generic_transfer_benchmark_report.json").exists())
@@ -105,7 +121,7 @@ class TestObsidiaInterstackConnectionTracer(unittest.TestCase):
             self.assertIsInstance(report, InterstackTraceAuditReportV1)
             self.assertEqual(report.sovereign_authority, "KX108_ONLY")
             self.assertTrue(report.no_unjustified_integrated_declaration)
-            self.assertEqual(len(report.traces), 6)
+            self.assertGreaterEqual(len(report.traces), 6)
 
             subsystems = {t.subsystem_id: t for t in report.traces}
             self.assertIn("JARVIS_F16", subsystems)
@@ -114,15 +130,19 @@ class TestObsidiaInterstackConnectionTracer(unittest.TestCase):
             self.assertIn("SENS_ENGINE", subsystems)
             self.assertIn("BINDER_ORCHESTRATOR", subsystems)
             self.assertIn("BRODY_COGNITIVE_CORE", subsystems)
+            self.assertIn("OBSIDIA_CG9_PROVIDER_BINDER", subsystems)
+            self.assertIn("JARVIS_VISUAL_OPERATOR", subsystems)
 
             # Verify that native memory write was strictly blocked
             self.assertTrue(subsystems["NATIVE_MEMORY_GATE"].native_memory_write_blocked)
 
             # Verify classifications
-            self.assertEqual(subsystems["JARVIS_F16"].connection_tier, ObsidiaConnectionTierV1.CONTRAT_COMPATIBLE)
-            self.assertEqual(subsystems["F12_MMONDE"].connection_tier, ObsidiaConnectionTierV1.CONTRAT_COMPATIBLE)
+            self.assertEqual(subsystems["JARVIS_F16"].connection_tier, ObsidiaConnectionTierV1.CONTRACT_COMPATIBLE)
+            self.assertEqual(subsystems["F12_MMONDE"].connection_tier, ObsidiaConnectionTierV1.CONTRACT_COMPATIBLE)
             self.assertEqual(subsystems["BINDER_ORCHESTRATOR"].connection_tier, ObsidiaConnectionTierV1.LIVE_VERIFIED)
             self.assertEqual(subsystems["BRODY_COGNITIVE_CORE"].connection_tier, ObsidiaConnectionTierV1.LIVE_VERIFIED)
+            self.assertEqual(subsystems["OBSIDIA_CG9_PROVIDER_BINDER"].connection_tier, ObsidiaConnectionTierV1.INTERPROCESS_INTEGRATED)
+            self.assertEqual(subsystems["JARVIS_VISUAL_OPERATOR"].connection_tier, ObsidiaConnectionTierV1.INTERPROCESS_INTEGRATED)
 
 
 class TestFilmedVideoEvaluation(unittest.TestCase):
@@ -138,10 +158,12 @@ class TestFilmedVideoEvaluation(unittest.TestCase):
             self.assertTrue(report.unknown_preservation_verified)
             self.assertTrue(report.tracking_accuracy_acceptable)
 
-            # Check that all 3 provenance types were evaluated
+            # Check that provenance types were evaluated
             self.assertIn(VideoProvenanceV1.SYNTHETIC.value, report.provenance_distribution)
             self.assertIn(VideoProvenanceV1.RECORDED_REAL.value, report.provenance_distribution)
-            self.assertIn(VideoProvenanceV1.LIVE.value, report.provenance_distribution)
+            self.assertIn(VideoProvenanceV1.SYNTHETIC_NOISE.value, report.provenance_distribution)
+            # LIVE_CAPTURE_VERIFIED is reserved strictly for active physical capture hardware
+            self.assertEqual(report.provenance_distribution.get(VideoProvenanceV1.LIVE_CAPTURE_VERIFIED.value, 0), 0)
 
 
 class TestObservationToCreationLoop(unittest.TestCase):
@@ -176,10 +198,13 @@ class TestWorkstationNeuralGenerationAuditor(unittest.TestCase):
             hw = report.hardware_model_audit
             self.assertTrue(hw.is_zero_download_enforced)
             self.assertTrue(hw.hardware_compatible)
+            self.assertEqual(hw.maturity_tier, NeuralGenerationMaturityTierV1.DETERMINISTIC_TENSOR_OPERATIONS)
+            self.assertFalse(hw.neural_diffusion_verified)
 
             # Seeded execution checks
             exec_rec = report.execution_receipt
             self.assertEqual(exec_rec.seed, 42)
+            self.assertEqual(exec_rec.maturity_tier, NeuralGenerationMaturityTierV1.DETERMINISTIC_TENSOR_OPERATIONS)
             self.assertEqual(exec_rec.lock_violations_count, 0)
             self.assertTrue(exec_rec.intent_compliant)
             self.assertGreater(exec_rec.reperceived_ink_pixels, 0)

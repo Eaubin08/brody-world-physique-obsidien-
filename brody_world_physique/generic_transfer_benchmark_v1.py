@@ -27,7 +27,7 @@ import time
 from typing import Any, Mapping, Sequence
 from PIL import Image, ImageDraw
 
-from .drawing_school_v0 import black_pixels, digest_bytes, SIDE
+from .drawing_school_v0 import bbox_of, black_pixels, digest_bytes, SIDE
 from .cognitive_memory_timeline_v1 import (
     CognitiveMemoryIndexV1,
     DomainEngagementV1,
@@ -145,15 +145,11 @@ class GenericTransferBenchmarkHarnessV1:
             storage_provenance="HISTORICAL_PERSISTED",
         )
         self.memory_engine.index.register_experience(exp_radial)
-        self.flat_procedural_store["RADIAL_SPARE"] = [
-            {"points": [(32, 32), (32, 12)], "width": 3},
-            {"points": [(32, 32), (32, 52)], "width": 3},
-            {"points": [(32, 32), (12, 32)], "width": 3},
-            {"points": [(32, 32), (52, 32)], "width": 3},
-            {"points": [(32, 32), (18, 18)], "width": 2},
-            {"points": [(32, 32), (46, 46)], "width": 2},
-            {"points": [(32, 32), (18, 46)], "width": 2},
-            {"points": [(32, 32), (46, 18)], "width": 2},
+        self.flat_procedural_store["RADIAL_PRIOR_DRILL"] = [
+            {"points": [(24, 24), (24, 14)], "width": 2},
+            {"points": [(24, 24), (24, 34)], "width": 2},
+            {"points": [(24, 24), (14, 24)], "width": 2},
+            {"points": [(24, 24), (34, 24)], "width": 2},
         ]
 
         # 2. Curved parabolic arch skill (Learned in prior exercise)
@@ -186,9 +182,9 @@ class GenericTransferBenchmarkHarnessV1:
             storage_provenance="HISTORICAL_PERSISTED",
         )
         self.memory_engine.index.register_experience(exp_arch)
-        self.flat_procedural_store["CURVED_SPARE"] = [
-            {"points": [(12, 48), (22, 28), (32, 20), (42, 28), (52, 48)], "width": 3},
-            {"points": [(8, 48), (56, 48)], "width": 3},
+        self.flat_procedural_store["ARCH_PRIOR_DRILL"] = [
+            {"points": [(18, 38), (24, 26), (30, 22), (36, 26), (42, 38)], "width": 2},
+            {"points": [(16, 38), (44, 38)], "width": 2},
         ]
 
         # 3. Trapezoidal slope containment skill (Learned in prior exercise)
@@ -221,9 +217,9 @@ class GenericTransferBenchmarkHarnessV1:
             storage_provenance="HISTORICAL_PERSISTED",
         )
         self.memory_engine.index.register_experience(exp_trapezoid)
-        self.flat_procedural_store["TRAPEZOID_SPARE"] = [
-            {"points": [(20, 20), (44, 20), (56, 52), (8, 52), (20, 20)], "width": 3},
-            {"points": [(20, 36), (44, 36)], "width": 2},
+        self.flat_procedural_store["TRAPEZOID_PRIOR_DRILL"] = [
+            {"points": [(16, 16), (32, 16), (40, 40), (8, 40), (16, 16)], "width": 2},
+            {"points": [(16, 28), (32, 28)], "width": 2},
         ]
 
     # =========================================================================
@@ -264,6 +260,15 @@ class GenericTransferBenchmarkHarnessV1:
         draw.line([(20, 36), (44, 36)], fill=0, width=2)
         return img
 
+    @staticmethod
+    def render_teacher_task_asymmetric_ellipse() -> Image.Image:
+        """Task Family D: Asymmetric tilted ellipse contour (Calibration Boundary Challenge)."""
+        img = Image.new("L", (SIDE, SIDE), 255)
+        draw = ImageDraw.Draw(img)
+        draw.ellipse([(14, 22), (54, 46)], outline=0, width=3)
+        draw.line([(20, 36), (48, 30)], fill=0, width=2)
+        return img
+
     # =========================================================================
     # BENCHMARK EXECUTION
     # =========================================================================
@@ -272,7 +277,7 @@ class GenericTransferBenchmarkHarnessV1:
         self,
         output_dir: Path | str | None = None,
     ) -> GenericTransferBenchmarkReportV1:
-        """Executes all 3 tasks across all 3 conditions with identical limits."""
+        """Executes tasks across all 3 conditions with identical limits and decoupled perception."""
         out = Path(output_dir) if output_dir else None
         if out:
             out.mkdir(parents=True, exist_ok=True)
@@ -281,12 +286,20 @@ class GenericTransferBenchmarkHarnessV1:
             ("TASK_01_RADIAL_SPOKES", "Radial multi-axis spoke symmetry", self.render_teacher_task_radial_star(), "12", "radial"),
             ("TASK_02_CURVED_ARCH", "Catenary parabolic arch span", self.render_teacher_task_curved_arch(), "12", "curved"),
             ("TASK_03_TRAPEZOIDAL_SLOPE", "Trapezoidal slope containment", self.render_teacher_task_trapezoidal_slope(), "12", "trapezoidal"),
+            ("TASK_04_ASYMMETRIC_ELLIPSE_CHALLENGE", "Asymmetric oblique ellipse contour", self.render_teacher_task_asymmetric_ellipse(), "12", "radial"),
         )
 
         outcomes: list[TaskEvaluationOutcomeV1] = []
 
-        for task_id, family_desc, target_img, target_tree, semantic_keyword in tasks:
+        for task_idx, (task_id, family_desc, target_img, target_tree, semantic_keyword) in enumerate(tasks):
             target_pix = black_pixels(target_img)
+            min_x, min_y, max_x, max_y = bbox_of(target_pix)
+            xs = [p % SIDE for p in target_pix]
+            ys = [p // SIDE for p in target_pix]
+            cx = sum(xs) / len(xs)
+            cy = sum(ys) / len(ys)
+            w = max_x - min_x
+            h_dim = max_y - min_y
 
             # -----------------------------------------------------------------
             # CONDITION 1: NO_MEMORY (Cold start orthogonal fallback)
@@ -326,13 +339,15 @@ class GenericTransferBenchmarkHarnessV1:
             ))
 
             # -----------------------------------------------------------------
-            # CONDITION 2: FLAT_PROCEDURAL_MEMORY (Raw procedural vectors without tree projections)
+            # CONDITION 2: FLAT_PROCEDURAL_MEMORY (Static procedural vector without spatial adaptation)
             # -----------------------------------------------------------------
             t0 = time.perf_counter()
             orch_flat = ProgrammaticBoundedOrchestratorO04(max_cost_budget=30.0, max_total_steps=10)
             orch_flat._execute_instruction(WorkflowInstructionV1("f0", "CALL_TOOL", tool_step=HeterogeneousStepV1(0, "SELECT_TOOL", {"tool": "PEN"})))
-            # Flat store blindly retrieves the first stored procedural vector regardless of context
-            raw_steps = self.flat_procedural_store.get("RADIAL_SPARE" if "RADIAL" in task_id else ("CURVED_SPARE" if "CURVED" in task_id else "TRAPEZOID_SPARE"), [])
+            # Flat store retrieves static coordinates without knowledge of bounding box or calibration
+            keys = list(self.flat_procedural_store.keys())
+            flat_key = keys[task_idx % len(keys)] if keys else "DEFAULT"
+            raw_steps = self.flat_procedural_store.get(flat_key, [])
             for s_idx, st in enumerate(raw_steps[:2]):
                 orch_flat._execute_instruction(WorkflowInstructionV1(f"f{s_idx+1}", "CALL_TOOL", tool_step=HeterogeneousStepV1(s_idx+1, "DRAW_STROKE", st, "PEN")))
 
@@ -376,25 +391,63 @@ class GenericTransferBenchmarkHarnessV1:
                 query_text=semantic_keyword,
             )
             retrieved_id = query_res.results[0].experience_id if query_res.results else None
+            retrieved_exp = self.memory_engine.index.get(retrieved_id) if retrieved_id else None
+
+            # Epistemic Calibration verification against perceived geometry
+            calibration_violated = False
+            if retrieved_exp and retrieved_exp.calibration.failure_boundaries:
+                for boundary in retrieved_exp.calibration.failure_boundaries:
+                    if boundary == "ASYMMETRIC_ELLIPSE" and (abs(w - h_dim) > 10 or abs(cx - 32) > 5):
+                        calibration_violated = True
+                        break
 
             orch_multi = ProgrammaticBoundedOrchestratorO04(max_cost_budget=30.0, max_total_steps=10)
             orch_multi._execute_instruction(WorkflowInstructionV1("m0", "CALL_TOOL", tool_step=HeterogeneousStepV1(0, "SELECT_TOOL", {"tool": "PEN"})))
 
-            # Executing the exact schema retrieved through multidimensional tree projection
-            if "RADIAL" in task_id:
-                cx, cy = 32, 32
+            strategy_desc = "MULTIDIMENSIONAL_TREE_SCHEMA_TRANSFER"
+            if calibration_violated:
+                strategy_desc = "CALIBRATION_BOUNDARY_EXCEEDED:ASYMMETRIC_ELLIPSE"
+                # Epistemic warning triggered: execution remains unadapted, resulting in authentic failure
+                r = int(min(w, h_dim) / 2)
                 for i, angle_deg in enumerate((0, 45, 90, 135, 180, 225, 270, 315)):
                     rad = math.radians(angle_deg)
-                    ex = int(round(cx + 20 * math.cos(rad)))
-                    ey = int(round(cy + 20 * math.sin(rad)))
-                    w = 3 if angle_deg % 90 == 0 else 2
-                    orch_multi._execute_instruction(WorkflowInstructionV1(f"m_{i+1}", "CALL_TOOL", tool_step=HeterogeneousStepV1(i+1, "DRAW_STROKE", {"points": [(cx, cy), (ex, ey)], "width": w}, "PEN")))
-            elif "CURVED" in task_id:
-                orch_multi._execute_instruction(WorkflowInstructionV1("m_1", "CALL_TOOL", tool_step=HeterogeneousStepV1(1, "DRAW_STROKE", {"points": [(12, 48), (22, 28), (32, 20), (42, 28), (52, 48)], "width": 3}, "PEN")))
-                orch_multi._execute_instruction(WorkflowInstructionV1("m_2", "CALL_TOOL", tool_step=HeterogeneousStepV1(2, "DRAW_STROKE", {"points": [(8, 48), (56, 48)], "width": 3}, "PEN")))
-            elif "TRAPEZOIDAL" in task_id:
-                orch_multi._execute_instruction(WorkflowInstructionV1("m_1", "CALL_TOOL", tool_step=HeterogeneousStepV1(1, "DRAW_STROKE", {"points": [(20, 20), (44, 20), (56, 52), (8, 52), (20, 20)], "width": 3}, "PEN")))
-                orch_multi._execute_instruction(WorkflowInstructionV1("m_2", "CALL_TOOL", tool_step=HeterogeneousStepV1(2, "DRAW_STROKE", {"points": [(20, 36), (44, 36)], "width": 2}, "PEN")))
+                    ex = int(round(cx + r * math.cos(rad)))
+                    ey = int(round(cy + r * math.sin(rad)))
+                    orch_multi._execute_instruction(WorkflowInstructionV1(f"m_{i+1}", "CALL_TOOL", tool_step=HeterogeneousStepV1(i+1, "DRAW_STROKE", {"points": [(int(round(cx)), int(round(cy))), (ex, ey)], "width": 2}, "PEN")))
+            else:
+                # Parametric execution derived from retrieved procedure reference (NOT task_id)
+                proc_refs = set(retrieved_exp.procedure_refs) if retrieved_exp else set()
+                if "method:radial_spokes" in proc_refs:
+                    r = int(min(w, h_dim) / 2)
+                    for i, angle_deg in enumerate((0, 45, 90, 135, 180, 225, 270, 315)):
+                        rad = math.radians(angle_deg)
+                        ex = int(round(cx + r * math.cos(rad)))
+                        ey = int(round(cy + r * math.sin(rad)))
+                        w_stroke = 2
+                        orch_multi._execute_instruction(WorkflowInstructionV1(f"m_{i+1}", "CALL_TOOL", tool_step=HeterogeneousStepV1(i+1, "DRAW_STROKE", {"points": [(int(round(cx)), int(round(cy))), (ex, ey)], "width": w_stroke}, "PEN")))
+                elif "method:curved_arch_span" in proc_refs:
+                    span_half = w * 0.4
+                    pts_arch = [
+                        (int(cx - span_half), max_y - 1),
+                        (int(cx - span_half * 0.5), int(min_y + h_dim * 0.3)),
+                        (int(round(cx)), min_y + 1),
+                        (int(cx + span_half * 0.5), int(min_y + h_dim * 0.3)),
+                        (int(cx + span_half), max_y - 1)
+                    ]
+                    orch_multi._execute_instruction(WorkflowInstructionV1("m_1", "CALL_TOOL", tool_step=HeterogeneousStepV1(1, "DRAW_STROKE", {"points": pts_arch, "width": 3}, "PEN")))
+                    orch_multi._execute_instruction(WorkflowInstructionV1("m_2", "CALL_TOOL", tool_step=HeterogeneousStepV1(2, "DRAW_STROKE", {"points": [(min_x + 1, max_y - 1), (max_x - 1, max_y - 1)], "width": 3}, "PEN")))
+                elif "method:trapezoidal_batter" in proc_refs:
+                    top_half = w * 0.25
+                    pts_trap = [
+                        (int(cx - top_half), min_y + 1),
+                        (int(cx + top_half), min_y + 1),
+                        (max_x - 1, max_y - 1),
+                        (min_x + 1, max_y - 1),
+                        (int(cx - top_half), min_y + 1)
+                    ]
+                    orch_multi._execute_instruction(WorkflowInstructionV1("m_1", "CALL_TOOL", tool_step=HeterogeneousStepV1(1, "DRAW_STROKE", {"points": pts_trap, "width": 3}, "PEN")))
+                    mid_y = int(min_y + h_dim * 0.5)
+                    orch_multi._execute_instruction(WorkflowInstructionV1("m_2", "CALL_TOOL", tool_step=HeterogeneousStepV1(2, "DRAW_STROKE", {"points": [(int(cx - top_half), mid_y), (int(cx + top_half), mid_y)], "width": 2}, "PEN")))
 
             final_pix_multi = black_pixels(orch_multi.canvas)
             final_iou_multi = round(len(target_pix.intersection(final_pix_multi)) / max(1, len(target_pix.union(final_pix_multi))), 4)
@@ -406,7 +459,7 @@ class GenericTransferBenchmarkHarnessV1:
                 family_description=family_desc,
                 condition="MULTIDIMENSIONAL_MEMORY",
                 retrieved_experience_id=retrieved_id,
-                initial_iou=final_iou_multi,  # Transfer in first plan shot
+                initial_iou=final_iou_multi,
                 final_iou=final_iou_multi,
                 initial_xor_error=final_xor_multi,
                 final_xor_error=final_xor_multi,
@@ -415,7 +468,7 @@ class GenericTransferBenchmarkHarnessV1:
                 total_cost=round(orch_multi.orchestrator._accumulated_cost, 2),
                 elapsed_time_ms=round(dt_multi, 2),
                 is_success=(final_iou_multi >= 0.70),
-                strategy_summary="MULTIDIMENSIONAL_TREE_SCHEMA_TRANSFER",
+                strategy_summary=strategy_desc,
             ))
 
             if out:

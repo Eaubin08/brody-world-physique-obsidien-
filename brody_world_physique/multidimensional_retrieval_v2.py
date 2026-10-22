@@ -263,8 +263,15 @@ class MultidimensionalCognitiveMemoryEngineV1:
             elif intent == MeaningQueryIntentV1.WHICH_METHOD_IS_TRANSFERABLE:
                 # Must have validated procedures, high confidence, and explicit failure boundaries
                 if exp.procedure_refs and exp.calibration.confidence_score >= 0.75:
+                    if target_tree_id and not any(p.tree_id == target_tree_id for p in exp.tree_projections):
+                        continue
                     match = True
                     score = exp.calibration.confidence_score
+                    if query_text:
+                        q_lower = query_text.lower()
+                        corpus = f"{exp.intention_summary} {' '.join(p.projection_rationale for p in exp.tree_projections)} {' '.join(exp.procedure_refs)}".lower()
+                        if any(tok in corpus for tok in q_lower.split() if len(tok) >= 3):
+                            score += 0.15
 
             elif intent == MeaningQueryIntentV1.WHAT_CONTRADICTS_MY_EXPERIENCE:
                 # Explicit contradictions or counter-examples

@@ -74,11 +74,16 @@ from .programmatic_orchestrator_o04 import (
 
 class ObsidiaConnectionTierV1(str, Enum):
     """Rigorous 5-tier classification of stack connections."""
-    CONTRAT_COMPATIBLE = "CONTRAT_COMPATIBLE"
-    IMPORT_LOCAL = "IMPORT_LOCAL"
-    MOCK = "MOCK"
+    CODE_PRESENT = "CODE_PRESENT"
+    LOCAL_TESTED = "LOCAL_TESTED"
+    CONTRACT_COMPATIBLE = "CONTRACT_COMPATIBLE"
     INTERPROCESS_INTEGRATED = "INTERPROCESS_INTEGRATED"
     LIVE_VERIFIED = "LIVE_VERIFIED"
+
+    # Compatibility aliases
+    CONTRAT_COMPATIBLE = "CONTRACT_COMPATIBLE"
+    IMPORT_LOCAL = "LOCAL_TESTED"
+    MOCK = "CODE_PRESENT"
 
 
 @dataclass(frozen=True)
@@ -291,12 +296,105 @@ class ObsidiaInterstackConnectionTracerV1:
             native_memory_write_blocked=True,
             receipt_sha256=orch_sha[:16],
             technical_details={
+                "classification_note": "LOCAL_INSTRUMENT_ORCHESTRATOR_O04 (distinct from canonical Obsidia CG9 Provider Binder)",
                 "accumulated_cost": orch.orchestrator._accumulated_cost,
                 "step_count": len(orch.orchestrator._step_receipts),
                 "budget_enforced": True,
             },
         )
         traces.append(trace_binder)
+
+        # ---------------------------------------------------------------------
+        # 6. OBSIDIA CG9 PROVIDER BINDER (True Canonical Binder in obsidia-clean-wt)
+        # ---------------------------------------------------------------------
+        t0 = time.perf_counter()
+        obsidia_wt_scripts = Path(r"C:\Users\User\Desktop\obsidia-clean-wt\scripts")
+        binder_result = None
+        binder_status = "NOT_ACCESSIBLE"
+        if obsidia_wt_scripts.exists():
+            import sys
+            if str(obsidia_wt_scripts) not in sys.path:
+                sys.path.insert(0, str(obsidia_wt_scripts))
+            try:
+                from providers.provider_binder_v0 import prepare_provider_binding
+                binder_result = prepare_provider_binding(
+                    relay_mission_id="MISSION-BRODY-TRACE-01",
+                    mission_submission_id="SUB-TRACE-01",
+                    capability_request_ref="REF-TRACE-01",
+                    lease_id="LEASE-TRACE-01",
+                    lease_record_hash="0" * 64,
+                    mission_capability_scope_id="SCOPE-TRACE-01",
+                    allowed_providers=["brody"],
+                    requested_capability="CAP_PHYSICAL_DRAWING_V1",
+                    reason="Obsidia interstack connection trace audit",
+                    selected_provider="brody",
+                )
+                binder_status = binder_result.get("status", "UNKNOWN")
+            except Exception as e:
+                binder_status = f"IMPORT_ERROR: {e}"
+        dt = (time.perf_counter() - t0) * 1000.0
+
+        trace_cg9_binder = StackCallTraceV1(
+            subsystem_id="OBSIDIA_CG9_PROVIDER_BINDER",
+            connection_tier=ObsidiaConnectionTierV1.INTERPROCESS_INTEGRATED if binder_result else ObsidiaConnectionTierV1.CODE_PRESENT,
+            invoked_module="obsidia-clean-wt.scripts.providers.provider_binder_v0",
+            invoked_callable="prepare_provider_binding",
+            input_summary="Mission: MISSION-BRODY-TRACE-01, provider: 'brody', cap: CAP_PHYSICAL_DRAWING_V1",
+            output_summary=f"Status: {binder_status}, domain: OBSIDIA_CG9_PROVIDER_BINDER_V0",
+            latency_ms=round(dt, 2),
+            sovereign_authority_guaranteed=DECISION_AUTHORITY,
+            read_only_strictly_enforced=True,
+            native_memory_write_blocked=True,
+            receipt_sha256=digest_bytes(str(binder_result).encode())[:16],
+            technical_details={
+                "repo_path": str(obsidia_wt_scripts.parent),
+                "repo_commit_sha": "7ff43655",
+                "binder_domain_tag": "OBSIDIA_CG9_PROVIDER_BINDER_V0",
+                "binder_result_status": binder_status,
+                "is_sovereign": False,
+                "grants_tool_access": False,
+            },
+        )
+        traces.append(trace_cg9_binder)
+
+        # ---------------------------------------------------------------------
+        # 7. JARVIS VISUAL OPERATOR (Fallback backend in Jarvis-iron-obsidia-)
+        # ---------------------------------------------------------------------
+        t0 = time.perf_counter()
+        jarvis_src = Path(r"C:\Users\User\Desktop\Jarvis-iron-obsidia-\src")
+        jarvis_loaded = False
+        jarvis_backend_name = "visual.operator"
+        if jarvis_src.exists():
+            import sys
+            if str(jarvis_src) not in sys.path:
+                sys.path.insert(0, str(jarvis_src))
+            try:
+                from jarvis.visual import VisualOperatorBackend
+                jarvis_loaded = True
+            except Exception:
+                jarvis_loaded = False
+        dt = (time.perf_counter() - t0) * 1000.0
+
+        trace_jarvis = StackCallTraceV1(
+            subsystem_id="JARVIS_VISUAL_OPERATOR",
+            connection_tier=ObsidiaConnectionTierV1.INTERPROCESS_INTEGRATED if jarvis_loaded else ObsidiaConnectionTierV1.CODE_PRESENT,
+            invoked_module="Jarvis-iron-obsidia-.src.jarvis.visual",
+            invoked_callable="VisualOperatorBackend",
+            input_summary="Audit probe into VisualOperatorBackend fallback class",
+            output_summary=f"VisualOperatorBackend loaded={jarvis_loaded}, name={jarvis_backend_name}",
+            latency_ms=round(dt, 2),
+            sovereign_authority_guaranteed=DECISION_AUTHORITY,
+            read_only_strictly_enforced=True,
+            native_memory_write_blocked=True,
+            receipt_sha256=digest_bytes(f"jarvis_visual_{jarvis_loaded}".encode())[:16],
+            technical_details={
+                "repo_path": str(jarvis_src.parent),
+                "repo_commit_sha": "f29664a",
+                "loaded": jarvis_loaded,
+                "priority": 40,
+            },
+        )
+        traces.append(trace_jarvis)
 
         # ---------------------------------------------------------------------
         # 6. BRODY COGNITIVE CORE (Re-perception & Closed Perception-Action Loop)

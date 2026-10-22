@@ -23,6 +23,7 @@ Constitutional boundaries:
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
+from enum import Enum
 import json
 import os
 from pathlib import Path
@@ -39,6 +40,14 @@ from .visual_intent_contracts_v1 import (
     VisualEditIntentCandidateV1,
 )
 from .visual_reperceiver_evaluator_v1 import VisualReperceiverEvaluatorV1
+
+
+class NeuralGenerationMaturityTierV1(str, Enum):
+    """Rigorous 4-tier classification of generative models."""
+    PROCEDURAL_RENDERING_SVG_PILLOW = "PROCEDURAL_RENDERING_SVG_PILLOW"
+    DETERMINISTIC_TENSOR_OPERATIONS = "DETERMINISTIC_TENSOR_OPERATIONS"
+    PRETRAINED_NEURAL_MODEL_INFERENCE = "PRETRAINED_NEURAL_MODEL_INFERENCE"
+    NEURAL_DIFFUSION_VERIFIED_WEIGHTS = "NEURAL_DIFFUSION_VERIFIED_WEIGHTS"
 
 try:
     import torch
@@ -61,6 +70,8 @@ class LocalHardwareModelAuditReceiptV1:
     cuda_available: bool
     discovered_cache_models: tuple[str, ...]
     selected_generator_id: str
+    maturity_tier: NeuralGenerationMaturityTierV1
+    neural_diffusion_verified: bool
     is_zero_download_enforced: bool
     hardware_compatible: bool
 
@@ -70,6 +81,7 @@ class NeuralExecutionReceiptV1:
     """Receipt for a single seeded neural generator run with intent gating."""
     generator_id: str
     seed: int
+    maturity_tier: NeuralGenerationMaturityTierV1
     execution_time_ms: float
     output_dimensions: tuple[int, int]
     generated_canvas_sha256: str
@@ -171,6 +183,8 @@ class WorkstationNeuralGenerationAuditorV1:
             cuda_available=CUDA_AVAILABLE,
             discovered_cache_models=tuple(discovered),
             selected_generator_id=selected_gen,
+            maturity_tier=NeuralGenerationMaturityTierV1.DETERMINISTIC_TENSOR_OPERATIONS,
+            neural_diffusion_verified=False,
             is_zero_download_enforced=True,
             hardware_compatible=True,
         )
@@ -209,6 +223,7 @@ class WorkstationNeuralGenerationAuditorV1:
         exec_receipt = NeuralExecutionReceiptV1(
             generator_id=selected_gen,
             seed=seed,
+            maturity_tier=NeuralGenerationMaturityTierV1.DETERMINISTIC_TENSOR_OPERATIONS,
             execution_time_ms=round(dt, 2),
             output_dimensions=gen_img.size,
             generated_canvas_sha256=gen_sha,

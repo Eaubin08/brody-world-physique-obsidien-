@@ -40,8 +40,10 @@ from .temporal_video_learning_v1 import (
 class VideoProvenanceV1(str, Enum):
     """Origin and recording modality of visual sequence."""
     SYNTHETIC = "SYNTHETIC"
+    SYNTHETIC_NOISE = "SYNTHETIC_NOISE"
     RECORDED_REAL = "RECORDED_REAL"
-    LIVE = "LIVE"
+    LIVE_CAPTURE_VERIFIED = "LIVE_CAPTURE_VERIFIED"
+    LIVE = "LIVE"  # Maintained for backwards compatibility alias
 
 
 @dataclass(frozen=True)
@@ -273,18 +275,18 @@ class FilmedVideoEvaluatorV1:
         ))
 
         # ---------------------------------------------------------------------
-        # 5. LIVE: DYNAMIC STREAM WITH NOISY / UNCERTAIN SIGNAL (UNKNOWN)
+        # 5. SYNTHETIC NOISE: DYNAMIC AMBIGUOUS STREAM (UNKNOWN PRESERVATION)
         # ---------------------------------------------------------------------
-        live_frames: list[FilmedVideoFrameV1] = []
+        noise_frames: list[FilmedVideoFrameV1] = []
         for i, t in enumerate((0.0, 0.33, 0.67, 1.0)):
-            # Random uniform noise without stable geometric anchor
+            # Random uniform noise without stable geometric anchor (strictly SYNTHETIC_NOISE, never falsely called LIVE)
             im = Image.effect_noise((SIDE, SIDE), 25.0).convert("L")
             sha = digest_bytes(im.tobytes())
             # Confidence is very low, below epistemic threshold
-            live_frames.append(FilmedVideoFrameV1(
+            noise_frames.append(FilmedVideoFrameV1(
                 frame_index=i,
                 timestamp_s=t,
-                provenance=VideoProvenanceV1.LIVE,
+                provenance=VideoProvenanceV1.SYNTHETIC_NOISE,
                 dimensions=(SIDE, SIDE),
                 frame_sha256=sha[:16],
                 detected_centroid=None,
@@ -293,9 +295,9 @@ class FilmedVideoEvaluatorV1:
             ))
 
         clip_evals.append(FilmedClipEvaluationV1(
-            clip_id="CLIP_05_LIVE_AMBIGUOUS_NOISE",
-            provenance=VideoProvenanceV1.LIVE,
-            frames_count=len(live_frames),
+            clip_id="CLIP_05_SYNTHETIC_AMBIGUOUS_NOISE",
+            provenance=VideoProvenanceV1.SYNTHETIC_NOISE,
+            frames_count=len(noise_frames),
             predicted_attribution=MotionAttributionV1.UNKNOWN,
             ground_truth_attribution=MotionAttributionV1.UNKNOWN,
             attribution_correct=True,
@@ -303,7 +305,7 @@ class FilmedVideoEvaluatorV1:
             average_prediction_error_px=0.0,
             identity_continuity_preserved=False,
             unknown_appropriately_retained=True,
-            frame_records=tuple(live_frames),
+            frame_records=tuple(noise_frames),
         ))
 
         prov_counts: dict[str, int] = {}
