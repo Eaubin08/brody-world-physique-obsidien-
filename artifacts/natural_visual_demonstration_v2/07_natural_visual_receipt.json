@@ -1,0 +1,19 @@
+{
+  "dossier_id": "NATURAL-VISUAL-DOSSIER-V2",
+  "decision_authority": "KX108_ONLY",
+  "native_memory_write_allowed": false,
+  "natural_visual_components": [
+    "TEXTURES_PARAMETRIC_MASONRY",
+    "TONAL_VALUE_PASSES_3TIER",
+    "DIRECTIONAL_LIGHTING_VECTOR",
+    "CAST_SHADOWS_GROUND_PROJECTION",
+    "AXONOMETRIC_VIEWPOINT_VARIATION",
+    "TEMPORAL_LIGHT_DEFORMATION_CYCLE"
+  ],
+  "tree_projections": {
+    "11": "Science: Modèle de projection d'ombres portées",
+    "12": "Technique: Hachures de textures et assemblage de traits",
+    "13": "Art: Valeurs tonales et composition de silhouettes",
+    "23": "Temps: Déformation d'ombres au cours du cycle temporel"
+  }
+}
