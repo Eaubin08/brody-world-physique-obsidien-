@@ -1,0 +1,67 @@
+{
+  "audit_version": "BRODY_REAL_LEARNING_AUDIT_V1",
+  "training_lessons": [
+    "train_lesson_arch.png",
+    "train_lesson_bowl.png",
+    "train_lesson_strut.png"
+  ],
+  "unseen_exams": [
+    "exam_unseen_bridge_reference.png",
+    "exam_unseen_chalice_reference.png"
+  ],
+  "comparative_metrics": {
+    "EXAM_ARCHED_BRIDGE": {
+      "memory_on": {
+        "final_iou": 0.5246,
+        "final_xor": 726,
+        "proportions_dev": 0.0776,
+        "centroid_drift_px": 1.0,
+        "operations": 6,
+        "cost": 14.0,
+        "retrieved_experiences": [
+          "EXP-LESSON-ARCH-STRUCTURAL",
+          "EXP-LESSON-BOWL-CURVILINEAR"
+        ]
+      },
+      "memory_off": {
+        "final_iou": 0.1419,
+        "final_xor": 1252,
+        "proportions_dev": 0.5135,
+        "centroid_drift_px": 2.5,
+        "operations": 2,
+        "cost": 3.5,
+        "retrieved_experiences": []
+      }
+    },
+    "EXAM_CHALICE": {
+      "memory_on": {
+        "final_iou": 0.3333,
+        "final_xor": 378,
+        "proportions_dev": 0.05,
+        "centroid_drift_px": 0.0,
+        "operations": 3,
+        "cost": 5.0,
+        "retrieved_experiences": [
+          "EXP-LESSON-ARCH-STRUCTURAL",
+          "EXP-LESSON-BOWL-CURVILINEAR"
+        ]
+      },
+      "memory_off": {
+        "final_iou": 0.1122,
+        "final_xor": 625,
+        "proportions_dev": 0.3,
+        "centroid_drift_px": 2.0,
+        "operations": 2,
+        "cost": 3.5,
+        "retrieved_experiences": []
+      }
+    }
+  },
+  "epistemic_invariants": {
+    "decision_authority": "KX108_ONLY",
+    "is_candidate": true,
+    "native_memory_write_allowed": false,
+    "is_3d_view_synthesis": false,
+    "no_dynamic_code_execution": true
+  }
+}

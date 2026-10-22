@@ -55,8 +55,17 @@ from .negative_transfer_detector_v1 import (
     NegativeTransferDetectorV1,
     NegativeTransferDiagnosticV1,
 )
+from .real_learning_audit_v1 import (
+    AutonomousVisualFeatureExtractorV1,
+    LearningAuditResultV1,
+    RealLearningAuditorV1,
+    TeacherVisualCurriculumV1,
+    VisualFeatureComponentV1,
+    generate_learning_audit_artifacts,
+)
 
 __all__ = [
+    "AutonomousVisualFeatureExtractorV1",
     "BrodyCognitiveCycleReceiptV1",
     "BrodyImageCognitiveLoopV1",
     "CANONICAL_34_TREES",
@@ -66,6 +75,7 @@ __all__ = [
     "ExperienceRelationLinkV1",
     "ExperienceValidationStatusV0",
     "HistoricalBeliefRevisionV1",
+    "LearningAuditResultV1",
     "MeaningQueryIntentV1",
     "MeaningQueryResultItemV1",
     "MeaningQueryResponseV1",
@@ -79,15 +89,18 @@ __all__ = [
     "ProgrammaticBoundedOrchestratorO04",
     "ProgrammaticExecutionReceiptO04",
     "ProjectionKindV0",
+    "RealLearningAuditorV1",
     "SVGVisualPlanV1",
     "ShadedVisualObjectV1",
     "SpecializedDomainV1",
+    "TeacherVisualCurriculumV1",
     "TimelineEnvelopeV1",
     "TransformationEpistemicClassV0",
     "TransitionTransformationBindingV0",
     "TreeDefinitionV1",
     "TreeFamilyV1",
     "TreeProjectionV1",
+    "VisualFeatureComponentV1",
     "VisualTaskAdmissibilityRequestV1",
     "VisualTaskAdmissibilityVerdictV1",
     "WorkflowInstructionV1",
@@ -97,6 +110,7 @@ __all__ = [
     "WorldStateProjectionV0",
     "WorldTransformationV0",
     "convert_object_to_svg_plan",
+    "generate_learning_audit_artifacts",
     "render_shaded_object",
 ]
 
