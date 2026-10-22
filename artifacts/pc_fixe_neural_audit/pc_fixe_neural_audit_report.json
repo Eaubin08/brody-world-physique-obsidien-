@@ -1,0 +1,15 @@
+{
+  "report_id": "PC-FIXE-NEURAL-0e2e819a6408",
+  "machine_type": "WORKSTATION_CPU_PORTABLE",
+  "cuda_available": false,
+  "cuda_device_name": "NONE",
+  "cuda_device_count": 0,
+  "torch_version": "2.7.1+cpu",
+  "maturity_tier": "DETERMINISTIC_TENSOR_OPERATIONS",
+  "neural_diffusion_verified": false,
+  "hold_reason": "HOLD_CUDA_DIFFUSION_WEIGHTS_NOT_LOADED; PC portable uses CPU PyTorch without CUDA; Relaunch this script on PC fixe with CUDA GPU via: python scripts/pc_fixe_neural_inference_verifier.py",
+  "generated_artifact_sha256": "0e2e819a6408b99c92fb4649acdadca514d73f0d1ba98b28bbf9a92fcf363bc2",
+  "lock_violations_count": 0,
+  "reproducible_seed": 42,
+  "decision_authority": "KX108_ONLY"
+}

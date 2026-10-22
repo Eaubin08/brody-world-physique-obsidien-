@@ -1,0 +1,23 @@
+{
+  "experience_id": "EXP-COMPOSITE-ASYM-BRANCH-DEMO-01",
+  "decision_authority": "KX108_ONLY",
+  "native_memory_write_allowed": false,
+  "provenance": "LOCAL_CANDIDATE_LEDGER",
+  "source_scene_sha256": "d9c0e609bfd2b28d54523f5d3fef5e6c15ca4e6a637201cac5299b4f9fce5934",
+  "corrected_canvas_sha256": "d8174cee1029f8ead9468780982e38d1711818d86069fbb84943a221c91f2271",
+  "initial_iou": 0.8103,
+  "final_iou": 0.8829,
+  "corrective_operations_count": 1,
+  "tree_projections": {
+    "12": "Technique d'assemblage voûte asymétrique et contrefort triangulé",
+    "20": "Organisation spatiale motrice multi-composants",
+    "26": "Équilibre et continuité des nœuds structurels"
+  },
+  "epistemic_calibration": {
+    "confidence_score": 0.92,
+    "evidence_hash": "sha256:d8174cee1029f8ea",
+    "failure_boundaries": [
+      "ISOTROPIC_SPHERE"
+    ]
+  }
+}
