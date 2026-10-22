@@ -4,8 +4,10 @@
 2. Exact diff check of 34 trees against canonical Obsidia registry.
 3. Unseen visual exercise: ablation with memory ENABLED vs memory DISABLED (measured improvement).
 """
+import importlib.util
 import json
 from pathlib import Path
+from tempfile import TemporaryDirectory
 import pytest
 from PIL import Image, ImageDraw
 
@@ -26,6 +28,8 @@ from brody_world_physique.multidimensional_retrieval_v2 import (
 )
 from brody_world_physique.v1_v4_experience_loader import (
     build_and_load_integrated_v1_v4_memory,
+    load_persisted_v1_v4_experiences,
+    persist_v1_v4_experiences,
 )
 
 
@@ -181,3 +185,183 @@ def test_transversal_3_unseen_visual_exercise_ablation_memory_on_vs_off():
     # Verify that memory did not cause an unauthorized code execution
     assert outcome_with_memory["memory_rejected"] is False
     assert outcome_with_memory["changes"]
+
+
+def test_transversal_4_persist_and_recover_after_process_restart():
+    """1. Distinguish historically persisted episodes from ephemeral reconstructed ones.
+    
+    Proves 100% recovery after a simulated process restart (new engine loading purely from disk).
+    """
+    with TemporaryDirectory() as tmp_dir:
+        disk_path = Path(tmp_dir) / "persistent_memory_store"
+
+        # 1. Run and persist
+        receipt = persist_v1_v4_experiences(disk_path)
+        assert receipt["saved_count"] == 4
+        assert receipt["saved_relations_count"] == 3
+        assert receipt["provenance_mode"] == "HISTORICAL_PERSISTED"
+        assert (disk_path / "experiences.jsonl").is_file()
+        assert (disk_path / "relations.jsonl").is_file()
+
+        # 2. Simulate complete process restart with brand new engine instance
+        engine_restarted = MultidimensionalCognitiveMemoryEngineV1()
+        assert engine_restarted.index.count() == 0
+        assert len(engine_restarted._links) == 0
+
+        # Load from persisted disk ledger
+        load_summary = load_persisted_v1_v4_experiences(disk_path, engine_restarted)
+        assert load_summary["loaded_experiences"] == 4
+        assert load_summary["loaded_relations"] == 3
+        assert load_summary["storage_provenance"] == "HISTORICAL_PERSISTED"
+
+        # Verify all experiences carry HISTORICAL_PERSISTED provenance
+        for exp in engine_restarted.index._experiences.values():
+            assert exp.storage_provenance == "HISTORICAL_PERSISTED"
+
+        # 3. Prove multi-axis retrieval after restart
+        # A. By tree
+        t24_exps = engine_restarted.index.query_by_tree("24")
+        assert len(t24_exps) == 2
+        # B. By domain
+        draw_exps = engine_restarted.index.query_by_domain(SpecializedDomainV1.DRAWING)
+        assert len(draw_exps) == 2
+        # C. By belief revision prior state
+        v42 = engine_restarted.index.get("REAL-EXP-V4-2-ORIENTATION-RECIPROQUE")
+        assert v42 is not None
+        prior = v42.get_belief_prior_to_revision("REV-V4-2-01")
+        assert prior == "Proximity distance suffices to distinguish inverted components"
+        # D. Meaning query
+        success_resp = engine_restarted.search_by_meaning(MeaningQueryIntentV1.HOW_DID_I_SUCCEED)
+        assert success_resp.matched_count == 3
+
+
+def test_transversal_5_compare_34_trees_with_active_obsidia_tree_registry_py():
+    """2. Compare 34 trees with active Obsidia tree_registry.py on disk."""
+    candidates = [
+        Path(r"C:\Users\User\Desktop\obsidia-claude-linguistique\periphery\cognitive_trees\tree_registry.py"),
+        Path(r"C:\Users\User\Desktop\obsidia-clean-wt\periphery\cognitive_trees\tree_registry.py"),
+    ]
+    reg_path = None
+    for p in candidates:
+        if p.is_file():
+            reg_path = p
+            break
+
+    if not reg_path:
+        pytest.skip("Active Obsidia tree_registry.py not found on standard paths")
+
+    spec = importlib.util.spec_from_file_location("obsidia_tree_registry", reg_path)
+    assert spec is not None and spec.loader is not None
+    mod = importlib.util.module_from_spec(spec)
+    import sys
+    sys.modules["obsidia_tree_registry"] = mod
+    try:
+        spec.loader.exec_module(mod)
+        obsidia_trees = mod.get_all_trees()
+    finally:
+        sys.modules.pop("obsidia_tree_registry", None)
+    assert len(obsidia_trees) == 34
+    assert len(CANONICAL_34_TREES) == 34
+
+    diffs = []
+    domain_to_family_prefix = {
+        "I_FONDAMENTAUX": "I_FONDAMENTAUX",
+        "COGNITION": "II_COGNITIFS",
+        "EPISTEMICS": "III_CONNAISSANCE",
+        "SOCIAL": "IV_RELATIONNELS_SOCIAUX",
+        "PLANNING": "V_ACTION_TRANSFORMATION",
+        "TEMPORAL": "VI_TEMPORELS_MEMORIELS",
+        "GOVERNANCE": "VII_META_STRUCTURELS",
+        "META": "VIII_OBSIDIA_AGI",
+        "INFRASTRUCTURE": "VIII_OBSIDIA_AGI",
+    }
+
+    for entry in obsidia_trees:
+        tid = f"{entry.id:02d}"
+        if tid not in CANONICAL_34_TREES:
+            diffs.append(f"Missing tree_id {tid} in local canon")
+            continue
+        local = CANONICAL_34_TREES[tid]
+
+        # Verify folder name exact match
+        if local.folder != entry.name:
+            diffs.append(f"Folder mismatch for {tid}: local={local.folder} vs obsidia={entry.name}")
+
+        # Verify family classification correspondence
+        expected_fam = domain_to_family_prefix.get(entry.domain)
+        if local.family.value != expected_fam:
+            diffs.append(f"Family mismatch for {tid}: local={local.family.value} vs obsidia={entry.domain}")
+
+        # Verify strict non-sovereign provenance flags
+        if not entry.readonly or entry.emits_act or entry.can_decide or entry.authority != "NON_SOVEREIGN":
+            diffs.append(f"Provenance flag mismatch for {tid} in obsidia registry")
+
+    assert len(diffs) == 0, f"Divergences detected against tree_registry.py: {diffs}"
+
+
+def test_transversal_6_four_condition_visual_ablation_benchmark():
+    """3. Reproduce visual ablation across FOUR conditions:
+    
+    C1: sans mémoire / sans correction (blank baseline)
+    C2: sans mémoire / avec correction (cold start search)
+    C3: avec mémoire / sans correction (zero-shot transfer)
+    C4: avec mémoire / avec correction (refinement under identical budget)
+    
+    Tested across multiple unseen exercises (curved arc, horizontal line, cross shape).
+    """
+    BUDGET = 12
+
+    # Exercise 1: Curved arc
+    target_arc = Image.new("L", (64, 64), 255)
+    draw_arc = ImageDraw.Draw(target_arc)
+    draw_arc.line([(12, 20), (32, 36), (52, 20)], fill=0, width=3, joint="curve")
+    skill_arc = GestureV1(points=((14, 20), (32, 34), (50, 20)), kind="CURVED_STROKE")
+
+    # Exercise 2: Straight horizontal bar
+    target_bar = Image.new("L", (64, 64), 255)
+    draw_bar = ImageDraw.Draw(target_bar)
+    draw_bar.line([(10, 32), (54, 32)], fill=0, width=3)
+    skill_bar = GestureV1(points=((10, 32), (54, 32)), kind="STRAIGHT_STROKE")
+
+    # Exercise 3: Cross shape (plus)
+    target_cross = Image.new("L", (64, 64), 255)
+    draw_cross = ImageDraw.Draw(target_cross)
+    draw_cross.line([(32, 12), (32, 52)], fill=0, width=3)
+    draw_cross.line([(12, 32), (52, 32)], fill=0, width=3)
+    skill_cross = (
+        GestureV1(points=((32, 14), (32, 50)), kind="STRAIGHT_STROKE"),
+        GestureV1(points=((14, 32), (50, 32)), kind="STRAIGHT_STROKE"),
+    )
+
+    exercises = [
+        ("EX1_ARC", target_arc, (skill_arc,)),
+        ("EX2_BAR", target_bar, (skill_bar,)),
+        ("EX3_CROSS", target_cross, skill_cross),
+    ]
+
+    for name, tgt, skill_tuple in exercises:
+        # C1: Sans mémoire / Sans correction
+        res_c1 = correct_drawing(tgt, initial=(), max_revisions=0)
+        err_c1 = res_c1["final_error"]
+
+        # C2: Sans mémoire / Avec correction
+        res_c2 = correct_drawing(tgt, initial=(), max_revisions=BUDGET)
+        err_c2 = res_c2["final_error"]
+
+        # C3: Avec mémoire / Sans correction (zero-shot transfer)
+        res_c3 = correct_drawing(tgt, initial=skill_tuple, max_revisions=0)
+        err_c3 = res_c3["final_error"]
+
+        # C4: Avec mémoire / Avec correction
+        res_c4 = correct_drawing(tgt, initial=skill_tuple, max_revisions=BUDGET)
+        err_c4 = res_c4["final_error"]
+
+        # Invariant 1: C1 is worst (blank canvas)
+        assert err_c1 > 0
+        # Invariant 2: C3 (memory alone) strictly beats C1 (blank)
+        assert err_c3 < err_c1, f"{name}: Memory zero-shot {err_c3} must beat blank {err_c1}"
+        # Invariant 3: C4 (memory + correction) achieves lowest error
+        assert err_c4 <= err_c2, f"{name}: C4 {err_c4} must be <= C2 {err_c2}"
+        assert err_c4 < err_c1, f"{name}: C4 {err_c4} must strictly beat C1 {err_c1}"
+        # Invariant 4: Memory was not rejected
+        assert res_c4["memory_rejected"] is False

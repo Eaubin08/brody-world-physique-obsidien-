@@ -23,6 +23,7 @@ Constitutional boundaries:
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from enum import Enum
 import io
 import os
 import platform
@@ -43,8 +44,22 @@ from .visual_intent_contracts_v1 import (
 MIN_VRAM_GB_FOR_HEAVY_DIFFUSION = 6.0
 
 
+class MachineFormFactorV1(str, Enum):
+    LAPTOP_PORTABLE = "LAPTOP_PORTABLE"
+    DESKTOP_FIXED = "DESKTOP_FIXED"
+    SERVER_OR_CLOUD = "SERVER_OR_CLOUD"
+    UNKNOWN = "UNKNOWN"
+
+
+class GenerationModalityV1(str, Enum):
+    """Strict taxonomic separation of visual generation modes."""
+    PROCEDURAL_VISUAL_GENERATION = "PROCEDURAL_VISUAL_GENERATION"
+    NEURAL_IMAGE_GENERATION = "NEURAL_IMAGE_GENERATION"
+    PROGRAMMATIC_TOOL_ORCHESTRATION = "PROGRAMMATIC_TOOL_ORCHESTRATION"
+
+
 class HeavyDiffusionDownloadBlockedError(RuntimeError):
-    """Raised when an unauthorized or unsafe heavy diffusion download is attempted."""
+    """Raised when attempting to download heavy diffusion weights while target hardware is on HOLD."""
     pass
 
 
@@ -60,6 +75,9 @@ class HardwareProfileV1:
     dedicated_vram_gb: float
     is_heavy_diffusion_capable: bool
     reason: str
+    form_factor: MachineFormFactorV1 = MachineFormFactorV1.UNKNOWN
+    hold_on_heavy_weights: bool = True
+    neural_generation_globally_prohibited: bool = False
 
 
 def probe_hardware_profile() -> HardwareProfileV1:
@@ -108,11 +126,33 @@ def probe_hardware_profile() -> HardwareProfileV1:
 
     is_capable = has_cuda and (dedicated_vram >= MIN_VRAM_GB_FOR_HEAVY_DIFFUSION)
     if not has_cuda:
-        reason = "NO_CUDA_GPU_DETECTED (Integrated graphics or CPU only; heavy diffusion models prohibited)"
+        reason = "NO_CUDA_GPU_DETECTED (Integrated graphics or CPU only; heavy diffusion models on HOLD)"
     elif dedicated_vram < MIN_VRAM_GB_FOR_HEAVY_DIFFUSION:
-        reason = f"INSUFFICIENT_VRAM ({dedicated_vram} GB < {MIN_VRAM_GB_FOR_HEAVY_DIFFUSION} GB threshold)"
+        reason = f"INSUFFICIENT_VRAM ({dedicated_vram} GB < {MIN_VRAM_GB_FOR_HEAVY_DIFFUSION} GB threshold; heavy diffusion models on HOLD)"
     else:
-        reason = f"HARDWARE_CAPABLE ({cuda_name} with {dedicated_vram} GB VRAM)"
+        reason = f"HARDWARE_CAPABLE ({cuda_name} with {dedicated_vram} GB VRAM; heavy diffusion permitted)"
+
+    # Form factor probe (portable laptop vs fixed desktop)
+    form_factor = MachineFormFactorV1.UNKNOWN
+    try:
+        import ctypes
+        class SYSTEM_POWER_STATUS(ctypes.Structure):
+            _fields_ = [
+                ("ACLineStatus", ctypes.c_byte),
+                ("BatteryFlag", ctypes.c_byte),
+                ("BatteryLifePercent", ctypes.c_byte),
+                ("SystemStatusFlag", ctypes.c_byte),
+                ("BatteryLifeTime", ctypes.c_ulong),
+                ("BatteryFullLifeTime", ctypes.c_ulong),
+            ]
+        sps = SYSTEM_POWER_STATUS()
+        if hasattr(ctypes, "windll") and ctypes.windll.kernel32.GetSystemPowerStatus(ctypes.byref(sps)):
+            if sps.BatteryFlag == 128:
+                form_factor = MachineFormFactorV1.DESKTOP_FIXED
+            elif sps.BatteryFlag != 255 and sps.BatteryLifePercent <= 100:
+                form_factor = MachineFormFactorV1.LAPTOP_PORTABLE
+    except Exception:
+        pass
 
     return HardwareProfileV1(
         os_name=os_name,
@@ -124,6 +164,9 @@ def probe_hardware_profile() -> HardwareProfileV1:
         dedicated_vram_gb=dedicated_vram,
         is_heavy_diffusion_capable=is_capable,
         reason=reason,
+        form_factor=form_factor,
+        hold_on_heavy_weights=not is_capable,
+        neural_generation_globally_prohibited=False,
     )
 
 
@@ -138,6 +181,8 @@ class GeneratedArtifactV0:
     hardware_profile: HardwareProfileV1
     compliance_report: VisualComplianceReportV1 | None
     is_generated: bool = True
+    generation_modality: GenerationModalityV1 = GenerationModalityV1.PROCEDURAL_VISUAL_GENERATION
+    is_procedural_fallback: bool = True
     native_memory_write_allowed: bool = False
     auto_promotion_allowed: bool = False
     decision_authority: str = "KX108_ONLY"

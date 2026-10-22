@@ -15,6 +15,7 @@ from dataclasses import asdict, dataclass, field
 from enum import Enum
 from hashlib import sha256
 import json
+from pathlib import Path
 from types import MappingProxyType
 from typing import Any, Mapping
 
@@ -126,6 +127,23 @@ class TreeProjectionV1:
     def family(self) -> TreeFamilyV1:
         return CANONICAL_34_TREES[self.tree_id].family
 
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "tree_id": self.tree_id,
+            "weight": self.weight,
+            "projection_rationale": self.projection_rationale,
+            "sub_node_ref": self.sub_node_ref,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> TreeProjectionV1:
+        return cls(
+            tree_id=data["tree_id"],
+            weight=float(data["weight"]),
+            projection_rationale=data.get("projection_rationale", data.get("rationale", "")),
+            sub_node_ref=data.get("sub_node_ref"),
+        )
+
 
 # --- M03: Specialized Domains (Distinct from Cognitive Trees) ---
 
@@ -154,6 +172,25 @@ class DomainEngagementV1:
         if not self.proof_criterion.strip():
             raise ValueError("proof_criterion is required")
 
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "domain": self.domain.value,
+            "proof_criterion": self.proof_criterion,
+            "measurement_units": list(self.measurement_units),
+            "domain_state_ref": self.domain_state_ref,
+            "validation_status": self.validation_status,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> DomainEngagementV1:
+        return cls(
+            domain=SpecializedDomainV1(data["domain"]),
+            proof_criterion=data["proof_criterion"],
+            measurement_units=tuple(data.get("measurement_units", ())),
+            domain_state_ref=data.get("domain_state_ref"),
+            validation_status=data.get("validation_status", "PENDING"),
+        )
+
 
 # --- M01: Multi-temporality & Frise Engine ---
 
@@ -170,6 +207,21 @@ class HistoricalBeliefRevisionV1:
     contradiction_evidence_ref: str
     correction_rule_or_procedure: str
     retained_former_status: str = "SUPERSEDED_HISTORICAL"
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "revision_id": self.revision_id,
+            "t_revision_iso": self.t_revision_iso,
+            "prior_belief_claim": self.prior_belief_claim,
+            "revised_belief_claim": self.revised_belief_claim,
+            "contradiction_evidence_ref": self.contradiction_evidence_ref,
+            "correction_rule_or_procedure": self.correction_rule_or_procedure,
+            "retained_former_status": self.retained_former_status,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> HistoricalBeliefRevisionV1:
+        return cls(**data)
 
 
 @dataclass(frozen=True)
@@ -203,6 +255,30 @@ class TimelineEnvelopeV1:
             if not isinstance(val, str) or not val.strip():
                 raise ValueError(f"{name} is required")
 
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "t_event_iso": self.t_event_iso,
+            "t_observation_iso": self.t_observation_iso,
+            "t_recording_iso": self.t_recording_iso,
+            "educational_stage": self.educational_stage,
+            "validity_start_iso": self.validity_start_iso,
+            "validity_end_iso": self.validity_end_iso,
+            "revisions": [r.to_dict() for r in self.revisions],
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> TimelineEnvelopeV1:
+        revs = tuple(HistoricalBeliefRevisionV1.from_dict(r) for r in data.get("revisions", ()))
+        return cls(
+            t_event_iso=data["t_event_iso"],
+            t_observation_iso=data["t_observation_iso"],
+            t_recording_iso=data["t_recording_iso"],
+            educational_stage=data["educational_stage"],
+            validity_start_iso=data["validity_start_iso"],
+            validity_end_iso=data.get("validity_end_iso"),
+            revisions=revs,
+        )
+
 
 # --- M07: Calibration, Evidence, Uncertainty & Counter-Examples ---
 
@@ -220,6 +296,29 @@ class EpistemicCalibrationV1:
     def __post_init__(self) -> None:
         if not (0.0 <= self.confidence_score <= 1.0):
             raise ValueError("confidence_score must be between 0.0 and 1.0")
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "confidence_score": self.confidence_score,
+            "source_provenance_refs": list(self.source_provenance_refs),
+            "evidence_hashes": list(self.evidence_hashes),
+            "uncertainties": list(self.uncertainties),
+            "failure_boundaries": list(self.failure_boundaries),
+            "counter_examples": list(self.counter_examples),
+            "reproducible_on_seed": self.reproducible_on_seed,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> EpistemicCalibrationV1:
+        return cls(
+            confidence_score=float(data["confidence_score"]),
+            source_provenance_refs=tuple(data.get("source_provenance_refs", ())),
+            evidence_hashes=tuple(data.get("evidence_hashes", ())),
+            uncertainties=tuple(data.get("uncertainties", ())),
+            failure_boundaries=tuple(data.get("failure_boundaries", ())),
+            counter_examples=tuple(data.get("counter_examples", ())),
+            reproducible_on_seed=data.get("reproducible_on_seed"),
+        )
 
 
 # --- M08: Native Memory / SENS / KX108 Admissibility ---
@@ -256,6 +355,7 @@ class MultidimensionalExperienceV1:
     procedure_refs: tuple[str, ...]
     executed_code_sha256: Mapping[str, str] = field(default_factory=dict)
     schema_version: str = "BRODY_COGNITIVE_EXPERIENCE_V1"
+    storage_provenance: str = "HISTORICAL_PERSISTED"  # HISTORICAL_PERSISTED vs EPHEMERAL_RECONSTRUCTED
     readonly: bool = True
     decision_authority: str = DECISION_AUTHORITY
     allowed_to_decide: bool = False
@@ -353,6 +453,54 @@ class MultidimensionalExperienceV1:
             decision_authority=DECISION_AUTHORITY,
         )
 
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "schema_version": self.schema_version,
+            "experience_id": self.experience_id,
+            "intention_summary": self.intention_summary,
+            "timeline": self.timeline.to_dict(),
+            "tree_projections": [p.to_dict() for p in self.tree_projections],
+            "domains": [d.to_dict() for d in self.domains],
+            "calibration": self.calibration.to_dict(),
+            "procedure_refs": list(self.procedure_refs),
+            "executed_code_sha256": dict(self.executed_code_sha256),
+            "storage_provenance": self.storage_provenance,
+            "readonly": self.readonly,
+            "decision_authority": self.decision_authority,
+            "allowed_to_decide": self.allowed_to_decide,
+            "allowed_to_act": self.allowed_to_act,
+            "kernel_mutation": self.kernel_mutation,
+        }
+
+    @classmethod
+    def from_dict(
+        cls,
+        data: dict[str, Any],
+        override_storage_provenance: str | None = None,
+    ) -> MultidimensionalExperienceV1:
+        timeline = TimelineEnvelopeV1.from_dict(data["timeline"])
+        tree_projs = tuple(TreeProjectionV1.from_dict(p) for p in data["tree_projections"])
+        domains = tuple(DomainEngagementV1.from_dict(d) for d in data["domains"])
+        calib = EpistemicCalibrationV1.from_dict(data["calibration"])
+        storage_prov = override_storage_provenance or data.get("storage_provenance", "HISTORICAL_PERSISTED")
+        return cls(
+            experience_id=data["experience_id"],
+            intention_summary=data["intention_summary"],
+            timeline=timeline,
+            tree_projections=tree_projs,
+            domains=domains,
+            calibration=calib,
+            procedure_refs=tuple(data.get("procedure_refs", ())),
+            executed_code_sha256=data.get("executed_code_sha256", {}),
+            schema_version=data.get("schema_version", "BRODY_COGNITIVE_EXPERIENCE_V1"),
+            storage_provenance=storage_prov,
+            readonly=data.get("readonly", True),
+            decision_authority=data.get("decision_authority", DECISION_AUTHORITY),
+            allowed_to_decide=data.get("allowed_to_decide", False),
+            allowed_to_act=data.get("allowed_to_act", False),
+            kernel_mutation=data.get("kernel_mutation", False),
+        )
+
 
 # --- Deterministic Memory Ledger & Multi-Dimensional Search ---
 
@@ -414,3 +562,39 @@ class CognitiveMemoryIndexV1:
             for exp in self._experiences.values()
             if exp.calibration.counter_examples
         ]
+
+    def save_to_directory(self, dir_path: Path | str) -> dict[str, Any]:
+        """Persists all registered experiences into an immutable JSONL ledger on disk."""
+        p = Path(dir_path)
+        p.mkdir(parents=True, exist_ok=True)
+        exp_file = p / "experiences.jsonl"
+        with exp_file.open("w", encoding="utf-8") as f:
+            for exp in sorted(self._experiences.values(), key=lambda e: e.experience_id):
+                f.write(json.dumps(exp.to_dict(), ensure_ascii=False) + "\n")
+        return {
+            "saved_count": len(self._experiences),
+            "experiences_path": str(exp_file),
+            "sha256": sha256(exp_file.read_bytes()).hexdigest(),
+        }
+
+    def load_from_directory(
+        self,
+        dir_path: Path | str,
+        storage_provenance: str = "HISTORICAL_PERSISTED",
+    ) -> int:
+        """Loads experiences from a disk ledger, distinguishing historical persistence."""
+        p = Path(dir_path)
+        exp_file = p / "experiences.jsonl"
+        if not exp_file.is_file():
+            raise FileNotFoundError(f"Experience file not found: {exp_file}")
+        count = 0
+        with exp_file.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                d = json.loads(line)
+                exp = MultidimensionalExperienceV1.from_dict(d, override_storage_provenance=storage_provenance)
+                self.register_experience(exp)
+                count += 1
+        return count

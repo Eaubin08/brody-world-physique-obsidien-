@@ -45,7 +45,10 @@ from .multidimensional_retrieval_v2 import (
 )
 
 
-def build_and_load_integrated_v1_v4_memory(engine: MultidimensionalCognitiveMemoryEngineV1) -> dict[str, Any]:
+def build_and_load_integrated_v1_v4_memory(
+    engine: MultidimensionalCognitiveMemoryEngineV1,
+    storage_provenance: str = "EPHEMERAL_RECONSTRUCTED",
+) -> dict[str, Any]:
     """Generates standard, audited V1-V4.2 runs in temporary workspaces and loads them into memory."""
     from brody_world_physique.drawing_school_v1 import run_school as run_school_v1
     from brody_world_physique.instrument_school_v2 import run_school as run_school_v2
@@ -114,6 +117,7 @@ def build_and_load_integrated_v1_v4_memory(engine: MultidimensionalCognitiveMemo
                 reproducible_on_seed=101,
             ),
             procedure_refs=("brody_world_physique.drawing_school_v1:render",),
+            storage_provenance=storage_provenance,
         )
 
         # 2. Load V3 Episode (Hidden Model Retention)
@@ -144,6 +148,7 @@ def build_and_load_integrated_v1_v4_memory(engine: MultidimensionalCognitiveMemo
                 counter_examples=(),
             ),
             procedure_refs=("brody_world_physique.drawing_memory_school_v3:render_from_memory",),
+            storage_provenance=storage_provenance,
         )
 
         # 3. Load V4.1 Episode (Component Relations & Adversarial Order Inversion Failure)
@@ -175,6 +180,7 @@ def build_and_load_integrated_v1_v4_memory(engine: MultidimensionalCognitiveMemo
                 counter_examples=("INVERTED_ORDER_CONFUSION",),
             ),
             procedure_refs=("brody_world_physique.world_relations_school_v4_1:classify",),
+            storage_provenance=storage_provenance,
         )
 
         # 4. Load V4.2 Episode (Cardinal Orientation & Reciprocity)
@@ -218,6 +224,7 @@ def build_and_load_integrated_v1_v4_memory(engine: MultidimensionalCognitiveMemo
                 reproducible_on_seed=4242,
             ),
             procedure_refs=("brody_world_physique.world_orientation_school_v4_2:derive_reciprocal",),
+            storage_provenance=storage_provenance,
         )
 
         # Register in memory index
@@ -259,4 +266,28 @@ def build_and_load_integrated_v1_v4_memory(engine: MultidimensionalCognitiveMemo
             ],
             "v1_out": str(out_v1),
             "v42_out": str(out_v42),
+            "storage_provenance": storage_provenance,
         }
+
+
+def persist_v1_v4_experiences(target_dir: Path | str) -> dict[str, Any]:
+    """Runs V1-V4.2 schools once, builds historical memory, and persists it to disk.
+    
+    Distinguishes HISTORICAL_PERSISTED storage from EPHEMERAL_RECONSTRUCTED memory.
+    """
+    engine = MultidimensionalCognitiveMemoryEngineV1()
+    build_and_load_integrated_v1_v4_memory(engine, storage_provenance="HISTORICAL_PERSISTED")
+    receipt = engine.save_to_directory(target_dir)
+    receipt["provenance_mode"] = "HISTORICAL_PERSISTED"
+    return receipt
+
+
+def load_persisted_v1_v4_experiences(
+    source_dir: Path | str,
+    engine: MultidimensionalCognitiveMemoryEngineV1,
+) -> dict[str, Any]:
+    """Loads previously persisted historical memory from disk without re-running schools.
+    
+    Simulates a clean process start recovering historical memory state.
+    """
+    return engine.load_from_directory(source_dir, storage_provenance="HISTORICAL_PERSISTED")

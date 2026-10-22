@@ -12,7 +12,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
+from hashlib import sha256
+import json
 import math
+from pathlib import Path
 from typing import Any, Callable, Mapping
 
 from .cognitive_memory_timeline_v1 import (
@@ -60,6 +63,27 @@ class ExperienceRelationLinkV1:
             raise ValueError("CAUSAL_PROVEN requires explicit independent evidence_refs")
         if not self.rationale.strip():
             raise ValueError("rationale is required")
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "source_experience_id": self.source_experience_id,
+            "target_experience_id": self.target_experience_id,
+            "relation_type": self.relation_type.value,
+            "strength": self.strength,
+            "rationale": self.rationale,
+            "evidence_refs": list(self.evidence_refs),
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> ExperienceRelationLinkV1:
+        return cls(
+            source_experience_id=data["source_experience_id"],
+            target_experience_id=data["target_experience_id"],
+            relation_type=MultidimensionalRelationTypeV1(data["relation_type"]),
+            strength=float(data["strength"]),
+            rationale=data["rationale"],
+            evidence_refs=tuple(data.get("evidence_refs", ())),
+        )
 
 
 # --- M05: Meaning-Driven Query Intent ---
@@ -324,3 +348,45 @@ class MultidimensionalCognitiveMemoryEngineV1:
             suggested_procedure=suggested,
             code_execution_permitted=False,  # Memory suggests, governor executes
         )
+
+    def save_to_directory(self, dir_path: Path | str) -> dict[str, Any]:
+        """Persists index experiences and relational graph to disk."""
+        p = Path(dir_path)
+        p.mkdir(parents=True, exist_ok=True)
+        idx_res = self.index.save_to_directory(p)
+        rel_file = p / "relations.jsonl"
+        with rel_file.open("w", encoding="utf-8") as f:
+            for link in self._links:
+                f.write(json.dumps(link.to_dict(), ensure_ascii=False) + "\n")
+        return {
+            "saved_count": idx_res["saved_count"],
+            "experiences": idx_res,
+            "saved_relations_count": len(self._links),
+            "relations_path": str(rel_file),
+            "relations_sha256": sha256(rel_file.read_bytes()).hexdigest(),
+        }
+
+    def load_from_directory(
+        self,
+        dir_path: Path | str,
+        storage_provenance: str = "HISTORICAL_PERSISTED",
+    ) -> dict[str, Any]:
+        """Loads both experiences and relational links from disk."""
+        p = Path(dir_path)
+        exp_count = self.index.load_from_directory(p, storage_provenance=storage_provenance)
+        rel_file = p / "relations.jsonl"
+        rel_count = 0
+        if rel_file.is_file():
+            with rel_file.open("r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    d = json.loads(line)
+                    self.add_relation(ExperienceRelationLinkV1.from_dict(d))
+                    rel_count += 1
+        return {
+            "loaded_experiences": exp_count,
+            "loaded_relations": rel_count,
+            "storage_provenance": storage_provenance,
+        }
