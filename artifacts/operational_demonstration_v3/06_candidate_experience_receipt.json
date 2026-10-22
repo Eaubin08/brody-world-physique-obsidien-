@@ -1,0 +1,19 @@
+{
+  "experience_id": "EXP-CANDIDATE-OPERATIONAL-V3",
+  "decision_authority": "KX108_ONLY",
+  "native_memory_write_allowed": false,
+  "provenance": "LOCAL_CANDIDATE_LEDGER",
+  "observation_sha256": "d9c0e609bfd2b28d54523f5d3fef5e6c15ca4e6a637201cac5299b4f9fce5934",
+  "initial_iou": 0.8075,
+  "final_iou": 0.8829,
+  "selected_tool": "PEN",
+  "retrieved_procedure_id": "EXP-TOOL-ROUTING-PEN-PRECISION-01",
+  "error_patches_detected": 2,
+  "correction_applied": true,
+  "tree_projections": {
+    "11": "Science: Détection d'écarts géométriques par re-perception",
+    "12": "Technique: Routage d'instruments et assemblage au trait",
+    "20": "Action: Correction motrice en boucle fermée",
+    "26": "Cohérence: Maintien des continuités structurelles"
+  }
+}
