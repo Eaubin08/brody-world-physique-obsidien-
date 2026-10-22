@@ -1,0 +1,124 @@
+{
+  "suite_name": "BRODY_EXPANDED_GENERALIZATION_AND_INTENT_CURRICULUM_V1",
+  "evaluated_families_count": 5,
+  "exam_results": [
+    {
+      "exam_id": "EXAM_TEMPLE_FACADE",
+      "family_name": "ARCHITECTURE",
+      "target_sha256": "e77820e4c350249789ed65bd7e7c3a0c608f81c707485e27a5fa01f8f155ed7c",
+      "final_iou": 0.8239,
+      "final_xor_error": 200,
+      "proportions_fidelity": 0.0283,
+      "centroid_drift_px": 0.5,
+      "total_operations": 8,
+      "total_cost": 18.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-TRUSS-DIAGONAL",
+        "EXP-LESSON-ARCH-STRUCTURAL"
+      ],
+      "competence_status": "HIGH_FIDELITY_TRANSFER",
+      "failure_boundary_reason": "Within PLANAR_ORTHO_CURVILINEAR domain. Structural transfer active.",
+      "reference_image": "ref_exam_temple_facade.png",
+      "production_image": "brody_prod_exam_temple_facade.png"
+    },
+    {
+      "exam_id": "EXAM_HOURGLASS",
+      "family_name": "VESSELS",
+      "target_sha256": "7fb24578b846506184d7455a9049ff43c7f7dcffa12697b4a2643767d1b8aaaf",
+      "final_iou": 0.7414,
+      "final_xor_error": 166,
+      "proportions_fidelity": 0.0,
+      "centroid_drift_px": 0.0,
+      "total_operations": 8,
+      "total_cost": 12.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-BOWL-CURVILINEAR",
+        "EXP-LESSON-ARCH-STRUCTURAL"
+      ],
+      "competence_status": "MODERATE_TRANSFER",
+      "failure_boundary_reason": "Within PLANAR_ORTHO_CURVILINEAR domain. Conical chamber transfer active.",
+      "reference_image": "ref_exam_hourglass.png",
+      "production_image": "brody_prod_exam_hourglass.png"
+    },
+    {
+      "exam_id": "EXAM_SLEDGEHAMMER",
+      "family_name": "TOOLS_MECHANICAL",
+      "target_sha256": "9c494d37c5057fe1ad08efae83a7be67ebc293aef55eb61347bccf8c32204e69",
+      "final_iou": 0.8442,
+      "final_xor_error": 93,
+      "proportions_fidelity": 0.0,
+      "centroid_drift_px": 0.0,
+      "total_operations": 8,
+      "total_cost": 15.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-BARBELL-SHAFT",
+        "EXP-LESSON-ARCH-STRUCTURAL"
+      ],
+      "competence_status": "HIGH_FIDELITY_TRANSFER",
+      "failure_boundary_reason": "Within PLANAR_ORTHO_CURVILINEAR domain. Block-and-shaft schema active.",
+      "reference_image": "ref_exam_sledgehammer.png",
+      "production_image": "brody_prod_exam_sledgehammer.png"
+    },
+    {
+      "exam_id": "EXAM_ORGANIC_BRANCHING",
+      "family_name": "ORGANIC_FRACTAL",
+      "target_sha256": "6f042d179098b3ad3e2c5c3c4c05a38f639f97a34f477ae0f726cc11d1f27798",
+      "final_iou": 0.1647,
+      "final_xor_error": 502,
+      "proportions_fidelity": 0.0222,
+      "centroid_drift_px": 0.5,
+      "total_operations": 8,
+      "total_cost": 11.0,
+      "retrieved_experiences": [],
+      "competence_status": "OUT_OF_BOUNDS_REJECTION",
+      "failure_boundary_reason": "Forme de la famille ORGANIC_FRACTAL non-orthogonale et fractale. Hors frontière de compétence (PLANAR_ORTHO_CURVILINEAR). Refus de prétention de maîtrise non fondée : échec honnête consigné.",
+      "reference_image": "ref_exam_organic_branching.png",
+      "production_image": "brody_prod_exam_organic_branching.png"
+    },
+    {
+      "exam_id": "EXAM_AMORPHOUS_BLOB",
+      "family_name": "AMORPHOUS_CREVICE",
+      "target_sha256": "3e1439fe17840b3a11eeabee0ebd4fcab42366047e7da68328d2a1b42e289e3c",
+      "final_iou": 0.1297,
+      "final_xor_error": 953,
+      "proportions_fidelity": 0.2016,
+      "centroid_drift_px": 0.5,
+      "total_operations": 8,
+      "total_cost": 11.0,
+      "retrieved_experiences": [],
+      "competence_status": "OUT_OF_BOUNDS_REJECTION",
+      "failure_boundary_reason": "Forme de la famille AMORPHOUS_CREVICE non-orthogonale et fractale. Hors frontière de compétence (PLANAR_ORTHO_CURVILINEAR). Refus de prétention de maîtrise non fondée : échec honnête consigné.",
+      "reference_image": "ref_exam_amorphous_blob.png",
+      "production_image": "brody_prod_exam_amorphous_blob.png"
+    }
+  ],
+  "intent_only_creation": {
+    "mode": "INTENT_ONLY_CREATION_WITH_REPERCEPTION",
+    "declared_intention": "Create a classical temple facade with triangular pediment, 4 vertical colonnade pillars and stepped base plate",
+    "target_provided": false,
+    "retrieved_experiences": [
+      "EXP-LESSON-TRUSS-DIAGONAL",
+      "EXP-LESSON-ARCH-STRUCTURAL"
+    ],
+    "total_operations": 8,
+    "total_cost": 18.5,
+    "rendered_black_pixels": 985,
+    "structural_bounding_box": [
+      6,
+      9,
+      58,
+      53
+    ],
+    "aspect_ratio_w_over_h": 1.18,
+    "intention_satisfaction_score": 1.0,
+    "decision_authority": "KX108_ONLY",
+    "is_candidate": true
+  },
+  "epistemic_invariants": {
+    "decision_authority": "KX108_ONLY",
+    "is_candidate": true,
+    "native_memory_write_allowed": false,
+    "is_3d_view_synthesis": false,
+    "no_dynamic_code_execution": true
+  }
+}

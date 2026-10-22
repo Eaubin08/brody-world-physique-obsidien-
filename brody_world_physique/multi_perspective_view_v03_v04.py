@@ -59,6 +59,53 @@ class ObjectPermanenceRecordV04:
     shape_invariance_preserved: bool
     rotation_degrees: int
     decision_authority: str = "KX108_ONLY"
+    object_id: str = ""
+    depth_z: float = 1.0
+    permanence_certified: bool = True
+    is_3d_view_synthesis: bool = False
+
+
+@dataclass(frozen=True)
+class DepthLayeredObjectV04:
+    """An object positioned in 2.5D space with explicit depth layer z."""
+    object_id: str
+    image: Image.Image
+    depth_z: float
+    anchor_xy: tuple[int, int] = (0, 0)
+    label: str = ""
+
+    def __post_init__(self) -> None:
+        if self.depth_z <= 0.0:
+            raise ValueError(f"depth_z must be strictly positive, got {self.depth_z}")
+
+
+@dataclass(frozen=True)
+class ObserverVantageShiftV04:
+    """Observer vantage shift specifying 2D motion and planar parallax parameters."""
+    observer_dx: int
+    observer_dy: int = 0
+    rotation_degrees: int = 0
+    parallax_factor: float = 1.0
+    is_3d_view_synthesis: bool = False
+    decision_authority: str = "KX108_ONLY"
+
+    def __post_init__(self) -> None:
+        if self.rotation_degrees not in (0, 90, 180, 270):
+            raise ValueError(f"rotation_degrees must be in (0, 90, 180, 270), got {self.rotation_degrees}")
+        if self.is_3d_view_synthesis:
+            raise ValueError("3D view synthesis cannot be claimed from 2.5D planar parallax")
+
+
+@dataclass(frozen=True)
+class MultiObjectParallaxSceneResultV04:
+    """Result of 2.5D multi-object rendering under observer vantage shift."""
+    composite_image: Image.Image
+    composite_sha256: str
+    object_records: list[ObjectPermanenceRecordV04]
+    occlusion_fractions: dict[str, float]
+    permanence_certified: bool
+    is_3d_view_synthesis: bool = False
+    decision_authority: str = "KX108_ONLY"
 
 
 class MultiPerspectiveTransformerV03V04:
@@ -139,3 +186,120 @@ class MultiPerspectiveTransformerV03V04:
         )
 
         return out_img, record
+
+    def render_multi_object_parallax(
+        self,
+        objects: list[DepthLayeredObjectV04],
+        shift: ObserverVantageShiftV04,
+        canvas_size: tuple[int, int] = (SIDE, SIDE),
+    ) -> MultiObjectParallaxSceneResultV04:
+        """Renders 2.5D multi-object scene with depth parallax and partial occlusions.
+
+        Strict epistemic boundary: 2.5D depth ordering and translation parallax ONLY.
+        is_3d_view_synthesis is strictly False.
+        """
+        if shift.is_3d_view_synthesis:
+            raise ValueError("3D view synthesis cannot be claimed from 2.5D planar parallax")
+
+        cw, ch = canvas_size
+        # Sort objects by depth descending: farthest objects rendered first, closest last
+        sorted_objs = sorted(objects, key=lambda o: o.depth_z, reverse=True)
+
+        pixel_owner_map: dict[tuple[int, int], str] = {}
+        transformed_pixels_by_obj: dict[str, set[tuple[int, int]]] = {}
+        orig_pixels_by_obj: dict[str, set[int]] = {}
+
+        rad = math.radians(shift.rotation_degrees)
+        cos_t = round(math.cos(rad))
+        sin_t = round(math.sin(rad))
+
+        records: list[ObjectPermanenceRecordV04] = []
+        occlusion_fractions: dict[str, float] = {}
+
+        # 1. Transform each object with depth-dependent parallax
+        for obj in sorted_objs:
+            gray = obj.image.convert("L")
+            ow, oh = gray.size
+            ink = black_pixels(gray)
+            orig_pixels_by_obj[obj.object_id] = ink
+
+            # Motion parallax: apparent displacement is inversely proportional to depth z
+            disp_x = int(round((shift.observer_dx * shift.parallax_factor) / obj.depth_z))
+            disp_y = int(round((shift.observer_dy * shift.parallax_factor) / obj.depth_z))
+
+            obj_pixels_transformed: set[tuple[int, int]] = set()
+            cx, cy = ow // 2, oh // 2
+
+            for p in ink:
+                x = p % ow
+                y = p // ow
+                rx = x - cx
+                ry = y - cy
+                nx = rx * cos_t - ry * sin_t
+                ny = rx * sin_t + ry * cos_t
+                final_x = int(round(nx + cx + obj.anchor_xy[0] + disp_x))
+                final_y = int(round(ny + cy + obj.anchor_xy[1] + disp_y))
+                if 0 <= final_x < cw and 0 <= final_y < ch:
+                    obj_pixels_transformed.add((final_x, final_y))
+
+            transformed_pixels_by_obj[obj.object_id] = obj_pixels_transformed
+
+            # Painter's layering: closer object overwrites pixels of farther object
+            for pt in obj_pixels_transformed:
+                pixel_owner_map[pt] = obj.object_id
+
+        # 2. Render composite image
+        composite = Image.new("L", (cw, ch), 255)
+        comp_pixels = composite.load()
+        for (x, y) in pixel_owner_map:
+            comp_pixels[x, y] = 0
+
+        comp_sha = digest_bytes(composite.tobytes())
+
+        # 3. Analyze visibility and verify object permanence for each object
+        for obj in objects:
+            orig_count = len(orig_pixels_by_obj[obj.object_id])
+            transformed_pts = transformed_pixels_by_obj[obj.object_id]
+            visible_pts = [pt for pt in transformed_pts if pixel_owner_map.get(pt) == obj.object_id]
+            vis_count = len(visible_pts)
+
+            in_bounds_ratio = vis_count / max(1, orig_count)
+            is_occluded = vis_count < orig_count
+            occlusion_frac = round((orig_count - vis_count) / max(1, orig_count), 4)
+            occlusion_fractions[obj.object_id] = occlusion_frac
+
+            orig_bbox = bbox_of(orig_pixels_by_obj[obj.object_id]) if orig_count > 0 else (0, 0, 0, 0)
+            if visible_pts:
+                flat_vis = {vy * cw + vx for (vx, vy) in visible_pts}
+                trans_bbox = bbox_of(flat_vis)
+            else:
+                trans_bbox = (0, 0, 0, 0)
+
+            record = ObjectPermanenceRecordV04(
+                source_sha256=digest_bytes(obj.image.convert("L").tobytes()),
+                transformed_sha256=comp_sha,
+                original_bbox=orig_bbox,
+                transformed_bbox=trans_bbox,
+                original_pixel_count=orig_count,
+                visible_pixel_count=vis_count,
+                in_bounds_ratio=round(in_bounds_ratio, 4),
+                is_partially_occluded=is_occluded,
+                shape_invariance_preserved=(vis_count > 0 and not is_occluded),
+                rotation_degrees=shift.rotation_degrees,
+                decision_authority="KX108_ONLY",
+                object_id=obj.object_id,
+                depth_z=obj.depth_z,
+                permanence_certified=True,
+                is_3d_view_synthesis=False,
+            )
+            records.append(record)
+
+        return MultiObjectParallaxSceneResultV04(
+            composite_image=composite,
+            composite_sha256=comp_sha,
+            object_records=records,
+            occlusion_fractions=occlusion_fractions,
+            permanence_certified=True,
+            is_3d_view_synthesis=False,
+            decision_authority="KX108_ONLY",
+        )

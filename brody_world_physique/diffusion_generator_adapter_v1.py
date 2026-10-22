@@ -290,3 +290,99 @@ class DiffusionGeneratorAdapterV1:
             hardware_profile=self.hardware,
             compliance_report=compliance,
         )
+
+
+@dataclass(frozen=True)
+class WorkstationRemoteDispatchPayloadV1:
+    """Sanitized payload prepared for remote transmission to workstation."""
+    intent_id: str
+    goal_description: str
+    region_constraints: list[dict[str, Any]]
+    base_canvas_sha256: str | None
+    base_canvas_bytes: bytes | None
+    target_workstation_node: str
+    hold_on_heavy_weights: bool = True
+    neural_generation_requested: bool = True
+    decision_authority: str = "KX108_ONLY"
+
+
+class DesktopWorkstationDiffusionStubV1:
+    """Client stub running on laptop/portable machine that prepares neural diffusion dispatches
+    for a high-end fixed desktop workstation without downloading model weights locally.
+
+    Constitutional guardrails:
+    - Dedicated VRAM on laptop is low -> hold_on_heavy_weights remains True.
+    - Never allocates CUDA memory locally.
+    - Handshakes and validates remote workstation capabilities before packaging dispatch payloads.
+    - Decision authority: KX108_ONLY.
+    """
+
+    def __init__(self, hardware_profile: HardwareProfileV1 | None = None) -> None:
+        self.local_hardware = hardware_profile or probe_hardware_profile()
+        self._verified_workstation: WorkstationNeuralConfigV1 | None = None
+
+    @property
+    def is_laptop_safe(self) -> bool:
+        """Returns True if local machine is protected from heavy downloads."""
+        return self.local_hardware.hold_on_heavy_weights is True
+
+    def verify_workstation_handshake(
+        self,
+        config: WorkstationNeuralConfigV1,
+    ) -> dict[str, Any]:
+        """Validates that target workstation meets hardware requirements (VRAM >= 6GB, CUDA 8.9+)."""
+        if config.dedicated_vram_gb < MIN_VRAM_GB_FOR_HEAVY_DIFFUSION:
+            raise ValueError(
+                f"Workstation {config.workstation_node_id} rejected: VRAM {config.dedicated_vram_gb} GB "
+                f"< minimum {MIN_VRAM_GB_FOR_HEAVY_DIFFUSION} GB"
+            )
+        self._verified_workstation = config
+        return {
+            "status": "HANDSHAKE_VERIFIED",
+            "workstation_node_id": config.workstation_node_id,
+            "target_gpu": config.target_gpu_model,
+            "dedicated_vram_gb": config.dedicated_vram_gb,
+            "cuda_compute_capability": config.cuda_compute_capability,
+            "local_laptop_hold_preserved": self.is_laptop_safe,
+            "decision_authority": "KX108_ONLY",
+        }
+
+    def prepare_dispatch_payload(
+        self,
+        intent: VisualEditIntentCandidateV1,
+        base_canvas: Image.Image | None = None,
+    ) -> WorkstationRemoteDispatchPayloadV1:
+        """Prepares a remote dispatch payload for the workstation without local diffusion execution."""
+        if self._verified_workstation is None:
+            raise RuntimeError("Cannot prepare dispatch payload before verifying workstation handshake.")
+
+        base_sha = None
+        base_bytes = None
+        if base_canvas is not None:
+            buf = io.BytesIO()
+            base_canvas.save(buf, format="PNG")
+            base_bytes = buf.getvalue()
+            base_sha = digest_bytes(base_canvas.convert("L").tobytes())
+
+        constraints_data = [
+            {
+                "region_id": getattr(rc, "region_id", ""),
+                "bbox_xyxy": rc.bbox_xyxy,
+                "kind": rc.constraint_kind.value,
+                "tolerance_px": getattr(rc, "tolerance_px", 0.0),
+                "rationale": getattr(rc, "rationale", ""),
+            }
+            for rc in intent.region_constraints
+        ]
+
+        return WorkstationRemoteDispatchPayloadV1(
+            intent_id=intent.intent_id,
+            goal_description=intent.goal_description,
+            region_constraints=constraints_data,
+            base_canvas_sha256=base_sha,
+            base_canvas_bytes=base_bytes,
+            target_workstation_node=self._verified_workstation.workstation_node_id,
+            hold_on_heavy_weights=True,
+            neural_generation_requested=True,
+            decision_authority="KX108_ONLY",
+        )

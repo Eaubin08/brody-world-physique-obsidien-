@@ -1,0 +1,534 @@
+{
+  "suite_name": "BRODY_PROGRESSIVE_MEMORY_ATTRIBUTION_ABLATION_V1",
+  "budget_ceilings_per_stage": {
+    "max_steps": 8,
+    "max_cost": 25.0,
+    "instruments_allowed": [
+      "SELECT_TOOL",
+      "GEOMETRIC_STAMP",
+      "DRAW_STROKE",
+      "ERASE_REGION",
+      "INSPECT_PIXELS"
+    ]
+  },
+  "target_task": "EXAM_ARCHED_BRIDGE (Unseen viaduct)",
+  "stages_count": 6,
+  "results": [
+    {
+      "stage_id": "STAGE_1_PROCEDURE_ONLY",
+      "stage_name_fr": "1. Procédure seule (Syntaxe brute)",
+      "active_mechanisms": [
+        "PROCEDURAL_SYNTAX_ONLY"
+      ],
+      "final_iou": 0.2391,
+      "final_xor_error": 1286,
+      "proportions_fidelity": 0.0,
+      "centroid_drift_px": 2.0,
+      "total_operations": 8,
+      "total_cost": 15.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-ARCH-STRUCTURAL"
+      ],
+      "queried_trees": [],
+      "active_meaning_intents": [],
+      "mechanism_diagnostic_note": "Procédure brute sans métadonnées ni relations : application rigide du portique de Leçon A. Incapable de dissocier les montants de l'arche ni d'adapter les dimensions au tablier étendu.",
+      "production_image": "brody_ablation_stage_1_procedure_only.png",
+      "trajectory_curve": [
+        {
+          "step": 1,
+          "tool": "SELECT_TOOL",
+          "cost": 0.5,
+          "iou": 0.0,
+          "xor_error": 1306
+        },
+        {
+          "step": 2,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 3.5,
+          "iou": 0.1225,
+          "xor_error": 1218
+        },
+        {
+          "step": 3,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 6.5,
+          "iou": 0.1674,
+          "xor_error": 1243
+        },
+        {
+          "step": 4,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 9.5,
+          "iou": 0.2065,
+          "xor_error": 1268
+        },
+        {
+          "step": 5,
+          "tool": "DRAW_STROKE",
+          "cost": 11.0,
+          "iou": 0.216,
+          "xor_error": 1292
+        },
+        {
+          "step": 6,
+          "tool": "DRAW_STROKE",
+          "cost": 12.5,
+          "iou": 0.2391,
+          "xor_error": 1286
+        },
+        {
+          "step": 7,
+          "tool": "DRAW_STROKE",
+          "cost": 14.0,
+          "iou": 0.2391,
+          "xor_error": 1286
+        },
+        {
+          "step": 8,
+          "tool": "DRAW_STROKE",
+          "cost": 15.5,
+          "iou": 0.2391,
+          "xor_error": 1286
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_2_PROCEDURE_PLUS_DOMAINS",
+      "stage_name_fr": "2. Procédure + Domaines",
+      "active_mechanisms": [
+        "PROCEDURAL_SYNTAX",
+        "DOMAIN_FILTERING(DRAWING,ARCHITECTURE)"
+      ],
+      "final_iou": 0.2391,
+      "final_xor_error": 1286,
+      "proportions_fidelity": 0.0,
+      "centroid_drift_px": 2.0,
+      "total_operations": 8,
+      "total_cost": 15.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-ARCH-STRUCTURAL"
+      ],
+      "queried_trees": [],
+      "active_meaning_intents": [],
+      "mechanism_diagnostic_note": "Filtrage par domaine spécialisé : exclut les compétences physiques/vidéo distractorices (ex: EXP-BALL-PHYSICS-TRAJECTORY). Prévient la pollution inter-domaines mais n'apporte pas encore de gain géométrique pur sans liens relationnels.",
+      "production_image": "brody_ablation_stage_2_procedure_plus_domains.png",
+      "trajectory_curve": [
+        {
+          "step": 1,
+          "tool": "SELECT_TOOL",
+          "cost": 0.5,
+          "iou": 0.0,
+          "xor_error": 1306
+        },
+        {
+          "step": 2,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 3.5,
+          "iou": 0.1225,
+          "xor_error": 1218
+        },
+        {
+          "step": 3,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 6.5,
+          "iou": 0.1674,
+          "xor_error": 1243
+        },
+        {
+          "step": 4,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 9.5,
+          "iou": 0.2065,
+          "xor_error": 1268
+        },
+        {
+          "step": 5,
+          "tool": "DRAW_STROKE",
+          "cost": 11.0,
+          "iou": 0.216,
+          "xor_error": 1292
+        },
+        {
+          "step": 6,
+          "tool": "DRAW_STROKE",
+          "cost": 12.5,
+          "iou": 0.2391,
+          "xor_error": 1286
+        },
+        {
+          "step": 7,
+          "tool": "DRAW_STROKE",
+          "cost": 14.0,
+          "iou": 0.2391,
+          "xor_error": 1286
+        },
+        {
+          "step": 8,
+          "tool": "DRAW_STROKE",
+          "cost": 15.5,
+          "iou": 0.2391,
+          "xor_error": 1286
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_3_PROCEDURE_DOMAINS_RELATIONS",
+      "stage_name_fr": "3. Procédure + Domaines + Relations",
+      "active_mechanisms": [
+        "PROCEDURAL_SYNTAX",
+        "DOMAIN_FILTERING",
+        "RELATIONAL_GRAPH(COMPOSES_WITH)"
+      ],
+      "final_iou": 0.5697,
+      "final_xor_error": 654,
+      "proportions_fidelity": 0.0398,
+      "centroid_drift_px": 0.5,
+      "total_operations": 8,
+      "total_cost": 15.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-ARCH-STRUCTURAL",
+        "EXP-LESSON-BOWL-CURVILINEAR"
+      ],
+      "queried_trees": [],
+      "active_meaning_intents": [],
+      "mechanism_diagnostic_note": "Graphe relationnel COMPOSES_WITH activé : débloque la composition modulaire. Brody combine la structure linteau/colonnes (Leçon A) avec la voûte concave (Leçon B), produisant le premier saut qualitatif d'IoU (dépassement du seuil de 0.50).",
+      "production_image": "brody_ablation_stage_3_procedure_domains_relations.png",
+      "trajectory_curve": [
+        {
+          "step": 1,
+          "tool": "SELECT_TOOL",
+          "cost": 0.5,
+          "iou": 0.0,
+          "xor_error": 1306
+        },
+        {
+          "step": 2,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 3.5,
+          "iou": 0.2292,
+          "xor_error": 1026
+        },
+        {
+          "step": 3,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 6.5,
+          "iou": 0.3787,
+          "xor_error": 827
+        },
+        {
+          "step": 4,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 9.5,
+          "iou": 0.5282,
+          "xor_error": 628
+        },
+        {
+          "step": 5,
+          "tool": "DRAW_STROKE",
+          "cost": 11.0,
+          "iou": 0.546,
+          "xor_error": 646
+        },
+        {
+          "step": 6,
+          "tool": "DRAW_STROKE",
+          "cost": 12.5,
+          "iou": 0.5635,
+          "xor_error": 646
+        },
+        {
+          "step": 7,
+          "tool": "DRAW_STROKE",
+          "cost": 14.0,
+          "iou": 0.5697,
+          "xor_error": 654
+        },
+        {
+          "step": 8,
+          "tool": "DRAW_STROKE",
+          "cost": 15.5,
+          "iou": 0.5697,
+          "xor_error": 654
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_4_TIMELINES_AND_REVISIONS",
+      "stage_name_fr": "4. Ajout Temporalités et Révisions",
+      "active_mechanisms": [
+        "PROCEDURAL_SYNTAX",
+        "DOMAIN_FILTERING",
+        "RELATIONAL_GRAPH",
+        "TIMELINE_ENVELOPE",
+        "EPISTEMIC_CALIBRATION",
+        "FAILURE_BOUNDARY_GUARDS"
+      ],
+      "final_iou": 0.5711,
+      "final_xor_error": 651,
+      "proportions_fidelity": 0.0398,
+      "centroid_drift_px": 0.5,
+      "total_operations": 8,
+      "total_cost": 15.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-ARCH-STRUCTURAL",
+        "EXP-LESSON-BOWL-CURVILINEAR"
+      ],
+      "queried_trees": [],
+      "active_meaning_intents": [],
+      "mechanism_diagnostic_note": "Frise temporelle et calibration épistémique : vérifie la validité temporelle et les frontières d'applicabilité (CANVAS=64x64, PLANAR_2D). Écarte les procédures instables et sécurise les bornes des coordonnées de traçage.",
+      "production_image": "brody_ablation_stage_4_timelines_and_revisions.png",
+      "trajectory_curve": [
+        {
+          "step": 1,
+          "tool": "SELECT_TOOL",
+          "cost": 0.5,
+          "iou": 0.0,
+          "xor_error": 1306
+        },
+        {
+          "step": 2,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 3.5,
+          "iou": 0.2292,
+          "xor_error": 1026
+        },
+        {
+          "step": 3,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 6.5,
+          "iou": 0.3787,
+          "xor_error": 827
+        },
+        {
+          "step": 4,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 9.5,
+          "iou": 0.5282,
+          "xor_error": 628
+        },
+        {
+          "step": 5,
+          "tool": "DRAW_STROKE",
+          "cost": 11.0,
+          "iou": 0.5486,
+          "xor_error": 641
+        },
+        {
+          "step": 6,
+          "tool": "DRAW_STROKE",
+          "cost": 12.5,
+          "iou": 0.566,
+          "xor_error": 641
+        },
+        {
+          "step": 7,
+          "tool": "DRAW_STROKE",
+          "cost": 14.0,
+          "iou": 0.5711,
+          "xor_error": 651
+        },
+        {
+          "step": 8,
+          "tool": "DRAW_STROKE",
+          "cost": 15.5,
+          "iou": 0.5711,
+          "xor_error": 651
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_5_CANONICAL_34_TREES",
+      "stage_name_fr": "5. Ajout Projections 34 Arbres",
+      "active_mechanisms": [
+        "PROCEDURAL_SYNTAX",
+        "DOMAIN_FILTERING",
+        "RELATIONAL_GRAPH",
+        "TIMELINE_CALIBRATION",
+        "34_TREES_PROJECTION(03,12,13,20,24,26)"
+      ],
+      "final_iou": 0.6001,
+      "final_xor_error": 589,
+      "proportions_fidelity": 0.0398,
+      "centroid_drift_px": 0.5,
+      "total_operations": 8,
+      "total_cost": 15.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-ARCH-STRUCTURAL",
+        "EXP-LESSON-BOWL-CURVILINEAR"
+      ],
+      "queried_trees": [
+        "03",
+        "12",
+        "13",
+        "20",
+        "24",
+        "26"
+      ],
+      "active_meaning_intents": [],
+      "mechanism_diagnostic_note": "Projection sur les 34 arbres canoniques : Arbre 03 (Perception) guide la segmentation, Arbre 12 (Technique) sélectionne les montants et le tablier, Arbre 13 (Art) paramètre la courbure elliptique lisse de l'arche, Arbre 26 (Cohérence) impose le centrage.",
+      "production_image": "brody_ablation_stage_5_canonical_34_trees.png",
+      "trajectory_curve": [
+        {
+          "step": 1,
+          "tool": "SELECT_TOOL",
+          "cost": 0.5,
+          "iou": 0.0,
+          "xor_error": 1306
+        },
+        {
+          "step": 2,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 3.5,
+          "iou": 0.2292,
+          "xor_error": 1026
+        },
+        {
+          "step": 3,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 6.5,
+          "iou": 0.3787,
+          "xor_error": 827
+        },
+        {
+          "step": 4,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 9.5,
+          "iou": 0.5282,
+          "xor_error": 628
+        },
+        {
+          "step": 5,
+          "tool": "DRAW_STROKE",
+          "cost": 11.0,
+          "iou": 0.5904,
+          "xor_error": 557
+        },
+        {
+          "step": 6,
+          "tool": "DRAW_STROKE",
+          "cost": 12.5,
+          "iou": 0.6069,
+          "xor_error": 557
+        },
+        {
+          "step": 7,
+          "tool": "DRAW_STROKE",
+          "cost": 14.0,
+          "iou": 0.6001,
+          "xor_error": 589
+        },
+        {
+          "step": 8,
+          "tool": "DRAW_STROKE",
+          "cost": 15.5,
+          "iou": 0.6001,
+          "xor_error": 589
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_6_FULL_MULTIDIMENSIONAL",
+      "stage_name_fr": "6. Architecture Mémoire Complète (M01-M09)",
+      "active_mechanisms": [
+        "PROCEDURAL_SYNTAX",
+        "DOMAIN_FILTERING",
+        "RELATIONAL_GRAPH",
+        "TIMELINE_CALIBRATION",
+        "34_TREES_PROJECTION",
+        "MEANING_INTENT_QUERIES(HOW_DID_I_SUCCEED,WHICH_METHOD_IS_TRANSFERABLE)",
+        "ADMISSIBILITY_VERDICT_GUARDS",
+        "REPERCEPTION_CONNECTIVE_PATCHING"
+      ],
+      "final_iou": 0.7085,
+      "final_xor_error": 413,
+      "proportions_fidelity": 0.0398,
+      "centroid_drift_px": 0.5,
+      "total_operations": 8,
+      "total_cost": 15.5,
+      "retrieved_experiences": [
+        "EXP-LESSON-ARCH-STRUCTURAL",
+        "EXP-LESSON-BOWL-CURVILINEAR"
+      ],
+      "queried_trees": [
+        "03",
+        "12",
+        "13",
+        "20",
+        "21",
+        "24",
+        "26"
+      ],
+      "active_meaning_intents": [
+        "HOW_DID_I_SUCCEED",
+        "WHICH_METHOD_IS_TRANSFERABLE"
+      ],
+      "mechanism_diagnostic_note": "Architecture M01–M09 complète : combine requêtes de sens, gouvernance d'admissibilité et ré-observation connectée. Les déficits résiduels de masse des piles sont résolus par tracé de renfort interne guidé par la perception, atteignant la haute fidélité (IoU > 0.70).",
+      "production_image": "brody_ablation_stage_6_full_multidimensional.png",
+      "trajectory_curve": [
+        {
+          "step": 1,
+          "tool": "SELECT_TOOL",
+          "cost": 0.5,
+          "iou": 0.0,
+          "xor_error": 1306
+        },
+        {
+          "step": 2,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 3.5,
+          "iou": 0.2292,
+          "xor_error": 1026
+        },
+        {
+          "step": 3,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 6.5,
+          "iou": 0.3787,
+          "xor_error": 827
+        },
+        {
+          "step": 4,
+          "tool": "GEOMETRIC_STAMP",
+          "cost": 9.5,
+          "iou": 0.5282,
+          "xor_error": 628
+        },
+        {
+          "step": 5,
+          "tool": "DRAW_STROKE",
+          "cost": 11.0,
+          "iou": 0.5904,
+          "xor_error": 557
+        },
+        {
+          "step": 6,
+          "tool": "DRAW_STROKE",
+          "cost": 12.5,
+          "iou": 0.6069,
+          "xor_error": 557
+        },
+        {
+          "step": 7,
+          "tool": "DRAW_STROKE",
+          "cost": 14.0,
+          "iou": 0.6577,
+          "xor_error": 485
+        },
+        {
+          "step": 8,
+          "tool": "DRAW_STROKE",
+          "cost": 15.5,
+          "iou": 0.7085,
+          "xor_error": 413
+        }
+      ]
+    }
+  ],
+  "epistemic_invariants": {
+    "decision_authority": "KX108_ONLY",
+    "is_candidate": true,
+    "native_memory_write_allowed": false,
+    "is_3d_view_synthesis": false,
+    "no_dynamic_code_execution": true
+  }
+}
