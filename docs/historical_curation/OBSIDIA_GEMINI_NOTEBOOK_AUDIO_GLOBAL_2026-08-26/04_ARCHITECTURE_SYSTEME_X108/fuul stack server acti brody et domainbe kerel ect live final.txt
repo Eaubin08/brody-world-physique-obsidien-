@@ -1,0 +1,937 @@
+﻿Onglet 1
+Oui. Commande unique full stack sans conflit 8000 :
+powershell -ExecutionPolicy Bypass -NoProfile -Command "& 'C:\Users\User\Desktop\OBSIDIA_LAUNCHERS\00_STOP_ALL_SERVERS.ps1'; Start-Sleep -Seconds 2; & 'C:\Users\User\Desktop\OBSIDIA_LAUNCHERS\02_START_KERNEL_AND_DOMAINS.ps1'"
+
+
+Ça lance la matrice critique :
+Kernel Ragnarok 3001
+API Live Kernel Bridge 8000
+Bank connector
+Trading connector
+GPS/Aviation connector
+
+
+C’est le bon bloc pour ton kernel validé + domaines : le plan officiel garde Kernel 3001 comme autorité, API 8000 comme bridge/transport, puis les 3 connecteurs /api/live/kernel/adapters/bank, /trading, /gps.
+Pour ajouter UI + Graphiti + Brody terminaux sans relancer une deuxième API 8000 :
+powershell -ExecutionPolicy Bypass -NoProfile -Command "& 'C:\Users\User\Desktop\OBSIDIA_LAUNCHERS\00_STOP_ALL_SERVERS.ps1'; Start-Sleep -Seconds 2; & 'C:\Users\User\Desktop\OBSIDIA_LAUNCHERS\02_START_KERNEL_AND_DOMAINS.ps1'; Start-Sleep -Seconds 8; cd 'C:\Users\User\Desktop\obsidia-engine-proof-core\obsidiashell-main'; Start-Process powershell -ArgumentList '-NoExit','-Command','python -m uvicorn obsidia_core.agent_bridge:app --host 127.0.0.1 --port 8011'; cd 'C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B\apps\obsidia-workbench'; Start-Process powershell -ArgumentList '-NoExit','-Command','npm run dev -- --host 127.0.0.1 --port 5173'; Start-Process 'http://127.0.0.1:5173'; Start-Process 'http://127.0.0.1:8011/graph/v20/frozen/workbench'; Start-Process 'http://127.0.0.1:7475/browser/'"
+
+
+Utilise surtout la première si tu veux éviter les emmerdes.
+La deuxième = full visuel + Graphiti + UI, sans double API 8000.
+
+
+full stack domaine kernel
+Corrigé : on oublie Neo4j / Graphiti / UI / Brody terminal pour l’instant.
+Là tu veux seulement la matrice qui fait tourner les domaines :
+Kernel Ragnarok 3001
+API Obsidia 8000
+Bank connector
+Trading connector
+GPS/Aviation connector
+
+
+Neo4j est bien sur 127.0.0.1:7688, mais pas nécessaire pour ce bloc domaine/kernel/API.
+________________
+
+
+CMD FULL DOMAIN STACK — propre
+À coller dans PowerShell :
+# ============================================================
+# OBSIDIA DOMAIN STACK ONLY
+# Kernel Ragnarok 3001 + API 8000 + Bank/Trading/GPS
+# PAS Graphiti / PAS Neo4j / PAS UI / PAS Brody terminal
+# ============================================================
+
+
+$REPO = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+$RT = "$REPO\runtime_terrain_bank_trading_gps"
+$API = "http://127.0.0.1:8000"
+$KERNEL_URL = "http://127.0.0.1:3001/kernel/ragnarok"
+
+
+Write-Host "`n=== STOP DOMAIN STACK ONLY ===" -ForegroundColor Cyan
+
+
+# Stop uniquement kernel / API / connecteurs domaines
+Get-CimInstance Win32_Process |
+  Where-Object {
+    $_.CommandLine -match "server.kernel.sealed.cjs" -or
+    $_.CommandLine -match "apps.obsidia_api.main:app" -or
+    $_.CommandLine -match "connectors\\bank_normal_flow.py" -or
+    $_.CommandLine -match "connectors\\trading_live.py" -or
+    $_.CommandLine -match "connectors\\aviation_robo.py"
+  } |
+  ForEach-Object {
+    Write-Host "Stopping PID=$($_.ProcessId) CMD=$($_.CommandLine)" -ForegroundColor Yellow
+    Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue
+  }
+
+
+# Libère seulement les ports domaine/kernel/API
+foreach ($port in @(3001, 8000)) {
+  $pids = netstat -ano |
+    Select-String ":$port\s" |
+    Where-Object { $_.Line -match "LISTENING" } |
+    ForEach-Object { ($_ -split "\s+")[-1] } |
+    Sort-Object -Unique
+
+
+  foreach ($pid in $pids) {
+    if ($pid -and $pid -ne "0") {
+      Write-Host "Stopping port $port PID=$pid" -ForegroundColor Yellow
+      Stop-Process -Id ([int]$pid) -Force -ErrorAction SilentlyContinue
+    }
+  }
+}
+
+
+Start-Sleep -Seconds 2
+
+
+Write-Host "`n=== START KERNEL RAGNAROK 3001 ===" -ForegroundColor Cyan
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$RT'; [Console]::Title='RAGNAROK KERNEL 3001 - DOMAIN AUTHORITY'; node .\server.kernel.sealed.cjs"
+)
+
+
+Start-Sleep -Seconds 5
+
+
+Write-Host "`n=== START OBSIDIA API 8000 ===" -ForegroundColor Cyan
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$REPO'; [Console]::Title='OBSIDIA API 8000 - LIVE KERNEL BRIDGE'; `$env:PYTHONPATH='$REPO'; `$env:OBSIDIA_KERNEL_URL='$KERNEL_URL'; python -m uvicorn apps.obsidia_api.main:app --host 127.0.0.1 --port 8000"
+)
+
+
+Start-Sleep -Seconds 8
+
+
+Write-Host "`n=== CHECK API + LIVE ROUTES ===" -ForegroundColor Cyan
+
+
+try {
+  Invoke-RestMethod "$API/" -TimeoutSec 10 | ConvertTo-Json -Depth 8
+} catch {
+  Write-Host "API 8000 NOT READY" -ForegroundColor Red
+}
+
+
+try {
+  $openapi = Invoke-RestMethod "$API/openapi.json" -TimeoutSec 10
+  $openapi.paths.PSObject.Properties |
+    Where-Object { $_.Name -match "/api/live/kernel/adapters" } |
+    Select-Object Name |
+    Format-Table -AutoSize
+} catch {
+  Write-Host "OPENAPI ROUTES CHECK FAILED" -ForegroundColor Red
+}
+
+
+Write-Host "`n=== START DOMAIN CONNECTORS ===" -ForegroundColor Cyan
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$REPO'; [Console]::Title='BANK LIVE -> KERNEL'; `$env:PYTHONPATH='$REPO'; `$env:OBSIDIA_API_BASE='$API'; python .\connectors\bank_normal_flow.py"
+)
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$REPO'; [Console]::Title='TRADING LIVE -> KERNEL'; `$env:PYTHONPATH='$REPO'; `$env:OBSIDIA_API_BASE='$API'; python .\connectors\trading_live.py"
+)
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$REPO'; [Console]::Title='GPS AVIATION LIVE -> KERNEL'; `$env:PYTHONPATH='$REPO'; `$env:OBSIDIA_API_BASE='$API'; python .\connectors\aviation_robo.py"
+)
+
+
+Start-Sleep -Seconds 5
+
+
+Write-Host "`n=== FINAL DOMAIN STACK CHECK ===" -ForegroundColor Cyan
+
+
+netstat -ano | findstr ":3001"
+netstat -ano | findstr ":8000"
+
+
+Get-CimInstance Win32_Process |
+  Where-Object {
+    $_.CommandLine -match "server.kernel.sealed.cjs" -or
+    $_.CommandLine -match "apps.obsidia_api.main:app" -or
+    $_.CommandLine -match "connectors\\bank_normal_flow.py" -or
+    $_.CommandLine -match "connectors\\trading_live.py" -or
+    $_.CommandLine -match "connectors\\aviation_robo.py"
+  } |
+  Select-Object ProcessId, Name, CommandLine |
+  Format-Table -AutoSize
+
+
+Write-Host "`nDOMAIN STACK READY" -ForegroundColor Green
+Write-Host "Kernel : http://127.0.0.1:3001"
+Write-Host "API    : http://127.0.0.1:8000"
+Write-Host "Watch terminal RAGNAROK KERNEL 3001 for BANK / TRADING / GPS." -ForegroundColor Green
+
+
+________________
+
+
+CMD séparées par bloc
+1 — Aller dans le repo
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+2 — Lancer le kernel
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B\runtime_terrain_bank_trading_gps"
+node .\server.kernel.sealed.cjs
+
+
+3 — Lancer l’API 8000
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+$env:PYTHONPATH = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+$env:OBSIDIA_KERNEL_URL = "http://127.0.0.1:3001/kernel/ragnarok"
+
+
+python -m uvicorn apps.obsidia_api.main:app --host 127.0.0.1 --port 8000
+
+
+4 — Lancer Bank
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+$env:PYTHONPATH = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+$env:OBSIDIA_API_BASE = "http://127.0.0.1:8000"
+
+
+python .\connectors\bank_normal_flow.py
+
+
+5 — Lancer Trading
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+$env:PYTHONPATH = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+$env:OBSIDIA_API_BASE = "http://127.0.0.1:8000"
+
+
+python .\connectors\trading_live.py
+
+
+6 — Lancer GPS / Aviation
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+$env:PYTHONPATH = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+$env:OBSIDIA_API_BASE = "http://127.0.0.1:8000"
+
+
+python .\connectors\aviation_robo.py
+
+
+7 — Check routes API
+$openapi = Invoke-RestMethod "http://127.0.0.1:8000/openapi.json"
+
+
+$openapi.paths.PSObject.Properties |
+  Where-Object { $_.Name -match "/api/live/kernel/adapters" } |
+  Select-Object Name |
+  Format-Table -AutoSize
+
+
+Attendu :
+/api/live/kernel/adapters/bank
+/api/live/kernel/adapters/trading
+/api/live/kernel/adapters/gps
+
+
+8 — Check ports
+netstat -ano | findstr ":3001"
+netstat -ano | findstr ":8000"
+
+
+Attendu :
+3001 LISTENING = Kernel Ragnarok
+8000 LISTENING = API Obsidia
+
+
+9 — Ce que tu dois voir côté kernel
+[BRIDGE] Routing -> Domain: bank
+[KERNEL_DECISION]
+[SAVE] decision_bank_...
+
+
+[BRIDGE] Routing -> Domain: trading
+[KERNEL_DECISION]
+[SAVE] decision_trading_...
+
+
+[BRIDGE] Routing -> Domain: gps_defense_aviation
+[KERNEL_DECISION]
+[SAVE] decision_gps_defense_aviation_...
+
+
+Donc pour maintenant : pas besoin de Neo4j 7688, même s’il est bien connecté. On reste sur 3001 + 8000 + 3 connecteurs.
+
+
+full stack brody domaine kernel ect
+Oui. Là on passe en FULL BRODY STACK, avec :
+Kernel Ragnarok        3001
+API Obsidia/Brody      8000
+Graphiti / Shell       8011
+UI Workbench           5173
+Neo4j Browser          7475
+Neo4j Bolt             7688
+Bank connector
+Trading connector
+GPS/Aviation connector
+Brody V1 Chat
+Brody Enriched
+Brody Raw Inspector
+
+
+Le doc confirme : Brody n’a pas son propre serveur séparé, il vit dans API 8000 via /api/brody/*; Graphiti/Shell est sur 8011, UI sur 5173, Neo4j bolt sur 7688, et les terminaux Brody sont run_brody_terminal_chat.ps1, run_brody_terminal_enriched.ps1, run_brody_terminal.ps1.
+________________
+
+
+1 — FULL BRODY STACK — GROS BLOC À COLLER
+# ============================================================
+# OBSIDIA / BRODY FULL STACK
+# Kernel 3001 + API 8000 + Domaines + Graphiti 8011 + UI 5173
+# Neo4j 7475/7688 + 3 terminaux Brody
+# ============================================================
+
+
+$ROOT  = "C:\Users\User\Desktop\obsidia-engine-proof-core"
+$X108  = "$ROOT\obsidia-x108-proofs_REMOTE_A5F21C6B"
+$RT    = "$X108\runtime_terrain_bank_trading_gps"
+$SHELL = "$ROOT\obsidiashell-main"
+$UI_DIR = "$X108\apps\obsidia-workbench"
+
+
+$API   = "http://127.0.0.1:8000"
+$KERNEL_URL = "http://127.0.0.1:3001/kernel/ragnarok"
+$GRAPH = "http://127.0.0.1:8011"
+$UI    = "http://127.0.0.1:5173"
+
+
+$NEO4J_BROWSER = "http://127.0.0.1:7475/browser/"
+$NEO4J_BOLT    = "bolt://127.0.0.1:7688"
+
+
+$GRAPH_WORKBENCH = "$GRAPH/graph/v20/frozen/workbench"
+$GRAPH_DOCS = "$GRAPH/docs"
+
+
+Set-Location $X108
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "0. STOP OLD OBSIDIA/BRODY PROCESSES" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+# Stop uniquement les process de la stack Obsidia/Brody
+Get-CimInstance Win32_Process |
+  Where-Object {
+    $_.CommandLine -match "server.kernel.sealed.cjs" -or
+    $_.CommandLine -match "apps.obsidia_api.main:app" -or
+    $_.CommandLine -match "connectors\\bank_normal_flow.py" -or
+    $_.CommandLine -match "connectors\\trading_live.py" -or
+    $_.CommandLine -match "connectors\\aviation_robo.py" -or
+    $_.CommandLine -match "obsidia_core.agent_bridge:app" -or
+    $_.CommandLine -match "npm run dev" -or
+    $_.CommandLine -match "vite" -or
+    $_.CommandLine -match "run_brody_terminal_chat.ps1" -or
+    $_.CommandLine -match "run_brody_terminal_enriched.ps1" -or
+    $_.CommandLine -match "run_brody_terminal.ps1" -or
+    $_.CommandLine -match "brody_terminal_chat.py"
+  } |
+  ForEach-Object {
+    Write-Host "Stopping PID=$($_.ProcessId)" -ForegroundColor Yellow
+    Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue
+  }
+
+
+# Libère les ports applicatifs. On ne tue pas Neo4j 7475/7688 ici.
+foreach ($port in @(3001, 8000, 8011, 5173)) {
+  $pids = netstat -ano |
+    Select-String ":$port\s" |
+    Where-Object { $_.Line -match "LISTENING" } |
+    ForEach-Object { ($_ -split "\s+")[-1] } |
+    Sort-Object -Unique
+
+
+  foreach ($pid in $pids) {
+    if ($pid -and $pid -ne "0") {
+      Write-Host "Killing port $port PID=$pid" -ForegroundColor Yellow
+      Stop-Process -Id ([int]$pid) -Force -ErrorAction SilentlyContinue
+    }
+  }
+}
+
+
+Start-Sleep -Seconds 3
+
+
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "1. START NEO4J DOCKER — 7475 / 7688" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+try {
+  docker start deploy-neo4j-1 | Out-Host
+  Write-Host "Neo4j Docker OK / already running" -ForegroundColor Green
+} catch {
+  Write-Host "Docker start failed. Si Neo4j est déjà connected sur 127.0.0.1:7688, c'est OK." -ForegroundColor Yellow
+}
+
+
+Start-Sleep -Seconds 3
+
+
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "2. START KERNEL RAGNAROK — 3001" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$RT'; [Console]::Title='RAGNAROK KERNEL 3001 - AUTHORITY'; node .\server.kernel.sealed.cjs"
+)
+
+
+Start-Sleep -Seconds 5
+
+
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "3. START API OBSIDIA / BRODY — 8000" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$X108'; [Console]::Title='OBSIDIA API 8000 - BRODY + LIVE KERNEL BRIDGE'; `$env:PYTHONPATH='$X108'; `$env:OBSIDIA_KERNEL_URL='$KERNEL_URL'; python -m uvicorn apps.obsidia_api.main:app --host 127.0.0.1 --port 8000"
+)
+
+
+Start-Sleep -Seconds 8
+
+
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "4. CHECK API 8000 + BRODY ROUTE" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+try {
+  Invoke-RestMethod "$API/" -TimeoutSec 10 | ConvertTo-Json -Depth 8 | Out-Host
+  Write-Host "API 8000 OK" -ForegroundColor Green
+} catch {
+  Write-Host "API 8000 NOT READY" -ForegroundColor Red
+}
+
+
+try {
+  $BODY_OBJ = @{
+    message = "Test Brody readonly stack."
+    mode = "readonly_stack_launch"
+    compact = $true
+  }
+
+
+  $BODY_JSON = $BODY_OBJ | ConvertTo-Json -Depth 10 -Compress
+
+
+  $R = Invoke-RestMethod `
+    -Uri "$API/api/brody/chat" `
+    -Method POST `
+    -ContentType "application/json; charset=utf-8" `
+    -Body ([System.Text.Encoding]::UTF8.GetBytes($BODY_JSON)) `
+    -TimeoutSec 20
+
+
+  Write-Host "BRODY CHAT OK" -ForegroundColor Green
+  $R | ConvertTo-Json -Depth 6 | Out-Host
+} catch {
+  Write-Host "BRODY CHAT TEST FAILED" -ForegroundColor Yellow
+  Write-Host $_.Exception.Message -ForegroundColor Yellow
+}
+
+
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "5. START GRAPHITI / OBSIDIASHELL — 8011" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$SHELL'; [Console]::Title='OBSIDIASHELL GRAPHITI 8011'; `$env:PYTHONPATH='$SHELL'; python -m uvicorn obsidia_core.agent_bridge:app --host 127.0.0.1 --port 8011 --log-level warning"
+)
+
+
+Start-Sleep -Seconds 7
+
+
+try {
+  Invoke-RestMethod "$GRAPH/graph/v20/frozen/status" -TimeoutSec 10 | ConvertTo-Json -Depth 8 | Out-Host
+  Write-Host "GRAPHITI 8011 OK" -ForegroundColor Green
+} catch {
+  Write-Host "GRAPHITI 8011 NOT READY" -ForegroundColor Yellow
+}
+
+
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "6. START UI WORKBENCH — 5173" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$UI_DIR'; [Console]::Title='OBSIDIA WORKBENCH UI 5173'; npm run dev -- --host 127.0.0.1 --port 5173"
+)
+
+
+Start-Sleep -Seconds 8
+
+
+try {
+  $UI_STATUS = (Invoke-WebRequest "$UI" -UseBasicParsing -TimeoutSec 10).StatusCode
+  Write-Host "UI 5173 OK status=$UI_STATUS" -ForegroundColor Green
+} catch {
+  Write-Host "UI 5173 NOT READY" -ForegroundColor Yellow
+}
+
+
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "7. START DOMAIN CONNECTORS — BANK / TRADING / GPS" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$X108'; [Console]::Title='BANK LIVE -> KERNEL'; `$env:PYTHONPATH='$X108'; `$env:OBSIDIA_API_BASE='$API'; python .\connectors\bank_normal_flow.py"
+)
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$X108'; [Console]::Title='TRADING LIVE -> KERNEL'; `$env:PYTHONPATH='$X108'; `$env:OBSIDIA_API_BASE='$API'; python .\connectors\trading_live.py"
+)
+
+
+Start-Process powershell -ArgumentList @(
+  "-NoExit",
+  "-Command",
+  "cd '$X108'; [Console]::Title='GPS AVIATION LIVE -> KERNEL'; `$env:PYTHONPATH='$X108'; `$env:OBSIDIA_API_BASE='$API'; python .\connectors\aviation_robo.py"
+)
+
+
+Start-Sleep -Seconds 5
+
+
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "8. START 3 BRODY CHAT INSTANCES" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+$BRODY_V1_CHAT = "$X108\scripts\run_brody_terminal_chat.ps1"
+$BRODY_ENRICHED_MAIN = "$X108\scripts\run_brody_terminal_enriched.ps1"
+$BRODY_ENRICHED_FALLBACK = "$X108\ci_recheck_optional_publication\scripts\run_brody_terminal_enriched.ps1"
+$BRODY_RAW = "$X108\scripts\run_brody_terminal.ps1"
+
+
+# Instance 1 — Brody V1 Chat
+if (Test-Path $BRODY_V1_CHAT) {
+  Start-Process powershell -ArgumentList @(
+    "-NoExit",
+    "-ExecutionPolicy", "Bypass",
+    "-Command",
+    "cd '$X108'; [Console]::Title='BRODY V1 CHAT -> API 8000'; & '$BRODY_V1_CHAT' '$API'"
+  )
+  Write-Host "BRODY V1 CHAT launched" -ForegroundColor Green
+} else {
+  Write-Host "BRODY V1 CHAT script missing: $BRODY_V1_CHAT" -ForegroundColor Red
+}
+
+
+# Instance 2 — Brody Enriched multi-routes
+if (Test-Path $BRODY_ENRICHED_MAIN) {
+  Start-Process powershell -ArgumentList @(
+    "-NoExit",
+    "-ExecutionPolicy", "Bypass",
+    "-Command",
+    "cd '$X108'; [Console]::Title='BRODY ENRICHED -> API 8000'; & '$BRODY_ENRICHED_MAIN' -Base '$API'"
+  )
+  Write-Host "BRODY ENRICHED launched from scripts/" -ForegroundColor Green
+} elseif (Test-Path $BRODY_ENRICHED_FALLBACK) {
+  Start-Process powershell -ArgumentList @(
+    "-NoExit",
+    "-ExecutionPolicy", "Bypass",
+    "-Command",
+    "cd '$X108'; [Console]::Title='BRODY ENRICHED -> API 8000'; & '$BRODY_ENRICHED_FALLBACK' -Base '$API'"
+  )
+  Write-Host "BRODY ENRICHED launched from ci_recheck_optional_publication/" -ForegroundColor Green
+} else {
+  Write-Host "BRODY ENRICHED script missing" -ForegroundColor Red
+}
+
+
+# Instance 3 — Brody Raw Inspector
+if (Test-Path $BRODY_RAW) {
+  Start-Process powershell -ArgumentList @(
+    "-NoExit",
+    "-ExecutionPolicy", "Bypass",
+    "-Command",
+    "cd '$X108'; [Console]::Title='BRODY RAW INSPECTOR -> API 8000'; & '$BRODY_RAW' -Base '$API' -SessionId 'brody_terminal_raw_inspector'"
+  )
+  Write-Host "BRODY RAW INSPECTOR launched" -ForegroundColor Green
+} else {
+  Write-Host "BRODY RAW script missing: $BRODY_RAW" -ForegroundColor Red
+}
+
+
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "9. OPEN BROWSERS" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+Start-Process "$UI"
+Start-Process "$GRAPH_WORKBENCH"
+Start-Process "$GRAPH_DOCS"
+Start-Process "$NEO4J_BROWSER"
+
+
+
+
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "10. FINAL CHECK" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+
+
+Write-Host "`n--- Ports ---" -ForegroundColor DarkCyan
+netstat -ano | Select-String ":3001|:8000|:8011|:5173|:7475|:7688" | Out-Host
+
+
+Write-Host "`n--- Processes ---" -ForegroundColor DarkCyan
+Get-CimInstance Win32_Process |
+  Where-Object {
+    $_.CommandLine -match "server.kernel.sealed.cjs" -or
+    $_.CommandLine -match "apps.obsidia_api.main:app" -or
+    $_.CommandLine -match "connectors\\bank_normal_flow.py" -or
+    $_.CommandLine -match "connectors\\trading_live.py" -or
+    $_.CommandLine -match "connectors\\aviation_robo.py" -or
+    $_.CommandLine -match "obsidia_core.agent_bridge:app" -or
+    $_.CommandLine -match "npm run dev" -or
+    $_.CommandLine -match "vite" -or
+    $_.CommandLine -match "run_brody_terminal_chat.ps1" -or
+    $_.CommandLine -match "run_brody_terminal_enriched.ps1" -or
+    $_.CommandLine -match "run_brody_terminal.ps1" -or
+    $_.CommandLine -match "brody_terminal_chat.py"
+  } |
+  Select-Object ProcessId, Name, CommandLine |
+  Format-Table -AutoSize
+
+
+Write-Host "`n============================================================" -ForegroundColor Green
+Write-Host "FULL BRODY STACK READY" -ForegroundColor Green
+Write-Host "============================================================" -ForegroundColor Green
+Write-Host "Kernel Ragnarok        : http://127.0.0.1:3001"
+Write-Host "API Brody/Obsidia      : $API"
+Write-Host "Kernel Bridge          : $KERNEL_URL"
+Write-Host "Graphiti Bridge        : $GRAPH"
+Write-Host "Graphiti Workbench     : $GRAPH_WORKBENCH"
+Write-Host "Graphiti Docs          : $GRAPH_DOCS"
+Write-Host "UI Workbench           : $UI"
+Write-Host "Neo4j Browser          : $NEO4J_BROWSER"
+Write-Host "Neo4j Bolt             : $NEO4J_BOLT"
+Write-Host "Brody V1 Chat          : launched"
+Write-Host "Brody Enriched         : launched"
+Write-Host "Brody Raw Inspector    : launched"
+Write-Host ""
+Write-Host "Côté kernel : tu dois voir BANK / TRADING / GPS passer." -ForegroundColor Green
+Write-Host "Côté Brody : teste /status dans le terminal V1." -ForegroundColor Green
+
+
+________________
+
+
+2 — COMMANDES UNE PAR UNE
+0 — Stop propre
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+Get-CimInstance Win32_Process |
+  Where-Object {
+    $_.CommandLine -match "server.kernel.sealed.cjs" -or
+    $_.CommandLine -match "apps.obsidia_api.main:app" -or
+    $_.CommandLine -match "connectors\\bank_normal_flow.py" -or
+    $_.CommandLine -match "connectors\\trading_live.py" -or
+    $_.CommandLine -match "connectors\\aviation_robo.py" -or
+    $_.CommandLine -match "obsidia_core.agent_bridge:app" -or
+    $_.CommandLine -match "npm run dev" -or
+    $_.CommandLine -match "vite" -or
+    $_.CommandLine -match "run_brody_terminal"
+  } |
+  ForEach-Object {
+    Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue
+  }
+
+
+foreach ($port in @(3001, 8000, 8011, 5173)) {
+  netstat -ano |
+    Select-String ":$port\s" |
+    Where-Object { $_.Line -match "LISTENING" } |
+    ForEach-Object {
+      $pid = ($_ -split "\s+")[-1]
+      Stop-Process -Id ([int]$pid) -Force -ErrorAction SilentlyContinue
+    }
+}
+
+
+________________
+
+
+1 — Neo4j
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core"
+docker start deploy-neo4j-1
+
+
+Check :
+netstat -ano | findstr ":7475"
+netstat -ano | findstr ":7688"
+Start-Process "http://127.0.0.1:7475/browser/"
+
+
+Neo4j attendu : Browser 7475, Bolt 7688.
+________________
+
+
+2 — Kernel Ragnarok 3001
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B\runtime_terrain_bank_trading_gps"
+node .\server.kernel.sealed.cjs
+
+
+________________
+
+
+3 — API Obsidia/Brody 8000
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+$env:PYTHONPATH = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+$env:OBSIDIA_KERNEL_URL = "http://127.0.0.1:3001/kernel/ragnarok"
+
+
+python -m uvicorn apps.obsidia_api.main:app --host 127.0.0.1 --port 8000
+
+
+Brody est dans cette API, via /api/brody/chat; le doc note explicitement que Brody = SAME_AS_OBSIDIA_API.
+________________
+
+
+4 — Test API/Brody
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+$BODY_OBJ = @{
+  message = "Test Brody readonly stack."
+  mode = "readonly_stack_test"
+  compact = $true
+}
+
+
+$BODY_JSON = $BODY_OBJ | ConvertTo-Json -Depth 10 -Compress
+
+
+Invoke-RestMethod `
+  -Uri "http://127.0.0.1:8000/api/brody/chat" `
+  -Method POST `
+  -ContentType "application/json; charset=utf-8" `
+  -Body ([System.Text.Encoding]::UTF8.GetBytes($BODY_JSON)) |
+  ConvertTo-Json -Depth 8
+
+
+________________
+
+
+5 — Graphiti / ObsidiaShell 8011
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidiashell-main"
+python -m uvicorn obsidia_core.agent_bridge:app --host 127.0.0.1 --port 8011 --log-level warning
+
+
+Check :
+Invoke-RestMethod "http://127.0.0.1:8011/graph/v20/frozen/status" | ConvertTo-Json -Depth 8
+Start-Process "http://127.0.0.1:8011/graph/v20/frozen/workbench"
+Start-Process "http://127.0.0.1:8011/docs"
+
+
+Graphiti est une mémoire/read-only bridge, pas une autorité décisionnelle. Le doc de contrôle vérifie justement allowed_to_decide=false, allowed_to_modify_kernel=false, allowed_to_modify_x108=false.
+________________
+
+
+6 — UI Workbench 5173
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B\apps\obsidia-workbench"
+npm run dev -- --host 127.0.0.1 --port 5173
+
+
+Ouvrir :
+Start-Process "http://127.0.0.1:5173"
+
+
+________________
+
+
+7 — Bank connector
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+$env:PYTHONPATH = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+$env:OBSIDIA_API_BASE = "http://127.0.0.1:8000"
+
+
+python .\connectors\bank_normal_flow.py
+
+
+________________
+
+
+8 — Trading connector
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+$env:PYTHONPATH = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+$env:OBSIDIA_API_BASE = "http://127.0.0.1:8000"
+
+
+python .\connectors\trading_live.py
+
+
+________________
+
+
+9 — GPS / Aviation connector
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+$env:PYTHONPATH = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+$env:OBSIDIA_API_BASE = "http://127.0.0.1:8000"
+
+
+python .\connectors\aviation_robo.py
+
+
+Les domaines doivent continuer à passer par /api/live/kernel/adapters/bank, /trading, /gps, puis le kernel doit recevoir BANK / TRADING / GPS et l’API doit retourner une décision kernel, pas une décision autonome.
+________________
+
+
+3 — Les 3 instances Brody
+Instance 1 — Brody V1 Chat
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+.\scripts\run_brody_terminal_chat.ps1 "http://127.0.0.1:8000"
+
+
+________________
+
+
+Instance 2 — Brody Enriched multi-routes
+Essaye celle-ci d’abord :
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+.\scripts\run_brody_terminal_enriched.ps1 -Base "http://127.0.0.1:8000"
+
+
+Fallback si le fichier n’existe pas :
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+.\ci_recheck_optional_publication\scripts\run_brody_terminal_enriched.ps1 -Base "http://127.0.0.1:8000"
+
+
+Le terminal enrichi appelle plusieurs routes : /api/brody/chat, /api/os-trad/translate, /api/ir/candidate, /api/os-reverse/project, puis affiche les boundary flags.
+________________
+
+
+Instance 3 — Brody Raw Inspector
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+.\scripts\run_brody_terminal.ps1 -Base "http://127.0.0.1:8000" -SessionId "brody_terminal_raw_inspector"
+
+
+________________
+
+
+4 — Check final complet
+netstat -ano | findstr ":3001"
+netstat -ano | findstr ":8000"
+netstat -ano | findstr ":8011"
+netstat -ano | findstr ":5173"
+netstat -ano | findstr ":7475"
+netstat -ano | findstr ":7688"
+
+
+cd "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs_REMOTE_A5F21C6B"
+
+
+Invoke-RestMethod "http://127.0.0.1:8000/" | ConvertTo-Json -Depth 8
+Invoke-RestMethod "http://127.0.0.1:8011/graph/v20/frozen/status" | ConvertTo-Json -Depth 8
+(Invoke-WebRequest "http://127.0.0.1:5173" -UseBasicParsing).StatusCode
+
+
+Attendu :
+3001 LISTENING = Kernel Ragnarok
+8000 LISTENING = API Obsidia / Brody
+8011 LISTENING = Graphiti / ObsidiaShell
+5173 LISTENING = UI Workbench
+7475 LISTENING = Neo4j Browser
+7688 LISTENING = Neo4j Bolt
+
+
+Côté Brody, tu veux voir surtout :
+decision_authority = KX108_ONLY
+readonly = true
+advisory_only = true
+emits_act = false
+memory_write = false
+graphiti_write = false
+neo4j_write = false
+
+
+Ces checks sont ceux du script d’inspection fourni.
+
+
+Onglet 4

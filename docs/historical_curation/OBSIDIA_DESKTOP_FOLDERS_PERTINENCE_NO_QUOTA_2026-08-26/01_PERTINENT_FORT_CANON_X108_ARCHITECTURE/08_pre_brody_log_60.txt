@@ -1,0 +1,60 @@
+﻿798e760 feat(periphery): add Brody readonly memory intake and session ledger
+0f9670a Fix Sigma GPS defense aviation registry binding
+fe5ac15 Merge pull request #11 from Eaubin08/tooling/graph-memory-sandbox
+1c48704 Align V18 buildable tests with strict registry agent identity
+edcde91 tooling: document Graphiti phase0 preview
+5e3cf15 Stop tracking generated ProofKit report
+a61ae3e Add post-merge repository hygiene freeze report
+b0abff9 Merge pull request #10 from Eaubin08/repo-hygiene-drop-noncanonical-from-git
+058c722 Drop non-canonical hold artifacts from Git after local preservation
+0d8750f tooling: add graph memory dry-run scanner
+3d95f8e Merge pull request #8 from Eaubin08/tooling/graph-memory-sandbox
+9cffc28 Merge pull request #9 from Eaubin08/repo-hygiene-isolate-noncanonical
+8a539b2 Isolate non-canonical artifacts from active codeflow scope
+87bb09f tooling: add graph memory sandbox policy
+aa30a84 Merge pull request #7 from Eaubin08/agentic-registry-bootstrap-isolated
+3e47774 Refresh V18.3.1 root seal after deploy hardening
+23d6094 Harden deploy secret defaults
+177e105 agentic: bootstrap Top 5 Obsidia agent registry
+0fbcd65 Merge pull request #6 from Eaubin08/ci-strict-sigma-qa-no-false-error_20260502_235213
+211229d ci: optimize verify-tla Java setup and TLC caching
+6af3066 proofkit: refresh report after V18_3_1 root hash reseal
+76ecc5b agentic: update Claude Code focus after settings cleanup
+4ea9de5 tooling: remove invalid Claude hooks placeholder
+01c1e02 agentic: add Obsidia Claude Code local guidance layer
+a12809a Merge pull request #5 from Eaubin08/ci-strict-sigma-qa-no-false-error_20260502_235213
+151d041 ci: skip RFC3161 cross-platform when no tests collect
+bd8a27c ci: remove false-positive Sigma QA errors
+6217f1b Merge pull request #4 from Eaubin08/ci-node24-workflows-20260502_200437
+cd560e8 fix(ci): convert aggregation_stable to UTF-8 source encoding
+9df8ff0 fix(ci): normalize aggregation stable encoding and compile-only check
+f37079c fix(ci): convert aggregation_stable to UTF-8 source encoding
+56f49c3 ci: guard verify_decision when no canonical envelope is present
+f6b907b ci: expose ProofKit failure diagnostics
+57c0dad ci: print proofkit report on strict verifier failure
+96c9a25 fix(proofkit): make V18_3_1 root hash cross-platform deterministic
+10f4fd2 fix(proofkit): reseal V18_3_1 root hash consistency
+bdecf3d ci: fix workflow encoding after Node 24 migration
+e74db01 ci: migrate workflows to Node 24 compatible actions
+4ba62cd docs(p2-roadmap): création P2_ROADMAP.md en français (frontière P1/P2 + tags validés)
+cbdbb41 docs(p1-freeze): traduction FR + guide complet de lecture des 55+ tags par famille
+e4ddca3 docs(public-status): traduction FR + tableau P1 vs prod + section tags sovereign-kernel
+e7e0def docs(ci-policy): création CI_POLICY.md en français (jobs bloquants vs non-bloquants)
+4e1869d ci(verify-proofs): ajout job strict Python bloquant + refacto jobs non-bloquants
+91bd68f docs(audit-tools): création AUDIT_TOOLS.md en français avec 5 scénarios
+59e3abb docs(repo-map): traduction FR + ajout section RECUPE_SCORING + chemins audit
+3e2d76b docs(proof-scope): traduction FR + décomposition catégories + section 8007 proofs
+febaa0e fix: mise à jour workflow Node 24
+ac2b56a Merge pull request #3 from Eaubin08/integrate-temp-reims-critical-20260430_203753
+7a24487 fix: enforce strict bank payload validation for security fuzzing
+8cfaf9c Fix Sigma fuzz JSON CLI parsing
+5501d01 core: eliminate replay drift by normalizing kernel signature tolerance
+437d86e fix: final scale-down of replay test for total green pipeline
+e99a424 fix: resolve replay and robo benchmark failures by scaling for cloud runners
+d960153 fix: resolve matrix pack pathing and stabilize replay domino effect
+6f7087d fix: resolve matrix pack pathing and stabilize replay domino effect
+4a967eb fix!!!: absolute synchronization, enterprise bypass and matrix path fix
+2f799a4 fix: total test suite alignment and environment hardening (zero failed)
+da0994d fix: resolve all remaining FAILED tests by universalizing temp file bypass and requests dependency
+87e1d63 fix: total alignment with kernel logic, bypass argument length limits, and add requests dependency
+bc2d53e Integrate temp-reims critical audit runtime into main path

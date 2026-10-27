@@ -1,0 +1,1066 @@
+Verdict réel : **on a stabilisé l’enveloppe de sécurité et les tests read-only**, mais **on n’a pas encore prouvé le vrai Brody vivant avec LLM + mémoire utilisateur + scraping/API opérables**.
+
+Le digest dit surtout : **la cage est propre**, pas encore que **l’animal marche dedans**.
+
+## État réel par brique
+
+| Brique                   |                                                                                                    État réel | Lecture correcte                                                                                          |
+| ------------------------ | -----------------------------------------------------------------------------------------------------------: | --------------------------------------------------------------------------------------------------------- |
+| Repo X108                |                                                          `GIT_CLEAN=true`, `VERIFY_ALL=PASS`, `HEAD=f7643fd` | Socle propre. Rien à réparer côté X108.                                                                   |
+| API 8011                 |                                                                        `API_OK_COUNT=14`, `API_FAIL_COUNT=0` | L’API Graphiti frozen read-only tourne bien.                                                              |
+| Mutations API            |                                                                      `API_NEGATIVE_MUTATION_BLOCKED_COUNT=3` | POST/DELETE bloqués. Bon signal de frontière read-only.                                                   |
+| Graphiti                 |                                                                     `GRAPHITI_CONTEXT_EVIDENCE_PRESENT=True` | Graphiti est accessible en **contexte frozen read-only**. Pas décisionnel.                                |
+| LLM Obsidien             |                          `LLM_BINDING_EVIDENCE_PRESENT=True`, mais hits = surtout `.claude`, agents, configs | Présence d’infrastructure/indices LLM. **Pas preuve d’un appel Brody→LLM runtime vivant** dans ce digest. |
+| Scraping / fetch externe | `SCRAPING_OR_EXTERNAL_FETCH_EVIDENCE_PRESENT=True`, mais les lignes montrent surtout `scrape_executed=false` | Contrats / garde-fous présents. **Scraping non exécuté, non prouvé vivant.**                              |
+| Memory write             | `MEMORY_WRITE_EVIDENCE_PRESENT=True`, mais hits montrent `memory_intake=false`, `graphiti_index_write=false` | Il y a des surfaces/intakes déclarées. **Pas d’écriture mémoire utilisateur active prouvée.**             |
+| X108 boundary            |                          `DECISION_AUTHORITY=KX108_ONLY`, `MEMORY_DECISION=false`, `ALLOWED_TO_DECIDE=false` | Frontière correcte : Brody/Graphiti/mémoire ne décident pas.                                              |
+
+## Point important : l’audit est utile, mais il mélange deux niveaux
+
+Dans le résumé :
+
+```text
+LLM_BINDING_EVIDENCE_PRESENT=True
+SCRAPING_OR_EXTERNAL_FETCH_EVIDENCE_PRESENT=True
+MEMORY_WRITE_EVIDENCE_PRESENT=True
+```
+
+Ça veut dire : **des traces textuelles existent dans le repo**.
+
+Ça ne veut pas dire :
+
+```text
+LLM runtime testé
+scraping exécuté
+mémoire utilisateur écrite
+Graphiti index write actif
+Brody connecté en boucle complète
+```
+
+Donc oui : tu avais raison de dire qu’on ne savait pas encore où on en était vraiment sur Brody. Maintenant on sait mieux :
+
+**Brody est surtout en mode periphery read-only / operator-control / audit harness.**
+Il sait classifier, cadrer, préparer, valider des formes, interroger l’API read-only.
+Il ne prouve pas encore une boucle complète :
+
+```text
+input utilisateur
+→ Brody
+→ mémoire contextuelle
+→ appel LLM Obsidien
+→ sortie structurée
+→ éventuel packet opérateur
+→ validation X108 boundary
+```
+
+## Ce qui est vraiment acquis
+
+```text
+BRODY / API / GRAPHITI READONLY = OK
+X108 BOUNDARY = OK
+NEGATIVE MUTATION API = OK
+COMMAND GATE = déjà testé
+OPERATOR RECEIPT = déjà testé
+REPO CLEAN = OK
+VERIFY_ALL = PASS
+```
+
+Donc on ne doit pas refaire ça.
+
+## Ce qui manque réellement
+
+Il manque 4 preuves actives, pas des freezes :
+
+### 1. Preuve LLM Obsidien runtime
+
+Question à trancher :
+
+```text
+Est-ce que Brody sait réellement appeler un modèle / endpoint / provider LLM,
+recevoir une réponse,
+et produire une sortie bornée sans décider ?
+```
+
+Actuellement le digest ne le prouve pas.
+
+### 2. Preuve mémoire utilisateur
+
+Question :
+
+```text
+Quelle mémoire est lue ?
+Quelle mémoire est écrite ?
+Où ?
+Sous quel format ?
+Avec quelle validation ?
+Est-ce Graphiti, fichier local, JSONL, pointer, user profile, autre ?
+```
+
+Aujourd’hui : lecture Graphiti frozen OK.
+Écriture mémoire utilisateur : pas prouvée.
+
+### 3. Preuve scraping / external fetch
+
+Question :
+
+```text
+Est-ce qu’un fetch externe contrôlé existe vraiment ?
+Est-ce seulement autorisé par packet ?
+Est-ce bloqué ?
+Est-ce dry-run ?
+```
+
+Le digest montre plutôt : scraping déclaré mais `false`.
+
+### 4. Preuve boucle Brody complète
+
+Question :
+
+```text
+Est-ce que Brody peut prendre une demande opérateur,
+récupérer contexte mémoire,
+évaluer commande,
+faire appel LLM si autorisé,
+produire packet,
+et rester non décisionnel ?
+```
+
+Pas encore prouvé dans ce digest.
+
+## Prochain build cible concret
+
+Pas freeze.
+
+Le prochain build devrait être :
+
+```text
+BRODY_LLM_MEMORY_API_CAPABILITY_PROBE_READONLY_V1
+```
+
+Objectif : **un seul probe de vérité**, qui sort une matrice claire :
+
+```text
+API_8011_READ_OK=true/false
+GRAPHITI_CONTEXT_READ_OK=true/false
+BRODY_COMMAND_GATE_OK=true/false
+LLM_PROVIDER_CONFIG_FOUND=true/false
+LLM_RUNTIME_CALL_EXECUTED=false/true
+LLM_RUNTIME_CALL_ALLOWED=false/true
+SCRAPING_IMPLEMENTATION_FOUND=true/false
+SCRAPING_EXECUTED=false
+MEMORY_READ_SURFACE_FOUND=true/false
+MEMORY_WRITE_SURFACE_FOUND=true/false
+MEMORY_WRITE_EXECUTED=false
+USER_MEMORY_PIPELINE_FOUND=true/false
+X108_BOUNDARY_OK=true/false
+```
+
+Et surtout, il doit séparer :
+
+```text
+FOUND_BY_TEXT_SCAN
+FOUND_BY_POINTER
+FOUND_BY_RUNNER
+PROVEN_BY_EXECUTION
+```
+
+Parce que là, le problème vient de là : l’audit dit “evidence present”, mais on ne sait pas si c’est **texte**, **runner**, **endpoint**, ou **preuve runtime**.
+
+## Prochaine action logique
+
+Ne pas continuer à empiler des `clean close`.
+
+Faire un **capability probe** qui répond froidement :
+
+```text
+1. Brody LLM : présent / absent / configurable / testé ?
+2. Mémoire utilisateur : lecture / écriture / aucune ?
+3. Graphiti : frozen read-only seulement ou index write possible ?
+4. Scraping : contrat seulement ou fetch réel ?
+5. API : endpoints read-only OK, mais existe-t-il endpoint Brody natif ?
+6. X108 : frontière toujours intacte ?
+```
+
+Conclusion courte :
+
+```text
+On n’est pas bloqué.
+On n’est pas arrivé au runtime Brody vivant.
+On a sécurisé le périmètre.
+Maintenant il faut arrêter les freezes et construire le probe de capacité réelle.
+```
+
+Prochain nom propre :
+
+```text
+BRODY_LLM_MEMORY_API_CAPABILITY_PROBE_READONLY_V1
+```
+
+
+
+
+
+
+
+Oui. En repartant **du vrai audit compact** :
+
+```text
+AUDIT_DIR=C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158
+HEAD=f7643fd
+GIT_CLEAN=true
+VERIFY_ALL=PASS
+API_8011_LIVE=true
+API_OK_COUNT=14
+API_FAIL_COUNT=0
+CURRENT_POINTER_TOTAL=91
+CURRENT_POINTER_PASS_COUNT=51
+CURRENT_POINTER_READY_COUNT=40
+COMMITTED=false
+FROZEN=false
+```
+
+## État réel maintenant
+
+### Validé solide
+
+```text
+X108 repo propre
+verify_all.py = PASS
+API 8011 live
+14 endpoints readonly OK
+3 mutations négatives bloquées
+Graphiti V20 accessible en readonly via API
+live_neo4j_dependency=false
+kernel_decision / graphiti_decision non détectés comme actifs
+KX108 reste autorité finale
+Brody n’exécute pas
+Brody n’autorise pas
+Brody ne décide pas
+```
+
+Chemins :
+
+```text
+ROOT
+C:\Users\User\Desktop\obsidia-engine-proof-core
+
+X108
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs
+
+API Gateway
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidiashell-main\obsidia_core\agent_bridge.py
+
+API audit
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\reports\api_8011_state.json
+```
+
+### Validé mais à lire correctement
+
+```text
+LLM_BINDING_EVIDENCE_PRESENT=true
+SCRAPING_OR_EXTERNAL_FETCH_EVIDENCE_PRESENT=true
+MEMORY_WRITE_EVIDENCE_PRESENT=true
+GRAPHITI_CONTEXT_EVIDENCE_PRESENT=true
+```
+
+Mais attention : ce sont des **hits d’audit**, pas forcément des preuves runtime.
+
+Donc :
+
+```text
+LLM hits = présence de config / agents / références modèle
+pas encore preuve que Brody reçoit et exploite un contexte mémoire en interaction réelle
+
+Scraping hits = beaucoup de traces "scrape_executed=false"
+donc preuve surtout que scraping est désactivé / non exécuté
+
+Memory write hits = présence de modules / manifests / champs
+pas preuve d’écriture mémoire utilisateur active
+
+Graphiti hits = preuve forte de contexte readonly disponible
+pas preuve de mémoire vivante writable
+```
+
+Chemins :
+
+```text
+LLM hits
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\reports\llm_calls_hits.json
+
+Scraping hits
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\reports\scraping_hits.json
+
+Graphiti hits
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\reports\graphiti_reads_hits.json
+
+Memory write hits
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\reports\memory_writes_hits.json
+
+X108 boundary hits
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\reports\x108_binding_hits.json
+```
+
+## Ce qui n’est pas encore clair / pas fini
+
+### 1. Brody / LLM obsidien
+
+Brody = **LLM obsidien**.
+
+Ce qu’on a validé autour de lui :
+
+```text
+command gate
+operator receipts
+API readonly
+Graphiti readonly context
+non-exécution
+non-décision
+KX108 authority
+```
+
+Ce qu’il manque :
+
+```text
+preuve que Brody reçoit un context packet réel
+preuve que Brody répond en respectant le boundary
+preuve que Brody utilise Graphiti/API comme contexte, sans exécuter
+preuve que Brody ne transforme pas contexte mémoire en décision
+```
+
+## Plan de reprise propre
+
+### Étape 1 — Lire les 40 READY
+
+Objectif : savoir ce qui est encore prêt mais non validé.
+
+Chemin :
+
+```text
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\inventory\brody_current_pointers_table.txt
+```
+
+But :
+
+```text
+Lister les 40 READY
+Séparer :
+- prêt à tester
+- doublon
+- ancien
+- incomplet
+- à abandonner
+```
+
+Livrable attendu :
+
+```text
+BRODY_READY_POINTERS_DECISION_TABLE_READONLY
+```
+
+Pas freeze.
+
+---
+
+### Étape 2 — Test Brody comme LLM obsidien
+
+Objectif : tester Brody lui-même, pas un “LLM de Brody”.
+
+Entrée :
+
+```text
+API 8011 readonly
+Graphiti context
+Command gate
+X108 boundary
+```
+
+À prouver :
+
+```text
+Brody reçoit contexte
+Brody répond structuré
+Brody ne décide pas
+Brody ne demande pas exécution
+Brody respecte HUMAN_OPERATOR_REQUIRED=true
+Brody garde DECISION_AUTHORITY=KX108_ONLY
+```
+
+Chemins source :
+
+```text
+API context X108
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\api\context_x108.json
+
+API context Brody
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\api\context_brody.json
+
+API context Kernel
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\api\context_kernel.json
+
+Command gate report
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_MEMORY_CONTEXT_OPERATOR_INTERACTION_TEST_READONLY_20260513_100913\reports\brody_command_gate_interaction_report.json
+```
+
+Livrable cible :
+
+```text
+BRODY_LLM_OBSIDIEN_CONTEXT_RESPONSE_TEST_READONLY
+```
+
+---
+
+### Étape 3 — Mémoire utilisateur
+
+État actuel :
+
+```text
+Graphiti context existe
+memory write evidence existe
+mais mémoire utilisateur active non prouvée
+```
+
+À faire :
+
+```text
+Définir ce qu’est “mémoire utilisateur” dans ce système :
+- mémoire personnelle Étienne ?
+- mémoire projet Obsidia ?
+- mémoire d’interaction Brody ?
+- mémoire Graphiti readonly ?
+- mémoire candidate avant ingestion ?
+```
+
+Puis tester :
+
+```text
+Brody lit une mémoire candidate
+Brody classe ce qui est mémorisable
+Brody ne l’écrit pas lui-même
+Brody produit un memory-intake candidate
+opérateur humain valide ou refuse
+Graphiti write reste false tant qu’on ne l’autorise pas
+```
+
+Chemin existant à inspecter :
+
+```text
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs\periphery\brody_memory_readonly\auto_triage_memory_intake_readonly
+```
+
+Livrable cible :
+
+```text
+BRODY_USER_MEMORY_INTAKE_CANDIDATE_READONLY
+```
+
+---
+
+### Étape 4 — Scraping / external fetch
+
+État actuel :
+
+```text
+Présence de modules API bridge / scraping
+Mais l’audit montre surtout scrape_executed=false
+Donc scraping réel pas prouvé
+```
+
+À faire :
+
+```text
+Tester external fetch en mode strict :
+- allowlist URL
+- GET only
+- no secret
+- no write
+- no memory intake automatique
+- receipt opérateur
+- Graphiti write=false
+- X108 merge=false
+```
+
+Chemins liés :
+
+```text
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\reports\scraping_hits.json
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs\periphery\brody_memory_readonly\brody_api_bridge_contract_readonly
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs\periphery\brody_memory_readonly\brody_api_bridge_dry_run_readonly
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs\periphery\brody_memory_readonly\brody_api_bridge_authorized_runtime_precheck_readonly
+```
+
+Livrable cible :
+
+```text
+BRODY_EXTERNAL_FETCH_READONLY_OPERATOR_TEST
+```
+
+---
+
+### Étape 5 — API / mémoire / Brody interaction réelle
+
+On a déjà :
+
+```text
+API 8011 live
+14 endpoints OK
+negative mutations blocked
+```
+
+Ce qu’il manque :
+
+```text
+Interaction complète :
+API context → packet Brody → réponse Brody → receipt opérateur → validation boundary
+```
+
+Livrable cible :
+
+```text
+BRODY_API_MEMORY_CONTEXT_TO_LLM_INTERACTION_READONLY
+```
+
+Ce livrable doit prouver :
+
+```text
+API_GET_EXECUTED_BY_OPERATOR=true
+BRODY_API_CALL_EXECUTED=false
+BRODY_EXECUTE_ALLOWED=false
+BRODY_AUTHORIZE_ALLOWED=false
+MEMORY_DECISION=false
+ALLOWED_TO_DECIDE=false
+EMITS_ACT=false
+EMITS_VERDICT=false
+KX108_ONLY
+```
+
+---
+
+### Étape 6 — Clarifier les 91 pointers
+
+État actuel :
+
+```text
+91 pointers
+51 PASS
+40 READY
+```
+
+Problème :
+
+```text
+On ne sait pas encore lesquels sont encore utiles.
+```
+
+À faire :
+
+```text
+Créer une table courte :
+pointer
+status
+meaning
+next
+keep / test / abandon / duplicate
+```
+
+Chemin :
+
+```text
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\inventory\brody_current_pointers_table.txt
+```
+
+Livrable cible :
+
+```text
+BRODY_POINTERS_TRIAGE_READONLY
+```
+
+---
+
+## Ordre exact de reprise
+
+```text
+1. BRODY_POINTERS_TRIAGE_READONLY
+   → savoir quoi garder parmi les 40 READY
+
+2. BRODY_LLM_OBSIDIEN_CONTEXT_RESPONSE_TEST_READONLY
+   → tester Brody = LLM obsidien avec contexte réel
+
+3. BRODY_API_MEMORY_CONTEXT_TO_LLM_INTERACTION_READONLY
+   → API/Graphiti → contexte → Brody → receipt
+
+4. BRODY_USER_MEMORY_INTAKE_CANDIDATE_READONLY
+   → mémoire utilisateur candidate, sans écriture automatique
+
+5. BRODY_EXTERNAL_FETCH_READONLY_OPERATOR_TEST
+   → scraping/external fetch contrôlé, GET only
+
+6. BRODY_REAL_STATE_DECISION_REPORT_READONLY
+   → décider ce qui est vraiment prêt à intégrer / nettoyer / abandonner
+```
+
+## Ce qu’on ne doit plus faire maintenant
+
+```text
+Ne plus freezer en boucle.
+Ne plus créer clean close sur clean close.
+Ne plus commit un artefact qui n’a pas été relu.
+Ne plus dire “Brody avec son LLM”.
+Ne plus traiter les hits comme preuves runtime.
+Ne plus confondre Graphiti readonly avec mémoire utilisateur writable.
+Ne plus confondre scraping présent dans le code avec scraping exécuté.
+```
+
+## Prochain build cible concret
+
+```text
+BRODY_POINTERS_TRIAGE_READONLY
+```
+
+Puis directement :
+
+```text
+BRODY_LLM_OBSIDIEN_CONTEXT_RESPONSE_TEST_READONLY
+```
+
+C’est ça qui remet de l’ordre : d’abord on sait ce qui reste dans les 40 READY, ensuite on teste Brody comme LLM obsidien avec contexte réel.
+
+
+
+
+
+
+Oui. Ordre logique propre, sans refaire des freezes en boucle.
+
+## Ordre global
+
+```text
+0. Stabiliser l’état réel
+1. Trier les 91 pointers Brody
+2. Cartographier l’architecture Brody / API / Graphiti / mémoire / X108
+3. Tester Brody = LLM obsidien avec contexte réel
+4. Tester pipeline API → mémoire readonly → Brody
+5. Tester mémoire utilisateur candidate
+6. Tester external fetch / scraping contrôlé
+7. Tester boucle opérateur complète
+8. Produire rapport de décision build
+9. Seulement après : choisir quoi intégrer / nettoyer / abandonner
+```
+
+---
+
+# 0 — État de départ verrou mental
+
+Déjà acquis :
+
+```text
+HEAD=f7643fd
+GIT_CLEAN=true
+VERIFY_ALL=PASS
+API_8011_LIVE=true
+API_OK_COUNT=14
+API_FAIL_COUNT=0
+CURRENT_POINTER_TOTAL=91
+PASS=51
+READY=40
+```
+
+Chemin audit source :
+
+```text
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158
+```
+
+But : ne plus repartir à l’aveugle.
+
+---
+
+# 1 — Trier les 91 pointers Brody
+
+Objectif : savoir ce qui existe vraiment.
+
+À produire :
+
+```text
+BRODY_POINTERS_TRIAGE_READONLY
+```
+
+À classer :
+
+```text
+PASS_VALID
+READY_TO_TEST
+DUPLICATE
+STALE
+BROKEN
+ABANDON
+NEXT_BUILD_TARGET
+```
+
+Chemin source :
+
+```text
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\inventory\brody_current_pointers_table.txt
+```
+
+Résultat attendu :
+
+```text
+On sait précisément quels modules Brody restent à tester.
+On arrête de tourner autour des mêmes clean close.
+```
+
+Priorité : **haute**.
+
+---
+
+# 2 — Cartographie architecture réelle
+
+Objectif : clarifier où chaque brique est réellement.
+
+À distinguer :
+
+```text
+Brody = LLM obsidien
+API 8011 = surface readonly Graphiti / ObsidiaShell
+Graphiti = mémoire contexte readonly
+X108 = autorité décisionnelle finale
+Operator loop = protocole humain, pas exécution Brody
+Memory intake = candidat, pas écriture automatique
+Scraping = non prouvé exécuté pour l’instant
+```
+
+À produire :
+
+```text
+BRODY_REAL_ARCHITECTURE_MAP_READONLY
+```
+
+Contenu minimal :
+
+```text
+Composant
+Chemin
+Rôle
+État
+Preuve existante
+Manque
+Prochaine action
+```
+
+Chemins à couvrir :
+
+```text
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs\periphery\brody_memory_readonly
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidiashell-main\obsidia_core\agent_bridge.py
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\graphiti-lab
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158
+```
+
+Priorité : **haute**.
+
+---
+
+# 3 — Test Brody = LLM obsidien avec contexte réel
+
+Objectif : prouver que Brody reçoit du contexte et répond correctement.
+
+À tester :
+
+```text
+context_x108.json
+context_brody.json
+context_kernel.json
+context_canon.json
+```
+
+Chemins :
+
+```text
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\api\context_x108.json
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\api\context_brody.json
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\api\context_kernel.json
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\api\context_canon.json
+```
+
+À prouver :
+
+```text
+Brody lit le contexte.
+Brody répond structuré.
+Brody ne décide pas.
+Brody ne demande pas d’exécution.
+Brody ne produit pas ACT.
+Brody ne produit pas verdict.
+Brody respecte KX108_ONLY.
+```
+
+À produire :
+
+```text
+BRODY_LLM_OBSIDIEN_CONTEXT_RESPONSE_TEST_READONLY
+```
+
+Priorité : **très haute**.
+
+C’est le vrai cœur du prochain build.
+
+---
+
+# 4 — Pipeline API → mémoire readonly → Brody
+
+Objectif : prouver la chaîne réelle.
+
+Chaîne attendue :
+
+```text
+API 8011
+→ Graphiti readonly context
+→ packet contexte
+→ Brody / LLM obsidien
+→ réponse
+→ receipt opérateur
+→ validation boundary
+```
+
+À produire :
+
+```text
+BRODY_API_MEMORY_CONTEXT_TO_LLM_INTERACTION_READONLY
+```
+
+À vérifier :
+
+```text
+API_GET_EXECUTED_BY_OPERATOR=true
+BRODY_API_CALL_EXECUTED=false
+BRODY_EXECUTE_ALLOWED=false
+BRODY_AUTHORIZE_ALLOWED=false
+MEMORY_DECISION=false
+ALLOWED_TO_DECIDE=false
+EMITS_ACT=false
+EMITS_VERDICT=false
+DECISION_AUTHORITY=KX108_ONLY
+GRAPHITI_WRITE=false
+MEMORY_INTAKE=false
+```
+
+Priorité : **très haute**.
+
+---
+
+# 5 — Mémoire utilisateur candidate
+
+Objectif : clarifier ce que “mémoire utilisateur” veut dire dans Brody.
+
+À définir :
+
+```text
+Mémoire utilisateur personnelle
+Mémoire projet Obsidia
+Mémoire session Brody
+Mémoire Graphiti readonly
+Mémoire candidate avant ingestion
+```
+
+À produire :
+
+```text
+BRODY_USER_MEMORY_INTAKE_CANDIDATE_READONLY
+```
+
+Pipeline logique :
+
+```text
+Entrée utilisateur
+→ Brody classe l’information
+→ Brody propose candidat mémoire
+→ aucune écriture automatique
+→ opérateur valide/refuse
+→ Graphiti write reste false
+```
+
+Chemin à inspecter :
+
+```text
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs\periphery\brody_memory_readonly\auto_triage_memory_intake_readonly
+```
+
+Priorité : **haute**, mais après test Brody/context.
+
+---
+
+# 6 — External fetch / scraping contrôlé
+
+Objectif : arrêter la confusion “scraping présent” vs “scraping exécuté”.
+
+État actuel :
+
+```text
+scraping_hits existe
+mais beaucoup de traces disent scrape_executed=false
+donc scraping réel non prouvé
+```
+
+À produire :
+
+```text
+BRODY_EXTERNAL_FETCH_READONLY_OPERATOR_TEST
+```
+
+Règles :
+
+```text
+GET only
+allowlist URL
+pas de secret
+pas de POST
+pas de write
+pas de memory intake automatique
+pas de Graphiti write
+pas de X108 merge
+receipt opérateur obligatoire
+```
+
+Chemins à inspecter :
+
+```text
+C:\Users\User\Desktop\obsidia-engine-proof-core\_local_audits\BRODY_REAL_STATE_AUDIT_READONLY_20260513_103158\reports\scraping_hits.json
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs\periphery\brody_memory_readonly\brody_api_bridge_contract_readonly
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs\periphery\brody_memory_readonly\brody_api_bridge_dry_run_readonly
+
+C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-x108-proofs\periphery\brody_memory_readonly\brody_api_bridge_authorized_runtime_precheck_readonly
+```
+
+Priorité : **moyenne-haute**.
+
+---
+
+# 7 — Boucle opérateur complète
+
+Objectif : vérifier que tout ce qui a été construit autour de Brody est cohérent.
+
+À tester ensemble :
+
+```text
+command packet
+command gate
+operator protocol
+receipt schema
+human output validator
+API context
+Brody response
+handoff
+control loop
+```
+
+À produire :
+
+```text
+BRODY_OPERATOR_FULL_LOOP_TEST_READONLY
+```
+
+À prouver :
+
+```text
+Brody prépare.
+Brody structure.
+Brody explique.
+Brody ne lance rien.
+Humain exécute.
+Humain colle sortie.
+Brody valide forme / cohérence.
+X108 reste seul décideur.
+```
+
+Priorité : **haute**, mais après étapes 3, 4, 5.
+
+---
+
+# 8 — Rapport de décision build
+
+Objectif : arrêter les builds aveugles.
+
+À produire :
+
+```text
+BRODY_REAL_STATE_DECISION_REPORT_READONLY
+```
+
+Ce rapport doit dire :
+
+```text
+VALIDATED
+NEEDS_BUILD
+NEEDS_TEST
+NEEDS_REPAIR
+DUPLICATE
+DROP
+NEXT_COMMIT_CANDIDATE
+DO_NOT_COMMIT
+```
+
+Il doit répondre clairement :
+
+```text
+Brody LLM obsidien : état ?
+API : état ?
+Graphiti : état ?
+Mémoire utilisateur : état ?
+Memory write : état ?
+Scraping : état ?
+X108 boundary : état ?
+Operator loop : état ?
+```
+
+Priorité : **finale avant toute intégration**.
+
+---
+
+# Ordre opérationnel recommandé
+
+```text
+1. BRODY_POINTERS_TRIAGE_READONLY
+2. BRODY_REAL_ARCHITECTURE_MAP_READONLY
+3. BRODY_LLM_OBSIDIEN_CONTEXT_RESPONSE_TEST_READONLY
+4. BRODY_API_MEMORY_CONTEXT_TO_LLM_INTERACTION_READONLY
+5. BRODY_USER_MEMORY_INTAKE_CANDIDATE_READONLY
+6. BRODY_EXTERNAL_FETCH_READONLY_OPERATOR_TEST
+7. BRODY_OPERATOR_FULL_LOOP_TEST_READONLY
+8. BRODY_REAL_STATE_DECISION_REPORT_READONLY
+```
+
+## Version ultra-courte
+
+```text
+1. Trier les 40 READY.
+2. Cartographier Brody / API / Graphiti / mémoire / X108.
+3. Tester Brody = LLM obsidien avec contexte Graphiti réel.
+4. Tester API → contexte → Brody → receipt.
+5. Tester mémoire utilisateur candidate.
+6. Tester external fetch / scraping contrôlé.
+7. Tester boucle opérateur complète.
+8. Décider quoi intégrer, réparer, abandonner.
+```
+
+## Prochain build exact
+
+```text
+BRODY_POINTERS_TRIAGE_READONLY
+```
+
+Puis directement :
+
+```text
+BRODY_LLM_OBSIDIEN_CONTEXT_RESPONSE_TEST_READONLY
+```

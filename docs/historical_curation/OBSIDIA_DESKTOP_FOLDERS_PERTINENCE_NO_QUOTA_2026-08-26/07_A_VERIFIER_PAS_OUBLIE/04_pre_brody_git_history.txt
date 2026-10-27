@@ -1,0 +1,32 @@
+﻿=== HISTORIQUE GIT PRE-BRODY ===
+
+REPO: obsidia-x108-proofs_REMOTE_A5F21C6B
+PREMIERE MENTION BRODY: 2026-05-12T21:41:26+02:00
+COMMIT: 798e760 feat(periphery): add Brody readonly memory intake and session ledger
+
+COMMITS PRE-BRODY SIGNIFICATIFS:
+0f9670a Fix Sigma GPS defense aviation registry binding
+fe5ac15 Merge pull request #11 — graph-memory-sandbox
+177e105 agentic: bootstrap Top 5 Obsidia agent registry
+4ba62cd docs(p2-roadmap): création P2_ROADMAP.md en français
+cbdbb41 docs(p1-freeze): traduction FR + guide complet
+e4ddca3 docs(public-status): traduction FR
+e7e0def docs(ci-policy): création CI_POLICY.md en français
+NOTE: La traduction en français concerne uniquement les DOCS, pas les réponses système.
+
+REPO: obsidia-engine-proof-core
+PREMIERE MENTION BRODY: 2026-05-14T04:09:50+02:00
+COMMIT: audit: Brody readonly GROUP_A pipeline before memory runtime review
+
+ABSENCE CONFIRMEE dans l'historique pré-Brody:
+- Aucun commit mentionnant "language detection"
+- Aucun commit mentionnant "response_md" ou "final_answer"
+- Aucun commit mentionnant "template_fr" ou "template_en"
+- Aucun commit mentionnant "intent classification"
+- Aucun commit mentionnant "parse natural language"
+- La traduction FR des docs est éditoriale (markdown), pas architecturale.
+
+GREP RÉSULTATS sans Brody/Graphiti:
+- Hits sur "intent" = références aux skills .claude (routing Claude Code) — pas au core
+- Hits sur "classify" = routing Claude Code, pas parsing d'input humain
+- Zéro fichier Python nommé response_md, final_answer, template_fr, language_router

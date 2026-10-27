@@ -1,0 +1,3 @@
+﻿FIRST_BRODY_COMMIT=798e7600aa6d92a0eb17315870195affd03ab3e0
+FIRST_BRODY_DATE=2026-05-12T21:41:26+02:00
+FIRST_BRODY_SUBJECT=feat(periphery): add Brody readonly memory intake and session ledger

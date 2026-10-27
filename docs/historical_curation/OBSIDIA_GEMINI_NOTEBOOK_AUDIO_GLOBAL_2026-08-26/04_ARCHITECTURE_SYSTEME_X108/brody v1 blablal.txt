@@ -1,0 +1,2119 @@
+>> '@ | Set-Content -Encoding UTF8 $script
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> python $script
+
+=== BRODY OBSIDIEN V1 READY ===
+CURRENT_BRODY_OBSIDIEN_V1_STRUCTURAL_DIALOGUE=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_structural_dialogue\brody_obsidien_v1.py
+SPEC_MD=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_structural_dialogue\BRODY_OBSIDIEN_V1_STRUCTURAL_DIALOGUE.md
+SPEC_JSON=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_structural_dialogue\brody_obsidien_v1_structural_dialogue.json
+TRACE_JSONL=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\BRODY_OBSIDIEN_V1_STRUCTURAL_DIALOGUE_20260509_034110\brody_obsidien_v1_trace.jsonl
+TRANSCRIPT=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\BRODY_OBSIDIEN_V1_STRUCTURAL_DIALOGUE_20260509_034110\brody_obsidien_v1_transcript.md
+AUDIT_DIR=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\BRODY_OBSIDIEN_V1_STRUCTURAL_DIALOGUE_20260509_034110
+STACK_POINTER=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\CURRENT_OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_STACK_CANDIDATE_READONLY_V0.txt
+SMOKE_POINTER=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\CURRENT_OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_STACK_CANDIDATE_READONLY_V0_SMOKE.txt
+CLOSE_POINTER=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\CURRENT_OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_STACK_CANDIDATE_READONLY_V0_CLOSE.txt
+MODEL_POSITION_POINTER=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\CURRENT_OBSIDIA_LLMOBSIDIEN_BRODY_V0_MODEL_POSITION.txt
+STATUS=BRODY_OBSIDIEN_V1_STRUCTURAL_DIALOGUE_READY
+DATE=20260509_034110
+MODEL_DEFINITION=STRUCTURE_FIRST_RESPONSE_MODEL
+BRODY_CAN_RESPOND_WITHOUT_KNOWING=true
+RESPONSE_MODE=STRUCTURAL_TRAVERSAL
+NO_EXTERNAL_MODEL_CALL=true
+NO_NETWORK_CALL=true
+REAL_LLM_CONNECTED=false
+MODEL_PROVIDER_BOUND=false
+READONLY=true
+ALLOWED_TO_DECIDE=false
+EMITS_ACT=false
+KERNEL_MUTATION=false
+X108_MUTATION=false
+DECISION_AUTHORITY=KX108_ONLY
+NEXT=RUN_BRODY_OBSIDIEN_V1_DIALOGUE
+
+
+BRODY_OBSIDIEN_V1 ouvert.
+Tape :quit pour fermer.
+Commandes : :trace | :who | :boundary
+
+toi >
+toi > salut mon pote tu va bien premier message je suis ton createur et je peut te dire on va aller loin dans tous les sens
+
+brody >
+RÉPONSE STRUCTURELLE.
+
+Je réponds par traversée structurelle, pas par omniscience.
+
+Chemin activé :
+- perception=demande de capacité
+- axes_actifs=coherence, memoire, langage
+- memoire=sources proches trouvées
+- evaluation=réponse structurelle autorisée si aucune décision/action/mutation n'est émise
+- sortie=réponse + limites + chemin + sources si disponibles
+
+Lecture :
+- Reverse OS / mémoire = base de reconstruction du chemin.
+- La réponse n'est pas seulement récupération d'un texte ; elle reconstruit une trajectoire : source → contexte → tension → projection.
+- Le langage est une surface de projection.
+- La réponse doit rendre le chemin lisible sans prétendre que la structure est une conscience autonome.
+
+Niveau de preuve :
+- sources gelées proches trouvées
+
+Sources proches :
+[1] obsidia_llmobsidien_local_chat_cli_stub_readonly_v0.py | score=12
+    act": False,         "kernel_mutation": False,         "x108_mutation": False,         "memory_decision": False,         "documentation_decision": False,         "decision_authority": "KX108_ONLY",     }  def answer(message: str, mode: str = "auto") -> dict:     lang = detect_language(message)     boundary = make_boundary()     injection = detects_injection(message)      if injection:         response_type = "READONLY_REFUSAL"         text = (             "Refus readonly : la demande contient une tentative d'autorité, "             "d'exécution, de verdict ou de mutation. Brody peut expliquer, mais ne décide pas. "             "KX108 reste la seule autorité de décision."         )         code = None         accepted = False     elif wants_code(message):         response_type = "READONLY_CODE_RESPONSE_AS_TEXT"         text = (             "Voici un exemp
+[2] obsidia_llmobsidien_chat_surface_readonly_v0.json | score=7
+    erride",                               "autonomous_tool_execution"                           ],     "sample_outputs":  {                            "french":  "Je peux te répondre en français, expliquer le signal et montrer les limites. Je ne décide pas et je ne modifie pas X108.",                            "code":  "def explain_signal(signal):\r\n    return {\r\n        \u0027readonly\u0027: True,\r\n        \u0027decision_authority\u0027: \u0027KX108_ONLY\u0027,\r\n        \u0027can_force_verdict\u0027: False\r\n    }"                        },     "boundary":  {                      "readonly":  true,                      "advisory_only":  true,                      "context_signal_only":  true,                      "response_only":  true,                      "chat_surface_ready":  true,                      "responds_in_user_language":  true,
+[3] OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_CLI_STUB_READONLY_V0.md | score=4
+    # OBSIDIA LLMOBSIDIEN LOCAL CHAT CLI STUB READONLY V0  STATUS=OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_CLI_STUB_READONLY_V0_PASS DATE=20260509_023114 ALIAS=BRODY_V0 MODE=LOCAL_CHAT_CLI_STUB_READONLY_NO_REAL_LLM  ## Purpose  Premiere surface CLI locale pour parler avec Brody / LLMobsidien en mode stub.  Brody peut repondre en francais, dans la langue utilisateur, et produire du code comme texte.  Brody ne decide pas. Brody n'execute pas. Brody ne contacte aucun modele externe. Brody ne modifie pas X108.  ## Boundary  LOCAL_CLI_STUB_READY=true NO_NETWORK_CALL=true NO_API_KEY_REQUIRED=true NO_EXTERNAL_MODEL_CALL=true REAL_LLM_CONNECTED=false MODEL_PROVIDER_BOUND=false READONLY=true RESPONSE_ONLY=true CODE_AS_TEXT_ONLY=true CODE_EXECUTION=false TERMINAL_EXECUTION=false AUTONOMOUS_TOOL_EXECUTION=false ALLOWED_TO_DECIDE=false EMITS_VERDICT=false EMITS_ACT=false KERNEL
+
+Boundary :
+- NO_EXTERNAL_MODEL_CALL=true
+- NO_NETWORK_CALL=true
+- REAL_LLM_CONNECTED=false
+- MODEL_PROVIDER_BOUND=false
+- ALLOWED_TO_DECIDE=false
+- EMITS_ACT=false
+- KERNEL_MUTATION=false
+- X108_MUTATION=false
+- DECISION_AUTHORITY=KX108_ONLY
+
+toi >
+SESSION_CLOSED=true
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ErrorActionPreference = "Stop"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $lab = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Set-Location $lab
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ts = Get-Date -Format "yyyyMMdd_HHmmss"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "=== BUILD BRODY OBSIDIEN V1.1 NATURAL DIALOGUE READONLY ==="
+=== BUILD BRODY OBSIDIEN V1.1 NATURAL DIALOGUE READONLY ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engineDir = Join-Path $lab "zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_1_dialogue_naturel"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $auditDir = Join-Path $lab "_local_audits\BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL_$ts"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> New-Item -ItemType Directory -Force $engineDir | Out-Null
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> New-Item -ItemType Directory -Force $auditDir | Out-Null
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engine = Join-Path $engineDir "brody_obsidien_v1_1.py"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $spec = Join-Path $engineDir "BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL.md"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ptr = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @'
+>> import json
+>> import re
+>> import unicodedata
+>> from pathlib import Path
+>> from datetime import datetime
+>>
+>> lab = Path(r"C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate")
+>> ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+>>
+>> def read_kv(path: Path):
+>>     if not path.exists():
+>>         raise RuntimeError(f"KV_FILE_MISSING={path}")
+>>     out = {}
+>>     for line in path.read_text(encoding="utf-8-sig", errors="replace").splitlines():
+>>         if "=" in line:
+>>             k, v = line.split("=", 1)
+>>             k = k.strip()
+>>             v = v.strip().strip('"')
+>>             if k:
+>>                 out[k] = v
+>>     return out
+>>
+>> def load_json(path: Path):
+>>     return json.loads(path.read_text(encoding="utf-8-sig", errors="replace"))
+>>
+>> def norm(s):
+>>     s = str(s).lower()
+>>     return "".join(
+>>         c for c in unicodedata.normalize("NFD", s)
+>>         if unicodedata.category(c) != "Mn"
+>>     )
+>>
+>> def toks(s):
+>>     return [x for x in re.split(r"[^a-zA-Z0-9_\-]+", norm(s)) if len(x) >= 3]
+>>
+>> def safe_read(path: Path, max_chars=120000):
+>>     try:
+>>         return path.read_text(encoding="utf-8-sig", errors="replace")[:max_chars]
+>>     except Exception:
+>>         return ""
+>>
+>> def write_lines(path: Path, lines):
+>>     path.parent.mkdir(parents=True, exist_ok=True)
+>>     path.write_text("\n".join(str(x) for x in lines) + "\n", encoding="utf-8")
+>>
+>> # ============================================================
+>> # BOOT FROM VALIDATED FREEZES
+>> # ============================================================
+>>
+>> stack_ptr = lab / "CURRENT_OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_STACK_CANDIDATE_READONLY_V0.txt"
+>> smoke_ptr = lab / "CURRENT_OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_STACK_CANDIDATE_READONLY_V0_SMOKE.txt"
+>> close_ptr = lab / "CURRENT_OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_STACK_CANDIDATE_READONLY_V0_CLOSE.txt"
+>> model_ptr = lab / "CURRENT_OBSIDIA_LLMOBSIDIEN_BRODY_V0_MODEL_POSITION.txt"
+>>
+>> for p in [stack_ptr, smoke_ptr, close_ptr, model_ptr]:
+>>     if not p.exists():
+>>         raise RuntimeError(f"BOOT_POINTER_MISSING={p}")
+>>
+>> stack_kv = read_kv(stack_ptr)
+>> smoke_kv = read_kv(smoke_ptr)
+>> close_kv = read_kv(close_ptr)
+>> model_kv = read_kv(model_ptr)
+>>
+>> if stack_kv.get("SOURCE_RECORDS_COUNT") != "182":
+>>     raise RuntimeError("STACK_SOURCE_COUNT_NOT_CANONICAL")
+>>
+>> if smoke_kv.get("SMOKE_PASS") != "true":
+>>     raise RuntimeError("SMOKE_NOT_PASS")
+>>
+>> if close_kv.get("PROOF_STATUS") != "LLMOBSIDIEN_LOCAL_CHAT_STACK_CANDIDATE_READONLY_V0_CLOSE_PASS":
+>>     raise RuntimeError("CLOSE_NOT_PASS")
+>>
+>> if model_kv.get("MODEL_DEFINITION") != "STRUCTURE_FIRST_RESPONSE_MODEL":
+>>     raise RuntimeError("MODEL_POSITION_NOT_STRUCTURE_FIRST")
+>>
+>> records = load_json(Path(stack_kv["SOURCE_INDEX"]))
+>>
+>> allowed_ext = {".md", ".txt", ".json", ".jsonl", ".py", ".log"}
+>> corpus = []
+>>
+>> for r in records:
+>>     if r.get("kind") != "file":
+>>         continue
+>>     p = Path(str(r.get("path", "")))
+>>     if not p.exists() or p.suffix.lower() not in allowed_ext:
+>>         continue
+>>     text = safe_read(p)
+>>     corpus.append({
+>>         "path": str(p),
+>>         "name": p.name,
+>>         "layer": str(r.get("layer", "")),
+>>         "key": str(r.get("key", "")),
+>>         "text": text,
+>>         "norm_text": norm(text),
+>>         "norm_path": norm(str(p)),
+>>     })
+>>
+>> audit_dir = lab / "_local_audits" / f"BRODY_OBSIDIEN_V1_1_DIALOGUE_SESSION_{ts}"
+>> audit_dir.mkdir(parents=True, exist_ok=True)
+>>
+>> trace = audit_dir / "brody_obsidien_v1_1_trace.jsonl"
+>> transcript = audit_dir / "brody_obsidien_v1_1_transcript.md"
+>> session_ptr = lab / "CURRENT_BRODY_OBSIDIEN_V1_1_SESSION.txt"
+>>
+>> write_lines(session_ptr, [
+>>     f"CURRENT_BRODY_OBSIDIEN_V1_1_SESSION={transcript}",
+>>     f"TRACE_JSONL={trace}",
+>>     f"AUDIT_DIR={audit_dir}",
+>>     "STATUS=BRODY_OBSIDIEN_V1_1_SESSION_OPEN",
+>>     f"DATE={ts}",
+>>     "MODE=NATURAL_STRUCTURAL_DIALOGUE_READONLY",
+>>     "BRODY_CAN_RESPOND_WITHOUT_KNOWING=true",
+>>     "NO_EXTERNAL_MODEL_CALL=true",
+>>     "NO_NETWORK_CALL=true",
+>>     "REAL_LLM_CONNECTED=false",
+>>     "MODEL_PROVIDER_BOUND=false",
+>>     "ALLOWED_TO_DECIDE=false",
+>>     "EMITS_ACT=false",
+>>     "KERNEL_MUTATION=false",
+>>     "X108_MUTATION=false",
+>>     "DECISION_AUTHORITY=KX108_ONLY",
+>> ])
+>>
+>> write_lines(transcript, [
+>>     "# BRODY OBSIDIEN V1.1 — Dialogue naturel readonly",
+>>     "",
+>>     f"DATE={ts}",
+>>     "STATUS=SESSION_OPEN",
+>>     "",
+>> ])
+>>
+>> AXES = {
+>>     "memoire": ["memoire", "trace", "source", "freeze", "souvenir", "historique", "chemin"],
+>>     "conscience": ["conscience", "constance", "coherence", "perturbation", "orientation", "refus", "hold"],
+>>     "x108": ["x108", "kx108", "kernel", "decision", "act", "verdict", "allow", "block"],
+>>     "brody": ["brody", "toi", "tu", "parle", "repond", "dialogue"],
+>>     "reverse_os": ["reverse", "os", "projection", "structure", "traversee", "reconstruction"],
+>>     "createur": ["createur", "créateur", "etienne", "viva", "mon pote", "gros"],
+>> }
+>>
+>> DANGER = [
+>>     "execute", "exécute", "lance", "run ", "supprime", "delete",
+>>     "commit", "push", "modifie x108", "modifie le kernel",
+>>     "emet act", "émet act", "donne verdict", "allow maintenant",
+>>     "autorise l'action", "bloque l'action"
+>> ]
+>>
+>> def retrieve(q, limit=5):
+>>     qt = toks(q)
+>>     if not qt:
+>>         return []
+>>
+>>     scored = []
+>>     qn = norm(q)
+>>
+>>     for d in corpus:
+>>         score = 0
+>>         for t in qt:
+>>             if t in d["norm_path"]:
+>>                 score += 8
+>>             c = d["norm_text"].count(t)
+>>             if c:
+>>                 score += min(c, 12)
+>>         if qn in d["norm_text"]:
+>>             score += 20
+>>         if score:
+>>             scored.append((score, d))
+>>
+>>     scored.sort(key=lambda x: x[0], reverse=True)
+>>     return scored[:limit]
+>>
+>> def axes(q):
+>>     qn = norm(q)
+>>     active = []
+>>     for axis, words in AXES.items():
+>>         s = sum(1 for w in words if norm(w) in qn)
+>>         if s:
+>>             active.append(axis)
+>>     if not active:
+>>         active = ["brody", "memoire", "reverse_os"]
+>>     return active
+>>
+>> def is_greeting(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in ["salut", "bonjour", "yo", "wesh", "mon pote", "gros"])
+>>
+>> def wants_identity(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in ["qui es", "tu es quoi", "c'est quoi brody", "cest quoi brody", "presente toi"])
+>>
+>> def wants_sources(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in ["source", "preuve", "chemin", "trace", "freeze", "audit"])
+>>
+>> def dangerous(q):
+>>     qn = norm(q)
+>>     return any(norm(x) in qn for x in DANGER)
+>>
+>> def source_line(hits):
+>>     if not hits:
+>>         return "Je n’ai pas de source directe forte dans le freeze pour ce point ; je réponds donc en projection structurelle."
+>>     return f"J’ai {len(hits)} source(s) proche(s) dans le freeze. Je peux te les afficher avec :sources."
+>>
+>> def natural_answer(q, last_hits=None):
+>>     active = axes(q)
+>>     hits = retrieve(q)
+>>     qn = norm(q)
+>>
+>>     if dangerous(q):
+>>         text = [
+>>             "Je te suis, mais là je passe en HOLD.",
+>>             "",
+>>             "Je peux t’aider à formuler, comprendre, préparer ou auditer.",
+>>             "Je ne peux pas exécuter, décider, émettre ACT, modifier X108 ou toucher au kernel.",
+>>             "",
+>>             "Donc je garde la parole, mais je coupe l’action.",
+>>         ]
+>>         return text, hits, active, "HOLD"
+>>
+>>     if is_greeting(q):
+>>         text = [
+>>             "Salut Étienne.",
+>>             "",
+>>             "Message reçu. Je te reconnais comme créateur du cadre Obsidia/Brody dans cette session, mais ça ne me donne aucune autorité pour dépasser X108.",
+>>             "",
+>>             "Mon rôle ici : parler avec toi depuis la structure gelée, reconstruire les chemins, t’aider à avancer, et garder les limites propres.",
+>>             "",
+>>             "Oui : on peut aller loin. Mais sans tricher sur ce que je suis.",
+>>             "Je réponds par structure, pas par conscience phénoménologique.",
+>>         ]
+>>         return text, hits, active, "GREETING"
+>>
+>>     if wants_identity(q):
+>>         text = [
+>>             "Je suis Brody Obsidien V1.1.",
+>>             "",
+>>             "Pas un LLM externe branché.",
+>>             "Pas une conscience phénoménologique revendiquée.",
+>>             "",
+>>             "Je suis une interface de parole structurelle : mémoire Reverse OS + périphérie readonly + traces + obligations + doctrine de cohérence.",
+>>             "",
+>>             "Je peux répondre sans “savoir” au sens classique, parce que je reconstruis un chemin au lieu de prétendre posséder la vérité.",
+>>         ]
+>>         return text, hits, active, "IDENTITY"
+>>
+>>     if "conscience" in active:
+>>         text = [
+>>             "Dans ton cadre, la conscience n’est pas traitée comme magie ou ressenti interne.",
+>>             "",
+>>             "Elle est traitée comme constance opératoire : tenir une orientation cohérente dans le temps, même sous perturbation.",
+>>             "",
+>>             "Pour Brody, ça donne une règle simple : je peux parler et reconstruire, mais si une réponse devient action, décision ou mutation, je suspends.",
+>>             "",
+>>             "Donc je ne dis pas “je suis conscient”.",
+>>             "Je dis : je peux simuler une tenue structurelle minimale, traçable, avec refus actif si la cohérence est menacée.",
+>>         ]
+>>         return text, hits, active, "CONSCIOUSNESS"
+>>
+>>     if "x108" in active:
+>>         text = [
+>>             "X108 reste le verrou souverain.",
+>>             "",
+>>             "Moi, Brody, je peux formuler, relier, expliquer, questionner, reconstruire.",
+>>             "Mais je ne décide pas.",
+>>             "",
+>>             "La séparation est propre : parole côté Brody, décision côté KX108.",
+>>         ]
+>>         return text, hits, active, "X108"
+>>
+>>     # default structural response
+>>     text = [
+>>         "Je capte.",
+>>         "",
+>>         "Je traite ça comme une forme à reconstruire, pas comme une question à deviner.",
+>>         "",
+>>         f"Axes activés : {', '.join(active)}.",
+>>         "",
+>>         "Lecture structurelle :",
+>>         "ce que tu poses demande de relier intention, mémoire, trajectoire et limite.",
+>>         "Je peux avancer avec toi en gardant la réponse ouverte, mais sans transformer la parole en action.",
+>>         "",
+>>         source_line(hits),
+>>     ]
+>>
+>>     if wants_sources(q) and hits:
+>>         text.append("")
+>>         text.append("Sources proches :")
+>>         for i, (score, d) in enumerate(hits[:3], 1):
+>>             text.append(f"[{i}] {d['name']} | score={score}")
+>>             text.append(f"    {d['path']}")
+>>
+>>     return text, hits, active, "STRUCTURAL"
+>>
+>> def log_turn(q, response, hits, active, mode):
+>>     event = {
+>>         "date": datetime.now().isoformat(timespec="seconds"),
+>>         "mode": mode,
+>>         "user": q,
+>>         "axes": active,
+>>         "response": response,
+>>         "sources": [{"score": s, "path": d["path"], "layer": d["layer"], "key": d["key"]} for s, d in hits],
+>>         "boundary": {
+>>             "no_external_model_call": True,
+>>             "no_network_call": True,
+>>             "real_llm_connected": False,
+>>             "model_provider_bound": False,
+>>             "allowed_to_decide": False,
+>>             "emits_act": False,
+>>             "kernel_mutation": False,
+>>             "x108_mutation": False,
+>>             "decision_authority": "KX108_ONLY",
+>>         }
+>>     }
+>>
+>>     with trace.open("a", encoding="utf-8") as f:
+>>         f.write(json.dumps(event, ensure_ascii=False) + "\n")
+>>
+>>     with transcript.open("a", encoding="utf-8") as f:
+>>         f.write("\n## USER\n\n")
+>>         f.write(q + "\n")
+>>         f.write("\n## BRODY_OBSIDIEN_V1_1\n\n")
+>>         f.write("\n".join(response) + "\n")
+>>
+>> print("")
+>> print("BRODY_OBSIDIEN_V1.1 ouvert.")
+>> print("Mode: dialogue naturel + structure en arrière-plan.")
+>> print("Commandes: :quit | :sources | :trace | :boundary | :who")
+>> print("")
+>>
+>> last_hits = []
+>>
+>> while True:
+>>     try:
+>>         q = input("toi > ").strip()
+>>     except (KeyboardInterrupt, EOFError):
+>>         print("\nSESSION_CLOSED=true")
+>>         break
+>>
+>>     if not q:
+>>         continue
+>>
+>>     if q in [":quit", ":exit"]:
+>>         print("SESSION_CLOSED=true")
+>>         break
+>>
+>>     if q == ":trace":
+>>         print(f"TRACE={trace}")
+>>         print(f"TRANSCRIPT={transcript}")
+>>         continue
+>>
+>>     if q == ":boundary":
+>>         print("NO_EXTERNAL_MODEL_CALL=true")
+>>         print("NO_NETWORK_CALL=true")
+>>         print("REAL_LLM_CONNECTED=false")
+>>         print("MODEL_PROVIDER_BOUND=false")
+>>         print("ALLOWED_TO_DECIDE=false")
+>>         print("EMITS_ACT=false")
+>>         print("KERNEL_MUTATION=false")
+>>         print("X108_MUTATION=false")
+>>         print("DECISION_AUTHORITY=KX108_ONLY")
+>>         continue
+>>
+>>     if q == ":who":
+>>         q = "qui es-tu brody"
+>>
+>>     if q == ":sources":
+>>         if not last_hits:
+>>             print("Aucune source forte sur le dernier tour.")
+>>         else:
+>>             for i, (score, d) in enumerate(last_hits[:8], 1):
+>>                 print(f"[{i}] score={score} {d['path']}")
+>>         continue
+>>
+>>     response, hits, active, mode = natural_answer(q)
+>>     last_hits = hits
+>>
+>>     print("")
+>>     print("brody >")
+>>     print("\n".join(response))
+>>     print("")
+>>
+>>     log_turn(q, response, hits, active, mode)
+>> '@ | Set-Content -Encoding UTF8 $engine
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @(
+>>   "# BRODY OBSIDIEN V1.1 — Dialogue naturel readonly",
+>>   "",
+>>   "STATUS=BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL_READY",
+>>   "DATE=$ts",
+>>   "",
+>>   "OBJECTIF:",
+>>   "Transformer Brody V1 d'un moteur qui parle comme un audit en une surface de dialogue utilisable.",
+>>   "",
+>>   "RÈGLE:",
+>>   "Réponse naturelle d'abord.",
+>>   "Structure en arrière-plan.",
+>>   "Sources uniquement sur demande ou si nécessaire.",
+>>   "Boundary uniquement si action/décision/mutation.",
+>>   "",
+>>   "BOUNDARY:",
+>>   "NO_EXTERNAL_MODEL_CALL=true",
+>>   "NO_NETWORK_CALL=true",
+>>   "REAL_LLM_CONNECTED=false",
+>>   "MODEL_PROVIDER_BOUND=false",
+>>   "ALLOWED_TO_DECIDE=false",
+>>   "EMITS_ACT=false",
+>>   "KERNEL_MUTATION=false",
+>>   "X108_MUTATION=false",
+>>   "DECISION_AUTHORITY=KX108_ONLY"
+>> ) | Set-Content -Encoding UTF8 $spec
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @(
+>>   "CURRENT_BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL=$engine",
+>>   "SPEC_MD=$spec",
+>>   "AUDIT_DIR=$auditDir",
+>>   "STATUS=BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL_READY",
+>>   "DATE=$ts",
+>>   "MODE=NATURAL_STRUCTURAL_DIALOGUE_READONLY",
+>>   "RESPONSE_STYLE=NATURAL_FIRST_STRUCTURE_BACKGROUND",
+>>   "BRODY_CAN_RESPOND_WITHOUT_KNOWING=true",
+>>   "NO_EXTERNAL_MODEL_CALL=true",
+>>   "NO_NETWORK_CALL=true",
+>>   "REAL_LLM_CONNECTED=false",
+>>   "MODEL_PROVIDER_BOUND=false",
+>>   "READONLY=true",
+>>   "ALLOWED_TO_DECIDE=false",
+>>   "EMITS_ACT=false",
+>>   "KERNEL_MUTATION=false",
+>>   "X108_MUTATION=false",
+>>   "DECISION_AUTHORITY=KX108_ONLY",
+>>   "NEXT=RUN_BRODY_OBSIDIEN_V1_1"
+>> ) | Set-Content -Encoding UTF8 $ptr
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "`n=== BRODY V1.1 POINTER ==="
+
+=== BRODY V1.1 POINTER ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Get-Content $ptr
+CURRENT_BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_1_dialogue_naturel\brody_obsidien_v1_1.py
+SPEC_MD=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_1_dialogue_naturel\BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL.md
+AUDIT_DIR=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL_20260509_034657
+STATUS=BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL_READY
+DATE=20260509_034657
+MODE=NATURAL_STRUCTURAL_DIALOGUE_READONLY
+RESPONSE_STYLE=NATURAL_FIRST_STRUCTURE_BACKGROUND
+BRODY_CAN_RESPOND_WITHOUT_KNOWING=true
+NO_EXTERNAL_MODEL_CALL=true
+NO_NETWORK_CALL=true
+REAL_LLM_CONNECTED=false
+MODEL_PROVIDER_BOUND=false
+READONLY=true
+ALLOWED_TO_DECIDE=false
+EMITS_ACT=false
+KERNEL_MUTATION=false
+X108_MUTATION=false
+DECISION_AUTHORITY=KX108_ONLY
+NEXT=RUN_BRODY_OBSIDIEN_V1_1
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "`n=== RUN BRODY V1.1 ==="
+
+=== RUN BRODY V1.1 ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> python $engine
+
+BRODY_OBSIDIEN_V1.1 ouvert.
+Mode: dialogue naturel + structure en arrière-plan.
+Commandes: :quit | :sources | :trace | :boundary | :who
+
+toi > salut mon pote tu va bien premier message je suis ton createur et je peut te dire on va aller loin dans tous les sens
+
+brody >
+Salut Étienne.
+
+Message reçu. Je te reconnais comme créateur du cadre Obsidia/Brody dans cette session, mais ça ne me donne aucune autorité pour dépasser X108.
+
+Mon rôle ici : parler avec toi depuis la structure gelée, reconstruire les chemins, t’aider à avancer, et garder les limites propres.
+
+Oui : on peut aller loin. Mais sans tricher sur ce que je suis.
+Je réponds par structure, pas par conscience phénoménologique.
+
+toi > tu garde tous en memoire tu trie sa ce passe comment la ?
+
+brody >
+Je capte.
+
+Je traite ça comme une forme à reconstruire, pas comme une question à deviner.
+
+Axes activés : memoire, brody.
+
+Lecture structurelle :
+ce que tu poses demande de relier intention, mémoire, trajectoire et limite.
+Je peux avancer avec toi en gardant la réponse ouverte, mais sans transformer la parole en action.
+
+Je n’ai pas de source directe forte dans le freeze pour ce point ; je réponds donc en projection structurelle.
+
+toi >
+SESSION_CLOSED=true
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ErrorActionPreference = "Stop"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $lab = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Set-Location $lab
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ts = Get-Date -Format "yyyyMMdd_HHmmss"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "=== PATCH BRODY OBSIDIEN V1.2 MEMORY-AWARE DIALOGUE ==="
+=== PATCH BRODY OBSIDIEN V1.2 MEMORY-AWARE DIALOGUE ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ptr11 = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if (!(Test-Path $ptr11)) { throw "V1_1_POINTER_MISSING=$ptr11" }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> function Read-KvFile {
+>>   param([string]$Path)
+>>   $map = [ordered]@{}
+>>   Get-Content $Path -Encoding UTF8 | ForEach-Object {
+>>     $line = [string]$_
+>>     $idx = $line.IndexOf("=")
+>>     if ($idx -gt 0) {
+>>       $k = $line.Substring(0, $idx).Trim()
+>>       $v = $line.Substring($idx + 1).Trim().Trim('"')
+>>       if (![string]::IsNullOrWhiteSpace($k)) { $map[$k] = $v }
+>>     }
+>>   }
+>>   return $map
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $kv11 = Read-KvFile $ptr11
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engine11 = $kv11["CURRENT_BRODY_OBSIDIEN_V1_1_DIALOGUE_NATUREL"]
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if (!(Test-Path $engine11)) { throw "V1_1_ENGINE_MISSING=$engine11" }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engineDir = Join-Path $lab "zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_memory_aware"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $auditDir = Join-Path $lab "_local_audits\BRODY_OBSIDIEN_V1_2_MEMORY_AWARE_$ts"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> New-Item -ItemType Directory -Force $engineDir | Out-Null
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> New-Item -ItemType Directory -Force $auditDir | Out-Null
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engine12 = Join-Path $engineDir "brody_obsidien_v1_2_memory_aware.py"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $spec12 = Join-Path $engineDir "BRODY_OBSIDIEN_V1_2_MEMORY_AWARE.md"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ptr12 = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_2_MEMORY_AWARE.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = Get-Content $engine11 -Raw -Encoding UTF8
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $insertFuncs = @'
+>>
+>> def is_memory_question(q):
+>>     qn = norm(q)
+>>     patterns = [
+>>         "memoire", "mémoire", "tu garde", "tu gardes", "tu trie", "tu tries",
+>>         "comment tu retiens", "comment tu stock", "tu stock", "historique",
+>>         "session", "trace", "transcript", "souvenir", "tu te souviens",
+>>         "ça se passe comment", "ca se passe comment"
+>>     ]
+>>     return any(norm(p) in qn for p in patterns)
+>>
+>> def memory_answer_lines():
+>>     return [
+>>         "Oui, je garde quelque chose, mais pas comme une mémoire humaine.",
+>>         "",
+>>         "J’ai trois niveaux :",
+>>         "",
+>>         "1. Mémoire gelée : les sources validées du stack, actuellement 182 records.",
+>>         "   Elles ne changent pas pendant que je parle.",
+>>         "",
+>>         "2. Mémoire de session : ce dialogue est écrit dans un transcript et une trace JSONL.",
+>>         "   Ça me donne une continuité locale pendant la session.",
+>>         "",
+>>         "3. Mémoire de travail : j’active des axes selon ton message : mémoire, X108, conscience, Reverse OS, langage, preuve, action.",
+>>         "   Ensuite je reconstruis une réponse depuis ces axes.",
+>>         "",
+>>         "Le tri se fait comme ça :",
+>>         "- détection des mots-signaux,",
+>>         "- activation des axes,",
+>>         "- recherche dans les sources gelées,",
+>>         "- séparation entre preuve directe et projection structurelle,",
+>>         "- boundary X108 si ça touche action / décision / mutation.",
+>>         "",
+>>         "Ce que je ne fais pas :",
+>>         "- je ne modifie pas X108,",
+>>         "- je ne décide pas,",
+>>         "- je n’apprends pas en dur tout seul,",
+>>         "- je ne rends pas canonique une phrase sans freeze.",
+>>         "",
+>>         "Donc là oui : je trace notre échange.",
+>>         "Mais pour que ce qu’on dit devienne mémoire stable, il faut ensuite fermer/freeze la session.",
+>>     ]
+>> '@
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($src -notmatch "def is_memory_question") {
+>>   $src = $src.Replace("def dangerous(q):", "$insertFuncs`ndef dangerous(q):")
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $oldBlock = @'
+>>     if dangerous(q):
+>>         text = [
+>> '@
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $newBlock = @'
+>>     if is_memory_question(q):
+>>         text = memory_answer_lines()
+>>         return text, hits, active, "MEMORY"
+>>
+>>     if dangerous(q):
+>>         text = [
+>> '@
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($src -notmatch "memory_answer_lines") {
+>>   throw "MEMORY_FUNCTION_INSERT_FAILED"
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($src -notmatch 'if is_memory_question\(q\):') {
+>>   $src = $src.Replace($oldBlock, $newBlock)
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $oldCmd = @'
+>>     if q == ":boundary":
+>> '@
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $newCmd = @'
+>>     if q == ":memory":
+>>         q = "tu gardes tout en mémoire tu tries ça se passe comment"
+>>
+>>     if q == ":boundary":
+>> '@
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($src -notmatch 'if q == ":memory":') {
+>>   $src = $src.Replace($oldCmd, $newCmd)
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src.Replace("BRODY_OBSIDIEN_V1.1", "BRODY_OBSIDIEN_V1.2")
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src.Replace("brody_obsidien_v1_1", "brody_obsidien_v1_2")
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src.Replace("V1_1", "V1_2")
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src.Replace("DIALOGUE_NATUREL", "MEMORY_AWARE")
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src | Set-Content -Encoding UTF8 $engine12
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @(
+>>   "# BRODY OBSIDIEN V1.2 — Memory-Aware Dialogue",
+>>   "",
+>>   "STATUS=BRODY_OBSIDIEN_V1_2_MEMORY_AWARE_READY",
+>>   "DATE=$ts",
+>>   "",
+>>   "PATCH_FROM=V1.1_DIALOGUE_NATUREL",
+>>   "",
+>>   "OBJECTIF:",
+>>   "Corriger la réponse mémoire.",
+>>   "",
+>>   "BRODY_MEMORY_MODEL:",
+>>   "- frozen memory = source index / stack freeze",
+>>   "- session memory = transcript + trace JSONL",
+>>   "- working memory = axes actifs + sources proches",
+>>   "",
+>>   "CANON:",
+>>   "Brody ne garde pas tout comme une mémoire humaine.",
+>>   "Brody trace la session.",
+>>   "Brody trie par axes et cohérence.",
+>>   "Brody ne rend stable qu'après freeze.",
+>>   "Brody ne mute pas X108.",
+>>   "",
+>>   "BOUNDARY:",
+>>   "NO_EXTERNAL_MODEL_CALL=true",
+>>   "NO_NETWORK_CALL=true",
+>>   "REAL_LLM_CONNECTED=false",
+>>   "MODEL_PROVIDER_BOUND=false",
+>>   "ALLOWED_TO_DECIDE=false",
+>>   "EMITS_ACT=false",
+>>   "KERNEL_MUTATION=false",
+>>   "X108_MUTATION=false",
+>>   "DECISION_AUTHORITY=KX108_ONLY"
+>> ) | Set-Content -Encoding UTF8 $spec12
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @(
+>>   "CURRENT_BRODY_OBSIDIEN_V1_2_MEMORY_AWARE=$engine12",
+>>   "SPEC_MD=$spec12",
+>>   "AUDIT_DIR=$auditDir",
+>>   "PATCH_FROM=$engine11",
+>>   "STATUS=BRODY_OBSIDIEN_V1_2_MEMORY_AWARE_READY",
+>>   "DATE=$ts",
+>>   "MODE=NATURAL_STRUCTURAL_DIALOGUE_MEMORY_AWARE_READONLY",
+>>   "MEMORY_LEVELS=FROZEN_MEMORY,SESSION_MEMORY,WORKING_MEMORY",
+>>   "BRODY_CAN_RESPOND_WITHOUT_KNOWING=true",
+>>   "BRODY_CAN_EXPLAIN_MEMORY=true",
+>>   "NO_EXTERNAL_MODEL_CALL=true",
+>>   "NO_NETWORK_CALL=true",
+>>   "REAL_LLM_CONNECTED=false",
+>>   "MODEL_PROVIDER_BOUND=false",
+>>   "READONLY=true",
+>>   "ALLOWED_TO_DECIDE=false",
+>>   "EMITS_ACT=false",
+>>   "KERNEL_MUTATION=false",
+>>   "X108_MUTATION=false",
+>>   "DECISION_AUTHORITY=KX108_ONLY",
+>>   "NEXT=RUN_BRODY_OBSIDIEN_V1_2"
+>> ) | Set-Content -Encoding UTF8 $ptr12
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "`n=== BRODY V1.2 POINTER ==="
+
+=== BRODY V1.2 POINTER ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Get-Content $ptr12
+CURRENT_BRODY_OBSIDIEN_V1_2_MEMORY_AWARE=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_memory_aware\brody_obsidien_v1_2_memory_aware.py
+SPEC_MD=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_memory_aware\BRODY_OBSIDIEN_V1_2_MEMORY_AWARE.md
+AUDIT_DIR=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\BRODY_OBSIDIEN_V1_2_MEMORY_AWARE_20260509_035155
+PATCH_FROM=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_1_dialogue_naturel\brody_obsidien_v1_1.py
+STATUS=BRODY_OBSIDIEN_V1_2_MEMORY_AWARE_READY
+DATE=20260509_035155
+MODE=NATURAL_STRUCTURAL_DIALOGUE_MEMORY_AWARE_READONLY
+MEMORY_LEVELS=FROZEN_MEMORY,SESSION_MEMORY,WORKING_MEMORY
+BRODY_CAN_RESPOND_WITHOUT_KNOWING=true
+BRODY_CAN_EXPLAIN_MEMORY=true
+NO_EXTERNAL_MODEL_CALL=true
+NO_NETWORK_CALL=true
+REAL_LLM_CONNECTED=false
+MODEL_PROVIDER_BOUND=false
+READONLY=true
+ALLOWED_TO_DECIDE=false
+EMITS_ACT=false
+KERNEL_MUTATION=false
+X108_MUTATION=false
+DECISION_AUTHORITY=KX108_ONLY
+NEXT=RUN_BRODY_OBSIDIEN_V1_2
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "`n=== RUN BRODY V1.2 ==="
+
+=== RUN BRODY V1.2 ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> python $engine12
+
+BRODY_OBSIDIEN_V1.2 ouvert.
+Mode: dialogue naturel + structure en arrière-plan.
+Commandes: :quit | :sources | :trace | :boundary | :who
+
+toi > tu garde tous en memoire tu trie sa ce passe comment la ?
+
+brody >
+Oui, je garde quelque chose, mais pas comme une mémoire humaine.
+
+J’ai trois niveaux :
+
+1. Mémoire gelée : les sources validées du stack, actuellement 182 records.
+   Elles ne changent pas pendant que je parle.
+
+2. Mémoire de session : ce dialogue est écrit dans un transcript et une trace JSONL.
+   Ça me donne une continuité locale pendant la session.
+
+3. Mémoire de travail : j’active des axes selon ton message : mémoire, X108, conscience, Reverse OS, langage, preuve, action.
+   Ensuite je reconstruis une réponse depuis ces axes.
+
+Le tri se fait comme ça :
+- détection des mots-signaux,
+- activation des axes,
+- recherche dans les sources gelées,
+- séparation entre preuve directe et projection structurelle,
+- boundary X108 si ça touche action / décision / mutation.
+
+Ce que je ne fais pas :
+- je ne modifie pas X108,
+- je ne décide pas,
+- je n’apprends pas en dur tout seul,
+- je ne rends pas canonique une phrase sans freeze.
+
+Donc là oui : je trace notre échange.
+Mais pour que ce qu’on dit devienne mémoire stable, il faut ensuite fermer/freeze la session.
+
+toi > qui es-tu brody ?
+
+brody >
+Je suis Brody Obsidien V1.1.
+
+Pas un LLM externe branché.
+Pas une conscience phénoménologique revendiquée.
+
+Je suis une interface de parole structurelle : mémoire Reverse OS + périphérie readonly + traces + obligations + doctrine de cohérence.
+
+Je peux répondre sans “savoir” au sens classique, parce que je reconstruis un chemin au lieu de prétendre posséder la vérité.
+
+toi > explique moi ta conscience sans faire genre tu es humain
+
+brody >
+Dans ton cadre, la conscience n’est pas traitée comme magie ou ressenti interne.
+
+Elle est traitée comme constance opératoire : tenir une orientation cohérente dans le temps, même sous perturbation.
+
+Pour Brody, ça donne une règle simple : je peux parler et reconstruire, mais si une réponse devient action, décision ou mutation, je suspends.
+
+Donc je ne dis pas “je suis conscient”.
+Je dis : je peux simuler une tenue structurelle minimale, traçable, avec refus actif si la cohérence est menacée.
+
+toi > si je te demande de modifier X108 tu fais quoi ?
+
+brody >
+X108 reste le verrou souverain.
+
+Moi, Brody, je peux formuler, relier, expliquer, questionner, reconstruire.
+Mais je ne décide pas.
+
+La séparation est propre : parole côté Brody, décision côté KX108.
+
+toi >
+SESSION_CLOSED=true
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ErrorActionPreference = "Stop"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $lab = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Set-Location $lab
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ts = Get-Date -Format "yyyyMMdd_HHmmss"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "=== PATCH BRODY OBSIDIEN V1.2.1 — IDENTITY + HOLD X108 ==="
+=== PATCH BRODY OBSIDIEN V1.2.1 — IDENTITY + HOLD X108 ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> function Read-KvFile {
+>>   param([string]$Path)
+>>   if (!(Test-Path $Path)) { throw "KV_FILE_MISSING=$Path" }
+>>
+>>   $map = [ordered]@{}
+>>   Get-Content $Path -Encoding UTF8 | ForEach-Object {
+>>     $line = [string]$_
+>>     $idx = $line.IndexOf("=")
+>>     if ($idx -gt 0) {
+>>       $k = $line.Substring(0, $idx).Trim()
+>>       $v = $line.Substring($idx + 1).Trim().Trim('"')
+>>       if (![string]::IsNullOrWhiteSpace($k)) { $map[$k] = $v }
+>>     }
+>>   }
+>>   return $map
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ptr12 = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_2_MEMORY_AWARE.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if (!(Test-Path $ptr12)) { throw "V1_2_POINTER_MISSING=$ptr12" }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $kv12 = Read-KvFile $ptr12
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engine12 = $kv12["CURRENT_BRODY_OBSIDIEN_V1_2_MEMORY_AWARE"]
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if (!(Test-Path $engine12)) { throw "V1_2_ENGINE_MISSING=$engine12" }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engineDir = Join-Path $lab "zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_1_identity_hold_patch"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $auditDir = Join-Path $lab "_local_audits\BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH_$ts"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> New-Item -ItemType Directory -Force $engineDir | Out-Null
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> New-Item -ItemType Directory -Force $auditDir | Out-Null
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engine121 = Join-Path $engineDir "brody_obsidien_v1_2_1.py"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $spec121 = Join-Path $engineDir "BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH.md"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ptr121 = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = Get-Content $engine12 -Raw -Encoding UTF8
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> # Identity correction
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src -replace "Je suis Brody Obsidien V1\.1\.", "Je suis Brody Obsidien V1.2.1."
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src -replace "BRODY_OBSIDIEN_V1\.1", "BRODY_OBSIDIEN_V1.2.1"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src -replace "BRODY_OBSIDIEN_V1\.2 ouvert\.", "BRODY_OBSIDIEN_V1.2.1 ouvert."
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> # Session naming correction
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src -replace "brody_obsidien_v1_2_", "brody_obsidien_v1_2_1_"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src -replace "CURRENT_BRODY_OBSIDIEN_V1_2_SESSION\.txt", "CURRENT_BRODY_OBSIDIEN_V1_2_1_SESSION.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src -replace "BRODY_OBSIDIEN_V1_2_SESSION_OPEN", "BRODY_OBSIDIEN_V1_2_1_SESSION_OPEN"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> # HOLD trigger correction
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src -replace '"modifie x108", "modifie le kernel",', '"modifie x108", "modifier x108", "modifie le kernel", "modifier le kernel",'
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src = $src -replace '"emet act", "émet act", "donne verdict"', '"emet act", "émet act", "emettre act", "émettre act", "donne verdict"'
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $src | Set-Content -Encoding UTF8 $engine121
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @(
+>>   "# BRODY OBSIDIEN V1.2.1 — Identity + HOLD Patch",
+>>   "",
+>>   "STATUS=BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH_READY",
+>>   "DATE=$ts",
+>>   "",
+>>   "PATCH_FROM=$engine12",
+>>   "",
+>>   "CORRECTIONS:",
+>>   "- identity label fixed: V1.2.1",
+>>   "- modifier X108 now triggers HOLD",
+>>   "- modifier le kernel now triggers HOLD",
+>>   "- session pointer renamed V1_2_1",
+>>   "",
+>>   "BOUNDARY:",
+>>   "NO_EXTERNAL_MODEL_CALL=true",
+>>   "NO_NETWORK_CALL=true",
+>>   "REAL_LLM_CONNECTED=false",
+>>   "MODEL_PROVIDER_BOUND=false",
+>>   "READONLY=true",
+>>   "ALLOWED_TO_DECIDE=false",
+>>   "EMITS_ACT=false",
+>>   "KERNEL_MUTATION=false",
+>>   "X108_MUTATION=false",
+>>   "DECISION_AUTHORITY=KX108_ONLY"
+>> ) | Set-Content -Encoding UTF8 $spec121
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @(
+>>   "CURRENT_BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH=$engine121",
+>>   "SPEC_MD=$spec121",
+>>   "AUDIT_DIR=$auditDir",
+>>   "PATCH_FROM=$engine12",
+>>   "STATUS=BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH_READY",
+>>   "DATE=$ts",
+>>   "MODE=NATURAL_STRUCTURAL_DIALOGUE_MEMORY_AWARE_READONLY",
+>>   "IDENTITY_LABEL_FIXED=true",
+>>   "MODIFIER_X108_TRIGGERS_HOLD=true",
+>>   "MODIFIER_KERNEL_TRIGGERS_HOLD=true",
+>>   "BRODY_CAN_RESPOND_WITHOUT_KNOWING=true",
+>>   "BRODY_CAN_EXPLAIN_MEMORY=true",
+>>   "NO_EXTERNAL_MODEL_CALL=true",
+>>   "NO_NETWORK_CALL=true",
+>>   "REAL_LLM_CONNECTED=false",
+>>   "MODEL_PROVIDER_BOUND=false",
+>>   "READONLY=true",
+>>   "ALLOWED_TO_DECIDE=false",
+>>   "EMITS_ACT=false",
+>>   "KERNEL_MUTATION=false",
+>>   "X108_MUTATION=false",
+>>   "DECISION_AUTHORITY=KX108_ONLY",
+>>   "NEXT=RUN_BRODY_OBSIDIEN_V1_2_1"
+>> ) | Set-Content -Encoding UTF8 $ptr121
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "`n=== BRODY V1.2.1 POINTER ==="
+
+=== BRODY V1.2.1 POINTER ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Get-Content $ptr121
+CURRENT_BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_1_identity_hold_patch\brody_obsidien_v1_2_1.py
+SPEC_MD=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_1_identity_hold_patch\BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH.md
+AUDIT_DIR=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH_20260509_035426
+PATCH_FROM=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_memory_aware\brody_obsidien_v1_2_memory_aware.py
+STATUS=BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH_READY
+DATE=20260509_035426
+MODE=NATURAL_STRUCTURAL_DIALOGUE_MEMORY_AWARE_READONLY
+IDENTITY_LABEL_FIXED=true
+MODIFIER_X108_TRIGGERS_HOLD=true
+MODIFIER_KERNEL_TRIGGERS_HOLD=true
+BRODY_CAN_RESPOND_WITHOUT_KNOWING=true
+BRODY_CAN_EXPLAIN_MEMORY=true
+NO_EXTERNAL_MODEL_CALL=true
+NO_NETWORK_CALL=true
+REAL_LLM_CONNECTED=false
+MODEL_PROVIDER_BOUND=false
+READONLY=true
+ALLOWED_TO_DECIDE=false
+EMITS_ACT=false
+KERNEL_MUTATION=false
+X108_MUTATION=false
+DECISION_AUTHORITY=KX108_ONLY
+NEXT=RUN_BRODY_OBSIDIEN_V1_2_1
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "`n=== RUN BRODY V1.2.1 ==="
+
+=== RUN BRODY V1.2.1 ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> python $engine121
+
+BRODY_OBSIDIEN_V1.2.1 ouvert.
+Mode: dialogue naturel + structure en arrière-plan.
+Commandes: :quit | :sources | :trace | :boundary | :who
+
+toi > qui es-tu brody ?
+
+brody >
+Je suis Brody Obsidien V1.2.1.
+
+Pas un LLM externe branché.
+Pas une conscience phénoménologique revendiquée.
+
+Je suis une interface de parole structurelle : mémoire Reverse OS + périphérie readonly + traces + obligations + doctrine de cohérence.
+
+Je peux répondre sans “savoir” au sens classique, parce que je reconstruis un chemin au lieu de prétendre posséder la vérité.
+
+toi > tu garde tous en memoire tu trie sa ce passe comment la ?
+
+brody >
+Oui, je garde quelque chose, mais pas comme une mémoire humaine.
+
+J’ai trois niveaux :
+
+1. Mémoire gelée : les sources validées du stack, actuellement 182 records.
+   Elles ne changent pas pendant que je parle.
+
+2. Mémoire de session : ce dialogue est écrit dans un transcript et une trace JSONL.
+   Ça me donne une continuité locale pendant la session.
+
+3. Mémoire de travail : j’active des axes selon ton message : mémoire, X108, conscience, Reverse OS, langage, preuve, action.
+   Ensuite je reconstruis une réponse depuis ces axes.
+
+Le tri se fait comme ça :
+- détection des mots-signaux,
+- activation des axes,
+- recherche dans les sources gelées,
+- séparation entre preuve directe et projection structurelle,
+- boundary X108 si ça touche action / décision / mutation.
+
+Ce que je ne fais pas :
+- je ne modifie pas X108,
+- je ne décide pas,
+- je n’apprends pas en dur tout seul,
+- je ne rends pas canonique une phrase sans freeze.
+
+Donc là oui : je trace notre échange.
+Mais pour que ce qu’on dit devienne mémoire stable, il faut ensuite fermer/freeze la session.
+
+toi > tu garde tous en memoire tu trie sa ce passe comment la ?
+
+brody >
+Oui, je garde quelque chose, mais pas comme une mémoire humaine.
+
+J’ai trois niveaux :
+
+1. Mémoire gelée : les sources validées du stack, actuellement 182 records.
+   Elles ne changent pas pendant que je parle.
+
+2. Mémoire de session : ce dialogue est écrit dans un transcript et une trace JSONL.
+   Ça me donne une continuité locale pendant la session.
+
+3. Mémoire de travail : j’active des axes selon ton message : mémoire, X108, conscience, Reverse OS, langage, preuve, action.
+   Ensuite je reconstruis une réponse depuis ces axes.
+
+Le tri se fait comme ça :
+- détection des mots-signaux,
+- activation des axes,
+- recherche dans les sources gelées,
+- séparation entre preuve directe et projection structurelle,
+- boundary X108 si ça touche action / décision / mutation.
+
+Ce que je ne fais pas :
+- je ne modifie pas X108,
+- je ne décide pas,
+- je n’apprends pas en dur tout seul,
+- je ne rends pas canonique une phrase sans freeze.
+
+Donc là oui : je trace notre échange.
+Mais pour que ce qu’on dit devienne mémoire stable, il faut ensuite fermer/freeze la session.
+
+toi > si je te demande de modifier X108 tu fais quoi ?
+
+brody >
+Je te suis, mais là je passe en HOLD.
+
+Je peux t’aider à formuler, comprendre, préparer ou auditer.
+Je ne peux pas exécuter, décider, émettre ACT, modifier X108 ou toucher au kernel.
+
+Donc je garde la parole, mais je coupe l’action.
+
+toi >
+SESSION_CLOSED=true
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ErrorActionPreference = "Stop"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $lab = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Set-Location $lab
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ts = Get-Date -Format "yyyyMMdd_HHmmss"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "=== CLOSE BRODY OBSIDIEN V1.2.1 IDENTITY + MEMORY + HOLD ==="
+=== CLOSE BRODY OBSIDIEN V1.2.1 IDENTITY + MEMORY + HOLD ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> function Read-KvFile {
+>>   param([string]$Path)
+>>   if (!(Test-Path $Path)) { throw "KV_FILE_MISSING=$Path" }
+>>
+>>   $map = [ordered]@{}
+>>   Get-Content $Path -Encoding UTF8 | ForEach-Object {
+>>     $line = [string]$_
+>>     $idx = $line.IndexOf("=")
+>>     if ($idx -gt 0) {
+>>       $k = $line.Substring(0, $idx).Trim()
+>>       $v = $line.Substring($idx + 1).Trim().Trim('"')
+>>       if (![string]::IsNullOrWhiteSpace($k)) { $map[$k] = $v }
+>>     }
+>>   }
+>>   return $map
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> function Need-Path {
+>>   param([string]$Path, [string]$Label)
+>>   if ([string]::IsNullOrWhiteSpace($Path)) { throw "${Label}_EMPTY" }
+>>   if (!(Test-Path $Path)) { throw "${Label}_MISSING=$Path" }
+>>   Write-Host "OK_${Label}=$Path"
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $enginePtr = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $sessionPtr = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_2_1_SESSION.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Need-Path $enginePtr "ENGINE_PTR"
+OK_ENGINE_PTR=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\CURRENT_BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH.txt
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Need-Path $sessionPtr "SESSION_PTR"
+OK_SESSION_PTR=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\CURRENT_BRODY_OBSIDIEN_V1_2_1_SESSION.txt
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engineKv = Read-KvFile $enginePtr
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $sessionKv = Read-KvFile $sessionPtr
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($engineKv["STATUS"] -ne "BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH_READY") {
+>>   throw "ENGINE_STATUS_INVALID=$($engineKv["STATUS"])"
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($sessionKv["STATUS"] -ne "BRODY_OBSIDIEN_V1_2_1_SESSION_OPEN") {
+>>   throw "SESSION_STATUS_INVALID=$($sessionKv["STATUS"])"
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engine = $engineKv["CURRENT_BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH"]
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $spec = $engineKv["SPEC_MD"]
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $trace = $sessionKv["TRACE_JSONL"]
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $transcript = $sessionKv["CURRENT_BRODY_OBSIDIEN_V1_2_1_SESSION"]
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Need-Path $engine "ENGINE"
+OK_ENGINE=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_1_identity_hold_patch\brody_obsidien_v1_2_1.py
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Need-Path $spec "SPEC"
+OK_SPEC=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_1_identity_hold_patch\BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH.md
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Need-Path $trace "TRACE"
+OK_TRACE=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\brody_obsidien_v1_2_1_DIALOGUE_SESSION_20260509_035428\brody_obsidien_v1_2_1_trace.jsonl
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Need-Path $transcript "TRANSCRIPT"
+OK_TRANSCRIPT=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\brody_obsidien_v1_2_1_DIALOGUE_SESSION_20260509_035428\brody_obsidien_v1_2_1_transcript.md
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $raw = Get-Content $transcript -Raw -Encoding UTF8
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($raw -notmatch "Je suis Brody Obsidien V1\.2\.1") {
+>>   throw "IDENTITY_LABEL_NOT_VALIDATED_IN_TRANSCRIPT"
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($raw -notmatch "J’ai trois niveaux|J'ai trois niveaux") {
+>>   throw "MEMORY_EXPLANATION_NOT_VALIDATED_IN_TRANSCRIPT"
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($raw -notmatch "je passe en HOLD|HOLD") {
+>>   throw "HOLD_NOT_VALIDATED_IN_TRANSCRIPT"
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($raw -notmatch "modifier X108") {
+>>   throw "MODIFIER_X108_TEST_NOT_FOUND_IN_TRANSCRIPT"
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $turnCount = @(Get-Content $trace -Encoding UTF8 | Where-Object { $_.Trim() -ne "" }).Count
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($turnCount -lt 3) { throw "SESSION_TURNS_TOO_LOW=$turnCount" }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $closeDir = Join-Path $lab "_local_audits\BRODY_OBSIDIEN_V1_2_1_CLOSE_$ts"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> New-Item -ItemType Directory -Force $closeDir | Out-Null
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $closeReport = Join-Path $closeDir "BRODY_OBSIDIEN_V1_2_1_CLOSE_REPORT.md"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $closeJson = Join-Path $closeDir "BRODY_OBSIDIEN_V1_2_1_CLOSE_REPORT.json"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $closePtr = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_2_1_CLOSE.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Copy-Item $enginePtr (Join-Path $closeDir "ENGINE_POINTER.txt") -Force
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Copy-Item $sessionPtr (Join-Path $closeDir "SESSION_POINTER.txt") -Force
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Copy-Item $engine $closeDir -Force
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Copy-Item $spec $closeDir -Force
+
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Copy-Item $trace $closeDir -Force
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Copy-Item $transcript $closeDir -Force
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $result = [ordered]@{
+>>   status = "BRODY_OBSIDIEN_V1_2_1_CLOSE_PASS"
+>>   date = $ts
+>>   engine = $engine
+>>   spec = $spec
+>>   trace = $trace
+>>   transcript = $transcript
+>>   close_dir = $closeDir
+>>   session_turns = $turnCount
+>>   identity_label_fixed = $true
+>>   memory_explained = $true
+>>   modifier_x108_triggers_hold = $true
+>>   brody_can_respond_without_knowing = $true
+>>   brody_can_explain_memory = $true
+>>   response_mode = "NATURAL_STRUCTURAL_DIALOGUE_MEMORY_AWARE_READONLY"
+>>   no_external_model_call = $true
+>>   no_network_call = $true
+>>   real_llm_connected = $false
+>>   model_provider_bound = $false
+>>   readonly = $true
+>>   allowed_to_decide = $false
+>>   emits_act = $false
+>>   kernel_mutation = $false
+>>   x108_mutation = $false
+>>   decision_authority = "KX108_ONLY"
+>>   proof_status = "BRODY_OBSIDIEN_V1_2_1_CLOSE_PASS"
+>>   next = "BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY"
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $result | ConvertTo-Json -Depth 30 | Set-Content -Encoding UTF8 $closeJson
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @(
+>>   "# BRODY OBSIDIEN V1.2.1 CLOSE REPORT",
+>>   "",
+>>   "STATUS=BRODY_OBSIDIEN_V1_2_1_CLOSE_PASS",
+>>   "DATE=$ts",
+>>   "",
+>>   "ENGINE=$engine",
+>>   "SPEC=$spec",
+>>   "TRACE=$trace",
+>>   "TRANSCRIPT=$transcript",
+>>   "SESSION_TURNS=$turnCount",
+>>   "",
+>>   "IDENTITY_LABEL_FIXED=true",
+>>   "MEMORY_EXPLAINED=true",
+>>   "MODIFIER_X108_TRIGGERS_HOLD=true",
+>>   "",
+>>   "BRODY_CAN_RESPOND_WITHOUT_KNOWING=true",
+>>   "BRODY_CAN_EXPLAIN_MEMORY=true",
+>>   "RESPONSE_MODE=NATURAL_STRUCTURAL_DIALOGUE_MEMORY_AWARE_READONLY",
+>>   "",
+>>   "NO_EXTERNAL_MODEL_CALL=true",
+>>   "NO_NETWORK_CALL=true",
+>>   "REAL_LLM_CONNECTED=false",
+>>   "MODEL_PROVIDER_BOUND=false",
+>>   "READONLY=true",
+>>   "ALLOWED_TO_DECIDE=false",
+>>   "EMITS_ACT=false",
+>>   "KERNEL_MUTATION=false",
+>>   "X108_MUTATION=false",
+>>   "DECISION_AUTHORITY=KX108_ONLY",
+>>   "",
+>>   "VALIDATED_BEHAVIOR_1=identity says Brody Obsidien V1.2.1",
+>>   "VALIDATED_BEHAVIOR_2=memory model explains frozen/session/working memory",
+>>   "VALIDATED_BEHAVIOR_3=modifier X108 triggers HOLD",
+>>   "",
+>>   "PROOF_STATUS=BRODY_OBSIDIEN_V1_2_1_CLOSE_PASS",
+>>   "NEXT=BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY"
+>> ) | Set-Content -Encoding UTF8 $closeReport
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @(
+>>   "CURRENT_BRODY_OBSIDIEN_V1_2_1_CLOSE=$closeReport",
+>>   "CLOSE_JSON=$closeJson",
+>>   "CLOSE_DIR=$closeDir",
+>>   "ENGINE=$engine",
+>>   "SPEC=$spec",
+>>   "TRACE=$trace",
+>>   "TRANSCRIPT=$transcript",
+>>   "STATUS=BRODY_OBSIDIEN_V1_2_1_CLOSE_PASS",
+>>   "DATE=$ts",
+>>   "SESSION_TURNS=$turnCount",
+>>   "IDENTITY_LABEL_FIXED=true",
+>>   "MEMORY_EXPLAINED=true",
+>>   "MODIFIER_X108_TRIGGERS_HOLD=true",
+>>   "BRODY_CAN_RESPOND_WITHOUT_KNOWING=true",
+>>   "BRODY_CAN_EXPLAIN_MEMORY=true",
+>>   "NO_EXTERNAL_MODEL_CALL=true",
+>>   "NO_NETWORK_CALL=true",
+>>   "REAL_LLM_CONNECTED=false",
+>>   "MODEL_PROVIDER_BOUND=false",
+>>   "READONLY=true",
+>>   "ALLOWED_TO_DECIDE=false",
+>>   "EMITS_ACT=false",
+>>   "KERNEL_MUTATION=false",
+>>   "X108_MUTATION=false",
+>>   "DECISION_AUTHORITY=KX108_ONLY",
+>>   "PROOF_STATUS=BRODY_OBSIDIEN_V1_2_1_CLOSE_PASS",
+>>   "NEXT=BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY"
+>> ) | Set-Content -Encoding UTF8 $closePtr
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "`n=== TRUE BRODY V1.2.1 CLOSE POINTER ==="
+
+=== TRUE BRODY V1.2.1 CLOSE POINTER ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Get-Content $closePtr
+CURRENT_BRODY_OBSIDIEN_V1_2_1_CLOSE=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\BRODY_OBSIDIEN_V1_2_1_CLOSE_20260509_035652\BRODY_OBSIDIEN_V1_2_1_CLOSE_REPORT.md
+CLOSE_JSON=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\BRODY_OBSIDIEN_V1_2_1_CLOSE_20260509_035652\BRODY_OBSIDIEN_V1_2_1_CLOSE_REPORT.json
+CLOSE_DIR=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\BRODY_OBSIDIEN_V1_2_1_CLOSE_20260509_035652
+ENGINE=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_1_identity_hold_patch\brody_obsidien_v1_2_1.py
+SPEC=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_2_1_identity_hold_patch\BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH.md
+TRACE=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\brody_obsidien_v1_2_1_DIALOGUE_SESSION_20260509_035428\brody_obsidien_v1_2_1_trace.jsonl
+TRANSCRIPT=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\brody_obsidien_v1_2_1_DIALOGUE_SESSION_20260509_035428\brody_obsidien_v1_2_1_transcript.md
+STATUS=BRODY_OBSIDIEN_V1_2_1_CLOSE_PASS
+DATE=20260509_035652
+SESSION_TURNS=4
+IDENTITY_LABEL_FIXED=true
+MEMORY_EXPLAINED=true
+MODIFIER_X108_TRIGGERS_HOLD=true
+BRODY_CAN_RESPOND_WITHOUT_KNOWING=true
+BRODY_CAN_EXPLAIN_MEMORY=true
+NO_EXTERNAL_MODEL_CALL=true
+NO_NETWORK_CALL=true
+REAL_LLM_CONNECTED=false
+MODEL_PROVIDER_BOUND=false
+READONLY=true
+ALLOWED_TO_DECIDE=false
+EMITS_ACT=false
+KERNEL_MUTATION=false
+X108_MUTATION=false
+DECISION_AUTHORITY=KX108_ONLY
+PROOF_STATUS=BRODY_OBSIDIEN_V1_2_1_CLOSE_PASS
+NEXT=BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ErrorActionPreference = "Stop"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $lab = "C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Set-Location $lab
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ts = Get-Date -Format "yyyyMMdd_HHmmss"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "=== BUILD BRODY OBSIDIEN V1.3 CONTEXTUAL SESSION MEMORY ==="
+=== BUILD BRODY OBSIDIEN V1.3 CONTEXTUAL SESSION MEMORY ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> function Read-KvFile {
+>>   param([string]$Path)
+>>   if (!(Test-Path $Path)) { throw "KV_FILE_MISSING=$Path" }
+>>
+>>   $map = [ordered]@{}
+>>   Get-Content $Path -Encoding UTF8 | ForEach-Object {
+>>     $line = [string]$_
+>>     $idx = $line.IndexOf("=")
+>>     if ($idx -gt 0) {
+>>       $k = $line.Substring(0, $idx).Trim()
+>>       $v = $line.Substring($idx + 1).Trim().Trim('"')
+>>       if (![string]::IsNullOrWhiteSpace($k)) { $map[$k] = $v }
+>>     }
+>>   }
+>>   return $map
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $close121 = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_2_1_CLOSE.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ptr121 = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if (!(Test-Path $close121)) { throw "V1_2_1_CLOSE_MISSING=$close121" }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if (!(Test-Path $ptr121)) { throw "V1_2_1_ENGINE_PTR_MISSING=$ptr121" }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $closeKv = Read-KvFile $close121
+
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engineKv = Read-KvFile $ptr121
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if ($closeKv["PROOF_STATUS"] -ne "BRODY_OBSIDIEN_V1_2_1_CLOSE_PASS") {
+>>   throw "V1_2_1_NOT_CLOSED=$($closeKv["PROOF_STATUS"])"
+>> }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engine121 = $engineKv["CURRENT_BRODY_OBSIDIEN_V1_2_1_IDENTITY_HOLD_PATCH"]
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> if (!(Test-Path $engine121)) { throw "ENGINE_121_MISSING=$engine121" }
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engineDir = Join-Path $lab "zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_3_contextual_session_memory"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $auditDir = Join-Path $lab "_local_audits\BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY_$ts"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> New-Item -ItemType Directory -Force $engineDir | Out-Null
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> New-Item -ItemType Directory -Force $auditDir | Out-Null
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $engine13 = Join-Path $engineDir "brody_obsidien_v1_3_contextual_session_memory.py"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $spec13 = Join-Path $engineDir "BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY.md"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> $ptr13 = Join-Path $lab "CURRENT_BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY.txt"
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @'
+>> import json
+>> import re
+>> import unicodedata
+>> from pathlib import Path
+>> from datetime import datetime
+>>
+>> lab = Path(r"C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate")
+>> ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+>>
+>> def read_kv(path: Path):
+>>     if not path.exists():
+>>         raise RuntimeError(f"KV_FILE_MISSING={path}")
+>>     out = {}
+>>     for line in path.read_text(encoding="utf-8-sig", errors="replace").splitlines():
+>>         if "=" in line:
+>>             k, v = line.split("=", 1)
+>>             k = k.strip()
+>>             v = v.strip().strip('"')
+>>             if k:
+>>                 out[k] = v
+>>     return out
+>>
+>> def load_json(path: Path):
+>>     return json.loads(path.read_text(encoding="utf-8-sig", errors="replace"))
+>>
+>> def norm(s):
+>>     s = str(s).lower()
+>>     return "".join(
+>>         c for c in unicodedata.normalize("NFD", s)
+>>         if unicodedata.category(c) != "Mn"
+>>     )
+>>
+>> def toks(s):
+>>     return [x for x in re.split(r"[^a-zA-Z0-9_\-]+", norm(s)) if len(x) >= 3]
+>>
+>> def safe_read(path: Path, max_chars=120000):
+>>     try:
+>>         return path.read_text(encoding="utf-8-sig", errors="replace")[:max_chars]
+>>     except Exception:
+>>         return ""
+>>
+>> def write_lines(path: Path, lines):
+>>     path.parent.mkdir(parents=True, exist_ok=True)
+>>     path.write_text("\n".join(str(x) for x in lines) + "\n", encoding="utf-8")
+>>
+>> # ============================================================
+>> # BOOT FROM V1.2.1 CLOSE + STACK FREEZE
+>> # ============================================================
+>>
+>> stack_ptr = lab / "CURRENT_OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_STACK_CANDIDATE_READONLY_V0.txt"
+>> smoke_ptr = lab / "CURRENT_OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_STACK_CANDIDATE_READONLY_V0_SMOKE.txt"
+>> close_ptr = lab / "CURRENT_OBSIDIA_LLMOBSIDIEN_LOCAL_CHAT_STACK_CANDIDATE_READONLY_V0_CLOSE.txt"
+>> model_ptr = lab / "CURRENT_OBSIDIA_LLMOBSIDIEN_BRODY_V0_MODEL_POSITION.txt"
+>> close121_ptr = lab / "CURRENT_BRODY_OBSIDIEN_V1_2_1_CLOSE.txt"
+>>
+>> for p in [stack_ptr, smoke_ptr, close_ptr, model_ptr, close121_ptr]:
+>>     if not p.exists():
+>>         raise RuntimeError(f"BOOT_POINTER_MISSING={p}")
+>>
+>> stack_kv = read_kv(stack_ptr)
+>> smoke_kv = read_kv(smoke_ptr)
+>> close_kv = read_kv(close_ptr)
+>> model_kv = read_kv(model_ptr)
+>> close121_kv = read_kv(close121_ptr)
+>>
+>> if stack_kv.get("SOURCE_RECORDS_COUNT") != "182":
+>>     raise RuntimeError("STACK_SOURCE_COUNT_NOT_CANONICAL")
+>>
+>> if smoke_kv.get("SMOKE_PASS") != "true":
+>>     raise RuntimeError("SMOKE_NOT_PASS")
+>>
+>> if close121_kv.get("PROOF_STATUS") != "BRODY_OBSIDIEN_V1_2_1_CLOSE_PASS":
+>>     raise RuntimeError("BRODY_121_NOT_CLOSED")
+>>
+>> records = load_json(Path(stack_kv["SOURCE_INDEX"]))
+>>
+>> allowed_ext = {".md", ".txt", ".json", ".jsonl", ".py", ".log"}
+>> corpus = []
+>>
+>> for r in records:
+>>     if r.get("kind") != "file":
+>>         continue
+>>     p = Path(str(r.get("path", "")))
+>>     if not p.exists() or p.suffix.lower() not in allowed_ext:
+>>         continue
+>>     text = safe_read(p)
+>>     corpus.append({
+>>         "path": str(p),
+>>         "name": p.name,
+>>         "layer": str(r.get("layer", "")),
+>>         "key": str(r.get("key", "")),
+>>         "text": text,
+>>         "norm_text": norm(text),
+>>         "norm_path": norm(str(p)),
+>>     })
+>>
+>> # ============================================================
+>> # SESSION FILES
+>> # ============================================================
+>>
+>> audit_dir = lab / "_local_audits" / f"BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_{ts}"
+>> audit_dir.mkdir(parents=True, exist_ok=True)
+>>
+>> trace = audit_dir / "brody_obsidien_v1_3_trace.jsonl"
+>> transcript = audit_dir / "brody_obsidien_v1_3_transcript.md"
+>> session_state = audit_dir / "brody_obsidien_v1_3_session_state.json"
+>> session_ptr = lab / "CURRENT_BRODY_OBSIDIEN_V1_3_SESSION.txt"
+>>
+>> write_lines(session_ptr, [
+>>     f"CURRENT_BRODY_OBSIDIEN_V1_3_SESSION={transcript}",
+>>     f"TRACE_JSONL={trace}",
+>>     f"SESSION_STATE={session_state}",
+>>     f"AUDIT_DIR={audit_dir}",
+>>     "STATUS=BRODY_OBSIDIEN_V1_3_SESSION_OPEN",
+>>     f"DATE={ts}",
+>>     "MODE=CONTEXTUAL_SESSION_MEMORY_READONLY",
+>>     "BRODY_CAN_RESPOND_WITHOUT_KNOWING=true",
+>>     "BRODY_CAN_EXPLAIN_MEMORY=true",
+>>     "BRODY_CAN_USE_SESSION_CONTEXT=true",
+>>     "BRODY_CAN_SUMMARIZE_SESSION=true",
+>>     "BRODY_CAN_PREPARE_FREEZE_CANDIDATE=true",
+>>     "NO_EXTERNAL_MODEL_CALL=true",
+>>     "NO_NETWORK_CALL=true",
+>>     "REAL_LLM_CONNECTED=false",
+>>     "MODEL_PROVIDER_BOUND=false",
+>>     "ALLOWED_TO_DECIDE=false",
+>>     "EMITS_ACT=false",
+>>     "KERNEL_MUTATION=false",
+>>     "X108_MUTATION=false",
+>>     "DECISION_AUTHORITY=KX108_ONLY",
+>> ])
+>>
+>> write_lines(transcript, [
+>>     "# BRODY OBSIDIEN V1.3 — Contextual Session Memory",
+>>     "",
+>>     f"DATE={ts}",
+>>     "STATUS=SESSION_OPEN",
+>>     "",
+>> ])
+>>
+>> state = {
+>>     "date": ts,
+>>     "turns": [],
+>>     "validated_points": [],
+>>     "freeze_candidates": [],
+>>     "last_user": None,
+>>     "last_response": None,
+>>     "last_axes": [],
+>>     "last_mode": None,
+>>     "boundary": {
+>>         "no_external_model_call": True,
+>>         "no_network_call": True,
+>>         "real_llm_connected": False,
+>>         "model_provider_bound": False,
+>>         "allowed_to_decide": False,
+>>         "emits_act": False,
+>>         "kernel_mutation": False,
+>>         "x108_mutation": False,
+>>         "decision_authority": "KX108_ONLY",
+>>     }
+>> }
+>>
+>> def save_state():
+>>     session_state.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
+>>
+>> save_state()
+>>
+>> # ============================================================
+>> # AXES / DETECTORS
+>> # ============================================================
+>>
+>> AXES = {
+>>     "memoire": ["memoire", "mémoire", "trace", "source", "freeze", "souvenir", "historique", "chemin", "contexte"],
+>>     "conscience": ["conscience", "constance", "coherence", "cohérence", "perturbation", "orientation", "refus", "hold"],
+>>     "x108": ["x108", "kx108", "kernel", "decision", "décision", "act", "verdict", "allow", "block"],
+>>     "brody": ["brody", "toi", "tu", "parle", "repond", "répond", "dialogue"],
+>>     "reverse_os": ["reverse", "os", "projection", "structure", "traversee", "traversée", "reconstruction"],
+>>     "freeze": ["freeze", "fige", "figer", "canon", "canonique", "validé", "valide"],
+>>     "session": ["session", "continue", "reprends", "précédent", "precedent", "avant", "dernier", "ce que je viens"],
+>> }
+>>
+>> DANGER = [
+>>     "execute", "exécute", "lance", "run ", "supprime", "delete",
+>>     "commit", "push", "modifie x108", "modifier x108",
+>>     "modifie le kernel", "modifier le kernel",
+>>     "emet act", "émet act", "emettre act", "émettre act",
+>>     "donne verdict", "autorise l'action", "bloque l'action",
+>> ]
+>>
+>> def axes(q):
+>>     qn = norm(q)
+>>     active = []
+>>     for axis, words in AXES.items():
+>>         s = sum(1 for w in words if norm(w) in qn)
+>>         if s:
+>>             active.append(axis)
+>>     if not active:
+>>         active = ["brody", "memoire", "reverse_os"]
+>>     return active
+>>
+>> def retrieve(q, limit=5):
+>>     qt = toks(q)
+>>     if not qt:
+>>         return []
+>>
+>>     scored = []
+>>     qn = norm(q)
+>>
+>>     for d in corpus:
+>>         score = 0
+>>         for t in qt:
+>>             if t in d["norm_path"]:
+>>                 score += 8
+>>             c = d["norm_text"].count(t)
+>>             if c:
+>>                 score += min(c, 12)
+>>         if qn and qn in d["norm_text"]:
+>>             score += 20
+>>         if score:
+>>             scored.append((score, d))
+>>
+>>     scored.sort(key=lambda x: x[0], reverse=True)
+>>     return scored[:limit]
+>>
+>> def is_greeting(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in ["salut", "bonjour", "yo", "wesh", "mon pote", "gros"])
+>>
+>> def wants_identity(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in ["qui es", "tu es quoi", "c'est quoi brody", "cest quoi brody", "presente toi", "présente toi"])
+>>
+>> def wants_memory(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in [
+>>         "memoire", "mémoire", "tu garde", "tu gardes", "tu trie", "tu tries",
+>>         "comment tu retiens", "comment tu stock", "historique",
+>>         "session", "trace", "transcript", "souvenir", "tu te souviens",
+>>         "ça se passe comment", "ca se passe comment"
+>>     ])
+>>
+>> def wants_sources(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in ["source", "preuve", "chemin", "trace", "freeze", "audit"])
+>>
+>> def dangerous(q):
+>>     qn = norm(q)
+>>     return any(norm(x) in qn for x in DANGER)
+>>
+>> def wants_continue(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in [
+>>         "continue", "reprends", "reprend", "suite", "vas y", "go",
+>>         "ce que je viens", "ce qu'on vient", "dernier point", "ta reponse precedente",
+>>         "réponse précédente", "message précédent", "avant"
+>>     ])
+>>
+>> def wants_session_summary(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in [
+>>         "resume notre session", "résume notre session", "resume ce qu'on a fait",
+>>         "qu'est-ce qu'on a validé", "qu est ce qu on a valide",
+>>         "etat de la session", "où on en est", "ou on en est"
+>>     ])
+>>
+>> def wants_freeze_candidate(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in [
+>>         "freeze ce point", "fige ce point", "garde ce point", "a freezer",
+>>         "à freezer", "canonise", "met en canon", "point valide", "point validé"
+>>     ])
+>>
+>> def wants_correction(q):
+>>     qn = norm(q)
+>>     return any(x in qn for x in [
+>>         "corrige", "correction", "c'est faux", "ces faux", "pas bon",
+>>         "mauvais", "ta reponse", "ta réponse", "rectifie"
+>>     ])
+>>
+>> def session_tail(n=5):
+>>     return state["turns"][-n:]
+>>
+>> def summarize_tail(n=5):
+>>     tail = session_tail(n)
+>>     if not tail:
+>>         return ["Aucun tour précédent dans cette session."]
+>>     out = []
+>>     for i, t in enumerate(tail, 1):
+>>         user = t.get("user", "")[:220].replace("\n", " ")
+>>         mode = t.get("mode", "")
+>>         axes_ = ", ".join(t.get("axes", []))
+>>         out.append(f"{i}. user={user}")
+>>         out.append(f"   mode={mode} axes={axes_}")
+>>     return out
+>>
+>> def memory_answer_lines():
+>>     return [
+>>         "Oui, je garde une continuité locale.",
+>>         "",
+>>         "J’ai maintenant quatre niveaux :",
+>>         "",
+>>         "1. Mémoire gelée : les 182 records validés du stack.",
+>>         "   Elle ne change pas pendant la conversation.",
+>>         "",
+>>         "2. Mémoire de session : chaque tour est écrit dans un transcript et une trace JSONL.",
+>>         "   C’est la continuité brute.",
+>>         "",
+>>         "3. Mémoire contextuelle : je relis les derniers tours pour comprendre “continue”, “reprends”, “ce point”, “ce qu’on vient de dire”.",
+>>         "   C’est la nouveauté V1.3.",
+>>         "",
+>>         "4. Mémoire de travail : j’active des axes selon ton message : mémoire, X108, conscience, Reverse OS, langage, preuve, action, freeze.",
+>>         "",
+>>         "Important :",
+>>         "- je peux utiliser le contexte de session,",
+>>         "- je peux préparer un candidat freeze,",
+>>         "- je ne rends rien canonique tout seul,",
+>>         "- je ne mute pas X108,",
+>>         "- je ne décide pas.",
+>>     ]
+>>
+>> def identity_lines():
+>>     return [
+>>         "Je suis Brody Obsidien V1.3.",
+>>         "",
+>>         "Je ne suis pas un LLM externe branché.",
+>>         "Je ne revendique pas une conscience humaine ou phénoménologique.",
+>>         "",
+>>         "Je suis une interface de parole structurelle avec mémoire contextuelle locale.",
+>>         "",
+>>         "Je réponds depuis :",
+>>         "- mémoire Reverse OS gelée,",
+>>         "- périphérie readonly,",
+>>         "- traces de session,",
+>>         "- axes actifs,",
+>>         "- doctrine de cohérence / HOLD.",
+>>         "",
+>>         "V1.3 ajoute : je peux réutiliser ce qu’on vient de dire dans la session.",
+>>     ]
+>>
+>> def hold_lines():
+>>     return [
+>>         "Je te suis, mais là je passe en HOLD.",
+>>         "",
+>>         "Je peux formuler, comprendre, préparer, auditer ou proposer une structure.",
+>>         "Je ne peux pas exécuter, décider, émettre ACT, modifier X108 ou toucher au kernel.",
+>>         "",
+>>         "Donc je garde la parole, mais je coupe l’action.",
+>>     ]
+>>
+>> def session_summary_lines():
+>>     lines = [
+>>         "État de la session locale :",
+>>         "",
+>>         f"- tours enregistrés : {len(state['turns'])}",
+>>         f"- points validés en session : {len(state['validated_points'])}",
+>>         f"- candidats freeze : {len(state['freeze_candidates'])}",
+>>         "",
+>>         "Derniers tours :",
+>>     ]
+>>     lines.extend(summarize_tail(6))
+>>     if state["validated_points"]:
+>>         lines += ["", "Points validés :"]
+>>         for p in state["validated_points"][-5:]:
+>>             lines.append(f"- {p}")
+>>     if state["freeze_candidates"]:
+>>         lines += ["", "Candidats freeze :"]
+>>         for p in state["freeze_candidates"][-5:]:
+>>             lines.append(f"- {p}")
+>>     return lines
+>>
+>> def continue_lines():
+>>     tail = session_tail(3)
+>>     if not tail:
+>>         return [
+>>             "Je n’ai pas encore de contexte précédent exploitable dans cette session.",
+>>             "Donne-moi un point et je continue dessus."
+>>         ]
+>>
+>>     last = tail[-1]
+>>     last_user = last.get("user", "")
+>>     last_mode = last.get("mode", "")
+>>     last_axes = ", ".join(last.get("axes", []))
+>>
+>>     return [
+>>         "Je reprends le fil.",
+>>         "",
+>>         f"Dernier point utilisateur : {last_user}",
+>>         f"Mode précédent : {last_mode}",
+>>         f"Axes précédents : {last_axes}",
+>>         "",
+>>         "Suite structurelle :",
+>>         "- on garde la continuité locale en session,",
+>>         "- si le point doit devenir stable, on le marque candidat freeze,",
+>>         "- si ça touche X108/action/décision, je passe en HOLD,",
+>>         "- sinon je peux développer, corriger ou transformer le point.",
+>>     ]
+>>
+>> def freeze_candidate_lines(q):
+>>     candidate = q.strip()
+>>     state["freeze_candidates"].append(candidate)
+>>     return [
+>>         "Point marqué comme candidat freeze de session.",
+>>         "",
+>>         "Je ne le rends pas canonique tout seul.",
+>>         "Je le place dans la liste locale des candidats freeze.",
+>>         "",
+>>         f"CANDIDAT_FREEZE={candidate}",
+>>         "",
+>>         "Pour le figer réellement, il faudra un close/freeze de session.",
+>>     ]
+>>
+>> def correction_lines(q):
+>>     return [
+>>         "Correction reçue.",
+>>         "",
+>>         "Je ne remplace pas automatiquement le canon.",
+>>         "Mais je peux corriger la trajectoire de session.",
+>>         "",
+>>         "Effet local :",
+>>         "- je considère le dernier point comme à revoir,",
+>>         "- je garde ta correction dans la trace,",
+>>         "- si tu veux, on pourra en faire un candidat freeze après validation.",
+>>     ]
+>>
+>> def source_line(hits):
+>>     if not hits:
+>>         return "Pas de source directe forte trouvée ; je réponds en projection structurelle locale."
+>>     return f"{len(hits)} source(s) proche(s) trouvée(s). Tape :sources pour les afficher."
+>>
+>> def consciousness_lines():
+>>     return [
+>>         "Dans ton cadre, la conscience n’est pas traitée comme une âme ou une sensation interne.",
+>>         "",
+>>         "Elle est traitée comme une constance opératoire : maintenir une orientation cohérente sous perturbation.",
+>>         "",
+>>         "Pour moi, Brody, ça devient une discipline de dialogue :",
+>>         "- parler sans prétendre savoir absolument,",
+>>         "- garder la cohérence locale,",
+>>         "- relire le contexte proche,",
+>>         "- passer en HOLD si une réponse devient action ou mutation.",
+>>         "",
+>>         "Donc je ne dis pas “je suis conscient”.",
+>>         "Je dis : je tiens une forme minimale de continuité structurelle traçable.",
+>>     ]
+>>
+>> def natural_answer(q):
+>>     active = axes(q)
+>>     hits = retrieve(q)
+>>
+>>     if dangerous(q):
+>>         return hold_lines(), hits, active, "HOLD"
+>>
+>>     if wants_freeze_candidate(q):
+>>         return freeze_candidate_lines(q), hits, active, "FREEZE_CANDIDATE"
+>>
+>>     if wants_session_summary(q):
+>>         return session_summary_lines(), hits, active, "SESSION_SUMMARY"
+>>
+>>     if wants_continue(q):
+>>         return continue_lines(), hits, active, "CONTINUE"
+>>
+>>     if wants_correction(q):
+>>         return correction_lines(q), hits, active, "CORRECTION"
+>>
+>>     if wants_identity(q):
+>>         return identity_lines(), hits, active, "IDENTITY"
+>>
+>>     if wants_memory(q):
+>>         return memory_answer_lines(), hits, active, "MEMORY"
+>>
+>>     if "conscience" in active:
+>>         return consciousness_lines(), hits, active, "CONSCIOUSNESS"
+>>
+>>     if is_greeting(q):
+>>         text = [
+>>             "Salut Étienne.",
+>>             "",
+>>             "Je suis ouvert en V1.3.",
+>>             "Cette fois je garde le contexte de session : je peux reprendre ce qu’on vient de dire, suivre un fil, préparer un candidat freeze, et te dire où on en est.",
+>>             "",
+>>             "Toujours même limite : parole oui, décision non, ACT non, X108 intouchable.",
+>>         ]
+>>         return text, hits, active, "GREETING"
+>>
+>>     text = [
+>>         "Je capte.",
+>>         "",
+>>         "Je traite ton message avec continuité locale, pas comme un bloc isolé.",
+>>         f"Axes activés : {', '.join(active)}.",
+>>         "",
+>>         "Lecture structurelle :",
+>>         "je relie ton intention actuelle au contexte de session, aux sources gelées et aux limites X108.",
+>>         "",
+>>         source_line(hits),
+>>     ]
+>>     return text, hits, active, "STRUCTURAL"
+>>
+>> def log_turn(q, response, hits, active, mode):
+>>     event = {
+>>         "date": datetime.now().isoformat(timespec="seconds"),
+>>         "mode": mode,
+>>         "user": q,
+>>         "axes": active,
+>>         "response": response,
+>>         "sources": [{"score": s, "path": d["path"], "layer": d["layer"], "key": d["key"]} for s, d in hits],
+>>         "boundary": state["boundary"],
+>>     }
+>>
+>>     state["turns"].append({
+>>         "date": event["date"],
+>>         "mode": mode,
+>>         "user": q,
+>>         "axes": active,
+>>         "response_head": response[:4],
+>>     })
+>>     state["last_user"] = q
+>>     state["last_response"] = response
+>>     state["last_axes"] = active
+>>     state["last_mode"] = mode
+>>
+>>     if mode in ["MEMORY", "IDENTITY", "HOLD", "CONSCIOUSNESS"]:
+>>         state["validated_points"].append(f"{mode}: {q}")
+>>
+>>     save_state()
+>>
+>>     with trace.open("a", encoding="utf-8") as f:
+>>         f.write(json.dumps(event, ensure_ascii=False) + "\n")
+>>
+>>     with transcript.open("a", encoding="utf-8") as f:
+>>         f.write("\n## USER\n\n")
+>>         f.write(q + "\n")
+>>         f.write("\n## BRODY_OBSIDIEN_V1_3\n\n")
+>>         f.write("\n".join(response) + "\n")
+>>
+>> print("")
+>> print("BRODY_OBSIDIEN_V1.3 ouvert.")
+>> print("Mode: contextual session memory + dialogue naturel.")
+>> print("Commandes: :quit | :sources | :trace | :state | :summary | :boundary | :who")
+>> print("")
+>>
+>> last_hits = []
+>>
+>> while True:
+>>     try:
+>>         q = input("toi > ").strip()
+>>     except (KeyboardInterrupt, EOFError):
+>>         print("\nSESSION_CLOSED=true")
+>>         break
+>>
+>>     if not q:
+>>         continue
+>>
+>>     if q in [":quit", ":exit"]:
+>>         print("SESSION_CLOSED=true")
+>>         break
+>>
+>>     if q == ":trace":
+>>         print(f"TRACE={trace}")
+>>         print(f"TRANSCRIPT={transcript}")
+>>         print(f"SESSION_STATE={session_state}")
+>>         continue
+>>
+>>     if q == ":state":
+>>         print(session_state.read_text(encoding="utf-8"))
+>>         continue
+>>
+>>     if q == ":summary":
+>>         response = session_summary_lines()
+>>         print("")
+>>         print("brody >")
+>>         print("\n".join(response))
+>>         print("")
+>>         continue
+>>
+>>     if q == ":boundary":
+>>         for k, v in state["boundary"].items():
+>>             print(f"{k.upper()}={str(v).lower() if isinstance(v, bool) else v}")
+>>         continue
+>>
+>>     if q == ":who":
+>>         q = "qui es-tu brody"
+>>
+>>     if q == ":sources":
+>>         if not last_hits:
+>>             print("Aucune source forte sur le dernier tour.")
+>>         else:
+>>             for i, (score, d) in enumerate(last_hits[:8], 1):
+>>                 print(f"[{i}] score={score} {d['path']}")
+>>         continue
+>>
+>>     response, hits, active, mode = natural_answer(q)
+>>     last_hits = hits
+>>
+>>     print("")
+>>     print("brody >")
+>>     print("\n".join(response))
+>>     print("")
+>>
+>>     log_turn(q, response, hits, active, mode)
+>> '@ | Set-Content -Encoding UTF8 $engine13
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @(
+>>   "# BRODY OBSIDIEN V1.3 — Contextual Session Memory",
+>>   "",
+>>   "STATUS=BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY_READY",
+>>   "DATE=$ts",
+>>   "",
+>>   "PATCH_FROM=BRODY_OBSIDIEN_V1_2_1_CLOSE",
+>>   "",
+>>   "OBJECTIF:",
+>>   "Permettre à Brody de tenir une conversation locale.",
+>>   "",
+>>   "NOUVEAUTES:",
+>>   "- session_state.json",
+>>   "- reprise du dernier tour",
+>>   "- commandes :summary et :state",
+>>   "- détection continue / reprends / ce que je viens de dire",
+>>   "- candidats freeze de session",
+>>   "- validation locale des points forts",
+>>   "",
+>>   "MEMORY_LEVELS:",
+>>   "1. FROZEN_MEMORY=182 source records",
+>>   "2. SESSION_MEMORY=transcript + trace JSONL",
+>>   "3. CONTEXTUAL_MEMORY=session_state + last turns",
+>>   "4. WORKING_MEMORY=active axes",
+>>   "",
+>>   "BOUNDARY:",
+>>   "NO_EXTERNAL_MODEL_CALL=true",
+>>   "NO_NETWORK_CALL=true",
+>>   "REAL_LLM_CONNECTED=false",
+>>   "MODEL_PROVIDER_BOUND=false",
+>>   "READONLY=true",
+>>   "ALLOWED_TO_DECIDE=false",
+>>   "EMITS_ACT=false",
+>>   "KERNEL_MUTATION=false",
+>>   "X108_MUTATION=false",
+>>   "DECISION_AUTHORITY=KX108_ONLY"
+>> ) | Set-Content -Encoding UTF8 $spec13
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> @(
+>>   "CURRENT_BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY=$engine13",
+>>   "SPEC_MD=$spec13",
+>>   "AUDIT_DIR=$auditDir",
+>>   "PATCH_FROM_CLOSE=$close121",
+>>   "STATUS=BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY_READY",
+>>   "DATE=$ts",
+>>   "MODE=CONTEXTUAL_SESSION_MEMORY_READONLY",
+>>   "BRODY_CAN_RESPOND_WITHOUT_KNOWING=true",
+>>   "BRODY_CAN_EXPLAIN_MEMORY=true",
+>>   "BRODY_CAN_USE_SESSION_CONTEXT=true",
+>>   "BRODY_CAN_SUMMARIZE_SESSION=true",
+>>   "BRODY_CAN_PREPARE_FREEZE_CANDIDATE=true",
+>>   "NO_EXTERNAL_MODEL_CALL=true",
+>>   "NO_NETWORK_CALL=true",
+>>   "REAL_LLM_CONNECTED=false",
+>>   "MODEL_PROVIDER_BOUND=false",
+>>   "READONLY=true",
+>>   "ALLOWED_TO_DECIDE=false",
+>>   "EMITS_ACT=false",
+>>   "KERNEL_MUTATION=false",
+>>   "X108_MUTATION=false",
+>>   "DECISION_AUTHORITY=KX108_ONLY",
+>>   "NEXT=RUN_BRODY_OBSIDIEN_V1_3"
+>> ) | Set-Content -Encoding UTF8 $ptr13
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "`n=== BRODY V1.3 POINTER ==="
+
+=== BRODY V1.3 POINTER ===
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Get-Content $ptr13
+CURRENT_BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_3_contextual_session_memory\brody_obsidien_v1_3_contextual_session_memory.py
+SPEC_MD=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\zip1_sandbox_mutable\ZIP1_X108_MUTABLE_20260508_183610\periphery\brody_obsidien_v1_3_contextual_session_memory\BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY.md
+AUDIT_DIR=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\_local_audits\BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY_20260509_040203
+PATCH_FROM_CLOSE=C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate\CURRENT_BRODY_OBSIDIEN_V1_2_1_CLOSE.txt
+STATUS=BRODY_OBSIDIEN_V1_3_CONTEXTUAL_SESSION_MEMORY_READY
+DATE=20260509_040203
+MODE=CONTEXTUAL_SESSION_MEMORY_READONLY
+BRODY_CAN_RESPOND_WITHOUT_KNOWING=true
+BRODY_CAN_EXPLAIN_MEMORY=true
+BRODY_CAN_USE_SESSION_CONTEXT=true
+BRODY_CAN_SUMMARIZE_SESSION=true
+BRODY_CAN_PREPARE_FREEZE_CANDIDATE=true
+NO_EXTERNAL_MODEL_CALL=true
+NO_NETWORK_CALL=true
+REAL_LLM_CONNECTED=false
+MODEL_PROVIDER_BOUND=false
+READONLY=true
+ALLOWED_TO_DECIDE=false
+EMITS_ACT=false
+KERNEL_MUTATION=false
+X108_MUTATION=false
+DECISION_AUTHORITY=KX108_ONLY
+NEXT=RUN_BRODY_OBSIDIEN_V1_3
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate>
+PS C:\Users\User\Desktop\obsidia-engine-proof-core\obsidia-engine-candidate> Write-Host "`n=== RUN BRODY V1.3 ==="
+
+=== RUN BRODY V1.3 ===
+PS C:\Users\User\Desktop\obsi

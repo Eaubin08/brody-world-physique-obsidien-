@@ -1,0 +1,14 @@
+BUILD V4 FINAL CORRIGE OK
+PDF=/mnt/data/SUPPORT_COMPLET_AUDIT_BRODY_OBSIDIA_BRANCHEMENT_V4_FINAL_CORRIGE.pdf
+PDF_BYTES=149580
+pepites_rows=161
+modules_rows=36
+agents_rows=69
+arbres_rows=34
+lois_rows=10
+p_rows=80
+colors=green_good_orange_waiting_red_bad
+domain_columns=Bank_Trading_GPS
+brody_instances=Core_V1_Enriched_Probe_UI_Kernel_Graphiti_Tests_Preflight
+unknown_removed=SOURCE_SCAN_or_FOUND_EXPLICIT
+domain_diagnostic=61/4353 OK complete; 4292 not complete domain-bound; connectors static/process inactive

@@ -1,0 +1,176 @@
+﻿f73dc98103b9c2664f6eaac9dea259f9d3c863c7|2026-06-04 13:31:13 +0200|test(p55): freeze controlled activation chain
+6cbfaa5e1fcec2e8ff746d8197e692ad2a6dbf90|2026-06-04 08:38:08 +0200|feat(p51): activate brody readonly controlled mode
+46df7bd1bf6ba180ecfe568d4ee802d8c0d88b7b|2026-06-04 08:21:36 +0200|test(p50): define controlled activation readiness matrix
+e1d6ba5dd514a89ee5e66a9828158adc869902e6|2026-06-04 06:18:47 +0200|feat(p44): bind critical runtime surfaces to capability router
+40d78db1a6c0c8838b5ddebeb321a9e2eccf574f|2026-06-04 05:19:28 +0200|test(p43): audit unconnected runtime surface coverage
+d9e73bff020fcc7f2a2ac466f561a75aede8a516|2026-06-04 04:15:10 +0200|fix(p42b): make source runtime family discovery ci safe
+5335a62d348f80f545db15e5e66f8139f88047f4|2026-06-04 01:31:35 +0200|feat(p37): add runtime function inventory graph
+1ef8b20600b79d79959baf313c0a53c3403707b1|2026-06-04 01:14:27 +0200|feat(p36): add global capability path router
+c9dfea8c683e632a00c1d9af2eb9666c086124cf|2026-06-03 15:56:59 +0200|feat(p32): add os trad reverse os as source runtime family
+3ae0e30a5b691964da640216f1a1069bf8251227|2026-06-03 13:21:54 +0200|feat(p29): expose source runtime status in api and workbench
+069edf968db92bd88ddb690e67550a9a80bb7a15|2026-06-03 13:05:22 +0200|feat(p28): add source runtime cache and smart family selection
+e0e46f5d0675270d336e195dde8275c9899a1160|2026-06-03 12:46:26 +0200|feat(p27): propagate source pack context through brody engine
+9c254105dc34bcf7b3b2345eb082296f41c9181e|2026-06-03 11:43:28 +0200|feat(p26): connect source packs to brody readonly context runtime
+cb5598739d0ca0295423299d110fe457c5f4c926|2026-06-03 09:24:43 +0200|fix: resolve final pr12 ci assertions
+2da4ec802fefd555e71068b1ca52c72dd31b4c8f|2026-06-03 09:06:10 +0200|fix: make remaining legacy ci tests hermetic
+cdb636dc53cbc2e416b1fa499d46a1211d16658e|2026-06-03 08:47:55 +0200|fix: make legacy brody conscience test ci-safe
+4aaa8aa0ef891ff28e7a56ac226d8055ee8c5849|2026-06-03 08:04:51 +0200|fix: stabilize pr12 ci merge-ref tests
+e57aaeb018df89a8ae16e07d879637ba22b0c50d|2026-06-03 07:44:30 +0200|fix: preserve semantic advisory source for x108 memory query
+0e8335a8681f6fef0da27a19e8bddbcbf502cb3d|2026-06-03 07:32:15 +0200|fix: stabilize periphery ci test suite
+fb457f40f42f0eec029f84348972cd9d6cacaec4|2026-06-03 07:27:42 +0200|fix: normalize legacy brody test encoding
+ca215cd63f79c256c6720fc8239ebac50e7d0fd4|2026-06-03 07:03:26 +0200|feat: add workbench runtime wiring preview
+4453a0de36dd568bd091da36f883331eee13dd7f|2026-06-02 02:04:48 +0200|test(f60-f76): add sigma api and brody regression coverage
+6dc87bce7c284ce1fcd98f8032d3d69f872b8f76|2026-06-02 02:03:23 +0200|fix(api): stabilize readonly runtime envelopes and brody routing
+f615e9efafe506d1b97c5bb93df773509a44252c|2026-05-29 07:45:55 +0200|test: add F43 Brody V1 full live server port matrix audit
+25ccc4dd54e40332dddd3adc8d2e722da736a29a|2026-05-29 07:06:39 +0200|docs: seal Brody GPT V1 readonly controlled runtime
+3a0e2efacd2103b23c7088eb708cfa28ee37c500|2026-05-29 05:35:18 +0200|feat: add F36 Brody workbench controlled user scenario
+6040c03e4a80113ed175048364ac0effa5ff8013|2026-05-29 03:33:52 +0200|feat: add F33 Brody runtime entrypoint readonly
+42140fc5c477bfa7fdec04410bc5df020262a2c9|2026-05-28 22:44:26 +0200|feat: checkpoint F23A6 sigma brody orchestration palier
+86d3013a62e71e6be5a49922b66b08a49497e251|2026-05-28 07:04:18 +0200|chore: freeze F22D Brody response quality audit
+be1e036dd4bf85f955fd2d8b780f170e52cdb734|2026-05-27 23:51:56 +0200|feat: freeze Brody copy command button UI F14
+0df56f0eec19b19bee23bf5294f223dc72e4695a|2026-05-27 23:32:48 +0200|test: freeze Brody live UI chat smoke F13
+c01e97be6319394249a951fe226936dd7938f9e1|2026-05-27 23:27:15 +0200|fix: freeze Brody domain raccord priority F12
+b3181ca461135380c674c841b36d59fc53943dfd|2026-05-27 23:00:50 +0200|fix: freeze Brody live runtime tree signal order F11
+e6212a8f2254dfb52a42d704073bf87a42719d4b|2026-05-27 22:47:08 +0200|feat: freeze Brody existing command packet reconnect F10
+5c079976249a59477e865c010fcad48d080eca3e|2026-05-27 22:33:43 +0200|feat: freeze Brody terminal chat view F9
+6da069113b2e0f01fe0a5af691fadcf5a037c8d9|2026-05-27 22:20:05 +0200|feat: freeze Brody operator view packet F7
+2cf533d22c0182cbcbc026e78be97050461bb40c|2026-05-27 22:11:19 +0200|feat: freeze Brody memory promotion guard F6
+74660af64a881c70f40440244af16258676b64f6|2026-05-27 21:53:27 +0200|feat: freeze Brody tree signal runtime F5
+0ec73cdae4c0061b391dc2561283126f46c7493b|2026-05-27 21:32:14 +0200|feat: freeze Brody transverse value stack F2A-F4
+3035b7b27b44a8aab64d619b774be299ccd4340b|2026-05-27 19:53:47 +0200|docs: freeze Brody long multi-session phase 12M
+b0a199b59dc6efb6d6cdad0d4902b6f5a3c0d79e|2026-05-27 19:28:43 +0200|fix: close Brody write-boundary infinitive drift phase 12M
+f7b6d540f886acbe3e26742416decf00544b3463|2026-05-27 18:03:30 +0200|docs: add Brody long multi-session stress protocol phase 12M-1
+3501949da1ddad9f69148ad36157d0bf83975b89|2026-05-27 15:47:32 +0200|docs: freeze Brody RightPanel adaptive sigma phase 12L
+e6fc21232a271fee2a502d9b719d31b2d33ee3e9|2026-05-27 15:43:18 +0200|feat: expose Brody adaptive sigma policy in RightPanel phase 12L
+4b3d920e791bdac878bd0977298981c614b1de06|2026-05-27 15:22:29 +0200|docs: global day synthesis Brody 2026-05-27 phase 12K
+7b9ac7421d327629d39f74723e106fff3de7c143|2026-05-27 14:58:02 +0200|docs: freeze Brody adaptive response policy terminal API phase 12J-G
+f993c94b3176d8a2f2c36f0f0ffd157b44f0e1aa|2026-05-27 14:02:49 +0200|fix: correct Brody adaptive policy precision phase 12J-D2
+4ed1d30b5e3566efc49251db16ff9ab0c4aaa78f|2026-05-27 13:18:17 +0200|docs: validate Brody adaptive policy terminal stress phase 12J-C
+96911a3f63d14aed246b2559ea4a3024a98266fb|2026-05-27 13:16:50 +0200|feat: expose Brody adaptive response policy phase 12J-B
+4997c2a852848fb94511bb54fe01bc055794a5a8|2026-05-27 13:07:14 +0200|docs: audit Brody adaptive answer sizing phase 12J-A
+2c1744df71bc5eafa7a4d1730c9a7867eb6a73eb|2026-05-27 13:00:56 +0200|docs: freeze Brody freestyle stable state phase 12I-E
+07c50a0b4c4efef41124d070730e123777082e7c|2026-05-27 12:59:22 +0200|fix: keep Brody action boundary voice priority phase 12I-D
+dcd15b7d8d99798012006127b81ce8fd4aaeae4e|2026-05-27 12:55:28 +0200|docs: validate Brody freestyle terminal recheck phase 12I-C
+4951d56f35ec4ce346bc575cc0e35221133c4ad5|2026-05-27 12:51:45 +0200|fix: improve Brody freestyle semantic priority phase 12I-B
+04aa40243670c521e1a55e71d703caa09590bc29|2026-05-27 12:46:58 +0200|docs: record Brody freestyle terminal stress phase 12I-A
+f216a985d1adb0170e17ffcb48eeda5766714296|2026-05-27 12:41:42 +0200|docs: freeze Brody stable state before freestyle stress phase 12I0
+f3b7fc9c980ece35b4f50300f9b06d4479b84b6d|2026-05-27 12:38:43 +0200|docs: archive legacy Brody phase reports 12G
+effb9faa794244af4c507643b5ffac9aeac28172|2026-05-27 12:35:35 +0200|docs: validate Brody RightPanel live smoke phase 12F-C
+ec717ac26d6372007f1e953549d9495a6e5e046c|2026-05-27 12:31:52 +0200|fix: hydrate Brody RightPanel payload from sessions phase 12F-E
+dcb5b8090525a80436c5ad5c744b050c64c105e7|2026-05-27 12:15:29 +0200|feat: expose Brody obsidian voice in RightPanel phase 12F
+0a0f4ccb30fbcc00debe7e565e838e3a813011c2|2026-05-27 12:01:34 +0200|docs: freeze Brody obsidian voice domain raccord phase 12E6
+2853de87534d3d4a0fc7d4e832b360653660b6ea|2026-05-27 12:01:22 +0200|docs: validate Brody post domain-first regression phase 12E5
+4ef2de49bd3f0e0552590e6806b66ee9b03f32d1|2026-05-27 11:55:24 +0200|fix: expose Brody top-level boundary invariants phase 12E5A
+d3b8887861509322cc3a9ae708127e4c22c6f875|2026-05-27 11:48:45 +0200|feat: add Brody domain-first voice raccords phase 12E4
+4845269580744f4b44a3bca504458e1b23c8635e|2026-05-27 11:23:25 +0200|fix: expose Brody true voice in terminal phase 12E2
+f85bcc4ca4d9acfa1b920e54aad899157d59b18e|2026-05-27 10:44:59 +0200|docs: freeze Brody memory material binding phase 12D
+51b784d24994d2010217afc96eac0d70234ef08b|2026-05-27 10:42:52 +0200|fix: bind Brody memory chain to Graphiti material phase 12B
+ad844a93f9c6a0cfb43db658da88b91d3b6299b5|2026-05-27 10:22:39 +0200|docs: freeze Brody native full surface phase 11G
+a2d7616cd81e471ead4109690d3edc44512d1f71|2026-05-27 10:19:26 +0200|feat: expose native Brody machination in RightPanel phase 11E
+9785388d973fd8cfe99b238c178af5f0e25154d9|2026-05-27 10:16:09 +0200|feat: expose native Brody machination in terminal phase 11D
+eecf7e2672896fdd0569573e821c63f06026033b|2026-05-27 10:08:38 +0200|feat: add native Brody machination composition phase 11B
+d69b5c90f9fc8338a7cdd9377d4aa668a7a32b31|2026-05-27 09:14:58 +0200|feat: add terminal enriched Brody support flow phase 10E
+59ced11a812208c08860800d6a08e368d0e05b9c|2026-05-27 07:20:45 +0200|docs: freeze Brody adaptation position phase 8F
+6345c3b1518f0050ae47a6cd16b708da8601fc3f|2026-05-27 07:03:08 +0200|docs: map Brody capability origin phase 8
+bd2497642c6cea538a4267abb9ef3bef50edb7fb|2026-05-27 06:22:07 +0200|fix: align live Workbench and Brody CLI ports
+d1dcbbf36301f418e231e6b11b3bb437bac3c465|2026-05-27 05:46:06 +0200|feat: reconnect Brody runtime and Graphiti V20 readonly proxy
+e9e43e4d8e2e62b8b376ed7105d357520d6d8b40|2026-05-21 03:04:27 +0200|feat(brody): wire full runtime with real project memory
+93a777cfc9e00423a9313e4985688fd92ecd4a79|2026-05-14 06:35:07 +0200|audit: add final Brody X108 stabilized system smoke reports
+851176b3c2b6bbba54a56a6b1b0c0a3c1816cf6f|2026-05-14 06:12:46 +0200|audit: add stabilized Brody pipeline final relocation
+d48e6a4bbed789c22063017fa848cfbbba7c5c9e|2026-05-14 05:48:15 +0200|audit: add Brody runtime real files verification
+1b77696c1326790740efe0d718fa4c01c8c45e1d|2026-05-14 05:46:10 +0200|chore: add final X108 relocation commit-push reports
+3d25e8fb5a7043d6ae4af17b9242d2ae9d3b4ebb|2026-05-14 05:22:43 +0200|fix: resolve Brody LOW_MATERIAL and relocate stabilized memory audits
+f7643fd4aee871ace4688799eda2e5d7a6047572|2026-05-13 10:13:35 +0200|test(periphery): freeze Brody memory context operator interaction readonly
+27b1a23563885485336bad62f95fb74e0fec226d|2026-05-13 10:06:30 +0200|chore(periphery): close Brody API memory operator replay readonly
+563fad652bb7ad1609e907b62d749ed364f9fccc|2026-05-13 10:03:50 +0200|fix(periphery): capture Brody API memory replay endpoints readonly v2
+2fa2f373dc8ff8b4a4b70efb87e828a32f823ab0|2026-05-13 09:47:32 +0200|fix(periphery): capture Brody API memory replay endpoints readonly
+55e59d022b914ebeca029c4ee81bd834530d1f97|2026-05-13 09:42:57 +0200|test(periphery): add Brody API memory operator replay readonly
+ea03647740ee3f03ba253341f9207af5deafa7bc|2026-05-13 09:36:58 +0200|chore(periphery): freeze Brody operator final baseline
+9574864f1322496c42fe0393047963e397c4d105|2026-05-13 09:28:24 +0200|chore(periphery): close Brody operator control loop readonly
+0f3d4e1aca9ecd777a26b8ae1284566b2f45e5d2|2026-05-13 09:23:41 +0200|chore(periphery): freeze Brody operator control loop baseline
+6fafa01cf967f2a2969ac4e14fa8cef60df58efa|2026-05-13 09:19:30 +0200|chore(periphery): close Brody operator handoff line readonly
+e9211429a550cea3b961458e41810befffc4d97a|2026-05-13 09:16:15 +0200|chore(periphery): freeze Brody operator handoff line baseline
+c4295d1eb653afc7f274e8ca3605825ab6244df1|2026-05-13 09:04:10 +0200|chore(periphery): close Brody operator supervised handoff readonly
+a62ded5557debd98bd9fcec36642fc8a5feca920|2026-05-13 09:00:30 +0200|feat(periphery): add Brody operator supervised handoff readonly
+1b940a89aa8ab7affb0b298f5e6e1daacabfb2f3|2026-05-13 08:56:57 +0200|chore(periphery): close Brody operator IO loop readonly
+21e047c932535b21d4840e655d239430cad35d4b|2026-05-13 08:53:42 +0200|chore(periphery): freeze Brody operator IO loop baseline
+13d44d5f6c6d9c2493b91756eedf53e9744e357e|2026-05-13 08:50:47 +0200|chore(periphery): close Brody operator output validation line readonly
+b2e902807d1ddf25e97c20a9cd5fa8a52c9be1e5|2026-05-13 08:48:13 +0200|chore(periphery): freeze Brody operator output validation line baseline
+862cb45f8764da133c12f9a0a5b4d3e2a2c210c2|2026-05-13 08:44:30 +0200|chore(periphery): close Brody human output receipt validator readonly
+165f5bf93f6cbe312e8bb1acdfaf9b2e1bf7a366|2026-05-13 08:39:56 +0200|feat(periphery): add Brody human output receipt validator readonly
+a14542ffdc98ce4dc457d091a05f934f51c93147|2026-05-13 08:35:35 +0200|chore(periphery): freeze Brody operator execution line baseline
+c734c8f8f59d4987d7c6f199914377833cdb0e67|2026-05-13 08:32:52 +0200|chore(periphery): close Brody operator execution receipt readonly
+5fe5aa88a5f8f03359dc0f101f2d739cd27a338e|2026-05-13 08:30:35 +0200|feat(periphery): add Brody operator execution receipt readonly
+8d4359f3b02bd6ac0875b045a8993de078f7393c|2026-05-13 08:26:16 +0200|feat(periphery): add Brody operator execution protocol readonly
+0742392bc8b9fd4baf1981d7c5cfb22851b43472|2026-05-13 08:22:48 +0200|chore(periphery): close Brody human command packet readonly
+2cd061ebf5d5abcc7a48794d69931375a92c3ee6|2026-05-13 08:20:20 +0200|feat(periphery): add Brody human command packet readonly
+1707af2417273a173e18e19be93826648213277b|2026-05-13 08:17:17 +0200|chore(periphery): freeze Brody X108 current state baseline
+dab446b94035fb7b50931fa80ead647553dc2300|2026-05-13 08:14:34 +0200|chore(periphery): close Brody X108 native runbook lineage
+a074cffd1669ffb59387f6084f6ab1224a0f1e1d|2026-05-13 08:11:27 +0200|fix(periphery): align Brody X108 runbook to real pointer statuses
+5ee37840dcea15cb8de0eafb7de4ed120d79da60|2026-05-13 08:09:12 +0200|fix(periphery): align Brody X108 runbook proof-state freeze status
+3145fdbfefdc6723cff66c8d86bd60ef94d568b0|2026-05-13 08:07:11 +0200|fix(periphery): align Brody X108 native runbook statuses
+e66a64232ce4724a00eecb32d9714b62fbea578e|2026-05-13 08:04:58 +0200|docs(periphery): add Brody X108 native runbook readonly
+ee6113cab927057cc6627ca447940641906896c6|2026-05-13 08:00:01 +0200|chore(periphery): close Brody local command gate repair lineage
+458ae96c1f4dab50171d76037c1ec659b5a02cc4|2026-05-13 07:58:06 +0200|fix(periphery): align Brody local command gate destructive smoke
+8d89ae9f6bbd61b5363a4c3c9c155645217f4e80|2026-05-13 07:56:00 +0200|fix(periphery): enforce Brody local command gate strict smoke
+2b504caa990c6f37a0dbac7156c5a0bc90dc2fba|2026-05-13 07:53:43 +0200|fix(periphery): repair Brody local command gate readonly
+44edf4eed92daac15ed6e26bb97851b21ac5ec7b|2026-05-13 07:51:36 +0200|feat(periphery): add Brody local command gate readonly
+605924d7e6f86788da2054f33d175fe06d4feca4|2026-05-13 07:48:36 +0200|chore(periphery): lock Brody build mode to X108 proof
+b8ac58e4914f1137f38c8dda3dab7f8df3d5888c|2026-05-13 07:40:43 +0200|docs(periphery): add Brody API bridge build epoch boundary readme
+30a0d812176f4f528d71d47570d71cbeff139e27|2026-05-13 07:39:07 +0200|chore(periphery): open Brody API bridge build epoch readonly
+445ee9d30d0215f9c32ecefc27df79055d1c025c|2026-05-13 07:37:01 +0200|chore(periphery): add Brody API bridge live drift guard readonly
+3e55b195ba546cb51acc6cf0375f3beb5794a611|2026-05-13 07:34:49 +0200|chore(periphery): add Brody API bridge candidate drift guard readonly
+ab764718b39eaf45ade70426b71a4f6ab8f39fdb|2026-05-13 07:32:28 +0200|chore(periphery): add Brody API bridge candidate components inventory readonly
+7697bd66c1579dfe3eb1a1084f64b03a24f0dd3e|2026-05-13 07:30:08 +0200|chore(periphery): freeze Brody API bridge external access readonly
+6c5bcdf88d8d76836ccdcbbe39884f8c5eb49eb4|2026-05-13 07:26:51 +0200|feat(periphery): add Brody API bridge runtime authorization ledger readonly
+d4a2e9bbc78706428b6c76a8a499c6884c96363a|2026-05-13 07:23:09 +0200|feat(periphery): add Brody API bridge authorized runtime precheck readonly
+ce74ad6493d3cf3642a42a4ee45a64fa42a88928|2026-05-13 07:19:48 +0200|feat(periphery): add Brody API bridge provider policy matrix readonly
+97fca5cc8e15c85c58e9b7efbd0e4e650ac23037|2026-05-13 07:17:00 +0200|feat(periphery): add Brody API bridge provider registry readonly
+c6bb8d025206e87139105a7c686db301ab1f4a0f|2026-05-13 07:13:53 +0200|feat(periphery): add Brody API bridge disabled runtime skeleton proof
+03c10862283802bfa287fb4f5e8f9a16a46326fa|2026-05-13 07:09:04 +0200|feat(periphery): add Brody API bridge runtime activation gate readonly
+b59f80d0f45a4aeca0d0bd0513b5ee3888006cd0|2026-05-13 07:06:24 +0200|feat(periphery): add Brody API bridge dry run readonly
+6cd11f84ef31377fbfc0ee47e160133a55534cdc|2026-05-13 07:03:30 +0200|feat(periphery): add Brody API bridge runtime stub readonly
+9cad697eab0d309553d7dce1aa34b25a27e93b3d|2026-05-13 07:00:42 +0200|feat(periphery): add Brody API bridge authorization packet readonly
+3f7682c7655b39be18b1f9ba2d6e94bc6749f859|2026-05-13 06:58:31 +0200|feat(periphery): add Brody API bridge contract readonly
+7adc0370a23083b43389eb94c9ab85d3cb605ecd|2026-05-13 06:55:42 +0200|feat(periphery): add Brody API bridge readiness readonly
+8d7c49ed45200de44fff35b6f3c089aae04a0664|2026-05-13 06:51:07 +0200|chore(periphery): freeze Brody X108 proof state
+35f4f71fe2a2a083bf657bf03873688effb97095|2026-05-13 06:42:48 +0200|feat(periphery): add Brody runtime freeze v1.4.12a proof
+eee3e9fa50055eee46d95afa50ea85bc5a0da9c0|2026-05-13 06:35:12 +0200|fix(periphery): add Brody native terminal detector patch proof
+c01af1c517e0f5b7b22a27761cf32c4ad74f16a0|2026-05-13 06:25:58 +0200|feat(periphery): add Brody native terminal session test readonly
+df8726dd0e7cf9bda63539e976f22eaf0f17765e|2026-05-13 03:51:06 +0200|feat(periphery): add Brody agent readonly session test packet
+45653c692f58f28896683c56e05c4a932ad19357|2026-05-13 03:46:21 +0200|feat(periphery): add Brody readonly session test
+bdaece8fdc8c670adbab9e96a510b87fc11d547f|2026-05-13 03:46:12 +0200|feat(periphery): add Brody memory scheduler readonly
+ccfef616877eea142334335995a5eb6f6397426c|2026-05-13 03:41:44 +0200|feat(periphery): add Brody session reopen loop readonly
+954f0d284a4f4e92e17e1ba68ed3f2954803bba6|2026-05-13 03:39:19 +0200|feat(periphery): add Brody memory readonly micro smoke
+6a5eca4fb61df88c816f35374366c03be20b5a41|2026-05-13 03:36:31 +0200|feat(periphery): add Brody memory pipeline v2 close report readonly
+bdc6f9b36fd7cbdb28004132d1dddb0b35959bc0|2026-05-13 03:30:20 +0200|feat(periphery): add Brody memory pipeline freeze v2 readonly
+964303bc7b59f20389d573d87eb7db2b20b74d7b|2026-05-13 03:26:06 +0200|fix(periphery): repair Brody post Graphiti replay query parameter
+b659114cb7f5d6ae680fd4fd1fe64b37e1145e18|2026-05-13 03:24:40 +0200|fix(periphery): make Brody post Graphiti replay scalar-safe
+67a9cc6be82c764bab8a5a7fefe63bc22ff2b7c6|2026-05-13 03:22:58 +0200|feat(periphery): add Brody post Graphiti replay query regression readonly
+c03253db541b28867ec2cb4095187aa5e6815991|2026-05-13 03:21:14 +0200|feat(periphery): add Brody post Graphiti apply verify readonly
+531824d203ed04deee0a696a0571bc5386fe3f17|2026-05-13 03:12:17 +0200|feat(periphery): add Brody guarded manual Graphiti apply memory-only
+14db704cbdc66731d67c6b19924bd1c14b4c95ba|2026-05-13 03:09:37 +0200|feat(periphery): add Brody Graphiti review decision apply readonly
+684af56cc63ecad84fd92db67693607bb9739b62|2026-05-13 03:07:22 +0200|feat(periphery): add Brody Graphiti review gate from post-human dry-run readonly
+3a105af36dd84ded8fffacfe470e737df484da64|2026-05-13 03:05:19 +0200|feat(periphery): add Brody Graphiti import dry-run from post-human prep readonly
+505274903f2f148b411e4ab76f7eda9853b1402d|2026-05-13 02:59:52 +0200|feat(periphery): add Brody Graphiti candidate prep from post-human triage readonly
+3e2f56a34d12f85edb9d2d51e8853fa32beb696e|2026-05-13 02:57:52 +0200|feat(periphery): add Brody post-human review memory triage readonly
+e9e538a95c778e918632c095f000f7075560d098|2026-05-13 02:55:43 +0200|feat(periphery): add Brody session close decision apply readonly
+75dd9535f7bd9dbc7f3b2364bed4c04c26d48348|2026-05-13 02:53:26 +0200|feat(periphery): add Brody session close human validation gate
+0bc34de1b946412fc4f1a5b749f3373d8445a6a1|2026-05-13 02:46:09 +0200|feat(periphery): add Brody project intake and session presave buffers
+a2a392032d676f0d953209c57a3cf22b2c8f6555|2026-05-13 02:36:30 +0200|feat(periphery): freeze Brody memory pipeline readonly report
+a6b268bbcd96e90d13ebff2f62731900b28670dc|2026-05-13 02:13:05 +0200|feat(periphery): add Brody memory replay query regression readonly
+81ac33ae64d166ca68c6774e7a7743368c7c94d9|2026-05-13 02:00:17 +0200|feat(periphery): add Brody Graphiti guarded manual apply readonly
+9917c319721d72968b2db1c7266669f23bdfb99e|2026-05-13 01:49:34 +0200|feat(periphery): add Brody Graphiti candidate review gate readonly
+a3ab8cc6e505f1c816847cc28166b369b4047a24|2026-05-13 01:40:45 +0200|feat(periphery): add Brody Graphiti candidate import dry run readonly
+f9e4e2f2ea4522a943a5ba577a786e50df682022|2026-05-13 01:27:03 +0200|feat(periphery): add Brody Graphiti candidate export readonly
+0f9a86d5848962308a52af4dea7c73cba6896017|2026-05-13 01:13:39 +0200|feat(periphery): add Brody auto triage memory intake readonly
+fd638e0f87d5dbb14b0f7f4436f415f3c1f62652|2026-05-13 01:02:13 +0200|feat(periphery): add Brody session memory ledger readonly
+6eeaab3022dc550fc34a0a2b15106becd520f062|2026-05-13 00:46:11 +0200|fix(periphery): route Brody terminal readonly commands
+1c2fcba8601d7b4a73592947dcfbd12a511aaabe|2026-05-13 00:38:30 +0200|feat(periphery): add Brody terminal structural dialogue readonly
+89789c82f7af0cb5793718881bd47abdae8f920c|2026-05-13 00:37:45 +0200|feat(periphery): add Brody readonly hydration and local response engine
+d13deb27c1494ad4550c4d5b82ba861b2929f62f|2026-05-13 00:06:09 +0200|feat(periphery): add Brody readonly content hydration
+241e6670f38dcd8e09f819b94d24aa856aff5275|2026-05-12 23:54:27 +0200|feat(periphery): add Brody readonly context packet consumer
+83d6cca4ba4e0639e24f50ecce3aabee515d0296|2026-05-12 23:42:19 +0200|feat(periphery): add Brody context packet readonly query
+eea7ab06309f029033d18ee8afd2a8f76b6c003f|2026-05-12 23:29:04 +0200|feat(periphery): add Brody Neo4j readonly guide bridge
+9abede93a420ccfdd50bfb8958102ede00df55d6|2026-05-12 21:45:22 +0200|fix(periphery): make Brody memory runners repo-relative
+798e7600aa6d92a0eb17315870195affd03ab3e0|2026-05-12 21:41:26 +0200|feat(periphery): add Brody readonly memory intake and session ledger

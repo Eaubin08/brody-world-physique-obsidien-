@@ -1,0 +1,7 @@
+﻿FILES_SCANNED_CORE: 244
+HITS: 5
+InputStream:64: C:\Users\User\Desktop\OBSIDIA_CORE_ONLY_FULL_MACHINERY\engine\core_full\modules\os_trad\vendor\obsidia_os0\translate.py
+InputStream:67: C:\Users\User\Desktop\OBSIDIA_CORE_ONLY_FULL_MACHINERY\engine\core_full\modules\os_trad\vendor\obsidia_os1\parse_input.py
+InputStream:91: C:\Users\User\Desktop\OBSIDIA_CORE_ONLY_FULL_MACHINERY\engine\os0\translate.py
+InputStream:94: C:\Users\User\Desktop\OBSIDIA_CORE_ONLY_FULL_MACHINERY\engine\os1\parse_input.py
+InputStream:224: C:\Users\User\Desktop\OBSIDIA_CORE_ONLY_FULL_MACHINERY\tests\adversarial\ADVERSARIAL_REPORT_TEMPLATE.md

@@ -1,0 +1,3 @@
+﻿FIRST_BRODY_COMMIT=e2b1965d75b6fdfcd2972d14713b4c144f68e6e2
+FIRST_BRODY_DATE=2026-05-14T04:09:50+02:00
+FIRST_BRODY_SUBJECT=audit: Brody readonly GROUP_A pipeline before memory runtime review
