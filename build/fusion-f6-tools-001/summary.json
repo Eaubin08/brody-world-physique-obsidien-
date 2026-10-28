@@ -1,0 +1,69 @@
+{
+  "schema": "BRODY_F6_INTEGRATED_INSTRUMENTS_V0",
+  "known_proposals": 3,
+  "holds": 1,
+  "rows": [
+    {
+      "shape": "rectangle",
+      "intent": "LIGHT",
+      "shape_route": "CANDIDATE_PROPOSAL_ONLY",
+      "instrument_status": "INSTRUMENT_CANDIDATE_FROM_PRIOR_EXPERIENCE",
+      "instrument": "PENCIL",
+      "candidate_only": true,
+      "target_used_for_selection": false,
+      "candidate_sha256": "75018cc68f3605ca506b09017ee6f3cd304982e9d6970dfb31258b10c4ed4d3a",
+      "candidate_mean_gray_loss": 0.0,
+      "blank_mean_gray_loss": 7.490234375,
+      "gain": 7.490234375,
+      "verdict": "IMPROVED",
+      "heldout_source_kind": "SYNTHETIC_SHARED_GEOMETRY"
+    },
+    {
+      "shape": "triangle",
+      "intent": "UNIFORM",
+      "shape_route": "CANDIDATE_PROPOSAL_ONLY",
+      "instrument_status": "INSTRUMENT_CANDIDATE_FROM_PRIOR_EXPERIENCE",
+      "instrument": "PEN",
+      "candidate_only": true,
+      "target_used_for_selection": false,
+      "candidate_sha256": "e7486038221825af5edb85ca6d4ac1c4400c77b5d552f081b42b90ce3e862ffd",
+      "candidate_mean_gray_loss": 0.0,
+      "blank_mean_gray_loss": 7.34619140625,
+      "gain": 7.34619140625,
+      "verdict": "IMPROVED",
+      "heldout_source_kind": "SYNTHETIC_SHARED_GEOMETRY"
+    },
+    {
+      "shape": "ellipse",
+      "intent": "EXPRESSIVE",
+      "shape_route": "CANDIDATE_PROPOSAL_ONLY",
+      "instrument_status": "INSTRUMENT_CANDIDATE_FROM_PRIOR_EXPERIENCE",
+      "instrument": "NIB",
+      "candidate_only": true,
+      "target_used_for_selection": false,
+      "candidate_sha256": "45cf4cb530c27480065825312faf6a35763a5d6b2cbf6bb11196225cecc438a4",
+      "candidate_mean_gray_loss": 0.0,
+      "blank_mean_gray_loss": 9.1796875,
+      "gain": 9.1796875,
+      "verdict": "IMPROVED",
+      "heldout_source_kind": "SYNTHETIC_SHARED_GEOMETRY"
+    },
+    {
+      "shape": "triangle",
+      "intent": "UNSEEN_INTENT",
+      "shape_route": "CANDIDATE_PROPOSAL_ONLY",
+      "instrument_status": "HOLD_NO_MATCHING_EXPERIENCE",
+      "instrument": null,
+      "candidate_only": true,
+      "target_used_for_selection": false,
+      "verdict": "HOLD"
+    }
+  ],
+  "visual_education_events": 10,
+  "prior_v2_verified": true,
+  "same_skill_history_reused": true,
+  "instrument_training_historically_separate": true,
+  "semantic_tool_understanding_proven": false,
+  "native_memory_write": false,
+  "decision_authority": "KX108_ONLY"
+}

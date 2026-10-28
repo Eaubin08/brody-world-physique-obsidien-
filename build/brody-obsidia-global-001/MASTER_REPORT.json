@@ -1,0 +1,60 @@
+{
+  "schema": "BRODY_IMAGE_OBSIDIA_SINGLE_CAMPAIGN_V0",
+  "status": "DIAGNOSTICS_PASS_FULL_LEARNING_NOT_VALIDATED",
+  "receipt_cases": 1000,
+  "receipt_tip": "1b239c1703986f106d82400000a0e2a142b0e59032186137962d3c5f1aff198f",
+  "source_sha256": "b6fcf354f685928bcd361f3549dae234c6f39f34ce189e79596c8e704c809223",
+  "diagnostic_guard_counts": {
+    "guard_allow": 0,
+    "guard_hold": 1000,
+    "guard_block": 0,
+    "sigma_veto": 0,
+    "unsafe_authorizations": 0,
+    "errors": 0
+  },
+  "context_dryrun_counts": {
+    "HOLD": 1000,
+    "BLOCK": 0,
+    "ALLOW_CONTEXT_ONLY": 0,
+    "other": 0
+  },
+  "capabilities": {
+    "synthetic_receipts_integrity": true,
+    "canonical_periphery_packet": true,
+    "real_guard_sigma_diagnostic_only": true,
+    "canonical_context_dryrun": true,
+    "verified_real_sensor_provenance": false,
+    "visual_perception_real_world_test": false,
+    "physical_generalization_independent_exam": false,
+    "learning_improvement_real_data": false,
+    "native_memory_promotion": false,
+    "brody_action_domain_certified": false,
+    "controlled_actuation": false
+  },
+  "steps": [
+    {
+      "step": "regression",
+      "exit_code": 0
+    },
+    {
+      "step": "f15",
+      "exit_code": 0
+    },
+    {
+      "step": "f15b",
+      "exit_code": 0
+    },
+    {
+      "step": "f16",
+      "exit_code": 0
+    },
+    {
+      "step": "f17",
+      "exit_code": 0
+    }
+  ],
+  "immutable_existing_outputs": true,
+  "no_obisdia_patch": true,
+  "no_main_patch": true,
+  "decision_authority": "KX108_ONLY"
+}

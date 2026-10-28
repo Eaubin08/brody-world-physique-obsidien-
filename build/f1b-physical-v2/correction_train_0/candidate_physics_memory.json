@@ -1,0 +1,20 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "7be20a7d194b28b5eb792b1e54f0ba39c12b504d491580645f1d77ff5da8ec49",
+  "experiences": [
+    {
+      "context": "vertical|speeding_up",
+      "errors_px": {
+        "ACCELERATION": 0.0,
+        "STILL": 10.0,
+        "VELOCITY": 2.0
+      },
+      "feedback_sha256": "b94edbadc558e3bdfea34c2fa6bb9a88b9662afad09fb2ceb27da051150f5c76",
+      "forecast_digest": "33d0d234d7034166f3ed1204633f1f6f85e91ee16baad909daadde87e4d8370a",
+      "original_selection": "ACCELERATION"
+    }
+  ],
+  "native_memory_write": false,
+  "schema": "BRODY_CONTEXTUAL_PHYSICS_MEMORY_V2"
+}

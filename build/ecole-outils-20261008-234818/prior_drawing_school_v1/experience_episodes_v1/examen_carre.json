@@ -1,0 +1,344 @@
+{
+  "schema_version": "BRODY_EXPERIENCE_MEMORY_V1",
+  "episode_id": "examen_carre",
+  "source_kind": "SIMULATED",
+  "produced_kind": "GENERATED",
+  "observation": {
+    "source_ref": "teacher_images/examen_carre.png",
+    "source_sha256": "ba9c8dbb350e2dd95ce66d30cc0fb0c10630b046ccae7c72b7922ef7e97b887b",
+    "teacher_source_visible": true,
+    "intent": "COPY_VISIBLE_REFERENCE_BY_CORRECTING_PIXEL_ERROR",
+    "image_space": "PIXEL_XY_64_64",
+    "source_overwritten": false
+  },
+  "interpretation": {
+    "kind": "RASTER_FEATURE_CANDIDATE",
+    "algorithmically_observed_black_pixels": 380,
+    "observed_bbox": [
+      17,
+      14,
+      51,
+      48
+    ],
+    "observed_8x8_ink_signature": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "semantic_shape_understood": false,
+    "text_interpretation_claim": null,
+    "uncertainty": [
+      "SYNTHETIC_SOURCE",
+      "VISIBLE_REFERENCE_FEEDBACK",
+      "NO_SEMANTIC_REASONING_MODULE"
+    ]
+  },
+  "choice": {
+    "selection_author": "DETERMINISTIC_PIXEL_SCORE_ALGORITHM",
+    "reason": "PIXEL_ERROR_MINIMIZATION_GIVEN_VISIBLE_REFERENCE",
+    "memory_source_ref": "cours_carre",
+    "recall_gate": "ACCEPTED_CANDIDATE",
+    "available_actions": [
+      "ADD",
+      "ERASE",
+      "REPLACE",
+      "HOLD"
+    ],
+    "score": "BINARY_PIXEL_XOR",
+    "candidate_gestures_from_raster": 1,
+    "alternative_edit_candidates_not_selected": 1,
+    "human_free_choice_claimed": false
+  },
+  "procedure_ref": {
+    "catalogue": "BRODY_IMAGE_V1_PURE_FUNCTIONS",
+    "executed_capabilities": [
+      {
+        "capability": "image-thinning",
+        "module_path": "brody_world_physique/drawing_school_v1.py",
+        "symbol": "suggest_gestures_from_reference",
+        "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      },
+      {
+        "capability": "pixel-feedback-revision",
+        "module_path": "brody_world_physique/drawing_school_v1.py",
+        "symbol": "correct_drawing",
+        "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      },
+      {
+        "capability": "drawing-motor-render",
+        "module_path": "brody_world_physique/drawing_school_v1.py",
+        "symbol": "render",
+        "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      },
+      {
+        "capability": "image-pixel-comparison",
+        "module_path": "brody_world_physique/drawing_school_v0.py",
+        "symbol": "black_pixels",
+        "code_sha256": "e4ced171788c05ffea2768f3ccafa07faad6bf73579db685105083606fad4b87",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      }
+    ],
+    "runtime_parameter_refs": {
+      "max_revisions": 24,
+      "canvas": [
+        64,
+        64
+      ],
+      "brush_width": 3,
+      "recall_source_hash": null
+    },
+    "pillow_version": "12.3.0",
+    "executable_code_embedded_in_memory": false,
+    "arbitrary_code_execution_allowed": false
+  },
+  "execution_trace": {
+    "initial_recalled_gestures": [
+      {
+        "points": [
+          [
+            18,
+            16
+          ],
+          [
+            18,
+            46
+          ],
+          [
+            19,
+            47
+          ],
+          [
+            49,
+            47
+          ],
+          [
+            49,
+            46
+          ],
+          [
+            50,
+            46
+          ],
+          [
+            50,
+            16
+          ],
+          [
+            49,
+            15
+          ],
+          [
+            19,
+            15
+          ],
+          [
+            18,
+            16
+          ]
+        ],
+        "kind": "CURVED_STROKE"
+      }
+    ],
+    "initial_recall_error_px": 2,
+    "memory_rejected_before_editing": false,
+    "operations": [],
+    "replayed_step_count": 0,
+    "final_gestures": [
+      {
+        "kind": "CURVED_STROKE",
+        "points": [
+          [
+            18,
+            16
+          ],
+          [
+            18,
+            46
+          ],
+          [
+            19,
+            47
+          ],
+          [
+            49,
+            47
+          ],
+          [
+            49,
+            46
+          ],
+          [
+            50,
+            46
+          ],
+          [
+            50,
+            16
+          ],
+          [
+            49,
+            15
+          ],
+          [
+            19,
+            15
+          ],
+          [
+            18,
+            16
+          ]
+        ]
+      }
+    ],
+    "generated_artifact_ref": "attempts/examen_carre_apres_correction.png",
+    "generated_artifact_sha256": "91cb9e78ee38ed714b48bb25c6c03e0f5749a677f7d4975bacad1345b7342845"
+  },
+  "evaluation": {
+    "evaluator": "EXACT_SOURCE_PIXEL_XOR",
+    "blank_page_error_px": 380,
+    "raw_recall_error_px": 2,
+    "after_recall_gate_error_px": 2,
+    "final_error_px": 2,
+    "improved_vs_blank": true,
+    "source_pixels_visible_during_correction": true,
+    "world_knowledge_validated": false,
+    "independent_semantic_evaluation": "NOT_RUN",
+    "transfer_causality_proven": false
+  },
+  "retained_skill": {
+    "status": "CANDIDATE_ONLY",
+    "candidate_motor_gestures": [
+      {
+        "kind": "CURVED_STROKE",
+        "points": [
+          [
+            18,
+            16
+          ],
+          [
+            18,
+            46
+          ],
+          [
+            19,
+            47
+          ],
+          [
+            49,
+            47
+          ],
+          [
+            49,
+            46
+          ],
+          [
+            50,
+            46
+          ],
+          [
+            50,
+            16
+          ],
+          [
+            49,
+            15
+          ],
+          [
+            19,
+            15
+          ],
+          [
+            18,
+            16
+          ]
+        ]
+      }
+    ],
+    "source_sha256": "ba9c8dbb350e2dd95ce66d30cc0fb0c10630b046ccae7c72b7922ef7e97b887b",
+    "transfer_verified_across_independent_sources": false,
+    "native_memory_eligible": false,
+    "trained_weights": false
+  },
+  "rejected_paths": [
+    {
+      "kind": "ALTERNATE_EDIT_CANDIDATES",
+      "considered_and_not_selected": 1,
+      "why": "NOT_STRICTLY_BETTER_THAN_FIRST_BEST",
+      "individual_choices_stored": false,
+      "source": "DETERMINISTIC_COUNTER_NOT_FULL_REASONING_TRACE"
+    }
+  ],
+  "memory_boundary": {
+    "model_of_memory": "LOCAL_EXPERIMENTAL_CANDIDATE_ONLY",
+    "memory_write_allowed": false,
+    "auto_promotion_allowed": false,
+    "kernel_mutation": false,
+    "emits_act": false,
+    "decision_authority": "KX108_ONLY",
+    "obsidia_native_memory_adapter": "NOT_CONNECTED"
+  }
+}

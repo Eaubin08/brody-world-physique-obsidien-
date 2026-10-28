@@ -1,0 +1,65 @@
+{
+  "gestures": [
+    {
+      "kind": "CURVED_STROKE",
+      "points": [
+        [
+          9,
+          12
+        ],
+        [
+          9,
+          30
+        ],
+        [
+          10,
+          30
+        ],
+        [
+          28,
+          30
+        ],
+        [
+          28,
+          29
+        ],
+        [
+          28,
+          11
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          9,
+          12
+        ]
+      ]
+    }
+  ],
+  "knowledge_promotion": false,
+  "learning_code": {
+    "capability": "image-thinning",
+    "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+    "module_path": "brody_world_physique/drawing_school_v1.py",
+    "symbol": "suggest_gestures_from_reference",
+    "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+  },
+  "motor_code": {
+    "capability": "drawing-motor-render",
+    "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+    "module_path": "brody_world_physique/drawing_school_v1.py",
+    "symbol": "render",
+    "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+  },
+  "native_memory_write": false,
+  "receipt_digest": "fd006f327e0349ca01467485f91e081310f16025758fefbeac881a72b75bfefe",
+  "schema": "BRODY_P211B_FROZEN_GESTURE_V0",
+  "teacher_seen_in_train": true,
+  "train_sha256": "e07167edfe1e55af6bd9ce5fdcbe9f9ec2a6533b8c1d0aaea3af2901e4f494e3"
+}

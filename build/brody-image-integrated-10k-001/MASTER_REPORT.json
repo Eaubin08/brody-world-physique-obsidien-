@@ -1,0 +1,97 @@
+{
+  "schema": "BRODY_IMAGE_INTEGRATED_VISUAL_FEEDBACK_V0",
+  "cases": 10000,
+  "receipt_tip": "8c59a47e134db268c6a3daf98d820ece538681539410ebfe59a1da6b2ea5298c",
+  "families": {
+    "fresh_geometry": {
+      "cases": 1000,
+      "holds": 0,
+      "discrepancy_detected": 0,
+      "corrections_improved": 0,
+      "mean_before_loss": 0.0,
+      "mean_after_loss": 0.0
+    },
+    "translation": {
+      "cases": 1000,
+      "holds": 0,
+      "discrepancy_detected": 167,
+      "corrections_improved": 167,
+      "mean_before_loss": 0.847452392578125,
+      "mean_after_loss": 0.0
+    },
+    "mirror": {
+      "cases": 1000,
+      "holds": 0,
+      "discrepancy_detected": 0,
+      "corrections_improved": 0,
+      "mean_before_loss": 0.0,
+      "mean_after_loss": 0.0
+    },
+    "rotation": {
+      "cases": 1000,
+      "holds": 0,
+      "discrepancy_detected": 167,
+      "corrections_improved": 167,
+      "mean_before_loss": 0.848501220703125,
+      "mean_after_loss": 0.0
+    },
+    "contrast": {
+      "cases": 1000,
+      "holds": 0,
+      "discrepancy_detected": 0,
+      "corrections_improved": 0,
+      "mean_before_loss": 0.0,
+      "mean_after_loss": 0.0
+    },
+    "blur": {
+      "cases": 1000,
+      "holds": 0,
+      "discrepancy_detected": 167,
+      "corrections_improved": 167,
+      "mean_before_loss": 0.2513369140625,
+      "mean_after_loss": 0.0
+    },
+    "sensor_noise": {
+      "cases": 1000,
+      "holds": 0,
+      "discrepancy_detected": 0,
+      "corrections_improved": 0,
+      "mean_before_loss": 0.0,
+      "mean_after_loss": 0.0
+    },
+    "part_occlusion": {
+      "cases": 1000,
+      "holds": 0,
+      "discrepancy_detected": 166,
+      "corrections_improved": 166,
+      "mean_before_loss": 0.7525751953125,
+      "mean_after_loss": 0.0
+    },
+    "wrong_intent": {
+      "cases": 1000,
+      "holds": 0,
+      "discrepancy_detected": 1000,
+      "corrections_improved": 1000,
+      "mean_before_loss": 6.8386494140625,
+      "mean_after_loss": 0.0
+    },
+    "unknown_intent": {
+      "cases": 1000,
+      "holds": 1000,
+      "discrepancy_detected": 0,
+      "corrections_improved": 0,
+      "mean_before_loss": null,
+      "mean_after_loss": null
+    }
+  },
+  "perception": "pixel_fingerprint_and_visual_difference_not_semantic_vision",
+  "reconstruction": "bounded_three_instrument_search_not_free_generation",
+  "transformations": "controlled_synthetic_image_operations",
+  "learning": "frozen_policy_plus_supervised_episode_corrections_no_cross_episode_update",
+  "blind_exam_proven": false,
+  "physical_world_proven": false,
+  "native_memory_write": false,
+  "kernel_mutation": false,
+  "decision_authority": "KX108_ONLY",
+  "status": "INTEGRATED_SYNTHETIC_FEEDBACK_LAB_NOT_WORLD_MODEL"
+}

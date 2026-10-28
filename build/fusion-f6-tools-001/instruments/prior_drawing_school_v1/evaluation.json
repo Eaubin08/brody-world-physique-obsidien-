@@ -1,0 +1,247 @@
+{
+  "schema": "BRODY_DRAWING_STUDENT_V1",
+  "kind": "SUPERVISED_DRAWING_FROM_VISIBLE_SOURCE",
+  "curriculum": [
+    "TRAITS",
+    "CONTOURS",
+    "TRIANGLES",
+    "CERCLES",
+    "RECOUVREMENT",
+    "COURBES"
+  ],
+  "train_lessons": [
+    {
+      "lesson": "cours_trait",
+      "blank_error": 123,
+      "final_error": 9,
+      "edit_actions": [
+        "ADD"
+      ],
+      "curved_gesture_candidate": false
+    },
+    {
+      "lesson": "cours_carre",
+      "blank_error": 380,
+      "final_error": 2,
+      "edit_actions": [
+        "ADD"
+      ],
+      "curved_gesture_candidate": true
+    },
+    {
+      "lesson": "cours_triangle",
+      "blank_error": 316,
+      "final_error": 30,
+      "edit_actions": [
+        "ADD"
+      ],
+      "curved_gesture_candidate": true
+    },
+    {
+      "lesson": "cours_cercle",
+      "blank_error": 356,
+      "final_error": 71,
+      "edit_actions": [
+        "ADD"
+      ],
+      "curved_gesture_candidate": true
+    }
+  ],
+  "unseen_exams": [
+    {
+      "exercise_ref": "examen_trait",
+      "blank_error_pixels": 132,
+      "raw_memory_error_pixels": 9,
+      "memory_rejected": false,
+      "initial_after_memory_gate": 9,
+      "after_correction_error_pixels": 9,
+      "correction_actions": [],
+      "curved_gestures": false,
+      "seen_by_learner_at_exam": true
+    },
+    {
+      "exercise_ref": "examen_carre",
+      "blank_error_pixels": 380,
+      "raw_memory_error_pixels": 2,
+      "memory_rejected": false,
+      "initial_after_memory_gate": 2,
+      "after_correction_error_pixels": 2,
+      "correction_actions": [],
+      "curved_gestures": true,
+      "seen_by_learner_at_exam": true
+    },
+    {
+      "exercise_ref": "examen_triangle",
+      "blank_error_pixels": 421,
+      "raw_memory_error_pixels": 132,
+      "memory_rejected": false,
+      "initial_after_memory_gate": 132,
+      "after_correction_error_pixels": 66,
+      "correction_actions": [
+        "REPLACE"
+      ],
+      "curved_gestures": true,
+      "seen_by_learner_at_exam": true
+    },
+    {
+      "exercise_ref": "examen_cercle",
+      "blank_error_pixels": 288,
+      "raw_memory_error_pixels": 64,
+      "memory_rejected": false,
+      "initial_after_memory_gate": 64,
+      "after_correction_error_pixels": 60,
+      "correction_actions": [
+        "REPLACE"
+      ],
+      "curved_gestures": true,
+      "seen_by_learner_at_exam": true
+    },
+    {
+      "exercise_ref": "examen_croix",
+      "blank_error_pixels": 413,
+      "raw_memory_error_pixels": 657,
+      "memory_rejected": true,
+      "initial_after_memory_gate": 413,
+      "after_correction_error_pixels": 56,
+      "correction_actions": [
+        "ADD",
+        "ADD",
+        "ADD",
+        "ADD"
+      ],
+      "curved_gestures": false,
+      "seen_by_learner_at_exam": true
+    },
+    {
+      "exercise_ref": "examen_courbe",
+      "blank_error_pixels": 250,
+      "raw_memory_error_pixels": 458,
+      "memory_rejected": true,
+      "initial_after_memory_gate": 250,
+      "after_correction_error_pixels": 28,
+      "correction_actions": [
+        "ADD"
+      ],
+      "curved_gestures": true,
+      "seen_by_learner_at_exam": true
+    }
+  ],
+  "candidate_skills": 4,
+  "candidate_memory_file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f6-tools-001\\instruments\\prior_drawing_school_v1\\candidate_skill_memory.json",
+  "ledger_integrity": {
+    "verified_records": 37,
+    "last_sha256": "6ebb6ee65c26cb00d4f102a5614aab3ead7ab420941263c9fb2361f9229f91d4",
+    "native_memory_verified": false,
+    "canonical_memory_written": false
+  },
+  "procedural_experience_memory": {
+    "status": "PASS_LOCAL_REPLAY_ONLY",
+    "episodes": 10,
+    "edits_verified": 11,
+    "candidate_ledger_records_verified": 37,
+    "memory_skill_selection_replayed": true,
+    "code_identity_verified": true,
+    "native_memory_modified": false,
+    "all_generated_artifacts_replayed": true,
+    "world_knowledge_validated": false,
+    "episodes_verified": [
+      {
+        "episode_id": "cours_trait",
+        "verified_edits": 1,
+        "pixel_error": 9,
+        "procedure_sha_verified": true,
+        "source_sha_verified": true,
+        "artifact_sha_verified": true
+      },
+      {
+        "episode_id": "cours_carre",
+        "verified_edits": 1,
+        "pixel_error": 2,
+        "procedure_sha_verified": true,
+        "source_sha_verified": true,
+        "artifact_sha_verified": true
+      },
+      {
+        "episode_id": "cours_triangle",
+        "verified_edits": 1,
+        "pixel_error": 30,
+        "procedure_sha_verified": true,
+        "source_sha_verified": true,
+        "artifact_sha_verified": true
+      },
+      {
+        "episode_id": "cours_cercle",
+        "verified_edits": 1,
+        "pixel_error": 71,
+        "procedure_sha_verified": true,
+        "source_sha_verified": true,
+        "artifact_sha_verified": true
+      },
+      {
+        "episode_id": "examen_trait",
+        "verified_edits": 0,
+        "pixel_error": 9,
+        "procedure_sha_verified": true,
+        "source_sha_verified": true,
+        "artifact_sha_verified": true
+      },
+      {
+        "episode_id": "examen_carre",
+        "verified_edits": 0,
+        "pixel_error": 2,
+        "procedure_sha_verified": true,
+        "source_sha_verified": true,
+        "artifact_sha_verified": true
+      },
+      {
+        "episode_id": "examen_triangle",
+        "verified_edits": 1,
+        "pixel_error": 66,
+        "procedure_sha_verified": true,
+        "source_sha_verified": true,
+        "artifact_sha_verified": true
+      },
+      {
+        "episode_id": "examen_cercle",
+        "verified_edits": 1,
+        "pixel_error": 60,
+        "procedure_sha_verified": true,
+        "source_sha_verified": true,
+        "artifact_sha_verified": true
+      },
+      {
+        "episode_id": "examen_croix",
+        "verified_edits": 4,
+        "pixel_error": 56,
+        "procedure_sha_verified": true,
+        "source_sha_verified": true,
+        "artifact_sha_verified": true
+      },
+      {
+        "episode_id": "examen_courbe",
+        "verified_edits": 1,
+        "pixel_error": 28,
+        "procedure_sha_verified": true,
+        "source_sha_verified": true,
+        "artifact_sha_verified": true
+      }
+    ]
+  },
+  "procedural_experience_index_ref": "experience_memory_index_v1.json",
+  "procedural_registry_ref": "procedure_registry_v1.json",
+  "truth_evaluator": "KNOWN_REFERENCE_PIXEL_ERROR",
+  "semantic_object_understanding": false,
+  "autonomous_image_generation": false,
+  "trained_vision_model": false,
+  "native_memory_write_allowed": false,
+  "memory_promotion_allowed": false,
+  "kernel_mutation": false,
+  "decision_authority": "KX108_ONLY",
+  "limitations": [
+    "The reference image is visible during training and tests",
+    "Generic morphology, gesture catalog and edit search are coded by humans",
+    "Drawing score is binary pixel agreement, not composition or artistic quality",
+    "Candidate memory reuses raster-derived gestures, not object meaning",
+    "Local chained JSONL is not Native Memory or an authenticated Merkle seal"
+  ]
+}

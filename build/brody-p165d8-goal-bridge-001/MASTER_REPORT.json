@@ -1,0 +1,22 @@
+{
+  "schema": "BRODY_P165D8_D6_D7_BRIDGE",
+  "conditions": 675,
+  "episodes": 1350,
+  "summary": {
+    "cases": 1350,
+    "stable_across_goals": 1350,
+    "different_goal_focus": 1350,
+    "continuity_failure": 324,
+    "continuity_success": 1026,
+    "symbolic_hold": 0
+  },
+  "fixture_labels_to_inference": false,
+  "physical_state_mutated_by_goal": false,
+  "semantic_goal_parsing_connected": false,
+  "symbolic_claim_fabrication": false,
+  "continuity_improvement_claimed": false,
+  "real_multimodal_sensors_connected": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

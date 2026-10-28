@@ -1,0 +1,18 @@
+{
+  "procedure": "REUSE_OBSERVED_TWO_COMPONENT_PATCHES_AND_RELATIVE_PLACEMENT",
+  "training_refs": [
+    "lesson01",
+    "lesson02",
+    "lesson03"
+  ],
+  "memory_sha256": "2e83f4ebf1dd09463e399f0acf90601740223fac93743f7492bc033d23b77a3a",
+  "student_artifact": {
+    "ref": "images/composition_candidate.png",
+    "sha256": "69cc6c6df4d1d75e6b8d76391d942b502ba5f6c2a7da8f407e17fb69d3193b8b"
+  },
+  "target_revealed": false,
+  "instructed_component_boxes": null,
+  "semantic_object_name_given_to_student": null,
+  "code_sha256": "a72b85ec49521f43cc35ca632706698eb991043ec72950df7b7f3545469281eb",
+  "native_memory_write_allowed": false
+}

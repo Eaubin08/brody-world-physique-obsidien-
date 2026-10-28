@@ -1,0 +1,58 @@
+{
+  "schema": "BRODY_TRAIN_EXAM_CURRICULUM_P140",
+  "budget_seconds": 900,
+  "elapsed_seconds": 510.842,
+  "epochs": 6000,
+  "episodes": 60000,
+  "family_stats": {
+    "shape": {
+      "train": 6000,
+      "exam": 6000,
+      "correct": 3158,
+      "baseline_correct": 1927,
+      "accuracy": 0.5263,
+      "baseline_accuracy": 0.3212
+    },
+    "colour": {
+      "train": 6000,
+      "exam": 6000,
+      "correct": 5192,
+      "baseline_correct": 1540,
+      "accuracy": 0.8653,
+      "baseline_accuracy": 0.2567
+    },
+    "count": {
+      "train": 6000,
+      "exam": 6000,
+      "correct": 5300,
+      "baseline_correct": 1982,
+      "accuracy": 0.8833,
+      "baseline_accuracy": 0.3303
+    },
+    "arrangement": {
+      "train": 6000,
+      "exam": 6000,
+      "correct": 5997,
+      "baseline_correct": 2000,
+      "accuracy": 0.9995,
+      "baseline_accuracy": 0.3333
+    },
+    "orientation": {
+      "train": 6000,
+      "exam": 6000,
+      "correct": 2610,
+      "baseline_correct": 2008,
+      "accuracy": 0.435,
+      "baseline_accuracy": 0.3347
+    }
+  },
+  "stopped_by": "EPISODE_CAP",
+  "real_independent_sources": false,
+  "procedural_synthetic_only": true,
+  "no_exam_feedback_to_memory": true,
+  "bounded_memory_examples_per_family": 400,
+  "generalization_to_real_world_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

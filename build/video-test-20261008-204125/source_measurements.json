@@ -1,0 +1,89 @@
+{
+  "measurements": [
+    {
+      "entity_ref": "user-selected-object-01",
+      "source_ref": "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:0#annotation:human",
+      "frame_ref": "camera-image-plane:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+      "time_s": 0.0,
+      "x": 193.0,
+      "y": 104.0,
+      "unit": "px",
+      "source_kind": "OBSERVED_CLAIM",
+      "uncertainty_refs": [
+        "MANUAL_POINT_APPROXIMATE",
+        "VIDEO_FPS_METADATA_UNVERIFIED",
+        "CAMERA_MOTION_UNVERIFIED",
+        "OBJECT_IDENTITY_USER_ASSERTED"
+      ]
+    },
+    {
+      "entity_ref": "user-selected-object-01",
+      "source_ref": "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:3#annotation:human",
+      "frame_ref": "camera-image-plane:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+      "time_s": 0.1,
+      "x": 379.0,
+      "y": 323.0,
+      "unit": "px",
+      "source_kind": "OBSERVED_CLAIM",
+      "uncertainty_refs": [
+        "MANUAL_POINT_APPROXIMATE",
+        "VIDEO_FPS_METADATA_UNVERIFIED",
+        "CAMERA_MOTION_UNVERIFIED",
+        "OBJECT_IDENTITY_USER_ASSERTED"
+      ]
+    },
+    {
+      "entity_ref": "user-selected-object-01",
+      "source_ref": "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:6#annotation:human",
+      "frame_ref": "camera-image-plane:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+      "time_s": 0.2,
+      "x": 284.0,
+      "y": 319.0,
+      "unit": "px",
+      "source_kind": "OBSERVED_CLAIM",
+      "uncertainty_refs": [
+        "MANUAL_POINT_APPROXIMATE",
+        "VIDEO_FPS_METADATA_UNVERIFIED",
+        "CAMERA_MOTION_UNVERIFIED",
+        "OBJECT_IDENTITY_USER_ASSERTED"
+      ]
+    },
+    {
+      "entity_ref": "user-selected-object-01",
+      "source_ref": "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:9#annotation:human",
+      "frame_ref": "camera-image-plane:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+      "time_s": 0.3,
+      "x": 508.0,
+      "y": 279.0,
+      "unit": "px",
+      "source_kind": "OBSERVED_CLAIM",
+      "uncertainty_refs": [
+        "MANUAL_POINT_APPROXIMATE",
+        "VIDEO_FPS_METADATA_UNVERIFIED",
+        "CAMERA_MOTION_UNVERIFIED",
+        "OBJECT_IDENTITY_USER_ASSERTED"
+      ]
+    }
+  ],
+  "metadata": {
+    "schema_version": "BRODY_MANUAL_VIDEO_ANNOTATION_V0",
+    "source_video_sha256": "a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+    "source_video_bytes": 66329,
+    "fps_from_decoder_unverified": 30.0,
+    "frame_indices": [
+      0,
+      3,
+      6,
+      9
+    ],
+    "observation_method": "FOUR_MANUAL_IMAGE_PLANE_CLICKS",
+    "prediction_precommitted_before_fourth_annotation": true,
+    "camera_motion_external_check": "NOT_RUN",
+    "object_identity_independent_check": "NOT_RUN",
+    "real_world_proven": false,
+    "physical_law_proven": false,
+    "model_weight_update": false,
+    "memory_write_allowed": false,
+    "decision_authority": "KX108_ONLY"
+  }
+}

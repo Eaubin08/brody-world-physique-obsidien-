@@ -1,0 +1,126 @@
+{
+  "U5B": {
+    "status": "HOLD_NO_INDEPENDENT_VIDEO",
+    "video_frames_examined": 0
+  },
+  "U6": {
+    "decision_authority": "KX108_ONLY",
+    "local_contracts": {
+      "WorldExperienceCandidateV0": true,
+      "WorldStateDeltaV0": true,
+      "WorldTransformationV0": true
+    },
+    "status": "LOCAL_CONTRACTS_ONLY_NO_UPSTREAM_SOURCE_AUDIT",
+    "upstream_git_shas_collected": false,
+    "upstream_mmonde_verified": false,
+    "upstream_sens_verified": false
+  },
+  "U7B": {
+    "camera_episodes": 18,
+    "families": {
+      "CAMERA_MOVES": {
+        "CANDIDATE": 3,
+        "HOLD": 0,
+        "MULTI": 0,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 3,
+        "pre": 3,
+        "same_path": 3
+      },
+      "COMPENSATED_MOTION": {
+        "CANDIDATE": 3,
+        "HOLD": 0,
+        "MULTI": 0,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 3,
+        "pre": 3,
+        "same_path": 3
+      },
+      "CROSSING": {
+        "CANDIDATE": 0,
+        "HOLD": 0,
+        "MULTI": 3,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 3,
+        "pre": 3,
+        "same_path": 3
+      },
+      "IDENTITY_SWAP": {
+        "CANDIDATE": 0,
+        "HOLD": 0,
+        "MULTI": 3,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 0,
+        "pre": 0,
+        "same_path": 0
+      },
+      "OBJECT_MOVES": {
+        "CANDIDATE": 3,
+        "HOLD": 0,
+        "MULTI": 0,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 3,
+        "pre": 3,
+        "same_path": 3
+      },
+      "OCCLUSION": {
+        "CANDIDATE": 0,
+        "HOLD": 0,
+        "MULTI": 3,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 3,
+        "pre": 3,
+        "same_path": 3
+      }
+    },
+    "heldout_context_matches": 2,
+    "heldout_context_misses": 0,
+    "heldout_views": 2,
+    "reverse_360_proven": false,
+    "semantic_identity_proven": false,
+    "status": "SYNTHETIC_2D_TEACHER_VIEWS_AND_CAMERA_TRACKING",
+    "unseen_physical_camera_view_proven": false
+  },
+  "U8": {
+    "cases": [
+      {
+        "actual_x_eval_only": 42.0,
+        "candidate_created": true,
+        "case": "learned",
+        "context": "intervention",
+        "predicted_x": 42.0,
+        "visual_mae": 0.0
+      },
+      {
+        "actual_x_eval_only": 49.0,
+        "candidate_created": true,
+        "case": "retained",
+        "context": "clean",
+        "predicted_x": 49.0,
+        "visual_mae": 0.0
+      },
+      {
+        "actual_x_eval_only": 53.0,
+        "candidate_created": false,
+        "case": "unknown",
+        "context": null,
+        "predicted_x": null,
+        "visual_mae": null
+      }
+    ],
+    "full_cross_modal_education_proven": false,
+    "single_candidate_state": true,
+    "status": "SHARED_SHAPE_MOTION_GENERATOR"
+  },
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "native_memory_write": false,
+  "schema": "BRODY_INTEGRATED_U5B_U6_U7B_U8_BUNDLE_V1",
+  "verdict": "U5B_U8_INTEGRATED_SYNTHETIC_PASS_OR_GATED"
+}

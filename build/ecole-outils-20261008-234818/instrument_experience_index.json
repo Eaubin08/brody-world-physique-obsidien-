@@ -1,0 +1,32 @@
+{
+  "schema": "BRODY_INSTRUMENT_SCHOOL_V2",
+  "source_kind": "SIMULATED",
+  "training_lessons": 9,
+  "test_exams": 4,
+  "trained_experience_count": 9,
+  "memory_ref": "instrument_skill_memory.json",
+  "memory_sha256": "f44b352de4a6589feeab3b7b3eeaf310db91bac3ac6df86006e36547f0b70e5c",
+  "procedure": {
+    "module_path": "brody_world_physique/instrument_school_v2.py",
+    "module_sha256": "54379ed6bfb6758b7639980de81b1df748b21c5e7ef2c2f079ceb955444fbae0",
+    "renderer": "render_instrument",
+    "selector": "select_tool",
+    "preexisting_drawing_code": {
+      "capability": "image-thinning",
+      "module_path": "brody_world_physique/drawing_school_v1.py",
+      "symbol": "suggest_gestures_from_reference",
+      "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+      "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+    },
+    "pillow_version": "12.3.0"
+  },
+  "precommitted_choice_ref": "choices_before_heldout.jsonl",
+  "precommitted_choice_sha256": "b0db83a6672e6d36fb9522727154b9ccb08fafbc2cfef0bc25b5611618c35122",
+  "prior_school_replay_verified": true,
+  "prior_school_source": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\ecole-outils-20261008-234818\\prior_drawing_school_v1",
+  "ledger_ref": "instrument_ledger.jsonl",
+  "ledger_sha256": "e25a508448417fc4e163860bb38fb5ae4f4f1b8e5c1e81d52f48d796e14b859f",
+  "native_memory_write_allowed": false,
+  "auto_promotion_allowed": false,
+  "decision_authority": "KX108_ONLY"
+}

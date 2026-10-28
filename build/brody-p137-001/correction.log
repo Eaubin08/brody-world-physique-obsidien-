@@ -1,0 +1,8 @@
+
+test_fails_closed_for_leaked_image (test_image_reciprocal_shape_learning_p134.ReciprocalSchoolTests.test_fails_closed_for_leaked_image) ... ok
+test_train_correct_holdout_different_shapes (test_image_reciprocal_shape_learning_p134.ReciprocalSchoolTests.test_train_correct_holdout_different_shapes) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.066s
+
+OK

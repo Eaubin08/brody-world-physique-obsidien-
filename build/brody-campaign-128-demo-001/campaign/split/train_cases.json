@@ -1,0 +1,74 @@
+[
+  {
+    "actual": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_fall_a\\4.png",
+    "observations": [
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_fall_a\\0.png",
+        "t": 0
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_fall_a\\1.png",
+        "t": 1
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_fall_a\\2.png",
+        "t": 2
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_fall_a\\3.png",
+        "t": 3
+      }
+    ],
+    "origin": "synthetic",
+    "predict_t": 4.0,
+    "source_group": "train_fall_a"
+  },
+  {
+    "actual": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_fall_b\\4.png",
+    "observations": [
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_fall_b\\0.png",
+        "t": 0
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_fall_b\\1.png",
+        "t": 1
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_fall_b\\2.png",
+        "t": 2
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_fall_b\\3.png",
+        "t": 3
+      }
+    ],
+    "origin": "synthetic",
+    "predict_t": 4.0,
+    "source_group": "train_fall_b"
+  },
+  {
+    "actual": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_still\\4.png",
+    "observations": [
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_still\\0.png",
+        "t": 0
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_still\\1.png",
+        "t": 1
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_still\\2.png",
+        "t": 2
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_still\\3.png",
+        "t": 3
+      }
+    ],
+    "origin": "synthetic",
+    "predict_t": 4.0,
+    "source_group": "train_still"
+  }
+]

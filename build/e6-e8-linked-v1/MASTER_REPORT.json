@@ -1,0 +1,39 @@
+{
+  "E6": {
+    "examined": 0,
+    "real_source_authenticated": false,
+    "status": "HOLD_NO_EXTERNAL_CORPUS"
+  },
+  "E7": {
+    "decision_authority": "KX108_ONLY",
+    "status": "LOCAL_CONTRACT_AUDITED_UPSTREAM_NOT_CONNECTED",
+    "upstream_mmonde_runtime_verified": false,
+    "upstream_sens_runtime_verified": false,
+    "upstream_types_duplicated": false,
+    "v4_compatibility_bridge_exists": true,
+    "verified_local_contracts": {
+      "WorldExperienceCandidateV0": true,
+      "WorldStateDeltaV0": true,
+      "WorldTransformationV0": true
+    }
+  },
+  "E8": {
+    "e1_memory_retained": true,
+    "e23_regular_generated_exact": 2,
+    "e23_worse_than_static": 1,
+    "followup_probe_executed": false,
+    "next_experiment_proposed": "PROBE",
+    "shared_latent_world_model": false,
+    "shared_multimodal_skill_parameters": false,
+    "source_reports": [
+      "E1/MASTER_REPORT.json",
+      "E2_E3/MASTER_REPORT.json"
+    ],
+    "status": "LINKED_EDUCATIONAL_EVIDENCE_CANDIDATE"
+  },
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "native_memory_write": false,
+  "schema": "BRODY_E6_E8_EVIDENCE_LINKED_V1",
+  "verdict": "E6_E8_BOUNDED_LOCAL_REUSE_NOT_FULL_UNIFICATION"
+}

@@ -1,0 +1,141 @@
+{
+  "schema": "BRODY_DRAWING_HIDDEN_REFERENCE_V3",
+  "source_ref": "teacher:hidden_pentagon_v3",
+  "observed_source_sha256": "26f8597bd637e211e1c6f48dab09dcc6062a8694ccd79bfe178b0aa41535de6b",
+  "context": "TEACHER_VISIBLE_ONLY_DURING_ENCODING",
+  "representation_type": "RASTER_SKELETON_TO_MOTOR_STROKES",
+  "bbox": [
+    9,
+    8,
+    51,
+    50
+  ],
+  "signature": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+  ],
+  "observed_ink_count": 412,
+  "gestures": [
+    {
+      "kind": "CURVED_STROKE",
+      "points": [
+        [
+          10,
+          26
+        ],
+        [
+          13,
+          47
+        ],
+        [
+          15,
+          49
+        ],
+        [
+          21,
+          49
+        ],
+        [
+          45,
+          49
+        ],
+        [
+          47,
+          44
+        ],
+        [
+          50,
+          26
+        ],
+        [
+          39,
+          17
+        ],
+        [
+          33,
+          11
+        ],
+        [
+          30,
+          10
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          10,
+          26
+        ]
+      ]
+    }
+  ],
+  "source_pixels_in_memory": false,
+  "representation_contains_detailed_contour": true,
+  "learning_algorithm_autonomously_discovered": false,
+  "interpretation_semantic": false,
+  "memory_write_allowed": false,
+  "representation_sha256": "edff29d819f44e152221bdb9fd637aef1d3ba8e92fce4bc44dd7373dedfe9772"
+}

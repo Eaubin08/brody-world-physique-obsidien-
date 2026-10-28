@@ -1,0 +1,19 @@
+{
+  "canonical_promotion": false,
+  "context": null,
+  "decision_authority": "KX108_ONLY",
+  "digest": "ccde4bd344112ca6ba975a6cb2376519a39cbaab8f4a3a5e1b680fa8197af7cf",
+  "history": [
+    30.0,
+    34.0,
+    38.0,
+    42.0,
+    47.0,
+    53.0
+  ],
+  "native_memory_write": false,
+  "prediction": null,
+  "source_kind": "SIMULATED",
+  "state_sha256": "a4f9defd057f98f753937a870fc2135349c7fbe4b47f113b296468ef0d069120",
+  "trial": "unknown_novel"
+}

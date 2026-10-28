@@ -1,0 +1,13 @@
+{
+    "video_gate":  "HOLD_NO_INDEPENDENT_VIDEO",
+    "restart_replay_pass":  true,
+    "git_head":  "966df6223ef86b2b6fba577a997de69b70f02cc1",
+    "verdict":  "LOCAL_SYNTHETIC_GREEN_EXTERNAL_GATES_OPEN",
+    "native_memory_write":  false,
+    "full_regression_pass":  true,
+    "real_multicamera_reverse360_proven":  false,
+    "sens_mmonde_runtime_verified":  false,
+    "schema":  "BRODY_G1_FINAL_FREEZE_CANDIDATE_V1",
+    "decision_authority":  "KX108_ONLY",
+    "canonical_promotion":  false
+}

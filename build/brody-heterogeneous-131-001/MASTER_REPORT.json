@@ -1,0 +1,15 @@
+{
+  "schema": "BRODY_HETEROGENEOUS_CAPABILITY_AUDIT_P131",
+  "distinct_probes": 16,
+  "domains": 10,
+  "counts": {
+    "PASS": 8,
+    "FAIL": 0,
+    "TODO": 8
+  },
+  "synthetic_or_constructed_evidence_only": true,
+  "real_world_transfer_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

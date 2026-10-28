@@ -1,0 +1,128 @@
+{
+  "schema": "BRODY_P165D9_LOCAL_STATUS_AND_FAILURE_DIAGNOSTIC",
+  "conditions": 675,
+  "episodes": 1350,
+  "groups": {
+    "still/none": {
+      "n": 90,
+      "continuity_fail": 0,
+      "pre_fail": 0,
+      "post_fail": 0,
+      "old_four_pass_new_fail": 0
+    },
+    "still/partial": {
+      "n": 90,
+      "continuity_fail": 0,
+      "pre_fail": 0,
+      "post_fail": 0,
+      "old_four_pass_new_fail": 0
+    },
+    "still/full": {
+      "n": 90,
+      "continuity_fail": 0,
+      "pre_fail": 0,
+      "post_fail": 0,
+      "old_four_pass_new_fail": 0
+    },
+    "linear/none": {
+      "n": 90,
+      "continuity_fail": 0,
+      "pre_fail": 0,
+      "post_fail": 0,
+      "old_four_pass_new_fail": 0
+    },
+    "linear/partial": {
+      "n": 90,
+      "continuity_fail": 0,
+      "pre_fail": 0,
+      "post_fail": 0,
+      "old_four_pass_new_fail": 0
+    },
+    "linear/full": {
+      "n": 90,
+      "continuity_fail": 18,
+      "pre_fail": 0,
+      "post_fail": 18,
+      "old_four_pass_new_fail": 18
+    },
+    "reverse/none": {
+      "n": 90,
+      "continuity_fail": 0,
+      "pre_fail": 0,
+      "post_fail": 0,
+      "old_four_pass_new_fail": 0
+    },
+    "reverse/partial": {
+      "n": 90,
+      "continuity_fail": 0,
+      "pre_fail": 0,
+      "post_fail": 0,
+      "old_four_pass_new_fail": 0
+    },
+    "reverse/full": {
+      "n": 90,
+      "continuity_fail": 0,
+      "pre_fail": 0,
+      "post_fail": 0,
+      "old_four_pass_new_fail": 0
+    },
+    "jump/none": {
+      "n": 90,
+      "continuity_fail": 90,
+      "pre_fail": 0,
+      "post_fail": 90,
+      "old_four_pass_new_fail": 90
+    },
+    "jump/partial": {
+      "n": 90,
+      "continuity_fail": 90,
+      "pre_fail": 0,
+      "post_fail": 90,
+      "old_four_pass_new_fail": 90
+    },
+    "jump/full": {
+      "n": 90,
+      "continuity_fail": 90,
+      "pre_fail": 0,
+      "post_fail": 90,
+      "old_four_pass_new_fail": 0
+    },
+    "accelerate/none": {
+      "n": 90,
+      "continuity_fail": 0,
+      "pre_fail": 0,
+      "post_fail": 0,
+      "old_four_pass_new_fail": 0
+    },
+    "accelerate/partial": {
+      "n": 90,
+      "continuity_fail": 0,
+      "pre_fail": 0,
+      "post_fail": 0,
+      "old_four_pass_new_fail": 0
+    },
+    "accelerate/full": {
+      "n": 90,
+      "continuity_fail": 36,
+      "pre_fail": 0,
+      "post_fail": 36,
+      "old_four_pass_new_fail": 18
+    }
+  },
+  "local_status_counts": {
+    "LOCATE/SUPPORTED_VIEW_NOT_PROOF": 1350,
+    "REIDENTIFY/MULTI_LOCAL": 1350,
+    "RENDER/SUPPORTED_VIEW_NOT_PROOF": 1350,
+    "EXPLAIN_CAUSE/SUPPORTED_VIEW_NOT_PROOF": 1350,
+    "INTERPRET_SYMBOL/HOLD_LOCAL_NO_RELEVANT_EVIDENCE": 1350
+  },
+  "goal_priorities_not_truth": true,
+  "oracle_for_scoring_only": true,
+  "physical_cause_inferred": false,
+  "tracker_algorithm_changed": false,
+  "continuity_improvement_claimed": false,
+  "true_multisensor_connected": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

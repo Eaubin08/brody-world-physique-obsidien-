@@ -1,0 +1,66 @@
+{
+  "schema": "BRODY_F5_MULTI_SKILL_EDUCATION_V0",
+  "training_skill_count": 3,
+  "snapshot_version": 3,
+  "exams": [
+    {
+      "goal": "rectangle",
+      "choice": {
+        "authority": "CANDIDATE_PROPOSAL_ONLY",
+        "selected": "rectangle",
+        "registry_digest": "a8091b361d2501ccaf625e3bdd9992af37417f911c19d966f0dec813be645058",
+        "test_pixels_seen": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      "candidate_error": 174,
+      "blank_error": 316,
+      "gain": 142,
+      "verdict": "IMPROVED",
+      "exam_dir": "build\\fusion-f6-tools-001\\visual\\exam-01-rectangle"
+    },
+    {
+      "goal": "triangle",
+      "choice": {
+        "authority": "CANDIDATE_PROPOSAL_ONLY",
+        "selected": "triangle",
+        "registry_digest": "a8091b361d2501ccaf625e3bdd9992af37417f911c19d966f0dec813be645058",
+        "test_pixels_seen": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      "candidate_error": 145,
+      "blank_error": 245,
+      "gain": 100,
+      "verdict": "IMPROVED",
+      "exam_dir": "build\\fusion-f6-tools-001\\visual\\exam-02-triangle"
+    },
+    {
+      "goal": "ellipse",
+      "choice": {
+        "authority": "CANDIDATE_PROPOSAL_ONLY",
+        "selected": "ellipse",
+        "registry_digest": "a8091b361d2501ccaf625e3bdd9992af37417f911c19d966f0dec813be645058",
+        "test_pixels_seen": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      "candidate_error": 210,
+      "blank_error": 280,
+      "gain": 70,
+      "verdict": "IMPROVED",
+      "exam_dir": "build\\fusion-f6-tools-001\\visual\\exam-03-ellipse"
+    }
+  ],
+  "unknown_route": {
+    "authority": "HOLD",
+    "reason": "UNKNOWN_OR_AMBIGUOUS_SKILL",
+    "selected": null,
+    "registry_digest": "a8091b361d2501ccaf625e3bdd9992af37417f911c19d966f0dec813be645058",
+    "test_pixels_seen": false,
+    "decision_authority": "KX108_ONLY"
+  },
+  "history_count": 6,
+  "selects_by_explicit_goal_not_semantics": true,
+  "cross_lesson_memory_reuse": true,
+  "correction_after_failure_implemented": false,
+  "native_memory_write": false,
+  "decision_authority": "KX108_ONLY"
+}

@@ -1,0 +1,10 @@
+{
+  "flat": {
+    "acceleration": 0.0,
+    "observations": 120
+  },
+  "slope": {
+    "acceleration": -1.0,
+    "observations": 120
+  }
+}

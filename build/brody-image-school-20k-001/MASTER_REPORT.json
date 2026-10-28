@@ -1,0 +1,196 @@
+{
+  "schema": "BRODY_IMAGE_TOOL_SCHOOL_10K_TRAIN_10K_MULTIDIRECTION_V0",
+  "training": {
+    "episodes": 10000,
+    "changes": 1,
+    "training_tip": "30ce4109c8aef0029c598c7ea6093d11887c8c17593f3225614af6ce53f731b9",
+    "checkpoints": [
+      {
+        "at": 1000,
+        "mean_error": 0.0,
+        "held": 0,
+        "evaluated": 48,
+        "snapshot_digest": "a3fe81630cffe0eeb5d34fb23d4ceaeef0a0e8a4c235e2826cb2e69a1be07fa8"
+      },
+      {
+        "at": 2000,
+        "mean_error": 0.0,
+        "held": 0,
+        "evaluated": 48,
+        "snapshot_digest": "60e53dfa7f30a924c0d60f055d4374c91de6505490f62a8175cdb630ab2e9d28"
+      },
+      {
+        "at": 3000,
+        "mean_error": 0.0,
+        "held": 0,
+        "evaluated": 48,
+        "snapshot_digest": "5caada4ebc128f2ed75768d7d175f8422f013b9d24f22f0df504c145c94feb48"
+      },
+      {
+        "at": 4000,
+        "mean_error": 0.0,
+        "held": 0,
+        "evaluated": 48,
+        "snapshot_digest": "da6c1c2adf2687614658b25f27cf1b6d68cd2966bba6555cb2f279ff48a96592"
+      },
+      {
+        "at": 5000,
+        "mean_error": 0.0,
+        "held": 0,
+        "evaluated": 48,
+        "snapshot_digest": "a31105dddb67503b527852e1f68398a27929cb383969d705dfdb50f9a624a8a6"
+      },
+      {
+        "at": 6000,
+        "mean_error": 0.4280904134114583,
+        "held": 0,
+        "evaluated": 48,
+        "snapshot_digest": "c90435750fe115c76a0fb9f85d3c0eb70c1d29b979cf9534321d0b9b8d0e4c6b"
+      },
+      {
+        "at": 7000,
+        "mean_error": 0.4280904134114583,
+        "held": 0,
+        "evaluated": 48,
+        "snapshot_digest": "973e1be3db79de8e4fdd225af08f07ef5c7d346151965ff3dfa931fa615a1a4c"
+      },
+      {
+        "at": 8000,
+        "mean_error": 0.4280904134114583,
+        "held": 0,
+        "evaluated": 48,
+        "snapshot_digest": "2d9f461eff816448ee6455e39860ef0d1ff10a15e690bc371ae78f6f2ee2f903"
+      },
+      {
+        "at": 9000,
+        "mean_error": 0.4280904134114583,
+        "held": 0,
+        "evaluated": 48,
+        "snapshot_digest": "8a5da32dea35eae18e69dab55d1405044d6c7ed8f83fc246267ea453103a9039"
+      },
+      {
+        "at": 10000,
+        "mean_error": 0.4280904134114583,
+        "held": 0,
+        "evaluated": 48,
+        "snapshot_digest": "de26824c869956741da32c1ed75cbe4b07a406305917fdba8b8ec56612b7f14d"
+      }
+    ],
+    "final_policy": {
+      "EXPRESSIVE|angle": "NIB",
+      "EXPRESSIVE|box": "NIB",
+      "EXPRESSIVE|line": "NIB",
+      "EXPRESSIVE|zigzag": "NIB",
+      "LIGHT|angle": "PENCIL",
+      "LIGHT|box": "PENCIL",
+      "LIGHT|line": "PEN",
+      "LIGHT|zigzag": "PENCIL",
+      "UNIFORM|angle": "PEN",
+      "UNIFORM|box": "PEN",
+      "UNIFORM|line": "PEN",
+      "UNIFORM|zigzag": "PEN"
+    }
+  },
+  "exam": {
+    "cases": 10000,
+    "receipt_tip": "2243f9c4a660c907ba1e0cc3d68540635674599e95cff1419818292a77aea385",
+    "families": {
+      "fresh_geometry": {
+        "cases": 1000,
+        "holds": 0,
+        "evaluated": 1000,
+        "mean_loss": 0.0,
+        "mean_regret": 0.0,
+        "oracle_tool_match": 1000
+      },
+      "translation": {
+        "cases": 1000,
+        "holds": 0,
+        "evaluated": 1000,
+        "mean_loss": 0.842370849609375,
+        "mean_regret": 0.842370849609375,
+        "oracle_tool_match": 833
+      },
+      "mirror": {
+        "cases": 1000,
+        "holds": 0,
+        "evaluated": 1000,
+        "mean_loss": 0.0,
+        "mean_regret": 0.0,
+        "oracle_tool_match": 1000
+      },
+      "rotation": {
+        "cases": 1000,
+        "holds": 0,
+        "evaluated": 1000,
+        "mean_loss": 0.85831982421875,
+        "mean_regret": 0.85831982421875,
+        "oracle_tool_match": 833
+      },
+      "contrast": {
+        "cases": 1000,
+        "holds": 0,
+        "evaluated": 1000,
+        "mean_loss": 0.0,
+        "mean_regret": 0.0,
+        "oracle_tool_match": 1000
+      },
+      "blur": {
+        "cases": 1000,
+        "holds": 0,
+        "evaluated": 1000,
+        "mean_loss": 0.24942529296875,
+        "mean_regret": 0.24942529296875,
+        "oracle_tool_match": 833
+      },
+      "sensor_noise": {
+        "cases": 1000,
+        "holds": 0,
+        "evaluated": 1000,
+        "mean_loss": 0.0,
+        "mean_regret": 0.0,
+        "oracle_tool_match": 1000
+      },
+      "part_occlusion": {
+        "cases": 1000,
+        "holds": 0,
+        "evaluated": 1000,
+        "mean_loss": 0.748396728515625,
+        "mean_regret": 0.748396728515625,
+        "oracle_tool_match": 834
+      },
+      "wrong_intent": {
+        "cases": 1000,
+        "holds": 0,
+        "evaluated": 1000,
+        "mean_loss": 6.994663818359375,
+        "mean_regret": 6.994663818359375,
+        "oracle_tool_match": 0
+      },
+      "unknown_intent": {
+        "cases": 1000,
+        "holds": 1000,
+        "evaluated": 0,
+        "mean_loss": null,
+        "mean_regret": null,
+        "oracle_tool_match": 0
+      }
+    },
+    "target_generator_shared_with_training": true,
+    "synthetic_perturbations_only": true
+  },
+  "benchmark_limitations": [
+    "64x64 synthetic imagery",
+    "teacher and pupil share the same renderer",
+    "tool selection only; not generic perception or physics",
+    "wrong_intent is intentionally misleading, not independently detectable",
+    "noise and occlusion are reproducible artificial perturbations",
+    "no external dataset, independent real sensor or model-weight training"
+  ],
+  "memory_candidate_only": true,
+  "native_memory_write": false,
+  "kernel_mutation": false,
+  "source_attestation_verified": false,
+  "decision_authority": "KX108_ONLY",
+  "status": "SYNTHETIC_TOOL_SCHOOL_MEASURED_NOT_REAL_WORLD_PROOF"
+}

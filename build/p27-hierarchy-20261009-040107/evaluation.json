@@ -1,0 +1,5337 @@
+{
+  "arm_summary": {
+    "experience": {
+      "catastrophic_over_10px": 0,
+      "coverage": 1.0,
+      "evaluated": 480,
+      "mean_error_px": 0.32916666666666666
+    },
+    "hierarchy": {
+      "catastrophic_over_10px": 0,
+      "coverage": 1.0,
+      "evaluated": 480,
+      "mean_error_px": 0.32916666666666666
+    },
+    "hierarchy_experience": {
+      "catastrophic_over_10px": 245,
+      "coverage": 1.0,
+      "evaluated": 480,
+      "mean_error_px": 13.289583333333333
+    },
+    "majority": {
+      "catastrophic_over_10px": 245,
+      "coverage": 0.6729166666666667,
+      "evaluated": 323,
+      "mean_error_px": 19.671826625387
+    }
+  },
+  "decision_authority": "KX108_ONLY",
+  "independent_real_world_validation": false,
+  "learned_physics": false,
+  "learned_visual_perception": false,
+  "matched_all_arm_count": 323,
+  "matched_all_arm_error": {
+    "experience": 0.3219814241486068,
+    "hierarchy": 0.3219814241486068,
+    "hierarchy_experience": 19.572755417956657,
+    "majority": 19.671826625387
+  },
+  "native_memory_write_allowed": false,
+  "reliability_by_landmark": [
+    26.0,
+    25.5,
+    1.0,
+    1.0,
+    0.0
+  ],
+  "rows": [
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100000,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100001,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100002,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100003,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100004,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100005,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100006,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100007,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100008,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100009,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100010,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100011,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100012,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100013,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100014,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100015,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100016,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100017,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100018,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100019,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100020,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100021,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100022,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100023,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100024,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100025,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100026,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100027,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100028,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100029,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100030,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100031,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100032,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100033,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100034,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100035,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100036,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100037,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100038,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100039,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100040,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100041,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100042,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100043,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100044,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100045,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100046,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 0.0
+      },
+      "id": 100047,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100048,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100049,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100050,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100051,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100052,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100053,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100054,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100055,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100056,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100057,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100058,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 0.0
+      },
+      "id": 100059,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100060,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100061,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100062,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100063,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100064,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100065,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100066,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100067,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": 1.0
+      },
+      "id": 100068,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100069,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100070,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100071,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100072,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100073,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100074,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100075,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 0.0
+      },
+      "id": 100076,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100077,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100078,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100079,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100080,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 27.0,
+        "majority": 27.0
+      },
+      "id": 100081,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100082,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100083,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 1.0
+      },
+      "id": 100084,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100085,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100086,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100087,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 27.0
+      },
+      "id": 100088,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100089,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100090,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100091,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100092,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100093,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100094,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100095,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100096,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100097,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100098,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100099,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100100,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100101,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 1.0
+      },
+      "id": 100102,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100103,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100104,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100105,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100106,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100107,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100108,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100109,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100110,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100111,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100112,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100113,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100114,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100115,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100116,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100117,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100118,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 27.0
+      },
+      "id": 100119,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100120,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 0.0
+      },
+      "id": 100121,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100122,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100123,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100124,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100125,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100126,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100127,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100128,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100129,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100130,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100131,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100132,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100133,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100134,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100135,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100136,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100137,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100138,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100139,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100140,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100141,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100142,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 0.0
+      },
+      "id": 100143,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100144,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": 0.0
+      },
+      "id": 100145,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100146,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100147,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100148,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100149,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100150,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100151,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100152,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100153,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100154,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100155,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100156,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100157,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100158,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100159,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100160,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100161,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100162,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100163,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100164,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100165,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100166,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100167,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100168,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100169,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100170,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100171,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100172,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100173,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100174,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100175,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100176,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100177,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100178,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100179,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100180,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100181,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100182,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100183,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 27.0,
+        "majority": 26.0
+      },
+      "id": 100184,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100185,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100186,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 1.0
+      },
+      "id": 100187,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100188,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100189,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 27.0
+      },
+      "id": 100190,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100191,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100192,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100193,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100194,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100195,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100196,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100197,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100198,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100199,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100200,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100201,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 25.0
+      },
+      "id": 100202,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100203,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100204,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100205,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100206,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100207,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100208,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100209,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100210,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100211,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100212,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100213,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100214,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 27.0,
+        "majority": 26.0
+      },
+      "id": 100215,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100216,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100217,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100218,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100219,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100220,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100221,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100222,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100223,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100224,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100225,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100226,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100227,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100228,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100229,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100230,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100231,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100232,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100233,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100234,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100235,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100236,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100237,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100238,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 1.0
+      },
+      "id": 100239,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100240,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100241,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100242,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100243,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100244,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100245,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100246,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100247,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100248,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100249,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100250,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100251,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100252,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100253,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100254,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100255,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100256,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 27.0
+      },
+      "id": 100257,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100258,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100259,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 27.0,
+        "majority": 27.0
+      },
+      "id": 100260,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100261,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100262,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100263,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100264,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100265,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100266,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100267,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100268,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100269,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100270,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 27.0,
+        "majority": 26.0
+      },
+      "id": 100271,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100272,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100273,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100274,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100275,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100276,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100277,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100278,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100279,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100280,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100281,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100282,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100283,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100284,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100285,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100286,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100287,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100288,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100289,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100290,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100291,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100292,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100293,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100294,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100295,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100296,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100297,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 27.0,
+        "majority": 26.0
+      },
+      "id": 100298,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100299,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100300,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100301,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100302,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 27.0,
+        "majority": 27.0
+      },
+      "id": 100303,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100304,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100305,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100306,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100307,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 27.0
+      },
+      "id": 100308,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100309,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100310,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100311,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100312,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100313,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100314,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100315,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100316,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100317,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 27.0,
+        "majority": 26.0
+      },
+      "id": 100318,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100319,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100320,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100321,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100322,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100323,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100324,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100325,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100326,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100327,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100328,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100329,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100330,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100331,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100332,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100333,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100334,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100335,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100336,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100337,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100338,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100339,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100340,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100341,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100342,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100343,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100344,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100345,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100346,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100347,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100348,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": 0.0
+      },
+      "id": 100349,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100350,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100351,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100352,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100353,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100354,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100355,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100356,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 27.0,
+        "majority": 27.0
+      },
+      "id": 100357,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100358,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100359,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100360,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100361,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100362,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100363,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100364,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100365,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100366,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100367,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100368,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100369,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100370,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100371,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100372,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100373,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100374,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100375,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100376,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100377,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100378,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100379,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100380,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100381,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100382,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100383,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100384,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100385,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100386,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100387,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100388,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100389,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100390,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100391,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100392,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100393,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100394,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100395,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100396,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100397,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100398,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100399,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100400,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100401,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100402,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100403,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100404,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100405,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100406,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100407,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100408,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100409,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100410,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100411,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100412,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100413,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 27.0,
+        "majority": 27.0
+      },
+      "id": 100414,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100415,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100416,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100417,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100418,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100419,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100420,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100421,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100422,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100423,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 25.0
+      },
+      "id": 100424,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100425,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100426,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100427,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100428,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100429,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100430,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100431,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100432,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100433,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100434,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 27.0
+      },
+      "id": 100435,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100436,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100437,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100438,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100439,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100440,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100441,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100442,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100443,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100444,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 27.0,
+        "majority": 27.0
+      },
+      "id": 100445,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100446,
+      "truth_world_dx": 6
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": 1.0
+      },
+      "id": 100447,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100448,
+      "truth_world_dx": 0
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100449,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100450,
+      "truth_world_dx": 3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100451,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100452,
+      "truth_world_dx": -8
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100453,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100454,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100455,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100456,
+      "truth_world_dx": -2
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100457,
+      "truth_world_dx": -4
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100458,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100459,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100460,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100461,
+      "truth_world_dx": 5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100462,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100463,
+      "truth_world_dx": -5
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100464,
+      "truth_world_dx": -6
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100465,
+      "truth_world_dx": 2
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 27.0
+      },
+      "id": 100466,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100467,
+      "truth_world_dx": 9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100468,
+      "truth_world_dx": -9
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100469,
+      "truth_world_dx": 1
+    },
+    {
+      "corrupted": 3,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100470,
+      "truth_world_dx": 8
+    },
+    {
+      "corrupted": 0,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": 0.0
+      },
+      "id": 100471,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 25.0
+      },
+      "id": 100472,
+      "truth_world_dx": -1
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100473,
+      "truth_world_dx": 10
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100474,
+      "truth_world_dx": -7
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100475,
+      "truth_world_dx": -3
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 25.0,
+        "majority": 26.0
+      },
+      "id": 100476,
+      "truth_world_dx": -10
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 0.0,
+        "majority": null
+      },
+      "id": 100477,
+      "truth_world_dx": 4
+    },
+    {
+      "corrupted": 4,
+      "errors": {
+        "experience": 0.0,
+        "hierarchy": 0.0,
+        "hierarchy_experience": 26.0,
+        "majority": 26.0
+      },
+      "id": 100478,
+      "truth_world_dx": 7
+    },
+    {
+      "corrupted": 2,
+      "errors": {
+        "experience": 1.0,
+        "hierarchy": 1.0,
+        "hierarchy_experience": 1.0,
+        "majority": null
+      },
+      "id": 100479,
+      "truth_world_dx": -7
+    }
+  ],
+  "same_source_generator": true,
+  "schema": "BRODY_P27_EXPERIENCE_HIERARCHY_V0",
+  "source_kind": "SIMULATED",
+  "test_count": 480,
+  "test_prediction_sha256": "fc3b259e08a3d99dae26121b41521bc433a193e1285af18f28aa5f6df29237ca",
+  "train_count": 120,
+  "training_supervised_camera_truth": true,
+  "verdict": "EXPERIMENTAL_DIAGNOSTIC_ONLY"
+}

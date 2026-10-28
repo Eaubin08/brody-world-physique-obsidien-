@@ -1,0 +1,10 @@
+{
+  "train_origin": "P140_renderer",
+  "validation_origin": "P140_renderer_transformed",
+  "exam_origin": "P145_independently_implemented_renderer",
+  "train_seed": 145,
+  "validation_seed": 1258,
+  "exam_seed": 28264,
+  "no_exam_labels_in_training": true,
+  "question_family_known": true
+}

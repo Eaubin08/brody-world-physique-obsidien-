@@ -1,0 +1,11 @@
+
+test_act_and_visible_contradictory_results (test_p212d_conservative_correction_gate_v0.GateTests.test_act_and_visible_contradictory_results) ... C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\p210a_visual_loop_contract_v0.py:28: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  return sum(any(channel for channel in pixel) for pixel in d.getdata())
+ok
+test_mixed_train_yields_hold (test_p212d_conservative_correction_gate_v0.GateTests.test_mixed_train_yields_hold) ... ok
+test_tamper_rejected (test_p212d_conservative_correction_gate_v0.GateTests.test_tamper_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.368s
+
+OK

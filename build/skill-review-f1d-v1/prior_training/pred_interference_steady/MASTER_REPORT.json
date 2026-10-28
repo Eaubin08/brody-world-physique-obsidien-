@@ -1,0 +1,12 @@
+{
+  "canonical_promotion": false,
+  "context": "vertical|steady",
+  "decision_authority": "KX108_ONLY",
+  "eligible_episodes": 0,
+  "evidence_source": "LOCAL_BACKTEST",
+  "forecast_sealed": true,
+  "mode": "DOUBT",
+  "native_memory_write": false,
+  "schema": "BRODY_CONTEXTUAL_PHYSICS_FORECAST_REPORT_V2",
+  "selected": null
+}

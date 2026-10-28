@@ -1,0 +1,28 @@
+{
+  "bank_source": "FROZEN_PIXEL_PROBE_BANK",
+  "canonical_promotion": false,
+  "case": "no_discriminator",
+  "choice": {
+    "decision": "HOLD",
+    "options": [
+      {
+        "action": "observe",
+        "cost": 0.1,
+        "information": 0.0,
+        "utility": -0.025
+      }
+    ],
+    "reason": "NO_WORTHWHILE_DISCRIMINATING_PROBE"
+  },
+  "decision_authority": "KX108_ONLY",
+  "digest": "296d9fd635b53fc4c26b2feaeaed684e1db72d605b3d39a4681c9dfa8a4fa51f",
+  "native_memory_write": false,
+  "prior": {
+    "decision": "HOLD",
+    "hypotheses": [
+      "flat",
+      "slope"
+    ],
+    "reason": "UNIDENTIFIABLE_WITHOUT_PROBE"
+  }
+}

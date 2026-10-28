@@ -1,0 +1,14 @@
+{
+  "canonical_promotion": false,
+  "contact_available_to_inference": false,
+  "contact_effect_px": -15.0,
+  "contact_informative": true,
+  "contact_visible_to_perception": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "e61773c8ee27df50ea376aaec7dd4ce9041123d8d9427cba195598a9c3f05a76",
+  "intervention_evidence": "CONTROLLED_SYNTHETIC_FACTORIAL",
+  "marker_effect_px": 0.0,
+  "marker_informative": false,
+  "native_memory_write": false,
+  "schema": "BRODY_F1G_FACTORIAL_POLICY_V1"
+}

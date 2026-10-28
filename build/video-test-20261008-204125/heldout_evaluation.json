@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "schema_version": "BRODY_MANUAL_VIDEO_ANNOTATION_V0",
+    "source_video_sha256": "a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+    "source_video_bytes": 66329,
+    "fps_from_decoder_unverified": 30.0,
+    "frame_indices": [
+      0,
+      3,
+      6,
+      9
+    ],
+    "observation_method": "FOUR_MANUAL_IMAGE_PLANE_CLICKS",
+    "prediction_precommitted_before_fourth_annotation": true,
+    "camera_motion_external_check": "NOT_RUN",
+    "object_identity_independent_check": "NOT_RUN",
+    "real_world_proven": false,
+    "physical_law_proven": false,
+    "model_weight_update": false,
+    "memory_write_allowed": false,
+    "decision_authority": "KX108_ONLY"
+  },
+  "evaluation": {
+    "schema_version": "BRODY_PREVERBAL_EPISODE_EVALUATION_V0",
+    "prediction": {
+      "entity_ref": "user-selected-object-01",
+      "frame_ref": "camera-image-plane:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+      "unit": "px",
+      "source_kind": "OBSERVED_CLAIM",
+      "history_source_refs": [
+        "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:0#annotation:human",
+        "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:3#annotation:human",
+        "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:6#annotation:human"
+      ],
+      "future_time_s": 0.3,
+      "candidate_xy": [
+        -91.99999999999989,
+        92.00000000000007
+      ],
+      "linear_baseline_xy": [
+        189.0,
+        315.0
+      ],
+      "stationary_baseline_xy": [
+        284.0,
+        319.0
+      ],
+      "route": "FINITE_DIFFERENCE_CONSTANT_ACCELERATION_CANDIDATE",
+      "source_kind_verified_real": false,
+      "causal_proof": false,
+      "physical_law_proven": false,
+      "uncertainty_calibrated": false,
+      "readonly": true,
+      "memory_write_allowed": false,
+      "auto_promotion_allowed": false,
+      "decision_authority": "KX108_ONLY",
+      "allowed_to_act": false
+    },
+    "heldout_source_ref": "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:9#annotation:human",
+    "heldout_xy": [
+      508.0,
+      279.0
+    ],
+    "error": {
+      "proposed": 628.465591739118,
+      "linear_baseline": 321.024921150991,
+      "stationary_baseline": 227.54340245324627,
+      "unit": "px"
+    },
+    "comparison": "WORSE_THAN_LINEAR_BASELINE",
+    "physics_causality": "UNKNOWN",
+    "frame_stability_external_verification": "NOT_RUN",
+    "generalization_test": "NOT_RUN",
+    "epistemic_status": "ONE_EPISODE_CANDIDATE_ONLY",
+    "world_knowledge_validated": false,
+    "real_world_proven": false,
+    "model_weight_update": false,
+    "memory_write_allowed": false,
+    "auto_promotion_allowed": false,
+    "decision_authority": "KX108_ONLY",
+    "allowed_to_act": false
+  }
+}

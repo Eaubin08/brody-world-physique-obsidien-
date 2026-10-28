@@ -1,0 +1,12 @@
+
+test_duplicate_train_teacher_rejected (test_p212b_frozen_shift_transfer_v0.ShiftTransferTests.test_duplicate_train_teacher_rejected) ... C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\p210a_visual_loop_contract_v0.py:28: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  return sum(any(channel for channel in pixel) for pixel in d.getdata())
+ok
+test_policy_tamper_and_train_layout_reuse_fail (test_p212b_frozen_shift_transfer_v0.ShiftTransferTests.test_policy_tamper_and_train_layout_reuse_fail) ... ok
+test_test_target_does_not_change_candidate (test_p212b_frozen_shift_transfer_v0.ShiftTransferTests.test_test_target_does_not_change_candidate) ... ok
+test_train_only_shift_improves_unseen_layout (test_p212b_frozen_shift_transfer_v0.ShiftTransferTests.test_train_only_shift_improves_unseen_layout) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.377s
+
+OK

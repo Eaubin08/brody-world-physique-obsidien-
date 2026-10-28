@@ -1,0 +1,17 @@
+{
+  "blank_path": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f3b-school-002\\04-circle\\candidate-blank.png",
+  "blank_sha256": "c83aefe17ef2cb1f712a277e359bbc6045728bca01db485e496261cdbf048673",
+  "boxes": 2,
+  "candidate_path": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f3b-school-002\\04-circle\\candidate.png",
+  "candidate_sha256": "d51e031c8dad16fed93339a5c99cdf2551051821cb2bb3bdf39bb2f53228a1f3",
+  "decision_authority": "KX108_ONLY",
+  "gestures": 2,
+  "layout_given_by_user": true,
+  "layout_sha256": "4a5e58cf9b818796b2ecd7ae021d8f3b589366c1638f5ff7f3fb47c2eaf97aab",
+  "learned_gestures_reused": true,
+  "memory_sha256": "04a5c3a21321f751cea52e7c8348b91ac15a47a49e1bcbbef5749335a56c2cb9",
+  "method": "FROZEN_GESTURE_BOX_RECOMPOSITION",
+  "native_memory_write": false,
+  "reference_unseen_during_generation": true,
+  "schema": "BRODY_P211C_COMPOSED_GESTURES_V0"
+}

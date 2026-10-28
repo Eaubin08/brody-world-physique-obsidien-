@@ -1,0 +1,18 @@
+{
+  "schema": "BRODY_F3C_FROZEN_SKILL_ARCHIVE_V0",
+  "version": 1,
+  "previous": null,
+  "skills": [
+    {
+      "id": "rectangle",
+      "memory_path": "skills/rectangle.json",
+      "memory_sha256": "3e197b9a34098c08f1fb00ca69ee62a44c18951a39c431f99331ecab78bc796c",
+      "training_sha256": "1171c1ef06de111818f10fcd06f25506619269bbad17e137fbe82ee87fbed728",
+      "authority": "FROZEN_TRAIN_CANDIDATE"
+    }
+  ],
+  "native_memory_write": false,
+  "auto_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "735b7776a87c7adf7de7ec84f8c63cc1ad3b46530c4572709519dc26d8f81d6a"
+}

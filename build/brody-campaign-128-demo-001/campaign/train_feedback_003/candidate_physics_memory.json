@@ -1,0 +1,42 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "4069cc8fbb2d7f8545f6feff429a3fe978f9282683f9f97d744c45372912b9f1",
+  "experiences": [
+    {
+      "context": "vertical|speeding_up",
+      "errors_px": {
+        "ACCELERATION": 0.0,
+        "STILL": 10.0,
+        "VELOCITY": 2.0
+      },
+      "feedback_sha256": "8de54b5e4f4333e4a51b75c6587514238e8612b3e0638900e5a5761e87fccf40",
+      "forecast_digest": "fdfb24a5fe1a7b0bc5d6c8d5e40da8c5f2ca3fce19a21b2fda2385663b7205c8",
+      "original_selection": "ACCELERATION"
+    },
+    {
+      "context": "vertical|speeding_up",
+      "errors_px": {
+        "ACCELERATION": 0.0,
+        "STILL": 11.0,
+        "VELOCITY": 2.0
+      },
+      "feedback_sha256": "50b9ce4b86880da224ae2fff1c39e871c4e85ffa73616f5f7f81545965d43141",
+      "forecast_digest": "bf37bd26fe11bad2e709244cf509bdb699b7cb77897dd3b6605b1fb0233180c2",
+      "original_selection": "ACCELERATION"
+    },
+    {
+      "context": "vertical|stationary",
+      "errors_px": {
+        "ACCELERATION": 0.0,
+        "STILL": 0.0,
+        "VELOCITY": 0.0
+      },
+      "feedback_sha256": "f9866d139b53b3e712c0e032bd7a31450825a80a0e0b3eab77d5f08f329b4a64",
+      "forecast_digest": "b1d1940d2e9755768306554c339f7113f5cdab11f17a97d814ec54dbbe6a1962",
+      "original_selection": null
+    }
+  ],
+  "native_memory_write": false,
+  "schema": "BRODY_CONTEXTUAL_PHYSICS_MEMORY_V2"
+}

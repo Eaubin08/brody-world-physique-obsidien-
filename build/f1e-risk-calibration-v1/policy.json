@@ -1,0 +1,13 @@
+{
+  "calibration_cases": 4,
+  "calibration_max_error_px": 15.0,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "decision_rule": "ACT_CANDIDATE_ONLY_IF_CALIBRATION_WORST_LE_THRESHOLD",
+  "digest": "87bcb8dd2036672432d8dcfca8107c294f572d425c75686ecd104e77831a827d",
+  "native_memory_write": false,
+  "no_statistical_coverage_guarantee": true,
+  "schema": "BRODY_EMPIRICAL_SELECTIVE_POLICY_V1",
+  "selection_allowed": false,
+  "threshold_px": 2.0
+}

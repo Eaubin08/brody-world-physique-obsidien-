@@ -1,0 +1,74 @@
+{
+  "schema": "BRODY_DRAWING_HIDDEN_REFERENCE_V3",
+  "episodes": 3,
+  "results": [
+    {
+      "episode": "immediate_pentagon",
+      "level": "immediate",
+      "teacher_sha256": "48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775",
+      "source_observation_sha256": "26f8597bd637e211e1c6f48dab09dcc6062a8694ccd79bfe178b0aa41535de6b",
+      "score": {
+        "pixel_xor": 159,
+        "blank_pixel_xor": 412,
+        "recall_improves_over_blank": true,
+        "pixel_iou": 0.6150121065375302
+      },
+      "memory_revisions_from_test": 0
+    },
+    {
+      "episode": "delayed_pentagon",
+      "level": "delayed",
+      "teacher_sha256": "48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775",
+      "source_observation_sha256": "26f8597bd637e211e1c6f48dab09dcc6062a8694ccd79bfe178b0aa41535de6b",
+      "score": {
+        "pixel_xor": 159,
+        "blank_pixel_xor": 412,
+        "recall_improves_over_blank": true,
+        "pixel_iou": 0.6150121065375302
+      },
+      "memory_revisions_from_test": 0
+    },
+    {
+      "episode": "transfer_house",
+      "level": "transfer",
+      "teacher_sha256": "830bc94212c4bb292757df5d652fe3c1fc608880cb28e09622252b5a5d873240",
+      "source_observation_sha256": null,
+      "score": {
+        "pixel_xor": 223,
+        "blank_pixel_xor": 545,
+        "recall_improves_over_blank": true,
+        "pixel_iou": 0.6161790017211703
+      },
+      "memory_revisions_from_test": 0
+    }
+  ],
+  "reference_visible_during_drawing": false,
+  "representation_kept_after_observation": true,
+  "detailed_contour_in_representation": true,
+  "delayed_trial_has_three_interference_exposures": true,
+  "physical_delay_seconds": null,
+  "source_kind": "SIMULATED",
+  "prior_v2_source": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\ecole-outils-20261008-234818",
+  "prior_v2_memory_sha256": "f44b352de4a6589feeab3b7b3eeaf310db91bac3ac6df86006e36547f0b70e5c",
+  "prior_v2_verified": true,
+  "student_precommit_sha256": "87c992962ae0f4571590325b5773374cd5f3289846bca874d316c17cfef4763f",
+  "ledger_sha256": "5cd18d7eb989b6acfaeda742bc7cba11ad4e168c8c6868e7ad588f41d846c20e",
+  "student_outputs": [
+    {
+      "ref": "student_images/immediate_pentagon_drawing.png",
+      "sha256": "ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+    },
+    {
+      "ref": "student_images/delayed_pentagon_drawing.png",
+      "sha256": "ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+    },
+    {
+      "ref": "student_images/transfer_house_drawing.png",
+      "sha256": "4670355dbb84eed8d97661b8f20a2edf085a7820741f621063ce8aec8b45f9ac"
+    }
+  ],
+  "code_sha256": "98363c3d9168bff265b6202831b1ec963885fcc062a038de5f5bb7478322735a",
+  "native_memory_write_allowed": false,
+  "auto_promotion_allowed": false,
+  "decision_authority": "KX108_ONLY"
+}

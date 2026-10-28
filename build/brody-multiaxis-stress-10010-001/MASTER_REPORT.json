@@ -1,0 +1,120 @@
+{
+  "schema": "BRODY_IMAGE_ADVERSARIAL_MULTIDIRECTION_10K_V0",
+  "cases": 10010,
+  "source_images": 63,
+  "receipt_tip": "933377fbc98ed2032b4b00fedd9ed10351bfb2ee2dba790d32d2ee7edd73ba3e",
+  "axes": {
+    "rotate": {
+      "cases": 715,
+      "holds": 38,
+      "mean_loss": 10.553704449847029,
+      "mean_blank": 20.456766963505245,
+      "beats_blank": 676
+    },
+    "mirror": {
+      "cases": 715,
+      "holds": 32,
+      "mean_loss": 10.132350852272728,
+      "mean_blank": 21.149141922530596,
+      "beats_blank": 683
+    },
+    "scale": {
+      "cases": 715,
+      "holds": 30,
+      "mean_loss": 11.788776360358392,
+      "mean_blank": 20.7261056326486,
+      "beats_blank": 685
+    },
+    "translate": {
+      "cases": 715,
+      "holds": 30,
+      "mean_loss": 8.960222150895978,
+      "mean_blank": 20.19643588833042,
+      "beats_blank": 685
+    },
+    "blur": {
+      "cases": 715,
+      "holds": 188,
+      "mean_loss": 17.349401428649475,
+      "mean_blank": 20.490426614401223,
+      "beats_blank": 505
+    },
+    "contrast": {
+      "cases": 715,
+      "holds": 158,
+      "mean_loss": 12.983500532670455,
+      "mean_blank": 20.18651524256993,
+      "beats_blank": 550
+    },
+    "noise": {
+      "cases": 715,
+      "holds": 26,
+      "mean_loss": 25.702296629152098,
+      "mean_blank": 35.473524571131996,
+      "beats_blank": 676
+    },
+    "occlude": {
+      "cases": 715,
+      "holds": 31,
+      "mean_loss": 8.016115329982517,
+      "mean_blank": 17.743412642045456,
+      "beats_blank": 683
+    },
+    "invert": {
+      "cases": 715,
+      "holds": 21,
+      "mean_loss": 211.65906939739946,
+      "mean_blank": 233.6464509123689,
+      "beats_blank": 694
+    },
+    "crop": {
+      "cases": 715,
+      "holds": 38,
+      "mean_loss": 20.549143288352273,
+      "mean_blank": 35.113877431162585,
+      "beats_blank": 677
+    },
+    "compound": {
+      "cases": 715,
+      "holds": 28,
+      "mean_loss": 23.998261991914337,
+      "mean_blank": 31.07007587139423,
+      "beats_blank": 674
+    },
+    "partial": {
+      "cases": 715,
+      "holds": 210,
+      "mean_loss": 15.390602463942308,
+      "mean_blank": 17.809911085008743,
+      "beats_blank": 478
+    },
+    "shifted_background": {
+      "cases": 715,
+      "holds": 411,
+      "mean_loss": 55.53013344077797,
+      "mean_blank": 55.63338921820367,
+      "beats_blank": 271
+    },
+    "unknown": {
+      "cases": 715,
+      "holds": 715,
+      "mean_loss": 135.44895104895105,
+      "mean_blank": 135.44895104895105,
+      "beats_blank": 0
+    }
+  },
+  "image_source": "ARCHIVED_INPUTS_NOT_AUTHENTICATED",
+  "adversarial_transformations_synthetic": true,
+  "visible_reference_supervised_trace": true,
+  "tool_fixed": "PEN",
+  "learning_updates": false,
+  "geometry_3d_proven": false,
+  "physical_prediction_proven": false,
+  "semantics_proven": false,
+  "blind_visual_generation_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "kernel_mutation": false,
+  "decision_authority": "KX108_ONLY",
+  "status": "MULTIDIRECTION_STRESS_TEST_NOT_WORLD_UNDERSTANDING"
+}

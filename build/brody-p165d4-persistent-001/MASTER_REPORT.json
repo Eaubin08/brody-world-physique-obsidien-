@@ -1,0 +1,57 @@
+{
+  "schema": "BRODY_P165D4_PERSISTENT_WORLD_STATE_LAB",
+  "cases": {
+    "occlusion": {
+      "mode": "PREDICTED",
+      "uncertainty": 2.9,
+      "contradictions": []
+    },
+    "consistent_reappearance": {
+      "mode": "OBSERVED",
+      "uncertainty": 0.5,
+      "contradictions": []
+    },
+    "unexpected_reappearance": {
+      "mode": "OBSERVED",
+      "uncertainty": 0.5,
+      "contradictions": [
+        "POSITION_PREDICTION_MISMATCH"
+      ]
+    },
+    "generated_not_evidence": {
+      "mode": "HOLD_SOURCE",
+      "uncertainty": 0.5,
+      "contradictions": [
+        "NON_SENSOR_EVIDENCE"
+      ]
+    },
+    "wrong_reference_frame": {
+      "mode": "HOLD_FRAME",
+      "uncertainty": 0.5,
+      "contradictions": [
+        "UNALIGNED_FRAME"
+      ]
+    },
+    "no_new_measurement": {
+      "mode": "PREDICTED",
+      "uncertainty": 23.6,
+      "contradictions": []
+    }
+  },
+  "cases_completed": 6,
+  "goal_views": [
+    "AVOID_COLLISION",
+    "REIDENTIFY",
+    "RENDER",
+    "EXPLAIN"
+  ],
+  "world_geometry": "SYNTHETIC_1D_KINEMATICS",
+  "real_multisensor_fusion_connected": false,
+  "pixels_to_world_graph_connected": false,
+  "metric_3d_connected": false,
+  "autonomous_learning_connected": false,
+  "true_identity_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

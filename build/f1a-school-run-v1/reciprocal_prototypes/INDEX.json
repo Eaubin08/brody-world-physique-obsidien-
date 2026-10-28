@@ -1,0 +1,14 @@
+{
+  "generated": {
+    "prototype_001.png": {
+      "sources": 3,
+      "teacher_identity": "blue"
+    },
+    "prototype_002.png": {
+      "sources": 3,
+      "teacher_identity": "red"
+    }
+  },
+  "generation_method": "RGB_4x4_TILE_PROTOTYPE",
+  "source_pixels_copied": false
+}

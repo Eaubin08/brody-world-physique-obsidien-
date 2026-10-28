@@ -1,0 +1,74 @@
+{
+  "flat": {
+    "observe": {
+      "mean": 0.0,
+      "n": 30
+    },
+    "tap": {
+      "mean": 0.0,
+      "n": 30
+    },
+    "tilt": {
+      "mean": 0.0,
+      "n": 30
+    },
+    "pulse": {
+      "mean": 0.0,
+      "n": 30
+    }
+  },
+  "slope": {
+    "observe": {
+      "mean": 0.0,
+      "n": 30
+    },
+    "tap": {
+      "mean": -1.0,
+      "n": 30
+    },
+    "tilt": {
+      "mean": -2.0,
+      "n": 30
+    },
+    "pulse": {
+      "mean": -0.5,
+      "n": 30
+    }
+  },
+  "spring": {
+    "observe": {
+      "mean": 0.0,
+      "n": 30
+    },
+    "tap": {
+      "mean": 1.0,
+      "n": 30
+    },
+    "tilt": {
+      "mean": 2.0,
+      "n": 30
+    },
+    "pulse": {
+      "mean": 0.5,
+      "n": 30
+    }
+  },
+  "near_slope": {
+    "observe": {
+      "mean": 0.0,
+      "n": 30
+    },
+    "tap": {
+      "mean": -1.0,
+      "n": 30
+    },
+    "tilt": {
+      "mean": -1.5,
+      "n": 30
+    },
+    "pulse": {
+      "mean": -0.5,
+      "n": 30
+    }
+  }
+}

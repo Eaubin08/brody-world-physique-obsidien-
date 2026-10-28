@@ -1,0 +1,24 @@
+{
+  "schema_version": "BRODY_VISION_DESCRIPTION_CANDIDATE_V0",
+  "observation_status": "MODEL_DESCRIPTION_UNVERIFIED",
+  "source_kind": "USER_IMAGE_FILE",
+  "source_sha256": "fcbc818555b15b3feddf521aef2fa3bead9d6324bd6f14fdc3c98673b5e3a031",
+  "model_input_sha256": "6c89223f6dc5366f7e691bfd12835d50dd67069ffdc5585feeb41404dd45e1f5",
+  "model_input_size": [
+    954,
+    960
+  ],
+  "provider": "JARVIS_LOCAL_QWEN_VL",
+  "provider_model": "Qwen2.5-VL-3B-Instruct",
+  "provider_endpoint": "http://127.0.0.1:8081/v1/chat/completions",
+  "prompt": "Décris les objets visibles, leur position et les incertitudes. Ne fabrique pas de contexte extérieur à la photo.",
+  "candidate_text": "Les deux hommes sont vêtus de costumes. L'homme à gauche porte un costume vert avec une chemise à imprimé floral. Il a les cheveux longs et les lunettes posées sur la tête. L'homme à droite porte un costume bleu à rayures verticales avec une chemise blanche. Il a les cheveux courts et une barbe légère. Leur visage est souriant. Leur position est frontale, face à la caméra. Leur main gauche est dans la poche de leur costume. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur visage est souriant. Leur",
+  "semantics_verified": false,
+  "real_image_observation": false,
+  "memory_write_allowed": false,
+  "auto_promotion_allowed": false,
+  "readonly": true,
+  "decision_authority": "KX108_ONLY",
+  "allowed_to_act": false,
+  "kernel_mutation": false
+}

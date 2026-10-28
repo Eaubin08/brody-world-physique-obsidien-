@@ -1,0 +1,9 @@
+{
+  "action": "reject_regressive_candidate",
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "fdc496145bfdfdc82c959c73b56a7270c6933a1ad203f9478cb054ddcc2f000e",
+  "native_memory_write": false,
+  "phase": "retain",
+  "previous_digest": "77e303b0c3492b9bb766e6805f7bd2b0f411df17da9ad36b7083bcbfb06102cc"
+}

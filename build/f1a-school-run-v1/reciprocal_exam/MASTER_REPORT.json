@@ -1,0 +1,12 @@
+{
+  "candidate_predictions": 2,
+  "canonical_promotion": false,
+  "cases": 4,
+  "decision_authority": "KX108_ONLY",
+  "doubts": 2,
+  "generations_from_stored_prototypes": true,
+  "native_memory_write": false,
+  "receipt_tip": "7c59f2f29b69b24bad5de8893e6e5dfb0d8ea9f759d2208fcbfc083325642326",
+  "schema": "BRODY_RECIPROCAL_GENERATION_EXAM_V1",
+  "semantic_generation_proven": false
+}

@@ -1,0 +1,16 @@
+{
+  "canonical_promotion": false,
+  "case": "train_0_contact1_marker1",
+  "decision_authority": "KX108_ONLY",
+  "digest": "ff24246ef7b76857457f17de7634c2c9b2af482a4fe164db4a203458874c46d0",
+  "forecast_sha256": "9369ab6687460df7f570a7e3f5fcba16822b7afff895c7aff5c49a1602ec73a6",
+  "history_id": 0,
+  "marker_observed": true,
+  "native_memory_write": false,
+  "predicted": {
+    "radius": 4.4065,
+    "t": 4.0,
+    "x": 20.0,
+    "y": 38.0
+  }
+}

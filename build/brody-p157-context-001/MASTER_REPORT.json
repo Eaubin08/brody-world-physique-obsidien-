@@ -1,0 +1,243 @@
+{
+  "schema": "BRODY_P157_CONTEXTUAL_COEXISTENCE",
+  "duration_seconds": 2.452,
+  "conditions_expected": 18,
+  "conditions_completed": 18,
+  "exams": 1800,
+  "status": "EXAM_CAP",
+  "frozen_context_rules": {
+    "flat": {
+      "acceleration": 0.0,
+      "observations": 120
+    },
+    "slope": {
+      "acceleration": -1.0,
+      "observations": 120
+    }
+  },
+  "by_condition": {
+    "clear_flat/single": {
+      "n": 100,
+      "SELECT": 100,
+      "MULTI": 0,
+      "HOLD": 0,
+      "selection_correct": 100,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 100,
+      "multi_contains_true_regime": 0,
+      "selection_accuracy": 1.0,
+      "selected_mae": 0.0
+    },
+    "clear_flat/possibilities": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 100,
+      "HOLD": 0,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 100,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "clear_flat/explain": {
+      "n": 100,
+      "SELECT": 100,
+      "MULTI": 0,
+      "HOLD": 0,
+      "selection_correct": 100,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 100,
+      "multi_contains_true_regime": 0,
+      "selection_accuracy": 1.0,
+      "selected_mae": 0.0
+    },
+    "clear_slope/single": {
+      "n": 100,
+      "SELECT": 100,
+      "MULTI": 0,
+      "HOLD": 0,
+      "selection_correct": 100,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 100,
+      "multi_contains_true_regime": 0,
+      "selection_accuracy": 1.0,
+      "selected_mae": 0.0
+    },
+    "clear_slope/possibilities": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 100,
+      "HOLD": 0,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 100,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "clear_slope/explain": {
+      "n": 100,
+      "SELECT": 100,
+      "MULTI": 0,
+      "HOLD": 0,
+      "selection_correct": 100,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 100,
+      "multi_contains_true_regime": 0,
+      "selection_accuracy": 1.0,
+      "selected_mae": 0.0
+    },
+    "cue_missing/single": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 0,
+      "HOLD": 100,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 0,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "cue_missing/possibilities": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 100,
+      "HOLD": 0,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 100,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "cue_missing/explain": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 100,
+      "HOLD": 0,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 100,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "cue_conflict/single": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 0,
+      "HOLD": 100,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 0,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "cue_conflict/possibilities": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 100,
+      "HOLD": 0,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 100,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "cue_conflict/explain": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 100,
+      "HOLD": 0,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 100,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "noisy_cue/single": {
+      "n": 100,
+      "SELECT": 95,
+      "MULTI": 0,
+      "HOLD": 5,
+      "selection_correct": 95,
+      "selected_mae_sum": 1.3937365937366266,
+      "selected_answered": 95,
+      "multi_contains_true_regime": 0,
+      "selection_accuracy": 1.0,
+      "selected_mae": 0.014670911513017122
+    },
+    "noisy_cue/possibilities": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 100,
+      "HOLD": 0,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 100,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "noisy_cue/explain": {
+      "n": 100,
+      "SELECT": 92,
+      "MULTI": 8,
+      "HOLD": 0,
+      "selection_correct": 92,
+      "selected_mae_sum": 2.174101921470374,
+      "selected_answered": 92,
+      "multi_contains_true_regime": 8,
+      "selection_accuracy": 1.0,
+      "selected_mae": 0.023631542624677978
+    },
+    "unknown_context/single": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 0,
+      "HOLD": 100,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 0,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "unknown_context/possibilities": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 100,
+      "HOLD": 0,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 100,
+      "selection_accuracy": null,
+      "selected_mae": null
+    },
+    "unknown_context/explain": {
+      "n": 100,
+      "SELECT": 0,
+      "MULTI": 100,
+      "HOLD": 0,
+      "selection_correct": 0,
+      "selected_mae_sum": 0.0,
+      "selected_answered": 0,
+      "multi_contains_true_regime": 100,
+      "selection_accuracy": null,
+      "selected_mae": null
+    }
+  },
+  "context_provided_to_inference_as_pixels_only": true,
+  "requests_provided_as_instructions": true,
+  "full_context_understanding_proven": false,
+  "physical_law_discovery_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

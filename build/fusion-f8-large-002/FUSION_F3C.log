@@ -1,0 +1,14 @@
+COMMAND: C:\Users\Aubin\AppData\Local\Python\pythoncore-3.14-64\python.exe -m unittest discover -s tests -p test_fusion_f3c_cumulative_skill_archive_v0.py -v
+STDOUT
+
+STDERR
+test_single_train_three_frozen_recalls (test_fusion_f3c_cumulative_skill_archive_v0.ContinuousMemoryTests.test_single_train_three_frozen_recalls) ... C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\p210a_visual_loop_contract_v0.py:28: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  return sum(any(channel for channel in pixel) for pixel in d.getdata())
+ok
+test_tamper_detection_and_immutable_output (test_fusion_f3c_cumulative_skill_archive_v0.ContinuousMemoryTests.test_tamper_detection_and_immutable_output) ... ok
+test_teacher_cannot_modify_frozen_memory (test_fusion_f3c_cumulative_skill_archive_v0.ContinuousMemoryTests.test_teacher_cannot_modify_frozen_memory) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.171s
+
+OK

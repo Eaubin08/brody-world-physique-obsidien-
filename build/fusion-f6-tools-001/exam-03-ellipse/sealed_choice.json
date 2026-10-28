@@ -1,0 +1,14 @@
+{
+  "shape": "ellipse",
+  "intent": "EXPRESSIVE",
+  "instrument": "NIB",
+  "source_memory_sha256": "04a5c3a21321f751cea52e7c8348b91ac15a47a49e1bcbbef5749335a56c2cb9",
+  "candidate_sha256": "45cf4cb530c27480065825312faf6a35763a5d6b2cbf6bb11196225cecc438a4",
+  "instrument_train_episode_ids": [
+    "training_07",
+    "training_08",
+    "training_09"
+  ],
+  "selection_rule": "MIN_PRIOR_MEAN_PIXEL_ERROR_BY_DECLARED_INTENT",
+  "target_read_before_seal": false
+}

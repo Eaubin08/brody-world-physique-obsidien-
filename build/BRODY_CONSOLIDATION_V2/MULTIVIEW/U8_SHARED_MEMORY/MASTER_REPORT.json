@@ -1,0 +1,39 @@
+{
+  "canonical_promotion": false,
+  "cases": [
+    {
+      "actual_x_eval_only": 42.0,
+      "candidate_created": true,
+      "case": "learned",
+      "context": "intervention",
+      "predicted_x": 42.0,
+      "visual_mae": 0.0
+    },
+    {
+      "actual_x_eval_only": 49.0,
+      "candidate_created": true,
+      "case": "retained",
+      "context": "clean",
+      "predicted_x": 49.0,
+      "visual_mae": 0.0
+    },
+    {
+      "actual_x_eval_only": 53.0,
+      "candidate_created": false,
+      "case": "unknown",
+      "context": null,
+      "predicted_x": null,
+      "visual_mae": null
+    }
+  ],
+  "decision_authority": "KX108_ONLY",
+  "exam_truth_absent_until_precommit": true,
+  "future_renderer_reads_stored_shape_and_motion": true,
+  "native_memory_write": false,
+  "new_semantic_object_discovery_proven": false,
+  "one_state_holds_visual_and_physical_skills": true,
+  "same_object_identity_across_camera_views_proven": false,
+  "schema": "BRODY_U8_SHARED_CANDIDATE_VISUAL_PHYSICS_V1",
+  "teacher_shape_is_synthetic": true,
+  "verdict": "U8_SHARED_SHAPE_MOTION_RENDERING_SYNTHETIC"
+}

@@ -1,0 +1,16 @@
+
+test_invalid_memory_is_detected_even_if_report_stays_same (test_instrument_school_v2.EndToEndCourse.test_invalid_memory_is_detected_even_if_report_stays_same) ... ok
+test_memory_and_generated_image_tamper_rejected (test_instrument_school_v2.EndToEndCourse.test_memory_and_generated_image_tamper_rejected) ... ok
+test_no_overwriting_old_experiences (test_instrument_school_v2.EndToEndCourse.test_no_overwriting_old_experiences) ... ok
+test_precommit_has_no_future_target_and_is_frozen (test_instrument_school_v2.EndToEndCourse.test_precommit_has_no_future_target_and_is_frozen) ... ok
+test_test_targets_after_precommit_retain_sha (test_instrument_school_v2.EndToEndCourse.test_test_targets_after_precommit_retain_sha) ... ok
+test_zero_one_many_experiences_and_heldout_abstention (test_instrument_school_v2.EndToEndCourse.test_zero_one_many_experiences_and_heldout_abstention) ... ok
+test_selector_learns_from_empirical_loss_not_coded_style_mapping (test_instrument_school_v2.PureInstrumentContracts.test_selector_learns_from_empirical_loss_not_coded_style_mapping) ... ok
+test_tool_renders_are_visibly_different_and_directional (test_instrument_school_v2.PureInstrumentContracts.test_tool_renders_are_visibly_different_and_directional) ... ok
+test_unfamiliar_goal_refuses_to_guess (test_instrument_school_v2.PureInstrumentContracts.test_unfamiliar_goal_refuses_to_guess) ... ok
+test_untrusted_tool_and_oversized_motor_action_fail_closed (test_instrument_school_v2.PureInstrumentContracts.test_untrusted_tool_and_oversized_motor_action_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.438s
+
+OK

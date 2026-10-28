@@ -1,0 +1,25 @@
+{
+  "canonical_promotion": false,
+  "context": "vertical|speeding_up",
+  "decision_authority": "KX108_ONLY",
+  "dependencies": [
+    "visual_localization",
+    "temporal_order",
+    "acceleration_hypothesis"
+  ],
+  "digest": "1ff732fb77dd564038d8d32b4beca0b5766e8d76e7d1d9ab04141d0e57ad2b01",
+  "model": "ACCELERATION",
+  "native_memory_write": false,
+  "preconditions": [
+    "4 timestamped segmented frames",
+    "matching context"
+  ],
+  "residuals": [
+    {
+      "dx": 0.0,
+      "dy": 1.0,
+      "feedback_sha256": "1afc6940e2d78cdce817c7752d0a1b8c6808600c4bfa8c01ff24445783d7c233"
+    }
+  ],
+  "schema": "BRODY_CANDIDATE_RESIDUAL_SKILL_V1"
+}

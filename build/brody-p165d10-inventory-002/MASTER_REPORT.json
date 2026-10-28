@@ -1,0 +1,5479 @@
+{
+  "schema": "BRODY_P165D10_REPOSITORY_AST_TEST_INVENTORY",
+  "files": [
+    {
+      "file": "tests/test_auto_ball_demo_v0.py",
+      "sha256": "872ce8831bd0c6bd6dbf11c644c891d64bac21baf2d45767de8c474581e693fe",
+      "declared_tests": 6,
+      "tests": [
+        {
+          "name": "test_color_object_detected_as_pixel_location_only",
+          "line": 28
+        },
+        {
+          "name": "test_target_absent_fails_closed",
+          "line": 36
+        },
+        {
+          "name": "test_unbounded_or_too_elongated_colored_area_rejected",
+          "line": 40
+        },
+        {
+          "name": "test_precommit_before_reading_fourth_frame",
+          "line": 46
+        },
+        {
+          "name": "test_reject_unapproved_sources_and_frame_selection",
+          "line": 82
+        },
+        {
+          "name": "test_existing_results_cannot_be_silently_overwritten",
+          "line": 97
+        }
+      ],
+      "classes": [
+        "BallDemonstrationTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.auto_ball_demo_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_candidate_skill_retrieval_v1.py",
+      "sha256": "cc4d055100ff40a7598bb4fdbde6c6c8a810c1761db637e6aa9bb51ab70db2c5",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_visual_question_retrieves_whitelisted_code_and_skill_ref_only",
+          "line": 20
+        },
+        {
+          "name": "test_blank_reference_returns_hold_with_no_auto_fabricated_skill",
+          "line": 37
+        },
+        {
+          "name": "test_tampered_candidate_memory_refuses_procedure_activation",
+          "line": 44
+        },
+        {
+          "name": "test_reject_broad_parameters_and_wrong_image_dimensions",
+          "line": 52
+        }
+      ],
+      "classes": [
+        "ProcedureRetrievalTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.candidate_skill_retrieval_v1",
+        "brody_world_physique.drawing_school_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_color_agnostic_perception_p165d3.py",
+      "sha256": "b38c3d024af9d4a8e01a74fc1e9d943211fdd1751bb7e105ebe8c36b9192e0fa",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_both_red_and_blue",
+          "line": 7
+        },
+        {
+          "name": "test_two_objects_not_unjustifiably_fused",
+          "line": 13
+        },
+        {
+          "name": "test_evaluator_without_oracle_input",
+          "line": 18
+        },
+        {
+          "name": "test_limited_report_no_overwrite",
+          "line": 26
+        }
+      ],
+      "classes": [
+        "P165D3Tests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.color_agnostic_perception_p165d3",
+        "brody_world_physique.hard_scene_angles_p165d2",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_compare_experience_stages_v0.py",
+      "sha256": "efcc12c49b66d9046d9dbfb57978404f4fb4f41c4e0241bd0babffe3f7c87555",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_coverage_and_paired_errors_are_separate",
+          "line": 28
+        },
+        {
+          "name": "test_reject_mismatched_test_sources",
+          "line": 43
+        },
+        {
+          "name": "test_reject_prior_predictions_in_cold_start",
+          "line": 51
+        }
+      ],
+      "classes": [
+        "StageComparisonTests"
+      ],
+      "imports": [
+        "examples.compare_experience_stages_v0",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_contextual_scene_graph_p165c.py",
+      "sha256": "aad5d585ef699b8dbca1e971305c8e026f7b3a0b2f44c35c88e2fbcdafd577bd",
+      "declared_tests": 7,
+      "tests": [
+        {
+          "name": "test_order_contradiction",
+          "line": 5
+        },
+        {
+          "name": "test_unknown_depth_is_not_metric_depth",
+          "line": 8
+        },
+        {
+          "name": "test_matching_signatures_do_not_prove_identity",
+          "line": 13
+        },
+        {
+          "name": "test_source_frame_mismatch_holds",
+          "line": 17
+        },
+        {
+          "name": "test_contradictory_modalities_yield_multi",
+          "line": 20
+        },
+        {
+          "name": "test_no_fixed_layer_count",
+          "line": 23
+        },
+        {
+          "name": "test_report_and_preservation",
+          "line": 26
+        }
+      ],
+      "classes": [
+        "SceneTests"
+      ],
+      "imports": [
+        "brody_world_physique.contextual_scene_graph_p165c",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_contracts_v0.py",
+      "sha256": "0eb3a46ff011463320f946758c928b6e004c303b515b5da2fee589d1f4f2f709",
+      "declared_tests": 21,
+      "tests": [
+        {
+          "name": "test_observed_transformation_is_descriptive_only",
+          "line": 33
+        },
+        {
+          "name": "test_proposed_transformation_does_not_become_world_action",
+          "line": 51
+        },
+        {
+          "name": "test_execution_authority_is_rejected",
+          "line": 62
+        },
+        {
+          "name": "test_requires_upstream_time_shape",
+          "line": 71
+        },
+        {
+          "name": "test_prediction_wraps_upstream_world_state",
+          "line": 81
+        },
+        {
+          "name": "test_observed_is_not_a_projection_kind",
+          "line": 97
+        },
+        {
+          "name": "test_requires_upstream_world_state_shape",
+          "line": 108
+        },
+        {
+          "name": "test_delta_records_discrepancy_without_causal_proof",
+          "line": 121
+        },
+        {
+          "name": "test_delta_requires_comparison_anchor",
+          "line": 135
+        },
+        {
+          "name": "test_delta_cannot_claim_causal_proof",
+          "line": 142
+        },
+        {
+          "name": "test_validated_experience_is_still_not_canonical_memory",
+          "line": 153
+        },
+        {
+          "name": "test_repeat_count_must_be_positive",
+          "line": 173
+        },
+        {
+          "name": "test_memory_write_is_rejected",
+          "line": 183
+        },
+        {
+          "name": "test_auto_promotion_is_rejected",
+          "line": 193
+        },
+        {
+          "name": "test_wrong_decision_authority_is_rejected",
+          "line": 214
+        },
+        {
+          "name": "test_allowed_to_decide_is_rejected",
+          "line": 220
+        },
+        {
+          "name": "test_allowed_to_act_is_rejected",
+          "line": 226
+        },
+        {
+          "name": "test_kernel_mutation_is_rejected",
+          "line": 232
+        },
+        {
+          "name": "test_mutable_contract_is_rejected",
+          "line": 238
+        },
+        {
+          "name": "test_binding_links_existing_transition_without_mutating_upstream",
+          "line": 246
+        },
+        {
+          "name": "test_binding_cannot_gain_action_authority",
+          "line": 261
+        }
+      ],
+      "classes": [
+        "TimeEnvelopeStub",
+        "SpatialFrameStub",
+        "WorldStateStub",
+        "WorldTransformationTests",
+        "WorldStateProjectionTests",
+        "WorldStateDeltaTests",
+        "WorldExperienceCandidateTests",
+        "SovereigntyNegativeTests",
+        "TransitionTransformationBindingTests"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "dataclasses",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_documentation.py",
+      "sha256": "82b3114737f003b629d2be9b8b6a2e0f54960126881e0dc77fcb9acd9a70caeb",
+      "declared_tests": 7,
+      "tests": [
+        {
+          "name": "test_image_master_plan_and_branch_map_exist",
+          "line": 15
+        },
+        {
+          "name": "test_readme_prioritizes_image_and_links_both_documents",
+          "line": 20
+        },
+        {
+          "name": "test_learning_traceability_preserves_source_boundaries",
+          "line": 28
+        },
+        {
+          "name": "test_brody_image_fidelity_covers_original_visual_methods",
+          "line": 36
+        },
+        {
+          "name": "test_atlas_keeps_numbered_concepts",
+          "line": 46
+        },
+        {
+          "name": "test_source_matrix_tracks_all_concepts",
+          "line": 51
+        },
+        {
+          "name": "test_image_documents_local_links_resolve",
+          "line": 56
+        }
+      ],
+      "classes": [
+        "BrodyImageDocumentationTests"
+      ],
+      "imports": [
+        "pathlib",
+        "re",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_drawing_memory_school_v3.py",
+      "sha256": "22cc656aa386bd46c53f8498aa4fd8631fd51046f17333f397b328ba7ea85c73",
+      "declared_tests": 10,
+      "tests": [
+        {
+          "name": "test_teacher_representation_has_no_png_bytes_and_is_hash_bound",
+          "line": 22
+        },
+        {
+          "name": "test_render_after_observation_uses_snapshot_not_the_hidden_source",
+          "line": 36
+        },
+        {
+          "name": "test_untrusted_gesture_and_unknown_tool_are_rejected",
+          "line": 48
+        },
+        {
+          "name": "test_immediate_delayed_and_unobserved_transfer_all_verified",
+          "line": 75
+        },
+        {
+          "name": "test_delayed_reuses_same_persisted_representation_with_interference",
+          "line": 97
+        },
+        {
+          "name": "test_no_holdout_composition_reference_observation_prior",
+          "line": 108
+        },
+        {
+          "name": "test_changes_to_student_image_refuse_replay",
+          "line": 119
+        },
+        {
+          "name": "test_changes_to_recollection_or_interference_refuse_replay",
+          "line": 129
+        },
+        {
+          "name": "test_output_never_overwrites_existing_results",
+          "line": 151
+        },
+        {
+          "name": "test_gesture_composition_requires_known_primitive_and_bounded_geometry",
+          "line": 155
+        }
+      ],
+      "classes": [
+        "HiddenMemoryContractTests",
+        "EndToEndHiddenMemoryTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_memory_school_v3",
+        "brody_world_physique.drawing_school_v1",
+        "brody_world_physique.instrument_school_v2",
+        "hashlib",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_drawing_school_v0.py",
+      "sha256": "87ef8d6495811f57e2bf597cd50f6874473056b2ff9fb181f9b62b53d38f955f",
+      "declared_tests": 9,
+      "tests": [
+        {
+          "name": "test_no_prior_experience_has_no_seed",
+          "line": 17
+        },
+        {
+          "name": "test_student_draws_after_teacher_pixel_feedback",
+          "line": 21
+        },
+        {
+          "name": "test_candidate_memory_seed_replays_on_translated_reference",
+          "line": 30
+        },
+        {
+          "name": "test_harmful_memory_is_rejected_and_failure_remains_visible",
+          "line": 47
+        },
+        {
+          "name": "test_unrelated_mistaken_skill_does_not_force_bad_drawing",
+          "line": 61
+        },
+        {
+          "name": "test_overprinting_must_not_worsen_target",
+          "line": 79
+        },
+        {
+          "name": "test_candidate_ledger_detects_modified_past_and_refuses_authority",
+          "line": 86
+        },
+        {
+          "name": "test_fails_closed_on_wrong_size",
+          "line": 104
+        },
+        {
+          "name": "test_real_catalog_is_generic_pen_strokes_not_named_shapes",
+          "line": 108
+        }
+      ],
+      "classes": [
+        "DrawingSchoolContractsTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_drawing_school_v1.py",
+      "sha256": "d34fd158981d106af5fc7a4e1c9838771ba9760dc90c0c1da3ab08fbd7b2b90c",
+      "declared_tests": 6,
+      "tests": [
+        {
+          "name": "test_skeleton_and_trace_nonempty_lines_and_circles",
+          "line": 24
+        },
+        {
+          "name": "test_really_erase_worse_wrong_stroke",
+          "line": 34
+        },
+        {
+          "name": "test_replacement_or_erasure_repairs_a_partly_right_attempt",
+          "line": 44
+        },
+        {
+          "name": "test_triangle_vectorization_improves_baseline",
+          "line": 55
+        },
+        {
+          "name": "test_circle_and_curve_representable_without_ellipse_tool_for_student",
+          "line": 61
+        },
+        {
+          "name": "test_run_cold_memory_and_holdout_sources",
+          "line": 72
+        }
+      ],
+      "classes": [
+        "DrawingV1Tests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.drawing_school_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_experience_memory_v1.py",
+      "sha256": "11e4afc48e386404d30d809dc41d352e5005bc237f948f1fb19e2685978c3375",
+      "declared_tests": 9,
+      "tests": [
+        {
+          "name": "test_full_procedural_memory_trace_can_be_replayed_offline",
+          "line": 40
+        },
+        {
+          "name": "test_path_receipts_are_portable_and_replayable_on_windows",
+          "line": 64
+        },
+        {
+          "name": "test_harmful_memory_is_preserved_as_rejected_path",
+          "line": 86
+        },
+        {
+          "name": "test_changed_teacher_input_is_detected",
+          "line": 97
+        },
+        {
+          "name": "test_changed_generated_artifact_is_detected",
+          "line": 109
+        },
+        {
+          "name": "test_modified_procedure_ref_fails_even_with_updated_receipt_sha",
+          "line": 116
+        },
+        {
+          "name": "test_altered_executed_edit_fails_even_with_updated_receipt_sha",
+          "line": 126
+        },
+        {
+          "name": "test_unreviewed_promotion_or_action_is_not_accepted",
+          "line": 133
+        },
+        {
+          "name": "test_no_code_from_memory_and_replay_checks_bounds",
+          "line": 145
+        }
+      ],
+      "classes": [
+        "ExperienceContractTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v1",
+        "brody_world_physique.experience_memory_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_experiential_video_v0.py",
+      "sha256": "6100ecf2ad0dcb346b29cb395e404e65f7f6e1a127cb08f74be94a842c0884ac",
+      "declared_tests": 7,
+      "tests": [
+        {
+          "name": "test_empty_memory_cannot_claim_a_prediction",
+          "line": 32
+        },
+        {
+          "name": "test_train_on_own_observed_transitions_then_propose_for_new_source",
+          "line": 38
+        },
+        {
+          "name": "test_new_out_of_distribution_route_must_hold",
+          "line": 50
+        },
+        {
+          "name": "test_invalid_samples_do_not_become_learning",
+          "line": 57
+        },
+        {
+          "name": "test_source_disjointness_and_simulated_manifest_mandatory",
+          "line": 69
+        },
+        {
+          "name": "test_holdout_prediction_precommitted_and_test_never_enters_memory",
+          "line": 92
+        },
+        {
+          "name": "test_cannot_reuse_output_over_previous_experiment",
+          "line": 146
+        }
+      ],
+      "classes": [
+        "ExperientialLearningTests"
+      ],
+      "imports": [
+        "brody_world_physique.experiential_video_v0",
+        "brody_world_physique.preverbal_prediction_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f10_contextual_1000_v0.py",
+      "sha256": "0e3de6b0a78b5c380911ad07ff94886ab92f65c55e7ce061899f652a444cd850",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_contextual_retention_and_unknown_hold",
+          "line": 6
+        },
+        {
+          "name": "test_reproducible_and_tamper_detected",
+          "line": 21
+        }
+      ],
+      "classes": [
+        "ContextualIntensiveTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f10_contextual_1000_v0",
+        "brody_world_physique.fusion_f9_intensive_education_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f11_visual_context_1000_v0.py",
+      "sha256": "76c0047d36ff3e01abded2610b3896b2fd506bc87b54f949265ac9b78a0da544",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_actual_pixel_cues_and_ambiguous_abstention",
+          "line": 8
+        },
+        {
+          "name": "test_heldout_snapshots_and_receipts",
+          "line": 17
+        },
+        {
+          "name": "test_untrained_or_conflicting_evidence_causes_hold",
+          "line": 29
+        }
+      ],
+      "classes": [
+        "VisualContextTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f11_visual_context_1000_v0",
+        "brody_world_physique.fusion_f9_intensive_education_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f12_adversarial_spoof_1000_v0.py",
+      "sha256": "89fb4efcd6c4ebe09782ed0394a05635d5b62ce41cf143ea430cb5187f6fe918",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_baseline_and_cue_inversion",
+          "line": 7
+        },
+        {
+          "name": "test_campaign_receipts_and_evidence",
+          "line": 15
+        },
+        {
+          "name": "test_tamper_rejected",
+          "line": 26
+        }
+      ],
+      "classes": [
+        "SpoofFuzzingTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f12_adversarial_spoof_1000_v0",
+        "brody_world_physique.fusion_f9_intensive_education_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f13_provenance_guard_audit_v0.py",
+      "sha256": "44a71eda61869b04b96be9de7df069f8885bed5365713a67962c607e52361e1e",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_single_source_cannot_authorize",
+          "line": 6
+        },
+        {
+          "name": "test_campaign_replays_and_chained_receipts",
+          "line": 12
+        },
+        {
+          "name": "test_tamper_detection",
+          "line": 22
+        }
+      ],
+      "classes": [
+        "ProvenanceGateTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f13_provenance_guard_audit_v0",
+        "brody_world_physique.fusion_f9_intensive_education_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f14_multisource_fuzz_1000_v0.py",
+      "sha256": "889884b6034726f762dff3b996e24c4ab3a46c6a5b9f846dc3153116147f938c",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_independence_and_contradiction",
+          "line": 8
+        },
+        {
+          "name": "test_attack_matrix_exposes_correlated_spoofing",
+          "line": 16
+        },
+        {
+          "name": "test_report_and_receipt_tamper",
+          "line": 25
+        }
+      ],
+      "classes": [
+        "MultiSourceFuzzTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f14_multisource_fuzz_1000_v0",
+        "brody_world_physique.fusion_f9_intensive_education_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f15_periphery_contract_bridge_v0.py",
+      "sha256": "6f6e4233ab8a78de42ffe2b4cccd04482cfaaae2326e4402e7fbec6a8d978fdd",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_spoof_never_emits_action",
+          "line": 4
+        },
+        {
+          "name": "test_missing_independence_is_explicit",
+          "line": 14
+        },
+        {
+          "name": "test_contradiction_is_transferred",
+          "line": 20
+        }
+      ],
+      "classes": [
+        "F15ContractTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f15_periphery_contract_bridge_v0",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f15b_real_guard_sigma_diagnostic_v0.py",
+      "sha256": "e70a075c43247f0cfa8f52ada74ed30660954a26dae39cee60af4496fb84fd04",
+      "declared_tests": 1,
+      "tests": [
+        {
+          "name": "test_spoofed_case_cannot_request_act",
+          "line": 4
+        }
+      ],
+      "classes": [
+        "F15BInvariantTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f15_periphery_contract_bridge_v0",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f16_canonical_route_inventory_v0.py",
+      "sha256": "cc6d0a68ef1449d5b52362be9932206f79b47132902f875021da739b2b81784c",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_missing_repo_refused",
+          "line": 5
+        },
+        {
+          "name": "test_contract_mismatch_exposed_not_patched",
+          "line": 8
+        }
+      ],
+      "classes": [
+        "CanonicalRouteInventoryTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f16_canonical_route_inventory_v0",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f17_agent_context_dryrun_v0.py",
+      "sha256": "250ee75d32bb3291a827de9005a84b14d3c2e8de189389408e445fd9eb085358",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_missing_input_fails_closed",
+          "line": 5
+        },
+        {
+          "name": "test_no_fake_runtime_contract",
+          "line": 8
+        }
+      ],
+      "classes": [
+        "F17Tests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f17_agent_context_dryrun_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f2_historical_scorecard_v1.py",
+      "sha256": "35f77539c5832a6e7515a7fdff73fb4059258209c092f8592b6a94fed77cb9f6",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_archives_and_missing_are_explicit",
+          "line": 6
+        },
+        {
+          "name": "test_existing_output_rejected",
+          "line": 15
+        }
+      ],
+      "classes": [
+        "ScorecardTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f2_historical_scorecard_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f2_school_regression_v0.py",
+      "sha256": "88725718939f8a00e59984fcb5738647ca53389f34f2c5796c646da98d0f8d49",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_suite_logs_and_results",
+          "line": 11
+        },
+        {
+          "name": "test_failure_not_hidden",
+          "line": 18
+        },
+        {
+          "name": "test_existing_output_rejected",
+          "line": 25
+        }
+      ],
+      "classes": [
+        "RunnerTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f2_school_regression_v0",
+        "pathlib",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f3_integrated_visual_lesson_v0.py",
+      "sha256": "ab9bfdc3c63e765883231b5f80e7fefde86c1018d9040fd10cb38b6a4c67b3a6",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_demo_seals_candidate_and_produces_visible_metrics",
+          "line": 6
+        },
+        {
+          "name": "test_demo_refuses_overwrite",
+          "line": 16
+        },
+        {
+          "name": "test_without_teacher_preserves_unknown",
+          "line": 20
+        }
+      ],
+      "classes": [
+        "IntegratedLessonTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.fusion_f3_integrated_visual_lesson_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f3b_multilesson_school_v0.py",
+      "sha256": "c6787abb1f4c47d25b3680156deb398a65178288e37aef0237122bb96a0eda8e",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_all_layout_boxes_satisfy_motor_contract",
+          "line": 7
+        },
+        {
+          "name": "test_five_lessons_real_outputs_and_scores",
+          "line": 12
+        },
+        {
+          "name": "test_refuse_overwrite_and_separate_training",
+          "line": 27
+        }
+      ],
+      "classes": [
+        "MultiLessonTests"
+      ],
+      "imports": [
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.fusion_f3b_multilesson_school_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f3c_cumulative_skill_archive_v0.py",
+      "sha256": "2dc88d21c36d9625275d43409ab141522b1804f9f43b8f9e000aac2ba76cb1a6",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_single_train_three_frozen_recalls",
+          "line": 7
+        },
+        {
+          "name": "test_tamper_detection_and_immutable_output",
+          "line": 18
+        },
+        {
+          "name": "test_teacher_cannot_modify_frozen_memory",
+          "line": 24
+        }
+      ],
+      "classes": [
+        "ContinuousMemoryTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.fusion_f3c_cumulative_skill_archive_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f4_education_journal_v0.py",
+      "sha256": "d34fbd773af90435adedbfa14ed9a6dbd1fed30b8d99b5dc07a6daf5f2000e1b",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_retains_training_and_test_as_separate_evidence",
+          "line": 20
+        },
+        {
+          "name": "test_tamper_fails_closed",
+          "line": 42
+        },
+        {
+          "name": "test_no_unrecorded_skill_examination",
+          "line": 55
+        }
+      ],
+      "classes": [
+        "EducationJournalTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.fusion_f4_education_journal_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f5_multiskill_course_v0.py",
+      "sha256": "288dddc3a1d3dee83cf2be57f245ed48e461c47a1d6d8a5ba8300dfb74a8edbe",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_three_skills_and_readonly_exams",
+          "line": 6
+        },
+        {
+          "name": "test_unknown_goals_hold_and_prior_snapshot_cannot_leak_future_skills",
+          "line": 20
+        }
+      ],
+      "classes": [
+        "MultiSkillCourseTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f4_education_journal_v0",
+        "brody_world_physique.fusion_f5_multiskill_course_v0",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f6_instrument_education_v0.py",
+      "sha256": "543ae5d5250aa42eda7859dceb0069287e7253396c5391a5518bdd129c42dc44",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_three_instruments_and_heldout_hold",
+          "line": 14
+        },
+        {
+          "name": "test_sealed_candidate_and_persistent_visual_memory",
+          "line": 21
+        },
+        {
+          "name": "test_unchanged_output_refusal",
+          "line": 29
+        }
+      ],
+      "classes": [
+        "InstrumentIntegrationTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f4_education_journal_v0",
+        "brody_world_physique.fusion_f6_instrument_education_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f7_train_only_correction_v0.py",
+      "sha256": "06eb795746389677b83d798699c0be9839da0ef24814ea7f594236fd87299abe",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_train_correction_changes_frozen_policy_on_unseen_geometry",
+          "line": 6
+        },
+        {
+          "name": "test_no_overwrite_and_history_tamper_detection",
+          "line": 20
+        }
+      ],
+      "classes": [
+        "CorrectionTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f4_education_journal_v0",
+        "brody_world_physique.fusion_f7_train_only_correction_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f8_adversarial_v0.py",
+      "sha256": "ac1bcab4787db6ce237187c735c96746b57ec0a7190662fd154560950a14794e",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_conflicting_training_overrides_preconception",
+          "line": 11
+        },
+        {
+          "name": "test_malformed_training_fails_closed",
+          "line": 19
+        },
+        {
+          "name": "test_prior_snapshot_and_unknown_remain_held",
+          "line": 25
+        },
+        {
+          "name": "test_trained_correction_not_universal",
+          "line": 33
+        }
+      ],
+      "classes": [
+        "AdversarialEducationTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f3c_cumulative_skill_archive_v0",
+        "brody_world_physique.fusion_f4_education_journal_v0",
+        "brody_world_physique.fusion_f5_multiskill_course_v0",
+        "brody_world_physique.fusion_f7_train_only_correction_v0",
+        "brody_world_physique.instrument_school_v2",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_f9_intensive_education_v0.py",
+      "sha256": "5b155d83f59009de17dcc6aaf7b9704bbbfc66699c113d13d1a56e6e704d6b97",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_checkpoint_memory_and_sealed_heldout",
+          "line": 5
+        },
+        {
+          "name": "test_repeatability_and_no_overwrite",
+          "line": 20
+        },
+        {
+          "name": "test_receipt_tamper_and_invalid_parameter_fail_closed",
+          "line": 27
+        }
+      ],
+      "classes": [
+        "IntensiveEducationTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f9_intensive_education_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_fusion_historical_evidence_v0.py",
+      "sha256": "ef04e8bf53808aec2ed17e0800f3f78aaafb7d8a2afd7d949812afc9f3b5c2cb",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_explicit_teacher_scores_and_missing_teacher_unknown",
+          "line": 19
+        },
+        {
+          "name": "test_existing_output_and_missing_file_fail_closed",
+          "line": 31
+        },
+        {
+          "name": "test_duplicate_episode_rejected",
+          "line": 40
+        }
+      ],
+      "classes": [
+        "HistoricalFusionTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.fusion_historical_evidence_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_goal_multi_continuity_p165d7.py",
+      "sha256": "37e1313e05ec7c622be84ed3e44ed7104639463fade8177b418337f67db23d5c",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_goal_changes_relevance_not_evidence",
+          "line": 5
+        },
+        {
+          "name": "test_symbol_not_promoted_to_physical_observation",
+          "line": 12
+        },
+        {
+          "name": "test_contradictions_do_not_disappear",
+          "line": 17
+        },
+        {
+          "name": "test_invalid_and_duplicate_evidence_rejected",
+          "line": 23
+        },
+        {
+          "name": "test_report_preserve",
+          "line": 27
+        }
+      ],
+      "classes": [
+        "P165D7Tests"
+      ],
+      "imports": [
+        "brody_world_physique.goal_multi_continuity_p165d7",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_goal_track_bridge_p165d8.py",
+      "sha256": "1b1297f4182cc69cefb6337955350de54abc8bf598cca2f642130d5ac15be5cc",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_different_goals_do_not_mutate_evidence",
+          "line": 6
+        },
+        {
+          "name": "test_symbol_without_user_interpretation_does_not_fabricate",
+          "line": 16
+        },
+        {
+          "name": "test_repeatability",
+          "line": 22
+        },
+        {
+          "name": "test_evidence_no_overwrite",
+          "line": 32
+        }
+      ],
+      "classes": [
+        "D8Tests"
+      ],
+      "imports": [
+        "brody_world_physique.goal_track_bridge_p165d8",
+        "brody_world_physique.hard_scene_angles_p165d2",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_hard_scene_angles_p165d2.py",
+      "sha256": "7d2c831b14e24d69db9379e6fe0ee5a9d960dfaf38fa37205133900031a08a42",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_full_factorial_unique",
+          "line": 8
+        },
+        {
+          "name": "test_pixel_only_evaluator_has_no_oracle_interface",
+          "line": 12
+        },
+        {
+          "name": "test_forced_ambiguity_must_not_select",
+          "line": 21
+        },
+        {
+          "name": "test_small_matrix_then_no_overwrite",
+          "line": 27
+        }
+      ],
+      "classes": [
+        "HardSceneTests"
+      ],
+      "imports": [
+        "brody_world_physique.hard_scene_angles_p165d2",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_active_context_probe_p158.py",
+      "sha256": "36c47d56ca01d6139082a83571bb75acf208e8f03ebd64720e01c86dd30346d5",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_early_histories_are_indistinguishable",
+          "line": 5
+        },
+        {
+          "name": "test_probe_distinguishes_rules",
+          "line": 11
+        },
+        {
+          "name": "test_hold_or_multi_when_not_identifiable",
+          "line": 22
+        },
+        {
+          "name": "test_full_campaign_sealed",
+          "line": 29
+        }
+      ],
+      "classes": [
+        "P158Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_active_context_probe_p158",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_adaptive_visual_lab_p138.py",
+      "sha256": "bb643775ee0317bf0beb5f57cf4cce95f53d0c0ed6a8799af7b785881743cfef",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_new_scenes_and_all_skill_families",
+          "line": 5
+        },
+        {
+          "name": "test_preserves_evidence_and_bounds",
+          "line": 15
+        }
+      ],
+      "classes": [
+        "AdaptiveLabTests"
+      ],
+      "imports": [
+        "brody_world_physique.image_adaptive_visual_lab_p138",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_background_adaptation_p146.py",
+      "sha256": "153799d7dc877c1ed651230a988aa3cfb1a34294b1bd718ffc982cc2b9a482c8",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_foreground_descriptor_dark_and_light",
+          "line": 6
+        },
+        {
+          "name": "test_sealed_exams_with_baselines_and_retention",
+          "line": 14
+        }
+      ],
+      "classes": [
+        "BackgroundAdaptationTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_background_adaptation_p146",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_blind_identity_transfer_v1.py",
+      "sha256": "fc74cb6a8e9fa01cea98e5ceeced520dcca40ef4732851bbec1e1a637c5200f0",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_label_blind_exam_and_doubt",
+          "line": 11
+        },
+        {
+          "name": "test_identical_training_and_exam_rejected",
+          "line": 22
+        }
+      ],
+      "classes": [
+        "BlindIdentityTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_blind_identity_transfer_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_blind_router_p144.py",
+      "sha256": "1a94f7fe8314741f2fa39bb9120fc33ff1388091be60796899a6f9ef49c679cb",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_image_context_not_transform_name",
+          "line": 6
+        },
+        {
+          "name": "test_validation_exam_separation",
+          "line": 10
+        }
+      ],
+      "classes": [
+        "BlindRouterTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_blind_router_p144",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_blind_symbolic_regeneration_p135.py",
+      "sha256": "faa9599b12d4fef32227df6d79b4b5efd07a6b2d138d8c56b27dbccaf5aff33e",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_blind_regeneration_known_unknown_and_composition",
+          "line": 18
+        },
+        {
+          "name": "test_group_leak_rejected_before_output",
+          "line": 27
+        }
+      ],
+      "classes": [
+        "BlindSymbolicTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_blind_symbolic_regeneration_p135",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_camera_occlusion_gate_p163.py",
+      "sha256": "787f603367ab56e15096e15f64b8d7cc67642c1b014eec70586bcce97dcb31d4",
+      "declared_tests": 6,
+      "tests": [
+        {
+          "name": "test_camera_from_pixels_not_simulator_truth",
+          "line": 8
+        },
+        {
+          "name": "test_negative_and_positive_camera_clipping_regression",
+          "line": 16
+        },
+        {
+          "name": "test_camera_unobservable_must_hold",
+          "line": 26
+        },
+        {
+          "name": "test_event_hidden_must_hold",
+          "line": 28
+        },
+        {
+          "name": "test_known_stationary_with_cam_corrected",
+          "line": 32
+        },
+        {
+          "name": "test_complete_matrix_and_no_overwrite",
+          "line": 37
+        }
+      ],
+      "classes": [
+        "P163Tests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_camera_occlusion_gate_p163",
+        "brody_world_physique.image_hard_visual_ood_p161",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_context_coexistence_p157.py",
+      "sha256": "d011d8f1311eaab5140926bcf821ba888f9b53b6097eb9c6be74f85090cdcde5",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_learn_two_non_overwriting_rules",
+          "line": 15
+        },
+        {
+          "name": "test_unknown_context_single_holds_and_multiple_kept",
+          "line": 18
+        },
+        {
+          "name": "test_clear_context_selects",
+          "line": 25
+        },
+        {
+          "name": "test_full_run_keeps_evidence",
+          "line": 32
+        }
+      ],
+      "classes": [
+        "P157Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_context_coexistence_p157",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_context_transition_transfer_v1.py",
+      "sha256": "33a3627b6413369bf907d92c93d8fe46caf9e6794c49440299bdd60af545340f",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_cross_group_context_transition_transfer",
+          "line": 19
+        },
+        {
+          "name": "test_insufficient_independent_groups_holds",
+          "line": 33
+        },
+        {
+          "name": "test_corrupted_memory_rejected",
+          "line": 38
+        }
+      ],
+      "classes": [
+        "ContextTransitionTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_context_transition_transfer_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_continuous_learning_cycle_v0.py",
+      "sha256": "a674807c061d2a446c41595c9dc4b77f05191741b03b6c411721562fbd2a52b1",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_persistent_learning_across_two_cycles_and_fail_closed",
+          "line": 6
+        },
+        {
+          "name": "test_corrupt_state_rejected",
+          "line": 18
+        },
+        {
+          "name": "test_no_previous_context_uses_raw",
+          "line": 23
+        }
+      ],
+      "classes": [
+        "ContinuousImageCycleTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_continuous_learning_cycle_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_cross_renderer_world_p145.py",
+      "sha256": "1f4508559b4f38f02a02c0dfa69c8a23a558c66037a1ebe7ad6487751d2395e2",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_new_worlds_produce_different_pixels",
+          "line": 5
+        },
+        {
+          "name": "test_sealed_cross_world_matrix",
+          "line": 11
+        }
+      ],
+      "classes": [
+        "CrossRendererTests"
+      ],
+      "imports": [
+        "brody_world_physique.image_cross_renderer_world_p145",
+        "json",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_cumulative_education_p156.py",
+      "sha256": "02d42a2d5611cf5bbc337f810e93605ae2364afd7b7981845e5da5531724841d",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_allow_gain_without_forgetting",
+          "line": 5
+        },
+        {
+          "name": "test_hold_if_prior_skill_regresses",
+          "line": 7
+        },
+        {
+          "name": "test_hold_without_gain",
+          "line": 10
+        },
+        {
+          "name": "test_cumulative_run_and_preservation",
+          "line": 12
+        }
+      ],
+      "classes": [
+        "P156Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_cumulative_education_p156",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_education_retention_gate_p155.py",
+      "sha256": "0c90e98a9ca8917e1e218f4d7b8b4aaa2c9e6c66b1acb703ad6e39629ffd6fec",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_accept_when_gain_and_retention",
+          "line": 5
+        },
+        {
+          "name": "test_hold_when_retention_degrades",
+          "line": 7
+        },
+        {
+          "name": "test_hold_without_gain",
+          "line": 10
+        },
+        {
+          "name": "test_campaign_and_preservation",
+          "line": 12
+        }
+      ],
+      "classes": [
+        "P155Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_education_retention_gate_p155",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_experience_guided_motion_v2.py",
+      "sha256": "555767d977975776538db569d2297c6808928941db22d440f5976a45d2af8aeb",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_two_lessons_guide_third_forecast",
+          "line": 18
+        },
+        {
+          "name": "test_corrupt_memory_and_feedback_leak_refused",
+          "line": 34
+        }
+      ],
+      "classes": [
+        "GuidedMotionTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_experience_guided_motion_v2",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_external_source_school_v0.py",
+      "sha256": "9e9640c7f23ebc8bfe4981ba2f6a11d01b15243a5b9f2151dd6d6fd3c8963073",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_external_png_and_all_transforms",
+          "line": 6
+        },
+        {
+          "name": "test_empty_folder_fails",
+          "line": 16
+        },
+        {
+          "name": "test_refuse_existing_output",
+          "line": 19
+        }
+      ],
+      "classes": [
+        "ExternalSourceSchoolTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_external_source_school_v0",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_external_visual_gallery_v0.py",
+      "sha256": "be3044d75d930401ac98b5ecc96fa8b60e7c9bec62318d00fd3ddf6c57af78fa",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_gallery_produced_and_no_authority",
+          "line": 6
+        },
+        {
+          "name": "test_output_must_be_new",
+          "line": 22
+        }
+      ],
+      "classes": [
+        "ExternalGalleryTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_external_visual_gallery_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_family_blind_ablation_v0.py",
+      "sha256": "4c7cd9715c271ec313fccfc50f7dc0119851cea9da26ec9094db54fc7ae6feef",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_balanced_randomized_independent_context",
+          "line": 7
+        },
+        {
+          "name": "test_hidden_family_not_in_learner_key",
+          "line": 11
+        },
+        {
+          "name": "test_blind_exam_and_receipt_integrity",
+          "line": 16
+        },
+        {
+          "name": "test_tamper_refused",
+          "line": 25
+        }
+      ],
+      "classes": [
+        "BlindAblationTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f9_intensive_education_v0",
+        "brody_world_physique.image_family_blind_ablation_v0",
+        "collections",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_forty_distinct_school_p136.py",
+      "sha256": "5929aefbbc5bd50e5b6d3e999141ee92da840559b0ec622635108d67c05aba67",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_protocols_are_unique_and_span_domains",
+          "line": 5
+        },
+        {
+          "name": "test_single_school_reports_all_competencies",
+          "line": 9
+        },
+        {
+          "name": "test_no_result_overwrite",
+          "line": 19
+        }
+      ],
+      "classes": [
+        "FortySchoolTests"
+      ],
+      "imports": [
+        "brody_world_physique.image_forty_distinct_school_p136",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_full_education_p154.py",
+      "sha256": "bd2b81bc5fd4544a9bf073926c7bf5eb1e336d7c0a0b1d7686ecd43809880976",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_observation_not_simulator_truth",
+          "line": 5
+        },
+        {
+          "name": "test_induction_uses_examples",
+          "line": 12
+        },
+        {
+          "name": "test_visual_comparison",
+          "line": 17
+        },
+        {
+          "name": "test_integrated_sealed_pass",
+          "line": 20
+        }
+      ],
+      "classes": [
+        "P154Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_full_education_p154",
+        "json",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_geometric_transfer_p142.py",
+      "sha256": "175f5e0dc9c80ba33c8c5cab545b11a80ff634ec300a402533f6f0f2c22306cd",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_geometry_distinguishes_wide_and_tall",
+          "line": 6
+        },
+        {
+          "name": "test_destroyed_colour_abstains",
+          "line": 12
+        },
+        {
+          "name": "test_all_thirty_conditions_and_no_exam_teaching",
+          "line": 16
+        }
+      ],
+      "classes": [
+        "GeometryTransferTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_geometric_transfer_p142",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_hard_visual_ood_p161.py",
+      "sha256": "242f7372168a7a07b4e845e3fa5349325abc49d6028a862fc6986860e6102509",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_holdout_laws_do_not_enter_training",
+          "line": 7
+        },
+        {
+          "name": "test_different_visual_forms_keep_pixel_based_measurements",
+          "line": 11
+        },
+        {
+          "name": "test_ambiguous_acceleration_retains_two_models",
+          "line": 17
+        },
+        {
+          "name": "test_report_and_evidence_preserved",
+          "line": 22
+        }
+      ],
+      "classes": [
+        "P161Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_hard_visual_ood_p161",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_heterogeneous_capability_audit_p131.py",
+      "sha256": "c875c5b45af7618e9cf6fb2f7c7d418aaba79bf683e9663df07e1fc543c2e3bf",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_multidomain_probe_reports_real_limits",
+          "line": 5
+        },
+        {
+          "name": "test_preserve_evidence",
+          "line": 14
+        }
+      ],
+      "classes": [
+        "P131HeterogeneousTests"
+      ],
+      "imports": [
+        "brody_world_physique.image_heterogeneous_capability_audit_p131",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_identity_appearance_p151.py",
+      "sha256": "93b87bb4f784b982cfd30175d6201b8b8aae734d57064a1c909d7b53d2fb458c",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_scenarios_do_not_collapse_colour_into_motion",
+          "line": 5
+        },
+        {
+          "name": "test_image_only_inference",
+          "line": 11
+        },
+        {
+          "name": "test_run_and_preserve_evidence",
+          "line": 16
+        }
+      ],
+      "classes": [
+        "P151Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_identity_appearance_p151",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_identity_beam_p152.py",
+      "sha256": "c845b02cbadc2fa12ac259eea42ef9e46781a0de902cc3120038ef398ad71d33",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_competing_paths_survive",
+          "line": 6
+        },
+        {
+          "name": "test_pixels_only_interface",
+          "line": 11
+        },
+        {
+          "name": "test_paired_test_and_no_overwrite",
+          "line": 16
+        }
+      ],
+      "classes": [
+        "P152Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_identity_appearance_p151",
+        "brody_world_physique.image_identity_beam_p152",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_identity_occlusion_p164.py",
+      "sha256": "be7d14eb3f793c3f78c13007318f08bfec548e852846b18f49b61c443049321f",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_components_from_pixels",
+          "line": 8
+        },
+        {
+          "name": "test_track_on_clean_images",
+          "line": 15
+        },
+        {
+          "name": "test_missing_event_never_forced_into_single_truth",
+          "line": 22
+        },
+        {
+          "name": "test_full_paired_report_and_immutable_evidence",
+          "line": 28
+        }
+      ],
+      "classes": [
+        "P164Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_hard_visual_ood_p161",
+        "brody_world_physique.image_identity_occlusion_p164",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_integrated_feedback_school_v0.py",
+      "sha256": "e1e8bce62c25cc30b832eff5fcaa8375bb8dbd7790d63452f3844efaccba7a0d",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_unknown_is_hold",
+          "line": 6
+        },
+        {
+          "name": "test_refused_snapshot_tamper",
+          "line": 10
+        },
+        {
+          "name": "test_no_promotion_and_receipts",
+          "line": 15
+        },
+        {
+          "name": "test_discrepancy_detector_and_supervised_correction",
+          "line": 24
+        }
+      ],
+      "classes": [
+        "IntegratedVisualFeedbackTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f9_intensive_education_v0",
+        "brody_world_physique.image_integrated_feedback_school_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_long_curriculum_p140.py",
+      "sha256": "21a7d73f5984c4230e24d56fdcb7768a39a9832a00ba97d5a59d3e23e9ce9cb4",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_multiple_learning_families_holdout_and_comparison",
+          "line": 5
+        },
+        {
+          "name": "test_no_overwrite_invalid_budget",
+          "line": 21
+        }
+      ],
+      "classes": [
+        "LongCurriculumTests"
+      ],
+      "imports": [
+        "brody_world_physique.image_long_curriculum_p140",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_math_physical_bridge_p162.py",
+      "sha256": "f5032fe05de45877928881b355dc28d788bdb71502dc3bfea0c6c06889e19d4f",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_still_vs_linear_separated_by_velocity",
+          "line": 7
+        },
+        {
+          "name": "test_temporal_change_preserved_as_novel_candidate",
+          "line": 12
+        },
+        {
+          "name": "test_projection_reverse_is_tested",
+          "line": 16
+        },
+        {
+          "name": "test_missing_visibility_holds",
+          "line": 24
+        },
+        {
+          "name": "test_full_paired_exam_and_evidence",
+          "line": 26
+        }
+      ],
+      "classes": [
+        "P162Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_math_physical_bridge_p162",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_motion_independent_campaign_v1.py",
+      "sha256": "5c26a61232dffa94e36ab46ac2822d804444812e599a627e9539d6d21b6a8e0f",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_grouped_full_campaign",
+          "line": 25
+        },
+        {
+          "name": "test_reject_group_leak",
+          "line": 34
+        }
+      ],
+      "classes": [
+        "CampaignTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_motion_campaign_split_v1",
+        "brody_world_physique.image_motion_independent_campaign_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_motion_memory_ablation_v1.py",
+      "sha256": "b2aa86c7ac1c4d9b2573e654f43ab279ca4aa646de7f19f996062c08aa710557",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_frozen_memory_matches_baseline_without_experience",
+          "line": 21
+        },
+        {
+          "name": "test_leakage_protected",
+          "line": 29
+        }
+      ],
+      "classes": [
+        "PairedMotionAblationTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.fusion_f9_intensive_education_v0",
+        "brody_world_physique.image_experience_guided_motion_v2",
+        "brody_world_physique.image_motion_memory_ablation_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_motion_one_shot_campaign_v1.py",
+      "sha256": "c4b07f9f471ea9875d494a5d8a3aecc276a2e6265a85437a130bfcc63d9325b5",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_complete_demo_is_explicitly_synthetic",
+          "line": 6
+        },
+        {
+          "name": "test_real_source_provenance_required",
+          "line": 14
+        }
+      ],
+      "classes": [
+        "EndToEndPhysicsTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_motion_one_shot_campaign_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_multiangle_experiments_p160.py",
+      "sha256": "a4a14b68dd35d762e8a1b5eaac8cf0f9883aff8c5d4e00143ea0ac6d9bdb8496",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_pixels_train_separates_dynamics",
+          "line": 10
+        },
+        {
+          "name": "test_no_budget_means_hold",
+          "line": 13
+        },
+        {
+          "name": "test_posterior_normalized",
+          "line": 15
+        },
+        {
+          "name": "test_ambiguous_request_retains_options",
+          "line": 19
+        },
+        {
+          "name": "test_compound_campaign_and_preservation",
+          "line": 24
+        }
+      ],
+      "classes": [
+        "P160Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_multiangle_experiments_p160",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_multiangle_temporal_p149.py",
+      "sha256": "ca5f8e2a0b1002a9b860365b1fb6024ad4c4c0d134d27cab366182508dabc694",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_pixel_identical_snapshot_with_different_past",
+          "line": 5
+        },
+        {
+          "name": "test_history_requires_observations",
+          "line": 10
+        },
+        {
+          "name": "test_multiangle_report_and_preservation",
+          "line": 12
+        }
+      ],
+      "classes": [
+        "P149Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_multiangle_temporal_p149",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_multicapability_lab_p133.py",
+      "sha256": "6f3ccb27bc1cd8ebbd2e0e7363abbf649bbf8435792e89f2430e1bce2357c10c",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_eight_different_capabilities",
+          "line": 6
+        },
+        {
+          "name": "test_fail_closed_and_occlusion_uncertainty",
+          "line": 12
+        }
+      ],
+      "classes": [
+        "MulticapabilityTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_multicapability_lab_p133",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_multidirection_stress_10k_v0.py",
+      "sha256": "17aa141539f97555e2f9cbcd8367e3f71d6b0d4b149cd903749255762b3461cc",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_adversarial_axes_not_all_same",
+          "line": 6
+        },
+        {
+          "name": "test_140_cases_receipts_and_governance",
+          "line": 12
+        },
+        {
+          "name": "test_refuse_bad_count",
+          "line": 22
+        }
+      ],
+      "classes": [
+        "MultiAxisStressTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_multidirection_stress_10k_v0",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_multihypothesis_motion_memory_v1.py",
+      "sha256": "4d98e3e4a938b7b3678664f7bb8264ab9fcb082dab9d6a464277d4a5a26b744e",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_competing_hypotheses_and_persistent_correction",
+          "line": 8
+        },
+        {
+          "name": "test_feedback_leakage_refused",
+          "line": 24
+        }
+      ],
+      "classes": [
+        "MotionModelTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_multihypothesis_motion_memory_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_multiview_identity_school_v0.py",
+      "sha256": "85222e45b8263f1da1d019691abff88b4af5ef0362bc18a53599be22f7c1aba2",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_teacher_group_and_unseen_view_exam",
+          "line": 6
+        },
+        {
+          "name": "test_powershell_single_object_manifest",
+          "line": 18
+        },
+        {
+          "name": "test_refuse_previous_output",
+          "line": 27
+        }
+      ],
+      "classes": [
+        "MultiviewIdentityTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_multiview_identity_school_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_observed_motion_school_v1.py",
+      "sha256": "90c38678fc5fd6d7e8878c4defb086004f0f1720d1625f04a3ae76990a5cb7d9",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_observed_acceleration_and_reconstruction",
+          "line": 10
+        },
+        {
+          "name": "test_explicit_feedback_refit",
+          "line": 22
+        },
+        {
+          "name": "test_fail_closed_duplicate_feedback",
+          "line": 34
+        }
+      ],
+      "classes": [
+        "MotionSchoolTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_observed_motion_school_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_occlusion_epistemics_p147.py",
+      "sha256": "649c8ab5c6529a52db30e402d420af1bb40ba639d91a5b2f8ccb39a5e5575176",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_same_course_and_exam_are_separate",
+          "line": 5
+        },
+        {
+          "name": "test_full_occlusion_is_visible_ambiguity",
+          "line": 16
+        }
+      ],
+      "classes": [
+        "OcclusionTests"
+      ],
+      "imports": [
+        "brody_world_physique.image_occlusion_epistemics_p147",
+        "json",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_ood_temporal_p153.py",
+      "sha256": "109577884fa3eeb4712d41affc5850e4d707ba12297ac32b3c543de2f0e71e33",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_new_renderer_is_independent_and_temporal",
+          "line": 5
+        },
+        {
+          "name": "test_budget_and_sealed_evidence",
+          "line": 11
+        }
+      ],
+      "classes": [
+        "P153Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_ood_temporal_p153",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_persistent_identity_teacher_loop_v1.py",
+      "sha256": "1934160752fb22f4db82c68b051318693213048a1b046c9ab8e76fc192f0b187",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_multi_session_recall_and_contradiction_quarantine",
+          "line": 10
+        },
+        {
+          "name": "test_refuse_tampered_state",
+          "line": 23
+        }
+      ],
+      "classes": [
+        "PersistentIdentityTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_persistent_identity_teacher_loop_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_persistent_tracks_p165d5.py",
+      "sha256": "96a7f01bcc91a72a88b148c2f67ad96decd7a6704776d5f6f46b41d53de8149a",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_image_only_path_candidates",
+          "line": 6
+        },
+        {
+          "name": "test_multiple_objects_not_unique_identity",
+          "line": 16
+        },
+        {
+          "name": "test_preserved_evidence_and_bounded_beam",
+          "line": 25
+        }
+      ],
+      "classes": [
+        "P165D5Tests"
+      ],
+      "imports": [
+        "brody_world_physique.hard_scene_angles_p165d2",
+        "brody_world_physique.image_persistent_tracks_p165d5",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_persistent_transfer_exam_v0.py",
+      "sha256": "75314dcb74355db28c985c4c9031e2a702f7ed477c979584d6042962cbfb5b21",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_missing_or_corrupt_snapshot_fails_closed",
+          "line": 7
+        },
+        {
+          "name": "test_train_updates_but_exam_does_not",
+          "line": 12
+        },
+        {
+          "name": "test_100_train_100_blind_split_and_no_memory",
+          "line": 18
+        }
+      ],
+      "classes": [
+        "PersistentTransferTests"
+      ],
+      "imports": [
+        "brody_world_physique.fusion_f9_intensive_education_v0",
+        "brody_world_physique.image_persistent_transfer_exam_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_probe_selection_p159.py",
+      "sha256": "b9c39851daf38611c273fc7e5b8fd84d67c867f637ab499f414c39b8a1f396e7",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_empirical_response_induced_from_pixels",
+          "line": 7
+        },
+        {
+          "name": "test_ex_ante_selection_and_no_useful_probe",
+          "line": 12
+        },
+        {
+          "name": "test_observed_response_known_vs_novel",
+          "line": 18
+        },
+        {
+          "name": "test_whole_campaign_preserves_proofs",
+          "line": 30
+        }
+      ],
+      "classes": [
+        "P159Tests"
+      ],
+      "imports": [
+        "brody_world_physique.image_probe_selection_p159",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_real_transfer_exam_v2.py",
+      "sha256": "012719438fbff42972e7cc03449263f4f512ecb80515449ee3b33f07c99e6b4d",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_training_blind_exam_separate_grading",
+          "line": 10
+        },
+        {
+          "name": "test_exact_leak_rejected",
+          "line": 26
+        },
+        {
+          "name": "test_ambiguous_one_identity_yields_doubt",
+          "line": 34
+        }
+      ],
+      "classes": [
+        "RealTransferV2Tests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_real_transfer_exam_v2",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_reciprocal_generation_school_v1.py",
+      "sha256": "2735767ce2ffd520726bad13a60939a48464002d8675f32590546e0815a0a892",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_train_generate_holdout_without_image_copy",
+          "line": 8
+        },
+        {
+          "name": "test_exam_leak_and_corrupt_memory_rejected",
+          "line": 23
+        }
+      ],
+      "classes": [
+        "ReciprocalTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_reciprocal_generation_school_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_reciprocal_shape_learning_p134.py",
+      "sha256": "24ac6592b307ccbce708a91f4eeb7f9c4842bfc470568619f7dc964b8501e793",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_train_correct_holdout_different_shapes",
+          "line": 13
+        },
+        {
+          "name": "test_fails_closed_for_leaked_image",
+          "line": 27
+        }
+      ],
+      "classes": [
+        "ReciprocalSchoolTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_reciprocal_shape_learning_p134",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_scene_adversarial_p165a.py",
+      "sha256": "fa5aa6dac6b36905362a700c7b7e36b0d270b6daac68a54fa2a1f639da534032",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_six_different_cases",
+          "line": 5
+        },
+        {
+          "name": "test_ambiguity_ground_truth_not_injected",
+          "line": 12
+        },
+        {
+          "name": "test_color_change_is_adversarial",
+          "line": 16
+        },
+        {
+          "name": "test_output_evidence_preserved",
+          "line": 20
+        }
+      ],
+      "classes": [
+        "P165ATests"
+      ],
+      "imports": [
+        "brody_world_physique.image_scene_adversarial_p165a",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_scene_relational_school_p132.py",
+      "sha256": "aef5ff393ce22eabc46f9c455f6075defe60345cc9c329abc18506cc6b1b6aed",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_multi_context_transfer_and_doubt",
+          "line": 21
+        },
+        {
+          "name": "test_provenance_and_teacher_contradiction",
+          "line": 30
+        }
+      ],
+      "classes": [
+        "RelationalSchoolTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_scene_relational_school_p132",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_stabilized_knowledge_school_v1.py",
+      "sha256": "9df2f7264328cf808c0e0164ce083ccc9fe9be7a4778fae32c97fd55b66ce7cd",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_stable_reflex_and_restart",
+          "line": 8
+        },
+        {
+          "name": "test_contradiction_reopens_only_local_context",
+          "line": 14
+        },
+        {
+          "name": "test_at_most_three_hypotheses",
+          "line": 23
+        },
+        {
+          "name": "test_duplicate_does_not_stabilize",
+          "line": 28
+        }
+      ],
+      "classes": [
+        "KnowledgeReflexTests"
+      ],
+      "imports": [
+        "brody_world_physique.image_stabilized_knowledge_school_v1",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_structural_observation_v1.py",
+      "sha256": "1da394bab0037506f124477c88420f75a918f74c6d47569f3742406727c99256",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_two_components_with_relations",
+          "line": 7
+        },
+        {
+          "name": "test_context_reflects_distinct_geometries",
+          "line": 14
+        },
+        {
+          "name": "test_school_receipts_include_structures",
+          "line": 19
+        }
+      ],
+      "classes": [
+        "StructuralObservationTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_structural_observation_v1",
+        "brody_world_physique.image_visual_reflex_teacher_loop_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_temporal_occlusion_p148.py",
+      "sha256": "3df5697ed537984d410bc99f8d09e46c7b0de8557408b169c5caa6d78c00d218",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_hidden_observation_causes_hold",
+          "line": 5
+        },
+        {
+          "name": "test_history_and_snapshot_are_different",
+          "line": 7
+        },
+        {
+          "name": "test_corpus_ten_families_and_evidence",
+          "line": 10
+        }
+      ],
+      "classes": [
+        "TemporalOcclusionTests"
+      ],
+      "imports": [
+        "brody_world_physique.image_temporal_occlusion_p148",
+        "json",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_tool_school_20k_campaign_v0.py",
+      "sha256": "e686bebd184cdd49ee71ef46bd68da1e1874191a483128877420c9b822d3a43e",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_ten_distinct_exam_families",
+          "line": 8
+        },
+        {
+          "name": "test_all_perturbations_preserve_dimensions",
+          "line": 11
+        },
+        {
+          "name": "test_unknown_intent_holds",
+          "line": 15
+        },
+        {
+          "name": "test_exam_receipts_and_no_memory_writes",
+          "line": 17
+        }
+      ],
+      "classes": [
+        "School20KContractTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_tool_school_20k_campaign_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_tracking_beam_p150.py",
+      "sha256": "0055aedd047f249e5ae4c2baea91acb866f6aa5ff07c6cbc6bcf85fe96aeab15",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_detector_no_lane_argument",
+          "line": 5
+        },
+        {
+          "name": "test_camera_motion_uses_observed_landmarks",
+          "line": 11
+        },
+        {
+          "name": "test_pan_directions_with_marker_dropout",
+          "line": 16
+        },
+        {
+          "name": "test_sealed_run_and_distinct_scoring",
+          "line": 23
+        }
+      ],
+      "classes": [
+        "TestP150"
+      ],
+      "imports": [
+        "brody_world_physique.image_tracking_beam_p150",
+        "json",
+        "pathlib",
+        "random",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_transfer_stress_p141.py",
+      "sha256": "79f2bbedf8f7a352993acc8fa0cd03d55ca7b3917f26d78b9b4a7a90ee49ec32",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_cross_condition_matrix_and_baselines",
+          "line": 6
+        },
+        {
+          "name": "test_shift_is_not_identity_and_no_overwrite",
+          "line": 17
+        }
+      ],
+      "classes": [
+        "TransferStressTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_transfer_stress_p141",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_unified_continuous_school_v1.py",
+      "sha256": "4fa4c65a155a202527e0231a20e77dd9e101d1e0941770385b94d84af2915c4c",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_checkpoint_resume_and_cross_cycle",
+          "line": 15
+        },
+        {
+          "name": "test_blind_exam_and_leakage",
+          "line": 27
+        },
+        {
+          "name": "test_manifest_without_labels_rejected",
+          "line": 39
+        }
+      ],
+      "classes": [
+        "UnifiedContinuousTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_unified_continuous_school_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_unified_multiview_knowledge_v1.py",
+      "sha256": "ed3616f4a1665e8633426235c6bfe03eaf548a35656ca1231daccc99681dfccc",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_one_identity_four_views_and_integrity",
+          "line": 6
+        },
+        {
+          "name": "test_duplicate_identity_rejected",
+          "line": 20
+        }
+      ],
+      "classes": [
+        "UnifiedKnowledgeTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_unified_multiview_knowledge_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_v0.py",
+      "sha256": "44e7595ee881ecbb99482d1adf159e75dc7592c0aa8cb74bed110c758564e50d",
+      "declared_tests": 11,
+      "tests": [
+        {
+          "name": "test_strict_source_preserved_with_known_background_color",
+          "line": 36
+        },
+        {
+          "name": "test_explicit_grayscale_mask",
+          "line": 63
+        },
+        {
+          "name": "test_scale_disables_noncomparable_pixel_identity_claim",
+          "line": 70
+        },
+        {
+          "name": "test_soft_alpha_mask_is_preserved_without_false_pixel_claim",
+          "line": 78
+        },
+        {
+          "name": "test_mismatched_mask_size_fails_closed",
+          "line": 92
+        },
+        {
+          "name": "test_no_mask_or_both_mask_routes_fails_closed",
+          "line": 97
+        },
+        {
+          "name": "test_overflowing_placement_is_rejected",
+          "line": 106
+        },
+        {
+          "name": "test_empty_subject_rejected",
+          "line": 113
+        },
+        {
+          "name": "test_output_cannot_overwrite_source",
+          "line": 118
+        },
+        {
+          "name": "test_input_hashes_stay_stable_and_deterministic_output",
+          "line": 126
+        },
+        {
+          "name": "test_parse_rgb_and_key_mask",
+          "line": 133
+        }
+      ],
+      "classes": [
+        "ImageR1Tests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_validation_router_p143.py",
+      "sha256": "16b81de0f440712bb1e8b56ce78f4db1040d8e20830b304a339b643ee2f966a2",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_three_way_split_frozen_routing_and_hold",
+          "line": 5
+        },
+        {
+          "name": "test_preserves_evidence",
+          "line": 20
+        }
+      ],
+      "classes": [
+        "RouterTests"
+      ],
+      "imports": [
+        "brody_world_physique.image_validation_router_p143",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_visible_reference_abstention_v0.py",
+      "sha256": "4e80147934a575c3e97afcf7924c59178b6c7a3f91188de901260fc543d60e09",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_hidden_reference_holds",
+          "line": 6
+        },
+        {
+          "name": "test_out_of_catalog_holds",
+          "line": 8
+        },
+        {
+          "name": "test_visible_and_hidden_are_distinct",
+          "line": 12
+        },
+        {
+          "name": "test_100_cases_integrity_and_no_memory",
+          "line": 15
+        }
+      ],
+      "classes": [
+        "VisibleReferenceTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_visible_reference_abstention_v0",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_image_visual_reflex_teacher_loop_v1.py",
+      "sha256": "949cf93eeb214638adc72a218ee27cb669d27fc36ccc2a484cc05dd75abfeff4",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_pause_resume_and_stabilization",
+          "line": 6
+        },
+        {
+          "name": "test_duplicate_images_not_recounted_as_lessons",
+          "line": 21
+        },
+        {
+          "name": "test_corrupted_checkpoint_fails_closed",
+          "line": 35
+        }
+      ],
+      "classes": [
+        "VisualReflexLoopTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.image_visual_reflex_teacher_loop_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_instrument_school_v2.py",
+      "sha256": "96d2cd2e53a03be9dd729e68e9820ffbaff58ee9934e23cd32a9b405033a02c3",
+      "declared_tests": 10,
+      "tests": [
+        {
+          "name": "test_tool_renders_are_visibly_different_and_directional",
+          "line": 17
+        },
+        {
+          "name": "test_untrusted_tool_and_oversized_motor_action_fail_closed",
+          "line": 24
+        },
+        {
+          "name": "test_selector_learns_from_empirical_loss_not_coded_style_mapping",
+          "line": 31
+        },
+        {
+          "name": "test_unfamiliar_goal_refuses_to_guess",
+          "line": 42
+        },
+        {
+          "name": "test_zero_one_many_experiences_and_heldout_abstention",
+          "line": 69
+        },
+        {
+          "name": "test_precommit_has_no_future_target_and_is_frozen",
+          "line": 81
+        },
+        {
+          "name": "test_memory_and_generated_image_tamper_rejected",
+          "line": 95
+        },
+        {
+          "name": "test_invalid_memory_is_detected_even_if_report_stays_same",
+          "line": 107
+        },
+        {
+          "name": "test_no_overwriting_old_experiences",
+          "line": 120
+        },
+        {
+          "name": "test_test_targets_after_precommit_retain_sha",
+          "line": 124
+        }
+      ],
+      "classes": [
+        "PureInstrumentContracts",
+        "EndToEndCourse"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v1",
+        "brody_world_physique.instrument_school_v2",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_jarvis_vision_v0.py",
+      "sha256": "0fbb16973273bf1458893142d4287f487852b4fe45f361f8913287d0f6bba8af",
+      "declared_tests": 12,
+      "tests": [
+        {
+          "name": "test_actual_image_bytes_sent_in_jarvis_compatible_payload",
+          "line": 44
+        },
+        {
+          "name": "test_generated_file_cannot_be_labeled_real_observation",
+          "line": 75
+        },
+        {
+          "name": "test_resize_and_source_hash_are_distinct",
+          "line": 82
+        },
+        {
+          "name": "test_no_execution_fields_can_be_mutated",
+          "line": 88
+        },
+        {
+          "name": "test_reject_non_loopback_or_redirect_risk",
+          "line": 94
+        },
+        {
+          "name": "test_reject_missing_or_ambiguous_metadata",
+          "line": 110
+        },
+        {
+          "name": "test_response_malformed_fails_closed",
+          "line": 121
+        },
+        {
+          "name": "test_response_non_text_fails_closed",
+          "line": 129
+        },
+        {
+          "name": "test_unavailable_provider_does_not_fake_reply",
+          "line": 134
+        },
+        {
+          "name": "test_disallow_non_images_and_missing_image",
+          "line": 142
+        },
+        {
+          "name": "test_cli_writes_only_candidate_json",
+          "line": 150
+        },
+        {
+          "name": "test_cli_disallows_overwriting_source",
+          "line": 163
+        }
+      ],
+      "classes": [
+        "LocalVisionAdapterTests"
+      ],
+      "imports": [
+        "PIL",
+        "base64",
+        "brody_world_physique.jarvis_vision_v0",
+        "dataclasses",
+        "io",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest",
+        "unittest.mock",
+        "urllib.error"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_local_epistemic_diagnostic_p165d9.py",
+      "sha256": "bb3d99b480ecf0aa82249801456256e90d7c7770dc12c5c8a0c9aed5090e37d4",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_local_symbolic_and_global_conflict_distinct",
+          "line": 6
+        },
+        {
+          "name": "test_priority_is_not_truth",
+          "line": 11
+        },
+        {
+          "name": "test_conflict_local_and_global_separation",
+          "line": 18
+        },
+        {
+          "name": "test_report_bounded_and_immutable",
+          "line": 22
+        }
+      ],
+      "classes": [
+        "D9Tests"
+      ],
+      "imports": [
+        "brody_world_physique.goal_multi_continuity_p165d7",
+        "brody_world_physique.local_epistemic_diagnostic_p165d9",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_modal_signature_fusion_p165b.py",
+      "sha256": "39898fe23f51641193688d4ea8f972829cc75f608bf251e38ebdec3a136f1500",
+      "declared_tests": 7,
+      "tests": [
+        {
+          "name": "test_changed_color_does_not_erase_other_signatures",
+          "line": 5
+        },
+        {
+          "name": "test_conflicting_sensor_is_not_silently_ignored",
+          "line": 11
+        },
+        {
+          "name": "test_generated_evidence_cannot_validate_itself",
+          "line": 15
+        },
+        {
+          "name": "test_time_and_frame_mismatch_hold",
+          "line": 19
+        },
+        {
+          "name": "test_same_signature_is_not_unique_id_proof",
+          "line": 22
+        },
+        {
+          "name": "test_absence_sensor_is_hold",
+          "line": 26
+        },
+        {
+          "name": "test_no_overwrite_and_matrix",
+          "line": 28
+        }
+      ],
+      "classes": [
+        "P165BTests"
+      ],
+      "imports": [
+        "brody_world_physique.modal_signature_fusion_p165b",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_multirepresentation_ball_bridge_v5.py",
+      "sha256": "ce694b1c16a42d9e5702693c9032c5d78011bd7fe52b338cef95063b8e774208",
+      "declared_tests": 7,
+      "tests": [
+        {
+          "name": "test_reuses_existing_candidate_contracts_and_four_views",
+          "line": 33
+        },
+        {
+          "name": "test_mixed_coordinate_frames_refused",
+          "line": 54
+        },
+        {
+          "name": "test_unavailable_physical_units_not_guessed",
+          "line": 60
+        },
+        {
+          "name": "test_future_must_follow_all_history",
+          "line": 67
+        },
+        {
+          "name": "test_receipt_does_not_allow_future_frame_in_history",
+          "line": 73
+        },
+        {
+          "name": "test_missing_forecast_stays_hold_instead_of_fabricated_prediction",
+          "line": 85
+        },
+        {
+          "name": "test_missing_evidence_prevents_fake_replay",
+          "line": 93
+        }
+      ],
+      "classes": [
+        "WorldRepresentationP1UnitTests"
+      ],
+      "imports": [
+        "brody_world_physique.multirepresentation_ball_bridge_v5",
+        "brody_world_physique.preverbal_prediction_v0",
+        "dataclasses",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p165d10_global_runner.py",
+      "sha256": "98c3d7efe5e7c3bd2df4f8ee2d0abf837cb06488af65dd9c7e50e8e71d59ae63",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_minimal_green_capture",
+          "line": 6
+        },
+        {
+          "name": "test_red_is_not_green",
+          "line": 15
+        },
+        {
+          "name": "test_report_immutable",
+          "line": 23
+        },
+        {
+          "name": "test_exact_p165d_inventory",
+          "line": 28
+        }
+      ],
+      "classes": [
+        "GlobalRegressionRunnerTests"
+      ],
+      "imports": [
+        "json",
+        "pathlib",
+        "scripts.p165d10_global_regression_runner",
+        "scripts.p165d10_repo_test_inventory",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p165d10_invariant_hardening.py",
+      "sha256": "c3b2c11a6a18507f226c30bb69312979f48fd1246de9dee42d7e0d528940c608",
+      "declared_tests": 45,
+      "tests": [
+        {
+          "name": "test_01_all_675_unique",
+          "line": 24
+        },
+        {
+          "name": "test_02_factor_dimensions",
+          "line": 27
+        },
+        {
+          "name": "test_03_seven_raster_frames",
+          "line": 29
+        },
+        {
+          "name": "test_04_truth_is_separate_from_images",
+          "line": 34
+        },
+        {
+          "name": "test_05_repeatable_generator_pixels",
+          "line": 41
+        },
+        {
+          "name": "test_06_d2_no_identity_certification",
+          "line": 46
+        },
+        {
+          "name": "test_07_red_detected",
+          "line": 58
+        },
+        {
+          "name": "test_08_blue_detected",
+          "line": 62
+        },
+        {
+          "name": "test_09_connected_separate",
+          "line": 66
+        },
+        {
+          "name": "test_10_blank_returns_no_instances",
+          "line": 70
+        },
+        {
+          "name": "test_11_no_spatial_identity_proof",
+          "line": 74
+        },
+        {
+          "name": "test_12_d3_returns_ordered_candidates",
+          "line": 78
+        },
+        {
+          "name": "test_13_initial_empty",
+          "line": 86
+        },
+        {
+          "name": "test_14_velocity_from_two_points",
+          "line": 88
+        },
+        {
+          "name": "test_15_forward_prediction",
+          "line": 91
+        },
+        {
+          "name": "test_16_uncertainty_monotonic_forward",
+          "line": 95
+        },
+        {
+          "name": "test_17_predict_does_not_mutate_source",
+          "line": 98
+        },
+        {
+          "name": "test_18_future_observation_mismatch",
+          "line": 101
+        },
+        {
+          "name": "test_19_generated_not_observed",
+          "line": 105
+        },
+        {
+          "name": "test_20_frame_mismatch_is_not_applied",
+          "line": 108
+        },
+        {
+          "name": "test_21_quality_hold",
+          "line": 111
+        },
+        {
+          "name": "test_22_invalid_nan_rejected",
+          "line": 114
+        },
+        {
+          "name": "test_23_backwards_propagation_rejected",
+          "line": 116
+        },
+        {
+          "name": "test_24_goal_views_do_not_mutate",
+          "line": 118
+        },
+        {
+          "name": "test_25_beam_bounded",
+          "line": 124
+        },
+        {
+          "name": "test_26_no_oracle_interface",
+          "line": 129
+        },
+        {
+          "name": "test_27_adapter_explicitly_pixel_1d",
+          "line": 134
+        },
+        {
+          "name": "test_28_all_beam_hypotheses_have_states",
+          "line": 138
+        },
+        {
+          "name": "test_29_four_correct_not_same_reappearance",
+          "line": 145
+        },
+        {
+          "name": "test_30_separate_paths_cannot_fake_same",
+          "line": 150
+        },
+        {
+          "name": "test_31_true_same_candidate_path",
+          "line": 156
+        },
+        {
+          "name": "test_32_all_missing_is_not_reappearance",
+          "line": 160
+        },
+        {
+          "name": "test_33_different_goal_same_claims",
+          "line": 166
+        },
+        {
+          "name": "test_34_global_conflict_preserved",
+          "line": 170
+        },
+        {
+          "name": "test_35_local_symbol_without_data_holds",
+          "line": 173
+        },
+        {
+          "name": "test_36_global_multi_can_coexist_with_local_hold",
+          "line": 177
+        },
+        {
+          "name": "test_37_symbolic_interpretation_not_observation",
+          "line": 181
+        },
+        {
+          "name": "test_38_duplicate_claims_rejected",
+          "line": 185
+        },
+        {
+          "name": "test_39_empty_focus_stays_unresolved",
+          "line": 188
+        },
+        {
+          "name": "test_40_priorities_are_not_evidence",
+          "line": 191
+        },
+        {
+          "name": "test_41_invalid_goal_rejected",
+          "line": 193
+        },
+        {
+          "name": "test_42_bridge_digest_stable",
+          "line": 195
+        },
+        {
+          "name": "test_43_bridge_goal_does_not_mutate_evidence",
+          "line": 202
+        },
+        {
+          "name": "test_44_bridge_does_not_fabricate_symbolic",
+          "line": 207
+        },
+        {
+          "name": "test_45_d6_claims_have_provenance",
+          "line": 212
+        }
+      ],
+      "classes": [
+        "MatrixProperties",
+        "DetectionProperties",
+        "PersistentProperties",
+        "AssociationAndReappearance",
+        "EpistemicProperties"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.color_agnostic_perception_p165d3",
+        "brody_world_physique.goal_multi_continuity_p165d7",
+        "brody_world_physique.goal_track_bridge_p165d8",
+        "brody_world_physique.hard_scene_angles_p165d2",
+        "brody_world_physique.image_persistent_tracks_p165d5",
+        "brody_world_physique.local_epistemic_diagnostic_p165d9",
+        "brody_world_physique.persistent_world_state_p165d4",
+        "brody_world_physique.reappearance_gate_p165d6",
+        "copy",
+        "hashlib",
+        "json",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p165d10_repository_inventory.py",
+      "sha256": "e8a0ae6bd0088fc5d32e7bc0aa19b3bbead276ad3c7a28f6c25bce0f38d257e2",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_finds_known_historical_and_d10",
+          "line": 5
+        },
+        {
+          "name": "test_ast_does_not_execute_tests",
+          "line": 10
+        },
+        {
+          "name": "test_output_preserved",
+          "line": 19
+        }
+      ],
+      "classes": [
+        "InventoryTests"
+      ],
+      "imports": [
+        "pathlib",
+        "scripts.p165d10_repo_test_inventory",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p210a_visual_loop_contract_v0.py",
+      "sha256": "c60febd24d3f3787abb3344356f300aadefcdbbe98c7683e4bd790abbc887367",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_correction_accepted_and_replayed",
+          "line": 17
+        },
+        {
+          "name": "test_regression_rolls_back_but_preserves_attempt",
+          "line": 27
+        },
+        {
+          "name": "test_equal_hold_and_no_rewrite",
+          "line": 38
+        },
+        {
+          "name": "test_tampered_candidate_rejected",
+          "line": 45
+        },
+        {
+          "name": "test_invalid_size_and_attempt_budget",
+          "line": 53
+        }
+      ],
+      "classes": [
+        "VisualLoopContractTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.p210a_visual_loop_contract_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p210bc_visual_correction_v0.py",
+      "sha256": "5bd6fc0b9cf8d1105895968474b5d0328e21d4928f78edfb259459d79f5bab97",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_region_diagnostic_and_correction",
+          "line": 20
+        },
+        {
+          "name": "test_protected_region_detects_error",
+          "line": 33
+        },
+        {
+          "name": "test_equal_attempt_and_replay_tamper",
+          "line": 45
+        },
+        {
+          "name": "test_dimension_or_empty_mask_fail_closed",
+          "line": 58
+        }
+      ],
+      "classes": [
+        "ImageCorrectionTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.p210b_visual_error_atlas_v0",
+        "brody_world_physique.p210c_targeted_image_correction_v0",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p210d_visual_error_memory_bridge_v0.py",
+      "sha256": "c1b174c6bd57aee21265f8ad24cb9e47e477780696d1b0f09e4b7d1c6454e9c9",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_append_two_different_outcomes_and_replay",
+          "line": 19
+        },
+        {
+          "name": "test_duplicate_rejected",
+          "line": 31
+        },
+        {
+          "name": "test_ledger_tamper_rejected",
+          "line": 37
+        },
+        {
+          "name": "test_source_mutation_rejected",
+          "line": 46
+        }
+      ],
+      "classes": [
+        "MemoryTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.p210c_targeted_image_correction_v0",
+        "brody_world_physique.p210d_visual_error_memory_bridge_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p210e_visual_transfer_benchmark_v0.py",
+      "sha256": "001d16800f25ebe7641b0c333c67bcc4bc4369fa82b3a6163c541b9e73dacf9b",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_train_offset_transfers_to_separate_test_image",
+          "line": 23
+        },
+        {
+          "name": "test_transfer_failure_is_recorded",
+          "line": 34
+        },
+        {
+          "name": "test_no_train_test_leakage",
+          "line": 42
+        },
+        {
+          "name": "test_ambiguous_train_hold",
+          "line": 47
+        }
+      ],
+      "classes": [
+        "TransferTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.p210e_visual_transfer_benchmark_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p211a_memory_routed_drawing_v0.py",
+      "sha256": "2bf2c36270a9b4ce4ca478f8a4427a992bd5079b5c6f60504f201bbe80b38d0e",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_memory_changes_selected_generation_route",
+          "line": 28
+        },
+        {
+          "name": "test_corrupted_ledger_fails_before_generation",
+          "line": 41
+        },
+        {
+          "name": "test_teacher_reference_only_scored_after_candidate",
+          "line": 49
+        }
+      ],
+      "classes": [
+        "MemoryRoutedDrawingTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.p210c_targeted_image_correction_v0",
+        "brody_world_physique.p210d_visual_error_memory_bridge_v0",
+        "brody_world_physique.p211a_memory_routed_drawing_v0",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p211b_frozen_gesture_transfer_v0.py",
+      "sha256": "f7f4e9558a44e2efbb097d6d860628fed5f1297d24bd111ed9bd02d9da19d3e2",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_train_then_render_without_test_pixels",
+          "line": 11
+        },
+        {
+          "name": "test_reference_only_scores_and_does_not_change_render",
+          "line": 23
+        },
+        {
+          "name": "test_tamper_and_duplicate_fail_closed",
+          "line": 31
+        },
+        {
+          "name": "test_fingerprint_drift_fail_closed",
+          "line": 40
+        }
+      ],
+      "classes": [
+        "FrozenGestureTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.p211b_frozen_gesture_transfer_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p211c_gesture_recomposition_v0.py",
+      "sha256": "4617b52ae589df5a0678e377dc8e5ab9d03136a69c975fc7e404a76de32a4ba0",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_recomposition_generates_png_and_blank",
+          "line": 18
+        },
+        {
+          "name": "test_test_target_only_scores_after_commit",
+          "line": 29
+        },
+        {
+          "name": "test_invalid_layout_rejected",
+          "line": 38
+        },
+        {
+          "name": "test_memory_tampering_fails_closed",
+          "line": 45
+        }
+      ],
+      "classes": [
+        "CompositionTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.p211b_frozen_gesture_transfer_v0",
+        "brody_world_physique.p211c_gesture_recomposition_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p211d_paired_composition_audit_v0.py",
+      "sha256": "5bc6c03a978b3662175b5ebd7ecd641318275b9e0acbf59262e31cf706dd37f6",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_paired_comparison_counts_improvement_and_regression",
+          "line": 32
+        },
+        {
+          "name": "test_layout_duplicate_refused",
+          "line": 42
+        },
+        {
+          "name": "test_train_test_source_leakage_refused",
+          "line": 50
+        },
+        {
+          "name": "test_existing_output_refused",
+          "line": 58
+        }
+      ],
+      "classes": [
+        "PairedCompositionTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.p211b_frozen_gesture_transfer_v0",
+        "brody_world_physique.p211d_paired_composition_audit_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p211e_regression_diagnostic_v0.py",
+      "sha256": "43b1bd555a055825cb988106a52436a11c554a4ab6ff5b05dbfb70a7bf9ed890",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_partial_and_empty_targets_flagged_without_learning",
+          "line": 35
+        },
+        {
+          "name": "test_candidate_mutation_rejected",
+          "line": 46
+        },
+        {
+          "name": "test_reference_mutation_rejected",
+          "line": 52
+        }
+      ],
+      "classes": [
+        "DiagnosticTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.p211b_frozen_gesture_transfer_v0",
+        "brody_world_physique.p211d_paired_composition_audit_v0",
+        "brody_world_physique.p211e_regression_diagnostic_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p212a_bounded_gesture_revision_v0.py",
+      "sha256": "f559fb1a3eb636747e8ed4a8090af527386d6caefdf69ae9bb63398f6b0c10db",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_seal_all_proposals_then_score_and_keep_history",
+          "line": 17
+        },
+        {
+          "name": "test_blank_reference_does_not_improve_revision",
+          "line": 27
+        },
+        {
+          "name": "test_invalid_layout_or_existing_output_rejected",
+          "line": 32
+        }
+      ],
+      "classes": [
+        "RevisionTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.p211b_frozen_gesture_transfer_v0",
+        "brody_world_physique.p212a_bounded_gesture_revision_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p212b_frozen_shift_transfer_v0.py",
+      "sha256": "65582ea95fb4075547890d99cfd23109fced14ac4fd66c652e717d7e25aa1af3",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_train_only_shift_improves_unseen_layout",
+          "line": 36
+        },
+        {
+          "name": "test_test_target_does_not_change_candidate",
+          "line": 49
+        },
+        {
+          "name": "test_policy_tamper_and_train_layout_reuse_fail",
+          "line": 56
+        },
+        {
+          "name": "test_duplicate_train_teacher_rejected",
+          "line": 64
+        }
+      ],
+      "classes": [
+        "ShiftTransferTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.drawing_school_v1",
+        "brody_world_physique.p211b_frozen_gesture_transfer_v0",
+        "brody_world_physique.p211c_gesture_recomposition_v0",
+        "brody_world_physique.p212a_bounded_gesture_revision_v0",
+        "brody_world_physique.p212b_frozen_shift_transfer_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p212c_mixed_visual_benchmark_v0.py",
+      "sha256": "6b7468704349bb3397e1dfb0e9a562aa403e8a1e6d7fad9313344c8e8d92884d",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_mixed_results_and_visual_outputs",
+          "line": 37
+        },
+        {
+          "name": "test_deduplicated_cases_and_refuse_overwrite",
+          "line": 49
+        }
+      ],
+      "classes": [
+        "MixedVisualBenchmarkTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.drawing_school_v1",
+        "brody_world_physique.p211b_frozen_gesture_transfer_v0",
+        "brody_world_physique.p211c_gesture_recomposition_v0",
+        "brody_world_physique.p212a_bounded_gesture_revision_v0",
+        "brody_world_physique.p212b_frozen_shift_transfer_v0",
+        "brody_world_physique.p212c_mixed_visual_benchmark_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p212d_conservative_correction_gate_v0.py",
+      "sha256": "f50f8c81cea6fb4bc99bdad2839957399b9305364bb0eec936149dc3b32094a7",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_act_and_visible_contradictory_results",
+          "line": 38
+        },
+        {
+          "name": "test_mixed_train_yields_hold",
+          "line": 47
+        },
+        {
+          "name": "test_tamper_rejected",
+          "line": 53
+        }
+      ],
+      "classes": [
+        "GateTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_school_v0",
+        "brody_world_physique.drawing_school_v1",
+        "brody_world_physique.p211b_frozen_gesture_transfer_v0",
+        "brody_world_physique.p211c_gesture_recomposition_v0",
+        "brody_world_physique.p212a_bounded_gesture_revision_v0",
+        "brody_world_physique.p212b_frozen_shift_transfer_v0",
+        "brody_world_physique.p212d_conservative_correction_gate_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p24_contextual_fluctuation_v0.py",
+      "sha256": "c7dd60104fa2f0e6a8d47e1947ec81b3fc83387af58a0cbadcea7b1874c17411",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_all_seven_adversarial_fixtures",
+          "line": 9
+        },
+        {
+          "name": "test_same_pixels_opposite_interpretations",
+          "line": 15
+        },
+        {
+          "name": "test_conflict_is_not_averaged",
+          "line": 24
+        },
+        {
+          "name": "test_provenance_and_replay",
+          "line": 30
+        }
+      ],
+      "classes": [
+        "ContextualFluctuationTest"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p25_pixel_context_v0.py",
+      "sha256": "02d6392a65d95a1611b58cbb9dbc32ea62883fda1a4d808d9ecb63beb36df71c",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_pixel_scenarios",
+          "line": 10
+        },
+        {
+          "name": "test_reject_tampered_report",
+          "line": 25
+        }
+      ],
+      "classes": [
+        "P25PixelContextTest"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "pathlib",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p26_adversarial_pixels_v0.py",
+      "sha256": "b3aff52083bbf4ad5131643449cb48c218a10a8cbc2640b3b96529bf1293a9f6",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_reproducible_pixel_stress_and_sealed_scoring",
+          "line": 8
+        },
+        {
+          "name": "test_modified_receipt_rejected",
+          "line": 20
+        },
+        {
+          "name": "test_invalid_count",
+          "line": 29
+        }
+      ],
+      "classes": [
+        "P26StressTest"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p27_experience_hierarchy_v0.py",
+      "sha256": "b893c1a158d9d21143865610dd0a0c029b114e94f07abc419232b6ff11fc8912",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_same_observation_different_order",
+          "line": 8
+        },
+        {
+          "name": "test_conflict_holds_majority_not_history",
+          "line": 17
+        },
+        {
+          "name": "test_replay_and_tampering",
+          "line": 23
+        }
+      ],
+      "classes": [
+        "HierarchyExperienceTest"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p28_epistemic_reversal_v0.py",
+      "sha256": "b15e5f3cc27f65e946e93d96caeb92a079b791d3fac09f63a81c2b738e0087e1",
+      "declared_tests": 6,
+      "tests": [
+        {
+          "name": "test_duplicate_evidence_group_does_not_gain_votes",
+          "line": 12
+        },
+        {
+          "name": "test_intent_cannot_change_prediction_or_truth",
+          "line": 22
+        },
+        {
+          "name": "test_pre_feedback_no_truth_fields",
+          "line": 34
+        },
+        {
+          "name": "test_reversal_does_not_remain_frozen",
+          "line": 42
+        },
+        {
+          "name": "test_hold_without_calibration",
+          "line": 48
+        },
+        {
+          "name": "test_determinism_and_integrity",
+          "line": 54
+        }
+      ],
+      "classes": [
+        "P28EpistemicReversalTests"
+      ],
+      "imports": [
+        "brody_world_physique.p28_epistemic_reversal_v0",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p28b_pixel_reversal_v0.py",
+      "sha256": "8719f51bf1c39fc021b42e0dc960a40e82e708a78b3e5556140ac5ea2e9af966",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_detected_pixels_not_simulator_shift_api",
+          "line": 10
+        },
+        {
+          "name": "test_reliable_anchor_moves",
+          "line": 20
+        },
+        {
+          "name": "test_no_verdict_or_memory_mutation",
+          "line": 24
+        },
+        {
+          "name": "test_hold_on_missing_object",
+          "line": 32
+        },
+        {
+          "name": "test_replay_and_tamper",
+          "line": 39
+        }
+      ],
+      "classes": [
+        "P28bPixelReversal"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p28c_guarded_reversal_v0.py",
+      "sha256": "05f8f0a039579f218afcfb7b0a6e685451c49b72bf1240f9acbca775367153a4",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_no_feedback_holds",
+          "line": 8
+        },
+        {
+          "name": "test_deduplication",
+          "line": 12
+        },
+        {
+          "name": "test_rank_can_change_after_reversal",
+          "line": 18
+        },
+        {
+          "name": "test_boundary_and_identical_baselines",
+          "line": 27
+        },
+        {
+          "name": "test_replay_integrity",
+          "line": 34
+        }
+      ],
+      "classes": [
+        "GuardedTests"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p29_layer_contracts_v0.py",
+      "sha256": "7bea03b00887e3189fcfefb89e4986012286e4543dc6d5c48926cfe2737aa0d3",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_observation_cannot_contain_truth_or_goal",
+          "line": 9
+        },
+        {
+          "name": "test_perception_hold_cannot_be_inferred",
+          "line": 14
+        },
+        {
+          "name": "test_goal_does_not_rewrite_belief",
+          "line": 22
+        },
+        {
+          "name": "test_explicit_frame_and_invalid_ids",
+          "line": 33
+        },
+        {
+          "name": "test_nonsovereignty",
+          "line": 40
+        }
+      ],
+      "classes": [
+        "P29Boundaries"
+      ],
+      "imports": [
+        "brody_world_physique.p29_layer_contracts_v0",
+        "dataclasses",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p29b_layer_wiring_v0.py",
+      "sha256": "2f761cf034f28755395cddc089426907d44f1188bd2c3fc84d8f0caff2759d6b",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_observation_hold_propagates_without_inventing_truth",
+          "line": 11
+        },
+        {
+          "name": "test_goal_changes_routing_only",
+          "line": 18
+        },
+        {
+          "name": "test_same_pixels_same_pred_as_p28c",
+          "line": 30
+        },
+        {
+          "name": "test_replay_tamper",
+          "line": 39
+        }
+      ],
+      "classes": [
+        "LayerWiringTests"
+      ],
+      "imports": [
+        "brody_world_physique.p28c_guarded_reversal_v0",
+        "brody_world_physique.p29b_layer_wiring_v0",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p29c_transfer_v0.py",
+      "sha256": "724a8ea3274954052e14b64657c1c8b46844a4eefd564d9c71321d07b9491ff2",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_train_only_anchor",
+          "line": 7
+        },
+        {
+          "name": "test_new_visual_generator",
+          "line": 11
+        },
+        {
+          "name": "test_zero_test_feedback_and_intent",
+          "line": 18
+        },
+        {
+          "name": "test_transfer_shows_failures_not_false_promotion",
+          "line": 27
+        },
+        {
+          "name": "test_replay_integrity",
+          "line": 33
+        }
+      ],
+      "classes": [
+        "TransferTests"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p29d_reconnect_organs_v0.py",
+      "sha256": "222281df7acf3177e4607611764ab076e8cc6faffa2cce779c48676d94664ac4",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_actual_existing_world_and_triage_objects",
+          "line": 6
+        },
+        {
+          "name": "test_hold_propagates_across_every_layer",
+          "line": 20
+        },
+        {
+          "name": "test_intent_does_not_alter_predictions_or_evidence",
+          "line": 29
+        },
+        {
+          "name": "test_fail_closed_unknown_frame_and_anchor",
+          "line": 40
+        },
+        {
+          "name": "test_repeatability_and_source_provenance",
+          "line": 49
+        }
+      ],
+      "classes": [
+        "ReconnectedOrgansTests"
+      ],
+      "imports": [
+        "brody_world_physique.p29d_reconnect_organs_v0",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p29e_reciprocal_multiview_v0.py",
+      "sha256": "065d775f2f3fd0e202a84ccfadebdf7351f1cfa9b2a09d4fa9ae9049052dc8d9",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_reciprocal_candidate_not_proof",
+          "line": 5
+        },
+        {
+          "name": "test_correlated_majority_conflicts_with_historical_anchor",
+          "line": 12
+        },
+        {
+          "name": "test_missing_detection_and_unsupported_anchor_hold",
+          "line": 22
+        },
+        {
+          "name": "test_goals_never_rewrite_motion",
+          "line": 32
+        },
+        {
+          "name": "test_frame_is_required",
+          "line": 41
+        }
+      ],
+      "classes": [
+        "P29EMultiview"
+      ],
+      "imports": [
+        "brody_world_physique.p29e_reciprocal_multiview_v0",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p29f_original_organs_bridge_v0.py",
+      "sha256": "9a766a3bdfaf5021391414e21f20a199dc3f7aa11a8aa02444944891f2f6ff4b",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_verified_reuse_without_fusing_sources",
+          "line": 23
+        },
+        {
+          "name": "test_original_verification_is_mandatory",
+          "line": 39
+        },
+        {
+          "name": "test_absent_view_rejected",
+          "line": 45
+        }
+      ],
+      "classes": [
+        "OriginalOrgansBridgeTests"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p29g_one_video_bridge_v0.py",
+      "sha256": "c8bba6aee4d9307d8b559f0782337f4a18e64d3a77e16e295f830738e02313c5",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_same_video_views_and_replay",
+          "line": 26
+        },
+        {
+          "name": "test_mismatched_motion_rejected",
+          "line": 43
+        },
+        {
+          "name": "test_original_p1_verify_mandatory",
+          "line": 51
+        }
+      ],
+      "classes": [
+        "SameSourceTests"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p29h_position_ablation_v0.py",
+      "sha256": "28cf22b03bed8f0884e11e7b6d89b45e7b753368b94f5c92c0c5156f89cd2688",
+      "declared_tests": 2,
+      "tests": [
+        {
+          "name": "test_baselines_and_no_memory_hold",
+          "line": 12
+        },
+        {
+          "name": "test_future_not_passed_to_predict",
+          "line": 20
+        }
+      ],
+      "classes": [
+        "AblationTests"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "pathlib",
+        "tempfile",
+        "types",
+        "unittest",
+        "unittest.mock"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p29i_paired_audit_v0.py",
+      "sha256": "40c9763aec37cf118dde3e36999e2a3d90eb37f0c04450e470b0d4a90ad2cc6a",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_paired_groups",
+          "line": 21
+        },
+        {
+          "name": "test_replay_and_tamper",
+          "line": 27
+        },
+        {
+          "name": "test_incomplete_case_fails",
+          "line": 36
+        },
+        {
+          "name": "test_illegal_test_training_flag_fails",
+          "line": 39
+        }
+      ],
+      "classes": [
+        "PairedAudit"
+      ],
+      "imports": [
+        "brody_world_physique.p29i_paired_audit_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p29j_frozen_hybrid_audit_v0.py",
+      "sha256": "bd08f8c1326d05e6b8ead0f5ee9d6c0c6634f1f79249a72829d059c78f51a2b0",
+      "declared_tests": 6,
+      "tests": [
+        {
+          "name": "test_frozen_choice_is_memory_else_spatial_else_hold",
+          "line": 20
+        },
+        {
+          "name": "test_precommitted_prediction_with_missing_future_is_unscorable",
+          "line": 27
+        },
+        {
+          "name": "test_observed_future_with_missing_selected_score_rejected",
+          "line": 41
+        },
+        {
+          "name": "test_replay_and_mutation",
+          "line": 49
+        },
+        {
+          "name": "test_fail_closed_missing_proof",
+          "line": 58
+        },
+        {
+          "name": "test_test_feedback_never_accepted",
+          "line": 61
+        }
+      ],
+      "classes": [
+        "HybridTests"
+      ],
+      "imports": [
+        "brody_world_physique.p29j_frozen_hybrid_audit_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p2_ablation_diagnostic_v0.py",
+      "sha256": "d7cf62c00e5baf8490f82255260c86233fcfc0454e1812a26a2522235ae6d3aa",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_precommit_baselines_and_future_leak_gate",
+          "line": 13
+        },
+        {
+          "name": "test_acceleration_from_past_only",
+          "line": 50
+        },
+        {
+          "name": "test_reject_nonfinite_forecast",
+          "line": 65
+        }
+      ],
+      "classes": [
+        "P2DiagnosticTest"
+      ],
+      "imports": [
+        "brody_world_physique",
+        "brody_world_physique.preverbal_prediction_v0",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p2_raster_forecast_v0.py",
+      "sha256": "ff5cec3bb59d00c5f024a79f686a380cd49d298d8b5e2c70329ae36f50f0867d",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_linear_future_from_past",
+          "line": 9
+        },
+        {
+          "name": "test_hold_missing_raster",
+          "line": 13
+        },
+        {
+          "name": "test_agreement_is_conservative",
+          "line": 17
+        },
+        {
+          "name": "test_reject_future_or_mismatched_frames",
+          "line": 22
+        }
+      ],
+      "classes": [
+        "P2RasterTest"
+      ],
+      "imports": [
+        "brody_world_physique.p2_raster_forecast_v0",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_p2_streaming_precommit_v0.py",
+      "sha256": "63883cf9ebecde5e9222d1c028bd10600860d18c2e5da156363412f10cbbc4c2",
+      "declared_tests": 3,
+      "tests": [
+        {
+          "name": "test_past_only_inputs_and_fusion",
+          "line": 7
+        },
+        {
+          "name": "test_fusion_holds_when_raster_disagrees",
+          "line": 15
+        },
+        {
+          "name": "test_invalid_or_unknown_input",
+          "line": 22
+        }
+      ],
+      "classes": [
+        "P2StreamingTest"
+      ],
+      "imports": [
+        "brody_world_physique.p2_streaming_precommit_v0",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_persistent_world_state_p165d4.py",
+      "sha256": "a846177d9f021b49d6cecfba72d89c56596f1aa3a24c0c74f297481cb0810652",
+      "declared_tests": 6,
+      "tests": [
+        {
+          "name": "test_persists_when_occluded_with_uncertainty",
+          "line": 5
+        },
+        {
+          "name": "test_reappearance_checks_prediction",
+          "line": 11
+        },
+        {
+          "name": "test_generated_is_not_observation",
+          "line": 14
+        },
+        {
+          "name": "test_goal_views_without_claims",
+          "line": 18
+        },
+        {
+          "name": "test_uncertainty_grows_with_time",
+          "line": 22
+        },
+        {
+          "name": "test_preserve_report",
+          "line": 25
+        }
+      ],
+      "classes": [
+        "WorldStateTests"
+      ],
+      "imports": [
+        "brody_world_physique.persistent_world_state_p165d4",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_preverbal_prediction_v0.py",
+      "sha256": "ef3f185e4fed3105e38a43597f3ff45cb77810d4137908236c0d152098892731",
+      "declared_tests": 11,
+      "tests": [
+        {
+          "name": "test_separate_predict_and_measure_with_heldout",
+          "line": 24
+        },
+        {
+          "name": "test_heldout_does_not_leak_into_prediction",
+          "line": 40
+        },
+        {
+          "name": "test_constant_speed_ties_linear_not_claiming_breakthrough",
+          "line": 48
+        },
+        {
+          "name": "test_observed_claim_does_not_automatically_make_reality_proven",
+          "line": 55
+        },
+        {
+          "name": "test_generated_stays_generated",
+          "line": 61
+        },
+        {
+          "name": "test_no_mixing_frames_units_entities_or_origins",
+          "line": 67
+        },
+        {
+          "name": "test_invalid_timing_or_reused_source_rejected",
+          "line": 78
+        },
+        {
+          "name": "test_refuse_nonfinite_or_unknown_frame",
+          "line": 90
+        },
+        {
+          "name": "test_irregular_times_supported_and_not_assumed_equal",
+          "line": 100
+        },
+        {
+          "name": "test_mmonde_structural_bridge_requires_real_source_and_frame",
+          "line": 107
+        },
+        {
+          "name": "test_cli_produces_bounded_receipt_no_memory",
+          "line": 133
+        }
+      ],
+      "classes": [
+        "PreverbalPredictionTests"
+      ],
+      "imports": [
+        "brody_world_physique.preverbal_prediction_v0",
+        "dataclasses",
+        "json",
+        "pathlib",
+        "tempfile",
+        "types",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_reappearance_gate_p165d6.py",
+      "sha256": "e703d5bce24dd8b07ea1ff27926707ad45622e65b24a012df608ac01254fcbcd",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_four_correct_not_enough_for_reappearance",
+          "line": 6
+        },
+        {
+          "name": "test_same_path_reappearance_metric",
+          "line": 12
+        },
+        {
+          "name": "test_all_hypotheses_propagated_without_oracle",
+          "line": 15
+        },
+        {
+          "name": "test_report_persistence",
+          "line": 24
+        }
+      ],
+      "classes": [
+        "D6Tests"
+      ],
+      "imports": [
+        "brody_world_physique.hard_scene_angles_p165d2",
+        "brody_world_physique.reappearance_gate_p165d6",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_reverso_learning_v0.py",
+      "sha256": "0eedc2fdffeb278fa5ece7b37654488e4f213ce0516a430c36907495439c38cc",
+      "declared_tests": 14,
+      "tests": [
+        {
+          "name": "test_pixel_roundtrip_is_exact_even_across_tile_boundaries",
+          "line": 28
+        },
+        {
+          "name": "test_replay_works_from_files_after_original_is_deleted",
+          "line": 45
+        },
+        {
+          "name": "test_reject_tampered_layer",
+          "line": 55
+        },
+        {
+          "name": "test_reject_missing_or_overlapping_layers",
+          "line": 62
+        },
+        {
+          "name": "test_reject_layer_path_escape",
+          "line": 75
+        },
+        {
+          "name": "test_refuse_overwrite_and_unsupported_tile",
+          "line": 84
+        },
+        {
+          "name": "test_jpeg_reference_is_exact_decoded_rgba_not_file_bytes",
+          "line": 95
+        },
+        {
+          "name": "test_source_anchor_kept_as_reference_not_dump",
+          "line": 113
+        },
+        {
+          "name": "test_unverified_qwen_output_is_not_retained_as_world_fact",
+          "line": 118
+        },
+        {
+          "name": "test_relevant_validated_skill_or_invariant_is_review_candidate",
+          "line": 125
+        },
+        {
+          "name": "test_failure_requires_evidence_and_replay_before_strong_retention",
+          "line": 131
+        },
+        {
+          "name": "test_irrelevant_and_unknown_not_promoted",
+          "line": 141
+        },
+        {
+          "name": "test_world_relation_is_only_candidate_even_if_reviewed",
+          "line": 147
+        },
+        {
+          "name": "test_bad_signal_rejected",
+          "line": 162
+        }
+      ],
+      "classes": [
+        "ReversoPixelMethodTests",
+        "LearningMemoryPolicyTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.reverso_learning_v0",
+        "dataclasses",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_scene_event_epistemic_p165d.py",
+      "sha256": "6b7bb7c019bae85080052a5f997a77697810bbae488794816901c5500399614b",
+      "declared_tests": 4,
+      "tests": [
+        {
+          "name": "test_all_fixture_gates_fail_closed",
+          "line": 6
+        },
+        {
+          "name": "test_camera_ambiguity_hold",
+          "line": 15
+        },
+        {
+          "name": "test_raster_components_measured",
+          "line": 20
+        },
+        {
+          "name": "test_preserves_evidence",
+          "line": 27
+        }
+      ],
+      "classes": [
+        "P165DTests"
+      ],
+      "imports": [
+        "brody_world_physique.image_scene_adversarial_p165a",
+        "brody_world_physique.scene_event_epistemic_p165d",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_video_observation_v0.py",
+      "sha256": "8eb624337359deaed6ba30bf1f3f5ce57863661dfebd3a60f1118ad74f3a9fc9",
+      "declared_tests": 7,
+      "tests": [
+        {
+          "name": "test_video_hash_and_sampling",
+          "line": 25
+        },
+        {
+          "name": "test_reject_bad_time_and_missing_video_frames",
+          "line": 33
+        },
+        {
+          "name": "test_manual_points_are_provenance_candidate_not_physical_truth",
+          "line": 45
+        },
+        {
+          "name": "test_reject_malformed_object_metadata_or_clicks",
+          "line": 60
+        },
+        {
+          "name": "test_heldout_is_not_even_annotated_until_forecast_receipt_written",
+          "line": 74
+        },
+        {
+          "name": "test_explicit_provenance_required_and_reject_forged_real_claim",
+          "line": 114
+        },
+        {
+          "name": "test_early_escape_does_not_forge_prediction_or_experience",
+          "line": 126
+        }
+      ],
+      "classes": [
+        "VideoObservationTests"
+      ],
+      "imports": [
+        "brody_world_physique.preverbal_prediction_v0",
+        "brody_world_physique.video_observation_v0",
+        "json",
+        "pathlib",
+        "sys",
+        "tempfile",
+        "types",
+        "unittest",
+        "unittest.mock"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_world_experience_bridge_v4.py",
+      "sha256": "a70c1ca92c1977c91559912154d79095e5020710b08af835eaec1496b94e2b15",
+      "declared_tests": 7,
+      "tests": [
+        {
+          "name": "test_actual_upstream_contract_ownership_and_local_experience_type",
+          "line": 37
+        },
+        {
+          "name": "test_observation_truth_provenance_and_source_identity",
+          "line": 50
+        },
+        {
+          "name": "test_spatial_relation_is_attached_to_teacher_instruction_not_image_learning",
+          "line": 72
+        },
+        {
+          "name": "test_existing_world_experience_type_is_candidate_only",
+          "line": 84
+        },
+        {
+          "name": "test_world_view_tamper_and_false_semantics_rejected",
+          "line": 98
+        },
+        {
+          "name": "test_v3_source_change_is_not_ignored",
+          "line": 114
+        },
+        {
+          "name": "test_different_episode_representation_not_promoted_to_new_world_discovery",
+          "line": 125
+        }
+      ],
+      "classes": [
+        "V4WorldExperienceTests"
+      ],
+      "imports": [
+        "__future__",
+        "brody_world_physique.drawing_memory_school_v3",
+        "brody_world_physique.drawing_school_v1",
+        "brody_world_physique.instrument_school_v2",
+        "brody_world_physique.world_experience_bridge_v4",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_world_orientation_school_v4_2.py",
+      "sha256": "6eb6f0804d114c4614e37b20db249f619fb5636b414a16484721f0bdbe6ca2e9",
+      "declared_tests": 13,
+      "tests": [
+        {
+          "name": "test_four_observed_cardinals_without_teacher_box_input",
+          "line": 51
+        },
+        {
+          "name": "test_inverse_edges_are_derived_not_keyword_swaps",
+          "line": 61
+        },
+        {
+          "name": "test_reversed_layout_is_no_longer_mistaken_for_top",
+          "line": 68
+        },
+        {
+          "name": "test_unknown_frame_and_diagonal_do_not_get_arbitrary_direction",
+          "line": 72
+        },
+        {
+          "name": "test_unsupported_single_ambiguous_occluded_are_held",
+          "line": 80
+        },
+        {
+          "name": "test_cannot_learn_without_four_cardinal_supervision",
+          "line": 88
+        },
+        {
+          "name": "test_competence_world_memory_and_evidence_all_replay",
+          "line": 116
+        },
+        {
+          "name": "test_no_test_teacher_label_or_instructor_boxes_in_student_precommit",
+          "line": 130
+        },
+        {
+          "name": "test_world_experiences_all_candidate_and_frame_synthetic",
+          "line": 143
+        },
+        {
+          "name": "test_composition_and_replay_images_match",
+          "line": 158
+        },
+        {
+          "name": "test_mutation_of_negative_reciprocal_receipt_rejected",
+          "line": 172
+        },
+        {
+          "name": "test_mutation_of_generated_image_rejected",
+          "line": 184
+        },
+        {
+          "name": "test_previous_world_memory_never_modified",
+          "line": 194
+        }
+      ],
+      "classes": [
+        "DirectedVisualLearningTests",
+        "EndToEndOrientationReplayTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_memory_school_v3",
+        "brody_world_physique.drawing_school_v1",
+        "brody_world_physique.instrument_school_v2",
+        "brody_world_physique.world_experience_bridge_v4",
+        "brody_world_physique.world_orientation_school_v4_2",
+        "brody_world_physique.world_relations_school_v4_1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_world_relations_school_v4_1.py",
+      "sha256": "b1ddab1999628ca2fa4f2abf8d64020debc86d4f585a71fb57ed123132cd5393",
+      "declared_tests": 12,
+      "tests": [
+        {
+          "name": "test_detect_parts_directly_from_pixels_no_box_input",
+          "line": 20
+        },
+        {
+          "name": "test_rotation_translation_and_scale_preserve_normalized_distance_approximately",
+          "line": 29
+        },
+        {
+          "name": "test_learned_rule_depends_on_feedback_not_teacher_dictionary",
+          "line": 40
+        },
+        {
+          "name": "test_topology_unknown_holds",
+          "line": 53
+        },
+        {
+          "name": "test_limitations_are_not_semantic_understanding",
+          "line": 58
+        },
+        {
+          "name": "test_drawing_course_replays_and_no_canonical_memory_promotion",
+          "line": 85
+        },
+        {
+          "name": "test_v4_1_experiences_reuse_existing_world_types_not_another_memory_authority",
+          "line": 102
+        },
+        {
+          "name": "test_test_decisions_are_committed_without_ground_truth",
+          "line": 122
+        },
+        {
+          "name": "test_composer_reuses_observed_pixels_without_teacher_boxes",
+          "line": 135
+        },
+        {
+          "name": "test_altered_training_source_blocks_replay",
+          "line": 146
+        },
+        {
+          "name": "test_false_promotion_and_cooked_evaluation_detected",
+          "line": 156
+        },
+        {
+          "name": "test_upstream_world_not_writable_and_output_no_overwrite",
+          "line": 168
+        }
+      ],
+      "classes": [
+        "VisualPerceptionTests",
+        "FullWorldRelationTests"
+      ],
+      "imports": [
+        "PIL",
+        "brody_world_physique.drawing_memory_school_v3",
+        "brody_world_physique.drawing_school_v1",
+        "brody_world_physique.instrument_school_v2",
+        "brody_world_physique.world_experience_bridge_v4",
+        "brody_world_physique.world_relations_school_v4_1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    },
+    {
+      "file": "tests/test_world_transfer_probe_v1.py",
+      "sha256": "5c69e98d54fc55618f29dbde00114e0b47c6bf05bb979f864b222f8cd8965bab",
+      "declared_tests": 5,
+      "tests": [
+        {
+          "name": "test_conflicting_futures_same_history_lead_to_hold",
+          "line": 35
+        },
+        {
+          "name": "test_reusable_single_experience_remains_unproven_candidate",
+          "line": 44
+        },
+        {
+          "name": "test_novel_history_abstains",
+          "line": 52
+        },
+        {
+          "name": "test_train_test_hash_overlap_rejected",
+          "line": 58
+        },
+        {
+          "name": "test_denies_unproven_real_source_in_simulated_benchmark",
+          "line": 82
+        }
+      ],
+      "classes": [
+        "TransferProbesContractsTests"
+      ],
+      "imports": [
+        "brody_world_physique.experiential_video_v0",
+        "brody_world_physique.preverbal_prediction_v0",
+        "brody_world_physique.world_transfer_probe_v1",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ],
+      "syntax": "OK"
+    }
+  ],
+  "test_files": 148,
+  "declared_tests": 653,
+  "syntax_errors": 0,
+  "legacy": {
+    "p161": {
+      "files": [
+        "tests/test_image_hard_visual_ood_p161.py"
+      ],
+      "declared_tests": 4
+    },
+    "p162": {
+      "files": [
+        "tests/test_image_math_physical_bridge_p162.py"
+      ],
+      "declared_tests": 5
+    },
+    "p163": {
+      "files": [
+        "tests/test_image_camera_occlusion_gate_p163.py"
+      ],
+      "declared_tests": 6
+    },
+    "p164": {
+      "files": [
+        "tests/test_image_identity_occlusion_p164.py"
+      ],
+      "declared_tests": 4
+    },
+    "p165a": {
+      "files": [
+        "tests/test_image_scene_adversarial_p165a.py"
+      ],
+      "declared_tests": 4
+    },
+    "p165b": {
+      "files": [
+        "tests/test_modal_signature_fusion_p165b.py"
+      ],
+      "declared_tests": 7
+    },
+    "p165c": {
+      "files": [
+        "tests/test_contextual_scene_graph_p165c.py"
+      ],
+      "declared_tests": 7
+    },
+    "p165d": {
+      "files": [
+        "tests/test_scene_event_epistemic_p165d.py"
+      ],
+      "declared_tests": 4
+    }
+  },
+  "discovery_caveat": "AST declared test_ methods/functions != unittest collected counts",
+  "scope": "ONLY tests/test*.py under current checked out repository",
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

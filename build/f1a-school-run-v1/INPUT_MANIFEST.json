@@ -1,0 +1,53 @@
+{
+  "exam": [
+    {
+      "relative": "blue_heldout_0.png",
+      "sha256": "69522230bb2ad28f916818425f51e1cb7fc75633e856b2c298343915c5a634f0"
+    },
+    {
+      "relative": "blue_heldout_1.png",
+      "sha256": "d077a4d1130998886b93f9b93ffe9c5c66cd5b29bace4401b792710b6a88dcd7"
+    },
+    {
+      "relative": "red_heldout_0.png",
+      "sha256": "f50bf49e99a3d9ce6e0bd6b76c3a7281d63845c4e4467e6bac3e1042f3c71b4d"
+    },
+    {
+      "relative": "red_heldout_1.png",
+      "sha256": "042158e2ec0348130c8acdf9e0bf830e63416a9b7d28c6a8b76649b685e18306"
+    }
+  ],
+  "source_split_checked": true,
+  "train": [
+    {
+      "relative": "blue_0.png",
+      "sha256": "9a066bab4ed2d585eae5c05d55eac4d78fd119727cdfd0ce8499de559b04d42b",
+      "teacher_identity": "blue"
+    },
+    {
+      "relative": "blue_1.png",
+      "sha256": "53d75c7b558edad995a721913ea804ab51010d4b08fc114ac61f80290d83809c",
+      "teacher_identity": "blue"
+    },
+    {
+      "relative": "blue_2.png",
+      "sha256": "e36ab25cad5e1a5de3af07ec265eea1dc9917e8a9394c8bab19e66d1cee2cb63",
+      "teacher_identity": "blue"
+    },
+    {
+      "relative": "red_0.png",
+      "sha256": "924f34e86f5e0ec1d452b84d1f80e61fe0e3d8a31e14fcec3d18308e83271b75",
+      "teacher_identity": "red"
+    },
+    {
+      "relative": "red_1.png",
+      "sha256": "e94e60b70e34c23ff63a1f2805f5711b9f28fb8639eba07a2e298bfec8617526",
+      "teacher_identity": "red"
+    },
+    {
+      "relative": "red_2.png",
+      "sha256": "6629de78dd22e4a9fa3ad7ee543bec4cb92edf321922351c6c87ffc2fe581574",
+      "teacher_identity": "red"
+    }
+  ]
+}

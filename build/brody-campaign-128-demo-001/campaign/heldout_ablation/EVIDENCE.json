@@ -1,0 +1,103 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "fcf195e11e6e6286e9cdcd6bc2e4a03e2669d3b5ef043fc6146b48e456f8be1f",
+  "memory_digest": "4069cc8fbb2d7f8545f6feff429a3fe978f9282683f9f97d744c45372912b9f1",
+  "native_memory_write": false,
+  "report": {
+    "canonical_promotion": false,
+    "cases": 3,
+    "decision_authority": "KX108_ONLY",
+    "episodes_available": 3,
+    "identical_heldout_cases": true,
+    "independent_scene_proven": false,
+    "mean_paired_advantage_px": 0.0,
+    "memory_frozen_during_exam": true,
+    "memory_outperforms_baseline_on_paired_cases": false,
+    "native_memory_write": false,
+    "no_memory": {
+      "errors_include_holds": false,
+      "holds": 0,
+      "mean_error_px": 2.66667,
+      "selected": 3
+    },
+    "paired_selected": 3,
+    "schema": "BRODY_PAIRED_PHYSICAL_MEMORY_ABLATION_V1",
+    "status": "HELDOUT_PAIRED_COMPARISON_ONLY",
+    "with_memory": {
+      "errors_include_holds": false,
+      "holds": 0,
+      "mean_error_px": 2.66667,
+      "selected": 3
+    }
+  },
+  "rows": [
+    {
+      "case": 1,
+      "context": "vertical|speeding_up",
+      "models_error_px": {
+        "ACCELERATION": 0.0,
+        "STILL": 10.0,
+        "VELOCITY": 2.0
+      },
+      "no_memory": {
+        "error_px": 0.0,
+        "evidence_source": "LOCAL_BACKTEST",
+        "mode": "CANDIDATE",
+        "selected": "ACCELERATION"
+      },
+      "source_sha256": "4c763f4007cf9d4686c926e3ef29c47d705fe614f52753d997f90b41531e51e2",
+      "with_memory": {
+        "error_px": 0.0,
+        "evidence_source": "EXPERIENCE_MATCHED",
+        "mode": "CANDIDATE",
+        "selected": "ACCELERATION"
+      }
+    },
+    {
+      "case": 2,
+      "context": "vertical|reversal",
+      "models_error_px": {
+        "ACCELERATION": 10.0,
+        "STILL": 8.0,
+        "VELOCITY": 2.0
+      },
+      "no_memory": {
+        "error_px": 8.0,
+        "evidence_source": "LOCAL_BACKTEST",
+        "mode": "CANDIDATE",
+        "selected": "STILL"
+      },
+      "source_sha256": "9f149db78b5076a0d3efd9205dc8599d443026a9ffad1bc396747e79b55f2ff8",
+      "with_memory": {
+        "error_px": 8.0,
+        "evidence_source": "LOCAL_BACKTEST",
+        "mode": "CANDIDATE",
+        "selected": "STILL"
+      }
+    },
+    {
+      "case": 3,
+      "context": "vertical|stationary",
+      "models_error_px": {
+        "ACCELERATION": 6.0,
+        "STILL": 0.0,
+        "VELOCITY": 0.0
+      },
+      "no_memory": {
+        "error_px": 0.0,
+        "evidence_source": "LOCAL_BACKTEST",
+        "mode": "CANDIDATE",
+        "selected": "STILL"
+      },
+      "source_sha256": "a436cbd32f2ca21ce19800db871f69c0be569cce20fd6c5f1a65a1c79d26634d",
+      "with_memory": {
+        "error_px": 0.0,
+        "evidence_source": "LOCAL_BACKTEST",
+        "mode": "CANDIDATE",
+        "selected": "STILL"
+      }
+    }
+  ],
+  "schema": "BRODY_PAIRED_ABLATION_EVIDENCE_V1"
+}

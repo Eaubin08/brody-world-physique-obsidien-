@@ -1,0 +1,23 @@
+{
+  "index": 8,
+  "previous": "3ae71dd6703bd910b0b36a7ec55eead8d2ef15f557c6cde426a2af7a2909efc7",
+  "kind": "INSTRUMENT_SELECTION_TEST",
+  "payload": {
+    "shape": "triangle",
+    "intent": "UNIFORM",
+    "instrument": "PEN",
+    "candidate_sha256": "e7486038221825af5edb85ca6d4ac1c4400c77b5d552f081b42b90ce3e862ffd",
+    "tool_training_ids": [
+      "training_04",
+      "training_05",
+      "training_06"
+    ],
+    "heldout_score": 0.0,
+    "baseline_score": 7.34619140625,
+    "target_used_for_training": false
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "009980d8e1c32fe80e7eaa58d640dfb104b01127177e9688f5c52ea820d109f8"
+}

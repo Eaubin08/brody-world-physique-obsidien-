@@ -1,0 +1,63 @@
+{
+  "all_pass": true,
+  "decision_authority": "KX108_ONLY",
+  "evaluations": [
+    {
+      "case": "moving_object_fixed_camera",
+      "estimated_world_displacement": 10.0,
+      "expected_world_displacement": 10.0,
+      "passed": true,
+      "status": "CANDIDATE_CONTEXTUAL_CORRECTION"
+    },
+    {
+      "case": "fixed_object_moving_camera",
+      "estimated_world_displacement": 0.0,
+      "expected_world_displacement": 0.0,
+      "passed": true,
+      "status": "CANDIDATE_CONTEXTUAL_CORRECTION"
+    },
+    {
+      "case": "both_moving",
+      "estimated_world_displacement": 6.0,
+      "expected_world_displacement": 6.0,
+      "passed": true,
+      "status": "CANDIDATE_CONTEXTUAL_CORRECTION"
+    },
+    {
+      "case": "outlier_recoverable",
+      "estimated_world_displacement": 6.0,
+      "expected_world_displacement": 6.0,
+      "passed": true,
+      "status": "CANDIDATE_CONTEXTUAL_CORRECTION"
+    },
+    {
+      "case": "ambiguous_conflict",
+      "estimated_world_displacement": null,
+      "expected_world_displacement": null,
+      "passed": true,
+      "status": "HOLD_CONFLICTING_CONTEXT"
+    },
+    {
+      "case": "missing_context",
+      "estimated_world_displacement": null,
+      "expected_world_displacement": null,
+      "passed": true,
+      "status": "HOLD_INSUFFICIENT_CONTEXT"
+    },
+    {
+      "case": "unknown_alignment",
+      "estimated_world_displacement": null,
+      "expected_world_displacement": null,
+      "passed": true,
+      "status": "HOLD_FRAME_ALIGNMENT_UNKNOWN"
+    }
+  ],
+  "knowledge_learned": false,
+  "native_memory_write_allowed": false,
+  "passed": 7,
+  "physical_world_understood": false,
+  "raw_pixels_tested": false,
+  "schema": "BRODY_P24_CONTEXTUAL_FLUCTUATION_V0",
+  "source_kind": "SIMULATED",
+  "total": 7
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "BRODY_F3C_RECALL_EXAM_V0",
+  "registry_version": 3,
+  "registry_sha256": "a8091b361d2501ccaf625e3bdd9992af37417f911c19d966f0dec813be645058",
+  "skill_id": "triangle",
+  "candidate_sha256": "74a25962a4a1ce8e6af08b42fa364e5340dcd9cbe20341e899e03616e1784ba6",
+  "sealed_before_teacher": true,
+  "target_used_to_select_memory": false,
+  "memory_reused_from_previous_lesson": true,
+  "native_memory_write": false,
+  "decision_authority": "KX108_ONLY",
+  "candidate_error": 145,
+  "blank_error": 245,
+  "gain": 100,
+  "verdict": "IMPROVED"
+}

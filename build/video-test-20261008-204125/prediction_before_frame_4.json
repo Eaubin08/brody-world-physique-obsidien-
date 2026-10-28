@@ -1,0 +1,34 @@
+{
+  "entity_ref": "user-selected-object-01",
+  "frame_ref": "camera-image-plane:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+  "unit": "px",
+  "source_kind": "OBSERVED_CLAIM",
+  "history_source_refs": [
+    "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:0#annotation:human",
+    "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:3#annotation:human",
+    "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:6#annotation:human"
+  ],
+  "future_time_s": 0.3,
+  "candidate_xy": [
+    -91.99999999999989,
+    92.00000000000007
+  ],
+  "linear_baseline_xy": [
+    189.0,
+    315.0
+  ],
+  "stationary_baseline_xy": [
+    284.0,
+    319.0
+  ],
+  "route": "FINITE_DIFFERENCE_CONSTANT_ACCELERATION_CANDIDATE",
+  "source_kind_verified_real": false,
+  "causal_proof": false,
+  "physical_law_proven": false,
+  "uncertainty_calibrated": false,
+  "readonly": true,
+  "memory_write_allowed": false,
+  "auto_promotion_allowed": false,
+  "decision_authority": "KX108_ONLY",
+  "allowed_to_act": false
+}

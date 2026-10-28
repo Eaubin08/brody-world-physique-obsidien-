@@ -1,0 +1,50 @@
+{
+  "schema": "BRODY_ADAPTIVE_VISUAL_LAB_P138",
+  "budget_minutes": 10,
+  "actual_seconds": 52.125,
+  "episodes": 20000,
+  "cycles": 3330,
+  "new_scenes_each_episode": true,
+  "family_stats": {
+    "colour": {
+      "attempts": 2500,
+      "fails": 0
+    },
+    "count": {
+      "attempts": 2500,
+      "fails": 0
+    },
+    "location": {
+      "attempts": 2500,
+      "fails": 0
+    },
+    "rotation": {
+      "attempts": 2500,
+      "fails": 0
+    },
+    "shape": {
+      "attempts": 2500,
+      "fails": 0
+    },
+    "occlusion": {
+      "attempts": 2500,
+      "fails": 0
+    },
+    "reflection": {
+      "attempts": 2500,
+      "fails": 0
+    },
+    "relations": {
+      "attempts": 2500,
+      "fails": 0
+    }
+  },
+  "passes": 20000,
+  "failures": 0,
+  "stopped_by": "EPISODE_CAP",
+  "tests_are_procedural_not_external": true,
+  "training_or_generalization_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

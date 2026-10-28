@@ -1,0 +1,10 @@
+{
+  "schema": "BRODY_F1A_SYNTHETIC_SMOKE_DATASET_V1",
+  "synthetic": true,
+  "physical_motion_observed": false,
+  "source": "deterministic PIL shapes",
+  "train_images": 6,
+  "test_images": 4,
+  "train_test_images_distinct": true,
+  "semantic_identity_proven": false
+}

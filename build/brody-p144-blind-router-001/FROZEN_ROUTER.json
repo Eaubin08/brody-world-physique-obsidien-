@@ -1,0 +1,43 @@
+{
+  "validation_examples": {
+    "shape": 1800,
+    "colour": 1800,
+    "count": 1800,
+    "arrangement": 1800,
+    "orientation": 1800
+  },
+  "condition_aware_comparator": {
+    "shape/native": "geo",
+    "colour/native": "geo",
+    "count/native": "rgb",
+    "arrangement/native": "rgb",
+    "orientation/native": "geo",
+    "shape/mirror": "geo",
+    "colour/mirror": "geo",
+    "count/mirror": "geo",
+    "arrangement/mirror": "geo",
+    "orientation/mirror": "geo",
+    "shape/greyscale": "geo",
+    "colour/greyscale": "majority",
+    "count/greyscale": "rgb",
+    "arrangement/greyscale": "rgb",
+    "orientation/greyscale": "geo",
+    "shape/posterize": "geo",
+    "colour/posterize": "geo",
+    "count/posterize": "geo",
+    "arrangement/posterize": "rgb",
+    "orientation/posterize": "geo",
+    "shape/blur": "geo",
+    "colour/blur": "geo",
+    "count/blur": "rgb",
+    "arrangement/blur": "rgb",
+    "orientation/blur": "geo",
+    "shape/contrast": "geo",
+    "colour/contrast": "rgb",
+    "count/contrast": "geo",
+    "arrangement/contrast": "geo",
+    "orientation/contrast": "geo"
+  },
+  "exam_labels_used": false,
+  "runtime_requires_transform_name": false
+}

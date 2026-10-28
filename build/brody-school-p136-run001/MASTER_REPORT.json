@@ -1,0 +1,15 @@
+{
+  "schema": "BRODY_FORTY_DISTINCT_PROTOCOLS_P136",
+  "total": 40,
+  "domains": 8,
+  "counts": {
+    "PASS": 35,
+    "FAIL": 0,
+    "HOLD": 0,
+    "TODO": 5
+  },
+  "real_world_generalization_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

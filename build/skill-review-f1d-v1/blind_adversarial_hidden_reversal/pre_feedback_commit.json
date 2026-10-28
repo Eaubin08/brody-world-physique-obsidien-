@@ -1,0 +1,24 @@
+{
+  "canonical_promotion": false,
+  "case": "adversarial_hidden_reversal",
+  "decision_authority": "KX108_ONLY",
+  "digest": "81cf3f948786f43ba8bfabc5328a9db50d44c36705521ba3ab6635473ba9f920",
+  "local_prediction": {
+    "radius": 4.4065,
+    "t": 4.0,
+    "x": 46.0,
+    "y": 47.0
+  },
+  "native_memory_write": false,
+  "review_digest": "893d4d289f95ba3823311f9eb0fd9dfc931f9ea75a669199b300d2a53cd80325",
+  "selected_for_external_use": null,
+  "sha_forecast": "4b0d19a41921f74596ca17b63e7cebcc778cf47ca3986070eb22ee6b482ab101",
+  "sha_shadow": "85b3b5acf57d564dd1f7e941b2549892c4fa2688133e74b57015f68891831f2e",
+  "shadow_prediction": {
+    "radius": 4.4065,
+    "t": 4.0,
+    "x": 46.0,
+    "y": 48.0
+  },
+  "status": "HOLD"
+}

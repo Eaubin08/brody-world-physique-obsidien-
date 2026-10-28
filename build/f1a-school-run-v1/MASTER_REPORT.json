@@ -1,0 +1,74 @@
+{
+  "ball_trajectory_prediction_tested": false,
+  "canonical_promotion": false,
+  "continuous": {
+    "blind_pre_feedback": true,
+    "canonical_promotion": false,
+    "contradictions": 0,
+    "decision_authority": "KX108_ONLY",
+    "durable_checkpoint_after_each_lesson": true,
+    "external_web_discovery": false,
+    "identities": 2,
+    "lessons": 6,
+    "local_labeled_discovery": true,
+    "max_hypotheses": 3,
+    "native_memory_write": false,
+    "observations": 6,
+    "receipt_tip": "9bfce83eb2b55a7c7c0197221240656528b9f0ccfdb54515a3eabfa3a1b3b5fe",
+    "schema": "BRODY_UNIFIED_LOCAL_SCHOOL_V1",
+    "semantic_recognition_proven": false,
+    "status": "UNIFIED_LOCAL_CANDIDATE_SCHOOL",
+    "teacher_authenticated": false
+  },
+  "continuous_exam": {
+    "candidate_predictions": 0,
+    "canonical_promotion": false,
+    "cases": 4,
+    "decision_authority": "KX108_ONLY",
+    "holds": 4,
+    "memory_updated": false,
+    "native_memory_write": false,
+    "receipt_tip": "cb3f8022842582bed6447530c52494f51d1c205922c8fb593b472c19d22d3c7c",
+    "schema": "BRODY_UNIFIED_BLIND_RECALL_EXAM_V1",
+    "semantic_recognition_proven": false
+  },
+  "decision_authority": "KX108_ONLY",
+  "f1_green": false,
+  "interruption_resume_cross_engine_tested": false,
+  "native_memory_write": false,
+  "p156": {
+    "cycles_completed": 24,
+    "exam_cases": 480,
+    "final_mean_error": {
+      "frozen": 0.6426866552014483,
+      "gated": 0.5795008843219113,
+      "ungated": 1.047515563382993
+    },
+    "full_curriculum_completed": true
+  },
+  "reciprocal_exam": {
+    "candidate_predictions": 2,
+    "canonical_promotion": false,
+    "cases": 4,
+    "decision_authority": "KX108_ONLY",
+    "doubts": 2,
+    "generations_from_stored_prototypes": true,
+    "native_memory_write": false,
+    "receipt_tip": "7c59f2f29b69b24bad5de8893e6e5dfb0d8ea9f759d2208fcbfc083325642326",
+    "schema": "BRODY_RECIPROCAL_GENERATION_EXAM_V1",
+    "semantic_generation_proven": false
+  },
+  "reciprocal_generate": {
+    "generator": "RGB_4x4_TILE_PROTOTYPE",
+    "reconstructions": 2
+  },
+  "reciprocal_train": {
+    "distinct_examples": 6,
+    "identities": 2
+  },
+  "schema": "BRODY_F1A_THREE_SCHOOL_WIRING_V1",
+  "shared_physical_competence": false,
+  "shared_visual_training_sources": true,
+  "unified_education_e2e": false,
+  "verdict": "F1A_WIRING_SMOKE_ONLY"
+}

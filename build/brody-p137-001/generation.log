@@ -1,0 +1,8 @@
+
+test_eight_different_capabilities (test_image_multicapability_lab_p133.MulticapabilityTests.test_eight_different_capabilities) ... ok
+test_fail_closed_and_occlusion_uncertainty (test_image_multicapability_lab_p133.MulticapabilityTests.test_fail_closed_and_occlusion_uncertainty) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.028s
+
+OK

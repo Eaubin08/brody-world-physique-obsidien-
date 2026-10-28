@@ -1,0 +1,115 @@
+{
+  "schema": "BRODY_P148_TEMPORAL_OCCLUSION",
+  "episodes": 15000,
+  "elapsed_seconds": 45.093,
+  "budget_seconds": 900,
+  "scenarios": {
+    "continuous": {
+      "n": 1500,
+      "history_answered": 1500,
+      "snapshot_answered": 1500,
+      "history_mae_total": 0.0,
+      "snapshot_mae_total": 6045.0,
+      "history_holds": 0,
+      "history_mae": 0.0,
+      "snapshot_mae": 4.03
+    },
+    "reverse": {
+      "n": 1500,
+      "history_answered": 1500,
+      "snapshot_answered": 1500,
+      "history_mae_total": 0.0,
+      "snapshot_mae_total": 5970.0,
+      "history_holds": 0,
+      "history_mae": 0.0,
+      "snapshot_mae": 3.98
+    },
+    "stop": {
+      "n": 1500,
+      "history_answered": 1500,
+      "snapshot_answered": 1500,
+      "history_mae_total": 0.0,
+      "snapshot_mae_total": 0.0,
+      "history_holds": 0,
+      "history_mae": 0.0,
+      "snapshot_mae": 0.0
+    },
+    "acceleration": {
+      "n": 1500,
+      "history_answered": 1500,
+      "snapshot_answered": 1500,
+      "history_mae_total": 1555.0,
+      "snapshot_mae_total": 10496.5,
+      "history_holds": 0,
+      "history_mae": 1.0367,
+      "snapshot_mae": 6.9977
+    },
+    "enter_occlusion": {
+      "n": 1500,
+      "history_answered": 1500,
+      "snapshot_answered": 0,
+      "history_mae_total": 9241.0,
+      "snapshot_mae_total": 0.0,
+      "history_holds": 0,
+      "history_mae": 6.1607,
+      "snapshot_mae": null
+    },
+    "exit_occlusion": {
+      "n": 1500,
+      "history_answered": 1500,
+      "snapshot_answered": 1020,
+      "history_mae_total": 8986.0,
+      "snapshot_mae_total": 1738.5,
+      "history_holds": 0,
+      "history_mae": 5.9907,
+      "snapshot_mae": 1.7044
+    },
+    "ambiguous_current": {
+      "n": 1500,
+      "history_answered": 0,
+      "snapshot_answered": 0,
+      "history_mae_total": 0.0,
+      "snapshot_mae_total": 0.0,
+      "history_holds": 1500,
+      "history_mae": null,
+      "snapshot_mae": null
+    },
+    "two_objects": {
+      "n": 1500,
+      "history_answered": 1500,
+      "snapshot_answered": 1500,
+      "history_mae_total": 0.0,
+      "snapshot_mae_total": 6058.0,
+      "history_holds": 0,
+      "history_mae": 0.0,
+      "snapshot_mae": 4.0387
+    },
+    "full_occlusion": {
+      "n": 1500,
+      "history_answered": 0,
+      "snapshot_answered": 0,
+      "history_mae_total": 0.0,
+      "snapshot_mae_total": 0.0,
+      "history_holds": 1500,
+      "history_mae": null,
+      "snapshot_mae": null
+    },
+    "out_of_view": {
+      "n": 1500,
+      "history_answered": 1500,
+      "snapshot_answered": 1500,
+      "history_mae_total": 0.0,
+      "snapshot_mae_total": 5981.0,
+      "history_holds": 0,
+      "history_mae": 0.0,
+      "snapshot_mae": 3.9873
+    }
+  },
+  "stopped_by": "EPISODE_CAP",
+  "physics_learning_proven": false,
+  "memory_updates": false,
+  "real_world_sources": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

@@ -1,0 +1,27 @@
+{
+  "canonical_promotion": false,
+  "cases": 3,
+  "decision_authority": "KX108_ONLY",
+  "episodes_available": 3,
+  "identical_heldout_cases": true,
+  "independent_scene_proven": false,
+  "mean_paired_advantage_px": 0.0,
+  "memory_frozen_during_exam": true,
+  "memory_outperforms_baseline_on_paired_cases": false,
+  "native_memory_write": false,
+  "no_memory": {
+    "errors_include_holds": false,
+    "holds": 0,
+    "mean_error_px": 2.66667,
+    "selected": 3
+  },
+  "paired_selected": 3,
+  "schema": "BRODY_PAIRED_PHYSICAL_MEMORY_ABLATION_V1",
+  "status": "HELDOUT_PAIRED_COMPARISON_ONLY",
+  "with_memory": {
+    "errors_include_holds": false,
+    "holds": 0,
+    "mean_error_px": 2.66667,
+    "selected": 3
+  }
+}

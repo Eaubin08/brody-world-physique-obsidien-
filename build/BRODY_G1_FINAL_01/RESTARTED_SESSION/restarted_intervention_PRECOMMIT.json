@@ -1,0 +1,19 @@
+{
+  "canonical_promotion": false,
+  "context": "intervention",
+  "decision_authority": "KX108_ONLY",
+  "digest": "a104c187207cb46aee55d71bf36934c59d65ddb82da2ef9a767629deef738db5",
+  "history": [
+    31.0,
+    34.0,
+    37.0,
+    40.0,
+    42.0,
+    43.0
+  ],
+  "native_memory_write": false,
+  "prediction": 43.0,
+  "source_kind": "SIMULATED",
+  "state_sha256": "a4f9defd057f98f753937a870fc2135349c7fbe4b47f113b296468ef0d069120",
+  "trial": "restarted_intervention"
+}

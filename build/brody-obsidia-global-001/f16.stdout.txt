@@ -1,0 +1,1 @@
+{"status": "SOURCE_CONTRACT_PREFLIGHT", "brody_image_registered": false, "registered_domains": ["bank", "ecom", "gps_defense_aviation", "meta", "tooling_build", "trading"]}

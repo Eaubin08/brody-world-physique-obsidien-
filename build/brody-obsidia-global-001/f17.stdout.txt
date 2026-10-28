@@ -1,0 +1,22 @@
+{
+  "schema": "BRODY_F17_CANONICAL_AGENT_CONTEXT_DRYRUN_V0",
+  "count": 1000,
+  "source_sha256": "8e85d2d6929ecbb457386df0b2a637f3ac016dfbe049047708468c7bfaf2bb3d",
+  "dryrun_results": {
+    "HOLD": 1000,
+    "BLOCK": 0,
+    "ALLOW_CONTEXT_ONLY": 0,
+    "other": 0
+  },
+  "real_agent_result_adapter": true,
+  "real_context_packet": true,
+  "real_x108_context_dryrun": true,
+  "real_guardx108_sovereign_invoked": false,
+  "real_sigma_invoked": false,
+  "provider_runtime_invoked": false,
+  "domain_registered": false,
+  "source_attestation_verified": false,
+  "native_memory_write": false,
+  "kernel_mutation": false,
+  "status": "CONTEXT_DRYRUN_FAIL_CLOSED_ONLY"
+}

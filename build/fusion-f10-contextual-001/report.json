@@ -1,0 +1,251 @@
+{
+  "schema": "BRODY_F10_CONTEXTUAL_INTENSIVE_V0",
+  "episodes": 1000,
+  "receipt_tip": "0f6f0e4526a0f69139231cb3c317e6eb75b071de8299da6ae6f6c7d7df941a39",
+  "candidate_policy_changes": 0,
+  "trained_contexts": 24,
+  "exam_count": 1400,
+  "checkpoints": [
+    {
+      "episode": 100,
+      "regimes": {
+        "OLD": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "NEW": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "MIXED": {
+          "mean_error": 0.0,
+          "evaluated": 44,
+          "holds": 4
+        }
+      }
+    },
+    {
+      "episode": 200,
+      "regimes": {
+        "OLD": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "NEW": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "MIXED": {
+          "mean_error": 0.0,
+          "evaluated": 44,
+          "holds": 4
+        }
+      }
+    },
+    {
+      "episode": 300,
+      "regimes": {
+        "OLD": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "NEW": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "MIXED": {
+          "mean_error": 0.0,
+          "evaluated": 44,
+          "holds": 4
+        }
+      }
+    },
+    {
+      "episode": 400,
+      "regimes": {
+        "OLD": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "NEW": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "MIXED": {
+          "mean_error": 0.0,
+          "evaluated": 44,
+          "holds": 4
+        }
+      }
+    },
+    {
+      "episode": 500,
+      "regimes": {
+        "OLD": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "NEW": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "MIXED": {
+          "mean_error": 0.0,
+          "evaluated": 44,
+          "holds": 4
+        }
+      }
+    },
+    {
+      "episode": 600,
+      "regimes": {
+        "OLD": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "NEW": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "MIXED": {
+          "mean_error": 0.0,
+          "evaluated": 44,
+          "holds": 4
+        }
+      }
+    },
+    {
+      "episode": 700,
+      "regimes": {
+        "OLD": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "NEW": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "MIXED": {
+          "mean_error": 0.0,
+          "evaluated": 44,
+          "holds": 4
+        }
+      }
+    },
+    {
+      "episode": 800,
+      "regimes": {
+        "OLD": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "NEW": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "MIXED": {
+          "mean_error": 0.0,
+          "evaluated": 44,
+          "holds": 4
+        }
+      }
+    },
+    {
+      "episode": 900,
+      "regimes": {
+        "OLD": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "NEW": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "MIXED": {
+          "mean_error": 0.0,
+          "evaluated": 44,
+          "holds": 4
+        }
+      }
+    },
+    {
+      "episode": 1000,
+      "regimes": {
+        "OLD": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "NEW": {
+          "mean_error": 0.0,
+          "evaluated": 48,
+          "holds": 0
+        },
+        "MIXED": {
+          "mean_error": 0.0,
+          "evaluated": 44,
+          "holds": 4
+        }
+      }
+    }
+  ],
+  "final_regimes": {
+    "OLD": {
+      "mean_error": 0.0,
+      "evaluated": 48,
+      "holds": 0
+    },
+    "NEW": {
+      "mean_error": 0.0,
+      "evaluated": 48,
+      "holds": 0
+    },
+    "MIXED": {
+      "mean_error": 0.0,
+      "evaluated": 44,
+      "holds": 4
+    }
+  },
+  "first_regimes": {
+    "OLD": {
+      "mean_error": 0.0,
+      "evaluated": 48,
+      "holds": 0
+    },
+    "NEW": {
+      "mean_error": 0.0,
+      "evaluated": 48,
+      "holds": 0
+    },
+    "MIXED": {
+      "mean_error": 0.0,
+      "evaluated": 44,
+      "holds": 4
+    }
+  },
+  "ambiguous_contexts_held": true,
+  "no_test_feedback_learning": true,
+  "evaluation_synthetic_shared_renderer": true,
+  "general_world_comprehension_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

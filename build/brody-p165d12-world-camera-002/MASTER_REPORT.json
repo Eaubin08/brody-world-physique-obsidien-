@@ -1,0 +1,76 @@
+{
+  "schema": "BRODY_P165D12_WORLD_CAMERA_IDENTITY_SEPARATION",
+  "families": {
+    "OBJECT_MOVES": {
+      "n": 12,
+      "pre": 12,
+      "post": 12,
+      "same_path": 12,
+      "identity_proven": 0,
+      "CANDIDATE": 12,
+      "MULTI": 0,
+      "HOLD": 0
+    },
+    "CAMERA_MOVES": {
+      "n": 12,
+      "pre": 12,
+      "post": 12,
+      "same_path": 12,
+      "identity_proven": 0,
+      "CANDIDATE": 12,
+      "MULTI": 0,
+      "HOLD": 0
+    },
+    "COMPENSATED_MOTION": {
+      "n": 12,
+      "pre": 12,
+      "post": 12,
+      "same_path": 12,
+      "identity_proven": 0,
+      "CANDIDATE": 12,
+      "MULTI": 0,
+      "HOLD": 0
+    },
+    "OCCLUSION": {
+      "n": 12,
+      "pre": 12,
+      "post": 12,
+      "same_path": 12,
+      "identity_proven": 0,
+      "CANDIDATE": 0,
+      "MULTI": 12,
+      "HOLD": 0
+    },
+    "IDENTITY_SWAP": {
+      "n": 12,
+      "pre": 0,
+      "post": 0,
+      "same_path": 0,
+      "identity_proven": 0,
+      "CANDIDATE": 0,
+      "MULTI": 12,
+      "HOLD": 0
+    },
+    "CROSSING": {
+      "n": 12,
+      "pre": 12,
+      "post": 12,
+      "same_path": 12,
+      "identity_proven": 0,
+      "CANDIDATE": 0,
+      "MULTI": 12,
+      "HOLD": 0
+    }
+  },
+  "episodes": 72,
+  "true_world_coordinates_used_only_for_evaluation": true,
+  "camera_landmarks_are_visible_pixels": true,
+  "camera_parameters_to_infer": false,
+  "identity_to_infer": false,
+  "identity_swap_claim_of_continuity_is_invalid": true,
+  "genuine_3d_or_physical_world_proven": false,
+  "tracker_unchanged": true,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

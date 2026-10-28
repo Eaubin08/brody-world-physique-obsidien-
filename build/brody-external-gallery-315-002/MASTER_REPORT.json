@@ -1,0 +1,22 @@
+{
+  "schema": "BRODY_EXTERNAL_IMAGE_VISUAL_GALLERY_V0",
+  "images": 63,
+  "cases": 315,
+  "receipt_tip": "eeabf5477653b05a8d5f4bf88fb580fb403231e54c233ebac901ef921a9ec4cb",
+  "galleries": 315,
+  "holds": 15,
+  "improved": 186,
+  "worsened": 0,
+  "mean_before": 12.646575055803572,
+  "mean_after": 10.54181884765625,
+  "baseline": "FIXED_PENCIL_NOT_LEARNED_POLICY",
+  "correction": "VISIBLE_REFERENCE_EXHAUSTIVE_THREE_TOOL_SEARCH",
+  "image_origin_authenticated": false,
+  "semantic_vision_proven": false,
+  "blind_generalization_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "kernel_mutation": false,
+  "decision_authority": "KX108_ONLY",
+  "status": "VISUAL_ERROR_GALLERY_RECORDED_SYNTHETIC_TOOLS"
+}

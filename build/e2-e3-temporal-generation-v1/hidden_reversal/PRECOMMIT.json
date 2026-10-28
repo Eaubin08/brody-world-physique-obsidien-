@@ -1,0 +1,19 @@
+{
+  "P149_reason": "TRACK_LINEAR_EXTRAPOLATION",
+  "canonical_promotion": false,
+  "case": "hidden_reversal",
+  "decision_authority": "KX108_ONLY",
+  "digest": "ba14aff916787f75a992e9676025aee96feeebbe919da196b78b26321b1154b0",
+  "history_pixel_sha256": [
+    "0a061fcebbbf55bf2735b4eae976c0f50bae4c2b50a9ee9ee04e9bc7381c9d6f",
+    "e0c753de4877e560c268bc089923543b7dd70d573dc560864a63b524d2f27579",
+    "c74e239596022ceeda4586fdf32cc7152694a68bcd29ef859cf60bb0c23dd6a0",
+    "3eb03441f29b972391ee6096f540f1cad7211d32667066da149bb7b7be90503c",
+    "145139226b328b2bf3fd9fcdda31dde8c0221b066827cac2704440964bee62bd",
+    "ec7c91d2aea6f528f2e99f37cf295e6c2a26fea5e1a22ce203784ade2061b63d"
+  ],
+  "native_memory_write": false,
+  "source_mask_sha": "4f5a0f6221b0f3da5a4b6985beb5d5e9d7bc84732fce7c9f8282205fe5577b79",
+  "x_last": 32.0,
+  "x_prediction": 36.0
+}

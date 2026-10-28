@@ -1,0 +1,37 @@
+{
+  "bank_source": "FROZEN_PIXEL_PROBE_BANK",
+  "canonical_promotion": false,
+  "case": "regular_slope",
+  "choice": {
+    "action": "tap",
+    "decision": "PROBE",
+    "options": [
+      {
+        "action": "tap",
+        "cost": 0.7,
+        "information": 1.584963,
+        "utility": 1.409963
+      },
+      {
+        "action": "tilt",
+        "cost": 1.0,
+        "information": 1.584963,
+        "utility": 1.334963
+      },
+      {
+        "action": "observe",
+        "cost": 0.1,
+        "information": 0.0,
+        "utility": -0.025
+      }
+    ]
+  },
+  "decision_authority": "KX108_ONLY",
+  "digest": "65182a083bfb62d0a8c4452799a7b1ec6ced3484b97b4bf8f1899b010bb4f35c",
+  "native_memory_write": false,
+  "prior": {
+    "action": "observe_after_discriminating_intervention",
+    "decision": "PROBE",
+    "reason": "INFORMATION_GAIN"
+  }
+}

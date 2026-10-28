@@ -1,0 +1,90 @@
+{
+  "P0": {
+    "full_regression_executed": false,
+    "runner": "py -m unittest discover -s tests -v",
+    "status": "SMOKE_GATES_IN_BATCH"
+  },
+  "P1": {
+    "coarse_grid_not_structure": true,
+    "coarse_parts": 1,
+    "real_object_identity_proven": false,
+    "source_parts": 2,
+    "structural_mae_before": 1.06445,
+    "structural_parts": 2
+  },
+  "P2": {
+    "after_feedback_mae": 0.0,
+    "before_feedback_mae": 1.06445,
+    "candidate_updated_after_commit": true,
+    "feedback_uses_exam_image": true,
+    "retraining_generalization_proven": false
+  },
+  "P3": {
+    "actual_multitask_memory_training_proven": false,
+    "candidate_rejected": true,
+    "historical_p155_choose_reused": true,
+    "ledger_entries": 3,
+    "no_gain_reason": "HOLD_NO_VALIDATED_GAIN",
+    "no_gain_rejected": true,
+    "retention_reason": "HOLD_RETENTION_REGRESSION"
+  },
+  "P4": {
+    "calibrated_risk_proven": false,
+    "cases": [
+      {
+        "camera_observed": true,
+        "raw_error": 0.0,
+        "scene": "separate",
+        "status": "CANDIDATE"
+      },
+      {
+        "camera_observed": true,
+        "raw_error": 0.0,
+        "scene": "camera_pan",
+        "status": "CANDIDATE"
+      },
+      {
+        "camera_observed": true,
+        "raw_error": 1.9655172413793096,
+        "scene": "occlude_both",
+        "status": "HOLD_VISIBILITY"
+      },
+      {
+        "camera_observed": true,
+        "raw_error": null,
+        "scene": "overlap",
+        "status": "HOLD_MODEL"
+      }
+    ],
+    "coverage": 0.5,
+    "sensor_gate_uses_only_past_frames": true
+  },
+  "P5": {
+    "external_exam_status": "HOLD_NO_INDEPENDENT_IMAGES",
+    "external_images_seen": 0,
+    "external_receipts": [],
+    "historical_p158_probe_reused": true,
+    "pre_probe": {
+      "action": "observe_after_discriminating_intervention",
+      "decision": "PROBE",
+      "reason": "INFORMATION_GAIN"
+    },
+    "real_world_transfer_proven": false,
+    "reverse_360_complete": false,
+    "sens_mmonde_connected": false,
+    "without_probe": {
+      "decision": "HOLD",
+      "hypotheses": [
+        "flat",
+        "slope"
+      ],
+      "reason": "UNIDENTIFIABLE_WITHOUT_PROBE"
+    }
+  },
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "full_educational_continuity_proven": false,
+  "native_memory_write": false,
+  "schema": "BRODY_P0_P5_INTEGRATED_EVIDENCE_V1",
+  "verdict": "P0_P5_BOUNDED_INTEGRATION_NOT_CANONICAL"
+}

@@ -1,0 +1,192 @@
+{
+  "schema": "BRODY_DRAWING_HIDDEN_REFERENCE_V3",
+  "source_ref": "distractor:examen_croix",
+  "observed_source_sha256": "09f9f2789ce87fbb48b1296f21c2e86fa6c81a5847b1d5b775b86e97b138c0a9",
+  "context": "TEACHER_VISIBLE_ONLY_DURING_ENCODING",
+  "representation_type": "RASTER_SKELETON_TO_MOTOR_STROKES",
+  "bbox": [
+    9,
+    9,
+    53,
+    53
+  ],
+  "signature": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "observed_ink_count": 413,
+  "gestures": [
+    {
+      "kind": "STRAIGHT_STROKE",
+      "points": [
+        [
+          11,
+          11
+        ],
+        [
+          31,
+          31
+        ]
+      ]
+    },
+    {
+      "kind": "STRAIGHT_STROKE",
+      "points": [
+        [
+          11,
+          51
+        ],
+        [
+          31,
+          32
+        ]
+      ]
+    },
+    {
+      "kind": "STRAIGHT_STROKE",
+      "points": [
+        [
+          31,
+          31
+        ],
+        [
+          31,
+          32
+        ]
+      ]
+    },
+    {
+      "kind": "STRAIGHT_STROKE",
+      "points": [
+        [
+          31,
+          31
+        ],
+        [
+          32,
+          31
+        ]
+      ]
+    },
+    {
+      "kind": "STRAIGHT_STROKE",
+      "points": [
+        [
+          31,
+          32
+        ],
+        [
+          32,
+          32
+        ]
+      ]
+    },
+    {
+      "kind": "STRAIGHT_STROKE",
+      "points": [
+        [
+          32,
+          31
+        ],
+        [
+          51,
+          11
+        ]
+      ]
+    },
+    {
+      "kind": "STRAIGHT_STROKE",
+      "points": [
+        [
+          32,
+          31
+        ],
+        [
+          32,
+          32
+        ]
+      ]
+    },
+    {
+      "kind": "STRAIGHT_STROKE",
+      "points": [
+        [
+          32,
+          32
+        ],
+        [
+          51,
+          51
+        ]
+      ]
+    }
+  ],
+  "source_pixels_in_memory": false,
+  "representation_contains_detailed_contour": true,
+  "learning_algorithm_autonomously_discovered": false,
+  "interpretation_semantic": false,
+  "memory_write_allowed": false,
+  "representation_sha256": "d2db073ec7de65995f1383c7f4cb376249d25680e660d2526e0e182906bd6a9a"
+}

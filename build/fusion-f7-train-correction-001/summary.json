@@ -1,0 +1,17 @@
+{
+  "schema": "BRODY_F7_TRAIN_CORRECTION_V0",
+  "old_tool": "PENCIL",
+  "new_tool": "PEN",
+  "old_test_loss": 9.638427734375,
+  "new_test_loss": 0.0,
+  "improvement": 9.638427734375,
+  "better_on_this_test": true,
+  "old_memory_preserved": true,
+  "test_hidden_until_both_candidates_sealed": true,
+  "teacher_synthetic_shared_renderer": true,
+  "correction_type": "INSTRUMENT_ROUTING_NOT_GESTURE_REFINEMENT",
+  "not_generalization_proof": true,
+  "journal_events": 3,
+  "native_memory_write": false,
+  "decision_authority": "KX108_ONLY"
+}

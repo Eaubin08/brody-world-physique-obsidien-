@@ -1,0 +1,4 @@
+{"passed": 7, "total": 7, "verified": false, "all_pass": true}
+{"passed": 7, "total": 7, "verified": true, "all_pass": true}
+{"comparison": "BETTER_THAN_LINEAR_BASELINE", "error": {"proposed": 0.0, "linear_baseline": 2.0, "stationary_baseline": 5.385164807134504, "unit": "px"}, "physical_knowledge_validated": false, "receipt": "C:\\Users\\Aubin\\AppData\\Local\\Temp\\tmp7i69mqkd\\episode.json"}
+Prediction sealed before fourth annotation: C:\Users\Aubin\AppData\Local\Temp\tmp0aytx3ir\run\prediction_before_frame_4.json

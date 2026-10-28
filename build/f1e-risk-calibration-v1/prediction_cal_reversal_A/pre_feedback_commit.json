@@ -1,0 +1,22 @@
+{
+  "base": {
+    "radius": 4.4065,
+    "t": 4.0,
+    "x": 39.0,
+    "y": 40.0
+  },
+  "candidate": {
+    "radius": 4.4065,
+    "t": 4.0,
+    "x": 39.0,
+    "y": 41.0
+  },
+  "canonical_promotion": false,
+  "case": "cal_reversal_A",
+  "context": "vertical|speeding_up",
+  "decision_authority": "KX108_ONLY",
+  "digest": "f5e087729240adf7824152a4849690db661435e43054d7d9b695899536fdc235",
+  "forecast_sha256": "851af08bf9780d54eba45ed3f16dc7e859e7bdd5d2e88932f844915ab8e16b08",
+  "native_memory_write": false,
+  "skill_applied": true
+}

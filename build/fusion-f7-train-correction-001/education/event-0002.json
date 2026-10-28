@@ -1,0 +1,21 @@
+{
+  "index": 2,
+  "previous": "51685f6352a7cd5d11dfe568f765b603c7647170c3b7b794c230dd2b1c20b1bf",
+  "kind": "TRAIN_CORRECTION",
+  "payload": {
+    "memory_version": "v002",
+    "previous_version": "v001",
+    "new_train_losses": {
+      "PENCIL": 5.8349609375,
+      "PEN": 0.0,
+      "NIB": 5.164794921875
+    },
+    "old_tool": "PENCIL",
+    "new_tool": "PEN",
+    "no_test_feedback_used": true
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "d5f1c359a469e9562b0c571547a832a8d860417ec007542094c48ae6b39fa0fb"
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "BRODY_PROCEDURE_SKILL_REGISTRY_V1",
+  "references": [
+    {
+      "capability": "drawing-motor-render",
+      "module_path": "brody_world_physique/drawing_school_v1.py",
+      "symbol": "render",
+      "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+      "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+    },
+    {
+      "capability": "image-pixel-comparison",
+      "module_path": "brody_world_physique/drawing_school_v0.py",
+      "symbol": "black_pixels",
+      "code_sha256": "e4ced171788c05ffea2768f3ccafa07faad6bf73579db685105083606fad4b87",
+      "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+    },
+    {
+      "capability": "image-thinning",
+      "module_path": "brody_world_physique/drawing_school_v1.py",
+      "symbol": "suggest_gestures_from_reference",
+      "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+      "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+    },
+    {
+      "capability": "pixel-feedback-revision",
+      "module_path": "brody_world_physique/drawing_school_v1.py",
+      "symbol": "correct_drawing",
+      "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+      "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+    }
+  ],
+  "policies": {
+    "execution_whitelist_only": true,
+    "never_import_module_from_memory": true,
+    "native_memory_write_allowed": false,
+    "auto_promotion_allowed": false,
+    "interpretation_is_observation_only": true,
+    "decision_authority": "KX108_ONLY"
+  }
+}

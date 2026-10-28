@@ -1,0 +1,36 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "d3c9da9f32b43c0cbadb6fc7fd09c878335f84780419e3984909579ec87889c5",
+  "e1_retained": true,
+  "historical_failure_cases": [
+    "hidden_reversal"
+  ],
+  "native_memory_write": false,
+  "probe_not_executed": true,
+  "proposed_probe": {
+    "action": "tap",
+    "decision": "PROBE",
+    "options": [
+      {
+        "action": "tap",
+        "cost": 0.7,
+        "information": 1.584963,
+        "utility": 1.409963
+      },
+      {
+        "action": "tilt",
+        "cost": 1.0,
+        "information": 1.584963,
+        "utility": 1.334963
+      },
+      {
+        "action": "observe",
+        "cost": 0.1,
+        "information": 0.0,
+        "utility": -0.025
+      }
+    ]
+  },
+  "schema": "BRODY_E8_FOLLOWUP_PROBE_CANDIDATE"
+}

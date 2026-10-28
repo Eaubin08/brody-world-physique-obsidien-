@@ -1,0 +1,195 @@
+{
+  "schema_version": "BRODY_PINNED_SIMULATED_BALL_VIDEO_V0",
+  "source_video_sha256": "a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+  "source_kind": "SIMULATED",
+  "frame_indices": [
+    0,
+    3,
+    6,
+    9
+  ],
+  "position_detector": "ORANGE_HSV_PINNED_VIDEO_ONLY",
+  "observations": [
+    {
+      "entity_ref": "synthetic:orange-ball-01",
+      "source_ref": "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:0#detector:orange-hsv-demo-v0",
+      "frame_ref": "synthetic-fixed-camera:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+      "time_s": 0.0,
+      "x": 275.5,
+      "y": 105.5,
+      "unit": "px",
+      "source_kind": "SIMULATED",
+      "uncertainty_refs": [
+        "SIMULATED_SOURCE",
+        "COLOR_THRESHOLD_CANDIDATE",
+        "DECODER_FPS_METADATA_UNVERIFIED"
+      ]
+    },
+    {
+      "entity_ref": "synthetic:orange-ball-01",
+      "source_ref": "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:3#detector:orange-hsv-demo-v0",
+      "frame_ref": "synthetic-fixed-camera:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+      "time_s": 0.1,
+      "x": 280.5,
+      "y": 108.5,
+      "unit": "px",
+      "source_kind": "SIMULATED",
+      "uncertainty_refs": [
+        "SIMULATED_SOURCE",
+        "COLOR_THRESHOLD_CANDIDATE",
+        "DECODER_FPS_METADATA_UNVERIFIED"
+      ]
+    },
+    {
+      "entity_ref": "synthetic:orange-ball-01",
+      "source_ref": "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:6#detector:orange-hsv-demo-v0",
+      "frame_ref": "synthetic-fixed-camera:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+      "time_s": 0.2,
+      "x": 285.5,
+      "y": 115.5,
+      "unit": "px",
+      "source_kind": "SIMULATED",
+      "uncertainty_refs": [
+        "SIMULATED_SOURCE",
+        "COLOR_THRESHOLD_CANDIDATE",
+        "DECODER_FPS_METADATA_UNVERIFIED"
+      ]
+    },
+    {
+      "entity_ref": "synthetic:orange-ball-01",
+      "source_ref": "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:9#detector:orange-hsv-demo-v0",
+      "frame_ref": "synthetic-fixed-camera:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+      "time_s": 0.3,
+      "x": 290.5,
+      "y": 128.5,
+      "unit": "px",
+      "source_kind": "SIMULATED",
+      "uncertainty_refs": [
+        "SIMULATED_SOURCE",
+        "COLOR_THRESHOLD_CANDIDATE",
+        "DECODER_FPS_METADATA_UNVERIFIED"
+      ]
+    }
+  ],
+  "detections": [
+    {
+      "center_x": 275.5,
+      "center_y": 105.5,
+      "bbox": [
+        247,
+        77,
+        304,
+        134
+      ],
+      "orange_pixels": 2382,
+      "method": "DEMO_ORANGE_HSV_THRESHOLD_NOT_GENERAL_SEGMENTATION",
+      "confidence_calibrated": false
+    },
+    {
+      "center_x": 280.5,
+      "center_y": 108.5,
+      "bbox": [
+        252,
+        80,
+        309,
+        137
+      ],
+      "orange_pixels": 2376,
+      "method": "DEMO_ORANGE_HSV_THRESHOLD_NOT_GENERAL_SEGMENTATION",
+      "confidence_calibrated": false
+    },
+    {
+      "center_x": 285.5,
+      "center_y": 115.5,
+      "bbox": [
+        257,
+        87,
+        314,
+        144
+      ],
+      "orange_pixels": 2386,
+      "method": "DEMO_ORANGE_HSV_THRESHOLD_NOT_GENERAL_SEGMENTATION",
+      "confidence_calibrated": false
+    },
+    {
+      "center_x": 290.5,
+      "center_y": 128.5,
+      "bbox": [
+        262,
+        100,
+        319,
+        157
+      ],
+      "orange_pixels": 2362,
+      "method": "DEMO_ORANGE_HSV_THRESHOLD_NOT_GENERAL_SEGMENTATION",
+      "confidence_calibrated": false
+    }
+  ],
+  "forecast_precommitted_before_heldout_detection": true,
+  "evaluation": {
+    "schema_version": "BRODY_PREVERBAL_EPISODE_EVALUATION_V0",
+    "prediction": {
+      "entity_ref": "synthetic:orange-ball-01",
+      "frame_ref": "synthetic-fixed-camera:sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f",
+      "unit": "px",
+      "source_kind": "SIMULATED",
+      "history_source_refs": [
+        "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:0#detector:orange-hsv-demo-v0",
+        "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:3#detector:orange-hsv-demo-v0",
+        "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:6#detector:orange-hsv-demo-v0"
+      ],
+      "future_time_s": 0.3,
+      "candidate_xy": [
+        290.5,
+        126.5
+      ],
+      "linear_baseline_xy": [
+        290.5,
+        122.5
+      ],
+      "stationary_baseline_xy": [
+        285.5,
+        115.5
+      ],
+      "route": "FINITE_DIFFERENCE_CONSTANT_ACCELERATION_CANDIDATE",
+      "source_kind_verified_real": false,
+      "causal_proof": false,
+      "physical_law_proven": false,
+      "uncertainty_calibrated": false,
+      "readonly": true,
+      "memory_write_allowed": false,
+      "auto_promotion_allowed": false,
+      "decision_authority": "KX108_ONLY",
+      "allowed_to_act": false
+    },
+    "heldout_source_ref": "sha256:a089fdff99f20df5a54e227f46f3b869feb6764b793e2c8e5e024c065b17153f#frame:9#detector:orange-hsv-demo-v0",
+    "heldout_xy": [
+      290.5,
+      128.5
+    ],
+    "error": {
+      "proposed": 2.0,
+      "linear_baseline": 6.0,
+      "stationary_baseline": 13.92838827718412,
+      "unit": "px"
+    },
+    "comparison": "BETTER_THAN_LINEAR_BASELINE",
+    "physics_causality": "UNKNOWN",
+    "frame_stability_external_verification": "NOT_RUN",
+    "generalization_test": "NOT_RUN",
+    "epistemic_status": "ONE_EPISODE_CANDIDATE_ONLY",
+    "world_knowledge_validated": false,
+    "real_world_proven": false,
+    "model_weight_update": false,
+    "memory_write_allowed": false,
+    "auto_promotion_allowed": false,
+    "decision_authority": "KX108_ONLY",
+    "allowed_to_act": false
+  },
+  "physics_understood": false,
+  "world_knowledge_validated": false,
+  "independent_detection_validation": "NOT_RUN",
+  "memory_write_allowed": false,
+  "auto_promotion_allowed": false,
+  "decision_authority": "KX108_ONLY"
+}

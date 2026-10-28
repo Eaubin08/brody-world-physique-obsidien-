@@ -1,0 +1,22 @@
+{
+  "schema": "BRODY_MULTIVIEW_TEACHER_IDENTITY_V0",
+  "taught_identities": 1,
+  "heldout_views": 2,
+  "heldout_context_matches": 2,
+  "heldout_context_misses": 0,
+  "receipt_tip": "d32bbafb705cf7ccb89f9a61763f1cd1599d32699f471a86e888587511844ed0",
+  "identity_learned_from_pixels": false,
+  "training_views": [
+    "identity",
+    "mirror"
+  ],
+  "exam_views": [
+    "quarter_turn",
+    "half_turn"
+  ],
+  "semantic_object_recognition_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "status": "TEACHER_GROUPED_MULTIVIEW_CONTEXT_TRANSFER_ONLY"
+}

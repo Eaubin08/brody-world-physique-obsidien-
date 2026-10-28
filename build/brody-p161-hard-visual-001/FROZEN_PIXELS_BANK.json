@@ -1,0 +1,18 @@
+{
+  "still": {
+    "acceleration": 0.0,
+    "examples": 35
+  },
+  "linear": {
+    "acceleration": 0.0,
+    "examples": 35
+  },
+  "brake": {
+    "acceleration": -1.0,
+    "examples": 35
+  },
+  "boost": {
+    "acceleration": 1.0,
+    "examples": 35
+  }
+}

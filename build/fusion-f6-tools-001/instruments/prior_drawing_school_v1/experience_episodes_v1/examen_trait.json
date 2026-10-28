@@ -1,0 +1,248 @@
+{
+  "schema_version": "BRODY_EXPERIENCE_MEMORY_V1",
+  "episode_id": "examen_trait",
+  "source_kind": "SIMULATED",
+  "produced_kind": "GENERATED",
+  "observation": {
+    "source_ref": "teacher_images/examen_trait.png",
+    "source_sha256": "d05577e1a07e3bc6203ca4ce785811059739c50bc1be27b4bbfd90e72b6bde00",
+    "teacher_source_visible": true,
+    "intent": "COPY_VISIBLE_REFERENCE_BY_CORRECTING_PIXEL_ERROR",
+    "image_space": "PIXEL_XY_64_64",
+    "source_overwritten": false
+  },
+  "interpretation": {
+    "kind": "RASTER_FEATURE_CANDIDATE",
+    "algorithmically_observed_black_pixels": 132,
+    "observed_bbox": [
+      10,
+      44,
+      53,
+      46
+    ],
+    "observed_8x8_ink_signature": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "semantic_shape_understood": false,
+    "text_interpretation_claim": null,
+    "uncertainty": [
+      "SYNTHETIC_SOURCE",
+      "VISIBLE_REFERENCE_FEEDBACK",
+      "NO_SEMANTIC_REASONING_MODULE"
+    ]
+  },
+  "choice": {
+    "selection_author": "DETERMINISTIC_PIXEL_SCORE_ALGORITHM",
+    "reason": "PIXEL_ERROR_MINIMIZATION_GIVEN_VISIBLE_REFERENCE",
+    "memory_source_ref": "cours_trait",
+    "recall_gate": "ACCEPTED_CANDIDATE",
+    "available_actions": [
+      "ADD",
+      "ERASE",
+      "REPLACE",
+      "HOLD"
+    ],
+    "score": "BINARY_PIXEL_XOR",
+    "candidate_gestures_from_raster": 1,
+    "alternative_edit_candidates_not_selected": 1,
+    "human_free_choice_claimed": false
+  },
+  "procedure_ref": {
+    "catalogue": "BRODY_IMAGE_V1_PURE_FUNCTIONS",
+    "executed_capabilities": [
+      {
+        "capability": "image-thinning",
+        "module_path": "brody_world_physique/drawing_school_v1.py",
+        "symbol": "suggest_gestures_from_reference",
+        "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      },
+      {
+        "capability": "pixel-feedback-revision",
+        "module_path": "brody_world_physique/drawing_school_v1.py",
+        "symbol": "correct_drawing",
+        "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      },
+      {
+        "capability": "drawing-motor-render",
+        "module_path": "brody_world_physique/drawing_school_v1.py",
+        "symbol": "render",
+        "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      },
+      {
+        "capability": "image-pixel-comparison",
+        "module_path": "brody_world_physique/drawing_school_v0.py",
+        "symbol": "black_pixels",
+        "code_sha256": "e4ced171788c05ffea2768f3ccafa07faad6bf73579db685105083606fad4b87",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      }
+    ],
+    "runtime_parameter_refs": {
+      "max_revisions": 24,
+      "canvas": [
+        64,
+        64
+      ],
+      "brush_width": 3,
+      "recall_source_hash": null
+    },
+    "pillow_version": "12.3.0",
+    "executable_code_embedded_in_memory": false,
+    "arbitrary_code_execution_allowed": false
+  },
+  "execution_trace": {
+    "initial_recalled_gestures": [
+      {
+        "points": [
+          [
+            11,
+            45
+          ],
+          [
+            51,
+            45
+          ]
+        ],
+        "kind": "STRAIGHT_STROKE"
+      }
+    ],
+    "initial_recall_error_px": 9,
+    "memory_rejected_before_editing": false,
+    "operations": [],
+    "replayed_step_count": 0,
+    "final_gestures": [
+      {
+        "kind": "STRAIGHT_STROKE",
+        "points": [
+          [
+            11,
+            45
+          ],
+          [
+            51,
+            45
+          ]
+        ]
+      }
+    ],
+    "generated_artifact_ref": "attempts/examen_trait_apres_correction.png",
+    "generated_artifact_sha256": "6e5960adb7475b87ca0640173bc2b2c7f1658c0999b1876d9c9fa790ef16b517"
+  },
+  "evaluation": {
+    "evaluator": "EXACT_SOURCE_PIXEL_XOR",
+    "blank_page_error_px": 132,
+    "raw_recall_error_px": 9,
+    "after_recall_gate_error_px": 9,
+    "final_error_px": 9,
+    "improved_vs_blank": true,
+    "source_pixels_visible_during_correction": true,
+    "world_knowledge_validated": false,
+    "independent_semantic_evaluation": "NOT_RUN",
+    "transfer_causality_proven": false
+  },
+  "retained_skill": {
+    "status": "CANDIDATE_ONLY",
+    "candidate_motor_gestures": [
+      {
+        "kind": "STRAIGHT_STROKE",
+        "points": [
+          [
+            11,
+            45
+          ],
+          [
+            51,
+            45
+          ]
+        ]
+      }
+    ],
+    "source_sha256": "d05577e1a07e3bc6203ca4ce785811059739c50bc1be27b4bbfd90e72b6bde00",
+    "transfer_verified_across_independent_sources": false,
+    "native_memory_eligible": false,
+    "trained_weights": false
+  },
+  "rejected_paths": [
+    {
+      "kind": "ALTERNATE_EDIT_CANDIDATES",
+      "considered_and_not_selected": 1,
+      "why": "NOT_STRICTLY_BETTER_THAN_FIRST_BEST",
+      "individual_choices_stored": false,
+      "source": "DETERMINISTIC_COUNTER_NOT_FULL_REASONING_TRACE"
+    }
+  ],
+  "memory_boundary": {
+    "model_of_memory": "LOCAL_EXPERIMENTAL_CANDIDATE_ONLY",
+    "memory_write_allowed": false,
+    "auto_promotion_allowed": false,
+    "kernel_mutation": false,
+    "emits_act": false,
+    "decision_authority": "KX108_ONLY",
+    "obsidia_native_memory_adapter": "NOT_CONNECTED"
+  }
+}

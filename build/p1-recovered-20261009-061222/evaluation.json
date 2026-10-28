@@ -1,0 +1,124 @@
+{
+  "ablation_results_claimed": false,
+  "auto_promotion_allowed": false,
+  "code_sha256": "5a1182b8795738758ab3a9f6898ccab6a9750543095e3cd57ae2b9fb9be5ff0a",
+  "decision_authority": "KX108_ONLY",
+  "emits_act": false,
+  "experiment_candidate": {
+    "comparisons": {
+      "ablation_experiment_completed": false,
+      "center_error_px": 2.909441750455711,
+      "full_frame_mae": 0.11500651041666667,
+      "joint_representation_improvement_proven": false,
+      "matched_linear_center_error_px": 1.836019251143009
+    },
+    "contract_refs": {
+      "auto_promotion_allowed": false,
+      "canonical_world_state_instantiated": false,
+      "causal_proof": false,
+      "decision_authority": "KX108_ONLY",
+      "delta": "candidate:delta:a41bbd19e825c1bb",
+      "experience": "candidate:world-experience:a41bbd19e825c1bb",
+      "memory_eligibility": "CANDIDATE_ONLY",
+      "memory_write_allowed": false,
+      "projection": "candidate:projection:a41bbd19e825c1bb",
+      "schema_versions": [
+        "WORLD_TRANSFORMATION_V0",
+        "WORLD_STATE_PROJECTION_V0",
+        "WORLD_STATE_DELTA_V0",
+        "WORLD_EXPERIENCE_CANDIDATE_V0"
+      ],
+      "transformation": "candidate:prediction-transition:a41bbd19e825c1bb"
+    },
+    "frames": {
+      "future_observed_after_precommit_by_upstream_protocol": true,
+      "heldout_ref": "sha256:a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70#frame:18#visual_candidate",
+      "history_refs": [
+        "sha256:a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70#frame:0#visual_candidate",
+        "sha256:a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70#frame:6#visual_candidate",
+        "sha256:a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70#frame:12#visual_candidate"
+      ]
+    },
+    "independent_source_count": 1,
+    "representation_views": {
+      "MOTION": {
+        "estimated_velocity_px_per_s": [
+          15.84212648504871,
+          39.632231432575054
+        ],
+        "law_identity_proven": false,
+        "linear_baseline_xy": [
+          104.39460625061416,
+          70.28965872437732
+        ]
+      },
+      "RASTER": {
+        "heldout_source_frame_sha256": "8850672eac80f63fc6d5cc65f45582617e39f2df6be132ff024e9f735aa806e5",
+        "kind": "SIMULATED_RENDERED_FRAMES_NOT_REAL_F16",
+        "observed_past_sha256": "5d95e3e8756ed910c3b7fe165f427218842b4cc869783044eb19649a718a6df5",
+        "predicted_generated_sha256": "00c734d6d0e1fe54b0f769e737ee9c1870fc99ce4470e3e300adc481e540c2ff"
+      },
+      "SPATIAL": {
+        "frame_ref": "scene-fiducial:a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70:anchored",
+        "heldout_xy": [
+          102.58201254746574,
+          70.58201254746575
+        ],
+        "history_xy": [
+          [
+            92.41940707523666,
+            42.65707523667163
+          ],
+          [
+            96.4735430080898,
+            50.47354300808979
+          ],
+          [
+            100.43407462935198,
+            60.381600866233555
+          ]
+        ],
+        "predicted_xy": [
+          103.97107403931724,
+          73.13844746178492
+        ],
+        "unit": "px"
+      },
+      "TEMPORAL": {
+        "clock_kind": "SIMULATED_FRAME_TIME",
+        "history_t_s": [
+          0.0,
+          0.25,
+          0.5
+        ],
+        "predicted_future_t_s": 0.75
+      }
+    },
+    "shared_source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+    "source_kind": "SIMULATED"
+  },
+  "forecast_precommit_sha256": "8a583fea873b3c47fbc4e6b5d5869a13e825563700a19fcb1cbf4a9f55992dc8",
+  "kernel_mutation": false,
+  "native_memory_write_allowed": false,
+  "physical_truth_proven": false,
+  "pixel_evidence": {
+    "artifact_sha256": {
+      "difference.png": "9210c9a0e14d5e41d2336a56779d338251d19c4176b15256bffde8e2eb698016",
+      "heldout_frame.png": "8850672eac80f63fc6d5cc65f45582617e39f2df6be132ff024e9f735aa806e5",
+      "last_observed.png": "5d95e3e8756ed910c3b7fe165f427218842b4cc869783044eb19649a718a6df5",
+      "predicted_reverso_candidate.png": "00c734d6d0e1fe54b0f769e737ee9c1870fc99ce4470e3e300adc481e540c2ff"
+    },
+    "full_frame_pixel_mae": 0.11500651041666667,
+    "generated_is_observation": false,
+    "image_source_independence_count": 1
+  },
+  "preview_evaluation_sha256": "1eb0ea600b74b05d84b13d174c8f761ac81aa8cdcfb772e1f075bc72e3056996",
+  "schema": "BRODY_MULTIREPRESENTATION_BALL_BRIDGE_P1_V0",
+  "sens_runtime_executed": false,
+  "source_kind": "SIMULATED",
+  "source_manifest_sha256": "e0d0a2075f2d8b6b555c9d1a765302937291d5b78d50df4e8956404a5c39899d",
+  "upstream_predictor": "world_transfer_probe_v1.propose_with_conflict_gate",
+  "upstream_renderer": "examples.reverso_future_preview_v1.create_preview",
+  "upstream_video_decoder": "world_transfer_probe_v1.iter_video_points",
+  "video_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70"
+}

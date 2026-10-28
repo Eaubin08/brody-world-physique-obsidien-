@@ -1,0 +1,48 @@
+{
+  "schema": "BRODY_P146_BACKGROUND_AWARE_FEW_SHOT_ADAPTATION",
+  "duration_seconds": 218.887,
+  "budget_seconds": 900,
+  "exam_cases": 15000,
+  "world_stats": {
+    "reference": {
+      "n": 3000,
+      "p144": 0.8487,
+      "robust_before": 0.8487,
+      "adapted": 0.894
+    },
+    "new_engine_light": {
+      "n": 3000,
+      "p144": 0.87,
+      "robust_before": 0.8717,
+      "adapted": 0.9137
+    },
+    "new_engine_dark": {
+      "n": 3000,
+      "p144": 0.3267,
+      "robust_before": 0.8737,
+      "adapted": 0.9097
+    },
+    "new_engine_outlined": {
+      "n": 3000,
+      "p144": 0.8083,
+      "robust_before": 0.8203,
+      "adapted": 0.849
+    },
+    "new_engine_occluded": {
+      "n": 3000,
+      "p144": 0.4783,
+      "robust_before": 0.4743,
+      "adapted": 0.4853
+    }
+  },
+  "cells_expected": 25,
+  "cells_completed": 25,
+  "adaptation_examples": 1200,
+  "stopped_by": "EXAM_CAP",
+  "hold_calibration_implemented": false,
+  "occlusion_reconstruction_implemented": false,
+  "independent_real_sources": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

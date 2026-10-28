@@ -1,0 +1,82 @@
+{
+  "act_all_coverage": 1.0,
+  "all_candidate_mean_error_px": 7.5,
+  "calibration": [
+    {
+      "case": "cal_regular_A",
+      "context": "vertical|speeding_up",
+      "error_px": 0.0
+    },
+    {
+      "case": "cal_reversal_A",
+      "context": "vertical|speeding_up",
+      "error_px": 15.0
+    },
+    {
+      "case": "cal_regular_B",
+      "context": "vertical|speeding_up",
+      "error_px": 0.0
+    },
+    {
+      "case": "cal_reversal_B",
+      "context": "vertical|speeding_up",
+      "error_px": 15.0
+    }
+  ],
+  "calibration_guarantee": false,
+  "canonical_promotion": false,
+  "coverage": 0.0,
+  "decision_authority": "KX108_ONLY",
+  "exam": [
+    {
+      "candidate_error_px": 0.0,
+      "case": "eval_regular_A",
+      "committed_before_feedback": true,
+      "expected_risk_bound_px": 15.0,
+      "status": "HOLD"
+    },
+    {
+      "candidate_error_px": 15.0,
+      "case": "eval_reversal_A",
+      "committed_before_feedback": true,
+      "expected_risk_bound_px": 15.0,
+      "status": "HOLD"
+    },
+    {
+      "candidate_error_px": 0.0,
+      "case": "eval_regular_B",
+      "committed_before_feedback": true,
+      "expected_risk_bound_px": 15.0,
+      "status": "HOLD"
+    },
+    {
+      "candidate_error_px": 15.0,
+      "case": "eval_reversal_B",
+      "committed_before_feedback": true,
+      "expected_risk_bound_px": 15.0,
+      "status": "HOLD"
+    }
+  ],
+  "hidden_reversal_not_detectable_from_observation": true,
+  "hold_all_coverage": 0.0,
+  "native_memory_write": false,
+  "negative_transfer_previously_observed": 1,
+  "physical_understanding_proven": false,
+  "policy": {
+    "calibration_cases": 4,
+    "calibration_max_error_px": 15.0,
+    "canonical_promotion": false,
+    "decision_authority": "KX108_ONLY",
+    "decision_rule": "ACT_CANDIDATE_ONLY_IF_CALIBRATION_WORST_LE_THRESHOLD",
+    "digest": "87bcb8dd2036672432d8dcfca8107c294f572d425c75686ecd104e77831a827d",
+    "native_memory_write": false,
+    "no_statistical_coverage_guarantee": true,
+    "schema": "BRODY_EMPIRICAL_SELECTIVE_POLICY_V1",
+    "selection_allowed": false,
+    "threshold_px": 2.0
+  },
+  "positive_transfer_previously_observed": 2,
+  "schema": "BRODY_F1E_SELECTIVE_RISK_AUDIT_V1",
+  "selective_mean_error_px": null,
+  "verdict": "F1E_EMPIRICAL_SELECTIVE_HOLD_IF_INSUFFICIENT_EVIDENCE"
+}

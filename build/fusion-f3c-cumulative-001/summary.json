@@ -1,0 +1,61 @@
+{
+  "schema": "BRODY_F3C_CUMULATIVE_DEMO_V0",
+  "training_count": 1,
+  "exams_without_retraining": 3,
+  "rows": [
+    {
+      "lesson": "01-recall",
+      "schema": "BRODY_F3C_RECALL_EXAM_V0",
+      "registry_version": 1,
+      "registry_sha256": "735b7776a87c7adf7de7ec84f8c63cc1ad3b46530c4572709519dc26d8f81d6a",
+      "skill_id": "rectangle",
+      "candidate_sha256": "bac80bad1c2025c40ed4b59c72fb9eaeece92b1c373dfc3cdfc1fec9da223e72",
+      "sealed_before_teacher": true,
+      "target_used_to_select_memory": false,
+      "memory_reused_from_previous_lesson": true,
+      "native_memory_write": false,
+      "decision_authority": "KX108_ONLY",
+      "candidate_error": 92,
+      "blank_error": 168,
+      "gain": 76,
+      "verdict": "IMPROVED"
+    },
+    {
+      "lesson": "02-recomposition",
+      "schema": "BRODY_F3C_RECALL_EXAM_V0",
+      "registry_version": 1,
+      "registry_sha256": "735b7776a87c7adf7de7ec84f8c63cc1ad3b46530c4572709519dc26d8f81d6a",
+      "skill_id": "rectangle",
+      "candidate_sha256": "d439a7c8f4ba933b659ac51e56478840f4bd2568d0593e0e564b25d94b63cb76",
+      "sealed_before_teacher": true,
+      "target_used_to_select_memory": false,
+      "memory_reused_from_previous_lesson": true,
+      "native_memory_write": false,
+      "decision_authority": "KX108_ONLY",
+      "candidate_error": 184,
+      "blank_error": 336,
+      "gain": 152,
+      "verdict": "IMPROVED"
+    },
+    {
+      "lesson": "03-transfer",
+      "schema": "BRODY_F3C_RECALL_EXAM_V0",
+      "registry_version": 1,
+      "registry_sha256": "735b7776a87c7adf7de7ec84f8c63cc1ad3b46530c4572709519dc26d8f81d6a",
+      "skill_id": "rectangle",
+      "candidate_sha256": "83f241f19751a32e62e08541b704095c7f6eb622f55c32999863a4c13aff4aa1",
+      "sealed_before_teacher": true,
+      "target_used_to_select_memory": false,
+      "memory_reused_from_previous_lesson": true,
+      "native_memory_write": false,
+      "decision_authority": "KX108_ONLY",
+      "candidate_error": 260,
+      "blank_error": 472,
+      "gain": 212,
+      "verdict": "IMPROVED"
+    }
+  ],
+  "progressive_ability_increase_proven": false,
+  "frozen_candidate_reuse_proven": true,
+  "native_memory_write": false
+}

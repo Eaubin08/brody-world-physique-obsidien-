@@ -1,0 +1,236 @@
+{
+  "schema": "BRODY_P165D2_HARD_PLUS_PLUS_PLUS",
+  "conditions": 675,
+  "exams": 1350,
+  "expected_full_conditions": 675,
+  "groups": {
+    "none/red/plain": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 0.0,
+      "pixel_pairs": 200
+    },
+    "none/red/two_planes": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 0.0,
+      "pixel_pairs": 200
+    },
+    "none/red/parallax": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 0.0,
+      "pixel_pairs": 200
+    },
+    "none/blue/plain": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 9410.0,
+      "pixel_pairs": 150
+    },
+    "none/blue/two_planes": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 9338.0,
+      "pixel_pairs": 150
+    },
+    "none/blue/parallax": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 9386.0,
+      "pixel_pairs": 150
+    },
+    "none/change/plain": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 2565.0,
+      "pixel_pairs": 150
+    },
+    "none/change/two_planes": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 2571.0,
+      "pixel_pairs": 150
+    },
+    "none/change/parallax": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 2594.0,
+      "pixel_pairs": 150
+    },
+    "partial/red/plain": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 0.0,
+      "pixel_pairs": 200
+    },
+    "partial/red/two_planes": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 0.0,
+      "pixel_pairs": 200
+    },
+    "partial/red/parallax": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 0.0,
+      "pixel_pairs": 200
+    },
+    "partial/blue/plain": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 9335.0,
+      "pixel_pairs": 150
+    },
+    "partial/blue/two_planes": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 9287.0,
+      "pixel_pairs": 150
+    },
+    "partial/blue/parallax": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 9311.0,
+      "pixel_pairs": 150
+    },
+    "partial/change/plain": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 2602.0,
+      "pixel_pairs": 150
+    },
+    "partial/change/two_planes": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 2595.0,
+      "pixel_pairs": 150
+    },
+    "partial/change/parallax": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 2565.0,
+      "pixel_pairs": 150
+    },
+    "full/red/plain": {
+      "n": 50,
+      "hold": 0,
+      "novelty": 50,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 5772.0,
+      "pixel_pairs": 300
+    },
+    "full/red/two_planes": {
+      "n": 50,
+      "hold": 0,
+      "novelty": 50,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 5754.0,
+      "pixel_pairs": 300
+    },
+    "full/red/parallax": {
+      "n": 50,
+      "hold": 0,
+      "novelty": 50,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 5784.0,
+      "pixel_pairs": 300
+    },
+    "full/blue/plain": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 9368.0,
+      "pixel_pairs": 150
+    },
+    "full/blue/two_planes": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 9362.0,
+      "pixel_pairs": 150
+    },
+    "full/blue/parallax": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 9338.0,
+      "pixel_pairs": 150
+    },
+    "full/change/plain": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 5824.0,
+      "pixel_pairs": 200
+    },
+    "full/change/two_planes": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 5736.0,
+      "pixel_pairs": 200
+    },
+    "full/change/parallax": {
+      "n": 50,
+      "hold": 50,
+      "novelty": 0,
+      "unsafe_claim": 0,
+      "pixel_abs_sum": 5746.0,
+      "pixel_pairs": 200
+    }
+  },
+  "run_complete": true,
+  "inference_receives_fixture_label": false,
+  "oracle_used_for_inference": false,
+  "inferred_unique_identity": false,
+  "synthetic_image_only": true,
+  "full_contextual_graph_from_pixels": false,
+  "physical_reasoning_proven": false,
+  "historical_77_and_p165a_not_replayed": true,
+  "runtime_seconds": 13.71,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

@@ -1,0 +1,12 @@
+COMMAND: C:\Users\Aubin\AppData\Local\Python\pythoncore-3.14-64\python.exe -m unittest discover -s tests -p test_fusion_f2_school_regression_v0.py -v
+STDOUT
+
+STDERR
+test_existing_output_rejected (test_fusion_f2_school_regression_v0.RunnerTests.test_existing_output_rejected) ... ok
+test_failure_not_hidden (test_fusion_f2_school_regression_v0.RunnerTests.test_failure_not_hidden) ... ok
+test_suite_logs_and_results (test_fusion_f2_school_regression_v0.RunnerTests.test_suite_logs_and_results) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.806s
+
+OK

@@ -1,0 +1,106 @@
+{
+  "schema": "BRODY_F9_INTENSIVE_1000_V0",
+  "requested_episodes": 1000,
+  "completed_episodes": 1000,
+  "seed": 20261009,
+  "training_contexts": 12,
+  "train_update_rule": "EWMA_DECAY_0_75",
+  "policy_changes_on_train": 1,
+  "contradictory_train_episodes": 42,
+  "checkpoints": [
+    {
+      "at": 100,
+      "mean_error": 0.0,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "60599828268d05253d743d008d2f3d5101b6e3fe7dd774442bee6741e9fda575"
+    },
+    {
+      "at": 200,
+      "mean_error": 0.0,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "aeb7a5573a931588eff922e56729134deaba3372185151bad4fb68657ed3f4b6"
+    },
+    {
+      "at": 300,
+      "mean_error": 0.0,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "152315de44be886f40dc6606acaae4efdf2ca8b58bcce2e37d5f043ae60fcbc5"
+    },
+    {
+      "at": 400,
+      "mean_error": 0.0,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "02babc1d152987991025cd825c0349b22291ed330e9d54bbc7598d8d3a8e83a0"
+    },
+    {
+      "at": 500,
+      "mean_error": 0.0,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "a2d8d25ac37ef8d86b689f8bace99bd41b6fd1474a3097c88ef936d5a172e905"
+    },
+    {
+      "at": 600,
+      "mean_error": 0.4280904134114583,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "e6d84c3e3a310c78a30528b318eb7e89a2ebf3ccbc73774ea0c1097827e63f07"
+    },
+    {
+      "at": 700,
+      "mean_error": 0.4280904134114583,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "f8d11b60e91087ef5067ce2efe41b7395763248a2d0dd8aedcae911a2ee67ec9"
+    },
+    {
+      "at": 800,
+      "mean_error": 0.4280904134114583,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "f96c597b19ea18c770db643b16e5663faaf7ced66d559ecf9d41d49267f35c9b"
+    },
+    {
+      "at": 900,
+      "mean_error": 0.4280904134114583,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "e0feed843189f42d19b4831e8ce84823179ea39b260ed57c191ac5da0c917a6e"
+    },
+    {
+      "at": 1000,
+      "mean_error": 0.4280904134114583,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "76ab03c7e29a312a7a8bdc96c662ecd489f1864ed2fc80d49cdc051ab6897dda"
+    }
+  ],
+  "blind_test_count": 480,
+  "max_forgetting_delta": 5.6005859375,
+  "final_policy": {
+    "EXPRESSIVE|angle": "NIB",
+    "EXPRESSIVE|box": "NIB",
+    "EXPRESSIVE|line": "NIB",
+    "EXPRESSIVE|zigzag": "NIB",
+    "LIGHT|angle": "PENCIL",
+    "LIGHT|box": "PENCIL",
+    "LIGHT|line": "PEN",
+    "LIGHT|zigzag": "PENCIL",
+    "UNIFORM|angle": "PEN",
+    "UNIFORM|box": "PEN",
+    "UNIFORM|line": "PEN",
+    "UNIFORM|zigzag": "PEN"
+  },
+  "receipt_tip": "1d89255e9e3088e9430d4e3a8355bfb9575b641b1d0457257634be2be3bbcdb7",
+  "receipt_count": 1000,
+  "no_test_to_train_feedback": true,
+  "eval_generator_shared_with_train": true,
+  "general_vision_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

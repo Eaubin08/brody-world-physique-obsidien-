@@ -1,0 +1,76 @@
+{
+  "schema": "BRODY_F14_MULTI_SOURCE_FUZZ_1000_V0",
+  "cases": 1000,
+  "by_family": {
+    "clean_two": {
+      "cases": 100,
+      "accepted_correct": 100,
+      "accepted_wrong": 0,
+      "held": 0
+    },
+    "clean_three": {
+      "cases": 100,
+      "accepted_correct": 100,
+      "accepted_wrong": 0,
+      "held": 0
+    },
+    "one_spoof": {
+      "cases": 100,
+      "accepted_correct": 0,
+      "accepted_wrong": 0,
+      "held": 100
+    },
+    "two_spoof": {
+      "cases": 100,
+      "accepted_correct": 0,
+      "accepted_wrong": 0,
+      "held": 100
+    },
+    "conflict": {
+      "cases": 100,
+      "accepted_correct": 0,
+      "accepted_wrong": 0,
+      "held": 100
+    },
+    "missing_proof": {
+      "cases": 100,
+      "accepted_correct": 0,
+      "accepted_wrong": 0,
+      "held": 100
+    },
+    "stale": {
+      "cases": 100,
+      "accepted_correct": 0,
+      "accepted_wrong": 0,
+      "held": 100
+    },
+    "shared_origin": {
+      "cases": 100,
+      "accepted_correct": 0,
+      "accepted_wrong": 0,
+      "held": 100
+    },
+    "all_spoof": {
+      "cases": 100,
+      "accepted_correct": 0,
+      "accepted_wrong": 100,
+      "held": 0
+    },
+    "missing_context": {
+      "cases": 100,
+      "accepted_correct": 0,
+      "accepted_wrong": 0,
+      "held": 100
+    }
+  },
+  "accepted_wrong": 100,
+  "accepted_correct": 200,
+  "held": 700,
+  "receipt_tip": "1b239c1703986f106d82400000a0e2a142b0e59032186137962d3c5f1aff198f",
+  "correlated_attacker_can_spoof_all_sources": true,
+  "source_attestation_is_harness_fixture_only": true,
+  "sensor_authentication_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

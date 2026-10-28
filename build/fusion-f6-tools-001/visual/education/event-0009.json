@@ -1,0 +1,23 @@
+{
+  "index": 9,
+  "previous": "009980d8e1c32fe80e7eaa58d640dfb104b01127177e9688f5c52ea820d109f8",
+  "kind": "INSTRUMENT_SELECTION_TEST",
+  "payload": {
+    "shape": "ellipse",
+    "intent": "EXPRESSIVE",
+    "instrument": "NIB",
+    "candidate_sha256": "45cf4cb530c27480065825312faf6a35763a5d6b2cbf6bb11196225cecc438a4",
+    "tool_training_ids": [
+      "training_07",
+      "training_08",
+      "training_09"
+    ],
+    "heldout_score": 0.0,
+    "baseline_score": 9.1796875,
+    "target_used_for_training": false
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "fd3a2e49cecf3dcf7e84ab14f85180ab0a78096894def6096b2c2ee7e9b71eb8"
+}

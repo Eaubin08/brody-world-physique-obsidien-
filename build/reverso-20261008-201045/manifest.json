@@ -1,0 +1,535 @@
+{
+  "schema_version": "BRODY_REVERSO_PIXEL_LAYERS_V0",
+  "route": "LOSSLESS_SPATIAL_TILES_NOT_SEMANTIC_SEGMENTATION",
+  "source_ref": "C:\\Users\\Aubin\\Desktop\\467554631_8627537504003873_728584854777687941_n.jpg",
+  "source_sha256": "fcbc818555b15b3feddf521aef2fa3bead9d6324bd6f14fdc3c98673b5e3a031",
+  "reference_rgba_pixel_digest": "b5ca28ceb7663070d5d0003aee9323d067172495a44c192aba60759355817296",
+  "width": 954,
+  "height": 960,
+  "intent": "Rebuild exact original pixels while keeping the source as anchor.",
+  "layers": [
+    {
+      "asset": "lossless_layers/tile-000-000.png",
+      "x": 0,
+      "y": 0,
+      "width": 128,
+      "height": 128,
+      "sha256": "31cc19dcc9853e38973f9ffe34966c226c0ae678afc7a5b6ae1bd4ebef71356e"
+    },
+    {
+      "asset": "lossless_layers/tile-000-001.png",
+      "x": 128,
+      "y": 0,
+      "width": 128,
+      "height": 128,
+      "sha256": "c07f7a9a9bcdd2afe183c84049062779b9e391991bac0a113b6b466f87e830b3"
+    },
+    {
+      "asset": "lossless_layers/tile-000-002.png",
+      "x": 256,
+      "y": 0,
+      "width": 128,
+      "height": 128,
+      "sha256": "a90fc3086ca384f5f24ed6e610befacb1a4820502c277078e712157f572d4e0c"
+    },
+    {
+      "asset": "lossless_layers/tile-000-003.png",
+      "x": 384,
+      "y": 0,
+      "width": 128,
+      "height": 128,
+      "sha256": "f1f9e49ed5f78e2891c2562f4dc88630c3706411dbc6de92275722d3a0ae74c9"
+    },
+    {
+      "asset": "lossless_layers/tile-000-004.png",
+      "x": 512,
+      "y": 0,
+      "width": 128,
+      "height": 128,
+      "sha256": "2ff50380f16b7ec8754d30d682851d356f966b14f3c7cbfba601ace4078163d3"
+    },
+    {
+      "asset": "lossless_layers/tile-000-005.png",
+      "x": 640,
+      "y": 0,
+      "width": 128,
+      "height": 128,
+      "sha256": "71068b4e377b17cf51358f5bb1444435378511f42569a4a7e93d419354730ea0"
+    },
+    {
+      "asset": "lossless_layers/tile-000-006.png",
+      "x": 768,
+      "y": 0,
+      "width": 128,
+      "height": 128,
+      "sha256": "4f8b05ec5e44c66d17300bc2832e134a04537f36e8039d52dc62f4c1c41f3cb8"
+    },
+    {
+      "asset": "lossless_layers/tile-000-007.png",
+      "x": 896,
+      "y": 0,
+      "width": 58,
+      "height": 128,
+      "sha256": "6666f7b81f8ee629b7e30817eff78996af63d3383660a835efe025fcc8a9d4fb"
+    },
+    {
+      "asset": "lossless_layers/tile-001-000.png",
+      "x": 0,
+      "y": 128,
+      "width": 128,
+      "height": 128,
+      "sha256": "b50a7e6fe8802f9836f6c37673575507bff34b2d898b9ceb70d4eb3cd587558b"
+    },
+    {
+      "asset": "lossless_layers/tile-001-001.png",
+      "x": 128,
+      "y": 128,
+      "width": 128,
+      "height": 128,
+      "sha256": "abecd903cb4d4ac1051250c1a381d7ede366c515427cbfc179fef7557349a05b"
+    },
+    {
+      "asset": "lossless_layers/tile-001-002.png",
+      "x": 256,
+      "y": 128,
+      "width": 128,
+      "height": 128,
+      "sha256": "ff322f7ee1452c5e1a711f2debbd73b16dd0742096891e1835a2fd0e76d94de3"
+    },
+    {
+      "asset": "lossless_layers/tile-001-003.png",
+      "x": 384,
+      "y": 128,
+      "width": 128,
+      "height": 128,
+      "sha256": "cf5a36f6f3dd80b94e6c7ff234c7711f77bf625af41f1975460fb886a7b34347"
+    },
+    {
+      "asset": "lossless_layers/tile-001-004.png",
+      "x": 512,
+      "y": 128,
+      "width": 128,
+      "height": 128,
+      "sha256": "0f57ca90a9c5dbdac5c868a58ec3c05339a6bd1a26faa8fa6495231b3fdcf979"
+    },
+    {
+      "asset": "lossless_layers/tile-001-005.png",
+      "x": 640,
+      "y": 128,
+      "width": 128,
+      "height": 128,
+      "sha256": "bd4ffbf6981926f5bec917c5d786d512cbe2de410c1309f144c52cbff98d6631"
+    },
+    {
+      "asset": "lossless_layers/tile-001-006.png",
+      "x": 768,
+      "y": 128,
+      "width": 128,
+      "height": 128,
+      "sha256": "87506c97149978cbd0da79fd76708fe381edb365aff72c3d9191825d7bb8a0e9"
+    },
+    {
+      "asset": "lossless_layers/tile-001-007.png",
+      "x": 896,
+      "y": 128,
+      "width": 58,
+      "height": 128,
+      "sha256": "acca8ab960089ed0bd0a000d2ed2cf7e23cc7b699d666708de63f3c00936de51"
+    },
+    {
+      "asset": "lossless_layers/tile-002-000.png",
+      "x": 0,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "sha256": "0cd842c2cbf7542c73c8edb0f2e5af49138bed94ac6064a7ac526791ba511084"
+    },
+    {
+      "asset": "lossless_layers/tile-002-001.png",
+      "x": 128,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "sha256": "aee73dde6be8f61c699a1cf312347e4268dacbb4d77310cdee4fa47fb2bdeabc"
+    },
+    {
+      "asset": "lossless_layers/tile-002-002.png",
+      "x": 256,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "sha256": "a0171923a0f488c9562531f75d7af3fc2277414bb245e8e7c64888a6003b5d02"
+    },
+    {
+      "asset": "lossless_layers/tile-002-003.png",
+      "x": 384,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "sha256": "a97bf4c97a5be64689502def865974ed6315a74205a3762de886e2ce8449ef9e"
+    },
+    {
+      "asset": "lossless_layers/tile-002-004.png",
+      "x": 512,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "sha256": "d50db182f3809ea6cee214ead538c0fe8cfa29e77215c085be4b2b556abfd975"
+    },
+    {
+      "asset": "lossless_layers/tile-002-005.png",
+      "x": 640,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "sha256": "e058dcb82077503e2301c01e470c160bb8bb53206c7f735ecd7bf2d16dce1422"
+    },
+    {
+      "asset": "lossless_layers/tile-002-006.png",
+      "x": 768,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "sha256": "5c0039e8b23938fd42de15bb5872c844a46e1e6f4736987f1255962696b448d6"
+    },
+    {
+      "asset": "lossless_layers/tile-002-007.png",
+      "x": 896,
+      "y": 256,
+      "width": 58,
+      "height": 128,
+      "sha256": "3408fb9b1682aad876056b097493d8197cca9ee0f99771353d19a4416318e7d7"
+    },
+    {
+      "asset": "lossless_layers/tile-003-000.png",
+      "x": 0,
+      "y": 384,
+      "width": 128,
+      "height": 128,
+      "sha256": "6a9cd920c300ecbd414201df8b9eff1a996df2eb464538595031d02117be5607"
+    },
+    {
+      "asset": "lossless_layers/tile-003-001.png",
+      "x": 128,
+      "y": 384,
+      "width": 128,
+      "height": 128,
+      "sha256": "cb08518f48f928c3532fa1c7402a700578263f90f2436bb28270a9d50e2ded22"
+    },
+    {
+      "asset": "lossless_layers/tile-003-002.png",
+      "x": 256,
+      "y": 384,
+      "width": 128,
+      "height": 128,
+      "sha256": "c3f3c66742ee2e02f85fa73b9320bfb9315e03637bba19dd56ab1edc739e3491"
+    },
+    {
+      "asset": "lossless_layers/tile-003-003.png",
+      "x": 384,
+      "y": 384,
+      "width": 128,
+      "height": 128,
+      "sha256": "90c76432436a916ab73e9c276aa35e863b4365d2220dabab81a08ac3b65028f6"
+    },
+    {
+      "asset": "lossless_layers/tile-003-004.png",
+      "x": 512,
+      "y": 384,
+      "width": 128,
+      "height": 128,
+      "sha256": "79170fddb34d3c5d19a4fbb2234dcd5fa36590dfff8ad533bed3d5bb5c7869ad"
+    },
+    {
+      "asset": "lossless_layers/tile-003-005.png",
+      "x": 640,
+      "y": 384,
+      "width": 128,
+      "height": 128,
+      "sha256": "68988fffbcf9d803c3f51e70d4181ce70933a50625dd819af67fe0c85b997a84"
+    },
+    {
+      "asset": "lossless_layers/tile-003-006.png",
+      "x": 768,
+      "y": 384,
+      "width": 128,
+      "height": 128,
+      "sha256": "dd919a0075a82066fe1c48ab5cae44b647b47c21ed17d3b326386cf150deda63"
+    },
+    {
+      "asset": "lossless_layers/tile-003-007.png",
+      "x": 896,
+      "y": 384,
+      "width": 58,
+      "height": 128,
+      "sha256": "9aa4e1487b7f3bc84c45d6538c5f0e39788ae3bb1b48468f4bb94d5f178bfd4b"
+    },
+    {
+      "asset": "lossless_layers/tile-004-000.png",
+      "x": 0,
+      "y": 512,
+      "width": 128,
+      "height": 128,
+      "sha256": "8ab2363026aa25859d6a7626c04d4110fa2a3b79eeb553ad1f8dda9264604b97"
+    },
+    {
+      "asset": "lossless_layers/tile-004-001.png",
+      "x": 128,
+      "y": 512,
+      "width": 128,
+      "height": 128,
+      "sha256": "a2e31637d8563360c1df672f1c37ceb278291fa7894c546ad4f6459994588813"
+    },
+    {
+      "asset": "lossless_layers/tile-004-002.png",
+      "x": 256,
+      "y": 512,
+      "width": 128,
+      "height": 128,
+      "sha256": "c222cc98233c0de3a62d4e7832a9658e72d0f2cc7aad49daeba443e4c97617ce"
+    },
+    {
+      "asset": "lossless_layers/tile-004-003.png",
+      "x": 384,
+      "y": 512,
+      "width": 128,
+      "height": 128,
+      "sha256": "197fa856ce20b644e11aa4e0d680e450f3663d080d4c45ba1e175be2f2cc69d7"
+    },
+    {
+      "asset": "lossless_layers/tile-004-004.png",
+      "x": 512,
+      "y": 512,
+      "width": 128,
+      "height": 128,
+      "sha256": "3b7edcda4061de35327702f429cd7899b86b917d24d4abb4685b4ee5cf0eee2b"
+    },
+    {
+      "asset": "lossless_layers/tile-004-005.png",
+      "x": 640,
+      "y": 512,
+      "width": 128,
+      "height": 128,
+      "sha256": "2efef6271c5a720070c3e9ea30c7c6fa13a1048d15066a5c7ff10b9e8e927c8e"
+    },
+    {
+      "asset": "lossless_layers/tile-004-006.png",
+      "x": 768,
+      "y": 512,
+      "width": 128,
+      "height": 128,
+      "sha256": "eb018a84ec7be85613a4c5f4158b4beb9f1aa20f145f0b3c00607f25088a892e"
+    },
+    {
+      "asset": "lossless_layers/tile-004-007.png",
+      "x": 896,
+      "y": 512,
+      "width": 58,
+      "height": 128,
+      "sha256": "5e7e41c984a4a60439c5cf7d7c4018c091fc93adf42f266ca965614abc5ae4ca"
+    },
+    {
+      "asset": "lossless_layers/tile-005-000.png",
+      "x": 0,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "sha256": "78426fed43d2e406e64f1c10838b88c6530a26921f65e9b364696cdd207b576f"
+    },
+    {
+      "asset": "lossless_layers/tile-005-001.png",
+      "x": 128,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "sha256": "7936ee39fddc700fcee66adf0ce41d5c4210d32f00bb1c008d1776655e9c5a5e"
+    },
+    {
+      "asset": "lossless_layers/tile-005-002.png",
+      "x": 256,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "sha256": "4fb0a9222a57002edf114b592c6586d946614ee2ea463800defee512c8a03d48"
+    },
+    {
+      "asset": "lossless_layers/tile-005-003.png",
+      "x": 384,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "sha256": "a459f4b32faa16a7ca524e91225f9c2774ee325b0101b252e92aa0d119d9259c"
+    },
+    {
+      "asset": "lossless_layers/tile-005-004.png",
+      "x": 512,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "sha256": "f2ae5399b5a46486a370136a552b4a7a3eb587cc6b1f117b4d6a7988c6d8fb90"
+    },
+    {
+      "asset": "lossless_layers/tile-005-005.png",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "sha256": "a64b23c45e2e7f6c65916b234dc1f9518578d4678086faf1650275705c82ac77"
+    },
+    {
+      "asset": "lossless_layers/tile-005-006.png",
+      "x": 768,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "sha256": "f597bdae39c59a77b6c7b8f4b12705db7f78aaaab68667bc01da0fa28ebe4b25"
+    },
+    {
+      "asset": "lossless_layers/tile-005-007.png",
+      "x": 896,
+      "y": 640,
+      "width": 58,
+      "height": 128,
+      "sha256": "8312d39b632cf80a51338d28039e2ccbdbac93565d23e3d0322f7cb3d10dae82"
+    },
+    {
+      "asset": "lossless_layers/tile-006-000.png",
+      "x": 0,
+      "y": 768,
+      "width": 128,
+      "height": 128,
+      "sha256": "6c4990555ecbfb48592aea1ecae7d5525db7641490ade65dc579e821fe682ada"
+    },
+    {
+      "asset": "lossless_layers/tile-006-001.png",
+      "x": 128,
+      "y": 768,
+      "width": 128,
+      "height": 128,
+      "sha256": "cfb6ae01ae7058370836179849ebb4319ea8628b133d5be02dcd74163ebe15ff"
+    },
+    {
+      "asset": "lossless_layers/tile-006-002.png",
+      "x": 256,
+      "y": 768,
+      "width": 128,
+      "height": 128,
+      "sha256": "75a42cb6a0d768e9fffc6781122935ad017a915372dfd9533f4fc90cd7faad56"
+    },
+    {
+      "asset": "lossless_layers/tile-006-003.png",
+      "x": 384,
+      "y": 768,
+      "width": 128,
+      "height": 128,
+      "sha256": "487ebcac4abb62905a30ce23a1e52e430c79b50eaeade26485c01abbec6a8b20"
+    },
+    {
+      "asset": "lossless_layers/tile-006-004.png",
+      "x": 512,
+      "y": 768,
+      "width": 128,
+      "height": 128,
+      "sha256": "92bf87ea9e6497c89f323af606652447346f2da23bc38e6bcfb69c327c19dbd4"
+    },
+    {
+      "asset": "lossless_layers/tile-006-005.png",
+      "x": 640,
+      "y": 768,
+      "width": 128,
+      "height": 128,
+      "sha256": "609da4564da40763b4457c2f50e18f69dcb01939ed6ca010f00cab1fb5501d8b"
+    },
+    {
+      "asset": "lossless_layers/tile-006-006.png",
+      "x": 768,
+      "y": 768,
+      "width": 128,
+      "height": 128,
+      "sha256": "813ba16d71b801cbfc8f00f82fac748e67d4aed17745642246ee1ad5402fc7db"
+    },
+    {
+      "asset": "lossless_layers/tile-006-007.png",
+      "x": 896,
+      "y": 768,
+      "width": 58,
+      "height": 128,
+      "sha256": "cdabb8ec2dd2f1db897278b34140e413ad008d842d1a60d7e8de074751f1b36f"
+    },
+    {
+      "asset": "lossless_layers/tile-007-000.png",
+      "x": 0,
+      "y": 896,
+      "width": 128,
+      "height": 64,
+      "sha256": "f50b45eefe95ba6113574a691435c82dac1e392c0665a67a0cc3338f338d9245"
+    },
+    {
+      "asset": "lossless_layers/tile-007-001.png",
+      "x": 128,
+      "y": 896,
+      "width": 128,
+      "height": 64,
+      "sha256": "c7e351531c4c6f9c2f9e1cce56ba60f1dd969c55ade27dd80d8a60df32da5c0a"
+    },
+    {
+      "asset": "lossless_layers/tile-007-002.png",
+      "x": 256,
+      "y": 896,
+      "width": 128,
+      "height": 64,
+      "sha256": "055920aeaa598ce52a384f64609604c9f94cc49a3d30858d0161f69ee4c24562"
+    },
+    {
+      "asset": "lossless_layers/tile-007-003.png",
+      "x": 384,
+      "y": 896,
+      "width": 128,
+      "height": 64,
+      "sha256": "f9e3393de58d65d016f371cdbcad32784b2696f44eb98c973de2d482326deee8"
+    },
+    {
+      "asset": "lossless_layers/tile-007-004.png",
+      "x": 512,
+      "y": 896,
+      "width": 128,
+      "height": 64,
+      "sha256": "3f7d829e5bfd939f06be5c948fe7a17b6c8bd9aca7389960168b41d721192418"
+    },
+    {
+      "asset": "lossless_layers/tile-007-005.png",
+      "x": 640,
+      "y": 896,
+      "width": 128,
+      "height": 64,
+      "sha256": "f9c600054c676ef54bce216bbaa37294e0e4397b6b831c00c3730a651875374c"
+    },
+    {
+      "asset": "lossless_layers/tile-007-006.png",
+      "x": 768,
+      "y": 896,
+      "width": 128,
+      "height": 64,
+      "sha256": "51b21d3ab48fb9d2d6e1db900f4bf56e6fc4f3f5badcccf492a556c5b8db1d05"
+    },
+    {
+      "asset": "lossless_layers/tile-007-007.png",
+      "x": 896,
+      "y": 896,
+      "width": 58,
+      "height": 64,
+      "sha256": "76db5ca1dd40ce76f43a7022780420865dd09d9e1aac8a4e9dd92a78a2a098d0"
+    }
+  ],
+  "claims": {
+    "world_physics_understood": false,
+    "semantic_decomposition": false,
+    "pixel_round_trip_only": true,
+    "learned_model_updated": false
+  },
+  "memory_write_allowed": false,
+  "auto_promotion_allowed": false,
+  "decision_authority": "KX108_ONLY",
+  "allowed_to_act": false,
+  "kernel_mutation": false
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "examples": [
+      "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\f1a-dataset-v1\\train\\blue_0.png",
+      "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\f1a-dataset-v1\\train\\blue_1.png",
+      "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\f1a-dataset-v1\\train\\blue_2.png"
+    ],
+    "identity": "blue"
+  },
+  {
+    "examples": [
+      "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\f1a-dataset-v1\\train\\red_0.png",
+      "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\f1a-dataset-v1\\train\\red_1.png",
+      "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\f1a-dataset-v1\\train\\red_2.png"
+    ],
+    "identity": "red"
+  }
+]

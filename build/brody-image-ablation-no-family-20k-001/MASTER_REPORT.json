@@ -1,0 +1,101 @@
+{
+  "schema": "BRODY_IMAGE_FAMILY_BLIND_ABLATION_V0",
+  "train": 10000,
+  "exam": 10000,
+  "receipt_tip": "7c488e2d0481b614cd3f7e43557ef1b9518d576fc21f9ccab52bf45324a62d09",
+  "learner_contexts": 12,
+  "family_label_exposed_to_learner": false,
+  "family_and_style_shape_independent_in_schedule": true,
+  "same_evaluation_scenes_for_baseline_and_ablation": true,
+  "candidate_skills_digest": "69abd9454f2a69eef8e8cf5c77c71cbda6c5662d0f4702be0d29a0901bb69823",
+  "scores": {
+    "fresh_geometry": {
+      "cases": 1000,
+      "holds": 0,
+      "baseline_mean_loss": 0.350363037109375,
+      "learned_mean_loss": 0.0,
+      "improved": 68,
+      "worsened": 0
+    },
+    "translation": {
+      "cases": 1000,
+      "holds": 0,
+      "baseline_mean_loss": 0.47833740234375,
+      "learned_mean_loss": 0.0,
+      "improved": 95,
+      "worsened": 0
+    },
+    "mirror": {
+      "cases": 1000,
+      "holds": 0,
+      "baseline_mean_loss": 0.442326171875,
+      "learned_mean_loss": 0.0,
+      "improved": 86,
+      "worsened": 0
+    },
+    "rotation": {
+      "cases": 1000,
+      "holds": 0,
+      "baseline_mean_loss": 0.43976220703125,
+      "learned_mean_loss": 0.0,
+      "improved": 87,
+      "worsened": 0
+    },
+    "contrast": {
+      "cases": 1000,
+      "holds": 0,
+      "baseline_mean_loss": 0.238853515625,
+      "learned_mean_loss": 0.0,
+      "improved": 86,
+      "worsened": 0
+    },
+    "blur": {
+      "cases": 1000,
+      "holds": 0,
+      "baseline_mean_loss": 0.141107666015625,
+      "learned_mean_loss": 0.0,
+      "improved": 93,
+      "worsened": 0
+    },
+    "sensor_noise": {
+      "cases": 1000,
+      "holds": 0,
+      "baseline_mean_loss": 0.36514208984375,
+      "learned_mean_loss": 0.0,
+      "improved": 76,
+      "worsened": 0
+    },
+    "part_occlusion": {
+      "cases": 1000,
+      "holds": 0,
+      "baseline_mean_loss": 0.357314453125,
+      "learned_mean_loss": 0.0,
+      "improved": 77,
+      "worsened": 0
+    },
+    "wrong_intent": {
+      "cases": 1000,
+      "holds": 0,
+      "baseline_mean_loss": 6.31300537109375,
+      "learned_mean_loss": 6.783245361328125,
+      "improved": 0,
+      "worsened": 94
+    },
+    "unknown_intent": {
+      "cases": 1000,
+      "holds": 1000,
+      "baseline_mean_loss": null,
+      "learned_mean_loss": null,
+      "improved": 0,
+      "worsened": 0
+    }
+  },
+  "exam_feedback_used_for_training": false,
+  "shared_renderer": true,
+  "real_image_perception_proven": false,
+  "can_detect_wrong_intent_from_observable_data": false,
+  "native_memory_write": false,
+  "kernel_mutation": false,
+  "decision_authority": "KX108_ONLY",
+  "status": "FAMILY_ABLATION_MEASURED_SYNTHETIC_ONLY"
+}

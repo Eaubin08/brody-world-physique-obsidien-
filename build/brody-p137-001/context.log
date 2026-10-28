@@ -1,0 +1,9 @@
+
+test_corrupted_memory_rejected (test_image_context_transition_transfer_v1.ContextTransitionTests.test_corrupted_memory_rejected) ... ok
+test_cross_group_context_transition_transfer (test_image_context_transition_transfer_v1.ContextTransitionTests.test_cross_group_context_transition_transfer) ... ok
+test_insufficient_independent_groups_holds (test_image_context_transition_transfer_v1.ContextTransitionTests.test_insufficient_independent_groups_holds) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.152s
+
+OK

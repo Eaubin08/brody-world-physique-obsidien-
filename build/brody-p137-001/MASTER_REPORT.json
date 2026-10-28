@@ -1,0 +1,82 @@
+{
+  "schema": "BRODY_MULTIDOMAIN_TIMED_SCHOOL_P137",
+  "budget_s": 600,
+  "distinct_families": 9,
+  "counts": {
+    "PASS": 9,
+    "FAIL": 0,
+    "TIMEOUT": 0,
+    "NOT_RUN_BUDGET": 0
+  },
+  "runs": [
+    {
+      "family": "perception",
+      "test": "test_image_heterogeneous_capability_audit_p131.py",
+      "status": "PASS",
+      "duration_s": 0.223,
+      "output_sha256": "07c7ae5eab2aae1173db24043a37cae30df98d2c7488e3f4e7ea56e82e07ad33"
+    },
+    {
+      "family": "context",
+      "test": "test_image_context_transition_transfer_v1.py",
+      "status": "PASS",
+      "duration_s": 0.323,
+      "output_sha256": "4ee076e5600e286778f9d768320357597a482fa78dd8dec46ff486db7f036c23"
+    },
+    {
+      "family": "scene_memory",
+      "test": "test_image_scene_relational_school_p132.py",
+      "status": "PASS",
+      "duration_s": 0.211,
+      "output_sha256": "13d6e6e9c2b6f08df76d4eace997bb2cc4dd38c68c1540f291cf63247f597542"
+    },
+    {
+      "family": "generation",
+      "test": "test_image_multicapability_lab_p133.py",
+      "status": "PASS",
+      "duration_s": 0.193,
+      "output_sha256": "3c2c734b296c659b34830997d6a31e0849b09450f81be9771a30ac391623a9ec"
+    },
+    {
+      "family": "correction",
+      "test": "test_image_reciprocal_shape_learning_p134.py",
+      "status": "PASS",
+      "duration_s": 0.226,
+      "output_sha256": "f2ff697dc50f76f65cad6b019563f3684e5a821b69a20706e330df72e120bc29"
+    },
+    {
+      "family": "blind_exam",
+      "test": "test_image_blind_symbolic_regeneration_p135.py",
+      "status": "PASS",
+      "duration_s": 0.229,
+      "output_sha256": "af1f14f93db4cc1113c7f90bb5c70fb68a65f95b96baeb6f061cca2023bdb593"
+    },
+    {
+      "family": "diversity",
+      "test": "test_image_forty_distinct_school_p136.py",
+      "status": "PASS",
+      "duration_s": 0.234,
+      "output_sha256": "4de2d0ec9afecf3707bf0ba1b7d06f3970d51427ecc318fa92111099b3e72c68"
+    },
+    {
+      "family": "physics",
+      "test": "test_image_motion_independent_campaign_v1.py",
+      "status": "PASS",
+      "duration_s": 0.34,
+      "output_sha256": "ab3ee4458d603cc2f1501ff56c88be48cd27ca6f32f5c99d11d16abe51380695"
+    },
+    {
+      "family": "source_provenance",
+      "test": "test_image_motion_one_shot_campaign_v1.py",
+      "status": "PASS",
+      "duration_s": 0.409,
+      "output_sha256": "ca1a7414de4205292f2abf51b5b5d3084e2807e2ebf5df3ac8296ec8bf0aa1fd"
+    }
+  ],
+  "no_repeated_seed_loops": true,
+  "full_budget_consumption_required": false,
+  "real_world_generalization_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

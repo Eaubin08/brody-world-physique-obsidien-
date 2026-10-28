@@ -1,0 +1,28 @@
+{
+  "canonical_promotion": false,
+  "cases": [
+    {
+      "baseline_error": 1.0,
+      "case": "known_probe",
+      "corrected_error": 0.0,
+      "precommit_before_truth": true
+    },
+    {
+      "baseline_error": 0.0,
+      "case": "retention_clean",
+      "corrected_error": 0.0,
+      "precommit_before_truth": true
+    }
+  ],
+  "context_scoped_memory": true,
+  "decision_authority": "KX108_ONLY",
+  "global_correction_accepted": false,
+  "native_memory_write": false,
+  "observed_probe_response": -1.0,
+  "outside_simulation_action": false,
+  "probe_decision": "PROBE",
+  "schema": "BRODY_U1_U2_CONTEXTUAL_EXPERIENCE_V1",
+  "source_pixel_observations": true,
+  "state_changed": true,
+  "verdict": "U1_U2_CANDIDATE_STATE_CHANGED_BY_PROBE"
+}

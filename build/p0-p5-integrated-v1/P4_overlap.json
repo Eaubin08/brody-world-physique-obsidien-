@@ -1,0 +1,20 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "811100c0ecbc7988e8340ec382bb9363d756ca8029048887254798202cb7d030",
+  "native_memory_write": false,
+  "prediction": null,
+  "reason": "HOLD_IDENTITY_AMBIGUOUS",
+  "scene": "overlap",
+  "status": "HOLD_MODEL",
+  "visibility_counts": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+  ]
+}

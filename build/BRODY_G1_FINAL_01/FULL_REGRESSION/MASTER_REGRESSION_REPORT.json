@@ -1,0 +1,27 @@
+{
+    "video_evidence":  "HOLD_NO_INDEPENDENT_VIDEO",
+    "git_revision":  "966df6223ef86b2b6fba577a997de69b70f02cc1",
+    "full_regression_executed":  true,
+    "canonical_promotion":  false,
+    "schema":  "BRODY_FULL_CONSOLIDATION_V1",
+    "decision_authority":  "KX108_ONLY",
+    "tests":  {
+                  "U5B_U8":  {
+                                 "passed":  true,
+                                 "log":  "build\\BRODY_G1_FINAL_01\\FULL_REGRESSION\\TEST_U5B_U8.log",
+                                 "exit_code":  0
+                             },
+                  "CONSOLIDATED":  {
+                                       "passed":  true,
+                                       "log":  "build\\BRODY_G1_FINAL_01\\FULL_REGRESSION\\TEST_CONSOLIDATED.log",
+                                       "exit_code":  0
+                                   },
+                  "ALL":  {
+                              "passed":  true,
+                              "log":  "build\\BRODY_G1_FINAL_01\\FULL_REGRESSION\\TEST_ALL.log",
+                              "exit_code":  0
+                          }
+              },
+    "verdict":  "CONSOLIDATION_TESTS_PASSED_EXTERNAL_EVIDENCE_GATED",
+    "native_memory_write":  false
+}

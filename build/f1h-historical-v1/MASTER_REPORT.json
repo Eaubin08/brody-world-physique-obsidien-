@@ -1,0 +1,160 @@
+{
+  "answers": 11,
+  "canonical_promotion": false,
+  "cases": 12,
+  "counterfactual": {
+    "different_hidden_identity_futures": true,
+    "different_histories": true,
+    "history_observations_differ": true,
+    "pixel_sha256": "b46e8df818c3d8a4d35493fc3126d1fae043432b59b6e75336201ed01e9d63d5",
+    "same_final_pixels": true
+  },
+  "decision_authority": "KX108_ONLY",
+  "direct_imports_verified_at_runtime": true,
+  "exams": [
+    {
+      "case": "cross_identical",
+      "error": 0.0,
+      "history_observations": 6,
+      "module": "P149",
+      "prediction": 34.0,
+      "reason": "TRACK_LINEAR_EXTRAPOLATION",
+      "source_sha256": "811abbe50c260b5bda58216b47bd3d3e5cca121270bbf4568c7628eb6af5e7da"
+    },
+    {
+      "case": "same_frame_opposite_history",
+      "error": 0.0,
+      "history_observations": 6,
+      "module": "P149",
+      "prediction": 52.0,
+      "reason": "TRACK_LINEAR_EXTRAPOLATION",
+      "source_sha256": "57f92734eea18d2cdaf76245006fffa8bb193c916d7c43ecf5b0d512a28f5bae"
+    },
+    {
+      "case": "camera_offset",
+      "error": 12.0,
+      "history_observations": 6,
+      "module": "P149",
+      "prediction": 19.0,
+      "reason": "TRACK_LINEAR_EXTRAPOLATION",
+      "source_sha256": "e9413e7f9312df484df53095b663318d8d92eefd83cc6ffcade5e93ada8c35ab"
+    },
+    {
+      "case": "occlude_one",
+      "error": 0.0,
+      "history_observations": 6,
+      "module": "P149",
+      "prediction": 35.0,
+      "reason": "TRACK_LINEAR_EXTRAPOLATION",
+      "source_sha256": "21bbfbd891097e919c01514f6fee51a15b05df52afe275eaf746a77c54c80dfa"
+    },
+    {
+      "camera_observed": true,
+      "case": "separate",
+      "error": 0.0,
+      "module": "P150",
+      "prediction": 52.0,
+      "reason": "TRACK_PREDICTION",
+      "source_sha256": "951b4661109b738c3028f4637b54715ed8c6e5cf4e9cac16bd3939bcc1cd7f3f"
+    },
+    {
+      "camera_observed": true,
+      "case": "overlap",
+      "error": null,
+      "module": "P150",
+      "prediction": null,
+      "reason": "HOLD_IDENTITY_AMBIGUOUS",
+      "source_sha256": "fbc38b66cc7333272177ce0746d33c8f4a46fcaaaeee4d4839d185c266adc4a9"
+    },
+    {
+      "camera_observed": true,
+      "case": "camera_pan",
+      "error": 1.0,
+      "module": "P150",
+      "prediction": 43.0,
+      "reason": "TRACK_PREDICTION",
+      "source_sha256": "d462b89258683cd755877f8eff38d3ab0eea14450b481d402156a6c95be5202e"
+    },
+    {
+      "camera_observed": true,
+      "case": "occlude_both",
+      "error": 0.529411764705884,
+      "module": "P150",
+      "prediction": 35.470588235294116,
+      "reason": "TRACK_PREDICTION",
+      "source_sha256": "35312ac68808dbc2381936441b8f4c0d89e2a9ee5de164a82c3336ae1b5b35b1"
+    },
+    {
+      "case": "colour_only",
+      "diagnostics": {
+        "ambiguity_frames": 1,
+        "camera_frames": 9
+      },
+      "error": 0.0,
+      "module": "P152",
+      "prediction": [
+        44.0,
+        39.0
+      ],
+      "reason": "TRACK",
+      "source_sha256": "caef66c1cd8c617a1b35db1029e1f30e649efe87d2b6b70d9946308dfb474ba1"
+    },
+    {
+      "case": "motion_reverse_only",
+      "diagnostics": {
+        "ambiguity_frames": 1,
+        "camera_frames": 9
+      },
+      "error": 0.0,
+      "module": "P152",
+      "prediction": [
+        16.0,
+        34.0
+      ],
+      "reason": "TRACK",
+      "source_sha256": "a05adb52f91a9d9615548e60141fd728dfedf4826e9462648a64568518678e4e"
+    },
+    {
+      "case": "colour_and_reverse",
+      "diagnostics": {
+        "ambiguity_frames": 0,
+        "camera_frames": 9
+      },
+      "error": 0.0,
+      "module": "P152",
+      "prediction": [
+        21.0,
+        33.0
+      ],
+      "reason": "TRACK",
+      "source_sha256": "975b59f5d6c0005ba3e67bc80ad3774125e8b003bf82a05449dc86f083dd35f1"
+    },
+    {
+      "case": "cross_equal",
+      "diagnostics": {
+        "ambiguity_frames": 1,
+        "camera_frames": 9
+      },
+      "error": 0.0,
+      "module": "P152",
+      "prediction": [
+        49.0,
+        30.0
+      ],
+      "reason": "TRACK",
+      "source_sha256": "50f569f062d024b2bee9c8f12acd81bb547d485893fab5ab49f14ed09aafc043"
+    }
+  ],
+  "holds": 1,
+  "modules": {
+    "P149": "brody_world_physique.image_multiangle_temporal_p149",
+    "P150": "brody_world_physique.image_tracking_beam_p150",
+    "P152": "brody_world_physique.image_identity_beam_p152"
+  },
+  "native_memory_write": false,
+  "physical_law_discovery_proven": false,
+  "schema": "BRODY_F1H_HISTORICAL_MODULE_REUSE_V1",
+  "single_shared_skill_state": false,
+  "verdict": "F1H_REUSE_HISTORICAL_APIS_BOUNDARY_TEST",
+  "world_model_sens_connected": false
+}

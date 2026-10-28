@@ -1,0 +1,14 @@
+{
+  "shape": "rectangle",
+  "intent": "LIGHT",
+  "instrument": "PENCIL",
+  "source_memory_sha256": "3e197b9a34098c08f1fb00ca69ee62a44c18951a39c431f99331ecab78bc796c",
+  "candidate_sha256": "75018cc68f3605ca506b09017ee6f3cd304982e9d6970dfb31258b10c4ed4d3a",
+  "instrument_train_episode_ids": [
+    "training_01",
+    "training_02",
+    "training_03"
+  ],
+  "selection_rule": "MIN_PRIOR_MEAN_PIXEL_ERROR_BY_DECLARED_INTENT",
+  "target_read_before_seal": false
+}

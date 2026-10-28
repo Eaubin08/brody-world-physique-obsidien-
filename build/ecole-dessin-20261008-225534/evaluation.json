@@ -1,0 +1,111 @@
+{
+  "schema": "BRODY_DRAWING_SCHOOL_V0",
+  "mode": "GUIDED_VISUAL_COPYING_AND_PENCIL_CORRECTION",
+  "learning_source": "LOCAL_SIMULATED_TEACHER_DRAWING",
+  "course_sections": [
+    "TRAIT",
+    "CONTOUR_SIMPLE",
+    "ASSEMBLAGE_2D"
+  ],
+  "labels_accessible_to_learner": false,
+  "train_lessons": [
+    {
+      "lesson_ref": "lesson_01",
+      "source_sha256": "5d7de2fa407b61f1107b7161beef138fbaf3aff07f0ee99425399bb9e7c79900",
+      "first_error_pixels": 123,
+      "last_error_pixels": 0,
+      "revisions": 1
+    },
+    {
+      "lesson_ref": "lesson_02",
+      "source_sha256": "dd67bf6eeb0d5c0682ac89cf3b48c51ea111a12b2b7482de0a302c258f7b8f50",
+      "first_error_pixels": 380,
+      "last_error_pixels": 0,
+      "revisions": 4
+    },
+    {
+      "lesson_ref": "lesson_03",
+      "source_sha256": "686159ffe7c0555017d63ac45f8e727e5af8443b7a8e53f7f6bceccf76515199",
+      "first_error_pixels": 316,
+      "last_error_pixels": 168,
+      "revisions": 10
+    }
+  ],
+  "exams": [
+    {
+      "exercise_ref": "exam_01",
+      "source_sha256": "054063d63128ab6555f4cd0c55b4d7401773cff97b42249a68930d6e4486d217",
+      "cold_blank_error_pixels": 123,
+      "candidate_replay_error_pixels": 0,
+      "raw_memory_recall_error_pixels": 0,
+      "memory_recall_rejected_as_harmful": false,
+      "memory_recall_status": "ACCEPTED_CANDIDATE",
+      "after_feedback_error_pixels": 0,
+      "improved_initially_over_blank": true,
+      "feedback_revision_count": 0,
+      "heldout_exercise_prior_to_candidate_memory": true
+    },
+    {
+      "exercise_ref": "exam_02",
+      "source_sha256": "03389b6725821078af14a22d053da030f1312d3734e752b81746e59b4a439493",
+      "cold_blank_error_pixels": 380,
+      "candidate_replay_error_pixels": 0,
+      "raw_memory_recall_error_pixels": 0,
+      "memory_recall_rejected_as_harmful": false,
+      "memory_recall_status": "ACCEPTED_CANDIDATE",
+      "after_feedback_error_pixels": 0,
+      "improved_initially_over_blank": true,
+      "feedback_revision_count": 0,
+      "heldout_exercise_prior_to_candidate_memory": true
+    },
+    {
+      "exercise_ref": "exam_03",
+      "source_sha256": "8517bf4176d3e8e2ee9bca2e8cfa88600a3657f6484b1e7491a8ed6618339b81",
+      "cold_blank_error_pixels": 316,
+      "candidate_replay_error_pixels": 168,
+      "raw_memory_recall_error_pixels": 168,
+      "memory_recall_rejected_as_harmful": false,
+      "memory_recall_status": "ACCEPTED_CANDIDATE",
+      "after_feedback_error_pixels": 168,
+      "improved_initially_over_blank": true,
+      "feedback_revision_count": 0,
+      "heldout_exercise_prior_to_candidate_memory": true
+    },
+    {
+      "exercise_ref": "exam_04",
+      "source_sha256": "eee2fc69e2f2ed6afde07e02931ac3634e17c7fc2fd8d4e28b9fe81f71058f7c",
+      "cold_blank_error_pixels": 393,
+      "candidate_replay_error_pixels": 393,
+      "raw_memory_recall_error_pixels": 659,
+      "memory_recall_rejected_as_harmful": true,
+      "memory_recall_status": "REJECTED_HARMFUL_RECALL",
+      "after_feedback_error_pixels": 0,
+      "improved_initially_over_blank": false,
+      "feedback_revision_count": 2,
+      "heldout_exercise_prior_to_candidate_memory": true
+    }
+  ],
+  "candidate_skill_count": 3,
+  "ledger_integrity": {
+    "verified_records": 26,
+    "last_sha256": "f5a23dd31eefdb8ffb4f882d1972f2015e9c7d39ae18e1af1633ce51795b5462",
+    "native_memory_verified": false,
+    "canonical_memory_written": false
+  },
+  "candidate_memory_path": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\ecole-dessin-20261008-225534\\candidate_skill_memory.json",
+  "model_weights_trained": false,
+  "universal_object_perception": false,
+  "physical_understanding_proven": false,
+  "novel_view_understanding_proven": false,
+  "validated_canonical_skill": false,
+  "native_memory_write_allowed": false,
+  "decision_authority": "KX108_ONLY",
+  "limitations": [
+    "Pillow pen motor tools and pixel feedback are provided",
+    "Learner sees source pixels; not learning without observations",
+    "Training from explicit pixel correction, not learning a world representation",
+    "Test seed selects nearest coarse pixel signature; not semantic classification",
+    "Local hash chained ledger is NOT authentic Obsidia Merkle sealing",
+    "Candidate skills have not passed independent real-world validation"
+  ]
+}

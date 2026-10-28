@@ -1,0 +1,7 @@
+{
+  "same_final_pixels": true,
+  "different_histories": true,
+  "different_hidden_identity_futures": true,
+  "history_observations_differ": true,
+  "pixel_sha256": "b46e8df818c3d8a4d35493fc3126d1fae043432b59b6e75336201ed01e9d63d5"
+}

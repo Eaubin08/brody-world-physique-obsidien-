@@ -1,0 +1,12 @@
+{
+  "schema": "BRODY_MULTICAPABILITY_P133",
+  "cases": 8,
+  "families": 7,
+  "pass": 8,
+  "fail": 0,
+  "novel_real_world_learning_proven": false,
+  "physical_360_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

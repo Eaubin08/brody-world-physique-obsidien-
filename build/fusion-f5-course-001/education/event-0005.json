@@ -1,0 +1,18 @@
+{
+  "index": 5,
+  "previous": "11b0d2f3d13663ffec7b9e20d80465b66a4f3ded82b08ae3ff2f769375452e2f",
+  "kind": "HELD_OUT_TEST",
+  "payload": {
+    "skill_id": "triangle",
+    "registry_version": 3,
+    "candidate_sha256": "74a25962a4a1ce8e6af08b42fa364e5340dcd9cbe20341e899e03616e1784ba6",
+    "verdict": "IMPROVED",
+    "candidate_error": 145,
+    "baseline_error": 245,
+    "test_used_for_training": false
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "54cfd25516881a20ad8d551998c0e753b3fc1cd7eded90eed08401338a3f26b1"
+}

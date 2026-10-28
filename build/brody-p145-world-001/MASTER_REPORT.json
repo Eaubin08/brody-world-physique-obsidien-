@@ -1,0 +1,46 @@
+{
+  "schema": "BRODY_P145_CROSS_RENDERER_WORLD_SHIFT",
+  "cases": 25000,
+  "cells_completed": 25,
+  "cells_expected": 25,
+  "elapsed_seconds": 335.995,
+  "world_scores": {
+    "reference": {
+      "n": 5000,
+      "correct": 4467,
+      "accuracy": 0.8934,
+      "coverage": 1.0
+    },
+    "new_engine_light": {
+      "n": 5000,
+      "correct": 4286,
+      "accuracy": 0.8572,
+      "coverage": 1.0
+    },
+    "new_engine_dark": {
+      "n": 5000,
+      "correct": 1344,
+      "accuracy": 0.2688,
+      "coverage": 1.0
+    },
+    "new_engine_outlined": {
+      "n": 5000,
+      "correct": 4254,
+      "accuracy": 0.8508,
+      "coverage": 1.0
+    },
+    "new_engine_occluded": {
+      "n": 5000,
+      "correct": 2926,
+      "accuracy": 0.5852,
+      "coverage": 1.0
+    }
+  },
+  "stop_reason": "EXAM_CAP",
+  "separate_renderer_implementation": true,
+  "independent_real_world_sources": false,
+  "real_world_generalization_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

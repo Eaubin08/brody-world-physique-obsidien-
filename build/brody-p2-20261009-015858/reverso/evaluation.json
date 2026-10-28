@@ -1,0 +1,20 @@
+{
+  "schema": "BRODY_REVERSE_FUTURE_IMAGE_CANDIDATE_V1",
+  "source_kind": "SIMULATED",
+  "video_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+  "forecast_receipt_sha256": "8a583fea873b3c47fbc4e6b5d5869a13e825563700a19fcb1cbf4a9f55992dc8",
+  "past_index": 12,
+  "future_index": 18,
+  "candidate_center_xy": [
+    103.97107403931724,
+    73.13844746178492
+  ],
+  "full_frame_mean_absolute_pixel_difference": 0.11500651041666667,
+  "method": "PAST_FRAME_ISOLATE_AND_MOVE_WITH_OPENCV_INPAINT",
+  "future_coordinates_learned_from_experiences": true,
+  "pixel_reproduction_exact": false,
+  "image_generation_model_trained": false,
+  "physical_causality_proven": false,
+  "real_world_knowledge_validated": false,
+  "native_memory_write_allowed": false
+}

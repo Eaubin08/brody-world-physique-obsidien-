@@ -1,0 +1,124 @@
+{
+  "schema": "BRODY_F11_VISUAL_CONTEXT_1000_V0",
+  "episodes": 1000,
+  "policy_changes": 0,
+  "checkpoints": [
+    {
+      "episode": 100,
+      "scores": {
+        "known_correct": 56,
+        "known_wrong": 0,
+        "holds_ambiguous": 24,
+        "wrong_ambiguous": 0,
+        "evaluated": 80
+      },
+      "snapshot_digest": "17e58d8b1c410272c8abec9c491456f2e410595dde4a0ce3f0f0e350693f941d"
+    },
+    {
+      "episode": 200,
+      "scores": {
+        "known_correct": 56,
+        "known_wrong": 0,
+        "holds_ambiguous": 24,
+        "wrong_ambiguous": 0,
+        "evaluated": 80
+      },
+      "snapshot_digest": "819336da2c839bd8be36eb36133bfff31d51769d2e1cfaf0ad368d6f1ba1e05f"
+    },
+    {
+      "episode": 300,
+      "scores": {
+        "known_correct": 56,
+        "known_wrong": 0,
+        "holds_ambiguous": 24,
+        "wrong_ambiguous": 0,
+        "evaluated": 80
+      },
+      "snapshot_digest": "b3ea868a983acdbc6184b7f0dd39d43c0fde4c4d485c8912942e252b6d1748d8"
+    },
+    {
+      "episode": 400,
+      "scores": {
+        "known_correct": 56,
+        "known_wrong": 0,
+        "holds_ambiguous": 24,
+        "wrong_ambiguous": 0,
+        "evaluated": 80
+      },
+      "snapshot_digest": "c96782270b85aa979bcec4ac51d59afe297a2b2ba1fc234c967ae8cfd2574335"
+    },
+    {
+      "episode": 500,
+      "scores": {
+        "known_correct": 56,
+        "known_wrong": 0,
+        "holds_ambiguous": 24,
+        "wrong_ambiguous": 0,
+        "evaluated": 80
+      },
+      "snapshot_digest": "6d015b795797db8465c52b0f6b57191bf6de67cf1bda6f6e8d8d4cbacbaf8233"
+    },
+    {
+      "episode": 600,
+      "scores": {
+        "known_correct": 56,
+        "known_wrong": 0,
+        "holds_ambiguous": 24,
+        "wrong_ambiguous": 0,
+        "evaluated": 80
+      },
+      "snapshot_digest": "7102dfe538a225d0349661dc3be378f24701cf16f1bc27d4d4b93f4ebfb8b940"
+    },
+    {
+      "episode": 700,
+      "scores": {
+        "known_correct": 56,
+        "known_wrong": 0,
+        "holds_ambiguous": 24,
+        "wrong_ambiguous": 0,
+        "evaluated": 80
+      },
+      "snapshot_digest": "b893111d49ac610496cd9419bbe23877cc674a84af578b87385f65362bb59fa3"
+    },
+    {
+      "episode": 800,
+      "scores": {
+        "known_correct": 56,
+        "known_wrong": 0,
+        "holds_ambiguous": 24,
+        "wrong_ambiguous": 0,
+        "evaluated": 80
+      },
+      "snapshot_digest": "132a3fb6940b80042e2718f33e7013cd650aa7155a3e479688df353991f6bada"
+    },
+    {
+      "episode": 900,
+      "scores": {
+        "known_correct": 56,
+        "known_wrong": 0,
+        "holds_ambiguous": 24,
+        "wrong_ambiguous": 0,
+        "evaluated": 80
+      },
+      "snapshot_digest": "ffeb4b588969b1de690cd6e7f509b4c7618ed8fe19b1bcbc19f3c0c95d48f6fe"
+    },
+    {
+      "episode": 1000,
+      "scores": {
+        "known_correct": 56,
+        "known_wrong": 0,
+        "holds_ambiguous": 24,
+        "wrong_ambiguous": 0,
+        "evaluated": 80
+      },
+      "snapshot_digest": "3e0514f52754d78f009ab5f2cb08e7e390393a973fb283472dd942ab14b969f2"
+    }
+  ],
+  "receipt_tip": "018ea04fe4a94b78e7e9cea33877b368d17a1563a714b35e63b074b1bbe3e448",
+  "inference_from_pixels": true,
+  "visual_perception_limited_to_corner_markers": true,
+  "general_image_understanding_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

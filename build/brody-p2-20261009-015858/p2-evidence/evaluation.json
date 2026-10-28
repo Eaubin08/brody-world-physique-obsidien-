@@ -1,0 +1,3225 @@
+{
+  "ablation_gain_proven": false,
+  "arm_lineage": {
+    "A2_spatial_acceleration": "three past XY plus timestamps",
+    "A3_raster_only": "independent raster extraction from past frames of same video",
+    "A5_fixed_past_only_blend": "fixed average of A1 and A2, shared XY source",
+    "A6_raster_spatial_fixed_fusion": "fixed average of raster and XY linear forecast if agreement gate passes"
+  },
+  "decision_authority": "KX108_ONLY",
+  "fusion_trained_or_adaptive": false,
+  "independent_view_sources": false,
+  "limitation": "retrospective scoring of prior precommits; A3 and A6 are two processing routes over ONE synthetic source, not independent evidence; A4 and leave-one-view-out A7 not implemented; out-of-sample gain unproven",
+  "native_memory_write_allowed": false,
+  "new_fusion_predictor_implemented": true,
+  "p2_verdict": "P2_INCONCLUSIVE",
+  "past_only_feature_blend_implemented": true,
+  "per_episode": [
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 10.424108391929217,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 1.836019251143009,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 2.4884082584403466,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 1.9198159966808392,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 1.836019251143009,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 1.836019251143009,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_01.mp4",
+      "error_px": 2.909441750455711,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 14.564014256939435,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 4.247983037386795,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 5.124188520417007,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 4.616123077508631,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 4.247983037386795,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 4.247983037386795,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_01.mp4",
+      "error_px": 0.45065234789751984,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 16.492386753847697,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 2.053938711269702,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 2.7443964787599207,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 1.167839098360535,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 2.053938711269702,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 2.053938711269702,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_01.mp4",
+      "error_px": 0.17641832610044117,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 20.216008252949532,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 3.82020111210007,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 1.7802269441881455,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 2.7976608438906556,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 3.82020111210007,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 3.82020111210007,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_01.mp4",
+      "error_px": 1.3812739033968593,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 20.223195064628577,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 0.057174784330691494,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 3.8021794562309754,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 1.892467873558602,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 0.057174784330691494,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 0.057174784330691494,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_01.mp4",
+      "error_px": 0.7994056131075309,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 22.728356633656063,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 2.506043637761598,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 2.497823889262763,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 2.50177381253337,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 2.506043637761598,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 2.506043637761598,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_01.mp4",
+      "error_px": 0.5503904582944931,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 26.141663828941063,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 3.5107832926124267,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 1.21132907990829,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 2.3078984065958488,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 3.5107832926124267,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 3.5107832926124267,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_01.mp4",
+      "error_px": 1.061375589441701,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 28.251946540085672,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 2.1315620170429903,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 1.3935496671090761,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 0.40170738315155724,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 2.1315620170429903,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 2.1315620170429903,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_01.mp4",
+      "error_px": 0.8855233032025752,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_01.mp4",
+      "error_px": 28.25586321782262,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_01.mp4",
+      "error_px": 1.8994494044949055,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_01.mp4",
+      "error_px": 2.703201346188566,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_01.mp4",
+      "error_px": 2.078873161357077,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_01.mp4",
+      "error_px": 1.8994494044949055,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_01.mp4",
+      "error_px": 1.8994494044949055,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_01.mp4",
+      "error_px": 2.0694735333501026,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 15.028281406295832,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 0.8509935866694375,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 0.8048467346058827,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 0.7583282599351386,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 0.8509935866694375,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 0.8509935866694375,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_02.mp4",
+      "error_px": 0.34628049123970533,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 16.172706713974247,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 1.4345259716822911,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 2.2052224345051177,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 1.8109080190334685,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 1.4345259716822911,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 1.4345259716822911,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_02.mp4",
+      "error_px": 0.6402727164735139,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 16.18079214058265,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 0.19452370287031281,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 1.550356956070807,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 0.8403909151400812,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 0.19452370287031281,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 0.19452370287031281,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_02.mp4",
+      "error_px": 0.225450645369254,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 15.001974330995289,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 1.3423989023478224,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 1.2734496536553783,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 1.3047584255199345,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 1.3423989023478224,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 1.3423989023478224,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_02.mp4",
+      "error_px": 0.44361363851364666,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 15.970351846826198,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 0.9858352230084239,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 2.184849177188232,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 1.5563450143640918,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 0.9858352230084239,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 0.9858352230084239,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_02.mp4",
+      "error_px": 0.38023277842961545,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 16.200360780182248,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 1.2307148257370546,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 1.6015514234714379,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 1.3404645465006555,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 1.2307148257370546,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 1.2307148257370546,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_02.mp4",
+      "error_px": 0.48483092937924294,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 16.04349188940742,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 0.38006603666797156,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 1.6043448282447383,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 0.9902128632268189,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 0.38006603666797156,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 0.38006603666797156,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_02.mp4",
+      "error_px": 0.27132558728030404,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 16.111510979374764,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 0.7328466485926711,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 0.4343715267640032,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 0.5716282609802379,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 0.7328466485926711,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 0.7328466485926711,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_02.mp4",
+      "error_px": 0.6652518266457093,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_02.mp4",
+      "error_px": 14.991149384659222,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_02.mp4",
+      "error_px": 1.120553848832911,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_02.mp4",
+      "error_px": 1.3974957274769761,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_02.mp4",
+      "error_px": 1.2124568304220082,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_02.mp4",
+      "error_px": 1.120553848832911,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_02.mp4",
+      "error_px": 1.120553848832911,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_02.mp4",
+      "error_px": 0.34959677537033956,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 11.28200799830247,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 3.4430844266177636,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 4.623122220273534,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 3.9296634613084307,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 3.4430844266177636,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 3.4430844266177636,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_03.mp4",
+      "error_px": 2.3971250236219,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 14.797736459120786,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 4.0176294608776475,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 5.6653847760319325,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 4.599484534216722,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 4.0176294608776475,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 4.0176294608776475,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_03.mp4",
+      "error_px": 1.2125270641508568,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 16.240856938080963,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 2.5578267810618756,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 4.554117258487652,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 3.0993377198618197,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 2.5578267810618756,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 2.5578267810618756,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_03.mp4",
+      "error_px": 0.541038067437819,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 19.402186872627155,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 3.1671200024150625,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 2.3963834370255914,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 2.500206368081396,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 3.1671200024150625,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 3.1671200024150625,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_03.mp4",
+      "error_px": 0.6157560889993989,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 21.10392391637752,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 1.8615561252304642,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 1.5970338505886195,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 0.7073131458060758,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 1.8615561252304642,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 1.8615561252304642,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_03.mp4",
+      "error_px": 0.6139707688341701,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 22.746908326865896,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 2.148650162505025,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 2.1634895336077897,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 1.9448250408676533,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 2.148650162505025,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 2.148650162505025,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_03.mp4",
+      "error_px": 1.0812569098760425,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 25.9805090990144,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 4.012399849310373,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 4.122695840036983,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 3.923494920334914,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 4.012399849310373,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 4.012399849310373,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_03.mp4",
+      "error_px": 1.1272020540508927,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 27.58170566950457,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 2.263606834507919,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 4.262218046070795,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 2.7605019741081107,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 2.263606834507919,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 2.263606834507919,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_03.mp4",
+      "error_px": 2.1322387184244063,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_03.mp4",
+      "error_px": 29.06334458911649,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_03.mp4",
+      "error_px": 3.3180622405818987,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_03.mp4",
+      "error_px": 4.60711912339239,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_03.mp4",
+      "error_px": 3.8518259111029107,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_03.mp4",
+      "error_px": 3.3180622405818987,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_03.mp4",
+      "error_px": 3.3180622405818987,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_03.mp4",
+      "error_px": 0.8100003658718437,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 14.302862203891141,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 2.476459579064125,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 3.9932045343289997,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 3.188046237244917,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 2.476459579064125,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 2.476459579064125,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_04.mp4",
+      "error_px": 1.4677402703312392,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.060329288860867,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 1.7607300072551382,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 3.8851994211428384,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 2.7503198611368886,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 1.7607300072551382,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 1.7607300072551382,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_04.mp4",
+      "error_px": 0.3147352468268587,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.169166190549877,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 0.12484374024790904,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 1.6570886213723754,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 0.7782813049715855,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 0.12484374024790904,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 0.12484374024790904,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_04.mp4",
+      "error_px": 0.3046721776530703,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 67.90649904873507,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 63.98581487838316,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 63.911945864322576,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 63.948860571690716,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 63.98581487838316,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 63.98581487838316,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_04.mp4",
+      "error_px": 65.00277247606435,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.122121182737935,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 64.03217018707166,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 128.0179782819504,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 96.02507310447277,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 64.03217018707166,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 64.03217018707166,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_04.mp4",
+      "error_px": null,
+      "heldout_frame_index": 42,
+      "hold": true,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.017537077515115,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 1.8655110575985483,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 62.166720781712435,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 30.15063759545035,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 1.8655110575985483,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 1.8655110575985483,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_04.mp4",
+      "error_px": null,
+      "heldout_frame_index": 48,
+      "hold": true,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.089377882534695,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 1.6708759835961697,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 3.5363649684399845,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 2.6036165222202725,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 1.6708759835961697,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 1.6708759835961697,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_04.mp4",
+      "error_px": 1.0532451513764078,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 16.052772942544113,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 0.2186239984437087,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 1.461329497526418,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 0.6274420597780689,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 0.2186239984437087,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 0.2186239984437087,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_04.mp4",
+      "error_px": 0.03645895903337166,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_04.mp4",
+      "error_px": 14.326044640281502,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_04.mp4",
+      "error_px": 1.7517297683139894,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_04.mp4",
+      "error_px": 1.6954425035911918,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_04.mp4",
+      "error_px": 1.7203465112926075,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_04.mp4",
+      "error_px": 1.7517297683139894,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_04.mp4",
+      "error_px": 1.7517297683139894,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_04.mp4",
+      "error_px": 1.6376940623342278,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.503310345421623,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.178397677972515,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.3888493677321246,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.27672257734353106,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.178397677972515,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.178397677972515,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_05.mp4",
+      "error_px": null,
+      "heldout_frame_index": 18,
+      "hold": true,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.43817862121818,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.21834248935995001,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.34973422038060714,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.277555941939764,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.21834248935995001,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.21834248935995001,
+      "heldout_frame_index": 24,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_05.mp4",
+      "error_px": null,
+      "heldout_frame_index": 24,
+      "hold": true,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.493071461657602,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.22432905487549087,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.4424968899257711,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.33338438860072694,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.22432905487549087,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.22432905487549087,
+      "heldout_frame_index": 30,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_05.mp4",
+      "error_px": null,
+      "heldout_frame_index": 30,
+      "hold": true,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.488427389655284,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.17512181918394415,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.3970095387312335,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.2855892706030917,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.17512181918394415,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.17512181918394415,
+      "heldout_frame_index": 36,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_05.mp4",
+      "error_px": null,
+      "heldout_frame_index": 36,
+      "hold": true,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.533105333753412,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.14058049867862735,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.312220815242234,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.22573312594977032,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.14058049867862735,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.14058049867862735,
+      "heldout_frame_index": 42,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_05.mp4",
+      "error_px": null,
+      "heldout_frame_index": 42,
+      "hold": true,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.432573187957173,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.14667432835980201,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.28063299797660723,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.21258739361586293,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.14667432835980201,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.14667432835980201,
+      "heldout_frame_index": 48,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_05.mp4",
+      "error_px": null,
+      "heldout_frame_index": 48,
+      "hold": true,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.490833768026839,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.09049118549740277,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.16242094533184037,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.10911585319125656,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.09049118549740277,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.09049118549740277,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_05.mp4",
+      "error_px": null,
+      "heldout_frame_index": 54,
+      "hold": true,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.488220865762987,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.21482354503925485,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.29082223218048353,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.2516271039726336,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.21482354503925485,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.21482354503925485,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_05.mp4",
+      "error_px": null,
+      "heldout_frame_index": 60,
+      "hold": true,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_05.mp4",
+      "error_px": 9.452491758483319,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_05.mp4",
+      "error_px": 0.0416521685799465,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_05.mp4",
+      "error_px": 0.23885549852814586,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_05.mp4",
+      "error_px": 0.13362685840225846,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_05.mp4",
+      "error_px": 0.0416521685799465,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_05.mp4",
+      "error_px": 0.0416521685799465,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_05.mp4",
+      "error_px": null,
+      "heldout_frame_index": 66,
+      "hold": true,
+      "source_sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "status": "NOT_SCORED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_06.mp4",
+      "error_px": 16.002597925905103,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_06.mp4",
+      "error_px": 1.9716997919141734,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_06.mp4",
+      "error_px": 1.955326841148532,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_06.mp4",
+      "error_px": 1.9634832474583075,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_06.mp4",
+      "error_px": 1.9716997919141734,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_06.mp4",
+      "error_px": 1.9716997919141734,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_06.mp4",
+      "error_px": 1.156043159228414,
+      "heldout_frame_index": 18,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "heldout_frame_index": 24,
+      "hold": true,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "TARGET_OCCLUDED"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "heldout_frame_index": 24,
+      "hold": true,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "TARGET_OCCLUDED"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "heldout_frame_index": 24,
+      "hold": true,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "TARGET_OCCLUDED"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "heldout_frame_index": 24,
+      "hold": true,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "TARGET_OCCLUDED"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "heldout_frame_index": 24,
+      "hold": true,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "TARGET_OCCLUDED"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "heldout_frame_index": 24,
+      "hold": true,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "TARGET_OCCLUDED"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "heldout_frame_index": 24,
+      "hold": true,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "TARGET_OCCLUDED"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_06.mp4",
+      "error_px": 16.093630889205002,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_06.mp4",
+      "error_px": 0.31939407119630087,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_06.mp4",
+      "error_px": 2.478000644212846,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_06.mp4",
+      "error_px": 1.3984375286655195,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_06.mp4",
+      "error_px": 0.31939407119630087,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_06.mp4",
+      "error_px": 0.31939407119630087,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_06.mp4",
+      "error_px": 0.14791156270354275,
+      "heldout_frame_index": 54,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_06.mp4",
+      "error_px": 16.045574584091742,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_06.mp4",
+      "error_px": 0.09263598501224986,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_06.mp4",
+      "error_px": 0.39292161186131785,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_06.mp4",
+      "error_px": 0.23660360566695943,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_06.mp4",
+      "error_px": 0.09263598501224986,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_06.mp4",
+      "error_px": 0.09263598501224986,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_06.mp4",
+      "error_px": 1.0301610113949018,
+      "heldout_frame_index": 60,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A0_last_observation",
+      "clip": "test_06.mp4",
+      "error_px": 15.892583129268784,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A1_linear_kinematics",
+      "clip": "test_06.mp4",
+      "error_px": 1.6939939267387705,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A2_spatial_acceleration",
+      "clip": "test_06.mp4",
+      "error_px": 1.7666436127900838,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A5_fixed_past_only_blend",
+      "clip": "test_06.mp4",
+      "error_px": 1.730080108778253,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A3_raster_only",
+      "clip": "test_06.mp4",
+      "error_px": 1.6939939267387705,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "A6_raster_spatial_fixed_fusion",
+      "clip": "test_06.mp4",
+      "error_px": 1.6939939267387705,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    },
+    {
+      "arm": "P1_experiential_candidate",
+      "clip": "test_06.mp4",
+      "error_px": 0.9384451892565707,
+      "heldout_frame_index": 66,
+      "hold": false,
+      "source_sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "status": "PRECOMMITTED_OR_DETERMINISTIC_PAST_ONLY"
+    }
+  ],
+  "precommit_file_sha256": "8a583fea873b3c47fbc4e6b5d5869a13e825563700a19fcb1cbf4a9f55992dc8",
+  "raster_and_spatial_share_source_video": true,
+  "schema": "BRODY_P2_PRECOMMIT_BASELINE_DIAGNOSTIC_V0",
+  "source_kind": "SIMULATED",
+  "suite_sha256": "e0d0a2075f2d8b6b555c9d1a765302937291d5b78d50df4e8956404a5c39899d",
+  "summary": {
+    "A0_last_observation": {
+      "coverage": 0.98,
+      "evaluated": 49,
+      "mean_error_px": 17.542829632656435,
+      "median_error_px": 16.052772942544113,
+      "total": 50
+    },
+    "A1_linear_kinematics": {
+      "coverage": 0.98,
+      "evaluated": 49,
+      "mean_error_px": 4.092253992245754,
+      "median_error_px": 1.6939939267387705,
+      "total": 50
+    },
+    "A2_spatial_acceleration": {
+      "coverage": 0.98,
+      "evaluated": 49,
+      "mean_error_px": 7.1545829771108576,
+      "median_error_px": 1.7802269441881455,
+      "total": 50
+    },
+    "A3_raster_only": {
+      "coverage": 0.98,
+      "evaluated": 49,
+      "mean_error_px": 4.092253992245754,
+      "median_error_px": 1.6939939267387705,
+      "total": 50
+    },
+    "A5_fixed_past_only_blend": {
+      "coverage": 0.98,
+      "evaluated": 49,
+      "mean_error_px": 5.441091359936606,
+      "median_error_px": 1.7203465112926075,
+      "total": 50
+    },
+    "A6_raster_spatial_fixed_fusion": {
+      "coverage": 0.98,
+      "evaluated": 49,
+      "mean_error_px": 4.092253992245754,
+      "median_error_px": 1.6939939267387705,
+      "total": 50
+    },
+    "P1_experiential_candidate": {
+      "coverage": 0.76,
+      "evaluated": 38,
+      "mean_error_px": 2.5713632774057515,
+      "median_error_px": 0.7323287198766201,
+      "total": 50
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "BRODY_TRANSFER_PROBE_V1",
+  "source_kind": "SIMULATED",
+  "fps": 24,
+  "frames": 72,
+  "width": 480,
+  "height": 320,
+  "train": [
+    {
+      "file": "train_01.mp4",
+      "sha256": "2e344ed295ba3ee7149d0c61e37a5b59fcac63fb1c5a0c59990aaceb038e7995",
+      "source_kind": "SIMULATED",
+      "split": "TRAIN"
+    },
+    {
+      "file": "train_02.mp4",
+      "sha256": "4b42b0f5f2a84019c53cd4f82e83539758160a37f9d0edd8059d768567a3f959",
+      "source_kind": "SIMULATED",
+      "split": "TRAIN"
+    },
+    {
+      "file": "train_03.mp4",
+      "sha256": "1231a0150d94d56e092d601f31c3b78deb0594412b1da9bd781ebf55c9f686c1",
+      "source_kind": "SIMULATED",
+      "split": "TRAIN"
+    },
+    {
+      "file": "train_04.mp4",
+      "sha256": "2446ef5ebdd2e10b355f94357bf056ec1d061c06046621f279b0b7735191c386",
+      "source_kind": "SIMULATED",
+      "split": "TRAIN"
+    },
+    {
+      "file": "train_05.mp4",
+      "sha256": "b819bfb533e7d1a5d6ae21b107f4172a8b68ee5b1d9bd2837251a10b45c9f363",
+      "source_kind": "SIMULATED",
+      "split": "TRAIN"
+    },
+    {
+      "file": "train_06.mp4",
+      "sha256": "0fb09bd85dcdb4aa16abb109752594abc775372abe0220ea7bca92a772f410c5",
+      "source_kind": "SIMULATED",
+      "split": "TRAIN"
+    }
+  ],
+  "test": [
+    {
+      "file": "test_01.mp4",
+      "sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+      "source_kind": "SIMULATED",
+      "split": "TEST"
+    },
+    {
+      "file": "test_02.mp4",
+      "sha256": "e1534180031593b87019dec83759c249fba1722c3cba568fc50c3cc751b55010",
+      "source_kind": "SIMULATED",
+      "split": "TEST"
+    },
+    {
+      "file": "test_03.mp4",
+      "sha256": "eb527ae1f6668ebc67710f8aef2c9f503ded9178b056275eab01a28151bc147f",
+      "source_kind": "SIMULATED",
+      "split": "TEST"
+    },
+    {
+      "file": "test_04.mp4",
+      "sha256": "98306a51a6f3084b6171c3e5e290ce6630d8b4d8740be5f09af79b6a180a6707",
+      "source_kind": "SIMULATED",
+      "split": "TEST"
+    },
+    {
+      "file": "test_05.mp4",
+      "sha256": "7a00d4d494e5cff2b0486bcfb1a154342a23ef46596c631b62255a32449272f1",
+      "source_kind": "SIMULATED",
+      "split": "TEST"
+    },
+    {
+      "file": "test_06.mp4",
+      "sha256": "d2fd56ecdc66edc73b1e9fc2773e6a0e91e124c9c6546c8b34a0f2b62ecfb363",
+      "source_kind": "SIMULATED",
+      "split": "TEST"
+    }
+  ],
+  "test_scenarios_for_evaluation_only": {
+    "test_01": "appearance-blue-square",
+    "test_02": "appearance-green-triangle",
+    "test_03": "camera-pan-reference-frame",
+    "test_04": "unforeseeable-position-jump",
+    "test_05": "ambiguous-identical-history",
+    "test_06": "temporary-target-occlusion"
+  }
+}

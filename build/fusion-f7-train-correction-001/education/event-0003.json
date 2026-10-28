@@ -1,0 +1,16 @@
+{
+  "index": 3,
+  "previous": "d5f1c359a469e9562b0c571547a832a8d860417ec007542094c48ae6b39fa0fb",
+  "kind": "HELD_OUT_COMPARE",
+  "payload": {
+    "old_error": 9.638427734375,
+    "new_error": 0.0,
+    "old_candidate_sha256": "86e303a4a82eb02cd6adbe3518cc32bbf8e10238fcc74654ab61dc38626a887c",
+    "new_candidate_sha256": "9f908ec2efae25fbf6e9067ace55a447597fa865681f8df6b22b9b32e225e32a",
+    "feedback_promoted_to_training": false
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "58c926d721935b2be8111792ffabb7ab24ce5bc16ba6ce6a8b6434d83dba2950"
+}

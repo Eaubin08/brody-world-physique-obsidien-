@@ -1,0 +1,18 @@
+﻿py.exe : test_old_new_unknown_and_retention 
+(test_consolidated_education_replay_v1.ConsolidatedReplayTests.test_old_new_unknown_and_retention) ... 
+ok
+Au caractère C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\scripts\RUN_BRODY_FULL_CO
+NSOLIDATION.ps1:24 : 5
++     & py @CommandArgs 2>&1 | Out-File -FilePath $log -Encoding utf8
++     ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_old_new_un...tention) ... ok:String) [], RemoteExcep 
+   tion
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_refuse_overwrite 
+(test_consolidated_education_replay_v1.ConsolidatedReplayTests.test_refuse_overwrite) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.032s
+
+OK

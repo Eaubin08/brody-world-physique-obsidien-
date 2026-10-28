@@ -1,0 +1,15 @@
+{
+  "candidate_skill": "P150_CAMERA_LANDMARK",
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "depends_on": [
+    "pixel_observation",
+    "time_order"
+  ],
+  "digest": "6cccbcd8d29db36298865455e50db840251c81f229c4108311154668f9ecd7e6",
+  "native_memory_write": false,
+  "precondition": "at least one image-visible anchored landmark",
+  "prior_digest": null,
+  "schema": "BRODY_F1K_SKILL_LEDGER_V1",
+  "stage": "acquisition"
+}

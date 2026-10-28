@@ -1,0 +1,37 @@
+{
+  "laws": {
+    "stationary": {
+      "frames_observed": 160,
+      "rule": {
+        "mean_velocity": 0.0,
+        "mean_accel": 0.0
+      }
+    },
+    "constant_speed": {
+      "frames_observed": 160,
+      "rule": {
+        "mean_velocity": -0.8125,
+        "mean_accel": 0.0
+      }
+    },
+    "constant_acceleration": {
+      "frames_observed": 160,
+      "rule": {
+        "mean_velocity": -0.65625,
+        "mean_accel": 0.1875
+      }
+    },
+    "reverse": {
+      "frames_observed": 160,
+      "rule": {
+        "mean_velocity": 0.109375,
+        "mean_accel": -0.14583333333333331
+      }
+    }
+  },
+  "seed_train": 154,
+  "seed_exam": 13167,
+  "seed_feedback": 22071,
+  "seed_retest": 49355,
+  "exam_feedback_leakage": false
+}

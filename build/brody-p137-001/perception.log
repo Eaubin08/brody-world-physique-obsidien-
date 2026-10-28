@@ -1,0 +1,8 @@
+
+test_multidomain_probe_reports_real_limits (test_image_heterogeneous_capability_audit_p131.P131HeterogeneousTests.test_multidomain_probe_reports_real_limits) ... ok
+test_preserve_evidence (test_image_heterogeneous_capability_audit_p131.P131HeterogeneousTests.test_preserve_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.044s
+
+OK

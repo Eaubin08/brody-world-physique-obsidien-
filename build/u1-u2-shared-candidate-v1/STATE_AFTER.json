@@ -1,0 +1,18 @@
+{
+  "acceleration": 0.0,
+  "authority": "KX108_ONLY",
+  "contextual_acceleration": {
+    "clean": 0.0,
+    "observed_intervention": -1.0
+  },
+  "digest": "66c70a495dd5fa5d88a33b4ac0d447b8f7987303c380e48b944415e4dcc53fb7",
+  "lessons": [
+    {
+      "context": "observed_intervention",
+      "global_correction_accepted": false,
+      "global_reason": "HOLD_RETENTION_REGRESSION",
+      "measured_acceleration": -1.0
+    }
+  ],
+  "schema": "BRODY_U1_CANDIDATE_SHARED_STATE_V1"
+}

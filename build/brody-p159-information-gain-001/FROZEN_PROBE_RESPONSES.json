@@ -1,0 +1,20 @@
+{
+  "flat": {
+    "observe": 0.0,
+    "tap": 0.0,
+    "tilt": 0.0,
+    "weak_tap": 0.0
+  },
+  "slope": {
+    "observe": 0.0,
+    "tap": -1.0,
+    "tilt": -2.0,
+    "weak_tap": -0.5
+  },
+  "spring": {
+    "observe": 0.0,
+    "tap": 1.0,
+    "tilt": 2.0,
+    "weak_tap": 0.5
+  }
+}

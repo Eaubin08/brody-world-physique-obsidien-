@@ -1,0 +1,23 @@
+{
+  "index": 7,
+  "previous": "393036943f799d2abd9b26946e3e0ad465b19cfc7dc378c46d9d97661b23ea73",
+  "kind": "INSTRUMENT_SELECTION_TEST",
+  "payload": {
+    "shape": "rectangle",
+    "intent": "LIGHT",
+    "instrument": "PENCIL",
+    "candidate_sha256": "75018cc68f3605ca506b09017ee6f3cd304982e9d6970dfb31258b10c4ed4d3a",
+    "tool_training_ids": [
+      "training_01",
+      "training_02",
+      "training_03"
+    ],
+    "heldout_score": 0.0,
+    "baseline_score": 7.490234375,
+    "target_used_for_training": false
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "3ae71dd6703bd910b0b36a7ec55eead8d2ef15f557c6cde426a2af7a2909efc7"
+}

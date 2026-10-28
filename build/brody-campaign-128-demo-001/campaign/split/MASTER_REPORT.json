@@ -1,0 +1,21 @@
+{
+  "canonical_promotion": false,
+  "cross_split_byte_leak": false,
+  "cross_split_source_group_leak": false,
+  "decision_authority": "KX108_ONLY",
+  "episodes": 6,
+  "exam": 3,
+  "exam_groups": 3,
+  "native_memory_write": false,
+  "origin_counts": {
+    "camera": 0,
+    "synthetic": 6,
+    "unknown": 0,
+    "video": 0
+  },
+  "provenance_verified_independently": false,
+  "schema": "BRODY_SOURCE_GROUPED_MOTION_CAMPAIGN_V1",
+  "status": "SOURCE_DECLARED_GROUP_SPLIT_AUDITED",
+  "train": 3,
+  "train_groups": 3
+}

@@ -1,0 +1,9 @@
+
+test_no_result_overwrite (test_image_forty_distinct_school_p136.FortySchoolTests.test_no_result_overwrite) ... ok
+test_protocols_are_unique_and_span_domains (test_image_forty_distinct_school_p136.FortySchoolTests.test_protocols_are_unique_and_span_domains) ... ok
+test_single_school_reports_all_competencies (test_image_forty_distinct_school_p136.FortySchoolTests.test_single_school_reports_all_competencies) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.063s
+
+OK
