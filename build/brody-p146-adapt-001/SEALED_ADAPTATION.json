@@ -1,0 +1,28 @@
+{
+  "train_per_family": 300,
+  "adapt_per_world_and_family": 60,
+  "lesson_groups": {
+    "shape/new_engine_light": 60,
+    "colour/new_engine_light": 60,
+    "count/new_engine_light": 60,
+    "arrangement/new_engine_light": 60,
+    "orientation/new_engine_light": 60,
+    "shape/new_engine_dark": 60,
+    "colour/new_engine_dark": 60,
+    "count/new_engine_dark": 60,
+    "arrangement/new_engine_dark": 60,
+    "orientation/new_engine_dark": 60,
+    "shape/new_engine_outlined": 60,
+    "colour/new_engine_outlined": 60,
+    "count/new_engine_outlined": 60,
+    "arrangement/new_engine_outlined": 60,
+    "orientation/new_engine_outlined": 60,
+    "shape/new_engine_occluded": 60,
+    "colour/new_engine_occluded": 60,
+    "count/new_engine_occluded": 60,
+    "arrangement/new_engine_occluded": 60,
+    "orientation/new_engine_occluded": 60
+  },
+  "exam_seed": 10145,
+  "exam_feedback_used_in_memory": false
+}

@@ -1,0 +1,12 @@
+{
+  "candidate_parts": [],
+  "canonical_promotion": false,
+  "case": "novel_triangle",
+  "decision_authority": "KX108_ONLY",
+  "digest": "371c9a8eb084f54b68e893af25f7c059e8dd2540c7bf109d16a5d4cc3c56894f",
+  "memory_digest": "f886d7aed60478cd2f85f215ed4ed60da684abb0a647c6cf37f44babf996d92b",
+  "mode": "DOUBT",
+  "native_memory_write": false,
+  "reason": "SHAPE_NOT_REPLICATED",
+  "target_sha": "0d3cc0ad4800ac7cd2b39d0bc12e77316249baaea2ae6f60bb6390589d279b9c"
+}

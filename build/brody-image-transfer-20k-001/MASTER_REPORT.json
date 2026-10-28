@@ -1,0 +1,100 @@
+{
+  "schema": "BRODY_IMAGE_PERSISTENT_TOOL_TRANSFER_EXAM_V0",
+  "train_episodes": 10000,
+  "blind_exam_episodes": 10000,
+  "blind_receipt_tip": "4757dcd57e0fed6ad3f9281d64ce317378e7cbd79d8ebdfd23fae8d57fe41fd6",
+  "skill_contexts": 54,
+  "families": {
+    "fresh_geometry": {
+      "cases": 1000,
+      "held": 0,
+      "before_mean_loss": 0.0,
+      "after_mean_loss": 0.0,
+      "improved": 0,
+      "worsened": 0
+    },
+    "translation": {
+      "cases": 1000,
+      "held": 0,
+      "before_mean_loss": 0.841778564453125,
+      "after_mean_loss": 0.0,
+      "improved": 167,
+      "worsened": 0
+    },
+    "mirror": {
+      "cases": 1000,
+      "held": 0,
+      "before_mean_loss": 0.0,
+      "after_mean_loss": 0.0,
+      "improved": 0,
+      "worsened": 0
+    },
+    "rotation": {
+      "cases": 1000,
+      "held": 0,
+      "before_mean_loss": 0.836973876953125,
+      "after_mean_loss": 0.0,
+      "improved": 167,
+      "worsened": 0
+    },
+    "contrast": {
+      "cases": 1000,
+      "held": 0,
+      "before_mean_loss": 0.0,
+      "after_mean_loss": 0.0,
+      "improved": 0,
+      "worsened": 0
+    },
+    "blur": {
+      "cases": 1000,
+      "held": 0,
+      "before_mean_loss": 0.250212646484375,
+      "after_mean_loss": 0.0,
+      "improved": 167,
+      "worsened": 0
+    },
+    "sensor_noise": {
+      "cases": 1000,
+      "held": 0,
+      "before_mean_loss": 0.0,
+      "after_mean_loss": 0.0,
+      "improved": 0,
+      "worsened": 0
+    },
+    "part_occlusion": {
+      "cases": 1000,
+      "held": 0,
+      "before_mean_loss": 0.758546630859375,
+      "after_mean_loss": 0.0,
+      "improved": 166,
+      "worsened": 0
+    },
+    "wrong_intent": {
+      "cases": 1000,
+      "held": 0,
+      "before_mean_loss": 6.867510986328125,
+      "after_mean_loss": 0.0,
+      "improved": 1000,
+      "worsened": 0
+    },
+    "unknown_intent": {
+      "cases": 1000,
+      "held": 1000,
+      "before_mean_loss": null,
+      "after_mean_loss": null,
+      "improved": 0,
+      "worsened": 0
+    }
+  },
+  "score_before_after_comparable": true,
+  "blind_exam_feedback_used_for_training": false,
+  "family_label_available_to_learner": true,
+  "test_and_train_share_simulated_renderer": true,
+  "different_seed_heldout_geometry": true,
+  "unknown_intent_can_still_hold": true,
+  "no_cross_domain_generalization_proven": true,
+  "native_memory_write": false,
+  "kernel_mutation": false,
+  "decision_authority": "KX108_ONLY",
+  "status": "SYNTHETIC_CROSS_EPISODE_TRANSFER_MEASURED_NOT_REAL_IMAGE_LEARNING"
+}

@@ -1,0 +1,21 @@
+{
+  "observations": [
+    {
+      "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_still\\0.png",
+      "t": 0
+    },
+    {
+      "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_still\\1.png",
+      "t": 1
+    },
+    {
+      "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_still\\2.png",
+      "t": 2
+    },
+    {
+      "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\train_still\\3.png",
+      "t": 3
+    }
+  ],
+  "predict_t": 4.0
+}

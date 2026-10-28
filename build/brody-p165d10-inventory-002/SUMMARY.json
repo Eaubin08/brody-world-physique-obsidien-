@@ -1,0 +1,61 @@
+{
+  "schema": "BRODY_P165D10_REPOSITORY_AST_TEST_INVENTORY",
+  "test_files": 148,
+  "declared_tests": 653,
+  "syntax_errors": 0,
+  "legacy": {
+    "p161": {
+      "files": [
+        "tests/test_image_hard_visual_ood_p161.py"
+      ],
+      "declared_tests": 4
+    },
+    "p162": {
+      "files": [
+        "tests/test_image_math_physical_bridge_p162.py"
+      ],
+      "declared_tests": 5
+    },
+    "p163": {
+      "files": [
+        "tests/test_image_camera_occlusion_gate_p163.py"
+      ],
+      "declared_tests": 6
+    },
+    "p164": {
+      "files": [
+        "tests/test_image_identity_occlusion_p164.py"
+      ],
+      "declared_tests": 4
+    },
+    "p165a": {
+      "files": [
+        "tests/test_image_scene_adversarial_p165a.py"
+      ],
+      "declared_tests": 4
+    },
+    "p165b": {
+      "files": [
+        "tests/test_modal_signature_fusion_p165b.py"
+      ],
+      "declared_tests": 7
+    },
+    "p165c": {
+      "files": [
+        "tests/test_contextual_scene_graph_p165c.py"
+      ],
+      "declared_tests": 7
+    },
+    "p165d": {
+      "files": [
+        "tests/test_scene_event_epistemic_p165d.py"
+      ],
+      "declared_tests": 4
+    }
+  },
+  "discovery_caveat": "AST declared test_ methods/functions != unittest collected counts",
+  "scope": "ONLY tests/test*.py under current checked out repository",
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

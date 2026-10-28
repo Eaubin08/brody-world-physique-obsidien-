@@ -1,0 +1,14 @@
+COMMAND: C:\Users\Aubin\AppData\Local\Python\pythoncore-3.14-64\python.exe -m unittest discover -s tests -p test_fusion_f3b_multilesson_school_v0.py -v
+STDOUT
+
+STDERR
+test_all_layout_boxes_satisfy_motor_contract (test_fusion_f3b_multilesson_school_v0.MultiLessonTests.test_all_layout_boxes_satisfy_motor_contract) ... ok
+test_five_lessons_real_outputs_and_scores (test_fusion_f3b_multilesson_school_v0.MultiLessonTests.test_five_lessons_real_outputs_and_scores) ... C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\p210a_visual_loop_contract_v0.py:28: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  return sum(any(channel for channel in pixel) for pixel in d.getdata())
+ok
+test_refuse_overwrite_and_separate_training (test_fusion_f3b_multilesson_school_v0.MultiLessonTests.test_refuse_overwrite_and_separate_training) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.257s
+
+OK

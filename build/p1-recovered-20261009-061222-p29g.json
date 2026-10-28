@@ -1,0 +1,39 @@
+{
+  "b8_promotion": false,
+  "causal_proof": false,
+  "center_error_px": 2.909441750455711,
+  "clock_kind": "SIMULATED_FRAME_TIME",
+  "decision_authority": "KX108_ONLY",
+  "delta_id": "candidate:p29g:a41bbd19e825c1bb",
+  "experience_id": "candidate:p29g-experience:a41bbd19e825c1bb",
+  "independent_source_count": 1,
+  "inverse_velocity_px_per_s": [
+    -15.84212648504871,
+    -39.632231432575054
+  ],
+  "joint_improvement_proven": false,
+  "native_memory_write": false,
+  "new_prediction_made": false,
+  "p1_evaluation_sha256": "5a8c8965f63422b65f9f736682d4d8cce1609bbf2016fc08b1b56425e941bff3",
+  "raster_heldout_sha256": "8850672eac80f63fc6d5cc65f45582617e39f2df6be132ff024e9f735aa806e5",
+  "raster_mae": 0.11500651041666667,
+  "raster_predicted_sha256": "00c734d6d0e1fe54b0f769e737ee9c1870fc99ce4470e3e300adc481e540c2ff",
+  "reciprocal_residual": 0.0,
+  "same_source_view_count": 4,
+  "schema": "BRODY_P29G_SAME_VIDEO_MULTIVIEW_V0",
+  "spatial_frame": "scene-fiducial:a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70:anchored",
+  "triage": "REVIEW_HYPOTHESIS",
+  "unit": "px",
+  "v42_classifier_called": false,
+  "velocity_px_per_s": [
+    15.84212648504871,
+    39.632231432575054
+  ],
+  "video_sha256": "a41bbd19e825c1bbb61d7f1173b8da3db8d94c6bf259d4ade2f003c2c7cbba70",
+  "view_names": [
+    "MOTION",
+    "RASTER",
+    "SPATIAL",
+    "TEMPORAL"
+  ]
+}

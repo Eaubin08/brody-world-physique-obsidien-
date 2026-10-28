@@ -1,0 +1,50 @@
+{
+  "adaptive_selective_risk_proven": false,
+  "applicability_bounded_by_non_identifiability": true,
+  "canonical_promotion": false,
+  "contradiction_prediction_proven": false,
+  "decision_authority": "KX108_ONLY",
+  "history_verdict": "EXPERIENTIAL_SKILL_CANDIDATE_ONLY",
+  "native_memory_write": false,
+  "original_skill_digest_unchanged": true,
+  "prior_negative_transfers": 1,
+  "prior_positive_transfers": 2,
+  "real_world_transfer_proven": false,
+  "retest": [
+    {
+      "base_error_px": 1.0,
+      "candidate_preserved": true,
+      "case": "retention_new_height",
+      "committed_before_truth": true,
+      "shadow_candidate_error_px": 0.0,
+      "shadow_utility_px": 1.0,
+      "status": "HOLD"
+    },
+    {
+      "base_error_px": 1.0,
+      "candidate_preserved": true,
+      "case": "retention_other_start",
+      "committed_before_truth": true,
+      "shadow_candidate_error_px": 0.0,
+      "shadow_utility_px": 1.0,
+      "status": "HOLD"
+    },
+    {
+      "base_error_px": 14.0,
+      "candidate_preserved": true,
+      "case": "adversarial_hidden_reversal",
+      "committed_before_truth": true,
+      "shadow_candidate_error_px": 15.0,
+      "shadow_utility_px": -1.0,
+      "status": "HOLD"
+    }
+  ],
+  "retest_coverage": 0.0,
+  "retest_holds": 3,
+  "review_trigger": {
+    "case": "contradiction_reversal",
+    "observed_utility_px": -1.0
+  },
+  "schema": "BRODY_CONTRADICTION_SKILL_REVIEW_EXAM_V1",
+  "verdict": "F1D_FAIL_CLOSED_CONTRADICTION_REVIEW_CANDIDATE"
+}

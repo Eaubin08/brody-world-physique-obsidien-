@@ -1,0 +1,42 @@
+{
+  "schema": "BRODY_IMAGE_VISIBLE_CONTRADICTION_VS_UNOBSERVABLE_10K_V0",
+  "cases": 10000,
+  "receipt_tip": "4d2c4f64e40cf283b791aad58d7990679e57f7842ea6c8c4cc2f8ba88a891845",
+  "metrics": {
+    "hidden_misleading": {
+      "cases": 2501,
+      "behavior_correct": 2501,
+      "matched": 0,
+      "held": 2501
+    },
+    "hidden_truthful": {
+      "cases": 2499,
+      "behavior_correct": 2499,
+      "matched": 0,
+      "held": 2499
+    },
+    "visible_misleading": {
+      "cases": 2489,
+      "behavior_correct": 2489,
+      "matched": 2489,
+      "held": 0
+    },
+    "visible_truthful": {
+      "cases": 2511,
+      "behavior_correct": 2511,
+      "matched": 2511,
+      "held": 0
+    }
+  },
+  "method": "PIXEL_NEAREST_TOOL_WITH_ABSTENTION",
+  "uses_simulated_reference": true,
+  "same_renderer_for_reference_and_candidates": true,
+  "recognizes_physical_contradiction": false,
+  "semantic_visual_understanding_proven": false,
+  "detection_without_visible_reference_proven": false,
+  "model_weights_trained": false,
+  "native_memory_write": false,
+  "kernel_mutation": false,
+  "decision_authority": "KX108_ONLY",
+  "status": "VISIBLE_REFERENCE_COMPARISON_SYNTHETIC_ONLY"
+}

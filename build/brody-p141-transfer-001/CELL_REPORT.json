@@ -1,0 +1,392 @@
+{
+  "shape/native": {
+    "n": 1000,
+    "correct": {
+      "knn": 520,
+      "centroid": 483,
+      "majority": 356
+    },
+    "accuracies": {
+      "knn": 0.52,
+      "centroid": 0.483,
+      "majority": 0.356
+    }
+  },
+  "colour/native": {
+    "n": 1000,
+    "correct": {
+      "knn": 887,
+      "centroid": 698,
+      "majority": 250
+    },
+    "accuracies": {
+      "knn": 0.887,
+      "centroid": 0.698,
+      "majority": 0.25
+    }
+  },
+  "count/native": {
+    "n": 1000,
+    "correct": {
+      "knn": 926,
+      "centroid": 940,
+      "majority": 324
+    },
+    "accuracies": {
+      "knn": 0.926,
+      "centroid": 0.94,
+      "majority": 0.324
+    }
+  },
+  "arrangement/native": {
+    "n": 1000,
+    "correct": {
+      "knn": 1000,
+      "centroid": 1000,
+      "majority": 327
+    },
+    "accuracies": {
+      "knn": 1.0,
+      "centroid": 1.0,
+      "majority": 0.327
+    }
+  },
+  "orientation/native": {
+    "n": 1000,
+    "correct": {
+      "knn": 424,
+      "centroid": 407,
+      "majority": 343
+    },
+    "accuracies": {
+      "knn": 0.424,
+      "centroid": 0.407,
+      "majority": 0.343
+    }
+  },
+  "shape/mirror": {
+    "n": 1000,
+    "correct": {
+      "knn": 457,
+      "centroid": 498,
+      "majority": 336
+    },
+    "accuracies": {
+      "knn": 0.457,
+      "centroid": 0.498,
+      "majority": 0.336
+    }
+  },
+  "colour/mirror": {
+    "n": 1000,
+    "correct": {
+      "knn": 719,
+      "centroid": 590,
+      "majority": 245
+    },
+    "accuracies": {
+      "knn": 0.719,
+      "centroid": 0.59,
+      "majority": 0.245
+    }
+  },
+  "count/mirror": {
+    "n": 1000,
+    "correct": {
+      "knn": 710,
+      "centroid": 751,
+      "majority": 309
+    },
+    "accuracies": {
+      "knn": 0.71,
+      "centroid": 0.751,
+      "majority": 0.309
+    }
+  },
+  "arrangement/mirror": {
+    "n": 1000,
+    "correct": {
+      "knn": 674,
+      "centroid": 665,
+      "majority": 326
+    },
+    "accuracies": {
+      "knn": 0.674,
+      "centroid": 0.665,
+      "majority": 0.326
+    }
+  },
+  "orientation/mirror": {
+    "n": 1000,
+    "correct": {
+      "knn": 395,
+      "centroid": 376,
+      "majority": 344
+    },
+    "accuracies": {
+      "knn": 0.395,
+      "centroid": 0.376,
+      "majority": 0.344
+    }
+  },
+  "shape/greyscale": {
+    "n": 1000,
+    "correct": {
+      "knn": 518,
+      "centroid": 476,
+      "majority": 347
+    },
+    "accuracies": {
+      "knn": 0.518,
+      "centroid": 0.476,
+      "majority": 0.347
+    }
+  },
+  "colour/greyscale": {
+    "n": 1000,
+    "correct": {
+      "knn": 243,
+      "centroid": 256,
+      "majority": 257
+    },
+    "accuracies": {
+      "knn": 0.243,
+      "centroid": 0.256,
+      "majority": 0.257
+    }
+  },
+  "count/greyscale": {
+    "n": 1000,
+    "correct": {
+      "knn": 944,
+      "centroid": 960,
+      "majority": 328
+    },
+    "accuracies": {
+      "knn": 0.944,
+      "centroid": 0.96,
+      "majority": 0.328
+    }
+  },
+  "arrangement/greyscale": {
+    "n": 1000,
+    "correct": {
+      "knn": 1000,
+      "centroid": 1000,
+      "majority": 335
+    },
+    "accuracies": {
+      "knn": 1.0,
+      "centroid": 1.0,
+      "majority": 0.335
+    }
+  },
+  "orientation/greyscale": {
+    "n": 1000,
+    "correct": {
+      "knn": 460,
+      "centroid": 404,
+      "majority": 338
+    },
+    "accuracies": {
+      "knn": 0.46,
+      "centroid": 0.404,
+      "majority": 0.338
+    }
+  },
+  "shape/posterize": {
+    "n": 1000,
+    "correct": {
+      "knn": 414,
+      "centroid": 318,
+      "majority": 321
+    },
+    "accuracies": {
+      "knn": 0.414,
+      "centroid": 0.318,
+      "majority": 0.321
+    }
+  },
+  "colour/posterize": {
+    "n": 1000,
+    "correct": {
+      "knn": 879,
+      "centroid": 790,
+      "majority": 247
+    },
+    "accuracies": {
+      "knn": 0.879,
+      "centroid": 0.79,
+      "majority": 0.247
+    }
+  },
+  "count/posterize": {
+    "n": 1000,
+    "correct": {
+      "knn": 624,
+      "centroid": 328,
+      "majority": 315
+    },
+    "accuracies": {
+      "knn": 0.624,
+      "centroid": 0.328,
+      "majority": 0.315
+    }
+  },
+  "arrangement/posterize": {
+    "n": 1000,
+    "correct": {
+      "knn": 1000,
+      "centroid": 1000,
+      "majority": 340
+    },
+    "accuracies": {
+      "knn": 1.0,
+      "centroid": 1.0,
+      "majority": 0.34
+    }
+  },
+  "orientation/posterize": {
+    "n": 1000,
+    "correct": {
+      "knn": 395,
+      "centroid": 340,
+      "majority": 323
+    },
+    "accuracies": {
+      "knn": 0.395,
+      "centroid": 0.34,
+      "majority": 0.323
+    }
+  },
+  "shape/blur": {
+    "n": 1000,
+    "correct": {
+      "knn": 487,
+      "centroid": 482,
+      "majority": 325
+    },
+    "accuracies": {
+      "knn": 0.487,
+      "centroid": 0.482,
+      "majority": 0.325
+    }
+  },
+  "colour/blur": {
+    "n": 1000,
+    "correct": {
+      "knn": 883,
+      "centroid": 711,
+      "majority": 265
+    },
+    "accuracies": {
+      "knn": 0.883,
+      "centroid": 0.711,
+      "majority": 0.265
+    }
+  },
+  "count/blur": {
+    "n": 1000,
+    "correct": {
+      "knn": 925,
+      "centroid": 954,
+      "majority": 336
+    },
+    "accuracies": {
+      "knn": 0.925,
+      "centroid": 0.954,
+      "majority": 0.336
+    }
+  },
+  "arrangement/blur": {
+    "n": 1000,
+    "correct": {
+      "knn": 1000,
+      "centroid": 1000,
+      "majority": 321
+    },
+    "accuracies": {
+      "knn": 1.0,
+      "centroid": 1.0,
+      "majority": 0.321
+    }
+  },
+  "orientation/blur": {
+    "n": 1000,
+    "correct": {
+      "knn": 403,
+      "centroid": 426,
+      "majority": 318
+    },
+    "accuracies": {
+      "knn": 0.403,
+      "centroid": 0.426,
+      "majority": 0.318
+    }
+  },
+  "shape/contrast": {
+    "n": 1000,
+    "correct": {
+      "knn": 349,
+      "centroid": 498,
+      "majority": 342
+    },
+    "accuracies": {
+      "knn": 0.349,
+      "centroid": 0.498,
+      "majority": 0.342
+    }
+  },
+  "colour/contrast": {
+    "n": 1000,
+    "correct": {
+      "knn": 558,
+      "centroid": 500,
+      "majority": 230
+    },
+    "accuracies": {
+      "knn": 0.558,
+      "centroid": 0.5,
+      "majority": 0.23
+    }
+  },
+  "count/contrast": {
+    "n": 1000,
+    "correct": {
+      "knn": 536,
+      "centroid": 652,
+      "majority": 336
+    },
+    "accuracies": {
+      "knn": 0.536,
+      "centroid": 0.652,
+      "majority": 0.336
+    }
+  },
+  "arrangement/contrast": {
+    "n": 1000,
+    "correct": {
+      "knn": 999,
+      "centroid": 994,
+      "majority": 335
+    },
+    "accuracies": {
+      "knn": 0.999,
+      "centroid": 0.994,
+      "majority": 0.335
+    }
+  },
+  "orientation/contrast": {
+    "n": 1000,
+    "correct": {
+      "knn": 386,
+      "centroid": 413,
+      "majority": 371
+    },
+    "accuracies": {
+      "knn": 0.386,
+      "centroid": 0.413,
+      "majority": 0.371
+    }
+  }
+}

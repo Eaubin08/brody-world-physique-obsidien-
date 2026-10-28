@@ -1,0 +1,32 @@
+{
+  "schema": "BRODY_F3C_FROZEN_SKILL_ARCHIVE_V0",
+  "version": 3,
+  "previous": "5960a63c82ad0d9731e7408053f13f514aa02e9cca8b4dde5b596158ed12f780",
+  "skills": [
+    {
+      "id": "rectangle",
+      "memory_path": "skills/rectangle.json",
+      "memory_sha256": "3e197b9a34098c08f1fb00ca69ee62a44c18951a39c431f99331ecab78bc796c",
+      "training_sha256": "1171c1ef06de111818f10fcd06f25506619269bbad17e137fbe82ee87fbed728",
+      "authority": "FROZEN_TRAIN_CANDIDATE"
+    },
+    {
+      "id": "triangle",
+      "memory_path": "skills/triangle.json",
+      "memory_sha256": "9755d56ed0a08ebbf9975ca12efb7817810132431ddd9fc93f76eea190f33ee4",
+      "training_sha256": "b5263adc926c13f6439f71d57cd10f0ee8b2cb8d9f8c3d4c0dd7d0570243713f",
+      "authority": "FROZEN_TRAIN_CANDIDATE"
+    },
+    {
+      "id": "ellipse",
+      "memory_path": "skills/ellipse.json",
+      "memory_sha256": "04a5c3a21321f751cea52e7c8348b91ac15a47a49e1bcbbef5749335a56c2cb9",
+      "training_sha256": "d0b38d03d26aa29d0b84d94d624748ea0ffc09fb83e544c5d2668e93f322d16f",
+      "authority": "FROZEN_TRAIN_CANDIDATE"
+    }
+  ],
+  "native_memory_write": false,
+  "auto_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "a8091b361d2501ccaf625e3bdd9992af37417f911c19d966f0dec813be645058"
+}

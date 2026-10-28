@@ -1,0 +1,42 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "158cd6a9d6b85c30fc3ad6a7c0c2cdba2d7094d38c20e0088cece2691b1c96a5",
+  "experiences": [
+    {
+      "context": "vertical|speeding_up",
+      "errors_px": {
+        "ACCELERATION": 0.0,
+        "STILL": 10.0,
+        "VELOCITY": 2.0
+      },
+      "feedback_sha256": "9ea58bfb9a5699e6e1937433b79e9226ee22889e07af6ccfb123526ca0dca692",
+      "forecast_digest": "2121a560f1154f9299549c71109d69a93a35adc44a7dd65319f5e84a34e8cf45",
+      "original_selection": "ACCELERATION"
+    },
+    {
+      "context": "vertical|speeding_up",
+      "errors_px": {
+        "ACCELERATION": 0.0,
+        "STILL": 10.0,
+        "VELOCITY": 2.0
+      },
+      "feedback_sha256": "c01d174f29747b0b53d90c97ffefe7c3e872ac9c9bc84301265123959c631c2d",
+      "forecast_digest": "3f2fb8e96aee51b473e757dee8cc06aa0f29a0b1f663acaa8e40e3d115848705",
+      "original_selection": "ACCELERATION"
+    },
+    {
+      "context": "vertical|steady",
+      "errors_px": {
+        "ACCELERATION": 0.0,
+        "STILL": 5.0,
+        "VELOCITY": 0.0
+      },
+      "feedback_sha256": "e03aa6d8aebb3e207a61c4557add948022482360a042a7949db340a7cb66c072",
+      "forecast_digest": "d3a45f2f9de0febfcbbead57073f366a7a0a2d907820bcbf01d2b70789b4e280",
+      "original_selection": null
+    }
+  ],
+  "native_memory_write": false,
+  "schema": "BRODY_CONTEXTUAL_PHYSICS_MEMORY_V2"
+}

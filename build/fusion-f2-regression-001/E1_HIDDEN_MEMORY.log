@@ -1,0 +1,16 @@
+
+test_changes_to_recollection_or_interference_refuse_replay (test_drawing_memory_school_v3.EndToEndHiddenMemoryTests.test_changes_to_recollection_or_interference_refuse_replay) ... ok
+test_changes_to_student_image_refuse_replay (test_drawing_memory_school_v3.EndToEndHiddenMemoryTests.test_changes_to_student_image_refuse_replay) ... ok
+test_delayed_reuses_same_persisted_representation_with_interference (test_drawing_memory_school_v3.EndToEndHiddenMemoryTests.test_delayed_reuses_same_persisted_representation_with_interference) ... ok
+test_gesture_composition_requires_known_primitive_and_bounded_geometry (test_drawing_memory_school_v3.EndToEndHiddenMemoryTests.test_gesture_composition_requires_known_primitive_and_bounded_geometry) ... ok
+test_immediate_delayed_and_unobserved_transfer_all_verified (test_drawing_memory_school_v3.EndToEndHiddenMemoryTests.test_immediate_delayed_and_unobserved_transfer_all_verified) ... ok
+test_no_holdout_composition_reference_observation_prior (test_drawing_memory_school_v3.EndToEndHiddenMemoryTests.test_no_holdout_composition_reference_observation_prior) ... ok
+test_output_never_overwrites_existing_results (test_drawing_memory_school_v3.EndToEndHiddenMemoryTests.test_output_never_overwrites_existing_results) ... ok
+test_render_after_observation_uses_snapshot_not_the_hidden_source (test_drawing_memory_school_v3.HiddenMemoryContractTests.test_render_after_observation_uses_snapshot_not_the_hidden_source) ... ok
+test_teacher_representation_has_no_png_bytes_and_is_hash_bound (test_drawing_memory_school_v3.HiddenMemoryContractTests.test_teacher_representation_has_no_png_bytes_and_is_hash_bound) ... ok
+test_untrusted_gesture_and_unknown_tool_are_rejected (test_drawing_memory_school_v3.HiddenMemoryContractTests.test_untrusted_gesture_and_unknown_tool_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.638s
+
+OK

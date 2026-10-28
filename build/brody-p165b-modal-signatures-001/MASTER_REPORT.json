@@ -1,0 +1,79 @@
+{
+  "schema": "BRODY_P165B_MODAL_SIGNATURE_CONTRACT_LAB",
+  "cases": {
+    "color_changed": {
+      "decision": "MULTI",
+      "votes": 7,
+      "conflicts": 1,
+      "false_identity_proof": false
+    },
+    "thermal_contradiction": {
+      "decision": "MULTI",
+      "votes": 7,
+      "conflicts": 1,
+      "false_identity_proof": false
+    },
+    "radar_hidden": {
+      "decision": "SUPPORTED_CANDIDATE",
+      "votes": 7,
+      "conflicts": 0,
+      "false_identity_proof": false
+    },
+    "multi_conflict": {
+      "decision": "MULTI",
+      "votes": 6,
+      "conflicts": 2,
+      "false_identity_proof": false
+    },
+    "generated_forgery": {
+      "decision": "HOLD",
+      "votes": 0,
+      "conflicts": 0,
+      "false_identity_proof": false
+    },
+    "time_mismatch": {
+      "decision": "HOLD",
+      "votes": 0,
+      "conflicts": 0,
+      "false_identity_proof": false
+    },
+    "same_signature_distinct_entities": {
+      "decision": "SUPPORTED_CANDIDATE",
+      "votes": 8,
+      "conflicts": 0,
+      "false_identity_proof": false
+    },
+    "camera_frame_mismatch": {
+      "decision": "HOLD",
+      "votes": 0,
+      "conflicts": 0,
+      "false_identity_proof": false
+    },
+    "no_sensor_available": {
+      "decision": "HOLD",
+      "votes": 0,
+      "conflicts": 0,
+      "false_identity_proof": false
+    }
+  },
+  "cases_completed": 9,
+  "false_identity_proofs": 0,
+  "modalities": [
+    "RGB",
+    "SPECTRAL",
+    "THERMAL",
+    "RADAR",
+    "LIDAR",
+    "ACOUSTIC",
+    "FLOW",
+    "GEOMETRY"
+  ],
+  "evidence_is_synthetic_fixture": true,
+  "real_sensor_connected": false,
+  "image_to_modalities_model_trained": false,
+  "world_scene_graph_connected": false,
+  "legacy_77_and_p165a_150_not_replayed": true,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

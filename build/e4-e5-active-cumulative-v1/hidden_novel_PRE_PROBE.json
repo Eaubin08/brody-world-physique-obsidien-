@@ -1,0 +1,37 @@
+{
+  "bank_source": "FROZEN_PIXEL_PROBE_BANK",
+  "canonical_promotion": false,
+  "case": "hidden_novel",
+  "choice": {
+    "action": "tap",
+    "decision": "PROBE",
+    "options": [
+      {
+        "action": "tap",
+        "cost": 0.7,
+        "information": 1.584963,
+        "utility": 1.409963
+      },
+      {
+        "action": "tilt",
+        "cost": 1.0,
+        "information": 1.584963,
+        "utility": 1.334963
+      },
+      {
+        "action": "observe",
+        "cost": 0.1,
+        "information": 0.0,
+        "utility": -0.025
+      }
+    ]
+  },
+  "decision_authority": "KX108_ONLY",
+  "digest": "83bc819a19c73dc03350aef84572b75787acb4b9006283520826a222081301e2",
+  "native_memory_write": false,
+  "prior": {
+    "action": "observe_after_discriminating_intervention",
+    "decision": "PROBE",
+    "reason": "INFORMATION_GAIN"
+  }
+}

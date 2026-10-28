@@ -1,0 +1,30 @@
+{
+  "canonical_promotion": false,
+  "case": "overlap",
+  "decision_authority": "KX108_ONLY",
+  "detected_marks": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "digest": "798368e9939b97c85d316ebc57b37e4291c6111bb165ff5811a444031ba2c86f",
+  "history_sha": [
+    "a16216502aee576c5b6a2c2acbd6cf541e1b5230962f282e8935ec40ef9beef2",
+    "f1c6a683fbc9f93f0a1393a3588b58f5d04a753dc837b013d4e0d8741ee6ea1e",
+    "969cd23305737d027da2727557a9a8faf85ab4025a6db99efb5a19d170539814",
+    "ad69ae735d0def167538d858d676215064cdc324654b27c04e0c81c0bf97afd8",
+    "94ef44ce70030fd3a67d232f20decfcfd21e781b7275e35b616b20026086b2a2",
+    "ad69ae735d0def167538d858d676215064cdc324654b27c04e0c81c0bf97afd8",
+    "969cd23305737d027da2727557a9a8faf85ab4025a6db99efb5a19d170539814",
+    "f1c6a683fbc9f93f0a1393a3588b58f5d04a753dc837b013d4e0d8741ee6ea1e"
+  ],
+  "native_memory_write": false,
+  "observed_camera": true,
+  "prediction": null,
+  "reason": "HOLD_IDENTITY_AMBIGUOUS"
+}

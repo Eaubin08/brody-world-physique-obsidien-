@@ -1,0 +1,19 @@
+﻿py.exe : test_all_chapters_and_boundaries 
+(test_u5b_u8_integrated_big_batch_v1.FullBigBatchTests.test_all_chapters_and_boundaries) ... ok
+Au caractère C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\scripts\RUN_BRODY_FULL_CO
+NSOLIDATION.ps1:24 : 5
++     & py @CommandArgs 2>&1 | Out-File -FilePath $log -Encoding utf8
++     ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_all_chapte...ndaries) ... ok:String) [], RemoteExcep 
+   tion
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_preserve_old_reports 
+(test_u5b_u8_integrated_big_batch_v1.FullBigBatchTests.test_preserve_old_reports) ... ok
+test_video_file_metadata_not_misrepresented_as_video_exam (test_u5b_u8_integrated_big_batch_v1.FullBigB
+atchTests.test_video_file_metadata_not_misrepresented_as_video_exam) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.180s
+
+OK

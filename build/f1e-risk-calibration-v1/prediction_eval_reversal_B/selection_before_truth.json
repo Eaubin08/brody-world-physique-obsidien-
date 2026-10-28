@@ -1,0 +1,10 @@
+{
+  "canonical_promotion": false,
+  "case": "eval_reversal_B",
+  "decision_authority": "KX108_ONLY",
+  "digest": "af2381c4530366b81878d984b5ef632c4398da6a3daa85a4d21ed1667f52ea86",
+  "native_memory_write": false,
+  "policy_digest": "87bcb8dd2036672432d8dcfca8107c294f572d425c75686ecd104e77831a827d",
+  "pre_feedback_digest": "665f82a92dc3318cdfc117c5c132a25bcdd68c2c3e03e13397be3717ac09917c",
+  "status": "HOLD"
+}

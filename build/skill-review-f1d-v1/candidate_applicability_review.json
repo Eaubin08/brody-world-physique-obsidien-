@@ -1,0 +1,25 @@
+{
+  "canonical_promotion": false,
+  "context": "vertical|speeding_up",
+  "decision_authority": "KX108_ONLY",
+  "dependencies": [
+    "visual_localization",
+    "temporal_order",
+    "acceleration_hypothesis"
+  ],
+  "digest": "893d4d289f95ba3823311f9eb0fd9dfc931f9ea75a669199b300d2a53cd80325",
+  "native_memory_write": false,
+  "preconditions": [
+    "4 timestamped segmented frames",
+    "matching context"
+  ],
+  "prior_skill_digest": "5c02017b574395e6194aeb857ba72e31c7d44272911147464a91e96b08ace6e7",
+  "reason": "The first four accelerating frames cannot rule out a later reversal.",
+  "review_trigger": {
+    "case": "contradiction_reversal",
+    "observed_utility_px": -1.0
+  },
+  "rule": "HOLD_IF_UNOBSERVABLE_TRANSITION_NOT_EXCLUDED",
+  "schema": "BRODY_SKILL_APPLICABILITY_REVIEW_V1",
+  "skill_preserved_not_destroyed": true
+}

@@ -1,0 +1,18 @@
+{
+  "baseline": 49.0,
+  "candidate": 49.0,
+  "canonical_promotion": false,
+  "case": "retention_clean",
+  "decision_authority": "KX108_ONLY",
+  "digest": "3359b62e32847f54236a9a7f74aab75713ca42a3c737527bcb0015396f5af4d2",
+  "native_memory_write": false,
+  "observations": [
+    25.0,
+    29.0,
+    33.0,
+    37.0,
+    41.0,
+    45.0
+  ],
+  "state_digest": "66c70a495dd5fa5d88a33b4ac0d447b8f7987303c380e48b944415e4dcc53fb7"
+}

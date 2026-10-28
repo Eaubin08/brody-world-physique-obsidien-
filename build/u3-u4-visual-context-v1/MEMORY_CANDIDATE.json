@@ -1,0 +1,8 @@
+{
+  "authority": "KX108_ONLY",
+  "clean_acceleration": 0.0,
+  "digest": "ed0dc048d3c5e17fa33002bd0442b93fe3e0baa96bdbd129eadb88145e4dafc8",
+  "intervention_acceleration": -1.0,
+  "schema": "BRODY_U3_U4_SHARED_CANDIDATE_V1",
+  "source": "PIXEL_PROBE_P158"
+}

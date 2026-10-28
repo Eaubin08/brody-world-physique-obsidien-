@@ -1,0 +1,31 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "9ae414aa8a68ee80d21271bfe0a504ce58890e0a913e901a0bd789936cf4b6d2",
+  "experiences": [
+    {
+      "context": "vertical|speeding_up",
+      "errors_px": {
+        "ACCELERATION": 0.0,
+        "STILL": 10.0,
+        "VELOCITY": 2.0
+      },
+      "feedback_sha256": "8de54b5e4f4333e4a51b75c6587514238e8612b3e0638900e5a5761e87fccf40",
+      "forecast_digest": "fdfb24a5fe1a7b0bc5d6c8d5e40da8c5f2ca3fce19a21b2fda2385663b7205c8",
+      "original_selection": "ACCELERATION"
+    },
+    {
+      "context": "vertical|speeding_up",
+      "errors_px": {
+        "ACCELERATION": 0.0,
+        "STILL": 11.0,
+        "VELOCITY": 2.0
+      },
+      "feedback_sha256": "50b9ce4b86880da224ae2fff1c39e871c4e85ffa73616f5f7f81545965d43141",
+      "forecast_digest": "bf37bd26fe11bad2e709244cf509bdb699b7cb77897dd3b6605b1fb0233180c2",
+      "original_selection": "ACCELERATION"
+    }
+  ],
+  "native_memory_write": false,
+  "schema": "BRODY_CONTEXTUAL_PHYSICS_MEMORY_V2"
+}

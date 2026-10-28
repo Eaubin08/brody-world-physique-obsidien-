@@ -1,0 +1,92 @@
+{
+  "E2E3_FUTURE_GENERATOR_POLICY_CONNECTED": false,
+  "E4": {
+    "actual_external_world_intervention": false,
+    "choice_committed_before_probe_result": true,
+    "exams": [
+      {
+        "action": "tap",
+        "case": "regular_flat",
+        "chosen": "PROBE",
+        "observed_response": 0.0,
+        "outcome": {
+          "decision": "SELECT",
+          "distance": 0.0,
+          "selected": "flat"
+        },
+        "regime_for_exam_grading_only": "flat"
+      },
+      {
+        "action": "tap",
+        "case": "regular_slope",
+        "chosen": "PROBE",
+        "observed_response": -1.0,
+        "outcome": {
+          "decision": "SELECT",
+          "distance": 0.0,
+          "selected": "slope"
+        },
+        "regime_for_exam_grading_only": "slope"
+      },
+      {
+        "action": "tap",
+        "case": "regular_spring",
+        "chosen": "PROBE",
+        "observed_response": 1.0,
+        "outcome": {
+          "decision": "SELECT",
+          "distance": 0.0,
+          "selected": "spring"
+        },
+        "regime_for_exam_grading_only": "spring"
+      },
+      {
+        "action": "tap",
+        "case": "hidden_novel",
+        "chosen": "PROBE",
+        "observed_response": 3.0,
+        "outcome": {
+          "decision": "HOLD",
+          "distance": 2.0,
+          "reason": "NOVEL_RESPONSE"
+        },
+        "regime_for_exam_grading_only": "novel"
+      },
+      {
+        "action": null,
+        "case": "no_discriminator",
+        "chosen": "HOLD",
+        "observed_response": null,
+        "outcome": {
+          "decision": "HOLD",
+          "reason": "NO_INFORMATIVE_PROBE"
+        },
+        "regime_for_exam_grading_only": "flat"
+      }
+    ],
+    "pixel_induced_training_bank": true
+  },
+  "E5": {
+    "accepted": 9,
+    "cycles_completed": 24,
+    "cycles_expected": 24,
+    "exam_cases": 480,
+    "full_curriculum_completed": true,
+    "held": 15,
+    "mean_mae": {
+      "frozen": 0.8592545637830523,
+      "gated": 0.572912006244486,
+      "ungated": 1.6033111017205417
+    },
+    "read_only_native_memory": true,
+    "real_image_skill_memory_shared_with_E1": false
+  },
+  "P158_P159_P156_REUSED": true,
+  "actual_multiview_reverse360_proven": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "external_video_transfer_proven": false,
+  "native_memory_write": false,
+  "schema": "BRODY_E4_E5_ACTIVE_CUMULATIVE_EDUCATION_V1",
+  "verdict": "E4_E5_HISTORICAL_EDUCATION_REUSE_BOUNDED"
+}

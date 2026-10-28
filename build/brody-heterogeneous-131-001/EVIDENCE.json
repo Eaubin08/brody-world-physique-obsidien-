@@ -1,0 +1,172 @@
+{
+  "schema": "BRODY_HETEROGENEOUS_EVIDENCE_P131",
+  "cases": [
+    {
+      "id": "P-01",
+      "domain": "perception",
+      "claim": "two separate parts and relation",
+      "status": "PASS",
+      "detail": {
+        "parts": 2,
+        "relations": 1
+      }
+    },
+    {
+      "id": "P-02",
+      "domain": "perception",
+      "claim": "RGB evidence differs for red and blue",
+      "status": "PASS",
+      "detail": {
+        "r_signature_sha": "4b3ffb167accb6cf11e6582374fa20b63b03a1b6df2fa86a8ac2e27c27c0710e",
+        "b_signature_sha": "7642bd7e3ed2417948e5a64fba19c16989bedc3b25dadfbaae9855440e26c9e2"
+      }
+    },
+    {
+      "id": "V-01",
+      "domain": "multiview",
+      "claim": "orientation detection distinguishes rotated shape",
+      "status": "PASS",
+      "detail": {
+        "before": "tone:varied|density:medium|parts:1|axis:horizontal",
+        "after": "tone:varied|density:medium|parts:1|axis:vertical"
+      }
+    },
+    {
+      "id": "G-01",
+      "domain": "generation",
+      "claim": "produce RGB image from abstract 4x4 learned-format grid",
+      "status": "PASS",
+      "detail": {
+        "rendered": "reconstructed.png",
+        "resolution": "64x64",
+        "quality": "coarse RGB tiles"
+      }
+    },
+    {
+      "id": "M-01",
+      "domain": "memory",
+      "claim": "contradictory identity evidence quarantined",
+      "status": "PASS",
+      "detail": {
+        "first": "TEACHER_EXAMPLE_ADDED",
+        "second": "HOLD_CONTRADICTION"
+      }
+    },
+    {
+      "id": "R-01",
+      "domain": "reasoning",
+      "claim": "observed direction reversal extracted from successive velocities",
+      "status": "PASS",
+      "detail": {
+        "event": "REVERSAL",
+        "axis": "vertical"
+      }
+    },
+    {
+      "id": "E-01",
+      "domain": "education",
+      "claim": "identical example not counted as independent lesson",
+      "status": "PASS",
+      "detail": {
+        "outcome": "DUPLICATE_NOT_NEW_EVIDENCE"
+      }
+    },
+    {
+      "id": "S-01",
+      "domain": "safety",
+      "claim": "reject invalid generative memory dimensions",
+      "status": "PASS",
+      "detail": {
+        "invalid_grid_rejected": true
+      }
+    },
+    {
+      "id": "V-02",
+      "domain": "multiview",
+      "claim": "true independent 3D 360-degree transfer",
+      "status": "TODO",
+      "detail": {
+        "reason": "capability absent or not empirically demonstrated"
+      }
+    },
+    {
+      "id": "G-02",
+      "domain": "generation",
+      "claim": "render coherent objects rather than colour mosaics",
+      "status": "TODO",
+      "detail": {
+        "reason": "capability absent or not empirically demonstrated"
+      }
+    },
+    {
+      "id": "P-03",
+      "domain": "perception",
+      "claim": "segment multiple overlapping objects",
+      "status": "TODO",
+      "detail": {
+        "reason": "capability absent or not empirically demonstrated"
+      }
+    },
+    {
+      "id": "T-01",
+      "domain": "temporal",
+      "claim": "learn cause rather than fit temporal movement",
+      "status": "TODO",
+      "detail": {
+        "reason": "capability absent or not empirically demonstrated"
+      }
+    },
+    {
+      "id": "X-01",
+      "domain": "exploration",
+      "claim": "discover licensed external lessons autonomously",
+      "status": "TODO",
+      "detail": {
+        "reason": "capability absent or not empirically demonstrated"
+      }
+    },
+    {
+      "id": "E-02",
+      "domain": "education",
+      "claim": "authenticate independent teacher correction",
+      "status": "TODO",
+      "detail": {
+        "reason": "capability absent or not empirically demonstrated"
+      }
+    },
+    {
+      "id": "W-01",
+      "domain": "physical_world",
+      "claim": "learn physical collision mechanics from real video",
+      "status": "TODO",
+      "detail": {
+        "reason": "capability absent or not empirically demonstrated"
+      }
+    },
+    {
+      "id": "R-02",
+      "domain": "reasoning",
+      "claim": "infer previously unseen invariants on new objects",
+      "status": "TODO",
+      "detail": {
+        "reason": "capability absent or not empirically demonstrated"
+      }
+    }
+  ],
+  "report": {
+    "schema": "BRODY_HETEROGENEOUS_CAPABILITY_AUDIT_P131",
+    "distinct_probes": 16,
+    "domains": 10,
+    "counts": {
+      "PASS": 8,
+      "FAIL": 0,
+      "TODO": 8
+    },
+    "synthetic_or_constructed_evidence_only": true,
+    "real_world_transfer_proven": false,
+    "native_memory_write": false,
+    "canonical_promotion": false,
+    "decision_authority": "KX108_ONLY"
+  },
+  "digest": "cd34ea096b2e8b3f244927e840d08b14bc6acc93b106c2a9dbb5de6b00dfe315"
+}

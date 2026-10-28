@@ -1,0 +1,72 @@
+{
+  "canonical_promotion": false,
+  "cue_is_controlled_synthetic_proxy": true,
+  "decision_authority": "KX108_ONLY",
+  "degraded": 2,
+  "exam": [
+    {
+      "base_error_px": 1.0,
+      "candidate_committed_before_truth": true,
+      "case": "new_free",
+      "utility_px": 1.0,
+      "visible_cue": false,
+      "with_cue_skill_error_px": 0.0
+    },
+    {
+      "base_error_px": 14.0,
+      "candidate_committed_before_truth": true,
+      "case": "new_cue",
+      "utility_px": 14.0,
+      "visible_cue": true,
+      "with_cue_skill_error_px": 0.0
+    },
+    {
+      "base_error_px": 1.0,
+      "candidate_committed_before_truth": true,
+      "case": "cue_false_alarm",
+      "utility_px": -14.0,
+      "visible_cue": true,
+      "with_cue_skill_error_px": 15.0
+    },
+    {
+      "base_error_px": 14.0,
+      "candidate_committed_before_truth": true,
+      "case": "invisible_reversal",
+      "utility_px": -1.0,
+      "visible_cue": false,
+      "with_cue_skill_error_px": 15.0
+    }
+  ],
+  "improved": 2,
+  "indistinguishable_without_cue": true,
+  "learned_conditional_residual_not_causal_law": true,
+  "lessons": [
+    {
+      "case": "train_free_1",
+      "observed_marker": false,
+      "residual_y_px": 1.0
+    },
+    {
+      "case": "train_cue_1",
+      "observed_marker": true,
+      "residual_y_px": -14.0
+    },
+    {
+      "case": "train_free_2",
+      "observed_marker": false,
+      "residual_y_px": 1.0
+    },
+    {
+      "case": "train_cue_2",
+      "observed_marker": true,
+      "residual_y_px": -14.0
+    }
+  ],
+  "marker_observed_before_future": true,
+  "native_memory_write": false,
+  "p149_p150_p152_verified_reuse": false,
+  "real_world_learning_proven": false,
+  "schema": "BRODY_F1F_OBSERVABLE_CUE_EDUCATION_V1",
+  "unchanged": 0,
+  "verdict": "F1F_BOUNDED_OBSERVED_CUE_LEARNING"
+}

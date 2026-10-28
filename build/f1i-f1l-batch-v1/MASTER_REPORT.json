@@ -1,0 +1,148 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "full_integrated_education_proven": false,
+  "historical_p149_reused": true,
+  "historical_p150_reused": true,
+  "historical_p152_imported": true,
+  "native_memory_write": false,
+  "schema": "BRODY_F1I_TO_F1L_BATCH_V1",
+  "stage_count": 4,
+  "stages": {
+    "F1I": {
+      "cases": [
+        {
+          "camera_observed": true,
+          "case": "separate",
+          "detected_markers": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "error_px": 0.0,
+          "reason": "TRACK_PREDICTION",
+          "world_causal_contact_proven": false
+        },
+        {
+          "camera_observed": true,
+          "case": "camera_pan",
+          "detected_markers": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "error_px": 0.0,
+          "reason": "TRACK_PREDICTION",
+          "world_causal_contact_proven": false
+        },
+        {
+          "camera_observed": true,
+          "case": "occlude_both",
+          "detected_markers": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "error_px": 9.5,
+          "reason": "TRACK_PREDICTION",
+          "world_causal_contact_proven": false
+        },
+        {
+          "camera_observed": true,
+          "case": "overlap",
+          "detected_markers": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "error_px": null,
+          "reason": "HOLD_IDENTITY_AMBIGUOUS",
+          "world_causal_contact_proven": false
+        }
+      ],
+      "image_observability_from_historical_p150": true,
+      "true_contact_observability_implemented": false
+    },
+    "F1J": {
+      "feedback_updates_visual_model": false,
+      "geometric_reverse_360": false,
+      "reverse_observation_executed": true,
+      "roundtrips": [
+        {
+          "coarse_grid_L1": 0,
+          "generated_sha256": "e2c2c0a110da51bb1060d6ed60d96e77dda69e481336efcb6ac295b2b01ec5e7",
+          "reconstructed_parts": 0,
+          "source_copied": false,
+          "source_parts": 2,
+          "source_sha256": "fe5512d38fd2a122ea20dfe142f7cc18177d715c0102cd890c15b0d9c0a12628"
+        },
+        {
+          "coarse_grid_L1": 0,
+          "generated_sha256": "519af25f89eba06afda7fcad4116e68d52a575508fe7cb6df41ee73a0185011f",
+          "reconstructed_parts": 0,
+          "source_copied": false,
+          "source_parts": 2,
+          "source_sha256": "72bbde0f1c26510c5728834cc376e657f8deb645864410c057424739afeb5217"
+        },
+        {
+          "coarse_grid_L1": 0,
+          "generated_sha256": "519af25f89eba06afda7fcad4116e68d52a575508fe7cb6df41ee73a0185011f",
+          "reconstructed_parts": 0,
+          "source_copied": false,
+          "source_parts": 2,
+          "source_sha256": "9a7a338c91d1e78b01fdf4d1c62c44a0e9a5d732f686ce9dda1ed9e694477e7a"
+        }
+      ],
+      "same_pixel_resolution": false,
+      "semantic_generation": false
+    },
+    "F1K": {
+      "actual_accuracy_retention_proven": false,
+      "no_second_canonical_memory": true,
+      "original_candidate_recurs_after_interference": true,
+      "versions": [
+        {
+          "candidate_skill": "P150_CAMERA_LANDMARK",
+          "digest": "6cccbcd8d29db36298865455e50db840251c81f229c4108311154668f9ecd7e6",
+          "stage": "acquisition"
+        },
+        {
+          "candidate_skill": "P152_IDENTITY_BEAM",
+          "digest": "c79e25e3cc1752f2b415dfa9a3a4965a18528e1c8caa4cd40096bddb6b56382b",
+          "stage": "interference"
+        },
+        {
+          "candidate_skill": "P150_CAMERA_LANDMARK",
+          "digest": "12aeb6fde0e51680736fea156d6ee5fe1161e5ee56e57ab1d1605c63fd8ab6ef",
+          "stage": "retention"
+        }
+      ]
+    },
+    "F1L": {
+      "images_evaluated": 0,
+      "real_world_transfer_proven": false,
+      "status": "HOLD_NO_INDEPENDENT_IMAGES"
+    }
+  },
+  "verdict": "BATCH_BOUNDARY_AND_EDUCATION_PRIMITIVES_ONLY"
+}

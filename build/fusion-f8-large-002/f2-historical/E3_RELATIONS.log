@@ -1,0 +1,18 @@
+
+test_altered_training_source_blocks_replay (test_world_relations_school_v4_1.FullWorldRelationTests.test_altered_training_source_blocks_replay) ... ok
+test_composer_reuses_observed_pixels_without_teacher_boxes (test_world_relations_school_v4_1.FullWorldRelationTests.test_composer_reuses_observed_pixels_without_teacher_boxes) ... ok
+test_drawing_course_replays_and_no_canonical_memory_promotion (test_world_relations_school_v4_1.FullWorldRelationTests.test_drawing_course_replays_and_no_canonical_memory_promotion) ... ok
+test_false_promotion_and_cooked_evaluation_detected (test_world_relations_school_v4_1.FullWorldRelationTests.test_false_promotion_and_cooked_evaluation_detected) ... ok
+test_test_decisions_are_committed_without_ground_truth (test_world_relations_school_v4_1.FullWorldRelationTests.test_test_decisions_are_committed_without_ground_truth) ... ok
+test_upstream_world_not_writable_and_output_no_overwrite (test_world_relations_school_v4_1.FullWorldRelationTests.test_upstream_world_not_writable_and_output_no_overwrite) ... ok
+test_v4_1_experiences_reuse_existing_world_types_not_another_memory_authority (test_world_relations_school_v4_1.FullWorldRelationTests.test_v4_1_experiences_reuse_existing_world_types_not_another_memory_authority) ... ok
+test_detect_parts_directly_from_pixels_no_box_input (test_world_relations_school_v4_1.VisualPerceptionTests.test_detect_parts_directly_from_pixels_no_box_input) ... ok
+test_learned_rule_depends_on_feedback_not_teacher_dictionary (test_world_relations_school_v4_1.VisualPerceptionTests.test_learned_rule_depends_on_feedback_not_teacher_dictionary) ... ok
+test_limitations_are_not_semantic_understanding (test_world_relations_school_v4_1.VisualPerceptionTests.test_limitations_are_not_semantic_understanding) ... ok
+test_rotation_translation_and_scale_preserve_normalized_distance_approximately (test_world_relations_school_v4_1.VisualPerceptionTests.test_rotation_translation_and_scale_preserve_normalized_distance_approximately) ... ok
+test_topology_unknown_holds (test_world_relations_school_v4_1.VisualPerceptionTests.test_topology_unknown_holds) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.071s
+
+OK

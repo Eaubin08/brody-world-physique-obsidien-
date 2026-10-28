@@ -1,0 +1,1562 @@
+﻿py.exe : test_color_object_detected_as_pixel_location_only 
+(test_auto_ball_demo_v0.BallDemonstrationTests.test_color_object_detected_as_pixel_location_only) ... 
+ok
+Au caractère C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\scripts\RUN_BRODY_FULL_CO
+NSOLIDATION.ps1:24 : 5
++     & py @CommandArgs 2>&1 | Out-File -FilePath $log -Encoding utf8
++     ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_color_obje...on_only) ... ok:String) [], RemoteExcep 
+   tion
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_existing_results_cannot_be_silently_overwritten 
+(test_auto_ball_demo_v0.BallDemonstrationTests.test_existing_results_cannot_be_silently_overwritten) 
+... ok
+test_precommit_before_reading_fourth_frame 
+(test_auto_ball_demo_v0.BallDemonstrationTests.test_precommit_before_reading_fourth_frame) ... ok
+test_reject_unapproved_sources_and_frame_selection 
+(test_auto_ball_demo_v0.BallDemonstrationTests.test_reject_unapproved_sources_and_frame_selection) ... 
+ok
+test_target_absent_fails_closed 
+(test_auto_ball_demo_v0.BallDemonstrationTests.test_target_absent_fails_closed) ... ok
+test_unbounded_or_too_elongated_colored_area_rejected 
+(test_auto_ball_demo_v0.BallDemonstrationTests.test_unbounded_or_too_elongated_colored_area_rejected) 
+... ok
+test_blank_reference_returns_hold_with_no_auto_fabricated_skill (test_candidate_skill_retrieval_v1.Proc
+edureRetrievalTests.test_blank_reference_returns_hold_with_no_auto_fabricated_skill) ... ok
+test_reject_broad_parameters_and_wrong_image_dimensions (test_candidate_skill_retrieval_v1.ProcedureRet
+rievalTests.test_reject_broad_parameters_and_wrong_image_dimensions) ... ok
+test_tampered_candidate_memory_refuses_procedure_activation (test_candidate_skill_retrieval_v1.Procedur
+eRetrievalTests.test_tampered_candidate_memory_refuses_procedure_activation) ... ok
+test_visual_question_retrieves_whitelisted_code_and_skill_ref_only (test_candidate_skill_retrieval_v1.P
+rocedureRetrievalTests.test_visual_question_retrieves_whitelisted_code_and_skill_ref_only) ... ok
+test_both_red_and_blue (test_color_agnostic_perception_p165d3.P165D3Tests.test_both_red_and_blue) ... 
+ok
+test_evaluator_without_oracle_input 
+(test_color_agnostic_perception_p165d3.P165D3Tests.test_evaluator_without_oracle_input) ... ok
+test_limited_report_no_overwrite 
+(test_color_agnostic_perception_p165d3.P165D3Tests.test_limited_report_no_overwrite) ... ok
+test_two_objects_not_unjustifiably_fused 
+(test_color_agnostic_perception_p165d3.P165D3Tests.test_two_objects_not_unjustifiably_fused) ... ok
+test_coverage_and_paired_errors_are_separate 
+(test_compare_experience_stages_v0.StageComparisonTests.test_coverage_and_paired_errors_are_separate) 
+... ok
+test_reject_mismatched_test_sources 
+(test_compare_experience_stages_v0.StageComparisonTests.test_reject_mismatched_test_sources) ... ok
+test_reject_prior_predictions_in_cold_start 
+(test_compare_experience_stages_v0.StageComparisonTests.test_reject_prior_predictions_in_cold_start) 
+... ok
+test_old_new_unknown_and_retention 
+(test_consolidated_education_replay_v1.ConsolidatedReplayTests.test_old_new_unknown_and_retention) ... 
+ok
+test_refuse_overwrite 
+(test_consolidated_education_replay_v1.ConsolidatedReplayTests.test_refuse_overwrite) ... ok
+test_contradictory_modalities_yield_multi 
+(test_contextual_scene_graph_p165c.SceneTests.test_contradictory_modalities_yield_multi) ... ok
+test_matching_signatures_do_not_prove_identity 
+(test_contextual_scene_graph_p165c.SceneTests.test_matching_signatures_do_not_prove_identity) ... ok
+test_no_fixed_layer_count (test_contextual_scene_graph_p165c.SceneTests.test_no_fixed_layer_count) ... 
+ok
+test_order_contradiction (test_contextual_scene_graph_p165c.SceneTests.test_order_contradiction) ... ok
+test_report_and_preservation 
+(test_contextual_scene_graph_p165c.SceneTests.test_report_and_preservation) ... ok
+test_source_frame_mismatch_holds 
+(test_contextual_scene_graph_p165c.SceneTests.test_source_frame_mismatch_holds) ... ok
+test_unknown_depth_is_not_metric_depth 
+(test_contextual_scene_graph_p165c.SceneTests.test_unknown_depth_is_not_metric_depth) ... ok
+test_allowed_to_act_is_rejected 
+(test_contracts_v0.SovereigntyNegativeTests.test_allowed_to_act_is_rejected) ... ok
+test_allowed_to_decide_is_rejected 
+(test_contracts_v0.SovereigntyNegativeTests.test_allowed_to_decide_is_rejected) ... ok
+test_kernel_mutation_is_rejected 
+(test_contracts_v0.SovereigntyNegativeTests.test_kernel_mutation_is_rejected) ... ok
+test_mutable_contract_is_rejected 
+(test_contracts_v0.SovereigntyNegativeTests.test_mutable_contract_is_rejected) ... ok
+test_wrong_decision_authority_is_rejected 
+(test_contracts_v0.SovereigntyNegativeTests.test_wrong_decision_authority_is_rejected) ... ok
+test_binding_cannot_gain_action_authority 
+(test_contracts_v0.TransitionTransformationBindingTests.test_binding_cannot_gain_action_authority) ... 
+ok
+test_binding_links_existing_transition_without_mutating_upstream (test_contracts_v0.TransitionTransform
+ationBindingTests.test_binding_links_existing_transition_without_mutating_upstream) ... ok
+test_auto_promotion_is_rejected 
+(test_contracts_v0.WorldExperienceCandidateTests.test_auto_promotion_is_rejected) ... ok
+test_memory_write_is_rejected 
+(test_contracts_v0.WorldExperienceCandidateTests.test_memory_write_is_rejected) ... ok
+test_repeat_count_must_be_positive 
+(test_contracts_v0.WorldExperienceCandidateTests.test_repeat_count_must_be_positive) ... ok
+test_validated_experience_is_still_not_canonical_memory (test_contracts_v0.WorldExperienceCandidateTest
+s.test_validated_experience_is_still_not_canonical_memory) ... ok
+test_delta_cannot_claim_causal_proof 
+(test_contracts_v0.WorldStateDeltaTests.test_delta_cannot_claim_causal_proof) ... ok
+test_delta_records_discrepancy_without_causal_proof 
+(test_contracts_v0.WorldStateDeltaTests.test_delta_records_discrepancy_without_causal_proof) ... ok
+test_delta_requires_comparison_anchor 
+(test_contracts_v0.WorldStateDeltaTests.test_delta_requires_comparison_anchor) ... ok
+test_observed_is_not_a_projection_kind 
+(test_contracts_v0.WorldStateProjectionTests.test_observed_is_not_a_projection_kind) ... ok
+test_prediction_wraps_upstream_world_state 
+(test_contracts_v0.WorldStateProjectionTests.test_prediction_wraps_upstream_world_state) ... ok
+test_requires_upstream_world_state_shape 
+(test_contracts_v0.WorldStateProjectionTests.test_requires_upstream_world_state_shape) ... ok
+test_execution_authority_is_rejected 
+(test_contracts_v0.WorldTransformationTests.test_execution_authority_is_rejected) ... ok
+test_observed_transformation_is_descriptive_only 
+(test_contracts_v0.WorldTransformationTests.test_observed_transformation_is_descriptive_only) ... ok
+test_proposed_transformation_does_not_become_world_action 
+(test_contracts_v0.WorldTransformationTests.test_proposed_transformation_does_not_become_world_action) 
+... ok
+test_requires_upstream_time_shape 
+(test_contracts_v0.WorldTransformationTests.test_requires_upstream_time_shape) ... ok
+test_atlas_keeps_numbered_concepts 
+(test_documentation.BrodyImageDocumentationTests.test_atlas_keeps_numbered_concepts) ... ok
+test_brody_image_fidelity_covers_original_visual_methods (test_documentation.BrodyImageDocumentationTes
+ts.test_brody_image_fidelity_covers_original_visual_methods) ... ok
+test_image_documents_local_links_resolve 
+(test_documentation.BrodyImageDocumentationTests.test_image_documents_local_links_resolve) ... ok
+test_image_master_plan_and_branch_map_exist 
+(test_documentation.BrodyImageDocumentationTests.test_image_master_plan_and_branch_map_exist) ... ok
+test_learning_traceability_preserves_source_boundaries (test_documentation.BrodyImageDocumentationTests
+.test_learning_traceability_preserves_source_boundaries) ... ok
+test_readme_prioritizes_image_and_links_both_documents (test_documentation.BrodyImageDocumentationTests
+.test_readme_prioritizes_image_and_links_both_documents) ... ok
+test_source_matrix_tracks_all_concepts 
+(test_documentation.BrodyImageDocumentationTests.test_source_matrix_tracks_all_concepts) ... ok
+test_changes_to_recollection_or_interference_refuse_replay (test_drawing_memory_school_v3.EndToEndHidde
+nMemoryTests.test_changes_to_recollection_or_interference_refuse_replay) ... ok
+test_changes_to_student_image_refuse_replay 
+(test_drawing_memory_school_v3.EndToEndHiddenMemoryTests.test_changes_to_student_image_refuse_replay) 
+... ok
+test_delayed_reuses_same_persisted_representation_with_interference (test_drawing_memory_school_v3.EndT
+oEndHiddenMemoryTests.test_delayed_reuses_same_persisted_representation_with_interference) ... ok
+test_gesture_composition_requires_known_primitive_and_bounded_geometry (test_drawing_memory_school_v3.E
+ndToEndHiddenMemoryTests.test_gesture_composition_requires_known_primitive_and_bounded_geometry) ... ok
+test_immediate_delayed_and_unobserved_transfer_all_verified (test_drawing_memory_school_v3.EndToEndHidd
+enMemoryTests.test_immediate_delayed_and_unobserved_transfer_all_verified) ... ok
+test_no_holdout_composition_reference_observation_prior (test_drawing_memory_school_v3.EndToEndHiddenMe
+moryTests.test_no_holdout_composition_reference_observation_prior) ... ok
+test_output_never_overwrites_existing_results (test_drawing_memory_school_v3.EndToEndHiddenMemoryTests.
+test_output_never_overwrites_existing_results) ... ok
+test_render_after_observation_uses_snapshot_not_the_hidden_source (test_drawing_memory_school_v3.Hidden
+MemoryContractTests.test_render_after_observation_uses_snapshot_not_the_hidden_source) ... ok
+test_teacher_representation_has_no_png_bytes_and_is_hash_bound (test_drawing_memory_school_v3.HiddenMem
+oryContractTests.test_teacher_representation_has_no_png_bytes_and_is_hash_bound) ... ok
+test_untrusted_gesture_and_unknown_tool_are_rejected (test_drawing_memory_school_v3.HiddenMemoryContrac
+tTests.test_untrusted_gesture_and_unknown_tool_are_rejected) ... ok
+test_candidate_ledger_detects_modified_past_and_refuses_authority (test_drawing_school_v0.DrawingSchool
+ContractsTests.test_candidate_ledger_detects_modified_past_and_refuses_authority) ... ok
+test_candidate_memory_seed_replays_on_translated_reference (test_drawing_school_v0.DrawingSchoolContrac
+tsTests.test_candidate_memory_seed_replays_on_translated_reference) ... ok
+test_fails_closed_on_wrong_size 
+(test_drawing_school_v0.DrawingSchoolContractsTests.test_fails_closed_on_wrong_size) ... ok
+test_harmful_memory_is_rejected_and_failure_remains_visible (test_drawing_school_v0.DrawingSchoolContra
+ctsTests.test_harmful_memory_is_rejected_and_failure_remains_visible) ... ok
+test_no_prior_experience_has_no_seed 
+(test_drawing_school_v0.DrawingSchoolContractsTests.test_no_prior_experience_has_no_seed) ... ok
+test_overprinting_must_not_worsen_target 
+(test_drawing_school_v0.DrawingSchoolContractsTests.test_overprinting_must_not_worsen_target) ... ok
+test_real_catalog_is_generic_pen_strokes_not_named_shapes (test_drawing_school_v0.DrawingSchoolContract
+sTests.test_real_catalog_is_generic_pen_strokes_not_named_shapes) ... ok
+test_student_draws_after_teacher_pixel_feedback 
+(test_drawing_school_v0.DrawingSchoolContractsTests.test_student_draws_after_teacher_pixel_feedback) 
+... ok
+test_unrelated_mistaken_skill_does_not_force_bad_drawing (test_drawing_school_v0.DrawingSchoolContracts
+Tests.test_unrelated_mistaken_skill_does_not_force_bad_drawing) ... ok
+test_circle_and_curve_representable_without_ellipse_tool_for_student (test_drawing_school_v1.DrawingV1T
+ests.test_circle_and_curve_representable_without_ellipse_tool_for_student) ... ok
+test_really_erase_worse_wrong_stroke 
+(test_drawing_school_v1.DrawingV1Tests.test_really_erase_worse_wrong_stroke) ... ok
+test_replacement_or_erasure_repairs_a_partly_right_attempt 
+(test_drawing_school_v1.DrawingV1Tests.test_replacement_or_erasure_repairs_a_partly_right_attempt) ... 
+ok
+test_run_cold_memory_and_holdout_sources 
+(test_drawing_school_v1.DrawingV1Tests.test_run_cold_memory_and_holdout_sources) ... ok
+test_skeleton_and_trace_nonempty_lines_and_circles 
+(test_drawing_school_v1.DrawingV1Tests.test_skeleton_and_trace_nonempty_lines_and_circles) ... ok
+test_triangle_vectorization_improves_baseline 
+(test_drawing_school_v1.DrawingV1Tests.test_triangle_vectorization_improves_baseline) ... ok
+test_acquisition_retention_transfer_and_novel_hold (test_e1_cumulative_structural_school_v1.CumulativeS
+tructuralSchoolTests.test_acquisition_retention_transfer_and_novel_hold) ... ok
+test_preserve_prior_evidence 
+(test_e1_cumulative_structural_school_v1.CumulativeStructuralSchoolTests.test_preserve_prior_evidence) 
+... ok
+test_future_image_is_generated_before_heldout_grading (test_e2_e3_temporal_structural_generation_v1.Tem
+poralGenerationTests.test_future_image_is_generated_before_heldout_grading) ... ok
+test_never_overwrite 
+(test_e2_e3_temporal_structural_generation_v1.TemporalGenerationTests.test_never_overwrite) ... ok
+test_preserves_existing_evidence 
+(test_e4_e5_active_cumulative_school_v1.ActiveCumulativeSchoolTests.test_preserves_existing_evidence) 
+... ok
+test_probe_selection_and_cumulative_replay (test_e4_e5_active_cumulative_school_v1.ActiveCumulativeScho
+olTests.test_probe_selection_and_cumulative_replay) ... ok
+test_e6_hold_and_e7_local_boundary_e8_real_report_link (test_e6_e8_linked_evidence_v1.LinkedEvidenceTes
+ts.test_e6_hold_and_e7_local_boundary_e8_real_report_link) ... ok
+test_never_overwrites (test_e6_e8_linked_evidence_v1.LinkedEvidenceTests.test_never_overwrites) ... ok
+test_unverified_external_source 
+(test_e6_e8_linked_evidence_v1.LinkedEvidenceTests.test_unverified_external_source) ... ok
+test_altered_executed_edit_fails_even_with_updated_receipt_sha (test_experience_memory_v1.ExperienceCon
+tractTests.test_altered_executed_edit_fails_even_with_updated_receipt_sha) ... ok
+test_changed_generated_artifact_is_detected 
+(test_experience_memory_v1.ExperienceContractTests.test_changed_generated_artifact_is_detected) ... ok
+test_changed_teacher_input_is_detected 
+(test_experience_memory_v1.ExperienceContractTests.test_changed_teacher_input_is_detected) ... ok
+test_full_procedural_memory_trace_can_be_replayed_offline (test_experience_memory_v1.ExperienceContract
+Tests.test_full_procedural_memory_trace_can_be_replayed_offline) ... ok
+test_harmful_memory_is_preserved_as_rejected_path 
+(test_experience_memory_v1.ExperienceContractTests.test_harmful_memory_is_preserved_as_rejected_path) 
+... ok
+test_modified_procedure_ref_fails_even_with_updated_receipt_sha (test_experience_memory_v1.ExperienceCo
+ntractTests.test_modified_procedure_ref_fails_even_with_updated_receipt_sha) ... ok
+test_no_code_from_memory_and_replay_checks_bounds 
+(test_experience_memory_v1.ExperienceContractTests.test_no_code_from_memory_and_replay_checks_bounds) 
+... ok
+test_path_receipts_are_portable_and_replayable_on_windows (test_experience_memory_v1.ExperienceContract
+Tests.test_path_receipts_are_portable_and_replayable_on_windows) ... ok
+test_unreviewed_promotion_or_action_is_not_accepted (test_experience_memory_v1.ExperienceContractTests.
+test_unreviewed_promotion_or_action_is_not_accepted) ... ok
+test_immutable_existing_output 
+(test_experiential_skill_learning_v1.ExperientialSkillTests.test_immutable_existing_output) ... ok
+test_learning_changes_prediction_and_preserves_interference (test_experiential_skill_learning_v1.Experi
+entialSkillTests.test_learning_changes_prediction_and_preserves_interference) ... ok
+test_cannot_reuse_output_over_previous_experiment (test_experiential_video_v0.ExperientialLearningTests
+.test_cannot_reuse_output_over_previous_experiment) ... ok
+test_empty_memory_cannot_claim_a_prediction 
+(test_experiential_video_v0.ExperientialLearningTests.test_empty_memory_cannot_claim_a_prediction) ... 
+ok
+test_holdout_prediction_precommitted_and_test_never_enters_memory (test_experiential_video_v0.Experient
+ialLearningTests.test_holdout_prediction_precommitted_and_test_never_enters_memory) ... ok
+test_invalid_samples_do_not_become_learning 
+(test_experiential_video_v0.ExperientialLearningTests.test_invalid_samples_do_not_become_learning) ... 
+ok
+test_new_out_of_distribution_route_must_hold 
+(test_experiential_video_v0.ExperientialLearningTests.test_new_out_of_distribution_route_must_hold) 
+... ok
+test_source_disjointness_and_simulated_manifest_mandatory (test_experiential_video_v0.ExperientialLearn
+ingTests.test_source_disjointness_and_simulated_manifest_mandatory) ... ok
+test_train_on_own_observed_transitions_then_propose_for_new_source (test_experiential_video_v0.Experien
+tialLearningTests.test_train_on_own_observed_transitions_then_propose_for_new_source) ... ok
+test_prior_output_preserved 
+(test_f1a_three_school_wiring_v1.F1ASafetyTests.test_prior_output_preserved) ... ok
+test_same_bytes_in_train_and_exam_refused_before_output (test_f1a_three_school_wiring_v1.F1ASafetyTests
+.test_same_bytes_in_train_and_exam_refused_before_output) ... ok
+test_seal_uses_training_hashes_not_identity_name 
+(test_f1a_three_school_wiring_v1.F1ASafetyTests.test_seal_uses_training_hashes_not_identity_name) ... 
+ok
+test_preserve_existing_run (test_f1b_physical_memory_bridge_v1.F1BTests.test_preserve_existing_run) 
+... ok
+test_training_and_blind_pair 
+(test_f1b_physical_memory_bridge_v1.F1BTests.test_training_and_blind_pair) ... ok
+test_no_overwrite_after_success 
+(test_f1c_memory_utility_audit_v1.F1CMemoryUtilityTests.test_no_overwrite_after_success) ... ok
+test_paired_scoring_without_forced_improvement (test_f1c_memory_utility_audit_v1.F1CMemoryUtilityTests.
+test_paired_scoring_without_forced_improvement) ... ok
+test_preserve_existing 
+(test_f1h_historical_reconciliation_v1.HistoricalReuseTests.test_preserve_existing) ... ok
+test_real_p149_p150_p152_integrations 
+(test_f1h_historical_reconciliation_v1.HistoricalReuseTests.test_real_p149_p150_p152_integrations) ... 
+ok
+test_all_four_stages_without_external_data 
+(test_f1i_f1l_batch_v1.F1ItoF1LTests.test_all_four_stages_without_external_data) ... ok
+test_external_images_are_observed_without_semantic_claim 
+(test_f1i_f1l_batch_v1.F1ItoF1LTests.test_external_images_are_observed_without_semantic_claim) ... ok
+test_never_overwrites_evidence (test_f1i_f1l_batch_v1.F1ItoF1LTests.test_never_overwrites_evidence) 
+... ok
+test_independent_interventions_and_heldout_effects (test_factorial_counterfactual_school_v1.FactorialCo
+unterfactualTests.test_independent_interventions_and_heldout_effects) ... ok
+test_output_is_not_overwritten 
+(test_factorial_counterfactual_school_v1.FactorialCounterfactualTests.test_output_is_not_overwritten) 
+... ok
+test_contextual_retention_and_unknown_hold (test_fusion_f10_contextual_1000_v0.ContextualIntensiveTests
+.test_contextual_retention_and_unknown_hold) ... ok
+test_reproducible_and_tamper_detected 
+(test_fusion_f10_contextual_1000_v0.ContextualIntensiveTests.test_reproducible_and_tamper_detected) 
+... ok
+test_actual_pixel_cues_and_ambiguous_abstention (test_fusion_f11_visual_context_1000_v0.VisualContextTe
+sts.test_actual_pixel_cues_and_ambiguous_abstention) ... ok
+test_heldout_snapshots_and_receipts 
+(test_fusion_f11_visual_context_1000_v0.VisualContextTests.test_heldout_snapshots_and_receipts) ... ok
+test_untrained_or_conflicting_evidence_causes_hold (test_fusion_f11_visual_context_1000_v0.VisualContex
+tTests.test_untrained_or_conflicting_evidence_causes_hold) ... ok
+test_baseline_and_cue_inversion 
+(test_fusion_f12_adversarial_spoof_1000_v0.SpoofFuzzingTests.test_baseline_and_cue_inversion) ... ok
+test_campaign_receipts_and_evidence 
+(test_fusion_f12_adversarial_spoof_1000_v0.SpoofFuzzingTests.test_campaign_receipts_and_evidence) ... 
+ok
+test_tamper_rejected 
+(test_fusion_f12_adversarial_spoof_1000_v0.SpoofFuzzingTests.test_tamper_rejected) ... ok
+test_campaign_replays_and_chained_receipts (test_fusion_f13_provenance_guard_audit_v0.ProvenanceGateTes
+ts.test_campaign_replays_and_chained_receipts) ... ok
+test_single_source_cannot_authorize 
+(test_fusion_f13_provenance_guard_audit_v0.ProvenanceGateTests.test_single_source_cannot_authorize) 
+... ok
+test_tamper_detection 
+(test_fusion_f13_provenance_guard_audit_v0.ProvenanceGateTests.test_tamper_detection) ... ok
+test_attack_matrix_exposes_correlated_spoofing (test_fusion_f14_multisource_fuzz_1000_v0.MultiSourceFuz
+zTests.test_attack_matrix_exposes_correlated_spoofing) ... ok
+test_independence_and_contradiction 
+(test_fusion_f14_multisource_fuzz_1000_v0.MultiSourceFuzzTests.test_independence_and_contradiction) 
+... ok
+test_report_and_receipt_tamper 
+(test_fusion_f14_multisource_fuzz_1000_v0.MultiSourceFuzzTests.test_report_and_receipt_tamper) ... ok
+test_contradiction_is_transferred 
+(test_fusion_f15_periphery_contract_bridge_v0.F15ContractTests.test_contradiction_is_transferred) ... 
+ok
+test_missing_independence_is_explicit 
+(test_fusion_f15_periphery_contract_bridge_v0.F15ContractTests.test_missing_independence_is_explicit) 
+... ok
+test_spoof_never_emits_action 
+(test_fusion_f15_periphery_contract_bridge_v0.F15ContractTests.test_spoof_never_emits_action) ... ok
+test_spoofed_case_cannot_request_act (test_fusion_f15b_real_guard_sigma_diagnostic_v0.F15BInvariantTest
+s.test_spoofed_case_cannot_request_act) ... ok
+test_contract_mismatch_exposed_not_patched (test_fusion_f16_canonical_route_inventory_v0.CanonicalRoute
+InventoryTests.test_contract_mismatch_exposed_not_patched) ... ok
+test_missing_repo_refused 
+(test_fusion_f16_canonical_route_inventory_v0.CanonicalRouteInventoryTests.test_missing_repo_refused) 
+... ok
+test_missing_input_fails_closed 
+(test_fusion_f17_agent_context_dryrun_v0.F17Tests.test_missing_input_fails_closed) ... ok
+test_no_fake_runtime_contract 
+(test_fusion_f17_agent_context_dryrun_v0.F17Tests.test_no_fake_runtime_contract) ... ok
+test_archives_and_missing_are_explicit 
+(test_fusion_f2_historical_scorecard_v1.ScorecardTests.test_archives_and_missing_are_explicit) ... ok
+test_existing_output_rejected 
+(test_fusion_f2_historical_scorecard_v1.ScorecardTests.test_existing_output_rejected) ... ok
+test_existing_output_rejected 
+(test_fusion_f2_school_regression_v0.RunnerTests.test_existing_output_rejected) ... ok
+test_failure_not_hidden (test_fusion_f2_school_regression_v0.RunnerTests.test_failure_not_hidden) ... 
+ok
+test_suite_logs_and_results 
+(test_fusion_f2_school_regression_v0.RunnerTests.test_suite_logs_and_results) ... ok
+test_demo_refuses_overwrite 
+(test_fusion_f3_integrated_visual_lesson_v0.IntegratedLessonTests.test_demo_refuses_overwrite) ... C:\U
+sers\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\p210a_visual_loop_con
+tract_v0.py:28: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 
+(2027-10-15). Use get_flattened_data instead.
+  return sum(any(channel for channel in pixel) for pixel in d.getdata())
+ok
+test_demo_seals_candidate_and_produces_visible_metrics (test_fusion_f3_integrated_visual_lesson_v0.Inte
+gratedLessonTests.test_demo_seals_candidate_and_produces_visible_metrics) ... ok
+test_without_teacher_preserves_unknown (test_fusion_f3_integrated_visual_lesson_v0.IntegratedLessonTest
+s.test_without_teacher_preserves_unknown) ... ok
+test_all_layout_boxes_satisfy_motor_contract 
+(test_fusion_f3b_multilesson_school_v0.MultiLessonTests.test_all_layout_boxes_satisfy_motor_contract) 
+... ok
+test_five_lessons_real_outputs_and_scores 
+(test_fusion_f3b_multilesson_school_v0.MultiLessonTests.test_five_lessons_real_outputs_and_scores) ... 
+ok
+test_refuse_overwrite_and_separate_training 
+(test_fusion_f3b_multilesson_school_v0.MultiLessonTests.test_refuse_overwrite_and_separate_training) 
+... ok
+test_single_train_three_frozen_recalls (test_fusion_f3c_cumulative_skill_archive_v0.ContinuousMemoryTes
+ts.test_single_train_three_frozen_recalls) ... ok
+test_tamper_detection_and_immutable_output (test_fusion_f3c_cumulative_skill_archive_v0.ContinuousMemor
+yTests.test_tamper_detection_and_immutable_output) ... ok
+test_teacher_cannot_modify_frozen_memory (test_fusion_f3c_cumulative_skill_archive_v0.ContinuousMemoryT
+ests.test_teacher_cannot_modify_frozen_memory) ... ok
+test_no_unrecorded_skill_examination 
+(test_fusion_f4_education_journal_v0.EducationJournalTests.test_no_unrecorded_skill_examination) ... ok
+test_retains_training_and_test_as_separate_evidence (test_fusion_f4_education_journal_v0.EducationJourn
+alTests.test_retains_training_and_test_as_separate_evidence) ... ok
+test_tamper_fails_closed 
+(test_fusion_f4_education_journal_v0.EducationJournalTests.test_tamper_fails_closed) ... ok
+test_three_skills_and_readonly_exams 
+(test_fusion_f5_multiskill_course_v0.MultiSkillCourseTests.test_three_skills_and_readonly_exams) ... ok
+test_unknown_goals_hold_and_prior_snapshot_cannot_leak_future_skills (test_fusion_f5_multiskill_course_
+v0.MultiSkillCourseTests.test_unknown_goals_hold_and_prior_snapshot_cannot_leak_future_skills) ... ok
+test_sealed_candidate_and_persistent_visual_memory (test_fusion_f6_instrument_education_v0.InstrumentIn
+tegrationTests.test_sealed_candidate_and_persistent_visual_memory) ... ok
+test_three_instruments_and_heldout_hold (test_fusion_f6_instrument_education_v0.InstrumentIntegrationTe
+sts.test_three_instruments_and_heldout_hold) ... ok
+test_unchanged_output_refusal 
+(test_fusion_f6_instrument_education_v0.InstrumentIntegrationTests.test_unchanged_output_refusal) ... 
+ok
+test_no_overwrite_and_history_tamper_detection (test_fusion_f7_train_only_correction_v0.CorrectionTests
+.test_no_overwrite_and_history_tamper_detection) ... ok
+test_train_correction_changes_frozen_policy_on_unseen_geometry (test_fusion_f7_train_only_correction_v0
+.CorrectionTests.test_train_correction_changes_frozen_policy_on_unseen_geometry) ... ok
+test_conflicting_training_overrides_preconception (test_fusion_f8_adversarial_v0.AdversarialEducationTe
+sts.test_conflicting_training_overrides_preconception) ... ok
+test_malformed_training_fails_closed 
+(test_fusion_f8_adversarial_v0.AdversarialEducationTests.test_malformed_training_fails_closed) ... ok
+test_prior_snapshot_and_unknown_remain_held 
+(test_fusion_f8_adversarial_v0.AdversarialEducationTests.test_prior_snapshot_and_unknown_remain_held) 
+... ok
+test_trained_correction_not_universal 
+(test_fusion_f8_adversarial_v0.AdversarialEducationTests.test_trained_correction_not_universal) ... ok
+test_checkpoint_memory_and_sealed_heldout (test_fusion_f9_intensive_education_v0.IntensiveEducationTest
+s.test_checkpoint_memory_and_sealed_heldout) ... ok
+test_receipt_tamper_and_invalid_parameter_fail_closed (test_fusion_f9_intensive_education_v0.IntensiveE
+ducationTests.test_receipt_tamper_and_invalid_parameter_fail_closed) ... ok
+test_repeatability_and_no_overwrite 
+(test_fusion_f9_intensive_education_v0.IntensiveEducationTests.test_repeatability_and_no_overwrite) 
+... ok
+test_duplicate_episode_rejected 
+(test_fusion_historical_evidence_v0.HistoricalFusionTests.test_duplicate_episode_rejected) ... ok
+test_existing_output_and_missing_file_fail_closed (test_fusion_historical_evidence_v0.HistoricalFusionT
+ests.test_existing_output_and_missing_file_fail_closed) ... ok
+test_explicit_teacher_scores_and_missing_teacher_unknown (test_fusion_historical_evidence_v0.Historical
+FusionTests.test_explicit_teacher_scores_and_missing_teacher_unknown) ... ok
+test_contradictions_do_not_disappear 
+(test_goal_multi_continuity_p165d7.P165D7Tests.test_contradictions_do_not_disappear) ... ok
+test_goal_changes_relevance_not_evidence 
+(test_goal_multi_continuity_p165d7.P165D7Tests.test_goal_changes_relevance_not_evidence) ... ok
+test_invalid_and_duplicate_evidence_rejected 
+(test_goal_multi_continuity_p165d7.P165D7Tests.test_invalid_and_duplicate_evidence_rejected) ... ok
+test_report_preserve (test_goal_multi_continuity_p165d7.P165D7Tests.test_report_preserve) ... ok
+test_symbol_not_promoted_to_physical_observation 
+(test_goal_multi_continuity_p165d7.P165D7Tests.test_symbol_not_promoted_to_physical_observation) ... ok
+test_different_goals_do_not_mutate_evidence 
+(test_goal_track_bridge_p165d8.D8Tests.test_different_goals_do_not_mutate_evidence) ... ok
+test_evidence_no_overwrite (test_goal_track_bridge_p165d8.D8Tests.test_evidence_no_overwrite) ... ok
+test_repeatability (test_goal_track_bridge_p165d8.D8Tests.test_repeatability) ... ok
+test_symbol_without_user_interpretation_does_not_fabricate 
+(test_goal_track_bridge_p165d8.D8Tests.test_symbol_without_user_interpretation_does_not_fabricate) ... 
+ok
+test_forced_ambiguity_must_not_select 
+(test_hard_scene_angles_p165d2.HardSceneTests.test_forced_ambiguity_must_not_select) ... ok
+test_full_factorial_unique (test_hard_scene_angles_p165d2.HardSceneTests.test_full_factorial_unique) 
+... ok
+test_pixel_only_evaluator_has_no_oracle_interface 
+(test_hard_scene_angles_p165d2.HardSceneTests.test_pixel_only_evaluator_has_no_oracle_interface) ... ok
+test_small_matrix_then_no_overwrite 
+(test_hard_scene_angles_p165d2.HardSceneTests.test_small_matrix_then_no_overwrite) ... ok
+test_early_histories_are_indistinguishable 
+(test_image_active_context_probe_p158.P158Tests.test_early_histories_are_indistinguishable) ... ok
+test_full_campaign_sealed (test_image_active_context_probe_p158.P158Tests.test_full_campaign_sealed) 
+... ok
+test_hold_or_multi_when_not_identifiable 
+(test_image_active_context_probe_p158.P158Tests.test_hold_or_multi_when_not_identifiable) ... ok
+test_probe_distinguishes_rules 
+(test_image_active_context_probe_p158.P158Tests.test_probe_distinguishes_rules) ... ok
+test_new_scenes_and_all_skill_families 
+(test_image_adaptive_visual_lab_p138.AdaptiveLabTests.test_new_scenes_and_all_skill_families) ... ok
+test_preserves_evidence_and_bounds 
+(test_image_adaptive_visual_lab_p138.AdaptiveLabTests.test_preserves_evidence_and_bounds) ... ok
+test_foreground_descriptor_dark_and_light (test_image_background_adaptation_p146.BackgroundAdaptationTe
+sts.test_foreground_descriptor_dark_and_light) ... ok
+test_sealed_exams_with_baselines_and_retention (test_image_background_adaptation_p146.BackgroundAdaptat
+ionTests.test_sealed_exams_with_baselines_and_retention) ... C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brod
+y-world-physique-image\brody_world_physique\image_long_curriculum_p140.py:56: DeprecationWarning: 
+Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use 
+get_flattened_data instead.
+  pix=list(im.getdata())
+ok
+test_identical_training_and_exam_rejected 
+(test_image_blind_identity_transfer_v1.BlindIdentityTests.test_identical_training_and_exam_rejected) 
+... ok
+test_label_blind_exam_and_doubt 
+(test_image_blind_identity_transfer_v1.BlindIdentityTests.test_label_blind_exam_and_doubt) ... ok
+test_image_context_not_transform_name 
+(test_image_blind_router_p144.BlindRouterTests.test_image_context_not_transform_name) ... ok
+test_validation_exam_separation 
+(test_image_blind_router_p144.BlindRouterTests.test_validation_exam_separation) ... C:\Users\Aubin\Desk
+top\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\image_blind_router_p144.py:77: 
+DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). 
+Use get_flattened_data instead.
+  is_gray=all(max(px)-min(px)<2 for px in changed.resize((12,12)).getdata())
+ok
+test_blind_regeneration_known_unknown_and_composition (test_image_blind_symbolic_regeneration_p135.Blin
+dSymbolicTests.test_blind_regeneration_known_unknown_and_composition) ... ok
+test_group_leak_rejected_before_output (test_image_blind_symbolic_regeneration_p135.BlindSymbolicTests.
+test_group_leak_rejected_before_output) ... ok
+test_camera_from_pixels_not_simulator_truth 
+(test_image_camera_occlusion_gate_p163.P163Tests.test_camera_from_pixels_not_simulator_truth) ... ok
+test_camera_unobservable_must_hold 
+(test_image_camera_occlusion_gate_p163.P163Tests.test_camera_unobservable_must_hold) ... ok
+test_complete_matrix_and_no_overwrite 
+(test_image_camera_occlusion_gate_p163.P163Tests.test_complete_matrix_and_no_overwrite) ... ok
+test_event_hidden_must_hold 
+(test_image_camera_occlusion_gate_p163.P163Tests.test_event_hidden_must_hold) ... ok
+test_known_stationary_with_cam_corrected 
+(test_image_camera_occlusion_gate_p163.P163Tests.test_known_stationary_with_cam_corrected) ... ok
+test_negative_and_positive_camera_clipping_regression (test_image_camera_occlusion_gate_p163.P163Tests.
+test_negative_and_positive_camera_clipping_regression) ... ok
+test_clear_context_selects (test_image_context_coexistence_p157.P157Tests.test_clear_context_selects) 
+... ok
+test_full_run_keeps_evidence 
+(test_image_context_coexistence_p157.P157Tests.test_full_run_keeps_evidence) ... ok
+test_learn_two_non_overwriting_rules 
+(test_image_context_coexistence_p157.P157Tests.test_learn_two_non_overwriting_rules) ... ok
+test_unknown_context_single_holds_and_multiple_kept 
+(test_image_context_coexistence_p157.P157Tests.test_unknown_context_single_holds_and_multiple_kept) 
+... ok
+test_corrupted_memory_rejected 
+(test_image_context_transition_transfer_v1.ContextTransitionTests.test_corrupted_memory_rejected) ... 
+ok
+test_cross_group_context_transition_transfer (test_image_context_transition_transfer_v1.ContextTransiti
+onTests.test_cross_group_context_transition_transfer) ... ok
+test_insufficient_independent_groups_holds (test_image_context_transition_transfer_v1.ContextTransition
+Tests.test_insufficient_independent_groups_holds) ... ok
+test_corrupt_state_rejected 
+(test_image_continuous_learning_cycle_v0.ContinuousImageCycleTests.test_corrupt_state_rejected) ... ok
+test_no_previous_context_uses_raw 
+(test_image_continuous_learning_cycle_v0.ContinuousImageCycleTests.test_no_previous_context_uses_raw) 
+... ok
+test_persistent_learning_across_two_cycles_and_fail_closed (test_image_continuous_learning_cycle_v0.Con
+tinuousImageCycleTests.test_persistent_learning_across_two_cycles_and_fail_closed) ... ok
+test_new_worlds_produce_different_pixels 
+(test_image_cross_renderer_world_p145.CrossRendererTests.test_new_worlds_produce_different_pixels) ... 
+ok
+test_sealed_cross_world_matrix 
+(test_image_cross_renderer_world_p145.CrossRendererTests.test_sealed_cross_world_matrix) ... C:\Users\A
+ubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\image_cross_renderer_world_
+p145.py:91: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 
+(2027-10-15). Use get_flattened_data instead.
+  is_achromatic=all(max(pixel)-min(pixel)<2 for pixel in im.resize((12,12)).getdata())
+ok
+test_allow_gain_without_forgetting 
+(test_image_cumulative_education_p156.P156Tests.test_allow_gain_without_forgetting) ... ok
+test_cumulative_run_and_preservation 
+(test_image_cumulative_education_p156.P156Tests.test_cumulative_run_and_preservation) ... ok
+test_hold_if_prior_skill_regresses 
+(test_image_cumulative_education_p156.P156Tests.test_hold_if_prior_skill_regresses) ... ok
+test_hold_without_gain (test_image_cumulative_education_p156.P156Tests.test_hold_without_gain) ... ok
+test_accept_when_gain_and_retention 
+(test_image_education_retention_gate_p155.P155Tests.test_accept_when_gain_and_retention) ... ok
+test_campaign_and_preservation 
+(test_image_education_retention_gate_p155.P155Tests.test_campaign_and_preservation) ... ok
+test_hold_when_retention_degrades 
+(test_image_education_retention_gate_p155.P155Tests.test_hold_when_retention_degrades) ... ok
+test_hold_without_gain (test_image_education_retention_gate_p155.P155Tests.test_hold_without_gain) ... 
+ok
+test_corrupt_memory_and_feedback_leak_refused (test_image_experience_guided_motion_v2.GuidedMotionTests
+.test_corrupt_memory_and_feedback_leak_refused) ... ok
+test_two_lessons_guide_third_forecast 
+(test_image_experience_guided_motion_v2.GuidedMotionTests.test_two_lessons_guide_third_forecast) ... ok
+test_empty_folder_fails 
+(test_image_external_source_school_v0.ExternalSourceSchoolTests.test_empty_folder_fails) ... ok
+test_external_png_and_all_transforms 
+(test_image_external_source_school_v0.ExternalSourceSchoolTests.test_external_png_and_all_transforms) 
+... ok
+test_refuse_existing_output 
+(test_image_external_source_school_v0.ExternalSourceSchoolTests.test_refuse_existing_output) ... ok
+test_gallery_produced_and_no_authority 
+(test_image_external_visual_gallery_v0.ExternalGalleryTests.test_gallery_produced_and_no_authority) 
+... ok
+test_output_must_be_new 
+(test_image_external_visual_gallery_v0.ExternalGalleryTests.test_output_must_be_new) ... ok
+test_balanced_randomized_independent_context 
+(test_image_family_blind_ablation_v0.BlindAblationTests.test_balanced_randomized_independent_context) 
+... ok
+test_blind_exam_and_receipt_integrity 
+(test_image_family_blind_ablation_v0.BlindAblationTests.test_blind_exam_and_receipt_integrity) ... C:\U
+sers\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\image_tool_school_20k
+_campaign_v0.py:42: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in 
+Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  pix=list(image.getdata())
+ok
+test_hidden_family_not_in_learner_key 
+(test_image_family_blind_ablation_v0.BlindAblationTests.test_hidden_family_not_in_learner_key) ... ok
+test_tamper_refused (test_image_family_blind_ablation_v0.BlindAblationTests.test_tamper_refused) ... ok
+test_no_result_overwrite 
+(test_image_forty_distinct_school_p136.FortySchoolTests.test_no_result_overwrite) ... ok
+test_protocols_are_unique_and_span_domains 
+(test_image_forty_distinct_school_p136.FortySchoolTests.test_protocols_are_unique_and_span_domains) 
+... ok
+test_single_school_reports_all_competencies 
+(test_image_forty_distinct_school_p136.FortySchoolTests.test_single_school_reports_all_competencies) 
+... ok
+test_induction_uses_examples (test_image_full_education_p154.P154Tests.test_induction_uses_examples) 
+... ok
+test_integrated_sealed_pass (test_image_full_education_p154.P154Tests.test_integrated_sealed_pass) ... 
+ok
+test_observation_not_simulator_truth 
+(test_image_full_education_p154.P154Tests.test_observation_not_simulator_truth) ... ok
+test_visual_comparison (test_image_full_education_p154.P154Tests.test_visual_comparison) ... ok
+test_all_thirty_conditions_and_no_exam_teaching (test_image_geometric_transfer_p142.GeometryTransferTes
+ts.test_all_thirty_conditions_and_no_exam_teaching) ... ok
+test_destroyed_colour_abstains 
+(test_image_geometric_transfer_p142.GeometryTransferTests.test_destroyed_colour_abstains) ... ok
+test_geometry_distinguishes_wide_and_tall 
+(test_image_geometric_transfer_p142.GeometryTransferTests.test_geometry_distinguishes_wide_and_tall) 
+... ok
+test_ambiguous_acceleration_retains_two_models 
+(test_image_hard_visual_ood_p161.P161Tests.test_ambiguous_acceleration_retains_two_models) ... ok
+test_different_visual_forms_keep_pixel_based_measurements 
+(test_image_hard_visual_ood_p161.P161Tests.test_different_visual_forms_keep_pixel_based_measurements) 
+... ok
+test_holdout_laws_do_not_enter_training 
+(test_image_hard_visual_ood_p161.P161Tests.test_holdout_laws_do_not_enter_training) ... ok
+test_report_and_evidence_preserved 
+(test_image_hard_visual_ood_p161.P161Tests.test_report_and_evidence_preserved) ... ok
+test_multidomain_probe_reports_real_limits (test_image_heterogeneous_capability_audit_p131.P131Heteroge
+neousTests.test_multidomain_probe_reports_real_limits) ... ok
+test_preserve_evidence 
+(test_image_heterogeneous_capability_audit_p131.P131HeterogeneousTests.test_preserve_evidence) ... ok
+test_image_only_inference (test_image_identity_appearance_p151.P151Tests.test_image_only_inference) 
+... ok
+test_run_and_preserve_evidence 
+(test_image_identity_appearance_p151.P151Tests.test_run_and_preserve_evidence) ... ok
+test_scenarios_do_not_collapse_colour_into_motion 
+(test_image_identity_appearance_p151.P151Tests.test_scenarios_do_not_collapse_colour_into_motion) ... 
+ok
+test_competing_paths_survive (test_image_identity_beam_p152.P152Tests.test_competing_paths_survive) 
+... ok
+test_paired_test_and_no_overwrite 
+(test_image_identity_beam_p152.P152Tests.test_paired_test_and_no_overwrite) ... ok
+test_pixels_only_interface (test_image_identity_beam_p152.P152Tests.test_pixels_only_interface) ... ok
+test_components_from_pixels (test_image_identity_occlusion_p164.P164Tests.test_components_from_pixels) 
+... ok
+test_full_paired_report_and_immutable_evidence 
+(test_image_identity_occlusion_p164.P164Tests.test_full_paired_report_and_immutable_evidence) ... ok
+test_missing_event_never_forced_into_single_truth 
+(test_image_identity_occlusion_p164.P164Tests.test_missing_event_never_forced_into_single_truth) ... ok
+test_track_on_clean_images (test_image_identity_occlusion_p164.P164Tests.test_track_on_clean_images) 
+... ok
+test_discrepancy_detector_and_supervised_correction (test_image_integrated_feedback_school_v0.Integrate
+dVisualFeedbackTests.test_discrepancy_detector_and_supervised_correction) ... ok
+test_no_promotion_and_receipts (test_image_integrated_feedback_school_v0.IntegratedVisualFeedbackTests.
+test_no_promotion_and_receipts) ... ok
+test_refused_snapshot_tamper 
+(test_image_integrated_feedback_school_v0.IntegratedVisualFeedbackTests.test_refused_snapshot_tamper) 
+... ok
+test_unknown_is_hold 
+(test_image_integrated_feedback_school_v0.IntegratedVisualFeedbackTests.test_unknown_is_hold) ... ok
+test_multiple_learning_families_holdout_and_comparison (test_image_long_curriculum_p140.LongCurriculumT
+ests.test_multiple_learning_families_holdout_and_comparison) ... ok
+test_no_overwrite_invalid_budget 
+(test_image_long_curriculum_p140.LongCurriculumTests.test_no_overwrite_invalid_budget) ... ok
+test_full_paired_exam_and_evidence 
+(test_image_math_physical_bridge_p162.P162Tests.test_full_paired_exam_and_evidence) ... ok
+test_missing_visibility_holds 
+(test_image_math_physical_bridge_p162.P162Tests.test_missing_visibility_holds) ... ok
+test_projection_reverse_is_tested 
+(test_image_math_physical_bridge_p162.P162Tests.test_projection_reverse_is_tested) ... ok
+test_still_vs_linear_separated_by_velocity 
+(test_image_math_physical_bridge_p162.P162Tests.test_still_vs_linear_separated_by_velocity) ... ok
+test_temporal_change_preserved_as_novel_candidate 
+(test_image_math_physical_bridge_p162.P162Tests.test_temporal_change_preserved_as_novel_candidate) ... 
+ok
+test_grouped_full_campaign 
+(test_image_motion_independent_campaign_v1.CampaignTests.test_grouped_full_campaign) ... ok
+test_reject_group_leak 
+(test_image_motion_independent_campaign_v1.CampaignTests.test_reject_group_leak) ... ok
+test_frozen_memory_matches_baseline_without_experience (test_image_motion_memory_ablation_v1.PairedMoti
+onAblationTests.test_frozen_memory_matches_baseline_without_experience) ... ok
+test_leakage_protected 
+(test_image_motion_memory_ablation_v1.PairedMotionAblationTests.test_leakage_protected) ... ok
+test_complete_demo_is_explicitly_synthetic (test_image_motion_one_shot_campaign_v1.EndToEndPhysicsTests
+.test_complete_demo_is_explicitly_synthetic) ... ok
+test_real_source_provenance_required 
+(test_image_motion_one_shot_campaign_v1.EndToEndPhysicsTests.test_real_source_provenance_required) ... 
+ok
+test_ambiguous_request_retains_options 
+(test_image_multiangle_experiments_p160.P160Tests.test_ambiguous_request_retains_options) ... ok
+test_compound_campaign_and_preservation 
+(test_image_multiangle_experiments_p160.P160Tests.test_compound_campaign_and_preservation) ... ok
+test_no_budget_means_hold (test_image_multiangle_experiments_p160.P160Tests.test_no_budget_means_hold) 
+... ok
+test_pixels_train_separates_dynamics 
+(test_image_multiangle_experiments_p160.P160Tests.test_pixels_train_separates_dynamics) ... ok
+test_posterior_normalized (test_image_multiangle_experiments_p160.P160Tests.test_posterior_normalized) 
+... ok
+test_history_requires_observations 
+(test_image_multiangle_temporal_p149.P149Tests.test_history_requires_observations) ... ok
+test_multiangle_report_and_preservation 
+(test_image_multiangle_temporal_p149.P149Tests.test_multiangle_report_and_preservation) ... ok
+test_pixel_identical_snapshot_with_different_past 
+(test_image_multiangle_temporal_p149.P149Tests.test_pixel_identical_snapshot_with_different_past) ... 
+ok
+test_eight_different_capabilities 
+(test_image_multicapability_lab_p133.MulticapabilityTests.test_eight_different_capabilities) ... ok
+test_fail_closed_and_occlusion_uncertainty 
+(test_image_multicapability_lab_p133.MulticapabilityTests.test_fail_closed_and_occlusion_uncertainty) 
+... ok
+test_140_cases_receipts_and_governance 
+(test_image_multidirection_stress_10k_v0.MultiAxisStressTests.test_140_cases_receipts_and_governance) 
+... ok
+test_adversarial_axes_not_all_same 
+(test_image_multidirection_stress_10k_v0.MultiAxisStressTests.test_adversarial_axes_not_all_same) ... 
+ok
+test_refuse_bad_count 
+(test_image_multidirection_stress_10k_v0.MultiAxisStressTests.test_refuse_bad_count) ... ok
+test_competing_hypotheses_and_persistent_correction (test_image_multihypothesis_motion_memory_v1.Motion
+ModelTests.test_competing_hypotheses_and_persistent_correction) ... ok
+test_feedback_leakage_refused 
+(test_image_multihypothesis_motion_memory_v1.MotionModelTests.test_feedback_leakage_refused) ... ok
+test_powershell_single_object_manifest (test_image_multiview_identity_school_v0.MultiviewIdentityTests.
+test_powershell_single_object_manifest) ... ok
+test_refuse_previous_output 
+(test_image_multiview_identity_school_v0.MultiviewIdentityTests.test_refuse_previous_output) ... ok
+test_teacher_group_and_unseen_view_exam (test_image_multiview_identity_school_v0.MultiviewIdentityTests
+.test_teacher_group_and_unseen_view_exam) ... ok
+test_explicit_feedback_refit 
+(test_image_observed_motion_school_v1.MotionSchoolTests.test_explicit_feedback_refit) ... ok
+test_fail_closed_duplicate_feedback 
+(test_image_observed_motion_school_v1.MotionSchoolTests.test_fail_closed_duplicate_feedback) ... ok
+test_observed_acceleration_and_reconstruction 
+(test_image_observed_motion_school_v1.MotionSchoolTests.test_observed_acceleration_and_reconstruction) 
+... ok
+test_full_occlusion_is_visible_ambiguity 
+(test_image_occlusion_epistemics_p147.OcclusionTests.test_full_occlusion_is_visible_ambiguity) ... ok
+test_same_course_and_exam_are_separate 
+(test_image_occlusion_epistemics_p147.OcclusionTests.test_same_course_and_exam_are_separate) ... ok
+test_budget_and_sealed_evidence 
+(test_image_ood_temporal_p153.P153Tests.test_budget_and_sealed_evidence) ... ok
+test_new_renderer_is_independent_and_temporal 
+(test_image_ood_temporal_p153.P153Tests.test_new_renderer_is_independent_and_temporal) ... ok
+test_multi_session_recall_and_contradiction_quarantine (test_image_persistent_identity_teacher_loop_v1.
+PersistentIdentityTests.test_multi_session_recall_and_contradiction_quarantine) ... ok
+test_refuse_tampered_state 
+(test_image_persistent_identity_teacher_loop_v1.PersistentIdentityTests.test_refuse_tampered_state) 
+... ok
+test_image_only_path_candidates 
+(test_image_persistent_tracks_p165d5.P165D5Tests.test_image_only_path_candidates) ... ok
+test_multiple_objects_not_unique_identity 
+(test_image_persistent_tracks_p165d5.P165D5Tests.test_multiple_objects_not_unique_identity) ... ok
+test_preserved_evidence_and_bounded_beam 
+(test_image_persistent_tracks_p165d5.P165D5Tests.test_preserved_evidence_and_bounded_beam) ... ok
+test_100_train_100_blind_split_and_no_memory (test_image_persistent_transfer_exam_v0.PersistentTransfer
+Tests.test_100_train_100_blind_split_and_no_memory) ... ok
+test_missing_or_corrupt_snapshot_fails_closed (test_image_persistent_transfer_exam_v0.PersistentTransfe
+rTests.test_missing_or_corrupt_snapshot_fails_closed) ... ok
+test_train_updates_but_exam_does_not 
+(test_image_persistent_transfer_exam_v0.PersistentTransferTests.test_train_updates_but_exam_does_not) 
+... ok
+test_empirical_response_induced_from_pixels 
+(test_image_probe_selection_p159.P159Tests.test_empirical_response_induced_from_pixels) ... ok
+test_ex_ante_selection_and_no_useful_probe 
+(test_image_probe_selection_p159.P159Tests.test_ex_ante_selection_and_no_useful_probe) ... ok
+test_observed_response_known_vs_novel 
+(test_image_probe_selection_p159.P159Tests.test_observed_response_known_vs_novel) ... ok
+test_whole_campaign_preserves_proofs 
+(test_image_probe_selection_p159.P159Tests.test_whole_campaign_preserves_proofs) ... ok
+test_ambiguous_one_identity_yields_doubt 
+(test_image_real_transfer_exam_v2.RealTransferV2Tests.test_ambiguous_one_identity_yields_doubt) ... ok
+test_exact_leak_rejected 
+(test_image_real_transfer_exam_v2.RealTransferV2Tests.test_exact_leak_rejected) ... ok
+test_training_blind_exam_separate_grading 
+(test_image_real_transfer_exam_v2.RealTransferV2Tests.test_training_blind_exam_separate_grading) ... ok
+test_exam_leak_and_corrupt_memory_rejected (test_image_reciprocal_generation_school_v1.ReciprocalTests.
+test_exam_leak_and_corrupt_memory_rejected) ... ok
+test_train_generate_holdout_without_image_copy (test_image_reciprocal_generation_school_v1.ReciprocalTe
+sts.test_train_generate_holdout_without_image_copy) ... ok
+test_fails_closed_for_leaked_image 
+(test_image_reciprocal_shape_learning_p134.ReciprocalSchoolTests.test_fails_closed_for_leaked_image) 
+... ok
+test_train_correct_holdout_different_shapes (test_image_reciprocal_shape_learning_p134.ReciprocalSchool
+Tests.test_train_correct_holdout_different_shapes) ... ok
+test_ambiguity_ground_truth_not_injected 
+(test_image_scene_adversarial_p165a.P165ATests.test_ambiguity_ground_truth_not_injected) ... ok
+test_color_change_is_adversarial 
+(test_image_scene_adversarial_p165a.P165ATests.test_color_change_is_adversarial) ... ok
+test_output_evidence_preserved 
+(test_image_scene_adversarial_p165a.P165ATests.test_output_evidence_preserved) ... ok
+test_six_different_cases (test_image_scene_adversarial_p165a.P165ATests.test_six_different_cases) ... 
+ok
+test_multi_context_transfer_and_doubt 
+(test_image_scene_relational_school_p132.RelationalSchoolTests.test_multi_context_transfer_and_doubt) 
+... ok
+test_provenance_and_teacher_contradiction (test_image_scene_relational_school_p132.RelationalSchoolTest
+s.test_provenance_and_teacher_contradiction) ... ok
+test_at_most_three_hypotheses 
+(test_image_stabilized_knowledge_school_v1.KnowledgeReflexTests.test_at_most_three_hypotheses) ... ok
+test_contradiction_reopens_only_local_context (test_image_stabilized_knowledge_school_v1.KnowledgeRefle
+xTests.test_contradiction_reopens_only_local_context) ... ok
+test_duplicate_does_not_stabilize 
+(test_image_stabilized_knowledge_school_v1.KnowledgeReflexTests.test_duplicate_does_not_stabilize) ... 
+ok
+test_stable_reflex_and_restart 
+(test_image_stabilized_knowledge_school_v1.KnowledgeReflexTests.test_stable_reflex_and_restart) ... ok
+test_context_reflects_distinct_geometries (test_image_structural_observation_v1.StructuralObservationTe
+sts.test_context_reflects_distinct_geometries) ... ok
+test_school_receipts_include_structures (test_image_structural_observation_v1.StructuralObservationTest
+s.test_school_receipts_include_structures) ... ok
+test_two_components_with_relations 
+(test_image_structural_observation_v1.StructuralObservationTests.test_two_components_with_relations) 
+... ok
+test_corpus_ten_families_and_evidence 
+(test_image_temporal_occlusion_p148.TemporalOcclusionTests.test_corpus_ten_families_and_evidence) ... 
+ok
+test_hidden_observation_causes_hold 
+(test_image_temporal_occlusion_p148.TemporalOcclusionTests.test_hidden_observation_causes_hold) ... ok
+test_history_and_snapshot_are_different 
+(test_image_temporal_occlusion_p148.TemporalOcclusionTests.test_history_and_snapshot_are_different) 
+... ok
+test_all_perturbations_preserve_dimensions (test_image_tool_school_20k_campaign_v0.School20KContractTes
+ts.test_all_perturbations_preserve_dimensions) ... ok
+test_exam_receipts_and_no_memory_writes (test_image_tool_school_20k_campaign_v0.School20KContractTests.
+test_exam_receipts_and_no_memory_writes) ... ok
+test_ten_distinct_exam_families 
+(test_image_tool_school_20k_campaign_v0.School20KContractTests.test_ten_distinct_exam_families) ... ok
+test_unknown_intent_holds 
+(test_image_tool_school_20k_campaign_v0.School20KContractTests.test_unknown_intent_holds) ... ok
+test_camera_motion_uses_observed_landmarks 
+(test_image_tracking_beam_p150.TestP150.test_camera_motion_uses_observed_landmarks) ... ok
+test_detector_no_lane_argument (test_image_tracking_beam_p150.TestP150.test_detector_no_lane_argument) 
+... ok
+test_pan_directions_with_marker_dropout 
+(test_image_tracking_beam_p150.TestP150.test_pan_directions_with_marker_dropout) ... ok
+test_sealed_run_and_distinct_scoring 
+(test_image_tracking_beam_p150.TestP150.test_sealed_run_and_distinct_scoring) ... ok
+test_cross_condition_matrix_and_baselines 
+(test_image_transfer_stress_p141.TransferStressTests.test_cross_condition_matrix_and_baselines) ... ok
+test_shift_is_not_identity_and_no_overwrite 
+(test_image_transfer_stress_p141.TransferStressTests.test_shift_is_not_identity_and_no_overwrite) ... 
+ok
+test_blind_exam_and_leakage 
+(test_image_unified_continuous_school_v1.UnifiedContinuousTests.test_blind_exam_and_leakage) ... ok
+test_checkpoint_resume_and_cross_cycle (test_image_unified_continuous_school_v1.UnifiedContinuousTests.
+test_checkpoint_resume_and_cross_cycle) ... ok
+test_manifest_without_labels_rejected 
+(test_image_unified_continuous_school_v1.UnifiedContinuousTests.test_manifest_without_labels_rejected) 
+... ok
+test_duplicate_identity_rejected 
+(test_image_unified_multiview_knowledge_v1.UnifiedKnowledgeTests.test_duplicate_identity_rejected) ... 
+ok
+test_one_identity_four_views_and_integrity (test_image_unified_multiview_knowledge_v1.UnifiedKnowledgeT
+ests.test_one_identity_four_views_and_integrity) ... ok
+test_empty_subject_rejected (test_image_v0.ImageR1Tests.test_empty_subject_rejected) ... ok
+test_explicit_grayscale_mask (test_image_v0.ImageR1Tests.test_explicit_grayscale_mask) ... ok
+test_input_hashes_stay_stable_and_deterministic_output 
+(test_image_v0.ImageR1Tests.test_input_hashes_stay_stable_and_deterministic_output) ... ok
+test_mismatched_mask_size_fails_closed 
+(test_image_v0.ImageR1Tests.test_mismatched_mask_size_fails_closed) ... ok
+test_no_mask_or_both_mask_routes_fails_closed 
+(test_image_v0.ImageR1Tests.test_no_mask_or_both_mask_routes_fails_closed) ... ok
+test_output_cannot_overwrite_source (test_image_v0.ImageR1Tests.test_output_cannot_overwrite_source) 
+... ok
+test_overflowing_placement_is_rejected 
+(test_image_v0.ImageR1Tests.test_overflowing_placement_is_rejected) ... ok
+test_parse_rgb_and_key_mask (test_image_v0.ImageR1Tests.test_parse_rgb_and_key_mask) ... ok
+test_scale_disables_noncomparable_pixel_identity_claim 
+(test_image_v0.ImageR1Tests.test_scale_disables_noncomparable_pixel_identity_claim) ... ok
+test_soft_alpha_mask_is_preserved_without_false_pixel_claim 
+(test_image_v0.ImageR1Tests.test_soft_alpha_mask_is_preserved_without_false_pixel_claim) ... ok
+test_strict_source_preserved_with_known_background_color 
+(test_image_v0.ImageR1Tests.test_strict_source_preserved_with_known_background_color) ... ok
+test_preserves_evidence (test_image_validation_router_p143.RouterTests.test_preserves_evidence) ... ok
+test_three_way_split_frozen_routing_and_hold 
+(test_image_validation_router_p143.RouterTests.test_three_way_split_frozen_routing_and_hold) ... ok
+test_100_cases_integrity_and_no_memory (test_image_visible_reference_abstention_v0.VisibleReferenceTest
+s.test_100_cases_integrity_and_no_memory) ... ok
+test_hidden_reference_holds 
+(test_image_visible_reference_abstention_v0.VisibleReferenceTests.test_hidden_reference_holds) ... ok
+test_out_of_catalog_holds 
+(test_image_visible_reference_abstention_v0.VisibleReferenceTests.test_out_of_catalog_holds) ... ok
+test_visible_and_hidden_are_distinct (test_image_visible_reference_abstention_v0.VisibleReferenceTests.
+test_visible_and_hidden_are_distinct) ... ok
+test_corrupted_checkpoint_fails_closed (test_image_visual_reflex_teacher_loop_v1.VisualReflexLoopTests.
+test_corrupted_checkpoint_fails_closed) ... ok
+test_duplicate_images_not_recounted_as_lessons (test_image_visual_reflex_teacher_loop_v1.VisualReflexLo
+opTests.test_duplicate_images_not_recounted_as_lessons) ... ok
+test_pause_resume_and_stabilization 
+(test_image_visual_reflex_teacher_loop_v1.VisualReflexLoopTests.test_pause_resume_and_stabilization) 
+... ok
+test_change_in_law_is_not_merely_metadata 
+(test_independent_gate_c_p165d11.GateCTests.test_change_in_law_is_not_merely_metadata) ... ok
+test_raster_visibility_not_truth_inference 
+(test_independent_gate_c_p165d11.GateCTests.test_raster_visibility_not_truth_inference) ... ok
+test_renderer_finite_and_seven_frames 
+(test_independent_gate_c_p165d11.GateCTests.test_renderer_finite_and_seven_frames) ... ok
+test_replay_identical_seed (test_independent_gate_c_p165d11.GateCTests.test_replay_identical_seed) ... 
+ok
+test_report_no_overwrite (test_independent_gate_c_p165d11.GateCTests.test_report_no_overwrite) ... ok
+test_synthetic_counterfactual_keeps_uncertainty 
+(test_independent_gate_c_p165d11.GateCTests.test_synthetic_counterfactual_keeps_uncertainty) ... ok
+test_unique_families (test_independent_gate_c_p165d11.GateCTests.test_unique_families) ... ok
+test_invalid_memory_is_detected_even_if_report_stays_same 
+(test_instrument_school_v2.EndToEndCourse.test_invalid_memory_is_detected_even_if_report_stays_same) 
+... ok
+test_memory_and_generated_image_tamper_rejected 
+(test_instrument_school_v2.EndToEndCourse.test_memory_and_generated_image_tamper_rejected) ... ok
+test_no_overwriting_old_experiences 
+(test_instrument_school_v2.EndToEndCourse.test_no_overwriting_old_experiences) ... ok
+test_precommit_has_no_future_target_and_is_frozen 
+(test_instrument_school_v2.EndToEndCourse.test_precommit_has_no_future_target_and_is_frozen) ... ok
+test_test_targets_after_precommit_retain_sha 
+(test_instrument_school_v2.EndToEndCourse.test_test_targets_after_precommit_retain_sha) ... ok
+test_zero_one_many_experiences_and_heldout_abstention 
+(test_instrument_school_v2.EndToEndCourse.test_zero_one_many_experiences_and_heldout_abstention) ... ok
+test_selector_learns_from_empirical_loss_not_coded_style_mapping (test_instrument_school_v2.PureInstrum
+entContracts.test_selector_learns_from_empirical_loss_not_coded_style_mapping) ... ok
+test_tool_renders_are_visibly_different_and_directional (test_instrument_school_v2.PureInstrumentContra
+cts.test_tool_renders_are_visibly_different_and_directional) ... ok
+test_unfamiliar_goal_refuses_to_guess 
+(test_instrument_school_v2.PureInstrumentContracts.test_unfamiliar_goal_refuses_to_guess) ... ok
+test_untrusted_tool_and_oversized_motor_action_fail_closed (test_instrument_school_v2.PureInstrumentCon
+tracts.test_untrusted_tool_and_oversized_motor_action_fail_closed) ... ok
+test_connected_experience_and_candidate_only 
+(test_integrated_education_v0.IntegratedEducationV0Tests.test_connected_experience_and_candidate_only) 
+... ok
+test_does_not_overwrite_evidence 
+(test_integrated_education_v0.IntegratedEducationV0Tests.test_does_not_overwrite_evidence) ... ok
+test_actual_image_bytes_sent_in_jarvis_compatible_payload (test_jarvis_vision_v0.LocalVisionAdapterTest
+s.test_actual_image_bytes_sent_in_jarvis_compatible_payload) ... ok
+test_cli_disallows_overwriting_source 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_cli_disallows_overwriting_source) ... ok
+test_cli_writes_only_candidate_json 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_cli_writes_only_candidate_json) ... ok
+test_disallow_non_images_and_missing_image 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_disallow_non_images_and_missing_image) ... ok
+test_generated_file_cannot_be_labeled_real_observation 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_generated_file_cannot_be_labeled_real_observation) 
+... ok
+test_no_execution_fields_can_be_mutated 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_no_execution_fields_can_be_mutated) ... ok
+test_reject_missing_or_ambiguous_metadata 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_reject_missing_or_ambiguous_metadata) ... ok
+test_reject_non_loopback_or_redirect_risk 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_reject_non_loopback_or_redirect_risk) ... ok
+test_resize_and_source_hash_are_distinct 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_resize_and_source_hash_are_distinct) ... ok
+test_response_malformed_fails_closed 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_response_malformed_fails_closed) ... ok
+test_response_non_text_fails_closed 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_response_non_text_fails_closed) ... ok
+test_unavailable_provider_does_not_fake_reply 
+(test_jarvis_vision_v0.LocalVisionAdapterTests.test_unavailable_provider_does_not_fake_reply) ... ok
+test_conflict_local_and_global_separation 
+(test_local_epistemic_diagnostic_p165d9.D9Tests.test_conflict_local_and_global_separation) ... ok
+test_local_symbolic_and_global_conflict_distinct 
+(test_local_epistemic_diagnostic_p165d9.D9Tests.test_local_symbolic_and_global_conflict_distinct) ... 
+ok
+test_priority_is_not_truth (test_local_epistemic_diagnostic_p165d9.D9Tests.test_priority_is_not_truth) 
+... ok
+test_report_bounded_and_immutable 
+(test_local_epistemic_diagnostic_p165d9.D9Tests.test_report_bounded_and_immutable) ... ok
+test_absence_sensor_is_hold (test_modal_signature_fusion_p165b.P165BTests.test_absence_sensor_is_hold) 
+... ok
+test_changed_color_does_not_erase_other_signatures 
+(test_modal_signature_fusion_p165b.P165BTests.test_changed_color_does_not_erase_other_signatures) ... 
+ok
+test_conflicting_sensor_is_not_silently_ignored 
+(test_modal_signature_fusion_p165b.P165BTests.test_conflicting_sensor_is_not_silently_ignored) ... ok
+test_generated_evidence_cannot_validate_itself 
+(test_modal_signature_fusion_p165b.P165BTests.test_generated_evidence_cannot_validate_itself) ... ok
+test_no_overwrite_and_matrix 
+(test_modal_signature_fusion_p165b.P165BTests.test_no_overwrite_and_matrix) ... ok
+test_same_signature_is_not_unique_id_proof 
+(test_modal_signature_fusion_p165b.P165BTests.test_same_signature_is_not_unique_id_proof) ... ok
+test_time_and_frame_mismatch_hold 
+(test_modal_signature_fusion_p165b.P165BTests.test_time_and_frame_mismatch_hold) ... ok
+test_future_must_follow_all_history (test_multirepresentation_ball_bridge_v5.WorldRepresentationP1UnitT
+ests.test_future_must_follow_all_history) ... ok
+test_missing_evidence_prevents_fake_replay (test_multirepresentation_ball_bridge_v5.WorldRepresentation
+P1UnitTests.test_missing_evidence_prevents_fake_replay) ... ok
+test_missing_forecast_stays_hold_instead_of_fabricated_prediction (test_multirepresentation_ball_bridge
+_v5.WorldRepresentationP1UnitTests.test_missing_forecast_stays_hold_instead_of_fabricated_prediction) 
+... ok
+test_mixed_coordinate_frames_refused (test_multirepresentation_ball_bridge_v5.WorldRepresentationP1Unit
+Tests.test_mixed_coordinate_frames_refused) ... ok
+test_receipt_does_not_allow_future_frame_in_history (test_multirepresentation_ball_bridge_v5.WorldRepre
+sentationP1UnitTests.test_receipt_does_not_allow_future_frame_in_history) ... ok
+test_reuses_existing_candidate_contracts_and_four_views (test_multirepresentation_ball_bridge_v5.WorldR
+epresentationP1UnitTests.test_reuses_existing_candidate_contracts_and_four_views) ... ok
+test_unavailable_physical_units_not_guessed (test_multirepresentation_ball_bridge_v5.WorldRepresentatio
+nP1UnitTests.test_unavailable_physical_units_not_guessed) ... ok
+test_cue_is_visible_and_negative_controls_are_reported (test_observed_cue_education_v1.ObservedCueEduca
+tionTests.test_cue_is_visible_and_negative_controls_are_reported) ... ok
+test_preserves_existing_evidence 
+(test_observed_cue_education_v1.ObservedCueEducationTests.test_preserves_existing_evidence) ... ok
+test_all_six_gates (test_p0_p5_integrated_evidence_v1.IntegratedEvidenceTests.test_all_six_gates) ... 
+ok
+test_external_images_are_unlabeled 
+(test_p0_p5_integrated_evidence_v1.IntegratedEvidenceTests.test_external_images_are_unlabeled) ... ok
+test_no_overwrite (test_p0_p5_integrated_evidence_v1.IntegratedEvidenceTests.test_no_overwrite) ... ok
+test_exact_p165d_inventory 
+(test_p165d10_global_runner.GlobalRegressionRunnerTests.test_exact_p165d_inventory) ... ok
+test_minimal_green_capture 
+(test_p165d10_global_runner.GlobalRegressionRunnerTests.test_minimal_green_capture) ... ok
+test_red_is_not_green (test_p165d10_global_runner.GlobalRegressionRunnerTests.test_red_is_not_green) 
+... ok
+test_report_immutable (test_p165d10_global_runner.GlobalRegressionRunnerTests.test_report_immutable) 
+... ok
+test_25_beam_bounded 
+(test_p165d10_invariant_hardening.AssociationAndReappearance.test_25_beam_bounded) ... ok
+test_26_no_oracle_interface 
+(test_p165d10_invariant_hardening.AssociationAndReappearance.test_26_no_oracle_interface) ... ok
+test_27_adapter_explicitly_pixel_1d 
+(test_p165d10_invariant_hardening.AssociationAndReappearance.test_27_adapter_explicitly_pixel_1d) ... 
+ok
+test_28_all_beam_hypotheses_have_states 
+(test_p165d10_invariant_hardening.AssociationAndReappearance.test_28_all_beam_hypotheses_have_states) 
+... ok
+test_29_four_correct_not_same_reappearance (test_p165d10_invariant_hardening.AssociationAndReappearance
+.test_29_four_correct_not_same_reappearance) ... ok
+test_30_separate_paths_cannot_fake_same 
+(test_p165d10_invariant_hardening.AssociationAndReappearance.test_30_separate_paths_cannot_fake_same) 
+... ok
+test_31_true_same_candidate_path 
+(test_p165d10_invariant_hardening.AssociationAndReappearance.test_31_true_same_candidate_path) ... ok
+test_32_all_missing_is_not_reappearance 
+(test_p165d10_invariant_hardening.AssociationAndReappearance.test_32_all_missing_is_not_reappearance) 
+... ok
+test_07_red_detected (test_p165d10_invariant_hardening.DetectionProperties.test_07_red_detected) ... ok
+test_08_blue_detected (test_p165d10_invariant_hardening.DetectionProperties.test_08_blue_detected) ... 
+ok
+test_09_connected_separate 
+(test_p165d10_invariant_hardening.DetectionProperties.test_09_connected_separate) ... ok
+test_10_blank_returns_no_instances 
+(test_p165d10_invariant_hardening.DetectionProperties.test_10_blank_returns_no_instances) ... ok
+test_11_no_spatial_identity_proof 
+(test_p165d10_invariant_hardening.DetectionProperties.test_11_no_spatial_identity_proof) ... ok
+test_12_d3_returns_ordered_candidates 
+(test_p165d10_invariant_hardening.DetectionProperties.test_12_d3_returns_ordered_candidates) ... ok
+test_33_different_goal_same_claims 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_33_different_goal_same_claims) ... ok
+test_34_global_conflict_preserved 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_34_global_conflict_preserved) ... ok
+test_35_local_symbol_without_data_holds 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_35_local_symbol_without_data_holds) ... ok
+test_36_global_multi_can_coexist_with_local_hold (test_p165d10_invariant_hardening.EpistemicProperties.
+test_36_global_multi_can_coexist_with_local_hold) ... ok
+test_37_symbolic_interpretation_not_observation 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_37_symbolic_interpretation_not_observation) 
+... ok
+test_38_duplicate_claims_rejected 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_38_duplicate_claims_rejected) ... ok
+test_39_empty_focus_stays_unresolved 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_39_empty_focus_stays_unresolved) ... ok
+test_40_priorities_are_not_evidence 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_40_priorities_are_not_evidence) ... ok
+test_41_invalid_goal_rejected 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_41_invalid_goal_rejected) ... ok
+test_42_bridge_digest_stable 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_42_bridge_digest_stable) ... ok
+test_43_bridge_goal_does_not_mutate_evidence 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_43_bridge_goal_does_not_mutate_evidence) 
+... ok
+test_44_bridge_does_not_fabricate_symbolic 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_44_bridge_does_not_fabricate_symbolic) ... 
+ok
+test_45_d6_claims_have_provenance 
+(test_p165d10_invariant_hardening.EpistemicProperties.test_45_d6_claims_have_provenance) ... ok
+test_01_all_675_unique (test_p165d10_invariant_hardening.MatrixProperties.test_01_all_675_unique) ... 
+ok
+test_02_factor_dimensions 
+(test_p165d10_invariant_hardening.MatrixProperties.test_02_factor_dimensions) ... ok
+test_03_seven_raster_frames 
+(test_p165d10_invariant_hardening.MatrixProperties.test_03_seven_raster_frames) ... ok
+test_04_truth_is_separate_from_images 
+(test_p165d10_invariant_hardening.MatrixProperties.test_04_truth_is_separate_from_images) ... ok
+test_05_repeatable_generator_pixels 
+(test_p165d10_invariant_hardening.MatrixProperties.test_05_repeatable_generator_pixels) ... ok
+test_06_d2_no_identity_certification 
+(test_p165d10_invariant_hardening.MatrixProperties.test_06_d2_no_identity_certification) ... ok
+test_13_initial_empty (test_p165d10_invariant_hardening.PersistentProperties.test_13_initial_empty) 
+... ok
+test_14_velocity_from_two_points 
+(test_p165d10_invariant_hardening.PersistentProperties.test_14_velocity_from_two_points) ... ok
+test_15_forward_prediction 
+(test_p165d10_invariant_hardening.PersistentProperties.test_15_forward_prediction) ... ok
+test_16_uncertainty_monotonic_forward 
+(test_p165d10_invariant_hardening.PersistentProperties.test_16_uncertainty_monotonic_forward) ... ok
+test_17_predict_does_not_mutate_source 
+(test_p165d10_invariant_hardening.PersistentProperties.test_17_predict_does_not_mutate_source) ... ok
+test_18_future_observation_mismatch 
+(test_p165d10_invariant_hardening.PersistentProperties.test_18_future_observation_mismatch) ... ok
+test_19_generated_not_observed 
+(test_p165d10_invariant_hardening.PersistentProperties.test_19_generated_not_observed) ... ok
+test_20_frame_mismatch_is_not_applied 
+(test_p165d10_invariant_hardening.PersistentProperties.test_20_frame_mismatch_is_not_applied) ... ok
+test_21_quality_hold (test_p165d10_invariant_hardening.PersistentProperties.test_21_quality_hold) ... 
+ok
+test_22_invalid_nan_rejected 
+(test_p165d10_invariant_hardening.PersistentProperties.test_22_invalid_nan_rejected) ... ok
+test_23_backwards_propagation_rejected 
+(test_p165d10_invariant_hardening.PersistentProperties.test_23_backwards_propagation_rejected) ... ok
+test_24_goal_views_do_not_mutate 
+(test_p165d10_invariant_hardening.PersistentProperties.test_24_goal_views_do_not_mutate) ... ok
+test_ast_does_not_execute_tests 
+(test_p165d10_repository_inventory.InventoryTests.test_ast_does_not_execute_tests) ... ok
+test_finds_known_historical_and_d10 
+(test_p165d10_repository_inventory.InventoryTests.test_finds_known_historical_and_d10) ... ok
+test_output_preserved (test_p165d10_repository_inventory.InventoryTests.test_output_preserved) ... ok
+test_correction_accepted_and_replayed 
+(test_p210a_visual_loop_contract_v0.VisualLoopContractTests.test_correction_accepted_and_replayed) ... 
+ok
+test_equal_hold_and_no_rewrite 
+(test_p210a_visual_loop_contract_v0.VisualLoopContractTests.test_equal_hold_and_no_rewrite) ... ok
+test_invalid_size_and_attempt_budget 
+(test_p210a_visual_loop_contract_v0.VisualLoopContractTests.test_invalid_size_and_attempt_budget) ... 
+ok
+test_regression_rolls_back_but_preserves_attempt (test_p210a_visual_loop_contract_v0.VisualLoopContract
+Tests.test_regression_rolls_back_but_preserves_attempt) ... ok
+test_tampered_candidate_rejected 
+(test_p210a_visual_loop_contract_v0.VisualLoopContractTests.test_tampered_candidate_rejected) ... ok
+test_dimension_or_empty_mask_fail_closed 
+(test_p210bc_visual_correction_v0.ImageCorrectionTests.test_dimension_or_empty_mask_fail_closed) ... ok
+test_equal_attempt_and_replay_tamper 
+(test_p210bc_visual_correction_v0.ImageCorrectionTests.test_equal_attempt_and_replay_tamper) ... ok
+test_protected_region_detects_error 
+(test_p210bc_visual_correction_v0.ImageCorrectionTests.test_protected_region_detects_error) ... ok
+test_region_diagnostic_and_correction 
+(test_p210bc_visual_correction_v0.ImageCorrectionTests.test_region_diagnostic_and_correction) ... ok
+test_append_two_different_outcomes_and_replay 
+(test_p210d_visual_error_memory_bridge_v0.MemoryTests.test_append_two_different_outcomes_and_replay) 
+... ok
+test_duplicate_rejected (test_p210d_visual_error_memory_bridge_v0.MemoryTests.test_duplicate_rejected) 
+... ok
+test_ledger_tamper_rejected 
+(test_p210d_visual_error_memory_bridge_v0.MemoryTests.test_ledger_tamper_rejected) ... ok
+test_source_mutation_rejected 
+(test_p210d_visual_error_memory_bridge_v0.MemoryTests.test_source_mutation_rejected) ... ok
+test_ambiguous_train_hold 
+(test_p210e_visual_transfer_benchmark_v0.TransferTests.test_ambiguous_train_hold) ... ok
+test_no_train_test_leakage 
+(test_p210e_visual_transfer_benchmark_v0.TransferTests.test_no_train_test_leakage) ... ok
+test_train_offset_transfers_to_separate_test_image (test_p210e_visual_transfer_benchmark_v0.TransferTes
+ts.test_train_offset_transfers_to_separate_test_image) ... ok
+test_transfer_failure_is_recorded 
+(test_p210e_visual_transfer_benchmark_v0.TransferTests.test_transfer_failure_is_recorded) ... ok
+test_corrupted_ledger_fails_before_generation (test_p211a_memory_routed_drawing_v0.MemoryRoutedDrawingT
+ests.test_corrupted_ledger_fails_before_generation) ... ok
+test_memory_changes_selected_generation_route (test_p211a_memory_routed_drawing_v0.MemoryRoutedDrawingT
+ests.test_memory_changes_selected_generation_route) ... ok
+test_teacher_reference_only_scored_after_candidate (test_p211a_memory_routed_drawing_v0.MemoryRoutedDra
+wingTests.test_teacher_reference_only_scored_after_candidate) ... ok
+test_fingerprint_drift_fail_closed 
+(test_p211b_frozen_gesture_transfer_v0.FrozenGestureTests.test_fingerprint_drift_fail_closed) ... ok
+test_reference_only_scores_and_does_not_change_render (test_p211b_frozen_gesture_transfer_v0.FrozenGest
+ureTests.test_reference_only_scores_and_does_not_change_render) ... ok
+test_tamper_and_duplicate_fail_closed 
+(test_p211b_frozen_gesture_transfer_v0.FrozenGestureTests.test_tamper_and_duplicate_fail_closed) ... ok
+test_train_then_render_without_test_pixels 
+(test_p211b_frozen_gesture_transfer_v0.FrozenGestureTests.test_train_then_render_without_test_pixels) 
+... ok
+test_invalid_layout_rejected 
+(test_p211c_gesture_recomposition_v0.CompositionTests.test_invalid_layout_rejected) ... ok
+test_memory_tampering_fails_closed 
+(test_p211c_gesture_recomposition_v0.CompositionTests.test_memory_tampering_fails_closed) ... ok
+test_recomposition_generates_png_and_blank 
+(test_p211c_gesture_recomposition_v0.CompositionTests.test_recomposition_generates_png_and_blank) ... 
+ok
+test_test_target_only_scores_after_commit 
+(test_p211c_gesture_recomposition_v0.CompositionTests.test_test_target_only_scores_after_commit) ... ok
+test_existing_output_refused 
+(test_p211d_paired_composition_audit_v0.PairedCompositionTests.test_existing_output_refused) ... ok
+test_layout_duplicate_refused 
+(test_p211d_paired_composition_audit_v0.PairedCompositionTests.test_layout_duplicate_refused) ... ok
+test_paired_comparison_counts_improvement_and_regression (test_p211d_paired_composition_audit_v0.Paired
+CompositionTests.test_paired_comparison_counts_improvement_and_regression) ... ok
+test_train_test_source_leakage_refused 
+(test_p211d_paired_composition_audit_v0.PairedCompositionTests.test_train_test_source_leakage_refused) 
+... ok
+test_candidate_mutation_rejected 
+(test_p211e_regression_diagnostic_v0.DiagnosticTests.test_candidate_mutation_rejected) ... ok
+test_partial_and_empty_targets_flagged_without_learning (test_p211e_regression_diagnostic_v0.Diagnostic
+Tests.test_partial_and_empty_targets_flagged_without_learning) ... ok
+test_reference_mutation_rejected 
+(test_p211e_regression_diagnostic_v0.DiagnosticTests.test_reference_mutation_rejected) ... ok
+test_blank_reference_does_not_improve_revision 
+(test_p212a_bounded_gesture_revision_v0.RevisionTests.test_blank_reference_does_not_improve_revision) 
+... ok
+test_invalid_layout_or_existing_output_rejected 
+(test_p212a_bounded_gesture_revision_v0.RevisionTests.test_invalid_layout_or_existing_output_rejected) 
+... ok
+test_seal_all_proposals_then_score_and_keep_history (test_p212a_bounded_gesture_revision_v0.RevisionTes
+ts.test_seal_all_proposals_then_score_and_keep_history) ... ok
+test_duplicate_train_teacher_rejected 
+(test_p212b_frozen_shift_transfer_v0.ShiftTransferTests.test_duplicate_train_teacher_rejected) ... ok
+test_policy_tamper_and_train_layout_reuse_fail (test_p212b_frozen_shift_transfer_v0.ShiftTransferTests.
+test_policy_tamper_and_train_layout_reuse_fail) ... ok
+test_test_target_does_not_change_candidate 
+(test_p212b_frozen_shift_transfer_v0.ShiftTransferTests.test_test_target_does_not_change_candidate) 
+... ok
+test_train_only_shift_improves_unseen_layout 
+(test_p212b_frozen_shift_transfer_v0.ShiftTransferTests.test_train_only_shift_improves_unseen_layout) 
+... ok
+test_deduplicated_cases_and_refuse_overwrite (test_p212c_mixed_visual_benchmark_v0.MixedVisualBenchmark
+Tests.test_deduplicated_cases_and_refuse_overwrite) ... ok
+test_mixed_results_and_visual_outputs 
+(test_p212c_mixed_visual_benchmark_v0.MixedVisualBenchmarkTests.test_mixed_results_and_visual_outputs) 
+... ok
+test_act_and_visible_contradictory_results 
+(test_p212d_conservative_correction_gate_v0.GateTests.test_act_and_visible_contradictory_results) ... 
+ok
+test_mixed_train_yields_hold 
+(test_p212d_conservative_correction_gate_v0.GateTests.test_mixed_train_yields_hold) ... ok
+test_tamper_rejected (test_p212d_conservative_correction_gate_v0.GateTests.test_tamper_rejected) ... ok
+test_all_seven_adversarial_fixtures 
+(test_p24_contextual_fluctuation_v0.ContextualFluctuationTest.test_all_seven_adversarial_fixtures) ... 
+ok
+test_conflict_is_not_averaged 
+(test_p24_contextual_fluctuation_v0.ContextualFluctuationTest.test_conflict_is_not_averaged) ... ok
+test_provenance_and_replay 
+(test_p24_contextual_fluctuation_v0.ContextualFluctuationTest.test_provenance_and_replay) ... ok
+test_same_pixels_opposite_interpretations (test_p24_contextual_fluctuation_v0.ContextualFluctuationTest
+.test_same_pixels_opposite_interpretations) ... ok
+test_pixel_scenarios (test_p25_pixel_context_v0.P25PixelContextTest.test_pixel_scenarios) ... ok
+test_reject_tampered_report 
+(test_p25_pixel_context_v0.P25PixelContextTest.test_reject_tampered_report) ... ok
+test_invalid_count (test_p26_adversarial_pixels_v0.P26StressTest.test_invalid_count) ... ok
+test_modified_receipt_rejected 
+(test_p26_adversarial_pixels_v0.P26StressTest.test_modified_receipt_rejected) ... ok
+test_reproducible_pixel_stress_and_sealed_scoring 
+(test_p26_adversarial_pixels_v0.P26StressTest.test_reproducible_pixel_stress_and_sealed_scoring) ... ok
+test_conflict_holds_majority_not_history 
+(test_p27_experience_hierarchy_v0.HierarchyExperienceTest.test_conflict_holds_majority_not_history) 
+... ok
+test_replay_and_tampering 
+(test_p27_experience_hierarchy_v0.HierarchyExperienceTest.test_replay_and_tampering) ... ok
+test_same_observation_different_order 
+(test_p27_experience_hierarchy_v0.HierarchyExperienceTest.test_same_observation_different_order) ... ok
+test_determinism_and_integrity 
+(test_p28_epistemic_reversal_v0.P28EpistemicReversalTests.test_determinism_and_integrity) ... ok
+test_duplicate_evidence_group_does_not_gain_votes (test_p28_epistemic_reversal_v0.P28EpistemicReversalT
+ests.test_duplicate_evidence_group_does_not_gain_votes) ... ok
+test_hold_without_calibration 
+(test_p28_epistemic_reversal_v0.P28EpistemicReversalTests.test_hold_without_calibration) ... ok
+test_intent_cannot_change_prediction_or_truth (test_p28_epistemic_reversal_v0.P28EpistemicReversalTests
+.test_intent_cannot_change_prediction_or_truth) ... ok
+test_pre_feedback_no_truth_fields 
+(test_p28_epistemic_reversal_v0.P28EpistemicReversalTests.test_pre_feedback_no_truth_fields) ... ok
+test_reversal_does_not_remain_frozen 
+(test_p28_epistemic_reversal_v0.P28EpistemicReversalTests.test_reversal_does_not_remain_frozen) ... ok
+test_detected_pixels_not_simulator_shift_api 
+(test_p28b_pixel_reversal_v0.P28bPixelReversal.test_detected_pixels_not_simulator_shift_api) ... ok
+test_hold_on_missing_object 
+(test_p28b_pixel_reversal_v0.P28bPixelReversal.test_hold_on_missing_object) ... ok
+test_no_verdict_or_memory_mutation 
+(test_p28b_pixel_reversal_v0.P28bPixelReversal.test_no_verdict_or_memory_mutation) ... ok
+test_reliable_anchor_moves (test_p28b_pixel_reversal_v0.P28bPixelReversal.test_reliable_anchor_moves) 
+... ok
+test_replay_and_tamper (test_p28b_pixel_reversal_v0.P28bPixelReversal.test_replay_and_tamper) ... ok
+test_boundary_and_identical_baselines 
+(test_p28c_guarded_reversal_v0.GuardedTests.test_boundary_and_identical_baselines) ... ok
+test_deduplication (test_p28c_guarded_reversal_v0.GuardedTests.test_deduplication) ... ok
+test_no_feedback_holds (test_p28c_guarded_reversal_v0.GuardedTests.test_no_feedback_holds) ... ok
+test_rank_can_change_after_reversal 
+(test_p28c_guarded_reversal_v0.GuardedTests.test_rank_can_change_after_reversal) ... ok
+test_replay_integrity (test_p28c_guarded_reversal_v0.GuardedTests.test_replay_integrity) ... ok
+test_explicit_frame_and_invalid_ids 
+(test_p29_layer_contracts_v0.P29Boundaries.test_explicit_frame_and_invalid_ids) ... ok
+test_goal_does_not_rewrite_belief 
+(test_p29_layer_contracts_v0.P29Boundaries.test_goal_does_not_rewrite_belief) ... ok
+test_nonsovereignty (test_p29_layer_contracts_v0.P29Boundaries.test_nonsovereignty) ... ok
+test_observation_cannot_contain_truth_or_goal 
+(test_p29_layer_contracts_v0.P29Boundaries.test_observation_cannot_contain_truth_or_goal) ... ok
+test_perception_hold_cannot_be_inferred 
+(test_p29_layer_contracts_v0.P29Boundaries.test_perception_hold_cannot_be_inferred) ... ok
+test_goal_changes_routing_only 
+(test_p29b_layer_wiring_v0.LayerWiringTests.test_goal_changes_routing_only) ... ok
+test_observation_hold_propagates_without_inventing_truth 
+(test_p29b_layer_wiring_v0.LayerWiringTests.test_observation_hold_propagates_without_inventing_truth) 
+... ok
+test_replay_tamper (test_p29b_layer_wiring_v0.LayerWiringTests.test_replay_tamper) ... ok
+test_same_pixels_same_pred_as_p28c 
+(test_p29b_layer_wiring_v0.LayerWiringTests.test_same_pixels_same_pred_as_p28c) ... ok
+test_new_visual_generator (test_p29c_transfer_v0.TransferTests.test_new_visual_generator) ... ok
+test_replay_integrity (test_p29c_transfer_v0.TransferTests.test_replay_integrity) ... ok
+test_train_only_anchor (test_p29c_transfer_v0.TransferTests.test_train_only_anchor) ... ok
+test_transfer_shows_failures_not_false_promotion 
+(test_p29c_transfer_v0.TransferTests.test_transfer_shows_failures_not_false_promotion) ... ok
+test_zero_test_feedback_and_intent 
+(test_p29c_transfer_v0.TransferTests.test_zero_test_feedback_and_intent) ... ok
+test_actual_existing_world_and_triage_objects 
+(test_p29d_reconnect_organs_v0.ReconnectedOrgansTests.test_actual_existing_world_and_triage_objects) 
+... ok
+test_fail_closed_unknown_frame_and_anchor 
+(test_p29d_reconnect_organs_v0.ReconnectedOrgansTests.test_fail_closed_unknown_frame_and_anchor) ... ok
+test_hold_propagates_across_every_layer 
+(test_p29d_reconnect_organs_v0.ReconnectedOrgansTests.test_hold_propagates_across_every_layer) ... ok
+test_intent_does_not_alter_predictions_or_evidence (test_p29d_reconnect_organs_v0.ReconnectedOrgansTest
+s.test_intent_does_not_alter_predictions_or_evidence) ... ok
+test_repeatability_and_source_provenance 
+(test_p29d_reconnect_organs_v0.ReconnectedOrgansTests.test_repeatability_and_source_provenance) ... ok
+test_correlated_majority_conflicts_with_historical_anchor (test_p29e_reciprocal_multiview_v0.P29EMultiv
+iew.test_correlated_majority_conflicts_with_historical_anchor) ... ok
+test_frame_is_required (test_p29e_reciprocal_multiview_v0.P29EMultiview.test_frame_is_required) ... ok
+test_goals_never_rewrite_motion 
+(test_p29e_reciprocal_multiview_v0.P29EMultiview.test_goals_never_rewrite_motion) ... ok
+test_missing_detection_and_unsupported_anchor_hold 
+(test_p29e_reciprocal_multiview_v0.P29EMultiview.test_missing_detection_and_unsupported_anchor_hold) 
+... ok
+test_reciprocal_candidate_not_proof 
+(test_p29e_reciprocal_multiview_v0.P29EMultiview.test_reciprocal_candidate_not_proof) ... ok
+test_absent_view_rejected 
+(test_p29f_original_organs_bridge_v0.OriginalOrgansBridgeTests.test_absent_view_rejected) ... ok
+test_original_verification_is_mandatory (test_p29f_original_organs_bridge_v0.OriginalOrgansBridgeTests.
+test_original_verification_is_mandatory) ... ok
+test_verified_reuse_without_fusing_sources (test_p29f_original_organs_bridge_v0.OriginalOrgansBridgeTes
+ts.test_verified_reuse_without_fusing_sources) ... ok
+test_mismatched_motion_rejected 
+(test_p29g_one_video_bridge_v0.SameSourceTests.test_mismatched_motion_rejected) ... ok
+test_original_p1_verify_mandatory 
+(test_p29g_one_video_bridge_v0.SameSourceTests.test_original_p1_verify_mandatory) ... ok
+test_same_video_views_and_replay 
+(test_p29g_one_video_bridge_v0.SameSourceTests.test_same_video_views_and_replay) ... ok
+test_baselines_and_no_memory_hold 
+(test_p29h_position_ablation_v0.AblationTests.test_baselines_and_no_memory_hold) ... ok
+test_future_not_passed_to_predict 
+(test_p29h_position_ablation_v0.AblationTests.test_future_not_passed_to_predict) ... ok
+test_illegal_test_training_flag_fails 
+(test_p29i_paired_audit_v0.PairedAudit.test_illegal_test_training_flag_fails) ... ok
+test_incomplete_case_fails (test_p29i_paired_audit_v0.PairedAudit.test_incomplete_case_fails) ... ok
+test_paired_groups (test_p29i_paired_audit_v0.PairedAudit.test_paired_groups) ... ok
+test_replay_and_tamper (test_p29i_paired_audit_v0.PairedAudit.test_replay_and_tamper) ... ok
+test_fail_closed_missing_proof 
+(test_p29j_frozen_hybrid_audit_v0.HybridTests.test_fail_closed_missing_proof) ... ok
+test_frozen_choice_is_memory_else_spatial_else_hold 
+(test_p29j_frozen_hybrid_audit_v0.HybridTests.test_frozen_choice_is_memory_else_spatial_else_hold) ... 
+ok
+test_observed_future_with_missing_selected_score_rejected (test_p29j_frozen_hybrid_audit_v0.HybridTests
+.test_observed_future_with_missing_selected_score_rejected) ... ok
+test_precommitted_prediction_with_missing_future_is_unscorable (test_p29j_frozen_hybrid_audit_v0.Hybrid
+Tests.test_precommitted_prediction_with_missing_future_is_unscorable) ... ok
+test_replay_and_mutation (test_p29j_frozen_hybrid_audit_v0.HybridTests.test_replay_and_mutation) ... ok
+test_test_feedback_never_accepted 
+(test_p29j_frozen_hybrid_audit_v0.HybridTests.test_test_feedback_never_accepted) ... ok
+test_acceleration_from_past_only 
+(test_p2_ablation_diagnostic_v0.P2DiagnosticTest.test_acceleration_from_past_only) ... ok
+test_precommit_baselines_and_future_leak_gate 
+(test_p2_ablation_diagnostic_v0.P2DiagnosticTest.test_precommit_baselines_and_future_leak_gate) ... ok
+test_reject_nonfinite_forecast 
+(test_p2_ablation_diagnostic_v0.P2DiagnosticTest.test_reject_nonfinite_forecast) ... ok
+test_agreement_is_conservative 
+(test_p2_raster_forecast_v0.P2RasterTest.test_agreement_is_conservative) ... ok
+test_hold_missing_raster (test_p2_raster_forecast_v0.P2RasterTest.test_hold_missing_raster) ... ok
+test_linear_future_from_past (test_p2_raster_forecast_v0.P2RasterTest.test_linear_future_from_past) 
+... ok
+test_reject_future_or_mismatched_frames 
+(test_p2_raster_forecast_v0.P2RasterTest.test_reject_future_or_mismatched_frames) ... ok
+test_fusion_holds_when_raster_disagrees 
+(test_p2_streaming_precommit_v0.P2StreamingTest.test_fusion_holds_when_raster_disagrees) ... ok
+test_invalid_or_unknown_input 
+(test_p2_streaming_precommit_v0.P2StreamingTest.test_invalid_or_unknown_input) ... ok
+test_past_only_inputs_and_fusion 
+(test_p2_streaming_precommit_v0.P2StreamingTest.test_past_only_inputs_and_fusion) ... ok
+test_generated_is_not_observation 
+(test_persistent_world_state_p165d4.WorldStateTests.test_generated_is_not_observation) ... ok
+test_goal_views_without_claims 
+(test_persistent_world_state_p165d4.WorldStateTests.test_goal_views_without_claims) ... ok
+test_persists_when_occluded_with_uncertainty 
+(test_persistent_world_state_p165d4.WorldStateTests.test_persists_when_occluded_with_uncertainty) ... 
+ok
+test_preserve_report (test_persistent_world_state_p165d4.WorldStateTests.test_preserve_report) ... ok
+test_reappearance_checks_prediction 
+(test_persistent_world_state_p165d4.WorldStateTests.test_reappearance_checks_prediction) ... ok
+test_uncertainty_grows_with_time 
+(test_persistent_world_state_p165d4.WorldStateTests.test_uncertainty_grows_with_time) ... ok
+test_cli_produces_bounded_receipt_no_memory 
+(test_preverbal_prediction_v0.PreverbalPredictionTests.test_cli_produces_bounded_receipt_no_memory) 
+... usage: python.exe -m unittest [-h] --input INPUT --out OUT
+python.exe -m unittest: error: output cannot overwrite input
+ok
+test_constant_speed_ties_linear_not_claiming_breakthrough (test_preverbal_prediction_v0.PreverbalPredic
+tionTests.test_constant_speed_ties_linear_not_claiming_breakthrough) ... ok
+test_generated_stays_generated 
+(test_preverbal_prediction_v0.PreverbalPredictionTests.test_generated_stays_generated) ... ok
+test_heldout_does_not_leak_into_prediction 
+(test_preverbal_prediction_v0.PreverbalPredictionTests.test_heldout_does_not_leak_into_prediction) ... 
+ok
+test_invalid_timing_or_reused_source_rejected 
+(test_preverbal_prediction_v0.PreverbalPredictionTests.test_invalid_timing_or_reused_source_rejected) 
+... ok
+test_irregular_times_supported_and_not_assumed_equal (test_preverbal_prediction_v0.PreverbalPredictionT
+ests.test_irregular_times_supported_and_not_assumed_equal) ... ok
+test_mmonde_structural_bridge_requires_real_source_and_frame (test_preverbal_prediction_v0.PreverbalPre
+dictionTests.test_mmonde_structural_bridge_requires_real_source_and_frame) ... ok
+test_no_mixing_frames_units_entities_or_origins (test_preverbal_prediction_v0.PreverbalPredictionTests.
+test_no_mixing_frames_units_entities_or_origins) ... ok
+test_observed_claim_does_not_automatically_make_reality_proven (test_preverbal_prediction_v0.PreverbalP
+redictionTests.test_observed_claim_does_not_automatically_make_reality_proven) ... ok
+test_refuse_nonfinite_or_unknown_frame 
+(test_preverbal_prediction_v0.PreverbalPredictionTests.test_refuse_nonfinite_or_unknown_frame) ... ok
+test_separate_predict_and_measure_with_heldout 
+(test_preverbal_prediction_v0.PreverbalPredictionTests.test_separate_predict_and_measure_with_heldout) 
+... ok
+test_all_hypotheses_propagated_without_oracle 
+(test_reappearance_gate_p165d6.D6Tests.test_all_hypotheses_propagated_without_oracle) ... ok
+test_four_correct_not_enough_for_reappearance 
+(test_reappearance_gate_p165d6.D6Tests.test_four_correct_not_enough_for_reappearance) ... ok
+test_report_persistence (test_reappearance_gate_p165d6.D6Tests.test_report_persistence) ... ok
+test_same_path_reappearance_metric 
+(test_reappearance_gate_p165d6.D6Tests.test_same_path_reappearance_metric) ... ok
+test_bad_signal_rejected (test_reverso_learning_v0.LearningMemoryPolicyTests.test_bad_signal_rejected) 
+... ok
+test_failure_requires_evidence_and_replay_before_strong_retention (test_reverso_learning_v0.LearningMem
+oryPolicyTests.test_failure_requires_evidence_and_replay_before_strong_retention) ... ok
+test_irrelevant_and_unknown_not_promoted 
+(test_reverso_learning_v0.LearningMemoryPolicyTests.test_irrelevant_and_unknown_not_promoted) ... ok
+test_relevant_validated_skill_or_invariant_is_review_candidate (test_reverso_learning_v0.LearningMemory
+PolicyTests.test_relevant_validated_skill_or_invariant_is_review_candidate) ... ok
+test_source_anchor_kept_as_reference_not_dump 
+(test_reverso_learning_v0.LearningMemoryPolicyTests.test_source_anchor_kept_as_reference_not_dump) ... 
+ok
+test_unverified_qwen_output_is_not_retained_as_world_fact (test_reverso_learning_v0.LearningMemoryPolic
+yTests.test_unverified_qwen_output_is_not_retained_as_world_fact) ... ok
+test_world_relation_is_only_candidate_even_if_reviewed (test_reverso_learning_v0.LearningMemoryPolicyTe
+sts.test_world_relation_is_only_candidate_even_if_reviewed) ... ok
+test_jpeg_reference_is_exact_decoded_rgba_not_file_bytes (test_reverso_learning_v0.ReversoPixelMethodTe
+sts.test_jpeg_reference_is_exact_decoded_rgba_not_file_bytes) ... ok
+test_pixel_roundtrip_is_exact_even_across_tile_boundaries (test_reverso_learning_v0.ReversoPixelMethodT
+ests.test_pixel_roundtrip_is_exact_even_across_tile_boundaries) ... ok
+test_refuse_overwrite_and_unsupported_tile 
+(test_reverso_learning_v0.ReversoPixelMethodTests.test_refuse_overwrite_and_unsupported_tile) ... ok
+test_reject_layer_path_escape 
+(test_reverso_learning_v0.ReversoPixelMethodTests.test_reject_layer_path_escape) ... ok
+test_reject_missing_or_overlapping_layers 
+(test_reverso_learning_v0.ReversoPixelMethodTests.test_reject_missing_or_overlapping_layers) ... ok
+test_reject_tampered_layer 
+(test_reverso_learning_v0.ReversoPixelMethodTests.test_reject_tampered_layer) ... ok
+test_replay_works_from_files_after_original_is_deleted (test_reverso_learning_v0.ReversoPixelMethodTest
+s.test_replay_works_from_files_after_original_is_deleted) ... ok
+test_all_fixture_gates_fail_closed 
+(test_scene_event_epistemic_p165d.P165DTests.test_all_fixture_gates_fail_closed) ... ok
+test_camera_ambiguity_hold (test_scene_event_epistemic_p165d.P165DTests.test_camera_ambiguity_hold) 
+... ok
+test_preserves_evidence (test_scene_event_epistemic_p165d.P165DTests.test_preserves_evidence) ... ok
+test_raster_components_measured 
+(test_scene_event_epistemic_p165d.P165DTests.test_raster_components_measured) ... ok
+test_calibration_separate_from_blind_exam 
+(test_selective_risk_calibration_v1.SelectiveRiskTests.test_calibration_separate_from_blind_exam) ... 
+ok
+test_prior_outputs_remain_intact 
+(test_selective_risk_calibration_v1.SelectiveRiskTests.test_prior_outputs_remain_intact) ... ok
+test_contradiction_triggers_hold_without_erasing_skill (test_skill_applicability_review_v1.F1DApplicabi
+lityReviewTests.test_contradiction_triggers_hold_without_erasing_skill) ... ok
+test_review_refuses_existing_evidence 
+(test_skill_applicability_review_v1.F1DApplicabilityReviewTests.test_review_refuses_existing_evidence) 
+... ok
+test_prior_results_immutable 
+(test_u1_u2_shared_candidate_learning_v1.SharedCandidateLearningTests.test_prior_results_immutable) 
+... ok
+test_real_probe_changes_candidate_future_and_retains_clean (test_u1_u2_shared_candidate_learning_v1.Sha
+redCandidateLearningTests.test_real_probe_changes_candidate_future_and_retains_clean) ... ok
+test_no_overwrite 
+(test_u3_u4_visual_context_shared_v1.PixelContextSharedMemoryTests.test_no_overwrite) ... ok
+test_pixel_context_drives_shared_prediction_and_image (test_u3_u4_visual_context_shared_v1.PixelContext
+SharedMemoryTests.test_pixel_context_drives_shared_prediction_and_image) ... ok
+test_bounded_multiview_and_no_external_video (test_u5_u7_video_multiview_evidence_v1.VideoMultiviewEvid
+enceTests.test_bounded_multiview_and_no_external_video) ... ok
+test_no_overwrite 
+(test_u5_u7_video_multiview_evidence_v1.VideoMultiviewEvidenceTests.test_no_overwrite) ... ok
+test_video_is_hashed_not_claimed_as_exam (test_u5_u7_video_multiview_evidence_v1.VideoMultiviewEvidence
+Tests.test_video_is_hashed_not_claimed_as_exam) ... ok
+test_all_chapters_and_boundaries 
+(test_u5b_u8_integrated_big_batch_v1.FullBigBatchTests.test_all_chapters_and_boundaries) ... ok
+test_preserve_old_reports 
+(test_u5b_u8_integrated_big_batch_v1.FullBigBatchTests.test_preserve_old_reports) ... ok
+test_video_file_metadata_not_misrepresented_as_video_exam (test_u5b_u8_integrated_big_batch_v1.FullBigB
+atchTests.test_video_file_metadata_not_misrepresented_as_video_exam) ... ok
+test_output_never_overwritten 
+(test_u8_shared_shape_motion_generation_v1.SharedShapeMotionTests.test_output_never_overwritten) ... ok
+test_shared_memory_drives_both_position_and_pixels (test_u8_shared_shape_motion_generation_v1.SharedSha
+peMotionTests.test_shared_memory_drives_both_position_and_pixels) ... ok
+test_early_escape_does_not_forge_prediction_or_experience (test_video_observation_v0.VideoObservationTe
+sts.test_early_escape_does_not_forge_prediction_or_experience) ... ok
+test_explicit_provenance_required_and_reject_forged_real_claim (test_video_observation_v0.VideoObservat
+ionTests.test_explicit_provenance_required_and_reject_forged_real_claim) ... ok
+test_heldout_is_not_even_annotated_until_forecast_receipt_written (test_video_observation_v0.VideoObser
+vationTests.test_heldout_is_not_even_annotated_until_forecast_receipt_written) ... ok
+test_manual_points_are_provenance_candidate_not_physical_truth (test_video_observation_v0.VideoObservat
+ionTests.test_manual_points_are_provenance_candidate_not_physical_truth) ... ok
+test_reject_bad_time_and_missing_video_frames 
+(test_video_observation_v0.VideoObservationTests.test_reject_bad_time_and_missing_video_frames) ... ok
+test_reject_malformed_object_metadata_or_clicks 
+(test_video_observation_v0.VideoObservationTests.test_reject_malformed_object_metadata_or_clicks) ... 
+ok
+test_video_hash_and_sampling 
+(test_video_observation_v0.VideoObservationTests.test_video_hash_and_sampling) ... ok
+test_camera_only_changes_image_projection (test_world_camera_identity_p165d12.WorldCameraIdentityTests.
+test_camera_only_changes_image_projection) ... ok
+test_compensated_projection_near_constant (test_world_camera_identity_p165d12.WorldCameraIdentityTests.
+test_compensated_projection_near_constant) ... ok
+test_occultation_preserves_latent_world 
+(test_world_camera_identity_p165d12.WorldCameraIdentityTests.test_occultation_preserves_latent_world) 
+... ok
+test_oracle_never_passed_to_infer 
+(test_world_camera_identity_p165d12.WorldCameraIdentityTests.test_oracle_never_passed_to_infer) ... ok
+test_renderer_seven_frames_and_replay 
+(test_world_camera_identity_p165d12.WorldCameraIdentityTests.test_renderer_seven_frames_and_replay) 
+... ok
+test_six_families_and_immutable_report 
+(test_world_camera_identity_p165d12.WorldCameraIdentityTests.test_six_families_and_immutable_report) 
+... ok
+test_swap_changes_rendered_identity 
+(test_world_camera_identity_p165d12.WorldCameraIdentityTests.test_swap_changes_rendered_identity) ... 
+ok
+test_world_and_camera_are_distinct 
+(test_world_camera_identity_p165d12.WorldCameraIdentityTests.test_world_and_camera_are_distinct) ... ok
+test_actual_upstream_contract_ownership_and_local_experience_type (test_world_experience_bridge_v4.V4Wo
+rldExperienceTests.test_actual_upstream_contract_ownership_and_local_experience_type) ... ok
+test_different_episode_representation_not_promoted_to_new_world_discovery (test_world_experience_bridge
+_v4.V4WorldExperienceTests.test_different_episode_representation_not_promoted_to_new_world_discovery) 
+... ok
+test_existing_world_experience_type_is_candidate_only (test_world_experience_bridge_v4.V4WorldExperienc
+eTests.test_existing_world_experience_type_is_candidate_only) ... ok
+test_observation_truth_provenance_and_source_identity (test_world_experience_bridge_v4.V4WorldExperienc
+eTests.test_observation_truth_provenance_and_source_identity) ... ok
+test_spatial_relation_is_attached_to_teacher_instruction_not_image_learning (test_world_experience_brid
+ge_v4.V4WorldExperienceTests.test_spatial_relation_is_attached_to_teacher_instruction_not_image_learnin
+g) ... ok
+test_v3_source_change_is_not_ignored 
+(test_world_experience_bridge_v4.V4WorldExperienceTests.test_v3_source_change_is_not_ignored) ... ok
+test_world_view_tamper_and_false_semantics_rejected (test_world_experience_bridge_v4.V4WorldExperienceT
+ests.test_world_view_tamper_and_false_semantics_rejected) ... ok
+test_cannot_learn_without_four_cardinal_supervision (test_world_orientation_school_v4_2.DirectedVisualL
+earningTests.test_cannot_learn_without_four_cardinal_supervision) ... ok
+test_four_observed_cardinals_without_teacher_box_input (test_world_orientation_school_v4_2.DirectedVisu
+alLearningTests.test_four_observed_cardinals_without_teacher_box_input) ... ok
+test_inverse_edges_are_derived_not_keyword_swaps (test_world_orientation_school_v4_2.DirectedVisualLear
+ningTests.test_inverse_edges_are_derived_not_keyword_swaps) ... ok
+test_reversed_layout_is_no_longer_mistaken_for_top (test_world_orientation_school_v4_2.DirectedVisualLe
+arningTests.test_reversed_layout_is_no_longer_mistaken_for_top) ... ok
+test_unknown_frame_and_diagonal_do_not_get_arbitrary_direction (test_world_orientation_school_v4_2.Dire
+ctedVisualLearningTests.test_unknown_frame_and_diagonal_do_not_get_arbitrary_direction) ... ok
+test_unsupported_single_ambiguous_occluded_are_held (test_world_orientation_school_v4_2.DirectedVisualL
+earningTests.test_unsupported_single_ambiguous_occluded_are_held) ... ok
+test_competence_world_memory_and_evidence_all_replay (test_world_orientation_school_v4_2.EndToEndOrient
+ationReplayTests.test_competence_world_memory_and_evidence_all_replay) ... ok
+test_composition_and_replay_images_match (test_world_orientation_school_v4_2.EndToEndOrientationReplayT
+ests.test_composition_and_replay_images_match) ... ok
+test_mutation_of_generated_image_rejected (test_world_orientation_school_v4_2.EndToEndOrientationReplay
+Tests.test_mutation_of_generated_image_rejected) ... ok
+test_mutation_of_negative_reciprocal_receipt_rejected (test_world_orientation_school_v4_2.EndToEndOrien
+tationReplayTests.test_mutation_of_negative_reciprocal_receipt_rejected) ... ok
+test_no_test_teacher_label_or_instructor_boxes_in_student_precommit (test_world_orientation_school_v4_2
+.EndToEndOrientationReplayTests.test_no_test_teacher_label_or_instructor_boxes_in_student_precommit) 
+... ok
+test_previous_world_memory_never_modified (test_world_orientation_school_v4_2.EndToEndOrientationReplay
+Tests.test_previous_world_memory_never_modified) ... ok
+test_world_experiences_all_candidate_and_frame_synthetic (test_world_orientation_school_v4_2.EndToEndOr
+ientationReplayTests.test_world_experiences_all_candidate_and_frame_synthetic) ... ok
+test_altered_training_source_blocks_replay 
+(test_world_relations_school_v4_1.FullWorldRelationTests.test_altered_training_source_blocks_replay) 
+... ok
+test_composer_reuses_observed_pixels_without_teacher_boxes (test_world_relations_school_v4_1.FullWorldR
+elationTests.test_composer_reuses_observed_pixels_without_teacher_boxes) ... ok
+test_drawing_course_replays_and_no_canonical_memory_promotion (test_world_relations_school_v4_1.FullWor
+ldRelationTests.test_drawing_course_replays_and_no_canonical_memory_promotion) ... ok
+test_false_promotion_and_cooked_evaluation_detected (test_world_relations_school_v4_1.FullWorldRelation
+Tests.test_false_promotion_and_cooked_evaluation_detected) ... ok
+test_test_decisions_are_committed_without_ground_truth (test_world_relations_school_v4_1.FullWorldRelat
+ionTests.test_test_decisions_are_committed_without_ground_truth) ... ok
+test_upstream_world_not_writable_and_output_no_overwrite (test_world_relations_school_v4_1.FullWorldRel
+ationTests.test_upstream_world_not_writable_and_output_no_overwrite) ... ok
+test_v4_1_experiences_reuse_existing_world_types_not_another_memory_authority (test_world_relations_sch
+ool_v4_1.FullWorldRelationTests.test_v4_1_experiences_reuse_existing_world_types_not_another_memory_aut
+hority) ... ok
+test_detect_parts_directly_from_pixels_no_box_input (test_world_relations_school_v4_1.VisualPerceptionT
+ests.test_detect_parts_directly_from_pixels_no_box_input) ... ok
+test_learned_rule_depends_on_feedback_not_teacher_dictionary (test_world_relations_school_v4_1.VisualPe
+rceptionTests.test_learned_rule_depends_on_feedback_not_teacher_dictionary) ... ok
+test_limitations_are_not_semantic_understanding (test_world_relations_school_v4_1.VisualPerceptionTests
+.test_limitations_are_not_semantic_understanding) ... ok
+test_rotation_translation_and_scale_preserve_normalized_distance_approximately (test_world_relations_sc
+hool_v4_1.VisualPerceptionTests.test_rotation_translation_and_scale_preserve_normalized_distance_approx
+imately) ... ok
+test_topology_unknown_holds 
+(test_world_relations_school_v4_1.VisualPerceptionTests.test_topology_unknown_holds) ... ok
+test_conflicting_futures_same_history_lead_to_hold (test_world_transfer_probe_v1.TransferProbesContract
+sTests.test_conflicting_futures_same_history_lead_to_hold) ... ok
+test_denies_unproven_real_source_in_simulated_benchmark (test_world_transfer_probe_v1.TransferProbesCon
+tractsTests.test_denies_unproven_real_source_in_simulated_benchmark) ... ok
+test_novel_history_abstains 
+(test_world_transfer_probe_v1.TransferProbesContractsTests.test_novel_history_abstains) ... ok
+test_reusable_single_experience_remains_unproven_candidate (test_world_transfer_probe_v1.TransferProbes
+ContractsTests.test_reusable_single_experience_remains_unproven_candidate) ... ok
+test_train_test_hash_overlap_rejected 
+(test_world_transfer_probe_v1.TransferProbesContractsTests.test_train_test_hash_overlap_rejected) ... 
+ok
+
+----------------------------------------------------------------------
+Ran 718 tests in 193.511s
+
+OK
+{"passed": 7, "total": 7, "verified": false, "all_pass": true}
+{"passed": 7, "total": 7, "verified": true, "all_pass": true}
+{"comparison": "BETTER_THAN_LINEAR_BASELINE", "error": {"proposed": 0.0, "linear_baseline": 2.0, "stationary_baseline": 5.385164807134504, "unit": "px"}, "physical_knowledge_validated": false, "receipt": "C:\\Users\\Aubin\\AppData\\Local\\Temp\\tmpsr1ah1lz\\episode.json"}
+Prediction sealed before fourth annotation: C:\Users\Aubin\AppData\Local\Temp\tmp2c876y89\run\prediction_before_frame_4.json

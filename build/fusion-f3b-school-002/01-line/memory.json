@@ -1,0 +1,37 @@
+{
+  "gestures": [
+    {
+      "kind": "STRAIGHT_STROKE",
+      "points": [
+        [
+          13,
+          11
+        ],
+        [
+          33,
+          31
+        ]
+      ]
+    }
+  ],
+  "knowledge_promotion": false,
+  "learning_code": {
+    "capability": "image-thinning",
+    "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+    "module_path": "brody_world_physique/drawing_school_v1.py",
+    "symbol": "suggest_gestures_from_reference",
+    "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+  },
+  "motor_code": {
+    "capability": "drawing-motor-render",
+    "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+    "module_path": "brody_world_physique/drawing_school_v1.py",
+    "symbol": "render",
+    "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+  },
+  "native_memory_write": false,
+  "receipt_digest": "6ed27769ef35cf9a9f03b4f21a43516f8f288de18242b489a8161cfdcff9da21",
+  "schema": "BRODY_P211B_FROZEN_GESTURE_V0",
+  "teacher_seen_in_train": true,
+  "train_sha256": "206a161b1d51f0246ebd2d6f12a9006e201331ab87b2689c5c5a790a4bb49a89"
+}

@@ -1,0 +1,18 @@
+{
+  "stationary": {
+    "mean_velocity": 0.0,
+    "mean_accel": 0.0
+  },
+  "constant_speed": {
+    "mean_velocity": 1.0,
+    "mean_accel": 0.0
+  },
+  "constant_acceleration": {
+    "mean_velocity": -0.625,
+    "mean_accel": 0.0
+  },
+  "reverse": {
+    "mean_velocity": 1.0625,
+    "mean_accel": -1.4166666666666665
+  }
+}

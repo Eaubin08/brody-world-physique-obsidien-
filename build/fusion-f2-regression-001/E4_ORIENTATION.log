@@ -1,0 +1,19 @@
+
+test_cannot_learn_without_four_cardinal_supervision (test_world_orientation_school_v4_2.DirectedVisualLearningTests.test_cannot_learn_without_four_cardinal_supervision) ... ok
+test_four_observed_cardinals_without_teacher_box_input (test_world_orientation_school_v4_2.DirectedVisualLearningTests.test_four_observed_cardinals_without_teacher_box_input) ... ok
+test_inverse_edges_are_derived_not_keyword_swaps (test_world_orientation_school_v4_2.DirectedVisualLearningTests.test_inverse_edges_are_derived_not_keyword_swaps) ... ok
+test_reversed_layout_is_no_longer_mistaken_for_top (test_world_orientation_school_v4_2.DirectedVisualLearningTests.test_reversed_layout_is_no_longer_mistaken_for_top) ... ok
+test_unknown_frame_and_diagonal_do_not_get_arbitrary_direction (test_world_orientation_school_v4_2.DirectedVisualLearningTests.test_unknown_frame_and_diagonal_do_not_get_arbitrary_direction) ... ok
+test_unsupported_single_ambiguous_occluded_are_held (test_world_orientation_school_v4_2.DirectedVisualLearningTests.test_unsupported_single_ambiguous_occluded_are_held) ... ok
+test_competence_world_memory_and_evidence_all_replay (test_world_orientation_school_v4_2.EndToEndOrientationReplayTests.test_competence_world_memory_and_evidence_all_replay) ... ok
+test_composition_and_replay_images_match (test_world_orientation_school_v4_2.EndToEndOrientationReplayTests.test_composition_and_replay_images_match) ... ok
+test_mutation_of_generated_image_rejected (test_world_orientation_school_v4_2.EndToEndOrientationReplayTests.test_mutation_of_generated_image_rejected) ... ok
+test_mutation_of_negative_reciprocal_receipt_rejected (test_world_orientation_school_v4_2.EndToEndOrientationReplayTests.test_mutation_of_negative_reciprocal_receipt_rejected) ... ok
+test_no_test_teacher_label_or_instructor_boxes_in_student_precommit (test_world_orientation_school_v4_2.EndToEndOrientationReplayTests.test_no_test_teacher_label_or_instructor_boxes_in_student_precommit) ... ok
+test_previous_world_memory_never_modified (test_world_orientation_school_v4_2.EndToEndOrientationReplayTests.test_previous_world_memory_never_modified) ... ok
+test_world_experiences_all_candidate_and_frame_synthetic (test_world_orientation_school_v4_2.EndToEndOrientationReplayTests.test_world_experiences_all_candidate_and_frame_synthetic) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 3.392s
+
+OK

@@ -1,0 +1,12 @@
+COMMAND: C:\Users\Aubin\AppData\Local\Python\pythoncore-3.14-64\python.exe -m unittest discover -s tests -p test_fusion_historical_evidence_v0.py -v
+STDOUT
+
+STDERR
+test_duplicate_episode_rejected (test_fusion_historical_evidence_v0.HistoricalFusionTests.test_duplicate_episode_rejected) ... ok
+test_existing_output_and_missing_file_fail_closed (test_fusion_historical_evidence_v0.HistoricalFusionTests.test_existing_output_and_missing_file_fail_closed) ... ok
+test_explicit_teacher_scores_and_missing_teacher_unknown (test_fusion_historical_evidence_v0.HistoricalFusionTests.test_explicit_teacher_scores_and_missing_teacher_unknown) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.070s
+
+OK

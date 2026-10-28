@@ -1,0 +1,164 @@
+{
+  "decision_authority": "KX108_ONLY",
+  "fail": 0,
+  "native_memory_write": false,
+  "no_training_executed": true,
+  "no_visual_quality_inferred": true,
+  "pass": 15,
+  "schema": "BRODY_FUSION_F2_REGRESSION_REPORT_V0",
+  "suite_count": 15,
+  "suites": [
+    {
+      "elapsed_seconds": 0.626,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\E0_DRAWING.log",
+      "log_sha256": "2c424d0d11fefa9e3d76e5a68823d41e32e399543c4f418621ff8fd7d6aeeb08",
+      "path": "tests/test_drawing_school_v0.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "E0_DRAWING",
+      "suite_sha256": "87ef8d6495811f57e2bf597cd50f6874473056b2ff9fb181f9b62b53d38f955f"
+    },
+    {
+      "elapsed_seconds": 0.474,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\E1_GESTURES.log",
+      "log_sha256": "afbbbe4465c6824c22dacdf341e2f220fc911dcceb05af03a89f871fcee7f18d",
+      "path": "tests/test_drawing_school_v1.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "E1_GESTURES",
+      "suite_sha256": "d34fd158981d106af5fc7a4e1c9838771ba9760dc90c0c1da3ab08fbd7b2b90c"
+    },
+    {
+      "elapsed_seconds": 1.344,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\E1_INSTRUMENTS.log",
+      "log_sha256": "deedf36a13696f14af843c461ee2389522e90b46c821d5248d7846aba2e5abbc",
+      "path": "tests/test_instrument_school_v2.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "E1_INSTRUMENTS",
+      "suite_sha256": "96d2cd2e53a03be9dd729e68e9820ffbaff58ee9934e23cd32a9b405033a02c3"
+    },
+    {
+      "elapsed_seconds": 1.682,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\E1_HIDDEN_MEMORY.log",
+      "log_sha256": "d6f96e288d2ca20a8f66c0a638e36b0f42eb9d0e1fd89057436351e6fb362533",
+      "path": "tests/test_drawing_memory_school_v3.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "E1_HIDDEN_MEMORY",
+      "suite_sha256": "22cc656aa386bd46c53f8498aa4fd8631fd51046f17333f397b328ba7ea85c73"
+    },
+    {
+      "elapsed_seconds": 2.233,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\E3_RELATIONS.log",
+      "log_sha256": "2fb926fd002de59e0f8f02db5bb15bf7240b2c783a445f4a3cf9daeaee6d60fe",
+      "path": "tests/test_world_relations_school_v4_1.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "E3_RELATIONS",
+      "suite_sha256": "b1ddab1999628ca2fa4f2abf8d64020debc86d4f585a71fb57ed123132cd5393"
+    },
+    {
+      "elapsed_seconds": 3.064,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\E4_ORIENTATION.log",
+      "log_sha256": "3d49708e9de15ddcbc8a50b54b04145504a5c307daffefdb80524d5626b91904",
+      "path": "tests/test_world_orientation_school_v4_2.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "E4_ORIENTATION",
+      "suite_sha256": "6eb6f0804d114c4614e37b20db249f619fb5636b414a16484721f0bdbe6ca2e9"
+    },
+    {
+      "elapsed_seconds": 0.476,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\E6_REVERSO.log",
+      "log_sha256": "6a1bf0e8a079988401c418939be4741853de5653cb6ffef5548982b9ae96b89c",
+      "path": "tests/test_reverso_learning_v0.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "E6_REVERSO",
+      "suite_sha256": "0eedc2fdffeb278fa5ece7b37654488e4f213ce0516a430c36907495439c38cc"
+    },
+    {
+      "elapsed_seconds": 0.135,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\P2_CONTEXT.log",
+      "log_sha256": "06359d2b3aea0bb5898d6172b1aa1a48859bd9665b9c3a6156f45c612b7dad85",
+      "path": "tests/test_p24_contextual_fluctuation_v0.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "P2_CONTEXT",
+      "suite_sha256": "c7dd60104fa2f0e6a8d47e1947ec81b3fc83387af58a0cbadcea7b1874c17411"
+    },
+    {
+      "elapsed_seconds": 0.467,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\P2_MEMORY.log",
+      "log_sha256": "7116c4cb24f07fe53be7bd0ca3fb2ebbcc3dba37e9b4aef7b0a68de91f1b9d98",
+      "path": "tests/test_p27_experience_hierarchy_v0.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "P2_MEMORY",
+      "suite_sha256": "b893c1a158d9d21143865610dd0a0c029b114e94f07abc419232b6ff11fc8912"
+    },
+    {
+      "elapsed_seconds": 0.203,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\P2_GENERATION.log",
+      "log_sha256": "fb117e41c1c3d5125577c0976835f1893d904d9f37464058db80cf30c34cc7a9",
+      "path": "tests/test_p211b_frozen_gesture_transfer_v0.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "P2_GENERATION",
+      "suite_sha256": "f7f4e9558a44e2efbb097d6d860628fed5f1297d24bd111ed9bd02d9da19d3e2"
+    },
+    {
+      "elapsed_seconds": 0.213,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\P2_COMPOSITION.log",
+      "log_sha256": "0750d0e30a79ec6dfbc862311aad4eea669579111f6206a0bdb7a94b3ab55534",
+      "path": "tests/test_p211c_gesture_recomposition_v0.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "P2_COMPOSITION",
+      "suite_sha256": "4617b52ae589df5a0678e377dc8e5ab9d03136a69c975fc7e404a76de32a4ba0"
+    },
+    {
+      "elapsed_seconds": 0.497,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\P2_TRANSFER.log",
+      "log_sha256": "98025da487895efd2c63a44a1c8999e8a30460b37f298071ca2ea054871a4ab4",
+      "path": "tests/test_p212b_frozen_shift_transfer_v0.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "P2_TRANSFER",
+      "suite_sha256": "65582ea95fb4075547890d99cfd23109fced14ac4fd66c652e717d7e25aa1af3"
+    },
+    {
+      "elapsed_seconds": 0.4,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\P2_AUDIT.log",
+      "log_sha256": "f40b130c684c03f189d88b8e20b90057e053c5c0a4d31268503541015b9a72a9",
+      "path": "tests/test_p212c_mixed_visual_benchmark_v0.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "P2_AUDIT",
+      "suite_sha256": "6b7468704349bb3397e1dfb0e9a562aa403e8a1e6d7fad9313344c8e8d92884d"
+    },
+    {
+      "elapsed_seconds": 0.521,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\P2_HOLD.log",
+      "log_sha256": "f2f64e626296924970538f9a19c9a6acb71104a24d6fb31cc8aab3f8579321ed",
+      "path": "tests/test_p212d_conservative_correction_gate_v0.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "P2_HOLD",
+      "suite_sha256": "f50f8c81cea6fb4bc99bdad2839957399b9305364bb0eec936149dc3b32094a7"
+    },
+    {
+      "elapsed_seconds": 0.211,
+      "log": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\fusion-f8-large-002\\f2-historical\\FUSION_ADAPTER.log",
+      "log_sha256": "5635b40d99d78e5878f7384e53f1fa380bc1258ba07a3d0a7803a00443679650",
+      "path": "tests/test_fusion_historical_evidence_v0.py",
+      "returncode": 0,
+      "status": "PASS",
+      "suite": "FUSION_ADAPTER",
+      "suite_sha256": "ef04e8bf53808aec2ed17e0800f3f78aaafb7d8a2afd7d949812afc9f3b5c2cb"
+    }
+  ],
+  "tests_per_suite_not_inferred": true,
+  "timeout": 0
+}

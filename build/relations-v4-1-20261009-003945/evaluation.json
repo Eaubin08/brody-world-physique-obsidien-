@@ -1,0 +1,506 @@
+{
+  "schema": "BRODY_WORLD_RELATIONS_SCHOOL_V4_1",
+  "world_experience_candidates": [
+    {
+      "world_observation": {
+        "observation_id": "world:simulated:v4-1:shifted:observation",
+        "source_kind": "SIMULATED",
+        "image_sha256": "65fadcdc001b7645b5d75088ed52e79e4e70df6a667cb04e29579d56fc32ebb2",
+        "feature_kind": "PIXEL_COMPONENTS_NOT_SEMANTIC_OBJECTS",
+        "component_count": 2,
+        "relation_candidate": "NEAR",
+        "readonly": true,
+        "world_state_is_memory": false
+      },
+      "transformation": {
+        "schema_version": "WORLD_TRANSFORMATION_V0",
+        "transformation_id": "transformation:relation-probe:shifted",
+        "epistemic_class": "SIMULATED",
+        "target_refs": [
+          "world:simulated:v4-1:shifted:observation"
+        ],
+        "parameters": {
+          "learner_method": "MIDPOINT_BETWEEN_OBSERVED_CLASSES",
+          "candidate_relation": "NEAR",
+          "image_component_count": 2
+        },
+        "time_basis": "SYNTHETIC_ORDER_NOT_CLOCK",
+        "decision_authority": "KX108_ONLY",
+        "execution_authority": false
+      },
+      "delta": {
+        "schema_version": "WORLD_STATE_DELTA_V0",
+        "delta_id": "world-delta:v4-1:shifted",
+        "metric_deltas": {
+          "feedback_match": 1
+        },
+        "causal_proof": false,
+        "continuity_status": "UNKNOWN",
+        "decision_authority": "KX108_ONLY"
+      },
+      "experience": {
+        "schema_version": "WORLD_EXPERIENCE_CANDIDATE_V0",
+        "experience_id": "world-exp:v4-1:shifted",
+        "state_before_ref": "world:simulated:v4-1:shifted:observation",
+        "state_after_ref": "world:simulated:v4-1:shifted:feedback",
+        "outcome": "MATCHED_TEACHER_FEEDBACK",
+        "transformation_ref": "transformation:relation-probe:shifted",
+        "delta_ref": "world-delta:v4-1:shifted",
+        "evidence_refs": [
+          "sha256:65fadcdc001b7645b5d75088ed52e79e4e70df6a667cb04e29579d56fc32ebb2"
+        ],
+        "validation_status": "CANDIDATE",
+        "memory_eligibility": "CANDIDATE_ONLY",
+        "memory_write_allowed": false,
+        "auto_promotion_allowed": false,
+        "canonical_memory": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      "feedback_attribution": "SUPERVISED_AFTER_PRECOMMIT",
+      "teacher_label": "NEAR",
+      "no_sens_semantic_claim": true
+    },
+    {
+      "world_observation": {
+        "observation_id": "world:simulated:v4-1:quarter_turn:observation",
+        "source_kind": "SIMULATED",
+        "image_sha256": "b4ea889514776238a9cf71ae7f68ea280aea38111ab7dd6bb1a8bbc007701e61",
+        "feature_kind": "PIXEL_COMPONENTS_NOT_SEMANTIC_OBJECTS",
+        "component_count": 2,
+        "relation_candidate": "NEAR",
+        "readonly": true,
+        "world_state_is_memory": false
+      },
+      "transformation": {
+        "schema_version": "WORLD_TRANSFORMATION_V0",
+        "transformation_id": "transformation:relation-probe:quarter_turn",
+        "epistemic_class": "SIMULATED",
+        "target_refs": [
+          "world:simulated:v4-1:quarter_turn:observation"
+        ],
+        "parameters": {
+          "learner_method": "MIDPOINT_BETWEEN_OBSERVED_CLASSES",
+          "candidate_relation": "NEAR",
+          "image_component_count": 2
+        },
+        "time_basis": "SYNTHETIC_ORDER_NOT_CLOCK",
+        "decision_authority": "KX108_ONLY",
+        "execution_authority": false
+      },
+      "delta": {
+        "schema_version": "WORLD_STATE_DELTA_V0",
+        "delta_id": "world-delta:v4-1:quarter_turn",
+        "metric_deltas": {
+          "feedback_match": 1
+        },
+        "causal_proof": false,
+        "continuity_status": "UNKNOWN",
+        "decision_authority": "KX108_ONLY"
+      },
+      "experience": {
+        "schema_version": "WORLD_EXPERIENCE_CANDIDATE_V0",
+        "experience_id": "world-exp:v4-1:quarter_turn",
+        "state_before_ref": "world:simulated:v4-1:quarter_turn:observation",
+        "state_after_ref": "world:simulated:v4-1:quarter_turn:feedback",
+        "outcome": "MATCHED_TEACHER_FEEDBACK",
+        "transformation_ref": "transformation:relation-probe:quarter_turn",
+        "delta_ref": "world-delta:v4-1:quarter_turn",
+        "evidence_refs": [
+          "sha256:b4ea889514776238a9cf71ae7f68ea280aea38111ab7dd6bb1a8bbc007701e61"
+        ],
+        "validation_status": "CANDIDATE",
+        "memory_eligibility": "CANDIDATE_ONLY",
+        "memory_write_allowed": false,
+        "auto_promotion_allowed": false,
+        "canonical_memory": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      "feedback_attribution": "SUPERVISED_AFTER_PRECOMMIT",
+      "teacher_label": "NEAR",
+      "no_sens_semantic_claim": true
+    },
+    {
+      "world_observation": {
+        "observation_id": "world:simulated:v4-1:scaled:observation",
+        "source_kind": "SIMULATED",
+        "image_sha256": "3fbd51fd8b3bb11828add9c235f20b7918dadea5839deacce4f4287f5b046491",
+        "feature_kind": "PIXEL_COMPONENTS_NOT_SEMANTIC_OBJECTS",
+        "component_count": 2,
+        "relation_candidate": "NEAR",
+        "readonly": true,
+        "world_state_is_memory": false
+      },
+      "transformation": {
+        "schema_version": "WORLD_TRANSFORMATION_V0",
+        "transformation_id": "transformation:relation-probe:scaled",
+        "epistemic_class": "SIMULATED",
+        "target_refs": [
+          "world:simulated:v4-1:scaled:observation"
+        ],
+        "parameters": {
+          "learner_method": "MIDPOINT_BETWEEN_OBSERVED_CLASSES",
+          "candidate_relation": "NEAR",
+          "image_component_count": 2
+        },
+        "time_basis": "SYNTHETIC_ORDER_NOT_CLOCK",
+        "decision_authority": "KX108_ONLY",
+        "execution_authority": false
+      },
+      "delta": {
+        "schema_version": "WORLD_STATE_DELTA_V0",
+        "delta_id": "world-delta:v4-1:scaled",
+        "metric_deltas": {
+          "feedback_match": 1
+        },
+        "causal_proof": false,
+        "continuity_status": "UNKNOWN",
+        "decision_authority": "KX108_ONLY"
+      },
+      "experience": {
+        "schema_version": "WORLD_EXPERIENCE_CANDIDATE_V0",
+        "experience_id": "world-exp:v4-1:scaled",
+        "state_before_ref": "world:simulated:v4-1:scaled:observation",
+        "state_after_ref": "world:simulated:v4-1:scaled:feedback",
+        "outcome": "MATCHED_TEACHER_FEEDBACK",
+        "transformation_ref": "transformation:relation-probe:scaled",
+        "delta_ref": "world-delta:v4-1:scaled",
+        "evidence_refs": [
+          "sha256:3fbd51fd8b3bb11828add9c235f20b7918dadea5839deacce4f4287f5b046491"
+        ],
+        "validation_status": "CANDIDATE",
+        "memory_eligibility": "CANDIDATE_ONLY",
+        "memory_write_allowed": false,
+        "auto_promotion_allowed": false,
+        "canonical_memory": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      "feedback_attribution": "SUPERVISED_AFTER_PRECOMMIT",
+      "teacher_label": "NEAR",
+      "no_sens_semantic_claim": true
+    },
+    {
+      "world_observation": {
+        "observation_id": "world:simulated:v4-1:far_shifted:observation",
+        "source_kind": "SIMULATED",
+        "image_sha256": "098d2910b358840b686a9715b03f33a4ee7383b5b008c9c61b0d035920696c0b",
+        "feature_kind": "PIXEL_COMPONENTS_NOT_SEMANTIC_OBJECTS",
+        "component_count": 2,
+        "relation_candidate": "FAR",
+        "readonly": true,
+        "world_state_is_memory": false
+      },
+      "transformation": {
+        "schema_version": "WORLD_TRANSFORMATION_V0",
+        "transformation_id": "transformation:relation-probe:far_shifted",
+        "epistemic_class": "SIMULATED",
+        "target_refs": [
+          "world:simulated:v4-1:far_shifted:observation"
+        ],
+        "parameters": {
+          "learner_method": "MIDPOINT_BETWEEN_OBSERVED_CLASSES",
+          "candidate_relation": "FAR",
+          "image_component_count": 2
+        },
+        "time_basis": "SYNTHETIC_ORDER_NOT_CLOCK",
+        "decision_authority": "KX108_ONLY",
+        "execution_authority": false
+      },
+      "delta": {
+        "schema_version": "WORLD_STATE_DELTA_V0",
+        "delta_id": "world-delta:v4-1:far_shifted",
+        "metric_deltas": {
+          "feedback_match": 1
+        },
+        "causal_proof": false,
+        "continuity_status": "UNKNOWN",
+        "decision_authority": "KX108_ONLY"
+      },
+      "experience": {
+        "schema_version": "WORLD_EXPERIENCE_CANDIDATE_V0",
+        "experience_id": "world-exp:v4-1:far_shifted",
+        "state_before_ref": "world:simulated:v4-1:far_shifted:observation",
+        "state_after_ref": "world:simulated:v4-1:far_shifted:feedback",
+        "outcome": "MATCHED_TEACHER_FEEDBACK",
+        "transformation_ref": "transformation:relation-probe:far_shifted",
+        "delta_ref": "world-delta:v4-1:far_shifted",
+        "evidence_refs": [
+          "sha256:098d2910b358840b686a9715b03f33a4ee7383b5b008c9c61b0d035920696c0b"
+        ],
+        "validation_status": "CANDIDATE",
+        "memory_eligibility": "CANDIDATE_ONLY",
+        "memory_write_allowed": false,
+        "auto_promotion_allowed": false,
+        "canonical_memory": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      "feedback_attribution": "SUPERVISED_AFTER_PRECOMMIT",
+      "teacher_label": "FAR",
+      "no_sens_semantic_claim": true
+    },
+    {
+      "world_observation": {
+        "observation_id": "world:simulated:v4-1:reversed_hard_negative:observation",
+        "source_kind": "SIMULATED",
+        "image_sha256": "405f2b40f14f77358e8e14be14d51a70c7fa32c8f7f668f0e5d36c5640af80f1",
+        "feature_kind": "PIXEL_COMPONENTS_NOT_SEMANTIC_OBJECTS",
+        "component_count": 2,
+        "relation_candidate": "NEAR",
+        "readonly": true,
+        "world_state_is_memory": false
+      },
+      "transformation": {
+        "schema_version": "WORLD_TRANSFORMATION_V0",
+        "transformation_id": "transformation:relation-probe:reversed_hard_negative",
+        "epistemic_class": "SIMULATED",
+        "target_refs": [
+          "world:simulated:v4-1:reversed_hard_negative:observation"
+        ],
+        "parameters": {
+          "learner_method": "MIDPOINT_BETWEEN_OBSERVED_CLASSES",
+          "candidate_relation": "NEAR",
+          "image_component_count": 2
+        },
+        "time_basis": "SYNTHETIC_ORDER_NOT_CLOCK",
+        "decision_authority": "KX108_ONLY",
+        "execution_authority": false
+      },
+      "delta": {
+        "schema_version": "WORLD_STATE_DELTA_V0",
+        "delta_id": "world-delta:v4-1:reversed_hard_negative",
+        "metric_deltas": {
+          "feedback_match": 0
+        },
+        "causal_proof": false,
+        "continuity_status": "UNKNOWN",
+        "decision_authority": "KX108_ONLY"
+      },
+      "experience": {
+        "schema_version": "WORLD_EXPERIENCE_CANDIDATE_V0",
+        "experience_id": "world-exp:v4-1:reversed_hard_negative",
+        "state_before_ref": "world:simulated:v4-1:reversed_hard_negative:observation",
+        "state_after_ref": "world:simulated:v4-1:reversed_hard_negative:feedback",
+        "outcome": "CONTRADICTED_BY_TEACHER_FEEDBACK",
+        "transformation_ref": "transformation:relation-probe:reversed_hard_negative",
+        "delta_ref": "world-delta:v4-1:reversed_hard_negative",
+        "evidence_refs": [
+          "sha256:405f2b40f14f77358e8e14be14d51a70c7fa32c8f7f668f0e5d36c5640af80f1"
+        ],
+        "validation_status": "CANDIDATE",
+        "memory_eligibility": "CANDIDATE_ONLY",
+        "memory_write_allowed": false,
+        "auto_promotion_allowed": false,
+        "canonical_memory": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      "feedback_attribution": "SUPERVISED_AFTER_PRECOMMIT",
+      "teacher_label": "NONMATCHING_ARRANGEMENT",
+      "no_sens_semantic_claim": true
+    },
+    {
+      "world_observation": {
+        "observation_id": "world:simulated:v4-1:single_component:observation",
+        "source_kind": "SIMULATED",
+        "image_sha256": "d9a345846259b32ec7b57376e23a2bd510db0e53ecaf41a125d65b324b2603d6",
+        "feature_kind": "PIXEL_COMPONENTS_NOT_SEMANTIC_OBJECTS",
+        "component_count": 1,
+        "relation_candidate": null,
+        "readonly": true,
+        "world_state_is_memory": false
+      },
+      "transformation": {
+        "schema_version": "WORLD_TRANSFORMATION_V0",
+        "transformation_id": "transformation:relation-probe:single_component",
+        "epistemic_class": "SIMULATED",
+        "target_refs": [
+          "world:simulated:v4-1:single_component:observation"
+        ],
+        "parameters": {
+          "learner_method": "MIDPOINT_BETWEEN_OBSERVED_CLASSES",
+          "candidate_relation": null,
+          "image_component_count": 1
+        },
+        "time_basis": "SYNTHETIC_ORDER_NOT_CLOCK",
+        "decision_authority": "KX108_ONLY",
+        "execution_authority": false
+      },
+      "delta": {
+        "schema_version": "WORLD_STATE_DELTA_V0",
+        "delta_id": "world-delta:v4-1:single_component",
+        "metric_deltas": {
+          "feedback_match": 1
+        },
+        "causal_proof": false,
+        "continuity_status": "UNKNOWN",
+        "decision_authority": "KX108_ONLY"
+      },
+      "experience": {
+        "schema_version": "WORLD_EXPERIENCE_CANDIDATE_V0",
+        "experience_id": "world-exp:v4-1:single_component",
+        "state_before_ref": "world:simulated:v4-1:single_component:observation",
+        "state_after_ref": "world:simulated:v4-1:single_component:feedback",
+        "outcome": "MATCHED_TEACHER_FEEDBACK",
+        "transformation_ref": "transformation:relation-probe:single_component",
+        "delta_ref": "world-delta:v4-1:single_component",
+        "evidence_refs": [
+          "sha256:d9a345846259b32ec7b57376e23a2bd510db0e53ecaf41a125d65b324b2603d6"
+        ],
+        "validation_status": "CANDIDATE",
+        "memory_eligibility": "CANDIDATE_ONLY",
+        "memory_write_allowed": false,
+        "auto_promotion_allowed": false,
+        "canonical_memory": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      "feedback_attribution": "SUPERVISED_AFTER_PRECOMMIT",
+      "teacher_label": "HOLD",
+      "no_sens_semantic_claim": true
+    }
+  ],
+  "upstream_world_v4_sha256": "6ec2812ed75dfd37e841769c94c4bd10eb241f76c590064f3c78b95fe29eef20",
+  "upstream_v3_sha256": "4ba51e6a52690a451a6987d08106615f4125d0a7ef2ace23a20a7352f8f0927e",
+  "code_sha256": "a72b85ec49521f43cc35ca632706698eb991043ec72950df7b7f3545469281eb",
+  "memory_sha256": "2e83f4ebf1dd09463e399f0acf90601740223fac93743f7492bc033d23b77a3a",
+  "choices_sha256": "b5dfacb9f72f8c3b2e859d86cb93475cac749b60ab958f753c70bf3ee1d5a23a",
+  "composition_sha256": "8f23f1a662ff1494b330caa619e090160c7c0d02264020ae99864cc0bc18e17a",
+  "source_kind": "SIMULATED",
+  "training_lessons": 6,
+  "tests": [
+    {
+      "test_ref": "shifted",
+      "truth": "NEAR",
+      "decision": {
+        "status": "CANDIDATE_ONLY",
+        "candidate": "NEAR",
+        "distance": 0.5700558156616645,
+        "threshold": 0.996119287997635,
+        "semantic_label_predicted": null,
+        "physical_object_identity_proven": false
+      },
+      "correct": true,
+      "reason": "TEACHER_LABEL_REVEALED_AFTER_PRECOMMIT",
+      "source_sha256": "65fadcdc001b7645b5d75088ed52e79e4e70df6a667cb04e29579d56fc32ebb2",
+      "world_knowledge_validated": false
+    },
+    {
+      "test_ref": "quarter_turn",
+      "truth": "NEAR",
+      "decision": {
+        "status": "CANDIDATE_ONLY",
+        "candidate": "NEAR",
+        "distance": 0.5700558156616645,
+        "threshold": 0.996119287997635,
+        "semantic_label_predicted": null,
+        "physical_object_identity_proven": false
+      },
+      "correct": true,
+      "reason": "TEACHER_LABEL_REVEALED_AFTER_PRECOMMIT",
+      "source_sha256": "b4ea889514776238a9cf71ae7f68ea280aea38111ab7dd6bb1a8bbc007701e61",
+      "world_knowledge_validated": false
+    },
+    {
+      "test_ref": "scaled",
+      "truth": "NEAR",
+      "decision": {
+        "status": "CANDIDATE_ONLY",
+        "candidate": "NEAR",
+        "distance": 0.5662122164087251,
+        "threshold": 0.996119287997635,
+        "semantic_label_predicted": null,
+        "physical_object_identity_proven": false
+      },
+      "correct": true,
+      "reason": "TEACHER_LABEL_REVEALED_AFTER_PRECOMMIT",
+      "source_sha256": "3fbd51fd8b3bb11828add9c235f20b7918dadea5839deacce4f4287f5b046491",
+      "world_knowledge_validated": false
+    },
+    {
+      "test_ref": "far_shifted",
+      "truth": "FAR",
+      "decision": {
+        "status": "CANDIDATE_ONLY",
+        "candidate": "FAR",
+        "distance": 1.4236176540914653,
+        "threshold": 0.996119287997635,
+        "semantic_label_predicted": null,
+        "physical_object_identity_proven": false
+      },
+      "correct": true,
+      "reason": "TEACHER_LABEL_REVEALED_AFTER_PRECOMMIT",
+      "source_sha256": "098d2910b358840b686a9715b03f33a4ee7383b5b008c9c61b0d035920696c0b",
+      "world_knowledge_validated": false
+    },
+    {
+      "test_ref": "reversed_hard_negative",
+      "truth": "NONMATCHING_ARRANGEMENT",
+      "decision": {
+        "status": "CANDIDATE_ONLY",
+        "candidate": "NEAR",
+        "distance": 0.7286157281295732,
+        "threshold": 0.996119287997635,
+        "semantic_label_predicted": null,
+        "physical_object_identity_proven": false
+      },
+      "correct": false,
+      "reason": "TEACHER_LABEL_REVEALED_AFTER_PRECOMMIT",
+      "source_sha256": "405f2b40f14f77358e8e14be14d51a70c7fa32c8f7f668f0e5d36c5640af80f1",
+      "world_knowledge_validated": false
+    },
+    {
+      "test_ref": "single_component",
+      "truth": "HOLD",
+      "decision": {
+        "status": "HOLD_UNSUPPORTED_COMPONENT_TOPOLOGY",
+        "candidate": null,
+        "reason": "REQUIRES_EXACTLY_TWO_DISCONNECTED_COMPONENTS"
+      },
+      "correct": true,
+      "reason": "TEACHER_LABEL_REVEALED_AFTER_PRECOMMIT",
+      "source_sha256": "d9a345846259b32ec7b57376e23a2bd510db0e53ecaf41a125d65b324b2603d6",
+      "world_knowledge_validated": false
+    }
+  ],
+  "learned_relation": {
+    "status": "CANDIDATE_LEARNED_THRESHOLD",
+    "threshold": 0.996119287997635,
+    "near_max_observed": 0.583853462138692,
+    "far_min_observed": 1.4083851138565782,
+    "training_example_ids": [
+      "lesson01",
+      "lesson02",
+      "lesson03",
+      "lesson04",
+      "lesson05",
+      "lesson06"
+    ],
+    "selection_rule": "MIDPOINT_BETWEEN_OBSERVED_CLASSES",
+    "confidence_calibrated": false
+  },
+  "composition": {
+    "student": {
+      "ref": "images/composition_candidate.png",
+      "sha256": "69cc6c6df4d1d75e6b8d76391d942b502ba5f6c2a7da8f407e17fb69d3193b8b"
+    },
+    "teacher": {
+      "ref": "images/composition_teacher_revealed.png",
+      "sha256": "46353c0acc14c805fff16ac91b5c73b453181ce40ae101d7cde36461e51d22b4"
+    },
+    "score": {
+      "pixel_xor": 262,
+      "blank_error": 536,
+      "better_than_blank": true,
+      "pixel_iou": 0.5821371610845295
+    },
+    "teacher_target_accessed_after_artifact_commit": true,
+    "novel_composition_is_rearranged_stored_pixels": true,
+    "semantic_structure_discovered": false
+  },
+  "relation_attribution": "PIXEL_COMPONENT_DISTANCE_LEARNED_FROM_LABELED_TEACHER_EXAMPLES",
+  "spatial_direction_understood": false,
+  "rotation_invariant_relation": "DISTANCE_ONLY_NOT_ABOVE_BELOW",
+  "world_identity_verified": false,
+  "sens_executed": false,
+  "no_b8_promotion": true,
+  "native_memory_write_allowed": false,
+  "auto_promotion_allowed": false,
+  "decision_authority": "KX108_ONLY"
+}

@@ -1,0 +1,14 @@
+{
+  "index": 10,
+  "previous": "fd3a2e49cecf3dcf7e84ab14f85180ab0a78096894def6096b2c2ee7e9b71eb8",
+  "kind": "INSTRUMENT_SELECTION_HOLD",
+  "payload": {
+    "shape": "triangle",
+    "intent": "UNSEEN_INTENT",
+    "reason": "HOLD_NO_MATCHING_EXPERIENCE"
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "f337dffa3570abf068c4d9d0eb3c676103541ce5b4ff513eb44bd6e8383f2c8a"
+}

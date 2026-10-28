@@ -1,0 +1,18 @@
+{
+  "index": 6,
+  "previous": "54cfd25516881a20ad8d551998c0e753b3fc1cd7eded90eed08401338a3f26b1",
+  "kind": "HELD_OUT_TEST",
+  "payload": {
+    "skill_id": "ellipse",
+    "registry_version": 3,
+    "candidate_sha256": "5ee46352d393b5e7ec9ea4cfc807406969627936ef3e0314aeaa567ffdc61403",
+    "verdict": "IMPROVED",
+    "candidate_error": 210,
+    "baseline_error": 280,
+    "test_used_for_training": false
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "393036943f799d2abd9b26946e3e0ad465b19cfc7dc378c46d9d97661b23ea73"
+}

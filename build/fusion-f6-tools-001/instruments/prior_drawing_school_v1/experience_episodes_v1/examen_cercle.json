@@ -1,0 +1,701 @@
+{
+  "schema_version": "BRODY_EXPERIENCE_MEMORY_V1",
+  "episode_id": "examen_cercle",
+  "source_kind": "SIMULATED",
+  "produced_kind": "GENERATED",
+  "observation": {
+    "source_ref": "teacher_images/examen_cercle.png",
+    "source_sha256": "67a4561b5dd99f6f455ffc73553ddd60eb974c24f137fc24d1f2e66ba0e006fe",
+    "teacher_source_visible": true,
+    "intent": "COPY_VISIBLE_REFERENCE_BY_CORRECTING_PIXEL_ERROR",
+    "image_space": "PIXEL_XY_64_64",
+    "source_overwritten": false
+  },
+  "interpretation": {
+    "kind": "RASTER_FEATURE_CANDIDATE",
+    "algorithmically_observed_black_pixels": 288,
+    "observed_bbox": [
+      15,
+      12,
+      48,
+      45
+    ],
+    "observed_8x8_ink_signature": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "semantic_shape_understood": false,
+    "text_interpretation_claim": null,
+    "uncertainty": [
+      "SYNTHETIC_SOURCE",
+      "VISIBLE_REFERENCE_FEEDBACK",
+      "NO_SEMANTIC_REASONING_MODULE"
+    ]
+  },
+  "choice": {
+    "selection_author": "DETERMINISTIC_PIXEL_SCORE_ALGORITHM",
+    "reason": "PIXEL_ERROR_MINIMIZATION_GIVEN_VISIBLE_REFERENCE",
+    "memory_source_ref": "cours_cercle",
+    "recall_gate": "ACCEPTED_CANDIDATE",
+    "available_actions": [
+      "ADD",
+      "ERASE",
+      "REPLACE",
+      "HOLD"
+    ],
+    "score": "BINARY_PIXEL_XOR",
+    "candidate_gestures_from_raster": 1,
+    "alternative_edit_candidates_not_selected": 3,
+    "human_free_choice_claimed": false
+  },
+  "procedure_ref": {
+    "catalogue": "BRODY_IMAGE_V1_PURE_FUNCTIONS",
+    "executed_capabilities": [
+      {
+        "capability": "image-thinning",
+        "module_path": "brody_world_physique/drawing_school_v1.py",
+        "symbol": "suggest_gestures_from_reference",
+        "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      },
+      {
+        "capability": "pixel-feedback-revision",
+        "module_path": "brody_world_physique/drawing_school_v1.py",
+        "symbol": "correct_drawing",
+        "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      },
+      {
+        "capability": "drawing-motor-render",
+        "module_path": "brody_world_physique/drawing_school_v1.py",
+        "symbol": "render",
+        "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      },
+      {
+        "capability": "image-pixel-comparison",
+        "module_path": "brody_world_physique/drawing_school_v0.py",
+        "symbol": "black_pixels",
+        "code_sha256": "e4ced171788c05ffea2768f3ccafa07faad6bf73579db685105083606fad4b87",
+        "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+      }
+    ],
+    "runtime_parameter_refs": {
+      "max_revisions": 24,
+      "canvas": [
+        64,
+        64
+      ],
+      "brush_width": 3,
+      "recall_source_hash": null
+    },
+    "pillow_version": "12.3.0",
+    "executable_code_embedded_in_memory": false,
+    "arbitrary_code_execution_allowed": false
+  },
+  "execution_trace": {
+    "initial_recalled_gestures": [
+      {
+        "points": [
+          [
+            16,
+            25
+          ],
+          [
+            16,
+            32
+          ],
+          [
+            17,
+            36
+          ],
+          [
+            19,
+            37
+          ],
+          [
+            19,
+            39
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            22,
+            40
+          ],
+          [
+            23,
+            42
+          ],
+          [
+            28,
+            43
+          ],
+          [
+            34,
+            44
+          ],
+          [
+            40,
+            42
+          ],
+          [
+            45,
+            37
+          ],
+          [
+            46,
+            32
+          ],
+          [
+            47,
+            31
+          ],
+          [
+            47,
+            26
+          ],
+          [
+            45,
+            20
+          ],
+          [
+            43,
+            19
+          ],
+          [
+            43,
+            18
+          ],
+          [
+            42,
+            16
+          ],
+          [
+            40,
+            16
+          ],
+          [
+            39,
+            14
+          ],
+          [
+            35,
+            13
+          ],
+          [
+            28,
+            13
+          ],
+          [
+            24,
+            14
+          ],
+          [
+            23,
+            16
+          ],
+          [
+            21,
+            16
+          ],
+          [
+            19,
+            18
+          ],
+          [
+            19,
+            20
+          ],
+          [
+            17,
+            21
+          ],
+          [
+            16,
+            25
+          ]
+        ],
+        "kind": "CURVED_STROKE"
+      }
+    ],
+    "initial_recall_error_px": 64,
+    "memory_rejected_before_editing": false,
+    "operations": [
+      {
+        "revision": 1,
+        "action": "REPLACE",
+        "target_index": 0,
+        "gesture_before": {
+          "points": [
+            [
+              16,
+              25
+            ],
+            [
+              16,
+              32
+            ],
+            [
+              17,
+              36
+            ],
+            [
+              19,
+              37
+            ],
+            [
+              19,
+              39
+            ],
+            [
+              20,
+              40
+            ],
+            [
+              22,
+              40
+            ],
+            [
+              23,
+              42
+            ],
+            [
+              28,
+              43
+            ],
+            [
+              34,
+              44
+            ],
+            [
+              40,
+              42
+            ],
+            [
+              45,
+              37
+            ],
+            [
+              46,
+              32
+            ],
+            [
+              47,
+              31
+            ],
+            [
+              47,
+              26
+            ],
+            [
+              45,
+              20
+            ],
+            [
+              43,
+              19
+            ],
+            [
+              43,
+              18
+            ],
+            [
+              42,
+              16
+            ],
+            [
+              40,
+              16
+            ],
+            [
+              39,
+              14
+            ],
+            [
+              35,
+              13
+            ],
+            [
+              28,
+              13
+            ],
+            [
+              24,
+              14
+            ],
+            [
+              23,
+              16
+            ],
+            [
+              21,
+              16
+            ],
+            [
+              19,
+              18
+            ],
+            [
+              19,
+              20
+            ],
+            [
+              17,
+              21
+            ],
+            [
+              16,
+              25
+            ]
+          ],
+          "kind": "CURVED_STROKE"
+        },
+        "gesture_applied": {
+          "points": [
+            [
+              16,
+              24
+            ],
+            [
+              16,
+              33
+            ],
+            [
+              18,
+              37
+            ],
+            [
+              22,
+              41
+            ],
+            [
+              27,
+              43
+            ],
+            [
+              34,
+              44
+            ],
+            [
+              41,
+              41
+            ],
+            [
+              44,
+              38
+            ],
+            [
+              46,
+              32
+            ],
+            [
+              47,
+              31
+            ],
+            [
+              47,
+              26
+            ],
+            [
+              44,
+              19
+            ],
+            [
+              40,
+              15
+            ],
+            [
+              35,
+              13
+            ],
+            [
+              27,
+              13
+            ],
+            [
+              23,
+              15
+            ],
+            [
+              18,
+              20
+            ],
+            [
+              16,
+              24
+            ]
+          ],
+          "kind": "CURVED_STROKE"
+        },
+        "alternatives_evaluated": 3,
+        "choice_rule": "MIN_PIXEL_XOR_STRICT_IMPROVEMENT_FIRST_TIE",
+        "error_before": 64,
+        "error_after": 60,
+        "strict_improvement": true
+      }
+    ],
+    "replayed_step_count": 1,
+    "final_gestures": [
+      {
+        "kind": "CURVED_STROKE",
+        "points": [
+          [
+            16,
+            24
+          ],
+          [
+            16,
+            33
+          ],
+          [
+            18,
+            37
+          ],
+          [
+            22,
+            41
+          ],
+          [
+            27,
+            43
+          ],
+          [
+            34,
+            44
+          ],
+          [
+            41,
+            41
+          ],
+          [
+            44,
+            38
+          ],
+          [
+            46,
+            32
+          ],
+          [
+            47,
+            31
+          ],
+          [
+            47,
+            26
+          ],
+          [
+            44,
+            19
+          ],
+          [
+            40,
+            15
+          ],
+          [
+            35,
+            13
+          ],
+          [
+            27,
+            13
+          ],
+          [
+            23,
+            15
+          ],
+          [
+            18,
+            20
+          ],
+          [
+            16,
+            24
+          ]
+        ]
+      }
+    ],
+    "generated_artifact_ref": "attempts/examen_cercle_apres_correction.png",
+    "generated_artifact_sha256": "d0b637598ac19282d787f727fbaa3d76f7189fe43965b7d3293bf94aa441469e"
+  },
+  "evaluation": {
+    "evaluator": "EXACT_SOURCE_PIXEL_XOR",
+    "blank_page_error_px": 288,
+    "raw_recall_error_px": 64,
+    "after_recall_gate_error_px": 64,
+    "final_error_px": 60,
+    "improved_vs_blank": true,
+    "source_pixels_visible_during_correction": true,
+    "world_knowledge_validated": false,
+    "independent_semantic_evaluation": "NOT_RUN",
+    "transfer_causality_proven": false
+  },
+  "retained_skill": {
+    "status": "CANDIDATE_ONLY",
+    "candidate_motor_gestures": [
+      {
+        "kind": "CURVED_STROKE",
+        "points": [
+          [
+            16,
+            24
+          ],
+          [
+            16,
+            33
+          ],
+          [
+            18,
+            37
+          ],
+          [
+            22,
+            41
+          ],
+          [
+            27,
+            43
+          ],
+          [
+            34,
+            44
+          ],
+          [
+            41,
+            41
+          ],
+          [
+            44,
+            38
+          ],
+          [
+            46,
+            32
+          ],
+          [
+            47,
+            31
+          ],
+          [
+            47,
+            26
+          ],
+          [
+            44,
+            19
+          ],
+          [
+            40,
+            15
+          ],
+          [
+            35,
+            13
+          ],
+          [
+            27,
+            13
+          ],
+          [
+            23,
+            15
+          ],
+          [
+            18,
+            20
+          ],
+          [
+            16,
+            24
+          ]
+        ]
+      }
+    ],
+    "source_sha256": "67a4561b5dd99f6f455ffc73553ddd60eb974c24f137fc24d1f2e66ba0e006fe",
+    "transfer_verified_across_independent_sources": false,
+    "native_memory_eligible": false,
+    "trained_weights": false
+  },
+  "rejected_paths": [
+    {
+      "kind": "ALTERNATE_EDIT_CANDIDATES",
+      "considered_and_not_selected": 3,
+      "why": "NOT_STRICTLY_BETTER_THAN_FIRST_BEST",
+      "individual_choices_stored": false,
+      "source": "DETERMINISTIC_COUNTER_NOT_FULL_REASONING_TRACE"
+    }
+  ],
+  "memory_boundary": {
+    "model_of_memory": "LOCAL_EXPERIMENTAL_CANDIDATE_ONLY",
+    "memory_write_allowed": false,
+    "auto_promotion_allowed": false,
+    "kernel_mutation": false,
+    "emits_act": false,
+    "decision_authority": "KX108_ONLY",
+    "obsidia_native_memory_adapter": "NOT_CONNECTED"
+  }
+}

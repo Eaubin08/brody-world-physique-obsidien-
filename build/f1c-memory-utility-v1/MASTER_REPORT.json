@@ -1,0 +1,195 @@
+{
+  "schema": "BRODY_F1C_MEMORY_UTILITY_AUDIT_V1",
+  "train": [
+    {
+      "lesson": "train_accel_1",
+      "context": "vertical|speeding_up",
+      "experiences": 1
+    },
+    {
+      "lesson": "train_accel_2",
+      "context": "vertical|speeding_up",
+      "experiences": 2
+    },
+    {
+      "lesson": "train_steady_1",
+      "context": "vertical|steady",
+      "experiences": 3
+    },
+    {
+      "lesson": "train_steady_2",
+      "context": "vertical|steady",
+      "experiences": 4
+    }
+  ],
+  "test": [
+    {
+      "case": "heldout_accel",
+      "context": "vertical|speeding_up",
+      "no_memory": {
+        "selected": "ACCELERATION",
+        "mode": "CANDIDATE",
+        "source": "LOCAL_BACKTEST",
+        "errors_by_model_px": {
+          "ACCELERATION": 0.0,
+          "STILL": 10.0,
+          "VELOCITY": 2.0
+        },
+        "selected_error_px": 0.0
+      },
+      "with_memory": {
+        "selected": "ACCELERATION",
+        "mode": "CANDIDATE",
+        "source": "EXPERIENCE_MATCHED",
+        "eligible_episodes": 2,
+        "errors_by_model_px": {
+          "ACCELERATION": 0.0,
+          "STILL": 10.0,
+          "VELOCITY": 2.0
+        },
+        "selected_error_px": 0.0
+      },
+      "choice_changed": false,
+      "utility_px": 0.0,
+      "forecast_sealed_before_truth": true
+    },
+    {
+      "case": "heldout_accel_shift",
+      "context": "vertical|speeding_up",
+      "no_memory": {
+        "selected": "ACCELERATION",
+        "mode": "CANDIDATE",
+        "source": "LOCAL_BACKTEST",
+        "errors_by_model_px": {
+          "ACCELERATION": 0.0,
+          "STILL": 10.0,
+          "VELOCITY": 2.0
+        },
+        "selected_error_px": 0.0
+      },
+      "with_memory": {
+        "selected": "ACCELERATION",
+        "mode": "CANDIDATE",
+        "source": "EXPERIENCE_MATCHED",
+        "eligible_episodes": 2,
+        "errors_by_model_px": {
+          "ACCELERATION": 0.0,
+          "STILL": 10.0,
+          "VELOCITY": 2.0
+        },
+        "selected_error_px": 0.0
+      },
+      "choice_changed": false,
+      "utility_px": 0.0,
+      "forecast_sealed_before_truth": true
+    },
+    {
+      "case": "heldout_reversal",
+      "context": "vertical|speeding_up",
+      "no_memory": {
+        "selected": "ACCELERATION",
+        "mode": "CANDIDATE",
+        "source": "LOCAL_BACKTEST",
+        "errors_by_model_px": {
+          "ACCELERATION": 14.0,
+          "STILL": 4.0,
+          "VELOCITY": 12.0
+        },
+        "selected_error_px": 14.0
+      },
+      "with_memory": {
+        "selected": "ACCELERATION",
+        "mode": "CANDIDATE",
+        "source": "EXPERIENCE_MATCHED",
+        "eligible_episodes": 2,
+        "errors_by_model_px": {
+          "ACCELERATION": 14.0,
+          "STILL": 4.0,
+          "VELOCITY": 12.0
+        },
+        "selected_error_px": 14.0
+      },
+      "choice_changed": false,
+      "utility_px": 0.0,
+      "forecast_sealed_before_truth": true
+    },
+    {
+      "case": "heldout_steady",
+      "context": "vertical|steady",
+      "no_memory": {
+        "selected": null,
+        "mode": "DOUBT",
+        "source": "LOCAL_BACKTEST",
+        "errors_by_model_px": {
+          "ACCELERATION": 0.0,
+          "STILL": 5.0,
+          "VELOCITY": 0.0
+        },
+        "selected_error_px": null
+      },
+      "with_memory": {
+        "selected": null,
+        "mode": "DOUBT",
+        "source": "EXPERIENCE_MATCHED",
+        "eligible_episodes": 2,
+        "errors_by_model_px": {
+          "ACCELERATION": 0.0,
+          "STILL": 5.0,
+          "VELOCITY": 0.0
+        },
+        "selected_error_px": null
+      },
+      "choice_changed": false,
+      "utility_px": null,
+      "forecast_sealed_before_truth": true
+    },
+    {
+      "case": "heldout_stop",
+      "context": "vertical|steady",
+      "no_memory": {
+        "selected": null,
+        "mode": "DOUBT",
+        "source": "LOCAL_BACKTEST",
+        "errors_by_model_px": {
+          "ACCELERATION": 5.0,
+          "STILL": 0.0,
+          "VELOCITY": 5.0
+        },
+        "selected_error_px": null
+      },
+      "with_memory": {
+        "selected": null,
+        "mode": "DOUBT",
+        "source": "EXPERIENCE_MATCHED",
+        "eligible_episodes": 2,
+        "errors_by_model_px": {
+          "ACCELERATION": 5.0,
+          "STILL": 0.0,
+          "VELOCITY": 5.0
+        },
+        "selected_error_px": null
+      },
+      "choice_changed": false,
+      "utility_px": null,
+      "forecast_sealed_before_truth": true
+    }
+  ],
+  "paired_cases": 5,
+  "comparable_cases": 3,
+  "improved_cases": 0,
+  "degraded_cases": 0,
+  "unchanged_cases": 3,
+  "changed_model_choices": 0,
+  "mean_memory_utility_px": 0.0,
+  "all_forecasts_sealed": true,
+  "source_hash_separation_checked": true,
+  "synthetic_cases": true,
+  "physics_discovery_proven": false,
+  "reciprocal_generation_integrated": false,
+  "cumulative_p156_integrated": false,
+  "unified_education_e2e": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "verdict": "F1C_PAIRED_AUDIT_ONLY"
+}

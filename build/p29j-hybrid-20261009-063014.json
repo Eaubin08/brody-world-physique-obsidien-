@@ -1,0 +1,580 @@
+{
+  "accepted": 49,
+  "b8_promotion": false,
+  "catastrophic_over_10px": 2,
+  "changed_original_proposals": false,
+  "choices": {
+    "A1_SPATIAL_DELTA": 11,
+    "A4_FROZEN_MEMORY": 39,
+    "HOLD": 0
+  },
+  "coverage": 1.0,
+  "decision_authority": "KX108_ONLY",
+  "future_observed_cases": 49,
+  "independent_data_validation": false,
+  "input_sha256": "9e71958638598167bbea262c196b974572435d7ce4021572e93d62aa59b2bbee",
+  "issued_coverage": 1.0,
+  "issued_predictions": 50,
+  "mean_error_px": 3.368161194972157,
+  "multirepresentation_fusion_proven": false,
+  "native_memory_write": false,
+  "policy": "USE_FROZEN_MEMORY_IF_PROPOSED_ELSE_SPATIAL_ELSE_HOLD",
+  "rows": [
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_01.mp4",
+      "error_px": 2.909441750455711,
+      "frame": 18,
+      "future_observed": true,
+      "prediction_xy": [
+        103.97107403931724,
+        73.13844746178492
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_01.mp4",
+      "error_px": 0.45065234789751984,
+      "frame": 24,
+      "future_observed": true,
+      "prediction_xy": [
+        106.3589142861835,
+        84.23749598230594
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_01.mp4",
+      "error_px": 0.17641832610044117,
+      "frame": 30,
+      "future_observed": true,
+      "prediction_xy": [
+        110.41304969267509,
+        100.63275680315125
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_01.mp4",
+      "error_px": 1.3812739033968593,
+      "frame": 36,
+      "future_observed": true,
+      "prediction_xy": [
+        113.78069651775462,
+        119.21577466591376
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_01.mp4",
+      "error_px": 0.7994056131075309,
+      "frame": 42,
+      "future_observed": true,
+      "prediction_xy": [
+        118.22152232190804,
+        141.08382949936615
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_01.mp4",
+      "error_px": 0.5503904582944931,
+      "frame": 48,
+      "future_observed": true,
+      "prediction_xy": [
+        122.30224693199995,
+        163.14155615455013
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_01.mp4",
+      "error_px": 1.061375589441701,
+      "frame": 54,
+      "future_observed": true,
+      "prediction_xy": [
+        126.2811098598945,
+        187.4095400960923
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_01.mp4",
+      "error_px": 0.8855233032025752,
+      "frame": 60,
+      "future_observed": true,
+      "prediction_xy": [
+        129.62173100626453,
+        216.74152281392668
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_01.mp4",
+      "error_px": 2.0694735333501026,
+      "frame": 66,
+      "future_observed": true,
+      "prediction_xy": [
+        132.9778445398587,
+        246.62759407326362
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_02.mp4",
+      "error_px": 0.34628049123970533,
+      "frame": 18,
+      "future_observed": true,
+      "prediction_xy": [
+        127.31309180690968,
+        220.98258833724603
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_02.mp4",
+      "error_px": 0.6402727164735139,
+      "frame": 24,
+      "future_observed": true,
+      "prediction_xy": [
+        142.76885720987,
+        222.44278302443618
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_02.mp4",
+      "error_px": 0.225450645369254,
+      "frame": 30,
+      "future_observed": true,
+      "prediction_xy": [
+        158.9741809376867,
+        225.02827050043993
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_02.mp4",
+      "error_px": 0.44361363851364666,
+      "frame": 36,
+      "future_observed": true,
+      "prediction_xy": [
+        174.5047267234682,
+        225.8611929575057
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_02.mp4",
+      "error_px": 0.38023277842961545,
+      "frame": 42,
+      "future_observed": true,
+      "prediction_xy": [
+        189.84048469603718,
+        227.18181655429333
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_02.mp4",
+      "error_px": 0.48483092937924294,
+      "frame": 48,
+      "future_observed": true,
+      "prediction_xy": [
+        205.78402897300617,
+        228.60549471273922
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_02.mp4",
+      "error_px": 0.27132558728030404,
+      "frame": 54,
+      "future_observed": true,
+      "prediction_xy": [
+        221.74446602865052,
+        230.7220287333528
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_02.mp4",
+      "error_px": 0.6652518266457093,
+      "frame": 60,
+      "future_observed": true,
+      "prediction_xy": [
+        237.41542087273504,
+        231.82624063833364
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_02.mp4",
+      "error_px": 0.34959677537033956,
+      "frame": 66,
+      "future_observed": true,
+      "prediction_xy": [
+        253.38615030723105,
+        232.86119213317397
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_03.mp4",
+      "error_px": 2.3971250236219,
+      "frame": 18,
+      "future_observed": true,
+      "prediction_xy": [
+        104.01613777842513,
+        72.5220325108666
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_03.mp4",
+      "error_px": 1.2125270641508568,
+      "frame": 24,
+      "future_observed": true,
+      "prediction_xy": [
+        106.2819634973565,
+        84.2256171869901
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_03.mp4",
+      "error_px": 0.541038067437819,
+      "frame": 30,
+      "future_observed": true,
+      "prediction_xy": [
+        111.14484887764577,
+        100.79335199862254
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_03.mp4",
+      "error_px": 0.6157560889993989,
+      "frame": 36,
+      "future_observed": true,
+      "prediction_xy": [
+        114.05109601781471,
+        119.02950682609819
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_03.mp4",
+      "error_px": 0.6139707688341701,
+      "frame": 42,
+      "future_observed": true,
+      "prediction_xy": [
+        118.11243545226714,
+        140.12457705471147
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_03.mp4",
+      "error_px": 1.0812569098760425,
+      "frame": 48,
+      "future_observed": true,
+      "prediction_xy": [
+        121.61205195325984,
+        163.31023032411645
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_03.mp4",
+      "error_px": 1.1272020540508927,
+      "frame": 54,
+      "future_observed": true,
+      "prediction_xy": [
+        126.46066438016726,
+        187.79424525919725
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_03.mp4",
+      "error_px": 2.1322387184244063,
+      "frame": 60,
+      "future_observed": true,
+      "prediction_xy": [
+        128.65035432009398,
+        216.75599520282432
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_03.mp4",
+      "error_px": 0.8100003658718437,
+      "frame": 66,
+      "future_observed": true,
+      "prediction_xy": [
+        133.34287091430897,
+        244.78510599305068
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_04.mp4",
+      "error_px": 1.4677402703312392,
+      "frame": 18,
+      "future_observed": true,
+      "prediction_xy": [
+        127.78802300144677,
+        217.5644535567395
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_04.mp4",
+      "error_px": 0.3147352468268587,
+      "frame": 24,
+      "future_observed": true,
+      "prediction_xy": [
+        142.61363193094792,
+        220.10735124200085
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_04.mp4",
+      "error_px": 0.3046721776530703,
+      "frame": 30,
+      "future_observed": true,
+      "prediction_xy": [
+        158.5516273345388,
+        222.155415038799
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_04.mp4",
+      "error_px": 65.00277247606435,
+      "frame": 36,
+      "future_observed": true,
+      "prediction_xy": [
+        174.00593124245054,
+        223.4798926147181
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_04.mp4",
+      "error_px": 64.03217018707166,
+      "frame": 42,
+      "future_observed": true,
+      "prediction_xy": [
+        190.35085143517531,
+        354.50559565084086
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_04.mp4",
+      "error_px": 1.8655110575985483,
+      "frame": 48,
+      "future_observed": true,
+      "prediction_xy": [
+        206.4720571239888,
+        292.4661135875846
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_04.mp4",
+      "error_px": 1.0532451513764078,
+      "frame": 54,
+      "future_observed": true,
+      "prediction_xy": [
+        221.83845873780598,
+        291.5625504215578
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_04.mp4",
+      "error_px": 0.03645895903337166,
+      "frame": 60,
+      "future_observed": true,
+      "prediction_xy": [
+        238.43466529197224,
+        294.3834835881305
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_04.mp4",
+      "error_px": 1.6376940623342278,
+      "frame": 66,
+      "future_observed": true,
+      "prediction_xy": [
+        254.0101937550239,
+        295.6720816676731
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_05.mp4",
+      "error_px": 0.178397677972515,
+      "frame": 18,
+      "future_observed": true,
+      "prediction_xy": [
+        127.18261116998312,
+        115.05862671219438
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_05.mp4",
+      "error_px": 0.21834248935995001,
+      "frame": 24,
+      "future_observed": true,
+      "prediction_xy": [
+        136.16654619101575,
+        117.79992250485157
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_05.mp4",
+      "error_px": 0.22432905487549087,
+      "frame": 30,
+      "future_observed": true,
+      "prediction_xy": [
+        144.95853880178504,
+        121.06208998493912
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_05.mp4",
+      "error_px": 0.17512181918394415,
+      "frame": 36,
+      "future_observed": true,
+      "prediction_xy": [
+        154.11987926363685,
+        123.76913336435058
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_05.mp4",
+      "error_px": 0.14058049867862735,
+      "frame": 42,
+      "future_observed": true,
+      "prediction_xy": [
+        163.04171045445744,
+        126.99471337219296
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_05.mp4",
+      "error_px": 0.14667432835980201,
+      "frame": 48,
+      "future_observed": true,
+      "prediction_xy": [
+        172.19189469502328,
+        129.83083650016766
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_05.mp4",
+      "error_px": 0.09049118549740277,
+      "frame": 54,
+      "future_observed": true,
+      "prediction_xy": [
+        180.99951921189998,
+        132.9188056831116
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_05.mp4",
+      "error_px": 0.21482354503925485,
+      "frame": 60,
+      "future_observed": true,
+      "prediction_xy": [
+        190.00163860434083,
+        136.10575375799678
+      ]
+    },
+    {
+      "chosen_arm": "A1_SPATIAL_DELTA",
+      "clip": "test_05.mp4",
+      "error_px": 0.0416521685799465,
+      "frame": 66,
+      "future_observed": true,
+      "prediction_xy": [
+        199.10190612493446,
+        138.79911116972602
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_06.mp4",
+      "error_px": 1.156043159228414,
+      "frame": 18,
+      "future_observed": true,
+      "prediction_xy": [
+        126.9434415317764,
+        218.55205829975682
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_06.mp4",
+      "error_px": null,
+      "frame": 24,
+      "future_observed": false,
+      "prediction_xy": [
+        142.88307945582915,
+        218.51821052508072
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_06.mp4",
+      "error_px": 0.14791156270354275,
+      "frame": 54,
+      "future_observed": true,
+      "prediction_xy": [
+        221.4943448126372,
+        227.67186132029153
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_06.mp4",
+      "error_px": 1.0301610113949018,
+      "frame": 60,
+      "future_observed": true,
+      "prediction_xy": [
+        236.94343750256851,
+        228.54959522671092
+      ]
+    },
+    {
+      "chosen_arm": "A4_FROZEN_MEMORY",
+      "clip": "test_06.mp4",
+      "error_px": 0.9384451892565707,
+      "frame": 66,
+      "future_observed": true,
+      "prediction_xy": [
+        252.8632056000255,
+        230.46423718767696
+      ]
+    }
+  ],
+  "schema": "BRODY_P29J_FROZEN_HYBRID_REPLAY_V0",
+  "status": "POSTHOC_POLICY_REPLAY_NOT_PROSPECTIVE_VALIDATION",
+  "test_errors_used_to_choose": false,
+  "total": 50,
+  "unscorable_predictions": 1,
+  "world_physics_learned": false
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "BRODY_F9_INTENSIVE_1000_V0",
+  "requested_episodes": 10000,
+  "completed_episodes": 10000,
+  "seed": 20261009,
+  "training_contexts": 12,
+  "train_update_rule": "EWMA_DECAY_0_75",
+  "policy_changes_on_train": 1,
+  "contradictory_train_episodes": 417,
+  "checkpoints": [
+    {
+      "at": 1000,
+      "mean_error": 0.0,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "a3fe81630cffe0eeb5d34fb23d4ceaeef0a0e8a4c235e2826cb2e69a1be07fa8"
+    },
+    {
+      "at": 2000,
+      "mean_error": 0.0,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "60e53dfa7f30a924c0d60f055d4374c91de6505490f62a8175cdb630ab2e9d28"
+    },
+    {
+      "at": 3000,
+      "mean_error": 0.0,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "5caada4ebc128f2ed75768d7d175f8422f013b9d24f22f0df504c145c94feb48"
+    },
+    {
+      "at": 4000,
+      "mean_error": 0.0,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "da6c1c2adf2687614658b25f27cf1b6d68cd2966bba6555cb2f279ff48a96592"
+    },
+    {
+      "at": 5000,
+      "mean_error": 0.0,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "a31105dddb67503b527852e1f68398a27929cb383969d705dfdb50f9a624a8a6"
+    },
+    {
+      "at": 6000,
+      "mean_error": 0.4280904134114583,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "c90435750fe115c76a0fb9f85d3c0eb70c1d29b979cf9534321d0b9b8d0e4c6b"
+    },
+    {
+      "at": 7000,
+      "mean_error": 0.4280904134114583,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "973e1be3db79de8e4fdd225af08f07ef5c7d346151965ff3dfa931fa615a1a4c"
+    },
+    {
+      "at": 8000,
+      "mean_error": 0.4280904134114583,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "2d9f461eff816448ee6455e39860ef0d1ff10a15e690bc371ae78f6f2ee2f903"
+    },
+    {
+      "at": 9000,
+      "mean_error": 0.4280904134114583,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "8a5da32dea35eae18e69dab55d1405044d6c7ed8f83fc246267ea453103a9039"
+    },
+    {
+      "at": 10000,
+      "mean_error": 0.4280904134114583,
+      "held": 0,
+      "evaluated": 48,
+      "snapshot_digest": "de26824c869956741da32c1ed75cbe4b07a406305917fdba8b8ec56612b7f14d"
+    }
+  ],
+  "blind_test_count": 480,
+  "max_forgetting_delta": 5.6005859375,
+  "final_policy": {
+    "EXPRESSIVE|angle": "NIB",
+    "EXPRESSIVE|box": "NIB",
+    "EXPRESSIVE|line": "NIB",
+    "EXPRESSIVE|zigzag": "NIB",
+    "LIGHT|angle": "PENCIL",
+    "LIGHT|box": "PENCIL",
+    "LIGHT|line": "PEN",
+    "LIGHT|zigzag": "PENCIL",
+    "UNIFORM|angle": "PEN",
+    "UNIFORM|box": "PEN",
+    "UNIFORM|line": "PEN",
+    "UNIFORM|zigzag": "PEN"
+  },
+  "receipt_tip": "30ce4109c8aef0029c598c7ea6093d11887c8c17593f3225614af6ce53f731b9",
+  "receipt_count": 10000,
+  "no_test_to_train_feedback": true,
+  "eval_generator_shared_with_train": true,
+  "general_vision_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

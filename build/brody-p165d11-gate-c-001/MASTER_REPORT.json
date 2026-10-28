@@ -1,0 +1,115 @@
+{
+  "schema": "BRODY_P165D11_INDEPENDENT_GATE_C",
+  "families": {
+    "abrupt_jump": {
+      "episodes": 12,
+      "four_frame": 12,
+      "same_path_pre_post": 0,
+      "pre_visible": 12,
+      "post_return": 2,
+      "HOLD": 0,
+      "MULTI": 0,
+      "CANDIDATE": 12
+    },
+    "rapid_accel": {
+      "episodes": 12,
+      "four_frame": 12,
+      "same_path_pre_post": 12,
+      "pre_visible": 12,
+      "post_return": 12,
+      "HOLD": 0,
+      "MULTI": 0,
+      "CANDIDATE": 12
+    },
+    "abrupt_brake": {
+      "episodes": 12,
+      "four_frame": 12,
+      "same_path_pre_post": 12,
+      "pre_visible": 12,
+      "post_return": 12,
+      "HOLD": 0,
+      "MULTI": 0,
+      "CANDIDATE": 12
+    },
+    "reverse": {
+      "episodes": 12,
+      "four_frame": 12,
+      "same_path_pre_post": 12,
+      "pre_visible": 12,
+      "post_return": 12,
+      "HOLD": 0,
+      "MULTI": 0,
+      "CANDIDATE": 12
+    },
+    "camera_pan": {
+      "episodes": 12,
+      "four_frame": 12,
+      "same_path_pre_post": 12,
+      "pre_visible": 12,
+      "post_return": 12,
+      "HOLD": 0,
+      "MULTI": 0,
+      "CANDIDATE": 12
+    },
+    "target_swap": {
+      "episodes": 12,
+      "four_frame": 0,
+      "same_path_pre_post": 0,
+      "pre_visible": 0,
+      "post_return": 12,
+      "HOLD": 0,
+      "MULTI": 12,
+      "CANDIDATE": 0
+    },
+    "indistinguishable_crossing": {
+      "episodes": 12,
+      "four_frame": 12,
+      "same_path_pre_post": 12,
+      "pre_visible": 12,
+      "post_return": 12,
+      "HOLD": 0,
+      "MULTI": 12,
+      "CANDIDATE": 0
+    },
+    "late_occlusion": {
+      "episodes": 12,
+      "four_frame": 12,
+      "same_path_pre_post": 0,
+      "pre_visible": 12,
+      "post_return": 0,
+      "HOLD": 0,
+      "MULTI": 12,
+      "CANDIDATE": 0
+    },
+    "long_occlusion": {
+      "episodes": 12,
+      "four_frame": 0,
+      "same_path_pre_post": 0,
+      "pre_visible": 12,
+      "post_return": 0,
+      "HOLD": 12,
+      "MULTI": 0,
+      "CANDIDATE": 0
+    },
+    "deceptive_distractor": {
+      "episodes": 12,
+      "four_frame": 0,
+      "same_path_pre_post": 0,
+      "pre_visible": 0,
+      "post_return": 12,
+      "HOLD": 0,
+      "MULTI": 12,
+      "CANDIDATE": 0
+    }
+  },
+  "episodes": 120,
+  "renderer_uses_d2_generator": false,
+  "fixture_truth_in_inference": false,
+  "tracker_unchanged": true,
+  "real_image_or_sensor": false,
+  "true_identity_proven": false,
+  "pass_fail_interpretation": "DIAGNOSTIC_ONLY_NOT_AUTO_GREEN",
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

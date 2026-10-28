@@ -1,0 +1,1077 @@
+{
+  "schema": "BRODY_WORLD_EXPERIENCE_BRIDGE_V4",
+  "source_kind": "SIMULATED_AND_GENERATED",
+  "upstream_contract_ownership": {
+    "world_observation": "obsidia-x108-proofs/periphery/mmonde/contracts_v0.py",
+    "visual_primitive": "obsidia-x108-proofs/periphery/vision/contracts_v0.py",
+    "world_dynamics": "obsidia-x108-proofs/periphery/world_dynamics/contracts_v0.py",
+    "semantic": "obsidia-x108-proofs/app/semantic/lattice",
+    "native_memory": "EXTERNAL_NOT_WRITTEN"
+  },
+  "views": {
+    "world_observations": [
+      {
+        "schema_owner": "OBSIDIA_MMONDE_WORLD_OBSERVATION_V0",
+        "compatibility": "STRUCTURAL_READONLY_VIEW_NOT_UPSTREAM_INSTANCE",
+        "observation_id": "world-observation:simulated-teacher:immediate_pentagon",
+        "entity_ref": "candidate-entity:immediate_pentagon",
+        "observed_at": "simulation-sequence-00",
+        "time_basis": "SYNTHETIC_SEQUENCE_NOT_CLOCK",
+        "source_kind": "SIMULATED",
+        "source_hashes": [
+          "48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775"
+        ],
+        "source_refs": [
+          "teacher_revealed/immediate_pentagon_reference.png"
+        ],
+        "state": {
+          "ink_pixels": 412,
+          "bounding_box_xyxy": [
+            9,
+            8,
+            51,
+            50
+          ],
+          "normalized_8x8_signature": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coordinate_frame": "SYNTHETIC_CANVAS_XY_64",
+          "depth": null,
+          "physical_units": null,
+          "semantic_label_predicted": null
+        },
+        "space": {
+          "frame_ref": "SYNTHETIC_CANVAS_XY_64",
+          "frame_is_physical": false
+        },
+        "relations": [],
+        "uncertainty": [
+          "NO_INDEPENDENT_SEMANTIC_OBJECT_IDENTITY",
+          "NOT_REAL_WORLD_EVIDENCE"
+        ],
+        "contradictions": [],
+        "evidence_refs": [
+          "sha256:48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775"
+        ],
+        "causal_status": "UNKNOWN",
+        "candidate_reality": true,
+        "readonly": true,
+        "representation_only": true,
+        "memory_object": false,
+        "cognition_object": false,
+        "allowed_to_decide": false,
+        "allowed_to_act": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      {
+        "schema_owner": "OBSIDIA_MMONDE_WORLD_OBSERVATION_V0",
+        "compatibility": "STRUCTURAL_READONLY_VIEW_NOT_UPSTREAM_INSTANCE",
+        "observation_id": "world-observation:generated-pupil:immediate_pentagon",
+        "entity_ref": "candidate-entity:immediate_pentagon",
+        "observed_at": "simulation-sequence-00",
+        "time_basis": "SYNTHETIC_SEQUENCE_NOT_CLOCK",
+        "source_kind": "GENERATED",
+        "source_hashes": [
+          "ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+        ],
+        "source_refs": [
+          "student_images/immediate_pentagon_drawing.png"
+        ],
+        "state": {
+          "ink_pixels": 255,
+          "bounding_box_xyxy": [
+            10,
+            9,
+            50,
+            50
+          ],
+          "normalized_8x8_signature": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coordinate_frame": "SYNTHETIC_CANVAS_XY_64",
+          "depth": null,
+          "physical_units": null,
+          "semantic_label_predicted": null
+        },
+        "space": {
+          "frame_ref": "SYNTHETIC_CANVAS_XY_64",
+          "frame_is_physical": false
+        },
+        "relations": [],
+        "uncertainty": [
+          "NO_INDEPENDENT_SEMANTIC_OBJECT_IDENTITY",
+          "NOT_REAL_WORLD_EVIDENCE"
+        ],
+        "contradictions": [],
+        "evidence_refs": [
+          "sha256:ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+        ],
+        "causal_status": "UNKNOWN",
+        "candidate_reality": true,
+        "readonly": true,
+        "representation_only": true,
+        "memory_object": false,
+        "cognition_object": false,
+        "allowed_to_decide": false,
+        "allowed_to_act": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      {
+        "schema_owner": "OBSIDIA_MMONDE_WORLD_OBSERVATION_V0",
+        "compatibility": "STRUCTURAL_READONLY_VIEW_NOT_UPSTREAM_INSTANCE",
+        "observation_id": "world-observation:simulated-teacher:delayed_pentagon",
+        "entity_ref": "candidate-entity:delayed_pentagon",
+        "observed_at": "simulation-sequence-01",
+        "time_basis": "SYNTHETIC_SEQUENCE_NOT_CLOCK",
+        "source_kind": "SIMULATED",
+        "source_hashes": [
+          "48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775"
+        ],
+        "source_refs": [
+          "teacher_revealed/delayed_pentagon_reference.png"
+        ],
+        "state": {
+          "ink_pixels": 412,
+          "bounding_box_xyxy": [
+            9,
+            8,
+            51,
+            50
+          ],
+          "normalized_8x8_signature": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coordinate_frame": "SYNTHETIC_CANVAS_XY_64",
+          "depth": null,
+          "physical_units": null,
+          "semantic_label_predicted": null
+        },
+        "space": {
+          "frame_ref": "SYNTHETIC_CANVAS_XY_64",
+          "frame_is_physical": false
+        },
+        "relations": [],
+        "uncertainty": [
+          "NO_INDEPENDENT_SEMANTIC_OBJECT_IDENTITY",
+          "NOT_REAL_WORLD_EVIDENCE"
+        ],
+        "contradictions": [],
+        "evidence_refs": [
+          "sha256:48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775"
+        ],
+        "causal_status": "UNKNOWN",
+        "candidate_reality": true,
+        "readonly": true,
+        "representation_only": true,
+        "memory_object": false,
+        "cognition_object": false,
+        "allowed_to_decide": false,
+        "allowed_to_act": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      {
+        "schema_owner": "OBSIDIA_MMONDE_WORLD_OBSERVATION_V0",
+        "compatibility": "STRUCTURAL_READONLY_VIEW_NOT_UPSTREAM_INSTANCE",
+        "observation_id": "world-observation:generated-pupil:delayed_pentagon",
+        "entity_ref": "candidate-entity:delayed_pentagon",
+        "observed_at": "simulation-sequence-01",
+        "time_basis": "SYNTHETIC_SEQUENCE_NOT_CLOCK",
+        "source_kind": "GENERATED",
+        "source_hashes": [
+          "ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+        ],
+        "source_refs": [
+          "student_images/delayed_pentagon_drawing.png"
+        ],
+        "state": {
+          "ink_pixels": 255,
+          "bounding_box_xyxy": [
+            10,
+            9,
+            50,
+            50
+          ],
+          "normalized_8x8_signature": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coordinate_frame": "SYNTHETIC_CANVAS_XY_64",
+          "depth": null,
+          "physical_units": null,
+          "semantic_label_predicted": null
+        },
+        "space": {
+          "frame_ref": "SYNTHETIC_CANVAS_XY_64",
+          "frame_is_physical": false
+        },
+        "relations": [],
+        "uncertainty": [
+          "NO_INDEPENDENT_SEMANTIC_OBJECT_IDENTITY",
+          "NOT_REAL_WORLD_EVIDENCE"
+        ],
+        "contradictions": [],
+        "evidence_refs": [
+          "sha256:ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+        ],
+        "causal_status": "UNKNOWN",
+        "candidate_reality": true,
+        "readonly": true,
+        "representation_only": true,
+        "memory_object": false,
+        "cognition_object": false,
+        "allowed_to_decide": false,
+        "allowed_to_act": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      {
+        "schema_owner": "OBSIDIA_MMONDE_WORLD_OBSERVATION_V0",
+        "compatibility": "STRUCTURAL_READONLY_VIEW_NOT_UPSTREAM_INSTANCE",
+        "observation_id": "world-observation:simulated-teacher:transfer_house",
+        "entity_ref": "candidate-entity:transfer_house",
+        "observed_at": "simulation-sequence-02",
+        "time_basis": "SYNTHETIC_SEQUENCE_NOT_CLOCK",
+        "source_kind": "SIMULATED",
+        "source_hashes": [
+          "830bc94212c4bb292757df5d652fe3c1fc608880cb28e09622252b5a5d873240"
+        ],
+        "source_refs": [
+          "teacher_revealed/transfer_house_reference.png"
+        ],
+        "state": {
+          "ink_pixels": 545,
+          "bounding_box_xyxy": [
+            9,
+            8,
+            51,
+            56
+          ],
+          "normalized_8x8_signature": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coordinate_frame": "SYNTHETIC_CANVAS_XY_64",
+          "depth": null,
+          "physical_units": null,
+          "semantic_label_predicted": null
+        },
+        "space": {
+          "frame_ref": "SYNTHETIC_CANVAS_XY_64",
+          "frame_is_physical": false
+        },
+        "relations": [],
+        "uncertainty": [
+          "NO_INDEPENDENT_SEMANTIC_OBJECT_IDENTITY",
+          "NOT_REAL_WORLD_EVIDENCE"
+        ],
+        "contradictions": [],
+        "evidence_refs": [
+          "sha256:830bc94212c4bb292757df5d652fe3c1fc608880cb28e09622252b5a5d873240"
+        ],
+        "causal_status": "UNKNOWN",
+        "candidate_reality": true,
+        "readonly": true,
+        "representation_only": true,
+        "memory_object": false,
+        "cognition_object": false,
+        "allowed_to_decide": false,
+        "allowed_to_act": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      {
+        "schema_owner": "OBSIDIA_MMONDE_WORLD_OBSERVATION_V0",
+        "compatibility": "STRUCTURAL_READONLY_VIEW_NOT_UPSTREAM_INSTANCE",
+        "observation_id": "world-observation:generated-pupil:transfer_house",
+        "entity_ref": "candidate-entity:transfer_house",
+        "observed_at": "simulation-sequence-02",
+        "time_basis": "SYNTHETIC_SEQUENCE_NOT_CLOCK",
+        "source_kind": "GENERATED",
+        "source_hashes": [
+          "4670355dbb84eed8d97661b8f20a2edf085a7820741f621063ce8aec8b45f9ac"
+        ],
+        "source_refs": [
+          "student_images/transfer_house_drawing.png"
+        ],
+        "state": {
+          "ink_pixels": 394,
+          "bounding_box_xyxy": [
+            10,
+            8,
+            50,
+            56
+          ],
+          "normalized_8x8_signature": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "coordinate_frame": "SYNTHETIC_CANVAS_XY_64",
+          "depth": null,
+          "physical_units": null,
+          "semantic_label_predicted": null
+        },
+        "space": {
+          "frame_ref": "SYNTHETIC_CANVAS_XY_64",
+          "frame_is_physical": false
+        },
+        "relations": [],
+        "uncertainty": [
+          "NO_INDEPENDENT_SEMANTIC_OBJECT_IDENTITY",
+          "NOT_REAL_WORLD_EVIDENCE"
+        ],
+        "contradictions": [],
+        "evidence_refs": [
+          "sha256:4670355dbb84eed8d97661b8f20a2edf085a7820741f621063ce8aec8b45f9ac"
+        ],
+        "causal_status": "UNKNOWN",
+        "candidate_reality": true,
+        "readonly": true,
+        "representation_only": true,
+        "memory_object": false,
+        "cognition_object": false,
+        "allowed_to_decide": false,
+        "allowed_to_act": false,
+        "decision_authority": "KX108_ONLY"
+      }
+    ],
+    "candidate_entities": [
+      {
+        "candidate_entity_ref": "candidate-entity:immediate_pentagon",
+        "reference_identity_group": "candidate-source-sha256:48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775",
+        "identity_link_basis": "EXACT_TEACHER_SOURCE_HASH_ONLY",
+        "same_physical_object_proven": false,
+        "semantic_type": null,
+        "label_source": "TEST_FIXTURE_EPISODE_NAME_ONLY"
+      },
+      {
+        "candidate_entity_ref": "candidate-entity:delayed_pentagon",
+        "reference_identity_group": "candidate-source-sha256:48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775",
+        "identity_link_basis": "EXACT_TEACHER_SOURCE_HASH_ONLY",
+        "same_physical_object_proven": false,
+        "semantic_type": null,
+        "label_source": "TEST_FIXTURE_EPISODE_NAME_ONLY"
+      },
+      {
+        "candidate_entity_ref": "candidate-entity:transfer_house",
+        "reference_identity_group": "candidate-source-sha256:830bc94212c4bb292757df5d652fe3c1fc608880cb28e09622252b5a5d873240",
+        "identity_link_basis": "EXACT_TEACHER_SOURCE_HASH_ONLY",
+        "same_physical_object_proven": false,
+        "semantic_type": null,
+        "label_source": "TEST_FIXTURE_EPISODE_NAME_ONLY"
+      }
+    ],
+    "typed_candidate_relations": [
+      {
+        "subject_ref": "world-observation:simulated-teacher:immediate_pentagon",
+        "object_ref": "world-observation:generated-pupil:immediate_pentagon",
+        "relation_kind": "REFERENCE_VERSUS_PRODUCED",
+        "relation_status": "DERIVED_FROM_VERIFIED_V3_TEST",
+        "causal_proven": false
+      },
+      {
+        "subject_ref": "experience:brody-image:immediate_pentagon",
+        "object_ref": "transformation:draw:immediate_pentagon",
+        "relation_kind": "PROCEDURE_EXECUTED_IN_EXPERIMENT",
+        "relation_status": "VERIFIED_BY_LOCAL_REPLAY",
+        "causal_proven": false
+      },
+      {
+        "subject_ref": "world-observation:simulated-teacher:delayed_pentagon",
+        "object_ref": "world-observation:generated-pupil:delayed_pentagon",
+        "relation_kind": "REFERENCE_VERSUS_PRODUCED",
+        "relation_status": "DERIVED_FROM_VERIFIED_V3_TEST",
+        "causal_proven": false
+      },
+      {
+        "subject_ref": "experience:brody-image:delayed_pentagon",
+        "object_ref": "transformation:draw:delayed_pentagon",
+        "relation_kind": "PROCEDURE_EXECUTED_IN_EXPERIMENT",
+        "relation_status": "VERIFIED_BY_LOCAL_REPLAY",
+        "causal_proven": false
+      },
+      {
+        "subject_ref": "world-observation:simulated-teacher:transfer_house",
+        "object_ref": "world-observation:generated-pupil:transfer_house",
+        "relation_kind": "REFERENCE_VERSUS_PRODUCED",
+        "relation_status": "DERIVED_FROM_VERIFIED_V3_TEST",
+        "causal_proven": false
+      },
+      {
+        "subject_ref": "experience:brody-image:transfer_house",
+        "object_ref": "transformation:draw:transfer_house",
+        "relation_kind": "PROCEDURE_EXECUTED_IN_EXPERIMENT",
+        "relation_status": "VERIFIED_BY_LOCAL_REPLAY",
+        "causal_proven": false
+      },
+      {
+        "relation_id": "rel:instructed:roof-over-base",
+        "subject_ref": "component:triangle:roof-candidate",
+        "object_ref": "component:rectangle:base-candidate",
+        "relation_kind": "ABOVE_WITH_HORIZONTAL_OVERLAP",
+        "relation_status": "DERIVED_FROM_TEACHER_PLACEMENT",
+        "causal_proven": false,
+        "geometry": {
+          "roof_box": [
+            10,
+            9,
+            50,
+            31
+          ],
+          "base_box": [
+            14,
+            31,
+            46,
+            55
+          ],
+          "x_overlap_px": 32
+        },
+        "inference_source": "EXPLICIT_TEACHER_COMPOSITION_TASK_NOT_AUTONOMOUS_PERCEPTION"
+      },
+      {
+        "from_candidate": "candidate-entity:immediate_pentagon",
+        "to_candidate": "candidate-entity:delayed_pentagon",
+        "relation_kind": "CANDIDATE_SAME_REFERENCE_ACROSS_TRIALS",
+        "continuity_basis": "EQUAL_SOURCE_SHA256_NOT_OBJECT_TRACKING",
+        "visual_identity_learned": false,
+        "physical_identity_proven": false,
+        "same_procedure_potentially_reused": true,
+        "epistemic_status": "DERIVED"
+      }
+    ],
+    "transformations": [
+      {
+        "schema_version": "WORLD_TRANSFORMATION_V0",
+        "transformation_id": "transformation:draw:immediate_pentagon",
+        "transformation_kind": "DRAW_FROM_STORED_PROCEDURE",
+        "time": {
+          "observed_at": "simulation-sequence-00",
+          "time_basis": "SYNTHETIC_SEQUENCE_NOT_CLOCK"
+        },
+        "target_refs": [
+          "candidate-entity:immediate_pentagon"
+        ],
+        "parameters": {
+          "instrument": "PEN",
+          "tool_selector": "MIN_PRIOR_MEAN_PIXEL_ERROR_BY_DECLARED_INTENT",
+          "gesture_count": 1
+        },
+        "provenance_refs": [
+          "v3:precommit:immediate_pentagon"
+        ],
+        "evidence_refs": [
+          "sha256:ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+        ],
+        "epistemic_class": "SIMULATED",
+        "readonly": true,
+        "execution_authority": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      {
+        "schema_version": "WORLD_TRANSFORMATION_V0",
+        "transformation_id": "transformation:draw:delayed_pentagon",
+        "transformation_kind": "DRAW_FROM_STORED_PROCEDURE",
+        "time": {
+          "observed_at": "simulation-sequence-01",
+          "time_basis": "SYNTHETIC_SEQUENCE_NOT_CLOCK"
+        },
+        "target_refs": [
+          "candidate-entity:delayed_pentagon"
+        ],
+        "parameters": {
+          "instrument": "PEN",
+          "tool_selector": "MIN_PRIOR_MEAN_PIXEL_ERROR_BY_DECLARED_INTENT",
+          "gesture_count": 1
+        },
+        "provenance_refs": [
+          "v3:precommit:delayed_pentagon"
+        ],
+        "evidence_refs": [
+          "sha256:ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+        ],
+        "epistemic_class": "SIMULATED",
+        "readonly": true,
+        "execution_authority": false,
+        "decision_authority": "KX108_ONLY"
+      },
+      {
+        "schema_version": "WORLD_TRANSFORMATION_V0",
+        "transformation_id": "transformation:draw:transfer_house",
+        "transformation_kind": "DRAW_FROM_STORED_PROCEDURE",
+        "time": {
+          "observed_at": "simulation-sequence-02",
+          "time_basis": "SYNTHETIC_SEQUENCE_NOT_CLOCK"
+        },
+        "target_refs": [
+          "candidate-entity:transfer_house"
+        ],
+        "parameters": {
+          "instrument": "PEN",
+          "tool_selector": "MIN_PRIOR_MEAN_PIXEL_ERROR_BY_DECLARED_INTENT",
+          "gesture_count": 2
+        },
+        "provenance_refs": [
+          "v3:precommit:transfer_house"
+        ],
+        "evidence_refs": [
+          "sha256:4670355dbb84eed8d97661b8f20a2edf085a7820741f621063ce8aec8b45f9ac"
+        ],
+        "epistemic_class": "SIMULATED",
+        "readonly": true,
+        "execution_authority": false,
+        "decision_authority": "KX108_ONLY"
+      }
+    ],
+    "world_state_deltas": [
+      {
+        "schema_version": "WORLD_STATE_DELTA_V0",
+        "delta_id": "delta:teacher-versus-student:immediate_pentagon",
+        "baseline_state_ref": "world:candidate:immediate_pentagon:teacher-heldout",
+        "observed_world_state_ref": "world:candidate:immediate_pentagon:generated",
+        "metric_deltas": {
+          "binary_pixel_xor": 159,
+          "teacher_blank_xor": 412,
+          "pixel_iou": 0.6150121065375302
+        },
+        "continuity_status": "UNKNOWN",
+        "causal_proof": false,
+        "uncertainty": [
+          "PIXEL_SCORE_NOT_WORLD_SEMANTICS",
+          "SIMULATED_SOURCE_NOT_REAL_WORLD"
+        ],
+        "provenance_refs": [
+          "sha256:48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775",
+          "sha256:ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+        ],
+        "readonly": true,
+        "decision_authority": "KX108_ONLY"
+      },
+      {
+        "schema_version": "WORLD_STATE_DELTA_V0",
+        "delta_id": "delta:teacher-versus-student:delayed_pentagon",
+        "baseline_state_ref": "world:candidate:delayed_pentagon:teacher-heldout",
+        "observed_world_state_ref": "world:candidate:delayed_pentagon:generated",
+        "metric_deltas": {
+          "binary_pixel_xor": 159,
+          "teacher_blank_xor": 412,
+          "pixel_iou": 0.6150121065375302
+        },
+        "continuity_status": "UNKNOWN",
+        "causal_proof": false,
+        "uncertainty": [
+          "PIXEL_SCORE_NOT_WORLD_SEMANTICS",
+          "SIMULATED_SOURCE_NOT_REAL_WORLD"
+        ],
+        "provenance_refs": [
+          "sha256:48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775",
+          "sha256:ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+        ],
+        "readonly": true,
+        "decision_authority": "KX108_ONLY"
+      },
+      {
+        "schema_version": "WORLD_STATE_DELTA_V0",
+        "delta_id": "delta:teacher-versus-student:transfer_house",
+        "baseline_state_ref": "world:candidate:transfer_house:teacher-heldout",
+        "observed_world_state_ref": "world:candidate:transfer_house:generated",
+        "metric_deltas": {
+          "binary_pixel_xor": 223,
+          "teacher_blank_xor": 545,
+          "pixel_iou": 0.6161790017211703
+        },
+        "continuity_status": "UNKNOWN",
+        "causal_proof": false,
+        "uncertainty": [
+          "PIXEL_SCORE_NOT_WORLD_SEMANTICS",
+          "SIMULATED_SOURCE_NOT_REAL_WORLD"
+        ],
+        "provenance_refs": [
+          "sha256:830bc94212c4bb292757df5d652fe3c1fc608880cb28e09622252b5a5d873240",
+          "sha256:4670355dbb84eed8d97661b8f20a2edf085a7820741f621063ce8aec8b45f9ac"
+        ],
+        "readonly": true,
+        "decision_authority": "KX108_ONLY"
+      }
+    ]
+  },
+  "experience_candidates": [
+    {
+      "schema_version": "WORLD_EXPERIENCE_CANDIDATE_V0",
+      "experience_id": "experience:brody-image:immediate_pentagon",
+      "state_before_ref": "world:candidate:immediate_pentagon:before",
+      "state_after_ref": "world:candidate:immediate_pentagon:generated",
+      "outcome": "BETTER_THAN_EMPTY_CANVAS",
+      "transformation_ref": "transformation:draw:immediate_pentagon",
+      "delta_ref": "delta:teacher-versus-student:immediate_pentagon",
+      "context_refs": [
+        "world-observation:simulated-teacher:immediate_pentagon",
+        "world-observation:generated-pupil:immediate_pentagon"
+      ],
+      "replay_refs": [
+        "v3:student-precommit:immediate_pentagon"
+      ],
+      "evidence_refs": [
+        "sha256:48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775",
+        "sha256:ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+      ],
+      "candidate_skill_refs": [],
+      "validation_status": "CANDIDATE",
+      "memory_eligibility": "CANDIDATE_ONLY",
+      "canonical_memory": false,
+      "memory_write_allowed": false,
+      "auto_promotion_allowed": false,
+      "decision_authority": "KX108_ONLY"
+    },
+    {
+      "schema_version": "WORLD_EXPERIENCE_CANDIDATE_V0",
+      "experience_id": "experience:brody-image:delayed_pentagon",
+      "state_before_ref": "world:candidate:delayed_pentagon:before",
+      "state_after_ref": "world:candidate:delayed_pentagon:generated",
+      "outcome": "BETTER_THAN_EMPTY_CANVAS",
+      "transformation_ref": "transformation:draw:delayed_pentagon",
+      "delta_ref": "delta:teacher-versus-student:delayed_pentagon",
+      "context_refs": [
+        "world-observation:simulated-teacher:delayed_pentagon",
+        "world-observation:generated-pupil:delayed_pentagon"
+      ],
+      "replay_refs": [
+        "v3:student-precommit:delayed_pentagon"
+      ],
+      "evidence_refs": [
+        "sha256:48865d06c5b36df2a0623a703b2bc7933c6b5fce33822b67e3373ded61af7775",
+        "sha256:ccac9a33cb55c3d7a4be6e42087d1d257a0a0cd94ee21c609ce934a06b497215"
+      ],
+      "candidate_skill_refs": [],
+      "validation_status": "CANDIDATE",
+      "memory_eligibility": "CANDIDATE_ONLY",
+      "canonical_memory": false,
+      "memory_write_allowed": false,
+      "auto_promotion_allowed": false,
+      "decision_authority": "KX108_ONLY"
+    },
+    {
+      "schema_version": "WORLD_EXPERIENCE_CANDIDATE_V0",
+      "experience_id": "experience:brody-image:transfer_house",
+      "state_before_ref": "world:candidate:transfer_house:before",
+      "state_after_ref": "world:candidate:transfer_house:generated",
+      "outcome": "BETTER_THAN_EMPTY_CANVAS",
+      "transformation_ref": "transformation:draw:transfer_house",
+      "delta_ref": "delta:teacher-versus-student:transfer_house",
+      "context_refs": [
+        "world-observation:simulated-teacher:transfer_house",
+        "world-observation:generated-pupil:transfer_house"
+      ],
+      "replay_refs": [
+        "v3:student-precommit:transfer_house"
+      ],
+      "evidence_refs": [
+        "sha256:830bc94212c4bb292757df5d652fe3c1fc608880cb28e09622252b5a5d873240",
+        "sha256:4670355dbb84eed8d97661b8f20a2edf085a7820741f621063ce8aec8b45f9ac"
+      ],
+      "candidate_skill_refs": [
+        "skill:cours_carre",
+        "skill:cours_triangle"
+      ],
+      "validation_status": "CANDIDATE",
+      "memory_eligibility": "CANDIDATE_ONLY",
+      "canonical_memory": false,
+      "memory_write_allowed": false,
+      "auto_promotion_allowed": false,
+      "decision_authority": "KX108_ONLY"
+    }
+  ],
+  "provenance": {
+    "v3_evaluation_sha256": "4ba51e6a52690a451a6987d08106615f4125d0a7ef2ace23a20a7352f8f0927e",
+    "v3_precommit_sha256": "87c992962ae0f4571590325b5773374cd5f3289846bca874d316c17cfef4763f",
+    "v4_code_sha256": "fdc4236f3e11565a63efef1a0eb15759e681f78bdd7dfa706977aa3aba1608ed",
+    "v3_replay_verified": true
+  },
+  "semantic_boundary": {
+    "sens_pipeline_executed": false,
+    "semantic_event_generated": false,
+    "occurrence_claim_generated": false,
+    "relation_above_is_derived_from_instructed_boxes": true,
+    "candidate_labels_are_not_object_recognition": true,
+    "knowledge_promoted": false,
+    "world_state_is_memory": false,
+    "timestamp_as_freshness_authority": false,
+    "causal_proof_claimed": false
+  },
+  "readonly": true,
+  "canonical_world_state_constructed": false,
+  "native_memory_write_allowed": false,
+  "auto_promotion_allowed": false,
+  "decision_authority": "KX108_ONLY"
+}

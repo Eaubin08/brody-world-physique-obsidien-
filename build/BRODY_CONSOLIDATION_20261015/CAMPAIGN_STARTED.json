@@ -1,0 +1,12 @@
+{
+    "video_evidence":  "HOLD_NO_INDEPENDENT_VIDEO",
+    "git_revision":  "8bd7708fba1ed03d03aa3aad340fbddf48cefe2c",
+    "full_regression_executed":  true,
+    "canonical_promotion":  false,
+    "schema":  "BRODY_FULL_CONSOLIDATION_V1",
+    "decision_authority":  "KX108_ONLY",
+    "tests":  {
+
+              },
+    "native_memory_write":  false
+}

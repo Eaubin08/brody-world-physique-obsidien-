@@ -1,0 +1,115 @@
+{
+  "context_coverage": 0.8,
+  "dataset_independent": false,
+  "decision_authority": "KX108_ONLY",
+  "image_detector_preprogrammed": true,
+  "learned_vision": false,
+  "memory_write_allowed": false,
+  "paired_improvement_not_claimed": true,
+  "per_case": [
+    {
+      "ball_only_error": 0.0,
+      "case": "object_only",
+      "contextual": 10.0,
+      "contextual_error": 0.0,
+      "expected_world_dx": 10,
+      "image_sha256": [
+        "a14fae0b7d0ae78d2a5d0525de3b209732ed4f5d0126c0700c04e1c0d541d8f7",
+        "1e6e53f496f025991e0d3aa2d4af77bdf2d0aa87454a5d0182885eebac4572c6"
+      ],
+      "measured_context_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "object_only": 10.0,
+      "status": "CANDIDATE_CONTEXTUAL_CORRECTION"
+    },
+    {
+      "ball_only_error": 10.0,
+      "case": "camera_only",
+      "contextual": 0.0,
+      "contextual_error": 0.0,
+      "expected_world_dx": 0,
+      "image_sha256": [
+        "a14fae0b7d0ae78d2a5d0525de3b209732ed4f5d0126c0700c04e1c0d541d8f7",
+        "1e00cf004ebebe24906c5d81bc8404fc7888bd3086ac5b38e24f736cfe8811d1"
+      ],
+      "measured_context_deltas": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "object_only": 10.0,
+      "status": "CANDIDATE_CONTEXTUAL_CORRECTION"
+    },
+    {
+      "ball_only_error": 4.0,
+      "case": "both",
+      "contextual": 6.0,
+      "contextual_error": 0.0,
+      "expected_world_dx": 6,
+      "image_sha256": [
+        "a14fae0b7d0ae78d2a5d0525de3b209732ed4f5d0126c0700c04e1c0d541d8f7",
+        "bf9152aec967ca65b1f784c05c55d80334d1fd7ba186520c4a3de6ed2995360d"
+      ],
+      "measured_context_deltas": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "object_only": 10.0,
+      "status": "CANDIDATE_CONTEXTUAL_CORRECTION"
+    },
+    {
+      "ball_only_error": 4.0,
+      "case": "one_corrupt_landmark",
+      "contextual": 6.0,
+      "contextual_error": 0.0,
+      "expected_world_dx": 6,
+      "image_sha256": [
+        "a14fae0b7d0ae78d2a5d0525de3b209732ed4f5d0126c0700c04e1c0d541d8f7",
+        "b72225e8aa05bd362f29dd4f87dd69fb995a66e2e944d52ad3501186c1e0621c"
+      ],
+      "measured_context_deltas": [
+        29.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "object_only": 10.0,
+      "status": "CANDIDATE_CONTEXTUAL_CORRECTION"
+    },
+    {
+      "ball_only_error": 4.0,
+      "case": "three_corrupt_landmarks",
+      "contextual": null,
+      "contextual_error": null,
+      "expected_world_dx": 6,
+      "image_sha256": [
+        "a14fae0b7d0ae78d2a5d0525de3b209732ed4f5d0126c0700c04e1c0d541d8f7",
+        "1e02825bf814fad67a78add41d4945123d147421bcd9947cad68898599b26401"
+      ],
+      "measured_context_deltas": [
+        29.0,
+        29.0,
+        29.0,
+        4.0,
+        4.0
+      ],
+      "object_only": 10.0,
+      "status": "HOLD_CONFLICTING_CONTEXT"
+    }
+  ],
+  "raw_pixels_tested": true,
+  "schema": "BRODY_P25_PIXEL_CONTEXT_V0",
+  "source_kind": "SIMULATED",
+  "world_physics_learned": false
+}

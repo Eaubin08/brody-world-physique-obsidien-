@@ -1,0 +1,14 @@
+{
+  "source_kind": "SIMULATED",
+  "candidate_experiences": 54,
+  "training_source_hashes": [
+    "2e344ed295ba3ee7149d0c61e37a5b59fcac63fb1c5a0c59990aaceb038e7995",
+    "4b42b0f5f2a84019c53cd4f82e83539758160a37f9d0edd8059d768567a3f959",
+    "1231a0150d94d56e092d601f31c3b78deb0594412b1da9bd781ebf55c9f686c1",
+    "2446ef5ebdd2e10b355f94357bf056ec1d061c06046621f279b0b7735191c386",
+    "b819bfb533e7d1a5d6ae21b107f4172a8b68ee5b1d9bd2837251a10b45c9f363",
+    "0fb09bd85dcdb4aa16abb109752594abc775372abe0220ea7bca92a772f410c5"
+  ],
+  "canonical_memory": false,
+  "memory_write_allowed": false
+}

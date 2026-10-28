@@ -1,0 +1,18 @@
+{
+  "canonical_promotion": false,
+  "case": "unknown",
+  "decision_authority": "KX108_ONLY",
+  "digest": "ff194f45604779115c0967b18af253f62a6d8ee7f54f96c3072f37b1191e4092",
+  "history": [
+    23.0,
+    27.0,
+    31.0,
+    35.0,
+    40.0,
+    46.0
+  ],
+  "inferred_context": null,
+  "memory_digest": "2a41fef477df1176500fa16c2a2e664030e21717d6eb3cb0f3d05a511d6b5f24",
+  "native_memory_write": false,
+  "prediction_x": null
+}

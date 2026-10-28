@@ -1,0 +1,27 @@
+{
+  "bank": {
+    "flat": {
+      "observe": 0.0,
+      "tap": 0.0,
+      "tilt": 0.0,
+      "weak_tap": 0.0
+    },
+    "slope": {
+      "observe": 0.0,
+      "tap": -1.0,
+      "tilt": -2.0,
+      "weak_tap": -0.5
+    },
+    "spring": {
+      "observe": 0.0,
+      "tap": 1.0,
+      "tilt": 2.0,
+      "weak_tap": 0.5
+    }
+  },
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "57cf93c101d262f657e9b23b3d90430d69dbcd3d826980786b0602bdb031bca9",
+  "native_memory_write": false,
+  "source": "P159_RENDERED_PIXEL_TRAINING"
+}

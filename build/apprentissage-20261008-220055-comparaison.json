@@ -1,0 +1,21 @@
+{
+  "schema_version": "BRODY_MATCHED_EXPERIENTIAL_COMPARISON_V0",
+  "total_heldout_positions": 36,
+  "cold_predictions": 0,
+  "one_experience_predictions": 13,
+  "many_experience_predictions": 34,
+  "shared_predicted_positions": 13,
+  "one_error_on_shared_px": 2.323460897818701,
+  "many_error_on_shared_px": 2.07548883264115,
+  "linear_error_on_shared_px": 2.903455141756585,
+  "acceleration_error_on_shared_px": 1.3422910076147598,
+  "paired_many_wins": 3,
+  "paired_one_wins": 2,
+  "paired_ties": 8,
+  "comparison_scope": "SHARED_HELDOUT_POSITIONS_ONLY",
+  "physical_causality_proven": false,
+  "adaptive_world_model_validated": false,
+  "source_kind": "SIMULATED",
+  "native_memory_write_allowed": false,
+  "decision_authority": "KX108_ONLY"
+}

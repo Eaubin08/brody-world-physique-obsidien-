@@ -1,0 +1,550 @@
+{
+  "choices": {
+    "shape/native": "geometric",
+    "colour/native": "geometric",
+    "count/native": "rgb_knn",
+    "arrangement/native": "rgb_knn",
+    "orientation/native": "geometric",
+    "shape/mirror": "geometric",
+    "colour/mirror": "geometric",
+    "count/mirror": "geometric",
+    "arrangement/mirror": "geometric",
+    "orientation/mirror": "geometric",
+    "shape/greyscale": "geometric",
+    "colour/greyscale": "HOLD",
+    "count/greyscale": "rgb_knn",
+    "arrangement/greyscale": "rgb_knn",
+    "orientation/greyscale": "geometric",
+    "shape/posterize": "geometric",
+    "colour/posterize": "geometric",
+    "count/posterize": "geometric",
+    "arrangement/posterize": "rgb_knn",
+    "orientation/posterize": "geometric",
+    "shape/blur": "geometric",
+    "colour/blur": "geometric",
+    "count/blur": "rgb_knn",
+    "arrangement/blur": "rgb_knn",
+    "orientation/blur": "geometric",
+    "shape/contrast": "geometric",
+    "colour/contrast": "rgb_knn",
+    "count/contrast": "geometric",
+    "arrangement/contrast": "geometric",
+    "orientation/contrast": "geometric"
+  },
+  "validation_scores": {
+    "shape/native": {
+      "rgb_knn": {
+        "correct": 66,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 83,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 42,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "colour/native": {
+      "rgb_knn": {
+        "correct": 98,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 120,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 30,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "count/native": {
+      "rgb_knn": {
+        "correct": 107,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 105,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 39,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "arrangement/native": {
+      "rgb_knn": {
+        "correct": 120,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 117,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 45,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "orientation/native": {
+      "rgb_knn": {
+        "correct": 51,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 116,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 32,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "shape/mirror": {
+      "rgb_knn": {
+        "correct": 53,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 78,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 41,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "colour/mirror": {
+      "rgb_knn": {
+        "correct": 72,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 120,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 32,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "count/mirror": {
+      "rgb_knn": {
+        "correct": 84,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 99,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 42,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "arrangement/mirror": {
+      "rgb_knn": {
+        "correct": 87,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 116,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 46,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "orientation/mirror": {
+      "rgb_knn": {
+        "correct": 42,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 117,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 39,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "shape/greyscale": {
+      "rgb_knn": {
+        "correct": 55,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 78,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 40,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "colour/greyscale": {
+      "rgb_knn": {
+        "correct": 18,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 0,
+        "answered": 0,
+        "hold": 120
+      },
+      "majority": {
+        "correct": 29,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "count/greyscale": {
+      "rgb_knn": {
+        "correct": 105,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 104,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 42,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "arrangement/greyscale": {
+      "rgb_knn": {
+        "correct": 120,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 117,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 40,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "orientation/greyscale": {
+      "rgb_knn": {
+        "correct": 55,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 117,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 38,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "shape/posterize": {
+      "rgb_knn": {
+        "correct": 64,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 71,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 37,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "colour/posterize": {
+      "rgb_knn": {
+        "correct": 93,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 120,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 30,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "count/posterize": {
+      "rgb_knn": {
+        "correct": 83,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 101,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 37,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "arrangement/posterize": {
+      "rgb_knn": {
+        "correct": 120,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 117,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 40,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "orientation/posterize": {
+      "rgb_knn": {
+        "correct": 46,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 116,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 45,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "shape/blur": {
+      "rgb_knn": {
+        "correct": 68,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 71,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 40,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "colour/blur": {
+      "rgb_knn": {
+        "correct": 106,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 120,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 27,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "count/blur": {
+      "rgb_knn": {
+        "correct": 108,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 100,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 38,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "arrangement/blur": {
+      "rgb_knn": {
+        "correct": 120,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 116,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 33,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "orientation/blur": {
+      "rgb_knn": {
+        "correct": 41,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 115,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 40,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "shape/contrast": {
+      "rgb_knn": {
+        "correct": 44,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 84,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 42,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "colour/contrast": {
+      "rgb_knn": {
+        "correct": 61,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 29,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 33,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "count/contrast": {
+      "rgb_knn": {
+        "correct": 67,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 107,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 41,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "arrangement/contrast": {
+      "rgb_knn": {
+        "correct": 116,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 118,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 42,
+        "answered": 120,
+        "hold": 0
+      }
+    },
+    "orientation/contrast": {
+      "rgb_knn": {
+        "correct": 28,
+        "answered": 120,
+        "hold": 0
+      },
+      "geometric": {
+        "correct": 115,
+        "answered": 120,
+        "hold": 0
+      },
+      "majority": {
+        "correct": 37,
+        "answered": 120,
+        "hold": 0
+      }
+    }
+  },
+  "training_seed": 143,
+  "validation_seed": 11254,
+  "exam_seed": 22365,
+  "frozen_before_exam": true
+}

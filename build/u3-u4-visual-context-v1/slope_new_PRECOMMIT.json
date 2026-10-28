@@ -1,0 +1,19 @@
+{
+  "baseline_x": 43.0,
+  "candidate_x": 42.0,
+  "canonical_promotion": false,
+  "case": "slope_new",
+  "decision_authority": "KX108_ONLY",
+  "digest": "fe51c2b3a14148e2d01d67a34cc8310851ae950dd626925108775485e3683c8a",
+  "memory_digest": "ed0dc048d3c5e17fa33002bd0442b93fe3e0baa96bdbd129eadb88145e4dafc8",
+  "native_memory_write": false,
+  "observed_history": [
+    24.0,
+    28.0,
+    32.0,
+    36.0,
+    39.0,
+    41.0
+  ],
+  "selected_context": "intervention"
+}

@@ -1,0 +1,8 @@
+{
+  "old_tool": "PENCIL",
+  "new_tool": "PEN",
+  "old_sha256": "86e303a4a82eb02cd6adbe3518cc32bbf8e10238fcc74654ab61dc38626a887c",
+  "new_sha256": "9f908ec2efae25fbf6e9067ace55a447597fa865681f8df6b22b9b32e225e32a",
+  "teacher_not_opened_before_sealing": true,
+  "selection_based_on_train_only": true
+}

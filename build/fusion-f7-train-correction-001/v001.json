@@ -1,0 +1,17 @@
+{
+  "schema": "BRODY_F7_TOOL_CANDIDATE_SNAPSHOT_V0",
+  "records": [
+    {
+      "id": "train-old",
+      "goal": "LIGHT",
+      "trial_losses": {
+        "PENCIL": 1.0,
+        "PEN": 8.0,
+        "NIB": 9.0
+      }
+    }
+  ],
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

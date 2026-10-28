@@ -1,0 +1,379 @@
+{
+  "schema": "BRODY_COLD_START_EXPERIENTIAL_SUITE_V0",
+  "cold_start": "HOLD_NO_EXPERIENCE",
+  "prior_domain_formulas_loaded": false,
+  "prior_labeled_training_data_loaded": false,
+  "learning_algorithm": "KNN_ON_OBSERVED_2D_DISPLACEMENT_TRANSITIONS",
+  "training_episodes": 4,
+  "training_candidate_transitions": 36,
+  "test_episodes_unseen_during_training": 4,
+  "test_predictions": 34,
+  "test_holds_unknown": 2,
+  "mean_learned_error_on_predicted_only_px": 4.2571830963070845,
+  "coverage_on_test_trials": 0.9444444444444444,
+  "matched_linear_error_px": 5.307072346301806,
+  "matched_fixed_accel_error_px": 3.7604426676777747,
+  "matched_stationary_error_px": 18.679949603834515,
+  "wins_against_matched_linear": 21,
+  "wins_against_matched_fixed_accel": 13,
+  "test_measures": [
+    {
+      "file": "test_01.mp4",
+      "source_sha256": "b6177e92ac713f338d5635bbbf7e303ea3ff995f66403f282c9c1d4eb902ff7c",
+      "source_kind": "SIMULATED",
+      "prediction_trials": 9,
+      "learned_predictions": 9,
+      "unknown_holds": 0,
+      "learned_mae_px": 1.444932735286405,
+      "static_mae_px": 21.236667930649425,
+      "linear_mae_px": 2.7707330948491724,
+      "fixed_accel_mae_px": 1.6139609742197152,
+      "errors": [
+        {
+          "heldout_ref": "sha256:b6177e92ac713f338d5635bbbf7e303ea3ff995f66403f282c9c1d4eb902ff7c#frame:18#detector:orange-v0",
+          "learned_error_px": 3.097700676489455,
+          "static_error_px": 11.256168247641359,
+          "linear_error_px": 3.2977380583862472,
+          "fixed_accel_error_px": 2.1827050737059155,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:b6177e92ac713f338d5635bbbf7e303ea3ff995f66403f282c9c1d4eb902ff7c#frame:24#detector:orange-v0",
+          "learned_error_px": 1.7426164139218965,
+          "static_error_px": 13.107413521468173,
+          "linear_error_px": 1.875390275616182,
+          "fixed_accel_error_px": 1.6537260527823028,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:b6177e92ac713f338d5635bbbf7e303ea3ff995f66403f282c9c1d4eb902ff7c#frame:30#detector:orange-v0",
+          "learned_error_px": 1.5926868716506388,
+          "static_error_px": 16.113415688137135,
+          "linear_error_px": 3.0401584335083442,
+          "fixed_accel_error_px": 1.1655365939876177,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:b6177e92ac713f338d5635bbbf7e303ea3ff995f66403f282c9c1d4eb902ff7c#frame:36#detector:orange-v0",
+          "learned_error_px": 1.5989799036713799,
+          "static_error_px": 18.15504588142419,
+          "linear_error_px": 2.055232424924961,
+          "fixed_accel_error_px": 0.9854611446613034,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:b6177e92ac713f338d5635bbbf7e303ea3ff995f66403f282c9c1d4eb902ff7c#frame:42#detector:orange-v0",
+          "learned_error_px": 0.5295620267359737,
+          "static_error_px": 21.23548431143606,
+          "linear_error_px": 3.130179313866305,
+          "fixed_accel_error_px": 1.3177321457533586,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:b6177e92ac713f338d5635bbbf7e303ea3ff995f66403f282c9c1d4eb902ff7c#frame:48#detector:orange-v0",
+          "learned_error_px": 0.9951287442364357,
+          "static_error_px": 24.098049730853006,
+          "linear_error_px": 3.104351203935583,
+          "fixed_accel_error_px": 1.81156932352087,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:b6177e92ac713f338d5635bbbf7e303ea3ff995f66403f282c9c1d4eb902ff7c#frame:54#detector:orange-v0",
+          "learned_error_px": 1.1174572424704612,
+          "static_error_px": 26.053816055858434,
+          "linear_error_px": 1.9745949689858415,
+          "fixed_accel_error_px": 1.262205730945309,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:b6177e92ac713f338d5635bbbf7e303ea3ff995f66403f282c9c1d4eb902ff7c#frame:60#detector:orange-v0",
+          "learned_error_px": 0.44449696017263723,
+          "static_error_px": 29.099777418871724,
+          "linear_error_px": 3.197890931315399,
+          "fixed_accel_error_px": 1.6769835106532032,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:b6177e92ac713f338d5635bbbf7e303ea3ff995f66403f282c9c1d4eb902ff7c#frame:66#detector:orange-v0",
+          "learned_error_px": 1.885765778228767,
+          "static_error_px": 32.010840520154744,
+          "linear_error_px": 3.2610622431036895,
+          "fixed_accel_error_px": 2.4697291919675575,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        }
+      ]
+    },
+    {
+      "file": "test_02.mp4",
+      "source_sha256": "6dc0c2447ceb217ce6acaf86c6a30024d7aa648ee6acb022aba6d157f7c3f1fb",
+      "source_kind": "SIMULATED",
+      "prediction_trials": 9,
+      "learned_predictions": 9,
+      "unknown_holds": 0,
+      "learned_mae_px": 2.35230491173318,
+      "static_mae_px": 15.832767657380966,
+      "linear_mae_px": 0.8561506401791569,
+      "fixed_accel_mae_px": 1.647884478257352,
+      "errors": [
+        {
+          "heldout_ref": "sha256:6dc0c2447ceb217ce6acaf86c6a30024d7aa648ee6acb022aba6d157f7c3f1fb#frame:18#detector:orange-v0",
+          "learned_error_px": 2.286190901892224,
+          "static_error_px": 16.017067829607086,
+          "linear_error_px": 1.3900706072423459,
+          "fixed_accel_error_px": 2.660166317161549,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:6dc0c2447ceb217ce6acaf86c6a30024d7aa648ee6acb022aba6d157f7c3f1fb#frame:24#detector:orange-v0",
+          "learned_error_px": 1.9286950355898729,
+          "static_error_px": 16.092562075598575,
+          "linear_error_px": 0.14359927700725483,
+          "fixed_accel_error_px": 1.4468419806306092,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:6dc0c2447ceb217ce6acaf86c6a30024d7aa648ee6acb022aba6d157f7c3f1fb#frame:30#detector:orange-v0",
+          "learned_error_px": 2.2221246497900964,
+          "static_error_px": 15.958162256090418,
+          "linear_error_px": 0.1474861118975323,
+          "fixed_accel_error_px": 0.2784761641098595,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:6dc0c2447ceb217ce6acaf86c6a30024d7aa648ee6acb022aba6d157f7c3f1fb#frame:36#detector:orange-v0",
+          "learned_error_px": 2.1020268048843875,
+          "static_error_px": 16.080236123342637,
+          "linear_error_px": 0.12221537805941814,
+          "fixed_accel_error_px": 0.2649407396454086,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:6dc0c2447ceb217ce6acaf86c6a30024d7aa648ee6acb022aba6d157f7c3f1fb#frame:42#detector:orange-v0",
+          "learned_error_px": 3.159571861098942,
+          "static_error_px": 15.01917538815891,
+          "linear_error_px": 1.5284138894303212,
+          "fixed_accel_error_px": 1.6145538414056713,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:6dc0c2447ceb217ce6acaf86c6a30024d7aa648ee6acb022aba6d157f7c3f1fb#frame:48#detector:orange-v0",
+          "learned_error_px": 2.2729734176060625,
+          "static_error_px": 16.05117572902721,
+          "linear_error_px": 1.5874983474369673,
+          "fixed_accel_error_px": 3.1143598306610714,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:6dc0c2447ceb217ce6acaf86c6a30024d7aa648ee6acb022aba6d157f7c3f1fb#frame:54#detector:orange-v0",
+          "learned_error_px": 1.989103787807257,
+          "static_error_px": 16.032690659017216,
+          "linear_error_px": 0.1807260093338323,
+          "fixed_accel_error_px": 1.7360298138268868,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:6dc0c2447ceb217ce6acaf86c6a30024d7aa648ee6acb022aba6d157f7c3f1fb#frame:60#detector:orange-v0",
+          "learned_error_px": 2.8808070471412948,
+          "static_error_px": 15.268002217458417,
+          "linear_error_px": 1.2596597403804954,
+          "fixed_accel_error_px": 1.113705287952413,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:6dc0c2447ceb217ce6acaf86c6a30024d7aa648ee6acb022aba6d157f7c3f1fb#frame:66#detector:orange-v0",
+          "learned_error_px": 2.329250699788482,
+          "static_error_px": 15.97583663812822,
+          "linear_error_px": 1.3456864008242446,
+          "fixed_accel_error_px": 2.601886328922701,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        }
+      ]
+    },
+    {
+      "file": "test_03.mp4",
+      "source_sha256": "4b0bc48f2c801905f60c0d4a1dc665d76f514c622b208f7098880023c5ff98ff",
+      "source_kind": "SIMULATED",
+      "prediction_trials": 9,
+      "learned_predictions": 8,
+      "unknown_holds": 1,
+      "learned_mae_px": 7.44376046226207,
+      "static_mae_px": 21.00032027109035,
+      "linear_mae_px": 8.97074565525729,
+      "fixed_accel_mae_px": 11.820371589821228,
+      "errors": [
+        {
+          "heldout_ref": "sha256:4b0bc48f2c801905f60c0d4a1dc665d76f514c622b208f7098880023c5ff98ff#frame:18#detector:orange-v0",
+          "learned_error_px": 1.1526311126330808,
+          "static_error_px": 26.959396020792852,
+          "linear_error_px": 2.8562325670781115,
+          "fixed_accel_error_px": 0.10123180372995692,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:4b0bc48f2c801905f60c0d4a1dc665d76f514c622b208f7098880023c5ff98ff#frame:24#detector:orange-v0",
+          "learned_error_px": 1.839001182743713,
+          "static_error_px": 31.20015436863385,
+          "linear_error_px": 4.25187101734083,
+          "fixed_accel_error_px": 1.3970531398682378,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:4b0bc48f2c801905f60c0d4a1dc665d76f514c622b208f7098880023c5ff98ff#frame:30#detector:orange-v0",
+          "learned_error_px": 2.7217395144875223,
+          "static_error_px": 34.06430253894568,
+          "linear_error_px": 2.869307977222987,
+          "fixed_accel_error_px": 1.3826538185242845,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:4b0bc48f2c801905f60c0d4a1dc665d76f514c622b208f7098880023c5ff98ff#frame:36#detector:orange-v0",
+          "learned_error_px": 8.263588396892985,
+          "static_error_px": 36.89188302531248,
+          "linear_error_px": 2.8309074275511223,
+          "fixed_accel_error_px": 0.04319556889195978,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:4b0bc48f2c801905f60c0d4a1dc665d76f514c622b208f7098880023c5ff98ff#frame:42#detector:orange-v0",
+          "learned_error_px": 34.93069637383501,
+          "static_error_px": 11.01290806429648,
+          "linear_error_px": 47.65683759025402,
+          "fixed_accel_error_px": 50.48764067044615,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:4b0bc48f2c801905f60c0d4a1dc665d76f514c622b208f7098880023c5ff98ff#frame:48#detector:orange-v0",
+          "learned_error_px": null,
+          "static_error_px": 18.124817516279688,
+          "linear_error_px": 7.202782378756042,
+          "fixed_accel_error_px": 40.4553893895205,
+          "proposal_status": "HOLD_UNFAMILIAR_CHANGE"
+        },
+        {
+          "heldout_ref": "sha256:4b0bc48f2c801905f60c0d4a1dc665d76f514c622b208f7098880023c5ff98ff#frame:54#detector:orange-v0",
+          "learned_error_px": 6.42232604949511,
+          "static_error_px": 15.232831507750031,
+          "linear_error_px": 2.9174422356505265,
+          "fixed_accel_error_px": 10.12021804468454,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:4b0bc48f2c801905f60c0d4a1dc665d76f514c622b208f7098880023c5ff98ff#frame:60#detector:orange-v0",
+          "learned_error_px": 1.324326403501039,
+          "static_error_px": 10.1502081328772,
+          "linear_error_px": 5.152519683529573,
+          "fixed_accel_error_px": 2.235410239743917,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:4b0bc48f2c801905f60c0d4a1dc665d76f514c622b208f7098880023c5ff98ff#frame:66#detector:orange-v0",
+          "learned_error_px": 2.8957746645080977,
+          "static_error_px": 5.366381264924879,
+          "linear_error_px": 4.998810019932384,
+          "fixed_accel_error_px": 0.16055163298150596,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        }
+      ]
+    },
+    {
+      "file": "test_04.mp4",
+      "source_sha256": "1083ed7333d0165baf75aa6b65e42d921f089fef8b5bd842ab98dc9a41cfbffa",
+      "source_kind": "SIMULATED",
+      "prediction_trials": 9,
+      "learned_predictions": 8,
+      "unknown_holds": 1,
+      "learned_mae_px": 6.3773753441460075,
+      "static_mae_px": 16.290603916630246,
+      "linear_mae_px": 9.447479566244553,
+      "fixed_accel_mae_px": 4.079676378674699,
+      "errors": [
+        {
+          "heldout_ref": "sha256:1083ed7333d0165baf75aa6b65e42d921f089fef8b5bd842ab98dc9a41cfbffa#frame:18#detector:orange-v0",
+          "learned_error_px": 1.742568484900696,
+          "static_error_px": 9.509252134026648,
+          "linear_error_px": 10.05736547344619,
+          "fixed_accel_error_px": 2.4178623161264823,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:1083ed7333d0165baf75aa6b65e42d921f089fef8b5bd842ab98dc9a41cfbffa#frame:24#detector:orange-v0",
+          "learned_error_px": 8.117629199742568,
+          "static_error_px": 6.910187256490097,
+          "linear_error_px": 13.3671603041529,
+          "fixed_accel_error_px": 3.6057894286277996,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:1083ed7333d0165baf75aa6b65e42d921f089fef8b5bd842ab98dc9a41cfbffa#frame:30#detector:orange-v0",
+          "learned_error_px": 6.146893834082599,
+          "static_error_px": 16.673222117603608,
+          "linear_error_px": 11.470337662747438,
+          "fixed_accel_error_px": 2.701882448318985,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:1083ed7333d0165baf75aa6b65e42d921f089fef8b5bd842ab98dc9a41cfbffa#frame:36#detector:orange-v0",
+          "learned_error_px": 6.253095517052987,
+          "static_error_px": 23.44886229804506,
+          "linear_error_px": 7.681269495689671,
+          "fixed_accel_error_px": 4.501179781605555,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:1083ed7333d0165baf75aa6b65e42d921f089fef8b5bd842ab98dc9a41cfbffa#frame:42#detector:orange-v0",
+          "learned_error_px": 7.367789910826917,
+          "static_error_px": 24.01323069132066,
+          "linear_error_px": 3.596516117250481,
+          "fixed_accel_error_px": 6.781483319649918,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:1083ed7333d0165baf75aa6b65e42d921f089fef8b5bd842ab98dc9a41cfbffa#frame:48#detector:orange-v0",
+          "learned_error_px": 6.29878459922327,
+          "static_error_px": 21.54098175233564,
+          "linear_error_px": 6.936019023175725,
+          "fixed_accel_error_px": 4.90420504235338,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:1083ed7333d0165baf75aa6b65e42d921f089fef8b5bd842ab98dc9a41cfbffa#frame:54#detector:orange-v0",
+          "learned_error_px": 2.989370455501506,
+          "static_error_px": 15.123147625296385,
+          "linear_error_px": 10.1537145075304,
+          "fixed_accel_error_px": 6.366389109407219,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:1083ed7333d0165baf75aa6b65e42d921f089fef8b5bd842ab98dc9a41cfbffa#frame:60#detector:orange-v0",
+          "learned_error_px": 12.102870751837514,
+          "static_error_px": 13.396417439448474,
+          "linear_error_px": 11.00219505645406,
+          "fixed_accel_error_px": 1.2916952637908414,
+          "proposal_status": "PREDICTION_CANDIDATE"
+        },
+        {
+          "heldout_ref": "sha256:1083ed7333d0165baf75aa6b65e42d921f089fef8b5bd842ab98dc9a41cfbffa#frame:66#detector:orange-v0",
+          "learned_error_px": null,
+          "static_error_px": 16.00013393510563,
+          "linear_error_px": 10.762738455754103,
+          "fixed_accel_error_px": 4.146600698192109,
+          "proposal_status": "HOLD_UNFAMILIAR_CHANGE"
+        }
+      ]
+    }
+  ],
+  "test_memory_mutations": 0,
+  "source_kind": "SIMULATED",
+  "physics_understood": false,
+  "world_knowledge_validated": false,
+  "new_model_weights_trained": false,
+  "native_memory_write_allowed": false,
+  "decision_authority": "KX108_ONLY",
+  "limitations": [
+    "Orange object and static camera are preselected perceptual inductive biases",
+    "Motion similarity algorithm is given; physics laws are not",
+    "Extrapolation baselines are diagnostic only, never used in learner",
+    "Simulation does not establish real-world understanding",
+    "Low error cannot prove physics/causality or universal transfer"
+  ]
+}

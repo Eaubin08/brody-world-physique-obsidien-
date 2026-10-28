@@ -1,0 +1,242 @@
+{
+  "stationary/clean": {
+    "proposed_shift": -0.029884,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.2456328084602757,
+    "validation_candidate": 0.24509770688963828,
+    "retention_before": 0.26032792705769014,
+    "retention_candidate": 0.26447051355504714,
+    "applied_shift": 0.0
+  },
+  "stationary/dark": {
+    "proposed_shift": 0.044649,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.2246991439499325,
+    "validation_candidate": 0.2259705109935347,
+    "retention_before": 0.26032792705769014,
+    "retention_candidate": 0.25558751650226097,
+    "applied_shift": 0.0
+  },
+  "stationary/camera": {
+    "proposed_shift": -0.100197,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.27830717678825134,
+    "validation_candidate": 0.3002273396523746,
+    "retention_before": 0.26032792705769014,
+    "retention_candidate": 0.28411722272983386,
+    "applied_shift": 0.0
+  },
+  "stationary/noise": {
+    "proposed_shift": 0.048663,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.23921379305241242,
+    "validation_candidate": 0.24814526873713338,
+    "retention_before": 0.26032792705769014,
+    "retention_candidate": 0.2553366434924793,
+    "applied_shift": 0.0
+  },
+  "stationary/large": {
+    "proposed_shift": 0.042512,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.25142562100848986,
+    "validation_candidate": 0.2673676237603001,
+    "retention_before": 0.26032792705769014,
+    "retention_candidate": 0.25572107370017005,
+    "applied_shift": 0.0
+  },
+  "stationary/occluded": {
+    "proposed_shift": 0.029556,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.27819456439857704,
+    "validation_candidate": 0.2824574599556947,
+    "retention_before": 0.26032792705769014,
+    "retention_candidate": 0.2566334544259372,
+    "applied_shift": 0.0
+  },
+  "constant_speed/clean": {
+    "proposed_shift": 0.038685,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.2453045322225499,
+    "validation_candidate": 0.240844858896017,
+    "retention_before": 0.21649316153978937,
+    "retention_candidate": 0.22517501000418147,
+    "applied_shift": 0.0
+  },
+  "constant_speed/dark": {
+    "proposed_shift": 0.056584,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.2360350597536529,
+    "validation_candidate": 0.2384678570991352,
+    "retention_before": 0.21649316153978937,
+    "retention_candidate": 0.2308259056408398,
+    "applied_shift": 0.0
+  },
+  "constant_speed/camera": {
+    "proposed_shift": -0.202308,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.27714534675362734,
+    "validation_candidate": 0.3054457745080392,
+    "retention_before": 0.21649316153978937,
+    "retention_candidate": 0.24654550381572424,
+    "applied_shift": 0.0
+  },
+  "constant_speed/noise": {
+    "proposed_shift": 0.149555,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.23833959846432917,
+    "validation_candidate": 0.272729284539531,
+    "retention_before": 0.21649316153978937,
+    "retention_candidate": 0.28576963348126166,
+    "applied_shift": 0.0
+  },
+  "constant_speed/large": {
+    "proposed_shift": 0.008158,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.24637366506970326,
+    "validation_candidate": 0.24790335366275976,
+    "retention_before": 0.21649316153978937,
+    "retention_candidate": 0.21785414344397983,
+    "applied_shift": 0.0
+  },
+  "constant_speed/occluded": {
+    "proposed_shift": 0.065329,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 0.20802548617699035,
+    "validation_candidate": 0.22454511141502842,
+    "retention_before": 0.21649316153978937,
+    "retention_candidate": 0.23472545976790687,
+    "applied_shift": 0.0
+  },
+  "constant_acceleration/clean": {
+    "proposed_shift": -0.746808,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 1.0399437599953878,
+    "validation_candidate": 1.1747315167370949,
+    "retention_before": 1.5673422033585755,
+    "retention_candidate": 1.5091530228212608,
+    "applied_shift": 0.0
+  },
+  "constant_acceleration/dark": {
+    "proposed_shift": -0.485942,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 1.6727755673009748,
+    "validation_candidate": 1.7031469399097776,
+    "retention_before": 1.5673422033585755,
+    "retention_candidate": 1.5065994581409694,
+    "applied_shift": 0.0
+  },
+  "constant_acceleration/camera": {
+    "proposed_shift": -1.627261,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 1.373723502499434,
+    "validation_candidate": 2.015812519851363,
+    "retention_before": 1.5673422033585755,
+    "retention_candidate": 2.0190824561234186,
+    "applied_shift": 0.0
+  },
+  "constant_acceleration/noise": {
+    "proposed_shift": -0.56474,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 1.1828482908949811,
+    "validation_candidate": 1.191771101996179,
+    "retention_before": 1.5673422033585755,
+    "retention_candidate": 1.50236283000321,
+    "applied_shift": 0.0
+  },
+  "constant_acceleration/large": {
+    "proposed_shift": -1.034427,
+    "accepted": false,
+    "reason": "HOLD_NO_VALIDATED_GAIN",
+    "validation_before": 1.9291903684438185,
+    "validation_candidate": 2.3399374596255624,
+    "retention_before": 1.5673422033585755,
+    "retention_candidate": 1.5903788649337711,
+    "applied_shift": 0.0
+  },
+  "constant_acceleration/occluded": {
+    "proposed_shift": 0.824771,
+    "accepted": false,
+    "reason": "HOLD_RETENTION_REGRESSION",
+    "validation_before": 1.9667398488131627,
+    "validation_candidate": 1.9382660967737966,
+    "retention_before": 1.5673422033585755,
+    "retention_candidate": 1.6786541878855292,
+    "applied_shift": 0.0
+  },
+  "reverse/clean": {
+    "proposed_shift": 0.679035,
+    "accepted": true,
+    "reason": "ACCEPT_VALIDATED_CORRECTION",
+    "validation_before": 0.6290628912301728,
+    "validation_candidate": 0.24496569429057535,
+    "retention_before": 0.625911775751064,
+    "retention_candidate": 0.265384245713019,
+    "applied_shift": 0.679035
+  },
+  "reverse/dark": {
+    "proposed_shift": 0.598283,
+    "accepted": true,
+    "reason": "ACCEPT_VALIDATED_CORRECTION",
+    "validation_before": 0.5943765005948535,
+    "validation_candidate": 0.2376211179805302,
+    "retention_before": 0.625911775751064,
+    "retention_candidate": 0.27186976178677935,
+    "applied_shift": 0.598283
+  },
+  "reverse/camera": {
+    "proposed_shift": 0.681609,
+    "accepted": true,
+    "reason": "ACCEPT_VALIDATED_CORRECTION",
+    "validation_before": 0.679257314752575,
+    "validation_candidate": 0.23446045426118578,
+    "retention_before": 0.625911775751064,
+    "retention_candidate": 0.2653842457130191,
+    "applied_shift": 0.681609
+  },
+  "reverse/noise": {
+    "proposed_shift": 0.542846,
+    "accepted": true,
+    "reason": "ACCEPT_VALIDATED_CORRECTION",
+    "validation_before": 0.5475115409037857,
+    "validation_candidate": 0.22104616342907757,
+    "retention_before": 0.625911775751064,
+    "retention_candidate": 0.28226413356220914,
+    "applied_shift": 0.542846
+  },
+  "reverse/large": {
+    "proposed_shift": 0.67553,
+    "accepted": true,
+    "reason": "ACCEPT_VALIDATED_CORRECTION",
+    "validation_before": 0.5864406521636798,
+    "validation_candidate": 0.30584308618308276,
+    "retention_before": 0.625911775751064,
+    "retention_candidate": 0.265384245713019,
+    "applied_shift": 0.67553
+  },
+  "reverse/occluded": {
+    "proposed_shift": 0.590377,
+    "accepted": true,
+    "reason": "ACCEPT_VALIDATED_CORRECTION",
+    "validation_before": 0.6680339739584208,
+    "validation_candidate": 0.27646192202874287,
+    "retention_before": 0.625911775751064,
+    "retention_candidate": 0.27335209021616236,
+    "applied_shift": 0.590377
+  }
+}

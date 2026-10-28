@@ -1,0 +1,20 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "67a2e7e192c1e6bad7861f0c09da0aa0ae323088a02ec78cfaf7f07d2cea027e",
+  "native_memory_write": false,
+  "prediction": 40.03448275862069,
+  "reason": "TRACK_PREDICTION",
+  "scene": "occlude_both",
+  "status": "HOLD_VISIBILITY",
+  "visibility_counts": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    0
+  ]
+}

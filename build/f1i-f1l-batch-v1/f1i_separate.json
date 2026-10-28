@@ -1,0 +1,30 @@
+{
+  "canonical_promotion": false,
+  "case": "separate",
+  "decision_authority": "KX108_ONLY",
+  "detected_marks": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "digest": "c1b5a524c10199bac663ee73ecdb27a768a4d7e6c6ad3400673227dc3c2fa93c",
+  "history_sha": [
+    "f146b92de5014159a19ac0fb9b737bc9ad22a1fdb1e2597f2c63d9090c116198",
+    "6ded1aa7a3bbcc8d616b0106f6811fac5012b2695d8d0f6ad8545fe4ab556cdd",
+    "38bfd9f0de22b66c747f918b90afca3fffb0812550df8b5c6e4310eb668e6230",
+    "581cce669613e6cd61aa3933e19b2d482938588874cd170e62408d1d21b0f324",
+    "9f6a9d394a654f275b67c227449c20685ca813de8cb9e72d17ef7ca090b2cdcd",
+    "57032e909be803b579f1d9aab078c8485b55d0a2ec8ebb4b4e9716873ed354dc",
+    "6956c937bfa0bcd879679cbaa15c13ca29329adbfa8cf3cc7f67ffa5f8466ac8",
+    "f4cc6e0cce0c75f5ef9a8962298851318a938edf2f513424e117b35f8c326fb3"
+  ],
+  "native_memory_write": false,
+  "observed_camera": true,
+  "prediction": 48.0,
+  "reason": "TRACK_PREDICTION"
+}

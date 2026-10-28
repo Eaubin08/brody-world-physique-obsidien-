@@ -1,0 +1,85 @@
+{
+  "U5": {
+    "status": "HOLD_NO_INDEPENDENT_VIDEO",
+    "video_frames_examined": 0
+  },
+  "U7": {
+    "camera_parameters_provided_to_tracker": false,
+    "case_results": {
+      "CAMERA_MOVES": {
+        "CANDIDATE": 3,
+        "HOLD": 0,
+        "MULTI": 0,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 3,
+        "pre": 3,
+        "same_path": 3
+      },
+      "COMPENSATED_MOTION": {
+        "CANDIDATE": 3,
+        "HOLD": 0,
+        "MULTI": 0,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 3,
+        "pre": 3,
+        "same_path": 3
+      },
+      "CROSSING": {
+        "CANDIDATE": 0,
+        "HOLD": 0,
+        "MULTI": 3,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 3,
+        "pre": 3,
+        "same_path": 3
+      },
+      "IDENTITY_SWAP": {
+        "CANDIDATE": 0,
+        "HOLD": 0,
+        "MULTI": 3,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 0,
+        "pre": 0,
+        "same_path": 0
+      },
+      "OBJECT_MOVES": {
+        "CANDIDATE": 3,
+        "HOLD": 0,
+        "MULTI": 0,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 3,
+        "pre": 3,
+        "same_path": 3
+      },
+      "OCCLUSION": {
+        "CANDIDATE": 0,
+        "HOLD": 0,
+        "MULTI": 3,
+        "identity_proven": 0,
+        "n": 3,
+        "post": 3,
+        "pre": 3,
+        "same_path": 3
+      }
+    },
+    "episodes": 18,
+    "full_reverse_360_proven": false,
+    "identity_labels_provided_to_tracker": false,
+    "real_3d_proven": false,
+    "status": "HISTORICAL_P165D12_TRACKING_EXAM",
+    "teacher_view_graph": {
+      "semantic_identity_verified": false,
+      "status": "HOLD_NO_TEACHER_IDENTITY_MANIFEST"
+    }
+  },
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "native_memory_write": false,
+  "schema": "BRODY_U5_U7_PROVENANCE_AND_2D_MULTIVIEW_V1",
+  "verdict": "U5_U7_2D_SYNTHETIC_MULTIVIEW_EVIDENCE_BOUND"
+}

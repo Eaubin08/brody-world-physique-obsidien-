@@ -1,0 +1,22 @@
+{
+  "requested_relation": "LEFT",
+  "source_training_refs": [
+    "top_a",
+    "top_b",
+    "left_a",
+    "left_b",
+    "bottom_a",
+    "bottom_b",
+    "right_a",
+    "right_b"
+  ],
+  "student_image_ref": "images/composition_student.png",
+  "student_image_sha256": "7f4c8ed7df17a2633d6780ef709e9080324aef96910020c7dac656c82087662d",
+  "student_procedure": "ROTATE_STORED_COMPONENT_MASKS_AND_APPLY_LEARNED_RELATIVE_DIRECTION",
+  "code_sha256": "28d7c18fb9e6f175d1c90a38c84e239df8e5a8c968ef5a462cf091b44880098e",
+  "memory_sha256": "01e5f85a5a24f2241de39c05706e111db59663bdc92f919e3280433743375fa7",
+  "teacher_target_read_before_student_commit": false,
+  "teacher_box_coordinates_supplied": false,
+  "real_world_identity_claimed": false,
+  "native_memory_write_allowed": false
+}

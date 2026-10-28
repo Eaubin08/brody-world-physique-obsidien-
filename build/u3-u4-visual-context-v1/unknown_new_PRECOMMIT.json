@@ -1,0 +1,19 @@
+{
+  "baseline_x": 52.0,
+  "candidate_x": null,
+  "canonical_promotion": false,
+  "case": "unknown_new",
+  "decision_authority": "KX108_ONLY",
+  "digest": "c927b08d642b9244b587268b1714b068b02a894ee4d85e07fd0798af3baa8dd0",
+  "memory_digest": "ed0dc048d3c5e17fa33002bd0442b93fe3e0baa96bdbd129eadb88145e4dafc8",
+  "native_memory_write": false,
+  "observed_history": [
+    23.0,
+    27.0,
+    31.0,
+    35.0,
+    40.0,
+    46.0
+  ],
+  "selected_context": null
+}

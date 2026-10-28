@@ -1,0 +1,78 @@
+{
+  "schema": "BRODY_P165D7_GOAL_MULTI_CONTINUITY",
+  "goal_count": 7,
+  "claim_count": 6,
+  "goals": {
+    "LOCATE": {
+      "focused": [
+        "seen",
+        "physical",
+        "predicted"
+      ],
+      "status": "MULTI",
+      "contradictions_preserved": true
+    },
+    "REIDENTIFY": {
+      "focused": [
+        "alternative",
+        "predicted"
+      ],
+      "status": "MULTI",
+      "contradictions_preserved": true
+    },
+    "EXPLAIN_CAUSE": {
+      "focused": [
+        "causal",
+        "physical",
+        "predicted"
+      ],
+      "status": "MULTI",
+      "contradictions_preserved": true
+    },
+    "PREDICT": {
+      "focused": [
+        "physical",
+        "predicted",
+        "causal"
+      ],
+      "status": "MULTI",
+      "contradictions_preserved": true
+    },
+    "RENDER": {
+      "focused": [
+        "seen",
+        "physical"
+      ],
+      "status": "MULTI",
+      "contradictions_preserved": true
+    },
+    "INTERPRET_SYMBOL": {
+      "focused": [
+        "symbol"
+      ],
+      "status": "MULTI",
+      "contradictions_preserved": true
+    },
+    "EXPLORE": {
+      "focused": [
+        "physical",
+        "predicted",
+        "seen",
+        "alternative",
+        "causal",
+        "symbol"
+      ],
+      "status": "MULTI",
+      "contradictions_preserved": true
+    }
+  },
+  "all_claims_retained_per_goal": true,
+  "priority_promotes_truth": false,
+  "real_sensor_evidence": false,
+  "automatic_goal_understanding": false,
+  "d6_tracker_connected": false,
+  "physical_or_metaphysical_truth_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

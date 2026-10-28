@@ -1,0 +1,140 @@
+{
+  "schema": "BRODY_INSTRUMENT_EPISODIC_CANDIDATES_V2",
+  "episodes": [
+    {
+      "id": "training_01",
+      "goal": "LIGHT",
+      "sketch_sha256": "5d7de2fa407b61f1107b7161beef138fbaf3aff07f0ee99425399bb9e7c79900",
+      "teacher_target_sha256": "89aa2f6b9fec17bb568a9fd80bc37111a572580772992d773addfaa3c5baac75",
+      "trial_losses": {
+        "PENCIL": 0.0,
+        "PEN": 3.6484375,
+        "NIB": 5.2314453125
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_02",
+      "goal": "LIGHT",
+      "sketch_sha256": "686159ffe7c0555017d63ac45f8e727e5af8443b7a8e53f7f6bceccf76515199",
+      "teacher_target_sha256": "82c2534f9a22d8378174685fe9ab9de418c40780dea1a217a0aed6f2f12654b9",
+      "trial_losses": {
+        "PENCIL": 0.0,
+        "PEN": 10.459228515625,
+        "NIB": 11.5595703125
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_03",
+      "goal": "LIGHT",
+      "sketch_sha256": "0dbcf113e435661a6d898e16f16082dc6dfe272388c11d8bb530d29afe9ff31f",
+      "teacher_target_sha256": "d61133dd486394bf6d8066a9fb2bbd902a4c72c24581179669b5d08bb9da63e3",
+      "trial_losses": {
+        "PENCIL": 0.0,
+        "PEN": 11.574951171875,
+        "NIB": 11.703125
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_04",
+      "goal": "UNIFORM",
+      "sketch_sha256": "5d7de2fa407b61f1107b7161beef138fbaf3aff07f0ee99425399bb9e7c79900",
+      "teacher_target_sha256": "d6c99cad4366f4a87e16a9e624f99ef2d1336c8ad7d2a3c617bc1353ca48f0d5",
+      "trial_losses": {
+        "PENCIL": 3.6484375,
+        "PEN": 0.0,
+        "NIB": 4.7314453125
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_05",
+      "goal": "UNIFORM",
+      "sketch_sha256": "686159ffe7c0555017d63ac45f8e727e5af8443b7a8e53f7f6bceccf76515199",
+      "teacher_target_sha256": "55a9938e71d909f8d63a96d8bfa68b6ee0ce62d607a98e4ff00f8479ef45465a",
+      "trial_losses": {
+        "PENCIL": 10.459228515625,
+        "PEN": 0.0,
+        "NIB": 5.562744140625
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_06",
+      "goal": "UNIFORM",
+      "sketch_sha256": "0dbcf113e435661a6d898e16f16082dc6dfe272388c11d8bb530d29afe9ff31f",
+      "teacher_target_sha256": "dfd1b332c145d536b1c40d7811539c580e2ade1bbd1fd63a9cd8db5afefac1cb",
+      "trial_losses": {
+        "PENCIL": 11.574951171875,
+        "PEN": 0.0,
+        "NIB": 7.974853515625
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_07",
+      "goal": "EXPRESSIVE",
+      "sketch_sha256": "5d7de2fa407b61f1107b7161beef138fbaf3aff07f0ee99425399bb9e7c79900",
+      "teacher_target_sha256": "fdc8bbee282be04f83c8f0ed96c247fa7fbf05a4d6120a2cd20438546f842a93",
+      "trial_losses": {
+        "PENCIL": 5.2314453125,
+        "PEN": 4.7314453125,
+        "NIB": 0.0
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_08",
+      "goal": "EXPRESSIVE",
+      "sketch_sha256": "686159ffe7c0555017d63ac45f8e727e5af8443b7a8e53f7f6bceccf76515199",
+      "teacher_target_sha256": "adcf104dd6ff010acc72dead526aa87a12df8441bf741690f2eda280c91fe007",
+      "trial_losses": {
+        "PENCIL": 11.5595703125,
+        "PEN": 5.562744140625,
+        "NIB": 0.0
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_09",
+      "goal": "EXPRESSIVE",
+      "sketch_sha256": "0dbcf113e435661a6d898e16f16082dc6dfe272388c11d8bb530d29afe9ff31f",
+      "teacher_target_sha256": "2e2cf49473d8768b6cc725be8bf5decb7c36d907bffdec98fc7724e8b41c3b78",
+      "trial_losses": {
+        "PENCIL": 11.703125,
+        "PEN": 7.974853515625,
+        "NIB": 0.0
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    }
+  ],
+  "candidate_only": true,
+  "native_memory_write_allowed": false,
+  "no_auto_promotion": true,
+  "code_identity": {
+    "module_path": "brody_world_physique/instrument_school_v2.py",
+    "module_sha256": "54379ed6bfb6758b7639980de81b1df748b21c5e7ef2c2f079ceb955444fbae0",
+    "renderer": "render_instrument",
+    "selector": "select_tool",
+    "preexisting_drawing_code": {
+      "capability": "image-thinning",
+      "module_path": "brody_world_physique/drawing_school_v1.py",
+      "symbol": "suggest_gestures_from_reference",
+      "code_sha256": "bb3d36247be2cb24f590794ba3bacc028326e59f2477df94e2e086023b25075d",
+      "version_note": "CURRENT_LOCAL_FILE_CONTENT_SHA256"
+    },
+    "pillow_version": "12.3.0"
+  },
+  "prior_v1_episode_count": 10
+}

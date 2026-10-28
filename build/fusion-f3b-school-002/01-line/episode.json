@@ -1,0 +1,22 @@
+{
+  "baseline_error_px": 48,
+  "baseline_sha256": "c83aefe17ef2cb1f712a277e359bbc6045728bca01db485e496261cdbf048673",
+  "boxes": 1,
+  "candidate_error_px": 46,
+  "candidate_sha256": "b300d2fc4988160bc5f886f01764b9449ea8eeacddadf2071ccfadc22a2b1656",
+  "comparison_sha256": "ff15519caee89b54dd6dd5dcca61e298f6383a1aa34f4800eed9dfc4a729c670",
+  "decision_authority": "KX108_ONLY",
+  "gain_px": 2,
+  "gesture_count": 1,
+  "layout_sha256": "33dc15fa4e08e92c371b3a0c3def6463572d6fc0e3deba6a973f239a9c430ddb",
+  "memory_sha256": "9936bcb4cb7e654e41354618e4f2a61bb513de9adaec1e44b1f5f18bac8ae392",
+  "native_memory_write": false,
+  "novel_object_recognition": false,
+  "observe_only_is_engineered_extraction": true,
+  "representation_digest": "df14e659cb061d3e7856cc565828532ac1a2a170e3cfcf63cec7e81eaa19a4c0",
+  "schema": "BRODY_FUSION_F3_LESSON_V0",
+  "target_hidden_until_after_candidate_sealed": true,
+  "teacher_sha256": "f3960354b95d074811669f922713f4afcc3ea98afb7a460652dd87968827fe8d",
+  "train_sha256": "206a161b1d51f0246ebd2d6f12a9006e201331ab87b2689c5c5a790a4bb49a89",
+  "verdict": "IMPROVED"
+}

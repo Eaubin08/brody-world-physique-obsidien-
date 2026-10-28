@@ -1,0 +1,12 @@
+
+test_circle_and_curve_representable_without_ellipse_tool_for_student (test_drawing_school_v1.DrawingV1Tests.test_circle_and_curve_representable_without_ellipse_tool_for_student) ... ok
+test_really_erase_worse_wrong_stroke (test_drawing_school_v1.DrawingV1Tests.test_really_erase_worse_wrong_stroke) ... ok
+test_replacement_or_erasure_repairs_a_partly_right_attempt (test_drawing_school_v1.DrawingV1Tests.test_replacement_or_erasure_repairs_a_partly_right_attempt) ... ok
+test_run_cold_memory_and_holdout_sources (test_drawing_school_v1.DrawingV1Tests.test_run_cold_memory_and_holdout_sources) ... ok
+test_skeleton_and_trace_nonempty_lines_and_circles (test_drawing_school_v1.DrawingV1Tests.test_skeleton_and_trace_nonempty_lines_and_circles) ... ok
+test_triangle_vectorization_improves_baseline (test_drawing_school_v1.DrawingV1Tests.test_triangle_vectorization_improves_baseline) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.319s
+
+OK

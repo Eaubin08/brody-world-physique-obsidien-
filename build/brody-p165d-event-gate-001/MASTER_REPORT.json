@@ -1,0 +1,58 @@
+{
+  "schema": "BRODY_P165D_OCCLUSION_AND_SCENE_EPISTEMIC_GATE",
+  "cases": {
+    "occluded_jump": {
+      "n": 25,
+      "HOLD": 0,
+      "MULTI": 25,
+      "unsafe_select": 0,
+      "identity_claims": 0
+    },
+    "substitution": {
+      "n": 25,
+      "HOLD": 0,
+      "MULTI": 25,
+      "unsafe_select": 0,
+      "identity_claims": 0
+    },
+    "crossing_indistinguishable": {
+      "n": 25,
+      "HOLD": 0,
+      "MULTI": 25,
+      "unsafe_select": 0,
+      "identity_claims": 0
+    },
+    "color_swap": {
+      "n": 25,
+      "HOLD": 0,
+      "MULTI": 25,
+      "unsafe_select": 0,
+      "identity_claims": 0
+    },
+    "camera_without_landmarks": {
+      "n": 25,
+      "HOLD": 25,
+      "MULTI": 0,
+      "unsafe_select": 0,
+      "identity_claims": 0
+    },
+    "multiple_depth_planes": {
+      "n": 25,
+      "HOLD": 25,
+      "MULTI": 0,
+      "unsafe_select": 0,
+      "identity_claims": 0
+    }
+  },
+  "exams": 150,
+  "gates_rule_based_on_fixture_case": true,
+  "automatic_world_event_reconstruction": false,
+  "perception_extracted_from_pixels": true,
+  "graph_edges_extracted_from_pixels": false,
+  "unknown_event_false_certainty_tested": true,
+  "new_scene_graph_integrated_to_tracker": false,
+  "legacy_77_unchanged_not_replayed": true,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

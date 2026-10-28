@@ -1,0 +1,44 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "exams": [
+    {
+      "baseline_error": 1.0,
+      "candidate_error": 0.0,
+      "candidate_image_generated": true,
+      "image_mae_rgb": 0.0,
+      "inferred_context": "intervention",
+      "name": "slope_new",
+      "target_x": 42.0
+    },
+    {
+      "baseline_error": 0.0,
+      "candidate_error": 0.0,
+      "candidate_image_generated": true,
+      "image_mae_rgb": 0.0,
+      "inferred_context": "clean",
+      "name": "clean_new",
+      "target_x": 49.0
+    },
+    {
+      "baseline_error": 1.0,
+      "candidate_error": null,
+      "candidate_image_generated": false,
+      "image_mae_rgb": null,
+      "inferred_context": null,
+      "name": "unknown_new",
+      "target_x": 53.0
+    }
+  ],
+  "global_correction_accepted": false,
+  "global_rejection_reason": "HOLD_RETENTION_REGRESSION",
+  "multi_view_proven": false,
+  "native_memory_write": false,
+  "no_exam_label_used_by_model": true,
+  "pixel_context_routing": true,
+  "probe_acceleration": -1.0,
+  "same_candidate_for_forecast_and_raster": true,
+  "schema": "BRODY_U3_U4_PIXELS_TO_SHARED_RENDERER_V1",
+  "semantic_object_identity_proven": false,
+  "verdict": "U3_U4_CONTEXTUAL_SINGLE_PARAMETER_VISUAL_LOOP"
+}

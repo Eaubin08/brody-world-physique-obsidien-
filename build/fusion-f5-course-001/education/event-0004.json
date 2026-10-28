@@ -1,0 +1,18 @@
+{
+  "index": 4,
+  "previous": "228103abf1176f7cccf2fac7db68c2cc86d14e3b05b153164f29f045783081a2",
+  "kind": "HELD_OUT_TEST",
+  "payload": {
+    "skill_id": "rectangle",
+    "registry_version": 3,
+    "candidate_sha256": "d37fdac08d903b1cef18912ee857ad81171ef1e191da7e874b4fd5641fea9f4e",
+    "verdict": "IMPROVED",
+    "candidate_error": 174,
+    "baseline_error": 316,
+    "test_used_for_training": false
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "11b0d2f3d13663ffec7b9e20d80465b66a4f3ded82b08ae3ff2f769375452e2f"
+}

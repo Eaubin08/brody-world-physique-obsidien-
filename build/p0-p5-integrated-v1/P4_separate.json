@@ -1,0 +1,20 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "501ae95d0c36285f79a3b8ea7dfa765982239de7a76f2bbc56adefd468e7242a",
+  "native_memory_write": false,
+  "prediction": 37.0,
+  "reason": "TRACK_PREDICTION",
+  "scene": "separate",
+  "status": "CANDIDATE",
+  "visibility_counts": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ]
+}

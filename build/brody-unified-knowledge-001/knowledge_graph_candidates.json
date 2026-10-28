@@ -1,0 +1,197 @@
+{
+  "schema": "BRODY_CANDIDATE_VISUAL_KNOWLEDGE_GRAPH_V1",
+  "identities": {
+    "exemple-archive-01": {
+      "origin": "TEACHER_LABEL_UNVERIFIED",
+      "observation_refs": [
+        "36a9328291679fff092f",
+        "3545c991d30f09d7e3fe",
+        "69971885d47b365d8658",
+        "f7a854ffec9733ce0589"
+      ],
+      "status": "TAUGHT_CANDIDATE",
+      "known_views": [
+        "identity",
+        "mirror"
+      ],
+      "unseen_views": [
+        "quarter_turn",
+        "half_turn"
+      ],
+      "procedural_state": "LEARNING",
+      "semantic_identity_verified": false,
+      "available_action": "DOUBT"
+    }
+  },
+  "observations": {
+    "36a9328291679fff092f": {
+      "identity_ref": "exemple-archive-01",
+      "source_sha256": "dd67bf6eeb0d5c0682ac89cf3b48c51ea111a12b2b7482de0a302c258f7b8f50",
+      "view": "identity",
+      "role": "LESSON",
+      "context": "tone:varied|density:medium|parts:1|axis:balanced",
+      "properties": {
+        "tone": "varied",
+        "density": "medium",
+        "orientation": "balanced",
+        "dark_pixels": 380
+      },
+      "parts": [
+        {
+          "size": 380,
+          "bbox": [
+            11,
+            11,
+            45,
+            45
+          ],
+          "center": [
+            28.0,
+            28.0
+          ]
+        }
+      ],
+      "spatial_relations": []
+    },
+    "3545c991d30f09d7e3fe": {
+      "identity_ref": "exemple-archive-01",
+      "source_sha256": "dd67bf6eeb0d5c0682ac89cf3b48c51ea111a12b2b7482de0a302c258f7b8f50",
+      "view": "mirror",
+      "role": "LESSON",
+      "context": "tone:varied|density:medium|parts:1|axis:balanced",
+      "properties": {
+        "tone": "varied",
+        "density": "medium",
+        "orientation": "balanced",
+        "dark_pixels": 380
+      },
+      "parts": [
+        {
+          "size": 380,
+          "bbox": [
+            18,
+            11,
+            52,
+            45
+          ],
+          "center": [
+            35.0,
+            28.0
+          ]
+        }
+      ],
+      "spatial_relations": []
+    },
+    "69971885d47b365d8658": {
+      "identity_ref": "exemple-archive-01",
+      "source_sha256": "dd67bf6eeb0d5c0682ac89cf3b48c51ea111a12b2b7482de0a302c258f7b8f50",
+      "view": "quarter_turn",
+      "role": "EXAM",
+      "context": "tone:varied|density:medium|parts:1|axis:balanced",
+      "properties": {
+        "tone": "varied",
+        "density": "medium",
+        "orientation": "balanced",
+        "dark_pixels": 380
+      },
+      "parts": [
+        {
+          "size": 380,
+          "bbox": [
+            11,
+            18,
+            45,
+            52
+          ],
+          "center": [
+            28.0,
+            35.0
+          ]
+        }
+      ],
+      "spatial_relations": []
+    },
+    "f7a854ffec9733ce0589": {
+      "identity_ref": "exemple-archive-01",
+      "source_sha256": "dd67bf6eeb0d5c0682ac89cf3b48c51ea111a12b2b7482de0a302c258f7b8f50",
+      "view": "half_turn",
+      "role": "EXAM",
+      "context": "tone:varied|density:medium|parts:1|axis:balanced",
+      "properties": {
+        "tone": "varied",
+        "density": "medium",
+        "orientation": "balanced",
+        "dark_pixels": 380
+      },
+      "parts": [
+        {
+          "size": 380,
+          "bbox": [
+            18,
+            18,
+            52,
+            52
+          ],
+          "center": [
+            35.0,
+            35.0
+          ]
+        }
+      ],
+      "spatial_relations": []
+    }
+  },
+  "transforms": [
+    {
+      "observation_ref": "36a9328291679fff092f",
+      "kind": "identity",
+      "epistemic_class": "SIMULATED_2D"
+    },
+    {
+      "observation_ref": "3545c991d30f09d7e3fe",
+      "kind": "mirror",
+      "epistemic_class": "SIMULATED_2D"
+    },
+    {
+      "observation_ref": "69971885d47b365d8658",
+      "kind": "quarter_turn",
+      "epistemic_class": "SIMULATED_2D"
+    },
+    {
+      "observation_ref": "f7a854ffec9733ce0589",
+      "kind": "half_turn",
+      "epistemic_class": "SIMULATED_2D"
+    }
+  ],
+  "relations": [
+    {
+      "subject": "36a9328291679fff092f",
+      "predicate": "TAUGHT_AS_VIEW_OF",
+      "object": "exemple-archive-01",
+      "provenance": "TEACHER_MANIFEST"
+    },
+    {
+      "subject": "3545c991d30f09d7e3fe",
+      "predicate": "TAUGHT_AS_VIEW_OF",
+      "object": "exemple-archive-01",
+      "provenance": "TEACHER_MANIFEST"
+    },
+    {
+      "subject": "69971885d47b365d8658",
+      "predicate": "TAUGHT_AS_VIEW_OF",
+      "object": "exemple-archive-01",
+      "provenance": "TEACHER_MANIFEST"
+    },
+    {
+      "subject": "f7a854ffec9733ce0589",
+      "predicate": "TAUGHT_AS_VIEW_OF",
+      "object": "exemple-archive-01",
+      "provenance": "TEACHER_MANIFEST"
+    }
+  ],
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "receipt_tip": "71a6854f666ff2f0e4f13585c239f98534d66049c4249c6d47fa9785aee70bdb",
+  "digest": "7dc498f2716357f94a1645cd84f9f19861f65ee54a76fc9060457cc535b3c34f"
+}

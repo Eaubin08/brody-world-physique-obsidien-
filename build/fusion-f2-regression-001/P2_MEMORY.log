@@ -1,0 +1,9 @@
+
+test_conflict_holds_majority_not_history (test_p27_experience_hierarchy_v0.HierarchyExperienceTest.test_conflict_holds_majority_not_history) ... ok
+test_replay_and_tampering (test_p27_experience_hierarchy_v0.HierarchyExperienceTest.test_replay_and_tampering) ... ok
+test_same_observation_different_order (test_p27_experience_hierarchy_v0.HierarchyExperienceTest.test_same_observation_different_order) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.145s
+
+OK

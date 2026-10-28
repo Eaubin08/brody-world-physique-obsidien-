@@ -1,0 +1,12 @@
+
+test_invalid_layout_rejected (test_p211c_gesture_recomposition_v0.CompositionTests.test_invalid_layout_rejected) ... ok
+test_memory_tampering_fails_closed (test_p211c_gesture_recomposition_v0.CompositionTests.test_memory_tampering_fails_closed) ... ok
+test_recomposition_generates_png_and_blank (test_p211c_gesture_recomposition_v0.CompositionTests.test_recomposition_generates_png_and_blank) ... ok
+test_test_target_only_scores_after_commit (test_p211c_gesture_recomposition_v0.CompositionTests.test_test_target_only_scores_after_commit) ... C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\p210a_visual_loop_contract_v0.py:28: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  return sum(any(channel for channel in pixel) for pixel in d.getdata())
+ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.063s
+
+OK

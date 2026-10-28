@@ -1,0 +1,15 @@
+{
+  "candidate_skill": "P152_IDENTITY_BEAM",
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "depends_on": [
+    "pixel_observation",
+    "time_order"
+  ],
+  "digest": "c79e25e3cc1752f2b415dfa9a3a4965a18528e1c8caa4cd40096bddb6b56382b",
+  "native_memory_write": false,
+  "precondition": "at least two target observations",
+  "prior_digest": "6cccbcd8d29db36298865455e50db840251c81f229c4108311154668f9ecd7e6",
+  "schema": "BRODY_F1K_SKILL_LEDGER_V1",
+  "stage": "interference"
+}

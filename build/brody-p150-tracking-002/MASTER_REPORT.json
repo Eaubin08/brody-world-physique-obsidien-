@@ -1,0 +1,97 @@
+{
+  "schema": "BRODY_P150_IMAGE_ONLY_MULTI_OBJECT_BEAM",
+  "episodes": 2400,
+  "scenarios_expected": 8,
+  "scenarios_completed": 8,
+  "duration_seconds": 88.442,
+  "scenarios": {
+    "separate": {
+      "n": 300,
+      "answered": 300,
+      "holds": 0,
+      "mae_sum": 0.0,
+      "within_4px": 300,
+      "camera_seen": 300,
+      "mae": 0.0,
+      "coverage": 1.0
+    },
+    "cross": {
+      "n": 300,
+      "answered": 296,
+      "holds": 4,
+      "mae_sum": 0.0,
+      "within_4px": 296,
+      "camera_seen": 300,
+      "mae": 0.0,
+      "coverage": 0.9867
+    },
+    "overlap": {
+      "n": 300,
+      "answered": 0,
+      "holds": 300,
+      "mae_sum": 0.0,
+      "within_4px": 0,
+      "camera_seen": 300,
+      "mae": null,
+      "coverage": 0.0
+    },
+    "occlude_one": {
+      "n": 300,
+      "answered": 300,
+      "holds": 0,
+      "mae_sum": 163.21999999999997,
+      "within_4px": 300,
+      "camera_seen": 300,
+      "mae": 0.5441,
+      "coverage": 1.0
+    },
+    "occlude_both": {
+      "n": 300,
+      "answered": 300,
+      "holds": 0,
+      "mae_sum": 1179.3321009281453,
+      "within_4px": 160,
+      "camera_seen": 300,
+      "mae": 3.9311,
+      "coverage": 1.0
+    },
+    "camera_pan": {
+      "n": 300,
+      "answered": 297,
+      "holds": 3,
+      "mae_sum": 69.0,
+      "within_4px": 297,
+      "camera_seen": 300,
+      "mae": 0.2323,
+      "coverage": 0.99
+    },
+    "appearance_swap": {
+      "n": 300,
+      "answered": 300,
+      "holds": 0,
+      "mae_sum": 5526.0,
+      "within_4px": 96,
+      "camera_seen": 300,
+      "mae": 18.42,
+      "coverage": 1.0
+    },
+    "distractor": {
+      "n": 300,
+      "answered": 297,
+      "holds": 3,
+      "mae_sum": 640.0,
+      "within_4px": 257,
+      "camera_seen": 300,
+      "mae": 2.1549,
+      "coverage": 0.99
+    }
+  },
+  "stopped_by": "EPISODE_CAP",
+  "real_identity_proven": false,
+  "learned_dynamics": false,
+  "observed_camera_landmarks": true,
+  "real_world_generalization_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

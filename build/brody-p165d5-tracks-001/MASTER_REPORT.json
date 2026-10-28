@@ -1,0 +1,102 @@
+{
+  "schema": "BRODY_P165D5_IMAGE_TO_PERSISTENT_HYPOTHESES",
+  "conditions": 675,
+  "episodes": 1350,
+  "run_complete": true,
+  "beam_size": 8,
+  "groups": {
+    "red/none": {
+      "n": 150,
+      "holds": 0,
+      "multis": 150,
+      "candidates": 0,
+      "topk_truth_recall": 150,
+      "top1_position_error_sum": 0.0,
+      "top1_position_pairs": 960
+    },
+    "blue/none": {
+      "n": 150,
+      "holds": 0,
+      "multis": 150,
+      "candidates": 0,
+      "topk_truth_recall": 150,
+      "top1_position_error_sum": 0.0,
+      "top1_position_pairs": 960
+    },
+    "change/none": {
+      "n": 150,
+      "holds": 0,
+      "multis": 150,
+      "candidates": 0,
+      "topk_truth_recall": 150,
+      "top1_position_error_sum": 0.0,
+      "top1_position_pairs": 960
+    },
+    "red/partial": {
+      "n": 150,
+      "holds": 0,
+      "multis": 150,
+      "candidates": 0,
+      "topk_truth_recall": 150,
+      "top1_position_error_sum": 709.5348837209278,
+      "top1_position_pairs": 960
+    },
+    "blue/partial": {
+      "n": 150,
+      "holds": 0,
+      "multis": 150,
+      "candidates": 0,
+      "topk_truth_recall": 150,
+      "top1_position_error_sum": 709.5348837209278,
+      "top1_position_pairs": 960
+    },
+    "change/partial": {
+      "n": 150,
+      "holds": 0,
+      "multis": 150,
+      "candidates": 0,
+      "topk_truth_recall": 150,
+      "top1_position_error_sum": 709.5348837209278,
+      "top1_position_pairs": 960
+    },
+    "red/full": {
+      "n": 150,
+      "holds": 17,
+      "multis": 133,
+      "candidates": 0,
+      "topk_truth_recall": 114,
+      "top1_position_error_sum": 5931.0,
+      "top1_position_pairs": 577
+    },
+    "blue/full": {
+      "n": 150,
+      "holds": 16,
+      "multis": 134,
+      "candidates": 0,
+      "topk_truth_recall": 114,
+      "top1_position_error_sum": 5868.0,
+      "top1_position_pairs": 577
+    },
+    "change/full": {
+      "n": 150,
+      "holds": 21,
+      "multis": 129,
+      "candidates": 0,
+      "topk_truth_recall": 114,
+      "top1_position_error_sum": 5877.0,
+      "top1_position_pairs": 580
+    }
+  },
+  "inference_receives_truth": false,
+  "inference_receives_fixture_labels": false,
+  "track_positions_persist_across_frames": true,
+  "d4_state_adapter_connected": true,
+  "d4_frame_is_synthetic_image_1d": true,
+  "true_identity_established": false,
+  "camera_and_scene_graph_connected": false,
+  "physical_event_causality_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "duration_seconds": 9.378
+}

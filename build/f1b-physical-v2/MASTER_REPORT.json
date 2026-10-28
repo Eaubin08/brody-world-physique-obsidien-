@@ -1,0 +1,64 @@
+{
+  "schema": "BRODY_F1B_PHYSICAL_MEMORY_BRIDGE_V1",
+  "train": [
+    {
+      "case": 0,
+      "experiences": 1,
+      "forecast": "forecast_train_0"
+    },
+    {
+      "case": 1,
+      "experiences": 2,
+      "forecast": "forecast_train_1"
+    }
+  ],
+  "test_with_no_memory": {
+    "schema": "BRODY_CONTEXTUAL_PHYSICS_FORECAST_REPORT_V2",
+    "context": "vertical|speeding_up",
+    "mode": "CANDIDATE",
+    "selected": "ACCELERATION",
+    "evidence_source": "LOCAL_BACKTEST",
+    "eligible_episodes": 0,
+    "forecast_sealed": true,
+    "native_memory_write": false,
+    "canonical_promotion": false,
+    "decision_authority": "KX108_ONLY"
+  },
+  "test_with_memory": {
+    "schema": "BRODY_CONTEXTUAL_PHYSICS_FORECAST_REPORT_V2",
+    "context": "vertical|speeding_up",
+    "mode": "CANDIDATE",
+    "selected": "ACCELERATION",
+    "evidence_source": "EXPERIENCE_MATCHED",
+    "eligible_episodes": 2,
+    "forecast_sealed": true,
+    "native_memory_write": false,
+    "canonical_promotion": false,
+    "decision_authority": "KX108_ONLY"
+  },
+  "paired_errors_no_memory_px": {
+    "ACCELERATION": 0.0,
+    "STILL": 10.0,
+    "VELOCITY": 2.0
+  },
+  "paired_errors_with_memory_px": {
+    "ACCELERATION": 0.0,
+    "STILL": 10.0,
+    "VELOCITY": 2.0
+  },
+  "sealed_forecasts_unchanged": true,
+  "train_test_episode_separated": true,
+  "same_test_input": true,
+  "different_test_source_from_train": true,
+  "shared_physical_competence_candidate": true,
+  "memory_changed_model_choice": false,
+  "reciprocal_prototype_generator_connected": false,
+  "p156_memory_connected": false,
+  "pause_resume_tested": false,
+  "unified_education_e2e": false,
+  "physical_law_discovered": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "verdict": "F1B_BOUNDED_MOTION_MEMORY_EXPERIMENT"
+}

@@ -1,0 +1,14 @@
+{
+  "index": 1,
+  "previous": null,
+  "kind": "TRAIN_OLD",
+  "payload": {
+    "memory_version": "v001",
+    "winner": "PENCIL",
+    "source": "EXPLICIT_SYNTHETIC_TRAIN"
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "51685f6352a7cd5d11dfe568f765b603c7647170c3b7b794c230dd2b1c20b1bf"
+}

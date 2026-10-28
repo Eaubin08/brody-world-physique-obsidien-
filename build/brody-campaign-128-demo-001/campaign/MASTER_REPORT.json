@@ -1,0 +1,13 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "exam_episodes": 3,
+  "memory_frozen_for_heldout": true,
+  "memory_outperforms_baseline_on_paired_cases": false,
+  "native_memory_write": false,
+  "paired_memory_advantage_px": 0.0,
+  "paired_selected": 3,
+  "real_world_generalization_proven": false,
+  "schema": "BRODY_INDEPENDENT_MOTION_CAMPAIGN_V1",
+  "train_episodes": 3
+}

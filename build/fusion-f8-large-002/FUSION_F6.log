@@ -1,0 +1,14 @@
+COMMAND: C:\Users\Aubin\AppData\Local\Python\pythoncore-3.14-64\python.exe -m unittest discover -s tests -p test_fusion_f6_instrument_education_v0.py -v
+STDOUT
+
+STDERR
+C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\p210a_visual_loop_contract_v0.py:28: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  return sum(any(channel for channel in pixel) for pixel in d.getdata())
+test_sealed_candidate_and_persistent_visual_memory (test_fusion_f6_instrument_education_v0.InstrumentIntegrationTests.test_sealed_candidate_and_persistent_visual_memory) ... ok
+test_three_instruments_and_heldout_hold (test_fusion_f6_instrument_education_v0.InstrumentIntegrationTests.test_three_instruments_and_heldout_hold) ... ok
+test_unchanged_output_refusal (test_fusion_f6_instrument_education_v0.InstrumentIntegrationTests.test_unchanged_output_refusal) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.910s
+
+OK

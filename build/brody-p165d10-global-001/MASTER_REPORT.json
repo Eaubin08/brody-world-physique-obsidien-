@@ -1,0 +1,24 @@
+{
+  "schema": "BRODY_P165D10_GLOBAL_UNITTEST_DISCOVERY",
+  "command": [
+    "C:\\Users\\Aubin\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test*.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 180.837,
+  "python": "3.14.4",
+  "discovery_scope": "tests/test*.py by unittest only",
+  "pytest_and_other_frameworks_not_covered": true,
+  "verdict": "GREEN",
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

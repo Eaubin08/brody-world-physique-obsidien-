@@ -1,0 +1,15 @@
+{
+  "index": 3,
+  "previous": "6b3395e4eb778eb997922384e73dfa3d5b704c3f25c844b6e3ea1419b96cc219",
+  "kind": "TRAIN_CANDIDATE",
+  "payload": {
+    "skill_id": "ellipse",
+    "train_sha256": "d0b38d03d26aa29d0b84d94d624748ea0ffc09fb83e544c5d2668e93f322d16f",
+    "registry_version": 3,
+    "registry_digest": "a8091b361d2501ccaf625e3bdd9992af37417f911c19d966f0dec813be645058"
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "228103abf1176f7cccf2fac7db68c2cc86d14e3b05b153164f29f045783081a2"
+}

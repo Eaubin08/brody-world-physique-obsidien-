@@ -1,0 +1,36 @@
+{
+  "schema": "BRODY_P141_TRANSFER_STRESS",
+  "elapsed_seconds": 260.4,
+  "budget_seconds": 900,
+  "exam_cases": 30000,
+  "train_examples": 1500,
+  "cells_completed": 30,
+  "cells_expected": 30,
+  "shift_types": [
+    "native",
+    "mirror",
+    "greyscale",
+    "posterize",
+    "blur",
+    "contrast"
+  ],
+  "families": [
+    "shape",
+    "colour",
+    "count",
+    "arrangement",
+    "orientation"
+  ],
+  "global_accuracy": {
+    "knn": 0.6572,
+    "centroid": 0.6303,
+    "majority": 0.3163
+  },
+  "stopped_by": "EXAM_CAP",
+  "exam_feedback_used_in_learning": false,
+  "unseen_generator_family": false,
+  "real_world_transfer_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

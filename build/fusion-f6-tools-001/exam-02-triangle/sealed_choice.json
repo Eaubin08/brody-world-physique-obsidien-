@@ -1,0 +1,14 @@
+{
+  "shape": "triangle",
+  "intent": "UNIFORM",
+  "instrument": "PEN",
+  "source_memory_sha256": "9755d56ed0a08ebbf9975ca12efb7817810132431ddd9fc93f76eea190f33ee4",
+  "candidate_sha256": "e7486038221825af5edb85ca6d4ac1c4400c77b5d552f081b42b90ce3e862ffd",
+  "instrument_train_episode_ids": [
+    "training_04",
+    "training_05",
+    "training_06"
+  ],
+  "selection_rule": "MIN_PRIOR_MEAN_PIXEL_ERROR_BY_DECLARED_INTENT",
+  "target_read_before_seal": false
+}

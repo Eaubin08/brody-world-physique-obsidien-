@@ -1,0 +1,53 @@
+{
+  "schema": "BRODY_F16_CANONICAL_ROUTE_INVENTORY_V0",
+  "source_files": {
+    "provider": {
+      "path": "scripts/providers/brody_runtime_adapter_v1.py",
+      "sha256": "319b0a4d579639c6f89018beedba42f3e21827347b745dcc141f21cc48dea399"
+    },
+    "bridge": {
+      "path": "periphery/sigma_bridge.py",
+      "sha256": "885da23a75696ba8c7860666b3c788aba2abc3fa3949cfef281df25502592587"
+    },
+    "domains": {
+      "path": "sigma/contracts.py",
+      "sha256": "a1dab698028c27082e3c201070d65b0a0fed39fca1724a3b98817579f49e22b8"
+    },
+    "guard": {
+      "path": "sigma/guard.py",
+      "sha256": "800abaeca0f770afe61050033343d5abd19632e1cfa66a7faa23b8be1b3cd5dc"
+    },
+    "sigma": {
+      "path": "sigma/run_pipeline.py",
+      "sha256": "31ef1df6fc61aad64973e0b8e028c1326d75978167e6f29930ae3cc381e0112c"
+    },
+    "cycle": {
+      "path": "scripts/obsidia_governed_runtime_cycle_v1.py",
+      "sha256": "a9dd47645c118633871f14d8381a637c27ca5cd163313376966c62b5fe1537d3"
+    }
+  },
+  "registered_domains": [
+    "bank",
+    "ecom",
+    "gps_defense_aviation",
+    "meta",
+    "tooling_build",
+    "trading"
+  ],
+  "brody_image_registered": false,
+  "checks": {
+    "provider_no_decision": true,
+    "provider_no_memory_write": true,
+    "provider_no_emits_act": true,
+    "bridge_no_brody_route": true,
+    "cycle_has_unsupported_domain_gate": true
+  },
+  "status": "SOURCE_CONTRACT_PREFLIGHT",
+  "real_guard_invoked": false,
+  "real_sigma_invoked": false,
+  "runtime_execution": false,
+  "registers_domain": false,
+  "native_memory_write": false,
+  "kernel_mutation": false,
+  "decision_authority": "KX108_ONLY"
+}

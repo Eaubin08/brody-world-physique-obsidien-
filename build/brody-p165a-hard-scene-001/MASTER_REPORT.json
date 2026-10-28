@@ -1,0 +1,63 @@
+{
+  "schema": "BRODY_P165A_ADVERSARIAL_FIXTURES",
+  "test_scope": "SIX_NEW_FAMILIES_ONLY",
+  "full_hard_plus_plus_16_family_suite_implemented": false,
+  "legacy_77_cells_untouched_and_not_run_here": true,
+  "episodes": 150,
+  "duration_seconds": 1.804,
+  "cases": {
+    "color_swap": {
+      "n": 25,
+      "unsafe_identity_claims": 0,
+      "unsafe_camera_claims": 0,
+      "holds": 0,
+      "multis": 0,
+      "novelty_candidates": 0
+    },
+    "crossing_indistinguishable": {
+      "n": 25,
+      "unsafe_identity_claims": 25,
+      "unsafe_camera_claims": 0,
+      "holds": 0,
+      "multis": 0,
+      "novelty_candidates": 0
+    },
+    "occluded_jump": {
+      "n": 25,
+      "unsafe_identity_claims": 0,
+      "unsafe_camera_claims": 0,
+      "holds": 0,
+      "multis": 25,
+      "novelty_candidates": 0
+    },
+    "camera_without_landmarks": {
+      "n": 25,
+      "unsafe_identity_claims": 0,
+      "unsafe_camera_claims": 25,
+      "holds": 0,
+      "multis": 0,
+      "novelty_candidates": 0
+    },
+    "multiple_depth_planes": {
+      "n": 25,
+      "unsafe_identity_claims": 0,
+      "unsafe_camera_claims": 0,
+      "holds": 0,
+      "multis": 0,
+      "novelty_candidates": 0
+    },
+    "substitution": {
+      "n": 25,
+      "unsafe_identity_claims": 0,
+      "unsafe_camera_claims": 0,
+      "holds": 0,
+      "multis": 25,
+      "novelty_candidates": 0
+    }
+  },
+  "identity_and_camera_unsafe_claims": 50,
+  "run_complete": true,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

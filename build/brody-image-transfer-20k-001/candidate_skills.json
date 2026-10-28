@@ -1,0 +1,762 @@
+{
+  "skills": {
+    "blur|EXPRESSIVE|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 341.819580078125
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 471.133056640625
+      }
+    },
+    "blur|EXPRESSIVE|zigzag": {
+      "NIB": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 161.0419921875
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 565.682861328125
+      }
+    },
+    "blur|LIGHT|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 460.556396484375
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 252.221435546875
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "blur|LIGHT|zigzag": {
+      "NIB": {
+        "n": 167,
+        "sum": 555.772216796875
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 662.30029296875
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "blur|UNIFORM|angle": {
+      "NIB": {
+        "n": 167,
+        "sum": 120.05322265625
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 458.060791015625
+      }
+    },
+    "blur|UNIFORM|box": {
+      "NIB": {
+        "n": 166,
+        "sum": 1695.7109375
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 918.1650390625
+      }
+    },
+    "contrast|EXPRESSIVE|angle": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 104.694580078125
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 518.8017578125
+      }
+    },
+    "contrast|EXPRESSIVE|box": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 1065.962890625
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1512.80810546875
+      }
+    },
+    "contrast|LIGHT|angle": {
+      "NIB": {
+        "n": 167,
+        "sum": 526.49072265625
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 623.2353515625
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "contrast|LIGHT|box": {
+      "NIB": {
+        "n": 166,
+        "sum": 1515.9462890625
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 1151.17578125
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 0.0
+      }
+    },
+    "contrast|UNIFORM|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 384.71630859375
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 448.953369140625
+      }
+    },
+    "contrast|UNIFORM|zigzag": {
+      "NIB": {
+        "n": 166,
+        "sum": 151.0166015625
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 833.8056640625
+      }
+    },
+    "fresh_geometry|EXPRESSIVE|angle": {
+      "NIB": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 108.5205078125
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 982.765869140625
+      }
+    },
+    "fresh_geometry|EXPRESSIVE|box": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 2046.20849609375
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 2310.49072265625
+      }
+    },
+    "fresh_geometry|LIGHT|angle": {
+      "NIB": {
+        "n": 166,
+        "sum": 962.836669921875
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 1069.755615234375
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 0.0
+      }
+    },
+    "fresh_geometry|LIGHT|box": {
+      "NIB": {
+        "n": 167,
+        "sum": 2239.01318359375
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 1940.138671875
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "fresh_geometry|UNIFORM|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 465.819091796875
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 846.4853515625
+      }
+    },
+    "fresh_geometry|UNIFORM|zigzag": {
+      "NIB": {
+        "n": 167,
+        "sum": 148.125
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1437.42138671875
+      }
+    },
+    "mirror|EXPRESSIVE|angle": {
+      "NIB": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 106.8896484375
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 972.719482421875
+      }
+    },
+    "mirror|EXPRESSIVE|box": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 2013.71337890625
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 2273.53271484375
+      }
+    },
+    "mirror|LIGHT|angle": {
+      "NIB": {
+        "n": 167,
+        "sum": 1000.469970703125
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 1111.158447265625
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "mirror|LIGHT|box": {
+      "NIB": {
+        "n": 167,
+        "sum": 2299.265625
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 1979.951171875
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "mirror|UNIFORM|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 456.2255859375
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 840.802490234375
+      }
+    },
+    "mirror|UNIFORM|zigzag": {
+      "NIB": {
+        "n": 166,
+        "sum": 151.0498046875
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 1465.941650390625
+      }
+    },
+    "part_occlusion|EXPRESSIVE|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 400.03173828125
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 669.896728515625
+      }
+    },
+    "part_occlusion|EXPRESSIVE|zigzag": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 138.6865234375
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1203.358642578125
+      }
+    },
+    "part_occlusion|LIGHT|line": {
+      "NIB": {
+        "n": 166,
+        "sum": 679.730712890625
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 760.5712890625
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 0.0
+      }
+    },
+    "part_occlusion|LIGHT|zigzag": {
+      "NIB": {
+        "n": 167,
+        "sum": 1200.13623046875
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 1338.65185546875
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "part_occlusion|UNIFORM|angle": {
+      "NIB": {
+        "n": 167,
+        "sum": 104.66796875
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1047.578125
+      }
+    },
+    "part_occlusion|UNIFORM|box": {
+      "NIB": {
+        "n": 166,
+        "sum": 1951.103515625
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 1905.442138671875
+      }
+    },
+    "rotation|EXPRESSIVE|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 410.953369140625
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 752.895263671875
+      }
+    },
+    "rotation|EXPRESSIVE|zigzag": {
+      "NIB": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 149.53125
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 1300.4423828125
+      }
+    },
+    "rotation|LIGHT|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 762.510498046875
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 851.217041015625
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "rotation|LIGHT|zigzag": {
+      "NIB": {
+        "n": 166,
+        "sum": 1270.849609375
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 1417.01171875
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 0.0
+      }
+    },
+    "rotation|UNIFORM|angle": {
+      "NIB": {
+        "n": 167,
+        "sum": 108.7744140625
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1091.721923828125
+      }
+    },
+    "rotation|UNIFORM|box": {
+      "NIB": {
+        "n": 167,
+        "sum": 1997.93701171875
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1947.603515625
+      }
+    },
+    "sensor_noise|EXPRESSIVE|angle": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 86.934326171875
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 962.265869140625
+      }
+    },
+    "sensor_noise|EXPRESSIVE|box": {
+      "NIB": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 1922.9267578125
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 2213.22216796875
+      }
+    },
+    "sensor_noise|LIGHT|angle": {
+      "NIB": {
+        "n": 167,
+        "sum": 969.161376953125
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 1056.32568359375
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "sensor_noise|LIGHT|box": {
+      "NIB": {
+        "n": 166,
+        "sum": 2247.093017578125
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 1889.06103515625
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 0.0
+      }
+    },
+    "sensor_noise|UNIFORM|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 392.513671875
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 810.390869140625
+      }
+    },
+    "sensor_noise|UNIFORM|zigzag": {
+      "NIB": {
+        "n": 167,
+        "sum": 118.15673828125
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1382.8310546875
+      }
+    },
+    "translation|EXPRESSIVE|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 434.951171875
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 754.63720703125
+      }
+    },
+    "translation|EXPRESSIVE|zigzag": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 147.40234375
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1284.64990234375
+      }
+    },
+    "translation|LIGHT|line": {
+      "NIB": {
+        "n": 167,
+        "sum": 757.7509765625
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 848.212158203125
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "translation|LIGHT|zigzag": {
+      "NIB": {
+        "n": 166,
+        "sum": 1282.975341796875
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 1430.070068359375
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 0.0
+      }
+    },
+    "translation|UNIFORM|angle": {
+      "NIB": {
+        "n": 166,
+        "sum": 107.1484375
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 1068.01171875
+      }
+    },
+    "translation|UNIFORM|box": {
+      "NIB": {
+        "n": 167,
+        "sum": 2053.45947265625
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 2003.685546875
+      }
+    },
+    "wrong_intent|EXPRESSIVE|angle": {
+      "NIB": {
+        "n": 167,
+        "sum": 994.254638671875
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 1103.878662109375
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 0.0
+      }
+    },
+    "wrong_intent|EXPRESSIVE|box": {
+      "NIB": {
+        "n": 166,
+        "sum": 2245.76318359375
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 1943.90234375
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 0.0
+      }
+    },
+    "wrong_intent|LIGHT|angle": {
+      "NIB": {
+        "n": 167,
+        "sum": 107.1533203125
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1076.983642578125
+      }
+    },
+    "wrong_intent|LIGHT|box": {
+      "NIB": {
+        "n": 167,
+        "sum": 2008.4423828125
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1968.466796875
+      }
+    },
+    "wrong_intent|UNIFORM|line": {
+      "NIB": {
+        "n": 166,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 166,
+        "sum": 406.353759765625
+      },
+      "PENCIL": {
+        "n": 166,
+        "sum": 748.24755859375
+      }
+    },
+    "wrong_intent|UNIFORM|zigzag": {
+      "NIB": {
+        "n": 167,
+        "sum": 0.0
+      },
+      "PEN": {
+        "n": 167,
+        "sum": 148.61328125
+      },
+      "PENCIL": {
+        "n": 167,
+        "sum": 1294.47412109375
+      }
+    }
+  },
+  "digest": "21332d7d81cec565e7244abfc3f36870249f95b28002f68b0d614aac78377068",
+  "native_memory_write": false
+}

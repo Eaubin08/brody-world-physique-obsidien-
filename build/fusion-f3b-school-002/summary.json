@@ -1,0 +1,77 @@
+{
+  "decision_authority": "KX108_ONLY",
+  "improved": 5,
+  "learning_is_independent_per_lesson": true,
+  "lessons": 5,
+  "native_memory_write": false,
+  "object_semantics_proven": false,
+  "real_world_understanding_proven": false,
+  "rows": [
+    {
+      "baseline_error": 48,
+      "boxes": 1,
+      "candidate_error": 46,
+      "candidate_sealed_before_teacher": true,
+      "gain": 2,
+      "gestures": 1,
+      "lesson": "01-line",
+      "shape": "line",
+      "stage": "E0",
+      "verdict": "IMPROVED"
+    },
+    {
+      "baseline_error": 340,
+      "boxes": 2,
+      "candidate_error": 186,
+      "candidate_sealed_before_teacher": true,
+      "gain": 154,
+      "gestures": 1,
+      "lesson": "02-rectangle",
+      "shape": "rectangle",
+      "stage": "E0",
+      "verdict": "IMPROVED"
+    },
+    {
+      "baseline_error": 285,
+      "boxes": 2,
+      "candidate_error": 157,
+      "candidate_sealed_before_teacher": true,
+      "gain": 128,
+      "gestures": 2,
+      "lesson": "03-triangle",
+      "shape": "triangle",
+      "stage": "E1",
+      "verdict": "IMPROVED"
+    },
+    {
+      "baseline_error": 260,
+      "boxes": 2,
+      "candidate_error": 203,
+      "candidate_sealed_before_teacher": true,
+      "gain": 57,
+      "gestures": 1,
+      "lesson": "04-circle",
+      "shape": "ellipse",
+      "stage": "E1",
+      "verdict": "IMPROVED"
+    },
+    {
+      "baseline_error": 460,
+      "boxes": 3,
+      "candidate_error": 254,
+      "candidate_sealed_before_teacher": true,
+      "gain": 206,
+      "gestures": 1,
+      "lesson": "05-composition",
+      "shape": "rectangle",
+      "stage": "E2",
+      "verdict": "IMPROVED"
+    }
+  ],
+  "schema": "BRODY_FUSION_F3B_SCHOOL_V0",
+  "teacher_synthetic": true,
+  "ties": 0,
+  "total_blank_error": 1393,
+  "total_candidate_error": 846,
+  "worsened": 0
+}

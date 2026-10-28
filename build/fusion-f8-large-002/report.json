@@ -1,0 +1,117 @@
+{
+  "schema": "BRODY_F8_LARGE_REGRESSION_V0",
+  "suites_run": 13,
+  "passed": 13,
+  "failed": 0,
+  "missing": 0,
+  "timeouts": 0,
+  "results": [
+    {
+      "name": "HISTORICAL_V2_INSTRUMENTS",
+      "test_file": "test_instrument_school_v2.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.406,
+      "log": "HISTORICAL_V2_INSTRUMENTS.log"
+    },
+    {
+      "name": "FUSION_F1",
+      "test_file": "test_fusion_historical_evidence_v0.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.217,
+      "log": "FUSION_F1.log"
+    },
+    {
+      "name": "FUSION_F2_REPLAY",
+      "test_file": "test_fusion_f2_school_regression_v0.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 2.992,
+      "log": "FUSION_F2_REPLAY.log"
+    },
+    {
+      "name": "FUSION_F2_SCORECARD",
+      "test_file": "test_fusion_f2_historical_scorecard_v1.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.155,
+      "log": "FUSION_F2_SCORECARD.log"
+    },
+    {
+      "name": "FUSION_F3",
+      "test_file": "test_fusion_f3_integrated_visual_lesson_v0.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.259,
+      "log": "FUSION_F3.log"
+    },
+    {
+      "name": "FUSION_F3B",
+      "test_file": "test_fusion_f3b_multilesson_school_v0.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.424,
+      "log": "FUSION_F3B.log"
+    },
+    {
+      "name": "FUSION_F3C",
+      "test_file": "test_fusion_f3c_cumulative_skill_archive_v0.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.337,
+      "log": "FUSION_F3C.log"
+    },
+    {
+      "name": "FUSION_F4",
+      "test_file": "test_fusion_f4_education_journal_v0.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.217,
+      "log": "FUSION_F4.log"
+    },
+    {
+      "name": "FUSION_F5",
+      "test_file": "test_fusion_f5_multiskill_course_v0.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.459,
+      "log": "FUSION_F5.log"
+    },
+    {
+      "name": "FUSION_F6",
+      "test_file": "test_fusion_f6_instrument_education_v0.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.072,
+      "log": "FUSION_F6.log"
+    },
+    {
+      "name": "FUSION_F7",
+      "test_file": "test_fusion_f7_train_only_correction_v0.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.207,
+      "log": "FUSION_F7.log"
+    },
+    {
+      "name": "FUSION_F8_ADVERSARIAL",
+      "test_file": "test_fusion_f8_adversarial_v0.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.35,
+      "log": "FUSION_F8_ADVERSARIAL.log"
+    },
+    {
+      "name": "F2_HISTORICAL_15",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 12.763,
+      "log": "F2_HISTORICAL_15.log"
+    }
+  ],
+  "full_world_understanding_proven": false,
+  "native_memory_write": false,
+  "decision_authority": "KX108_ONLY",
+  "verdict": "PASS"
+}

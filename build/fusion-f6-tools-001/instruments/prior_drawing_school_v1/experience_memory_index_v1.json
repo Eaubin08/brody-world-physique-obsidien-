@@ -1,0 +1,96 @@
+{
+  "schema_version": "BRODY_EXPERIENCE_INDEX_V1",
+  "episode_count": 10,
+  "episodes": [
+    {
+      "episode_ref": "experience_episodes_v1/cours_trait.json",
+      "sha256": "bfc405105d4b3301760b58f83419c075f194e3997dc253cbc2673343b4d983b2",
+      "episode_id": "cours_trait",
+      "source_sha256": "5d7de2fa407b61f1107b7161beef138fbaf3aff07f0ee99425399bb9e7c79900",
+      "final_error_px": 9,
+      "memory_rejected": false
+    },
+    {
+      "episode_ref": "experience_episodes_v1/cours_carre.json",
+      "sha256": "c5354c0451292ba0c1657bd130b8c03fdc466f4c1b0d8aeea9d37534da3aef99",
+      "episode_id": "cours_carre",
+      "source_sha256": "dd67bf6eeb0d5c0682ac89cf3b48c51ea111a12b2b7482de0a302c258f7b8f50",
+      "final_error_px": 2,
+      "memory_rejected": false
+    },
+    {
+      "episode_ref": "experience_episodes_v1/cours_triangle.json",
+      "sha256": "87ed59ce73ce299618fb424b0c1fe3741d94503f4b353e30479240f19b128b1c",
+      "episode_id": "cours_triangle",
+      "source_sha256": "686159ffe7c0555017d63ac45f8e727e5af8443b7a8e53f7f6bceccf76515199",
+      "final_error_px": 30,
+      "memory_rejected": false
+    },
+    {
+      "episode_ref": "experience_episodes_v1/cours_cercle.json",
+      "sha256": "482b4d36a50db8d0f81377f347699cf62f25190fb803eb854c2a43f2d157e5a5",
+      "episode_id": "cours_cercle",
+      "source_sha256": "0dbcf113e435661a6d898e16f16082dc6dfe272388c11d8bb530d29afe9ff31f",
+      "final_error_px": 71,
+      "memory_rejected": false
+    },
+    {
+      "episode_ref": "experience_episodes_v1/examen_trait.json",
+      "sha256": "0b75a832c6d79641d130dc29da19813a264b5cad2f6a95377984f0563c3b5a42",
+      "episode_id": "examen_trait",
+      "source_sha256": "d05577e1a07e3bc6203ca4ce785811059739c50bc1be27b4bbfd90e72b6bde00",
+      "final_error_px": 9,
+      "memory_rejected": false
+    },
+    {
+      "episode_ref": "experience_episodes_v1/examen_carre.json",
+      "sha256": "c07d8b6404696f08537e0531d291199f9880e9a1aea17aad1c7d2706d850f6cc",
+      "episode_id": "examen_carre",
+      "source_sha256": "ba9c8dbb350e2dd95ce66d30cc0fb0c10630b046ccae7c72b7922ef7e97b887b",
+      "final_error_px": 2,
+      "memory_rejected": false
+    },
+    {
+      "episode_ref": "experience_episodes_v1/examen_triangle.json",
+      "sha256": "f88a984fe69c7919b147e981cdef761e17293131d7075ff711d6f40a9d423392",
+      "episode_id": "examen_triangle",
+      "source_sha256": "835e0892ce4be48a11d2cb7d487c6ec61dc467e7f04847de8516d74dd6b7e54f",
+      "final_error_px": 66,
+      "memory_rejected": false
+    },
+    {
+      "episode_ref": "experience_episodes_v1/examen_cercle.json",
+      "sha256": "6133ea820761e03e187138b3c413518a1ba1d828f7fb132d45713b500f79f34a",
+      "episode_id": "examen_cercle",
+      "source_sha256": "67a4561b5dd99f6f455ffc73553ddd60eb974c24f137fc24d1f2e66ba0e006fe",
+      "final_error_px": 60,
+      "memory_rejected": false
+    },
+    {
+      "episode_ref": "experience_episodes_v1/examen_croix.json",
+      "sha256": "0d78dcfed8f80ce505b71b8c056cd7ca0dea14ca28c9ad57019deafb20d92fa3",
+      "episode_id": "examen_croix",
+      "source_sha256": "7ebadfdabde7799b016ff80362a584a149889703b3058b881d6f456aec1691a0",
+      "final_error_px": 56,
+      "memory_rejected": true
+    },
+    {
+      "episode_ref": "experience_episodes_v1/examen_courbe.json",
+      "sha256": "76edd86fccaeee5b21bca336e634527b75b1a3f44dc739132893c9a1568d4102",
+      "episode_id": "examen_courbe",
+      "source_sha256": "cacab70dcca928e2653e51fec368b73ac9833d3a737797fce50af8bfdbf038de",
+      "final_error_px": 28,
+      "memory_rejected": true
+    }
+  ],
+  "procedure_registry_ref": "procedure_registry_v1.json",
+  "procedure_registry_sha256": "755f9623bc4ab29eb8aa44f81b0de4190a3ef978a13e2cc0451a5e18a53a92e2",
+  "candidate_skill_memory_ref": "candidate_skill_memory.json",
+  "candidate_skill_memory_sha256": "b34fd5506e25077a86e8031e991ba0be0e4f6cd06377b884ea47ed129999e174",
+  "candidate_experience_ledger_ref": "candidate_experience_ledger.jsonl",
+  "candidate_experience_ledger_sha256": "3c427707b25abbd816c586ddcba4adc889e7e79a07923dc1bbe82130622475d2",
+  "read_only_export": true,
+  "native_memory_write_allowed": false,
+  "auto_promotion_allowed": false,
+  "decision_authority": "KX108_ONLY"
+}

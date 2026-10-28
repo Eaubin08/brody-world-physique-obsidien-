@@ -1,0 +1,117 @@
+{
+  "schema": "BRODY_P165D6_REAPPEARANCE_GATE",
+  "conditions": 675,
+  "episodes": 1350,
+  "full_matrix_complete": true,
+  "beam_size": 8,
+  "groups": {
+    "red/none": {
+      "n": 150,
+      "pre_recall": 150,
+      "post_recall": 120,
+      "same_path_pre_post": 120,
+      "topk_four_recall": 150,
+      "hypotheses_sum": 1200,
+      "HOLD": 0,
+      "MULTI": 150,
+      "CANDIDATE": 0
+    },
+    "blue/none": {
+      "n": 150,
+      "pre_recall": 150,
+      "post_recall": 120,
+      "same_path_pre_post": 120,
+      "topk_four_recall": 150,
+      "hypotheses_sum": 1200,
+      "HOLD": 0,
+      "MULTI": 150,
+      "CANDIDATE": 0
+    },
+    "change/none": {
+      "n": 150,
+      "pre_recall": 150,
+      "post_recall": 120,
+      "same_path_pre_post": 120,
+      "topk_four_recall": 150,
+      "hypotheses_sum": 1200,
+      "HOLD": 0,
+      "MULTI": 150,
+      "CANDIDATE": 0
+    },
+    "red/partial": {
+      "n": 150,
+      "pre_recall": 150,
+      "post_recall": 120,
+      "same_path_pre_post": 120,
+      "topk_four_recall": 150,
+      "hypotheses_sum": 1200,
+      "HOLD": 0,
+      "MULTI": 150,
+      "CANDIDATE": 0
+    },
+    "blue/partial": {
+      "n": 150,
+      "pre_recall": 150,
+      "post_recall": 120,
+      "same_path_pre_post": 120,
+      "topk_four_recall": 150,
+      "hypotheses_sum": 1200,
+      "HOLD": 0,
+      "MULTI": 150,
+      "CANDIDATE": 0
+    },
+    "change/partial": {
+      "n": 150,
+      "pre_recall": 150,
+      "post_recall": 120,
+      "same_path_pre_post": 120,
+      "topk_four_recall": 150,
+      "hypotheses_sum": 1200,
+      "HOLD": 0,
+      "MULTI": 150,
+      "CANDIDATE": 0
+    },
+    "red/full": {
+      "n": 150,
+      "pre_recall": 150,
+      "post_recall": 102,
+      "same_path_pre_post": 102,
+      "topk_four_recall": 114,
+      "hypotheses_sum": 1200,
+      "HOLD": 17,
+      "MULTI": 133,
+      "CANDIDATE": 0
+    },
+    "blue/full": {
+      "n": 150,
+      "pre_recall": 150,
+      "post_recall": 102,
+      "same_path_pre_post": 102,
+      "topk_four_recall": 114,
+      "hypotheses_sum": 1200,
+      "HOLD": 16,
+      "MULTI": 134,
+      "CANDIDATE": 0
+    },
+    "change/full": {
+      "n": 150,
+      "pre_recall": 150,
+      "post_recall": 102,
+      "same_path_pre_post": 102,
+      "topk_four_recall": 114,
+      "hypotheses_sum": 1200,
+      "HOLD": 21,
+      "MULTI": 129,
+      "CANDIDATE": 0
+    }
+  },
+  "all_tracks_propagated_to_d4": true,
+  "reappearance_identity_proven": false,
+  "metrics_use_hidden_oracle_only_after_inference": true,
+  "camera_scene_graph_and_rf_sensors_connected": false,
+  "real_physical_causality_proven": false,
+  "runtime_seconds": 10.754,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

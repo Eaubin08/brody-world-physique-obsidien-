@@ -1,0 +1,18 @@
+{
+  "baseline": 43.0,
+  "candidate": 42.0,
+  "canonical_promotion": false,
+  "case": "known_probe",
+  "decision_authority": "KX108_ONLY",
+  "digest": "f2dc4f2d56332ed8ac4268fc81e7881ebd0c39574bcf5d6b70d5c2b3adcdebfa",
+  "native_memory_write": false,
+  "observations": [
+    24.0,
+    28.0,
+    32.0,
+    36.0,
+    39.0,
+    41.0
+  ],
+  "state_digest": "66c70a495dd5fa5d88a33b4ac0d447b8f7987303c380e48b944415e4dcc53fb7"
+}

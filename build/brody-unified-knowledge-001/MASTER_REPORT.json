@@ -1,0 +1,14 @@
+{
+  "schema": "BRODY_UNIFIED_MULTIVIEW_KNOWLEDGE_V1",
+  "identities": 1,
+  "observations": 4,
+  "relations": 4,
+  "receipts": 4,
+  "receipt_tip": "71a6854f666ff2f0e4f13585c239f98534d66049c4249c6d47fa9785aee70bdb",
+  "semantic_identity_verified": false,
+  "real_3d_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "status": "TEACHER_GROUPED_LOCAL_KNOWLEDGE_GRAPH_ONLY"
+}

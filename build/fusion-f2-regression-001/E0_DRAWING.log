@@ -1,0 +1,15 @@
+
+test_candidate_ledger_detects_modified_past_and_refuses_authority (test_drawing_school_v0.DrawingSchoolContractsTests.test_candidate_ledger_detects_modified_past_and_refuses_authority) ... ok
+test_candidate_memory_seed_replays_on_translated_reference (test_drawing_school_v0.DrawingSchoolContractsTests.test_candidate_memory_seed_replays_on_translated_reference) ... ok
+test_fails_closed_on_wrong_size (test_drawing_school_v0.DrawingSchoolContractsTests.test_fails_closed_on_wrong_size) ... ok
+test_harmful_memory_is_rejected_and_failure_remains_visible (test_drawing_school_v0.DrawingSchoolContractsTests.test_harmful_memory_is_rejected_and_failure_remains_visible) ... ok
+test_no_prior_experience_has_no_seed (test_drawing_school_v0.DrawingSchoolContractsTests.test_no_prior_experience_has_no_seed) ... ok
+test_overprinting_must_not_worsen_target (test_drawing_school_v0.DrawingSchoolContractsTests.test_overprinting_must_not_worsen_target) ... ok
+test_real_catalog_is_generic_pen_strokes_not_named_shapes (test_drawing_school_v0.DrawingSchoolContractsTests.test_real_catalog_is_generic_pen_strokes_not_named_shapes) ... ok
+test_student_draws_after_teacher_pixel_feedback (test_drawing_school_v0.DrawingSchoolContractsTests.test_student_draws_after_teacher_pixel_feedback) ... ok
+test_unrelated_mistaken_skill_does_not_force_bad_drawing (test_drawing_school_v0.DrawingSchoolContractsTests.test_unrelated_mistaken_skill_does_not_force_bad_drawing) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.517s
+
+OK

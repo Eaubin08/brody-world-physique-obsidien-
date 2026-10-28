@@ -1,0 +1,20 @@
+{
+  "schema": "BRODY_P143_VALIDATION_ROUTER",
+  "train": 1500,
+  "validation": 3600,
+  "exam": 30000,
+  "cells_expected": 30,
+  "cells_completed": 30,
+  "router_accuracy_all": 0.8512,
+  "router_coverage": 0.9667,
+  "rgb_accuracy_all": 0.6491,
+  "geometric_accuracy_all": 0.8329,
+  "majority_accuracy_all": 0.3206,
+  "elapsed_seconds": 255.589,
+  "stopped_by": "EXAM_CAP",
+  "validation_precedes_exam": true,
+  "real_world_generalization_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

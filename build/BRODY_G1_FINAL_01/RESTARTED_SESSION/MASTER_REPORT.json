@@ -1,0 +1,35 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "memory_bytes_unchanged": true,
+  "multi_day_retention_proven": false,
+  "native_memory_write": false,
+  "real_world_transfer_proven": false,
+  "schema": "BRODY_SESSION_RESTART_REPLAY_V1",
+  "separate_process_restart_supported": true,
+  "source_memory_sha256": "a4f9defd057f98f753937a870fc2135349c7fbe4b47f113b296468ef0d069120",
+  "tests": [
+    {
+      "case": "restarted_clean",
+      "context": "clean",
+      "image_mae": 0.0,
+      "position_error": 0.0,
+      "prediction_generated": true
+    },
+    {
+      "case": "restarted_intervention",
+      "context": "intervention",
+      "image_mae": 0.0,
+      "position_error": 0.0,
+      "prediction_generated": true
+    },
+    {
+      "case": "restarted_unknown",
+      "context": null,
+      "image_mae": null,
+      "position_error": null,
+      "prediction_generated": false
+    }
+  ],
+  "verdict": "SEALED_MEMORY_RELOADED_AND_REPLAYED"
+}

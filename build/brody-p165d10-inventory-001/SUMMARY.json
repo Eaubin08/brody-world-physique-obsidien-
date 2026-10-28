@@ -1,0 +1,71 @@
+{
+  "schema": "BRODY_P165D10_REPOSITORY_AST_TEST_INVENTORY",
+  "test_files": 147,
+  "declared_tests": 649,
+  "syntax_errors": 0,
+  "legacy": {
+    "p161": {
+      "files": [
+        "tests/test_image_hard_visual_ood_p161.py"
+      ],
+      "declared_tests": 4
+    },
+    "p162": {
+      "files": [
+        "tests/test_image_math_physical_bridge_p162.py"
+      ],
+      "declared_tests": 5
+    },
+    "p163": {
+      "files": [
+        "tests/test_image_camera_occlusion_gate_p163.py"
+      ],
+      "declared_tests": 6
+    },
+    "p164": {
+      "files": [
+        "tests/test_image_identity_occlusion_p164.py"
+      ],
+      "declared_tests": 4
+    },
+    "p165a": {
+      "files": [
+        "tests/test_image_scene_adversarial_p165a.py"
+      ],
+      "declared_tests": 4
+    },
+    "p165b": {
+      "files": [
+        "tests/test_modal_signature_fusion_p165b.py"
+      ],
+      "declared_tests": 7
+    },
+    "p165c": {
+      "files": [
+        "tests/test_contextual_scene_graph_p165c.py"
+      ],
+      "declared_tests": 7
+    },
+    "p165d": {
+      "files": [
+        "tests/test_color_agnostic_perception_p165d3.py",
+        "tests/test_goal_multi_continuity_p165d7.py",
+        "tests/test_goal_track_bridge_p165d8.py",
+        "tests/test_hard_scene_angles_p165d2.py",
+        "tests/test_image_persistent_tracks_p165d5.py",
+        "tests/test_local_epistemic_diagnostic_p165d9.py",
+        "tests/test_p165d10_invariant_hardening.py",
+        "tests/test_p165d10_repository_inventory.py",
+        "tests/test_persistent_world_state_p165d4.py",
+        "tests/test_reappearance_gate_p165d6.py",
+        "tests/test_scene_event_epistemic_p165d.py"
+      ],
+      "declared_tests": 86
+    }
+  },
+  "discovery_caveat": "AST declared test_ methods/functions != unittest collected counts",
+  "scope": "ONLY tests/test*.py under current checked out repository",
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

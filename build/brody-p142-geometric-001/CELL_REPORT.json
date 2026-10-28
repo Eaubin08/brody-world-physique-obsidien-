@@ -1,0 +1,632 @@
+{
+  "shape/native": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 557,
+      "holds": 0,
+      "accuracy_attempted": 0.557,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 548,
+      "holds": 0,
+      "accuracy_attempted": 0.548,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 355,
+      "holds": 0,
+      "accuracy_attempted": 0.355,
+      "coverage": 1.0
+    }
+  },
+  "colour/native": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 897,
+      "holds": 0,
+      "accuracy_attempted": 0.897,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 1000,
+      "holds": 0,
+      "accuracy_attempted": 1.0,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 242,
+      "holds": 0,
+      "accuracy_attempted": 0.242,
+      "coverage": 1.0
+    }
+  },
+  "count/native": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 939,
+      "holds": 0,
+      "accuracy_attempted": 0.939,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 870,
+      "holds": 0,
+      "accuracy_attempted": 0.87,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 314,
+      "holds": 0,
+      "accuracy_attempted": 0.314,
+      "coverage": 1.0
+    }
+  },
+  "arrangement/native": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 1000,
+      "holds": 0,
+      "accuracy_attempted": 1.0,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 794,
+      "holds": 0,
+      "accuracy_attempted": 0.794,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 342,
+      "holds": 0,
+      "accuracy_attempted": 0.342,
+      "coverage": 1.0
+    }
+  },
+  "orientation/native": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 453,
+      "holds": 0,
+      "accuracy_attempted": 0.453,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 988,
+      "holds": 0,
+      "accuracy_attempted": 0.988,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 312,
+      "holds": 0,
+      "accuracy_attempted": 0.312,
+      "coverage": 1.0
+    }
+  },
+  "shape/mirror": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 444,
+      "holds": 0,
+      "accuracy_attempted": 0.444,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 586,
+      "holds": 0,
+      "accuracy_attempted": 0.586,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 334,
+      "holds": 0,
+      "accuracy_attempted": 0.334,
+      "coverage": 1.0
+    }
+  },
+  "colour/mirror": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 733,
+      "holds": 0,
+      "accuracy_attempted": 0.733,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 1000,
+      "holds": 0,
+      "accuracy_attempted": 1.0,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 256,
+      "holds": 0,
+      "accuracy_attempted": 0.256,
+      "coverage": 1.0
+    }
+  },
+  "count/mirror": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 679,
+      "holds": 0,
+      "accuracy_attempted": 0.679,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 869,
+      "holds": 0,
+      "accuracy_attempted": 0.869,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 323,
+      "holds": 0,
+      "accuracy_attempted": 0.323,
+      "coverage": 1.0
+    }
+  },
+  "arrangement/mirror": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 665,
+      "holds": 0,
+      "accuracy_attempted": 0.665,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 803,
+      "holds": 0,
+      "accuracy_attempted": 0.803,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 342,
+      "holds": 0,
+      "accuracy_attempted": 0.342,
+      "coverage": 1.0
+    }
+  },
+  "orientation/mirror": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 404,
+      "holds": 0,
+      "accuracy_attempted": 0.404,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 972,
+      "holds": 0,
+      "accuracy_attempted": 0.972,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 340,
+      "holds": 0,
+      "accuracy_attempted": 0.34,
+      "coverage": 1.0
+    }
+  },
+  "shape/greyscale": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 550,
+      "holds": 0,
+      "accuracy_attempted": 0.55,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 610,
+      "holds": 0,
+      "accuracy_attempted": 0.61,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 315,
+      "holds": 0,
+      "accuracy_attempted": 0.315,
+      "coverage": 1.0
+    }
+  },
+  "colour/greyscale": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 231,
+      "holds": 0,
+      "accuracy_attempted": 0.231,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 0,
+      "holds": 1000,
+      "accuracy_attempted": null,
+      "coverage": 0.0
+    },
+    "majority": {
+      "correct": 250,
+      "holds": 0,
+      "accuracy_attempted": 0.25,
+      "coverage": 1.0
+    }
+  },
+  "count/greyscale": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 937,
+      "holds": 0,
+      "accuracy_attempted": 0.937,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 878,
+      "holds": 0,
+      "accuracy_attempted": 0.878,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 343,
+      "holds": 0,
+      "accuracy_attempted": 0.343,
+      "coverage": 1.0
+    }
+  },
+  "arrangement/greyscale": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 1000,
+      "holds": 0,
+      "accuracy_attempted": 1.0,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 776,
+      "holds": 0,
+      "accuracy_attempted": 0.776,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 321,
+      "holds": 0,
+      "accuracy_attempted": 0.321,
+      "coverage": 1.0
+    }
+  },
+  "orientation/greyscale": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 467,
+      "holds": 0,
+      "accuracy_attempted": 0.467,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 984,
+      "holds": 0,
+      "accuracy_attempted": 0.984,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 349,
+      "holds": 0,
+      "accuracy_attempted": 0.349,
+      "coverage": 1.0
+    }
+  },
+  "shape/posterize": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 447,
+      "holds": 0,
+      "accuracy_attempted": 0.447,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 541,
+      "holds": 0,
+      "accuracy_attempted": 0.541,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 320,
+      "holds": 0,
+      "accuracy_attempted": 0.32,
+      "coverage": 1.0
+    }
+  },
+  "colour/posterize": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 893,
+      "holds": 0,
+      "accuracy_attempted": 0.893,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 1000,
+      "holds": 0,
+      "accuracy_attempted": 1.0,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 242,
+      "holds": 0,
+      "accuracy_attempted": 0.242,
+      "coverage": 1.0
+    }
+  },
+  "count/posterize": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 645,
+      "holds": 0,
+      "accuracy_attempted": 0.645,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 840,
+      "holds": 0,
+      "accuracy_attempted": 0.84,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 319,
+      "holds": 0,
+      "accuracy_attempted": 0.319,
+      "coverage": 1.0
+    }
+  },
+  "arrangement/posterize": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 1000,
+      "holds": 0,
+      "accuracy_attempted": 1.0,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 812,
+      "holds": 0,
+      "accuracy_attempted": 0.812,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 319,
+      "holds": 0,
+      "accuracy_attempted": 0.319,
+      "coverage": 1.0
+    }
+  },
+  "orientation/posterize": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 412,
+      "holds": 0,
+      "accuracy_attempted": 0.412,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 970,
+      "holds": 0,
+      "accuracy_attempted": 0.97,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 366,
+      "holds": 0,
+      "accuracy_attempted": 0.366,
+      "coverage": 1.0
+    }
+  },
+  "shape/blur": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 540,
+      "holds": 0,
+      "accuracy_attempted": 0.54,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 541,
+      "holds": 0,
+      "accuracy_attempted": 0.541,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 336,
+      "holds": 0,
+      "accuracy_attempted": 0.336,
+      "coverage": 1.0
+    }
+  },
+  "colour/blur": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 886,
+      "holds": 0,
+      "accuracy_attempted": 0.886,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 1000,
+      "holds": 0,
+      "accuracy_attempted": 1.0,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 258,
+      "holds": 0,
+      "accuracy_attempted": 0.258,
+      "coverage": 1.0
+    }
+  },
+  "count/blur": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 931,
+      "holds": 0,
+      "accuracy_attempted": 0.931,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 828,
+      "holds": 0,
+      "accuracy_attempted": 0.828,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 316,
+      "holds": 0,
+      "accuracy_attempted": 0.316,
+      "coverage": 1.0
+    }
+  },
+  "arrangement/blur": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 1000,
+      "holds": 0,
+      "accuracy_attempted": 1.0,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 811,
+      "holds": 0,
+      "accuracy_attempted": 0.811,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 319,
+      "holds": 0,
+      "accuracy_attempted": 0.319,
+      "coverage": 1.0
+    }
+  },
+  "orientation/blur": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 427,
+      "holds": 0,
+      "accuracy_attempted": 0.427,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 971,
+      "holds": 0,
+      "accuracy_attempted": 0.971,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 324,
+      "holds": 0,
+      "accuracy_attempted": 0.324,
+      "coverage": 1.0
+    }
+  },
+  "shape/contrast": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 317,
+      "holds": 0,
+      "accuracy_attempted": 0.317,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 576,
+      "holds": 0,
+      "accuracy_attempted": 0.576,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 333,
+      "holds": 0,
+      "accuracy_attempted": 0.333,
+      "coverage": 1.0
+    }
+  },
+  "colour/contrast": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 496,
+      "holds": 0,
+      "accuracy_attempted": 0.496,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 258,
+      "holds": 0,
+      "accuracy_attempted": 0.258,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 242,
+      "holds": 0,
+      "accuracy_attempted": 0.242,
+      "coverage": 1.0
+    }
+  },
+  "count/contrast": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 522,
+      "holds": 0,
+      "accuracy_attempted": 0.522,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 887,
+      "holds": 0,
+      "accuracy_attempted": 0.887,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 343,
+      "holds": 0,
+      "accuracy_attempted": 0.343,
+      "coverage": 1.0
+    }
+  },
+  "arrangement/contrast": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 1000,
+      "holds": 0,
+      "accuracy_attempted": 1.0,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 808,
+      "holds": 0,
+      "accuracy_attempted": 0.808,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 365,
+      "holds": 0,
+      "accuracy_attempted": 0.365,
+      "coverage": 1.0
+    }
+  },
+  "orientation/contrast": {
+    "n": 1000,
+    "rgb_knn": {
+      "correct": 341,
+      "holds": 0,
+      "accuracy_attempted": 0.341,
+      "coverage": 1.0
+    },
+    "geometric": {
+      "correct": 978,
+      "holds": 0,
+      "accuracy_attempted": 0.978,
+      "coverage": 1.0
+    },
+    "majority": {
+      "correct": 330,
+      "holds": 0,
+      "accuracy_attempted": 0.33,
+      "coverage": 1.0
+    }
+  }
+}

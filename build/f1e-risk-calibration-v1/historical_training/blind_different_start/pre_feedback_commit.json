@@ -1,0 +1,17 @@
+{
+  "candidate_sha256": "d98e8e44475cdf60dd1a0cd6ca39a4eab8efa7bfadffa8cd2723251cf9aae691",
+  "canonical_promotion": false,
+  "case": "different_start",
+  "decision_authority": "KX108_ONLY",
+  "digest": "9062a2f4c0435b55bd948ccb75d4f9b62e0ec781b921c4a71e4d206de4345de9",
+  "eligible": true,
+  "frozen_sha256": "a5bf62807c105ae1aaf60215a3ce837c1ddb84ac05e2d3bcfd235b3f7f661eaf",
+  "native_memory_write": false,
+  "predicted": {
+    "radius": 4.4065,
+    "t": 4.0,
+    "x": 43.0,
+    "y": 37.0
+  },
+  "skill_digest": "5c02017b574395e6194aeb857ba72e31c7d44272911147464a91e96b08ace6e7"
+}

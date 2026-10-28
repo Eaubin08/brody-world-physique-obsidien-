@@ -1,0 +1,27 @@
+{
+  "schema": "BRODY_F15B_REAL_GUARD_SIGMA_DIAGNOSTIC_V0",
+  "cases": 1000,
+  "f14_receipt_tip": "1b239c1703986f106d82400000a0e2a142b0e59032186137962d3c5f1aff198f",
+  "calls": {
+    "guard": "sigma.guard",
+    "sigma": "sigma.run_pipeline",
+    "merge": "periphery.sigma_bridge"
+  },
+  "counts": {
+    "guard_allow": 0,
+    "guard_hold": 1000,
+    "guard_block": 0,
+    "sigma_veto": 0,
+    "unsafe_authorizations": 0,
+    "errors": 0
+  },
+  "real_guard_invoked": true,
+  "real_sigma_invoked": true,
+  "brody_domain_registered": false,
+  "domain_used_for_diagnostic": "META",
+  "domain_decision_authorized": false,
+  "binder_route_certified": false,
+  "native_memory_write": false,
+  "kernel_mutation": false,
+  "status": "DIAGNOSTIC_FAIL_CLOSED"
+}

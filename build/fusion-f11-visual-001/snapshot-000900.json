@@ -1,0 +1,14 @@
+{
+  "memory": {
+    "LEFT": {
+      "OLD": 424,
+      "NEW": 0
+    },
+    "RIGHT": {
+      "OLD": 0,
+      "NEW": 424
+    }
+  },
+  "digest": "ffeb4b588969b1de690cd6e7f509b4c7618ed8fe19b1bcbc19f3c0c95d48f6fe",
+  "candidate_only": true
+}

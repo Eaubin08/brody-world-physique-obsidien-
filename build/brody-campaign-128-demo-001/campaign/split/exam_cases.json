@@ -1,0 +1,74 @@
+[
+  {
+    "actual": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_fall\\4.png",
+    "observations": [
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_fall\\0.png",
+        "t": 0
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_fall\\1.png",
+        "t": 1
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_fall\\2.png",
+        "t": 2
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_fall\\3.png",
+        "t": 3
+      }
+    ],
+    "origin": "synthetic",
+    "predict_t": 4.0,
+    "source_group": "exam_fall"
+  },
+  {
+    "actual": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_reverse\\4.png",
+    "observations": [
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_reverse\\0.png",
+        "t": 0
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_reverse\\1.png",
+        "t": 1
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_reverse\\2.png",
+        "t": 2
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_reverse\\3.png",
+        "t": 3
+      }
+    ],
+    "origin": "synthetic",
+    "predict_t": 4.0,
+    "source_group": "exam_reverse"
+  },
+  {
+    "actual": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_stop\\4.png",
+    "observations": [
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_stop\\0.png",
+        "t": 0
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_stop\\1.png",
+        "t": 1
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_stop\\2.png",
+        "t": 2
+      },
+      {
+        "file": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\brody-campaign-128-demo-001\\frames\\exam_stop\\3.png",
+        "t": 3
+      }
+    ],
+    "origin": "synthetic",
+    "predict_t": 4.0,
+    "source_group": "exam_stop"
+  }
+]

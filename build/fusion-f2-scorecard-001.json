@@ -1,0 +1,271 @@
+{
+  "schema": "BRODY_FUSION_F2_HISTORICAL_SCORECARD_V0",
+  "source": "ORIGINAL_LOCAL_BUILD_EVALUATIONS",
+  "schools": [
+    {
+      "level": "V0",
+      "status": "ARCHIVED_EVALUATION",
+      "source": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\ecole-dessin-20261008-225534\\evaluation.json",
+      "sha256": "2b1cc6560a98a513a5ae465ac8bfb82ca5110f92e0b04f0ac3a5bda2cfd8e51a",
+      "scores": [
+        {
+          "id": "exam_01",
+          "metric": "error_pixels",
+          "initial": 0,
+          "final": 0,
+          "raw": {
+            "exercise_ref": "exam_01",
+            "source_sha256": "054063d63128ab6555f4cd0c55b4d7401773cff97b42249a68930d6e4486d217",
+            "cold_blank_error_pixels": 123,
+            "candidate_replay_error_pixels": 0,
+            "raw_memory_recall_error_pixels": 0,
+            "memory_recall_rejected_as_harmful": false,
+            "memory_recall_status": "ACCEPTED_CANDIDATE",
+            "after_feedback_error_pixels": 0,
+            "improved_initially_over_blank": true,
+            "feedback_revision_count": 0,
+            "heldout_exercise_prior_to_candidate_memory": true
+          }
+        },
+        {
+          "id": "exam_02",
+          "metric": "error_pixels",
+          "initial": 0,
+          "final": 0,
+          "raw": {
+            "exercise_ref": "exam_02",
+            "source_sha256": "03389b6725821078af14a22d053da030f1312d3734e752b81746e59b4a439493",
+            "cold_blank_error_pixels": 380,
+            "candidate_replay_error_pixels": 0,
+            "raw_memory_recall_error_pixels": 0,
+            "memory_recall_rejected_as_harmful": false,
+            "memory_recall_status": "ACCEPTED_CANDIDATE",
+            "after_feedback_error_pixels": 0,
+            "improved_initially_over_blank": true,
+            "feedback_revision_count": 0,
+            "heldout_exercise_prior_to_candidate_memory": true
+          }
+        },
+        {
+          "id": "exam_03",
+          "metric": "error_pixels",
+          "initial": 168,
+          "final": 168,
+          "raw": {
+            "exercise_ref": "exam_03",
+            "source_sha256": "8517bf4176d3e8e2ee9bca2e8cfa88600a3657f6484b1e7491a8ed6618339b81",
+            "cold_blank_error_pixels": 316,
+            "candidate_replay_error_pixels": 168,
+            "raw_memory_recall_error_pixels": 168,
+            "memory_recall_rejected_as_harmful": false,
+            "memory_recall_status": "ACCEPTED_CANDIDATE",
+            "after_feedback_error_pixels": 168,
+            "improved_initially_over_blank": true,
+            "feedback_revision_count": 0,
+            "heldout_exercise_prior_to_candidate_memory": true
+          }
+        },
+        {
+          "id": "exam_04",
+          "metric": "error_pixels",
+          "initial": 393,
+          "final": 0,
+          "raw": {
+            "exercise_ref": "exam_04",
+            "source_sha256": "eee2fc69e2f2ed6afde07e02931ac3634e17c7fc2fd8d4e28b9fe81f71058f7c",
+            "cold_blank_error_pixels": 393,
+            "candidate_replay_error_pixels": 393,
+            "raw_memory_recall_error_pixels": 659,
+            "memory_recall_rejected_as_harmful": true,
+            "memory_recall_status": "REJECTED_HARMFUL_RECALL",
+            "after_feedback_error_pixels": 0,
+            "improved_initially_over_blank": false,
+            "feedback_revision_count": 2,
+            "heldout_exercise_prior_to_candidate_memory": true
+          }
+        }
+      ],
+      "count": 4
+    },
+    {
+      "level": "V1",
+      "status": "ARCHIVED_EVALUATION",
+      "source": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\ecole-dessin-v1-20261008-231554\\evaluation.json",
+      "sha256": "b231163d8ca0bb5204cc3243e1cd228f1393d3465d7db8b0732f1bd60eb20424",
+      "scores": [
+        {
+          "id": "examen_trait",
+          "metric": "error_pixels",
+          "initial": 9,
+          "final": 9
+        },
+        {
+          "id": "examen_carre",
+          "metric": "error_pixels",
+          "initial": 2,
+          "final": 2
+        },
+        {
+          "id": "examen_triangle",
+          "metric": "error_pixels",
+          "initial": 132,
+          "final": 66
+        },
+        {
+          "id": "examen_cercle",
+          "metric": "error_pixels",
+          "initial": 64,
+          "final": 60
+        },
+        {
+          "id": "examen_croix",
+          "metric": "error_pixels",
+          "initial": 413,
+          "final": 56
+        },
+        {
+          "id": "examen_courbe",
+          "metric": "error_pixels",
+          "initial": 250,
+          "final": 28
+        }
+      ],
+      "count": 6
+    },
+    {
+      "level": "V3",
+      "status": "ARCHIVED_EVALUATION",
+      "source": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\dessin-memoire-v3-20261009-000320\\evaluation.json",
+      "sha256": "4ba51e6a52690a451a6987d08106615f4125d0a7ef2ace23a20a7352f8f0927e",
+      "scores": [
+        {
+          "id": "immediate_pentagon",
+          "metric": "pixel_iou",
+          "value": 0.6150121065375302,
+          "pixel_xor": 159
+        },
+        {
+          "id": "delayed_pentagon",
+          "metric": "pixel_iou",
+          "value": 0.6150121065375302,
+          "pixel_xor": 159
+        },
+        {
+          "id": "transfer_house",
+          "metric": "pixel_iou",
+          "value": 0.6161790017211703,
+          "pixel_xor": 223
+        }
+      ],
+      "count": 3
+    },
+    {
+      "level": "V4.1",
+      "status": "ARCHIVED_EVALUATION",
+      "source": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\relations-v4-1-20261009-003945\\evaluation.json",
+      "sha256": "ba7dfdaae4108e7ece61668a5954141036855e32304e1bf142c7aad869d5f0fd",
+      "scores": [
+        {
+          "id": "shifted",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "quarter_turn",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "scaled",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "far_shifted",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "reversed_hard_negative",
+          "metric": "teacher_label_match",
+          "correct": false
+        },
+        {
+          "id": "single_component",
+          "metric": "teacher_label_match",
+          "correct": true
+        }
+      ],
+      "count": 6
+    },
+    {
+      "level": "V4.2",
+      "status": "ARCHIVED_EVALUATION",
+      "source": "C:\\Users\\Aubin\\Desktop\\OBSIDIA_WORLDS\\brody-world-physique-image\\build\\orientation-v4-2-20261009-012020\\evaluation.json",
+      "sha256": "19e4c625d40e51daa80d5740a590832de87a3922cdf95d5e4904de4a843abab9",
+      "scores": [
+        {
+          "id": "top_shifted",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "left_scaled",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "bottom_shifted",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "right_scaled",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "top_mirrored",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "bottom_reversed_parts",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "far_top_hold",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "single_component_hold",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "identical_roles_hold",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "diagonal_hold",
+          "metric": "teacher_label_match",
+          "correct": true
+        },
+        {
+          "id": "occlusion_hold",
+          "metric": "teacher_label_match",
+          "correct": true
+        }
+      ],
+      "count": 11
+    }
+  ],
+  "metric_cross_school_comparison_valid": false,
+  "recognition_of_real_objects_proven": false,
+  "learning_executed": false,
+  "native_memory_write": false,
+  "decision_authority": "KX108_ONLY"
+}

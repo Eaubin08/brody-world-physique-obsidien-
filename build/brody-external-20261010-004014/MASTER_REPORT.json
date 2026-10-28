@@ -1,0 +1,43 @@
+{
+  "schema": "BRODY_EXTERNAL_IMAGE_TRACING_EXAM_V0",
+  "source_images": 63,
+  "evaluations": 315,
+  "receipt_tip": "839ede82e5d31f148dca66da7e75d5208ef0e674958e55df25e6e534e7921c6d",
+  "by_transform": {
+    "identity": {
+      "cases": 63,
+      "holds": 3,
+      "mean_pixel_loss": 9.041971842447916
+    },
+    "mirror": {
+      "cases": 63,
+      "holds": 3,
+      "mean_pixel_loss": 9.157356770833333
+    },
+    "rotation": {
+      "cases": 63,
+      "holds": 3,
+      "mean_pixel_loss": 9.175944010416666
+    },
+    "blur": {
+      "cases": 63,
+      "holds": 3,
+      "mean_pixel_loss": 12.005037434895833
+    },
+    "contrast": {
+      "cases": 63,
+      "holds": 3,
+      "mean_pixel_loss": 13.3287841796875
+    }
+  },
+  "sources_independent_from_school_renderer_by_user_supplied_files": true,
+  "source_authenticity_verified": false,
+  "image_semantics_proven": false,
+  "physical_prediction_proven": false,
+  "tool_selection_is_supervised": true,
+  "cross_episode_learning": false,
+  "native_memory_write": false,
+  "kernel_mutation": false,
+  "decision_authority": "KX108_ONLY",
+  "status": "EXTERNAL_IMAGE_RECONSTRUCTION_MEASURED_NO_AUTONOMOUS_VISION_PROOF"
+}

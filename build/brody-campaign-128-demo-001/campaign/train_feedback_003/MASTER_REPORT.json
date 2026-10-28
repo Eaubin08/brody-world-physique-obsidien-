@@ -1,0 +1,14 @@
+{
+  "canonical_promotion": false,
+  "context": "vertical|stationary",
+  "decision_authority": "KX108_ONLY",
+  "errors_px": {
+    "ACCELERATION": 0.0,
+    "STILL": 0.0,
+    "VELOCITY": 0.0
+  },
+  "experiences": 3,
+  "native_memory_write": false,
+  "original_forecast_immutable": true,
+  "schema": "BRODY_CONTEXTUAL_PHYSICS_CORRECTION_V2"
+}

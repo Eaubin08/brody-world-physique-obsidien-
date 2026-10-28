@@ -1,0 +1,37 @@
+{
+  "canonical_promotion": false,
+  "contact_intervention_detected_in_controlled_test": true,
+  "contact_unobservable_at_prediction_time": true,
+  "decision_authority": "KX108_ONLY",
+  "factorial_not_real_physics_proof": true,
+  "heldout_cases": 8,
+  "marker_discarded_as_causal_factor": true,
+  "native_memory_write": false,
+  "p149_p150_p152_integrated": false,
+  "policy": {
+    "canonical_promotion": false,
+    "contact_available_to_inference": false,
+    "contact_effect_px": -15.0,
+    "contact_informative": true,
+    "contact_visible_to_perception": false,
+    "decision_authority": "KX108_ONLY",
+    "digest": "e61773c8ee27df50ea376aaec7dd4ce9041123d8d9427cba195598a9c3f05a76",
+    "intervention_evidence": "CONTROLLED_SYNTHETIC_FACTORIAL",
+    "marker_effect_px": 0.0,
+    "marker_informative": false,
+    "native_memory_write": false,
+    "schema": "BRODY_F1G_FACTORIAL_POLICY_V1"
+  },
+  "schema": "BRODY_F1G_FACTORIAL_CAUSAL_AUDIT_V1",
+  "test_effects": {
+    "contact_effect_px": -15.0,
+    "marker_effect_px": 0.0
+  },
+  "training_cases": 8,
+  "training_effects": {
+    "contact_effect_px": -15.0,
+    "marker_effect_px": 0.0
+  },
+  "verdict": "F1G_CONTROLLED_FACTORIAL_ASSOCIATION_AUDIT_ONLY",
+  "visible_marker_not_assumed_causal": true
+}

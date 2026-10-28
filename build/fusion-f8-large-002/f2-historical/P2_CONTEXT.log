@@ -1,0 +1,12 @@
+{"passed": 7, "total": 7, "verified": false, "all_pass": true}
+{"passed": 7, "total": 7, "verified": true, "all_pass": true}
+
+test_all_seven_adversarial_fixtures (test_p24_contextual_fluctuation_v0.ContextualFluctuationTest.test_all_seven_adversarial_fixtures) ... ok
+test_conflict_is_not_averaged (test_p24_contextual_fluctuation_v0.ContextualFluctuationTest.test_conflict_is_not_averaged) ... ok
+test_provenance_and_replay (test_p24_contextual_fluctuation_v0.ContextualFluctuationTest.test_provenance_and_replay) ... ok
+test_same_pixels_opposite_interpretations (test_p24_contextual_fluctuation_v0.ContextualFluctuationTest.test_same_pixels_opposite_interpretations) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.010s
+
+OK

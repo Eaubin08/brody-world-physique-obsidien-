@@ -1,0 +1,20 @@
+{
+  "schema": "BRODY_P142_GEOMETRIC_TRANSFER",
+  "exam_cases": 30000,
+  "expected_cells": 30,
+  "completed_cells": 30,
+  "elapsed_seconds": 228.469,
+  "budget_seconds": 900,
+  "models": [
+    "rgb_knn",
+    "geometric",
+    "majority"
+  ],
+  "stopped_by": "EXAM_CAP",
+  "greyscale_colour_holds_explicit": true,
+  "real_world_transfer_proven": false,
+  "trained_on_exam": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

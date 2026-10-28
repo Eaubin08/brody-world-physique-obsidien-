@@ -1,0 +1,276 @@
+{
+  "schema": "BRODY_INSTRUMENT_SCHOOL_V2",
+  "instrument_choices": "EXPERIENCE_ASSOCIATION_BY_GOAL",
+  "train": [
+    {
+      "id": "training_01",
+      "goal": "LIGHT",
+      "sketch_sha256": "5d7de2fa407b61f1107b7161beef138fbaf3aff07f0ee99425399bb9e7c79900",
+      "teacher_target_sha256": "89aa2f6b9fec17bb568a9fd80bc37111a572580772992d773addfaa3c5baac75",
+      "trial_losses": {
+        "PENCIL": 0.0,
+        "PEN": 3.6484375,
+        "NIB": 5.2314453125
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_02",
+      "goal": "LIGHT",
+      "sketch_sha256": "686159ffe7c0555017d63ac45f8e727e5af8443b7a8e53f7f6bceccf76515199",
+      "teacher_target_sha256": "82c2534f9a22d8378174685fe9ab9de418c40780dea1a217a0aed6f2f12654b9",
+      "trial_losses": {
+        "PENCIL": 0.0,
+        "PEN": 10.459228515625,
+        "NIB": 11.5595703125
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_03",
+      "goal": "LIGHT",
+      "sketch_sha256": "0dbcf113e435661a6d898e16f16082dc6dfe272388c11d8bb530d29afe9ff31f",
+      "teacher_target_sha256": "d61133dd486394bf6d8066a9fb2bbd902a4c72c24581179669b5d08bb9da63e3",
+      "trial_losses": {
+        "PENCIL": 0.0,
+        "PEN": 11.574951171875,
+        "NIB": 11.703125
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_04",
+      "goal": "UNIFORM",
+      "sketch_sha256": "5d7de2fa407b61f1107b7161beef138fbaf3aff07f0ee99425399bb9e7c79900",
+      "teacher_target_sha256": "d6c99cad4366f4a87e16a9e624f99ef2d1336c8ad7d2a3c617bc1353ca48f0d5",
+      "trial_losses": {
+        "PENCIL": 3.6484375,
+        "PEN": 0.0,
+        "NIB": 4.7314453125
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_05",
+      "goal": "UNIFORM",
+      "sketch_sha256": "686159ffe7c0555017d63ac45f8e727e5af8443b7a8e53f7f6bceccf76515199",
+      "teacher_target_sha256": "55a9938e71d909f8d63a96d8bfa68b6ee0ce62d607a98e4ff00f8479ef45465a",
+      "trial_losses": {
+        "PENCIL": 10.459228515625,
+        "PEN": 0.0,
+        "NIB": 5.562744140625
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_06",
+      "goal": "UNIFORM",
+      "sketch_sha256": "0dbcf113e435661a6d898e16f16082dc6dfe272388c11d8bb530d29afe9ff31f",
+      "teacher_target_sha256": "dfd1b332c145d536b1c40d7811539c580e2ade1bbd1fd63a9cd8db5afefac1cb",
+      "trial_losses": {
+        "PENCIL": 11.574951171875,
+        "PEN": 0.0,
+        "NIB": 7.974853515625
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_07",
+      "goal": "EXPRESSIVE",
+      "sketch_sha256": "5d7de2fa407b61f1107b7161beef138fbaf3aff07f0ee99425399bb9e7c79900",
+      "teacher_target_sha256": "fdc8bbee282be04f83c8f0ed96c247fa7fbf05a4d6120a2cd20438546f842a93",
+      "trial_losses": {
+        "PENCIL": 5.2314453125,
+        "PEN": 4.7314453125,
+        "NIB": 0.0
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_08",
+      "goal": "EXPRESSIVE",
+      "sketch_sha256": "686159ffe7c0555017d63ac45f8e727e5af8443b7a8e53f7f6bceccf76515199",
+      "teacher_target_sha256": "adcf104dd6ff010acc72dead526aa87a12df8441bf741690f2eda280c91fe007",
+      "trial_losses": {
+        "PENCIL": 11.5595703125,
+        "PEN": 5.562744140625,
+        "NIB": 0.0
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    },
+    {
+      "id": "training_09",
+      "goal": "EXPRESSIVE",
+      "sketch_sha256": "0dbcf113e435661a6d898e16f16082dc6dfe272388c11d8bb530d29afe9ff31f",
+      "teacher_target_sha256": "2e2cf49473d8768b6cc725be8bf5decb7c36d907bffdec98fc7724e8b41c3b78",
+      "trial_losses": {
+        "PENCIL": 11.703125,
+        "PEN": 7.974853515625,
+        "NIB": 0.0
+      },
+      "all_three_tools_tried": true,
+      "teacher_feedback_visible_during_train": true
+    }
+  ],
+  "exams": [
+    {
+      "id": "exam_01",
+      "goal": "LIGHT",
+      "decision": {
+        "status": "INSTRUMENT_CANDIDATE_FROM_PRIOR_EXPERIENCE",
+        "chosen_tool": "PENCIL",
+        "based_on_training_ids": [
+          "training_01",
+          "training_02",
+          "training_03"
+        ],
+        "candidate_losses": {
+          "PENCIL": 0.0,
+          "PEN": 8.560872395833334,
+          "NIB": 9.498046875
+        },
+        "selection_rule": "MIN_PRIOR_MEAN_PIXEL_ERROR_BY_DECLARED_INTENT",
+        "confidence_calibrated": false
+      },
+      "heldout_target_sha256": "22bf998eb74593ec1ae98f812522369c758c2cd76927168beaa73e607a8c7bdd",
+      "prediction_artifact": {
+        "ref": "exam_01_prediction.png",
+        "sha256": "22bf998eb74593ec1ae98f812522369c758c2cd76927168beaa73e607a8c7bdd"
+      },
+      "chosen_error_px_mean": 0.0,
+      "blank_error_px_mean": 3.90380859375,
+      "available_tool_errors_after_holdout": {
+        "PENCIL": 0.0,
+        "PEN": 3.935546875,
+        "NIB": 5.64306640625
+      },
+      "winner_after_holdout": "PENCIL",
+      "decision_sealed_before_target_rendered": true,
+      "memory_mutations_from_test": 0,
+      "world_knowledge_validated": false
+    },
+    {
+      "id": "exam_02",
+      "goal": "UNIFORM",
+      "decision": {
+        "status": "INSTRUMENT_CANDIDATE_FROM_PRIOR_EXPERIENCE",
+        "chosen_tool": "PEN",
+        "based_on_training_ids": [
+          "training_04",
+          "training_05",
+          "training_06"
+        ],
+        "candidate_losses": {
+          "PENCIL": 8.560872395833334,
+          "PEN": 0.0,
+          "NIB": 6.089680989583333
+        },
+        "selection_rule": "MIN_PRIOR_MEAN_PIXEL_ERROR_BY_DECLARED_INTENT",
+        "confidence_calibrated": false
+      },
+      "heldout_target_sha256": "7cccaeefecaeee8d5e903e66cb45cfcddbb3de4fc7b8afd2a493c295466ed162",
+      "prediction_artifact": {
+        "ref": "exam_02_prediction.png",
+        "sha256": "7cccaeefecaeee8d5e903e66cb45cfcddbb3de4fc7b8afd2a493c295466ed162"
+      },
+      "chosen_error_px_mean": 0.0,
+      "blank_error_px_mean": 10.770263671875,
+      "available_tool_errors_after_holdout": {
+        "PENCIL": 8.927490234375,
+        "PEN": 0.0,
+        "NIB": 6.524658203125
+      },
+      "winner_after_holdout": "PEN",
+      "decision_sealed_before_target_rendered": true,
+      "memory_mutations_from_test": 0,
+      "world_knowledge_validated": false
+    },
+    {
+      "id": "exam_03",
+      "goal": "EXPRESSIVE",
+      "decision": {
+        "status": "INSTRUMENT_CANDIDATE_FROM_PRIOR_EXPERIENCE",
+        "chosen_tool": "NIB",
+        "based_on_training_ids": [
+          "training_07",
+          "training_08",
+          "training_09"
+        ],
+        "candidate_losses": {
+          "PENCIL": 9.498046875,
+          "PEN": 6.089680989583333,
+          "NIB": 0.0
+        },
+        "selection_rule": "MIN_PRIOR_MEAN_PIXEL_ERROR_BY_DECLARED_INTENT",
+        "confidence_calibrated": false
+      },
+      "heldout_target_sha256": "9af7d8f2eae03a44b6c27d3960d917ce73cd4671ab9726bc4e97ab7806dd4ed2",
+      "prediction_artifact": {
+        "ref": "exam_03_prediction.png",
+        "sha256": "9af7d8f2eae03a44b6c27d3960d917ce73cd4671ab9726bc4e97ab7806dd4ed2"
+      },
+      "chosen_error_px_mean": 0.0,
+      "blank_error_px_mean": 20.99853515625,
+      "available_tool_errors_after_holdout": {
+        "PENCIL": 13.9208984375,
+        "PEN": 7.625732421875,
+        "NIB": 0.0
+      },
+      "winner_after_holdout": "NIB",
+      "decision_sealed_before_target_rendered": true,
+      "memory_mutations_from_test": 0,
+      "world_knowledge_validated": false
+    },
+    {
+      "id": "exam_04",
+      "goal": "UNSEEN_INTENT",
+      "decision": {
+        "status": "HOLD_NO_MATCHING_EXPERIENCE",
+        "chosen_tool": null,
+        "based_on_training_ids": [],
+        "candidate_losses": null,
+        "selection_rule": "MIN_PRIOR_MEAN_PIXEL_ERROR_BY_DECLARED_INTENT",
+        "confidence_calibrated": false
+      },
+      "heldout_target_sha256": "3985ea93f89cd45a8a0c933e7d2c46416df35d4c4eae71b50f8807c13777db9a",
+      "prediction_artifact": null,
+      "chosen_error_px_mean": null,
+      "blank_error_px_mean": 8.653564453125,
+      "available_tool_errors_after_holdout": {
+        "PENCIL": 7.358642578125,
+        "PEN": 0.0,
+        "NIB": 5.15380859375
+      },
+      "winner_after_holdout": "PEN",
+      "decision_sealed_before_target_rendered": true,
+      "memory_mutations_from_test": 0,
+      "world_knowledge_validated": false
+    }
+  ],
+  "hold_count": 1,
+  "chosen_count": 3,
+  "training_lessons": 9,
+  "prior_v1_verified_episodes": 10,
+  "ledger_integrity": {
+    "verified_records": 13,
+    "last_sha256": "9b47c71e096325adf79714a88eec1131dc7cbbf25ccf7798c237a3ebf273886e",
+    "native_memory_verified": false,
+    "canonical_memory_written": false
+  },
+  "instrument_artificial_models": true,
+  "teacher_targets_from_same_renderer": true,
+  "semantic_tool_comprehension_proven": false,
+  "new_model_weights_trained": false,
+  "real_world_generalization_proven": false,
+  "native_memory_write_allowed": false,
+  "memory_promotion_allowed": false,
+  "decision_authority": "KX108_ONLY"
+}

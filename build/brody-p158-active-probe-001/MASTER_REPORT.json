@@ -1,0 +1,66 @@
+{
+  "schema": "BRODY_P158_ACTIVE_CONTEXT_PROBE",
+  "episodes": 700,
+  "conditions_completed": 5,
+  "conditions_expected": 5,
+  "duration_seconds": 0.739,
+  "stopped_by": "EXAM_CAP",
+  "hypotheses": {
+    "flat": 0.0,
+    "slope": -1.0
+  },
+  "per_condition": {
+    "discriminating_probe": {
+      "n": 140,
+      "pre_probe_correct": 140,
+      "post_select": 140,
+      "post_correct": 140,
+      "post_hold": 0,
+      "post_multi": 0,
+      "false_certainty": 0
+    },
+    "no_probe": {
+      "n": 140,
+      "pre_probe_correct": 140,
+      "post_select": 0,
+      "post_correct": 0,
+      "post_hold": 140,
+      "post_multi": 0,
+      "false_certainty": 0
+    },
+    "uninformative_probe": {
+      "n": 140,
+      "pre_probe_correct": 140,
+      "post_select": 0,
+      "post_correct": 0,
+      "post_hold": 140,
+      "post_multi": 0,
+      "false_certainty": 0
+    },
+    "noisy_probe": {
+      "n": 140,
+      "pre_probe_correct": 140,
+      "post_select": 140,
+      "post_correct": 140,
+      "post_hold": 0,
+      "post_multi": 0,
+      "false_certainty": 0
+    },
+    "out_of_bank": {
+      "n": 140,
+      "pre_probe_correct": 140,
+      "post_select": 103,
+      "post_correct": 103,
+      "post_hold": 37,
+      "post_multi": 0,
+      "false_certainty": 0
+    }
+  },
+  "probe_actuation": "SIMULATED",
+  "hidden_regime_in_inference": false,
+  "probe_design_learned_autonomously": false,
+  "out_of_distribution_physics_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

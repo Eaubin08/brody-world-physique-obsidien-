@@ -1,0 +1,107 @@
+{
+  "report": {
+    "schema": "BRODY_MULTICAPABILITY_P133",
+    "cases": 8,
+    "families": 7,
+    "pass": 8,
+    "fail": 0,
+    "novel_real_world_learning_proven": false,
+    "physical_360_proven": false,
+    "native_memory_write": false,
+    "canonical_promotion": false,
+    "decision_authority": "KX108_ONLY"
+  },
+  "cases": [
+    {
+      "id": "COLOUR-MULTIOBJECT",
+      "family": "perception",
+      "status": "PASS",
+      "detail": {
+        "visible_components": 2
+      }
+    },
+    {
+      "id": "PROGRAM-RENDER",
+      "family": "generation",
+      "status": "PASS",
+      "detail": {
+        "rendered": "base.png"
+      }
+    },
+    {
+      "id": "OCCLUSION-DOUBT",
+      "family": "inference",
+      "status": "PASS",
+      "detail": {
+        "status": "DOUBT",
+        "hypotheses": [
+          "OCCLUSION",
+          "MERGE",
+          "REMOVAL"
+        ],
+        "observable_change": "COMPONENT_COUNT_DECREASED",
+        "causality_proven": false
+      }
+    },
+    {
+      "id": "MIRROR-STRUCTURE",
+      "family": "multiview",
+      "status": "PASS",
+      "detail": {
+        "semantic_identity_proven": false
+      }
+    },
+    {
+      "id": "TRACK-TWO",
+      "family": "scene_tracking",
+      "status": "PASS",
+      "detail": {
+        "matched": [
+          {
+            "old": 0,
+            "new": 0,
+            "cost": 0.0
+          },
+          {
+            "old": 1,
+            "new": 1,
+            "cost": 0.0
+          }
+        ],
+        "unmatched_old": 0,
+        "unmatched_new": 0,
+        "identity_confirmed": false,
+        "method": "relative silhouette only"
+      }
+    },
+    {
+      "id": "TRIANGLE-PAINT",
+      "family": "generation",
+      "status": "PASS",
+      "detail": {
+        "rendered": "triangle.png"
+      }
+    },
+    {
+      "id": "GEOMETRY-FAIL-CLOSED",
+      "family": "safety",
+      "status": "PASS",
+      "detail": {
+        "rejected": true
+      }
+    },
+    {
+      "id": "CAUSAL-RESTRAINT",
+      "family": "reasoning",
+      "status": "PASS",
+      "detail": {
+        "hypotheses": [
+          "OCCLUSION",
+          "MERGE",
+          "REMOVAL"
+        ]
+      }
+    }
+  ],
+  "digest": "42c97c3e810fa68a251d13647f61aedf9df79d4b09839609b270b17e2f0acd4d"
+}

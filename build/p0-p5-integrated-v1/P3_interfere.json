@@ -1,0 +1,9 @@
+{
+  "action": "validate_clean_world",
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "77e303b0c3492b9bb766e6805f7bd2b0f411df17da9ad36b7083bcbfb06102cc",
+  "native_memory_write": false,
+  "phase": "interfere",
+  "previous_digest": "756e37249d327adf2481bdf99da8e886332511c14318c6d7b370317a5b6312d0"
+}

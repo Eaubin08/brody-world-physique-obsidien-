@@ -1,0 +1,10 @@
+
+test_deduplicated_cases_and_refuse_overwrite (test_p212c_mixed_visual_benchmark_v0.MixedVisualBenchmarkTests.test_deduplicated_cases_and_refuse_overwrite) ... C:\Users\Aubin\Desktop\OBSIDIA_WORLDS\brody-world-physique-image\brody_world_physique\p210a_visual_loop_contract_v0.py:28: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  return sum(any(channel for channel in pixel) for pixel in d.getdata())
+ok
+test_mixed_results_and_visual_outputs (test_p212c_mixed_visual_benchmark_v0.MixedVisualBenchmarkTests.test_mixed_results_and_visual_outputs) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.242s
+
+OK

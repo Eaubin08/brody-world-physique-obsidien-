@@ -1,0 +1,11 @@
+{
+  "canonical_promotion": false,
+  "decision": {
+    "action": "observe_after_discriminating_intervention",
+    "decision": "PROBE",
+    "reason": "INFORMATION_GAIN"
+  },
+  "decision_authority": "KX108_ONLY",
+  "digest": "1f3d21d5584fb04f4524105ab1c50f6e8111614f706b2d2fa90f8ca9dbbdc2b0",
+  "native_memory_write": false
+}

@@ -1,0 +1,90 @@
+{
+  "canonical_promotion": false,
+  "choice": {
+    "backtest_errors_px": {
+      "ACCELERATION": 0.0,
+      "STILL": 8.0,
+      "VELOCITY": 2.0
+    },
+    "context": "vertical|speeding_up",
+    "eligible_episodes": 0,
+    "evidence_source": "LOCAL_BACKTEST",
+    "hypotheses": [
+      {
+        "error_px": 0.0,
+        "model": "ACCELERATION"
+      },
+      {
+        "error_px": 2.0,
+        "model": "VELOCITY"
+      },
+      {
+        "error_px": 8.0,
+        "model": "STILL"
+      }
+    ],
+    "mode": "CANDIDATE",
+    "selected": "ACCELERATION",
+    "selection_errors_px": {
+      "ACCELERATION": 0.0,
+      "STILL": 8.0,
+      "VELOCITY": 2.0
+    }
+  },
+  "decision_authority": "KX108_ONLY",
+  "digest": "48182eed958a4107709c81e52ddb48eacaa3da5d019819e62e28d188ecb35426",
+  "hypotheses": {
+    "ACCELERATION": {
+      "radius": 4.4065,
+      "t": 4.0,
+      "x": 41.0,
+      "y": 43.0
+    },
+    "STILL": {
+      "radius": 4.4065,
+      "t": 4.0,
+      "x": 41.0,
+      "y": 33.0
+    },
+    "VELOCITY": {
+      "radius": 4.4065,
+      "t": 4.0,
+      "x": 41.0,
+      "y": 41.0
+    }
+  },
+  "native_memory_write": false,
+  "observations": [
+    {
+      "radius": 4.4065,
+      "source_sha256": "276afeba33fcdfc438f06f23c5a40906d212113430dc163c75df1798e6eea861",
+      "t": 0.0,
+      "x": 41.0,
+      "y": 15.0
+    },
+    {
+      "radius": 4.4065,
+      "source_sha256": "4cc0958692f42c9f7a73dcc1f988bb66d61911c619a0b81ccea340cc0de2f07e",
+      "t": 1.0,
+      "x": 41.0,
+      "y": 19.0
+    },
+    {
+      "radius": 4.4065,
+      "source_sha256": "3922f662355dba4910200d42094ee71ab4c0449ce5363b263a3c9550032917ea",
+      "t": 2.0,
+      "x": 41.0,
+      "y": 25.0
+    },
+    {
+      "radius": 4.4065,
+      "source_sha256": "94bf6207d4b0685007b56d584dcaaecf204c1fbcd5339641e9e52a81b45881ba",
+      "t": 3.0,
+      "x": 41.0,
+      "y": 33.0
+    }
+  ],
+  "predict_t": 4.0,
+  "prior_memory_digest": "79511449e5f0ab3d64de470f847376f68e418c812dd279db5e7630b861ee1c74",
+  "schema": "BRODY_CONTEXTUAL_PHYSICS_FORECAST_V2"
+}

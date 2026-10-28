@@ -1,0 +1,177 @@
+{
+  "shape/reference": {
+    "n": 600,
+    "p144_correct": 340,
+    "robust_before_correct": 329,
+    "adapted_correct": 398,
+    "adapted_hold": 0
+  },
+  "colour/reference": {
+    "n": 600,
+    "p144_correct": 600,
+    "robust_before_correct": 600,
+    "adapted_correct": 600,
+    "adapted_hold": 0
+  },
+  "count/reference": {
+    "n": 600,
+    "p144_correct": 512,
+    "robust_before_correct": 512,
+    "adapted_correct": 512,
+    "adapted_hold": 0
+  },
+  "arrangement/reference": {
+    "n": 600,
+    "p144_correct": 508,
+    "robust_before_correct": 519,
+    "adapted_correct": 587,
+    "adapted_hold": 0
+  },
+  "orientation/reference": {
+    "n": 600,
+    "p144_correct": 586,
+    "robust_before_correct": 586,
+    "adapted_correct": 585,
+    "adapted_hold": 0
+  },
+  "shape/new_engine_light": {
+    "n": 600,
+    "p144_correct": 331,
+    "robust_before_correct": 320,
+    "adapted_correct": 395,
+    "adapted_hold": 0
+  },
+  "colour/new_engine_light": {
+    "n": 600,
+    "p144_correct": 600,
+    "robust_before_correct": 600,
+    "adapted_correct": 600,
+    "adapted_hold": 0
+  },
+  "count/new_engine_light": {
+    "n": 600,
+    "p144_correct": 538,
+    "robust_before_correct": 550,
+    "adapted_correct": 550,
+    "adapted_hold": 0
+  },
+  "arrangement/new_engine_light": {
+    "n": 600,
+    "p144_correct": 544,
+    "robust_before_correct": 547,
+    "adapted_correct": 599,
+    "adapted_hold": 0
+  },
+  "orientation/new_engine_light": {
+    "n": 600,
+    "p144_correct": 597,
+    "robust_before_correct": 598,
+    "adapted_correct": 597,
+    "adapted_hold": 0
+  },
+  "shape/new_engine_dark": {
+    "n": 600,
+    "p144_correct": 201,
+    "robust_before_correct": 318,
+    "adapted_correct": 370,
+    "adapted_hold": 0
+  },
+  "colour/new_engine_dark": {
+    "n": 600,
+    "p144_correct": 160,
+    "robust_before_correct": 600,
+    "adapted_correct": 600,
+    "adapted_hold": 0
+  },
+  "count/new_engine_dark": {
+    "n": 600,
+    "p144_correct": 198,
+    "robust_before_correct": 562,
+    "adapted_correct": 562,
+    "adapted_hold": 0
+  },
+  "arrangement/new_engine_dark": {
+    "n": 600,
+    "p144_correct": 212,
+    "robust_before_correct": 541,
+    "adapted_correct": 597,
+    "adapted_hold": 0
+  },
+  "orientation/new_engine_dark": {
+    "n": 600,
+    "p144_correct": 209,
+    "robust_before_correct": 600,
+    "adapted_correct": 600,
+    "adapted_hold": 0
+  },
+  "shape/new_engine_outlined": {
+    "n": 600,
+    "p144_correct": 230,
+    "robust_before_correct": 237,
+    "adapted_correct": 276,
+    "adapted_hold": 0
+  },
+  "colour/new_engine_outlined": {
+    "n": 600,
+    "p144_correct": 540,
+    "robust_before_correct": 548,
+    "adapted_correct": 548,
+    "adapted_hold": 0
+  },
+  "count/new_engine_outlined": {
+    "n": 600,
+    "p144_correct": 522,
+    "robust_before_correct": 534,
+    "adapted_correct": 534,
+    "adapted_hold": 0
+  },
+  "arrangement/new_engine_outlined": {
+    "n": 600,
+    "p144_correct": 534,
+    "robust_before_correct": 543,
+    "adapted_correct": 590,
+    "adapted_hold": 0
+  },
+  "orientation/new_engine_outlined": {
+    "n": 600,
+    "p144_correct": 599,
+    "robust_before_correct": 599,
+    "adapted_correct": 599,
+    "adapted_hold": 0
+  },
+  "shape/new_engine_occluded": {
+    "n": 600,
+    "p144_correct": 213,
+    "robust_before_correct": 205,
+    "adapted_correct": 232,
+    "adapted_hold": 0
+  },
+  "colour/new_engine_occluded": {
+    "n": 600,
+    "p144_correct": 600,
+    "robust_before_correct": 600,
+    "adapted_correct": 600,
+    "adapted_hold": 0
+  },
+  "count/new_engine_occluded": {
+    "n": 600,
+    "p144_correct": 228,
+    "robust_before_correct": 229,
+    "adapted_correct": 229,
+    "adapted_hold": 0
+  },
+  "arrangement/new_engine_occluded": {
+    "n": 600,
+    "p144_correct": 217,
+    "robust_before_correct": 215,
+    "adapted_correct": 221,
+    "adapted_hold": 0
+  },
+  "orientation/new_engine_occluded": {
+    "n": 600,
+    "p144_correct": 177,
+    "robust_before_correct": 174,
+    "adapted_correct": 174,
+    "adapted_hold": 0
+  }
+}

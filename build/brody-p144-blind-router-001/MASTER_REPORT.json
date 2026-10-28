@@ -1,0 +1,17 @@
+{
+  "schema": "BRODY_P144_TRANSFORM_BLIND_ROUTING",
+  "exam_cases": 30000,
+  "cells_completed": 30,
+  "cells_expected": 30,
+  "elapsed_seconds": 378.002,
+  "blind_accuracy": 0.8515,
+  "aware_accuracy": 0.861,
+  "blind_coverage": 0.9667,
+  "stopped_by": "EXAM_CAP",
+  "question_family_known": true,
+  "transform_name_hidden_at_runtime": true,
+  "source_generator_independent": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

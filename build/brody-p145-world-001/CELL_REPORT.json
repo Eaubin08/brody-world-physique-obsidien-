@@ -1,0 +1,202 @@
+{
+  "shape/reference": {
+    "n": 1000,
+    "correct": 595,
+    "holds": 0,
+    "rgb_correct": 540,
+    "geo_correct": 536,
+    "majority_correct": 316
+  },
+  "colour/reference": {
+    "n": 1000,
+    "correct": 989,
+    "holds": 0,
+    "rgb_correct": 913,
+    "geo_correct": 1000,
+    "majority_correct": 240
+  },
+  "count/reference": {
+    "n": 1000,
+    "correct": 938,
+    "holds": 0,
+    "rgb_correct": 930,
+    "geo_correct": 859,
+    "majority_correct": 338
+  },
+  "arrangement/reference": {
+    "n": 1000,
+    "correct": 966,
+    "holds": 0,
+    "rgb_correct": 1000,
+    "geo_correct": 948,
+    "majority_correct": 310
+  },
+  "orientation/reference": {
+    "n": 1000,
+    "correct": 979,
+    "holds": 0,
+    "rgb_correct": 437,
+    "geo_correct": 979,
+    "majority_correct": 361
+  },
+  "shape/new_engine_light": {
+    "n": 1000,
+    "correct": 377,
+    "holds": 0,
+    "rgb_correct": 540,
+    "geo_correct": 473,
+    "majority_correct": 336
+  },
+  "colour/new_engine_light": {
+    "n": 1000,
+    "correct": 963,
+    "holds": 0,
+    "rgb_correct": 911,
+    "geo_correct": 1000,
+    "majority_correct": 230
+  },
+  "count/new_engine_light": {
+    "n": 1000,
+    "correct": 960,
+    "holds": 0,
+    "rgb_correct": 957,
+    "geo_correct": 917,
+    "majority_correct": 291
+  },
+  "arrangement/new_engine_light": {
+    "n": 1000,
+    "correct": 992,
+    "holds": 0,
+    "rgb_correct": 1000,
+    "geo_correct": 986,
+    "majority_correct": 320
+  },
+  "orientation/new_engine_light": {
+    "n": 1000,
+    "correct": 994,
+    "holds": 0,
+    "rgb_correct": 414,
+    "geo_correct": 994,
+    "majority_correct": 337
+  },
+  "shape/new_engine_dark": {
+    "n": 1000,
+    "correct": 347,
+    "holds": 0,
+    "rgb_correct": 347,
+    "geo_correct": 347,
+    "majority_correct": 347
+  },
+  "colour/new_engine_dark": {
+    "n": 1000,
+    "correct": 252,
+    "holds": 0,
+    "rgb_correct": 252,
+    "geo_correct": 233,
+    "majority_correct": 245
+  },
+  "count/new_engine_dark": {
+    "n": 1000,
+    "correct": 326,
+    "holds": 0,
+    "rgb_correct": 326,
+    "geo_correct": 351,
+    "majority_correct": 323
+  },
+  "arrangement/new_engine_dark": {
+    "n": 1000,
+    "correct": 85,
+    "holds": 0,
+    "rgb_correct": 85,
+    "geo_correct": 341,
+    "majority_correct": 312
+  },
+  "orientation/new_engine_dark": {
+    "n": 1000,
+    "correct": 334,
+    "holds": 0,
+    "rgb_correct": 334,
+    "geo_correct": 334,
+    "majority_correct": 339
+  },
+  "shape/new_engine_outlined": {
+    "n": 1000,
+    "correct": 351,
+    "holds": 0,
+    "rgb_correct": 384,
+    "geo_correct": 412,
+    "majority_correct": 330
+  },
+  "colour/new_engine_outlined": {
+    "n": 1000,
+    "correct": 955,
+    "holds": 0,
+    "rgb_correct": 896,
+    "geo_correct": 919,
+    "majority_correct": 231
+  },
+  "count/new_engine_outlined": {
+    "n": 1000,
+    "correct": 969,
+    "holds": 0,
+    "rgb_correct": 982,
+    "geo_correct": 887,
+    "majority_correct": 350
+  },
+  "arrangement/new_engine_outlined": {
+    "n": 1000,
+    "correct": 984,
+    "holds": 0,
+    "rgb_correct": 1000,
+    "geo_correct": 974,
+    "majority_correct": 344
+  },
+  "orientation/new_engine_outlined": {
+    "n": 1000,
+    "correct": 995,
+    "holds": 0,
+    "rgb_correct": 416,
+    "geo_correct": 995,
+    "majority_correct": 351
+  },
+  "shape/new_engine_occluded": {
+    "n": 1000,
+    "correct": 352,
+    "holds": 0,
+    "rgb_correct": 563,
+    "geo_correct": 505,
+    "majority_correct": 333
+  },
+  "colour/new_engine_occluded": {
+    "n": 1000,
+    "correct": 856,
+    "holds": 0,
+    "rgb_correct": 770,
+    "geo_correct": 1000,
+    "majority_correct": 264
+  },
+  "count/new_engine_occluded": {
+    "n": 1000,
+    "correct": 556,
+    "holds": 0,
+    "rgb_correct": 915,
+    "geo_correct": 385,
+    "majority_correct": 336
+  },
+  "arrangement/new_engine_occluded": {
+    "n": 1000,
+    "correct": 847,
+    "holds": 0,
+    "rgb_correct": 1000,
+    "geo_correct": 357,
+    "majority_correct": 332
+  },
+  "orientation/new_engine_occluded": {
+    "n": 1000,
+    "correct": 315,
+    "holds": 0,
+    "rgb_correct": 422,
+    "geo_correct": 315,
+    "majority_correct": 311
+  }
+}

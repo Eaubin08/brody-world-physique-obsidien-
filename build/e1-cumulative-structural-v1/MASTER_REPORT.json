@@ -1,0 +1,81 @@
+{
+  "after": {
+    "case": "square_after",
+    "mae_rgb": 0.0,
+    "mode": "CANDIDATE",
+    "parts_observed": 1,
+    "parts_reconstructed": 1,
+    "reason": "MULTISOURCE_SHAPE_MEMORY",
+    "truth_not_in_candidate_precommit": true
+  },
+  "before": {
+    "case": "square_before",
+    "mae_rgb": 0.0,
+    "mode": "CANDIDATE",
+    "parts_observed": 1,
+    "parts_reconstructed": 1,
+    "reason": "MULTISOURCE_SHAPE_MEMORY",
+    "truth_not_in_candidate_precommit": true
+  },
+  "blind_source_hashes_disjoint": true,
+  "canonical_promotion": false,
+  "circle_transfer": {
+    "case": "circle_new",
+    "mae_rgb": 0.0,
+    "mode": "CANDIDATE",
+    "parts_observed": 1,
+    "parts_reconstructed": 1,
+    "reason": "MULTISOURCE_SHAPE_MEMORY",
+    "truth_not_in_candidate_precommit": true
+  },
+  "decision_authority": "KX108_ONLY",
+  "exam_observation_supplies_geometry_and_shape_signature": true,
+  "general_semantic_identity_proven": false,
+  "independent_training_groups": 4,
+  "lessons": [
+    {
+      "components": 1,
+      "group": "square_source_1",
+      "kind_taught": "square",
+      "lesson": "square_lesson_1",
+      "source_sha256": "914292d8114f6a53a5734274ddd4c25eed6e793bd428e9c8f778696444d81647"
+    },
+    {
+      "components": 1,
+      "group": "square_source_2",
+      "kind_taught": "square",
+      "lesson": "square_lesson_2",
+      "source_sha256": "4c215c86336e48096edd59bcf28199f1956d337bab759d406338fab1ed266aa1"
+    },
+    {
+      "components": 1,
+      "group": "circle_source_1",
+      "kind_taught": "circle",
+      "lesson": "circle_lesson_1",
+      "source_sha256": "cb44cf787337285b0b78626f714f039faf5e0d27239414af4a009d58a6108f6b"
+    },
+    {
+      "components": 1,
+      "group": "circle_source_2",
+      "kind_taught": "circle",
+      "lesson": "circle_lesson_2",
+      "source_sha256": "7eaa5161b3563702ef9b6e1fec0e1da13bcd7c5c64cd4b933e38da08061467a0"
+    }
+  ],
+  "native_memory_write": false,
+  "novel": {
+    "case": "novel_triangle",
+    "mae_rgb": null,
+    "mode": "DOUBT",
+    "parts_observed": 1,
+    "parts_reconstructed": null,
+    "reason": "SHAPE_NOT_REPLICATED",
+    "truth_not_in_candidate_precommit": true
+  },
+  "pure_blind_generation_proven": false,
+  "real_world_transfer_proven": false,
+  "retained_after_interference": true,
+  "schema": "BRODY_E1_CUMULATIVE_SHAPE_TRANSFER_V1",
+  "shared_experimental_memory": true,
+  "verdict": "E1_CUMULATIVE_MASK_TRANSFER_BOUNDED"
+}

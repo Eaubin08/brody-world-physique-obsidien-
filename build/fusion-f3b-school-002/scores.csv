@@ -1,0 +1,6 @@
+lesson,stage,shape,boxes,gestures,baseline_error,candidate_error,gain,verdict,candidate_sealed_before_teacher
+01-line,E0,line,1,1,48,46,2,IMPROVED,True
+02-rectangle,E0,rectangle,2,1,340,186,154,IMPROVED,True
+03-triangle,E1,triangle,2,2,285,157,128,IMPROVED,True
+04-circle,E1,ellipse,2,1,260,203,57,IMPROVED,True
+05-composition,E2,rectangle,3,1,460,254,206,IMPROVED,True

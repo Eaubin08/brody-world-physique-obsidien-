@@ -1,0 +1,119 @@
+{
+  "schema": "BRODY_P165D3_CHROMATIC_PERCEPTION_LAB",
+  "conditions": 675,
+  "exams": 1350,
+  "run_complete": true,
+  "groups": {
+    "red/none": {
+      "exams": 150,
+      "truth_frames": 1050,
+      "recall_frames": 1050,
+      "false_candidates": 450,
+      "pixel_abs_sum": 0.0,
+      "pixel_pairs": 1050,
+      "old_pixel_abs_sum": 0.0,
+      "old_pixel_pairs": 1050
+    },
+    "blue/none": {
+      "exams": 150,
+      "truth_frames": 1050,
+      "recall_frames": 1050,
+      "false_candidates": 450,
+      "pixel_abs_sum": 0.0,
+      "pixel_pairs": 1050,
+      "old_pixel_abs_sum": 28134.0,
+      "old_pixel_pairs": 450
+    },
+    "change/none": {
+      "exams": 150,
+      "truth_frames": 1050,
+      "recall_frames": 1050,
+      "false_candidates": 450,
+      "pixel_abs_sum": 0.0,
+      "pixel_pairs": 1050,
+      "old_pixel_abs_sum": 7730.0,
+      "old_pixel_pairs": 750
+    },
+    "red/partial": {
+      "exams": 150,
+      "truth_frames": 1050,
+      "recall_frames": 1050,
+      "false_candidates": 450,
+      "pixel_abs_sum": 788.3720930232499,
+      "pixel_pairs": 1050,
+      "old_pixel_abs_sum": 600.0,
+      "old_pixel_pairs": 1050
+    },
+    "blue/partial": {
+      "exams": 150,
+      "truth_frames": 1050,
+      "recall_frames": 1050,
+      "false_candidates": 450,
+      "pixel_abs_sum": 788.3720930232499,
+      "pixel_pairs": 1050,
+      "old_pixel_abs_sum": 27933.0,
+      "old_pixel_pairs": 450
+    },
+    "change/partial": {
+      "exams": 150,
+      "truth_frames": 1050,
+      "recall_frames": 1050,
+      "false_candidates": 450,
+      "pixel_abs_sum": 788.3720930232499,
+      "pixel_pairs": 1050,
+      "old_pixel_abs_sum": 8062.0,
+      "old_pixel_pairs": 750
+    },
+    "red/full": {
+      "exams": 150,
+      "truth_frames": 1050,
+      "recall_frames": 750,
+      "false_candidates": 450,
+      "pixel_abs_sum": 17310.0,
+      "pixel_pairs": 1050,
+      "old_pixel_abs_sum": 17310.0,
+      "old_pixel_pairs": 1050
+    },
+    "blue/full": {
+      "exams": 150,
+      "truth_frames": 1050,
+      "recall_frames": 750,
+      "false_candidates": 450,
+      "pixel_abs_sum": 17322.0,
+      "pixel_pairs": 1050,
+      "old_pixel_abs_sum": 28068.0,
+      "old_pixel_pairs": 450
+    },
+    "change/full": {
+      "exams": 150,
+      "truth_frames": 1050,
+      "recall_frames": 750,
+      "false_candidates": 450,
+      "pixel_abs_sum": 17306.0,
+      "pixel_pairs": 1050,
+      "old_pixel_abs_sum": 17306.0,
+      "old_pixel_pairs": 750
+    }
+  },
+  "overall": {
+    "count": 1350,
+    "truth_frames": 9450,
+    "recall_frames": 8550,
+    "false_candidates": 4050,
+    "pixel_abs_sum": 54303.11627906975,
+    "pixel_pairs": 9450,
+    "old_pixel_abs_sum": 135143.0,
+    "old_pixel_pairs": 6750
+  },
+  "inference_receives_oracle": false,
+  "uses_y_band_prior": true,
+  "ground_truth_visibility_available": false,
+  "identity_tracking_integrated": false,
+  "true_3d_or_scene_graph_integrated": false,
+  "real_multisensor_input_connected": false,
+  "historical_77_not_replayed": true,
+  "runtime_seconds": 22.651,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

@@ -1,0 +1,78 @@
+{
+  "bounded_correction_not_law_discovery": true,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "exam": [
+    {
+      "adapted_error_px": 0.0,
+      "base_error_px": 1.0,
+      "candidate_eligible": true,
+      "case": "transfer_acceleration",
+      "context": "vertical|speeding_up",
+      "truth_not_available_until_commit": true,
+      "utility_px": 1.0
+    },
+    {
+      "adapted_error_px": 0.0,
+      "base_error_px": 1.0,
+      "candidate_eligible": true,
+      "case": "different_start",
+      "context": "vertical|speeding_up",
+      "truth_not_available_until_commit": true,
+      "utility_px": 1.0
+    },
+    {
+      "adapted_error_px": 15.0,
+      "base_error_px": 14.0,
+      "candidate_eligible": true,
+      "case": "contradiction_reversal",
+      "context": "vertical|speeding_up",
+      "truth_not_available_until_commit": true,
+      "utility_px": -1.0
+    }
+  ],
+  "interference_kept_skill": true,
+  "lessons": [
+    {
+      "error_xy_px": [
+        0.0,
+        1.0
+      ],
+      "lesson": "lesson_a",
+      "next_digest": "1ff732fb77dd564038d8d32b4beca0b5766e8d76e7d1d9ab04141d0e57ad2b01",
+      "prior_digest": "fd7211febfda5e2096b20249d7264cead3d5dd2c5f3a4b205e376b0e62a6df61",
+      "skill_updated": true
+    },
+    {
+      "error_xy_px": [
+        0.0,
+        1.0
+      ],
+      "lesson": "lesson_b",
+      "next_digest": "5c02017b574395e6194aeb857ba72e31c7d44272911147464a91e96b08ace6e7",
+      "prior_digest": "1ff732fb77dd564038d8d32b4beca0b5766e8d76e7d1d9ab04141d0e57ad2b01",
+      "skill_updated": true
+    },
+    {
+      "context": "vertical|steady",
+      "error_xy_px": [
+        0.0,
+        0.0
+      ],
+      "lesson": "interference_steady",
+      "skill_updated": false
+    }
+  ],
+  "native_memory_write": false,
+  "negative_transfer_cases": 1,
+  "positive_transfer_cases": 2,
+  "reverse_360_integrated": false,
+  "schema": "BRODY_EXPERIENTIAL_SKILL_LEARNING_V1",
+  "sens_mmonde_integrated": false,
+  "skill_digest": "5c02017b574395e6194aeb857ba72e31c7d44272911147464a91e96b08ace6e7",
+  "skill_file": "candidate_skill.json",
+  "skills_learned_by_error_correction": 2,
+  "train_test_hash_separated": true,
+  "unchanged_cases": 0,
+  "verdict": "EXPERIENTIAL_SKILL_CANDIDATE_ONLY"
+}

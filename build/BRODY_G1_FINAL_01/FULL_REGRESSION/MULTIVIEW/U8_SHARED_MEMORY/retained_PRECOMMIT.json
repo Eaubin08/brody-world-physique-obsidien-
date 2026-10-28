@@ -1,0 +1,18 @@
+{
+  "canonical_promotion": false,
+  "case": "retained",
+  "decision_authority": "KX108_ONLY",
+  "digest": "53f641e5a94405fd1a300643be330529d0c0e85fcf0689bb95b911a328902007",
+  "history": [
+    25.0,
+    29.0,
+    33.0,
+    37.0,
+    41.0,
+    45.0
+  ],
+  "inferred_context": "clean",
+  "memory_digest": "2a41fef477df1176500fa16c2a2e664030e21717d6eb3cb0f3d05a511d6b5f24",
+  "native_memory_write": false,
+  "prediction_x": 49.0
+}

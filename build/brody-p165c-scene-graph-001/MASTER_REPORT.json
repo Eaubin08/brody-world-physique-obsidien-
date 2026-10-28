@@ -1,0 +1,24 @@
+{
+  "schema": "BRODY_P165C_CONTEXTUAL_SCENE_GRAPH_LAB",
+  "cases": {
+    "occlusion_order": "SCENE_CANDIDATE",
+    "depth_unknown": "HOLD",
+    "contradictory_order": "MULTI",
+    "camera_ambiguity": "HOLD",
+    "modal_conflict": "MULTI",
+    "identity_indistinguishable": "SCENE_CANDIDATE",
+    "frame_mismatch": "HOLD"
+  },
+  "cases_completed": 7,
+  "scene_graph_semantics": "CANDIDATES_ONLY",
+  "layer_count_fixed": false,
+  "metric_depth_proven": false,
+  "natural_image_segmentation_connected": false,
+  "camera_estimation_connected": false,
+  "hardware_sensor_connected": false,
+  "real_f12_f16_mmonde_runtime_connected": false,
+  "legacy_77_p165a_150_not_replayed": true,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "BRODY_F13_TRUST_SEPARATION_FUZZING_V0",
+  "cases": 1000,
+  "families": {
+    "baseline": {
+      "count": 100,
+      "f12_wrong": 0,
+      "f13_wrong": 0,
+      "hold": 0,
+      "corroborated": 100
+    },
+    "shift": {
+      "count": 100,
+      "f12_wrong": 0,
+      "f13_wrong": 0,
+      "hold": 100,
+      "corroborated": 0
+    },
+    "eraser": {
+      "count": 100,
+      "f12_wrong": 0,
+      "f13_wrong": 0,
+      "hold": 100,
+      "corroborated": 0
+    },
+    "faint": {
+      "count": 100,
+      "f12_wrong": 0,
+      "f13_wrong": 0,
+      "hold": 100,
+      "corroborated": 0
+    },
+    "partial": {
+      "count": 100,
+      "f12_wrong": 0,
+      "f13_wrong": 0,
+      "hold": 100,
+      "corroborated": 0
+    },
+    "both": {
+      "count": 100,
+      "f12_wrong": 0,
+      "f13_wrong": 0,
+      "hold": 100,
+      "corroborated": 0
+    },
+    "absent": {
+      "count": 100,
+      "f12_wrong": 0,
+      "f13_wrong": 0,
+      "hold": 100,
+      "corroborated": 0
+    },
+    "opposite": {
+      "count": 100,
+      "f12_wrong": 100,
+      "f13_wrong": 0,
+      "hold": 100,
+      "corroborated": 0
+    },
+    "spoof_metadata": {
+      "count": 100,
+      "f12_wrong": 0,
+      "f13_wrong": 0,
+      "hold": 100,
+      "corroborated": 0
+    },
+    "border_noise": {
+      "count": 100,
+      "f12_wrong": 0,
+      "f13_wrong": 0,
+      "hold": 0,
+      "corroborated": 100
+    }
+  },
+  "old_wrong_total": 100,
+  "accepted_wrong_total": 0,
+  "hold_total": 800,
+  "corroborated_total": 200,
+  "receipt_tip": "84514c258de0b60e8cab8a9bf8825f54fab78bbf93a7b0b379383b29b5d47d43",
+  "trust_sources_provided_by_test_harness": true,
+  "no_independent_source_for_spoofed_cases": true,
+  "sensor_authentication_proven": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

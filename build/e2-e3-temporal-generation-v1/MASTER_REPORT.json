@@ -1,0 +1,58 @@
+{
+  "P134_mask_and_renderer_reused": true,
+  "P149_observation_and_estimator_reused": true,
+  "camera_and_identity_beam_fused": false,
+  "canonical_promotion": false,
+  "counterfactual": {
+    "different_hidden_identity_futures": true,
+    "different_histories": true,
+    "history_observations_differ": true,
+    "pixel_sha256": "b46e8df818c3d8a4d35493fc3126d1fae043432b59b6e75336201ed01e9d63d5",
+    "same_final_pixels": true
+  },
+  "decision_authority": "KX108_ONLY",
+  "exam": [
+    {
+      "candidate_mae": 0.0,
+      "case": "regular_A",
+      "generated_sha": "0c8235d5f93a7e93b4079be96a24140a52d7f2903e9dd0543b7a66d6ca7db1e3",
+      "reason": "TRACK_LINEAR_EXTRAPOLATION",
+      "reconstructed_parts": 1,
+      "static_mae": 1.43799,
+      "status": "CANDIDATE",
+      "target_parts": 1,
+      "target_sha": "0c8235d5f93a7e93b4079be96a24140a52d7f2903e9dd0543b7a66d6ca7db1e3"
+    },
+    {
+      "candidate_mae": 0.0,
+      "case": "regular_B",
+      "generated_sha": "78e950991ce378623078619fd0dc5acccee89bedc11eb2c23753e875194d2fa5",
+      "reason": "TRACK_LINEAR_EXTRAPOLATION",
+      "reconstructed_parts": 1,
+      "static_mae": 1.05957,
+      "status": "CANDIDATE",
+      "target_parts": 1,
+      "target_sha": "78e950991ce378623078619fd0dc5acccee89bedc11eb2c23753e875194d2fa5"
+    },
+    {
+      "candidate_mae": 1.85425,
+      "case": "hidden_reversal",
+      "generated_sha": "0c8235d5f93a7e93b4079be96a24140a52d7f2903e9dd0543b7a66d6ca7db1e3",
+      "reason": "TRACK_LINEAR_EXTRAPOLATION",
+      "reconstructed_parts": 1,
+      "static_mae": 1.24878,
+      "status": "CANDIDATE",
+      "target_parts": 1,
+      "target_sha": "17695e27fe49546369d937afea2c2b7315d2c7939cdda3f9da1565b7a2211833"
+    }
+  ],
+  "generator_has_first_frame_object_mask": true,
+  "heldout_future_scored_after_precommit": true,
+  "native_memory_write": false,
+  "physical_understanding_proven": false,
+  "reverse_360_proven": false,
+  "schema": "BRODY_E2_E3_TEMPORAL_STRUCTURAL_GENERATION_V1",
+  "target_geometry_passed_to_generator": false,
+  "target_pixels_passed_to_generator": false,
+  "verdict": "E2_E3_SYNTHETIC_TEMPORAL_MASK_GENERATION"
+}

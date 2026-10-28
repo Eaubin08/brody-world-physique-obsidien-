@@ -1,0 +1,15 @@
+{
+  "index": 2,
+  "previous": "42c7e75b06cee6aa6d341e9f7607d5c108429cbe6e2a56700cf994d7ce46cafe",
+  "kind": "TRAIN_CANDIDATE",
+  "payload": {
+    "skill_id": "triangle",
+    "train_sha256": "b5263adc926c13f6439f71d57cd10f0ee8b2cb8d9f8c3d4c0dd7d0570243713f",
+    "registry_version": 2,
+    "registry_digest": "5960a63c82ad0d9731e7408053f13f514aa02e9cca8b4dde5b596158ed12f780"
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "6b3395e4eb778eb997922384e73dfa3d5b704c3f25c844b6e3ea1419b96cc219"
+}

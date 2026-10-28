@@ -1,0 +1,11 @@
+{
+  "canonical_promotion": false,
+  "coarse_sha": "e5f223fe9fedce82c0ffc7d697d8da2a8a489af185cfc344e9ebac5d286d7671",
+  "decision_authority": "KX108_ONLY",
+  "digest": "a1402f987e1591e52842bcebcfa9944f86a848e4886a837d13f8fc51c48cc228",
+  "exam_input_sha": "080577ade70ef45c7729064ab29e2a46b07238a1b24e8f9d01db96a8c0083eb4",
+  "native_memory_write": false,
+  "source_sha": "51a051bb2d3c53495f81c300dc1a94d2672a0485c03e8952a06eba0e8fba1d9b",
+  "structural_prediction_sha": "d96b250c8b1a63fc31ff0ed3057e91d1024d7f72bbed3de1e9d4e89c2efd6a3c",
+  "training_prototypes": 2
+}

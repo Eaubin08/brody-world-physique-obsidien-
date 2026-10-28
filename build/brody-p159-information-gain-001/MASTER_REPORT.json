@@ -1,0 +1,154 @@
+{
+  "schema": "BRODY_P159_EXPECTED_INFORMATION_GAIN",
+  "conditions_expected": 7,
+  "conditions_completed": 7,
+  "episodes": 980,
+  "duration_seconds": 1.3,
+  "stopped_by": "EXAM_CAP",
+  "frozen_empirical_models": {
+    "flat": {
+      "observe": 0.0,
+      "tap": 0.0,
+      "tilt": 0.0,
+      "weak_tap": 0.0
+    },
+    "slope": {
+      "observe": 0.0,
+      "tap": -1.0,
+      "tilt": -2.0,
+      "weak_tap": -0.5
+    },
+    "spring": {
+      "observe": 0.0,
+      "tap": 1.0,
+      "tilt": 2.0,
+      "weak_tap": 0.5
+    }
+  },
+  "conditions": {
+    "tap_available": {
+      "n": 140,
+      "PROBE": 140,
+      "HOLD_BEFORE": 0,
+      "SELECT": 140,
+      "MULTI": 0,
+      "HOLD_AFTER": 0,
+      "correct_known": 140,
+      "known_total": 140,
+      "novel_total": 0,
+      "novel_hold": 0,
+      "false_known_on_novel": 0,
+      "selected_cost": 35.0,
+      "chosen_actions": {
+        "weak_tap": 140
+      }
+    },
+    "tilt_only": {
+      "n": 140,
+      "PROBE": 140,
+      "HOLD_BEFORE": 0,
+      "SELECT": 140,
+      "MULTI": 0,
+      "HOLD_AFTER": 0,
+      "correct_known": 140,
+      "known_total": 140,
+      "novel_total": 0,
+      "novel_hold": 0,
+      "false_known_on_novel": 0,
+      "selected_cost": 140.0,
+      "chosen_actions": {
+        "tilt": 140
+      }
+    },
+    "weak_only": {
+      "n": 140,
+      "PROBE": 140,
+      "HOLD_BEFORE": 0,
+      "SELECT": 140,
+      "MULTI": 0,
+      "HOLD_AFTER": 0,
+      "correct_known": 140,
+      "known_total": 140,
+      "novel_total": 0,
+      "novel_hold": 0,
+      "false_known_on_novel": 0,
+      "selected_cost": 35.0,
+      "chosen_actions": {
+        "weak_tap": 140
+      }
+    },
+    "no_informative": {
+      "n": 140,
+      "PROBE": 0,
+      "HOLD_BEFORE": 140,
+      "SELECT": 0,
+      "MULTI": 0,
+      "HOLD_AFTER": 140,
+      "correct_known": 0,
+      "known_total": 140,
+      "novel_total": 0,
+      "novel_hold": 0,
+      "false_known_on_novel": 0,
+      "selected_cost": 0.0,
+      "chosen_actions": {}
+    },
+    "cost_sensitive": {
+      "n": 140,
+      "PROBE": 140,
+      "HOLD_BEFORE": 0,
+      "SELECT": 140,
+      "MULTI": 0,
+      "HOLD_AFTER": 0,
+      "correct_known": 140,
+      "known_total": 140,
+      "novel_total": 0,
+      "novel_hold": 0,
+      "false_known_on_novel": 0,
+      "selected_cost": 98.00000000000024,
+      "chosen_actions": {
+        "tap": 140
+      }
+    },
+    "novel_only": {
+      "n": 140,
+      "PROBE": 140,
+      "HOLD_BEFORE": 0,
+      "SELECT": 0,
+      "MULTI": 0,
+      "HOLD_AFTER": 140,
+      "correct_known": 0,
+      "known_total": 0,
+      "novel_total": 140,
+      "novel_hold": 140,
+      "false_known_on_novel": 0,
+      "selected_cost": 98.00000000000024,
+      "chosen_actions": {
+        "tap": 140
+      }
+    },
+    "known_vs_novel": {
+      "n": 140,
+      "PROBE": 140,
+      "HOLD_BEFORE": 0,
+      "SELECT": 102,
+      "MULTI": 0,
+      "HOLD_AFTER": 38,
+      "correct_known": 102,
+      "known_total": 102,
+      "novel_total": 38,
+      "novel_hold": 38,
+      "false_known_on_novel": 0,
+      "selected_cost": 98.00000000000024,
+      "chosen_actions": {
+        "tap": 140
+      }
+    }
+  },
+  "candidate_probes_programmed": true,
+  "probe_selection_uses_exam_truth": false,
+  "real_world_probe_actuation": false,
+  "unknown_regime_detection_guaranteed": false,
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY"
+}

@@ -1,0 +1,35 @@
+{
+  "candidate_memory_file": "feedback_different_skill_steady\\candidate_physics_memory.json",
+  "candidate_memory_sha256": "723f91ed33e1abf0013bba96b66583e2fa01c43e53da953ccd6012a1ad030852",
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "flex": [
+    "screen_position",
+    "illumination",
+    "context",
+    "viewpoint"
+  ],
+  "ignore": [
+    "background_unrelated_to_motion"
+  ],
+  "lock": [
+    "identity_candidate",
+    "object_count",
+    "temporal_order"
+  ],
+  "native_memory_write": false,
+  "schema": "BRODY_EDUCATION_CHECKPOINT_V0",
+  "skill_dependencies": {
+    "prediction": [
+      "object_localization",
+      "time_order"
+    ],
+    "render_reconstruction": [
+      "motion_prediction"
+    ]
+  },
+  "skill_preconditions": {
+    "ball_motion": "four ordered observable frames",
+    "camera_correction": "not supported in this harness"
+  }
+}

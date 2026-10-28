@@ -1,0 +1,9 @@
+{
+  "action": "propose_plus_two",
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "756e37249d327adf2481bdf99da8e886332511c14318c6d7b370317a5b6312d0",
+  "native_memory_write": false,
+  "phase": "acquire",
+  "previous_digest": null
+}

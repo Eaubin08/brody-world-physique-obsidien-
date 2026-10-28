@@ -1,0 +1,15 @@
+{
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "exam_episodes": 3,
+  "memory_outperforms_baseline": false,
+  "mode": "demo",
+  "native_memory_write": false,
+  "paired_memory_advantage_px": 0.0,
+  "real_world_generalization_proven": false,
+  "schema": "BRODY_END_TO_END_PHYSICS_CAMPAIGN_V1",
+  "source_episodes": 6,
+  "source_independence_verified": false,
+  "synthetic_demonstration_only": true,
+  "train_episodes": 3
+}

@@ -1,0 +1,260 @@
+{
+  "summary": {
+    "schema": "BRODY_FORTY_DISTINCT_PROTOCOLS_P136",
+    "total": 40,
+    "domains": 8,
+    "counts": {
+      "PASS": 35,
+      "FAIL": 0,
+      "HOLD": 0,
+      "TODO": 5
+    },
+    "real_world_generalization_proven": false,
+    "native_memory_write": false,
+    "canonical_promotion": false,
+    "decision_authority": "KX108_ONLY"
+  },
+  "cases": [
+    {
+      "id": "connected_components",
+      "domain": "vision",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "red_blue_difference",
+      "domain": "vision",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "grayscale_structure",
+      "domain": "vision",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "component_count_change",
+      "domain": "vision",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "component_orientation",
+      "domain": "vision",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "mirror_shape_invariance",
+      "domain": "geometry",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "translation_pairing",
+      "domain": "geometry",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "scale_sensitivity",
+      "domain": "geometry",
+      "status": "PASS",
+      "detail": "Geometry measured; scale invariance NOT verified"
+    },
+    {
+      "id": "shape_proportion",
+      "domain": "geometry",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "depth_not_inferred",
+      "domain": "geometry",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "rectangle_render",
+      "domain": "generation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "ellipse_render",
+      "domain": "generation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "triangle_render",
+      "domain": "generation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "composite_render",
+      "domain": "generation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "invalid_bbox_rejected",
+      "domain": "generation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "same_image_duplicate",
+      "domain": "education",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "contradictory_teacher",
+      "domain": "education",
+      "status": "PASS",
+      "detail": "Same exact image may not be retaught under another label"
+    },
+    {
+      "id": "two_source_shape_memory",
+      "domain": "education",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "insufficient_shape_teaching",
+      "domain": "education",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "unknown_shape_hold",
+      "domain": "education",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "scene_relation_with_two_groups",
+      "domain": "memory",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "one_group_scene_doubt",
+      "domain": "memory",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "shape_colour_composition",
+      "domain": "memory",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "unknown_symbol_hold",
+      "domain": "memory",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "integrity_digest",
+      "domain": "memory",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "reversal_detected",
+      "domain": "motion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "stop_detected",
+      "domain": "motion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "start_detected",
+      "domain": "motion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "speedup_detected",
+      "domain": "motion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "causal_hypothesis_not_asserted",
+      "domain": "motion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "source_byte_fingerprint",
+      "domain": "robustness",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "nonempty_generated_image",
+      "domain": "robustness",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "out_of_bounds_refused",
+      "domain": "robustness",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "unrecognized_shape_refused",
+      "domain": "robustness",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "source_group_distinction",
+      "domain": "robustness",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "true_three_dimensional_view",
+      "domain": "frontier",
+      "status": "TODO",
+      "detail": "Capability absent or independent source evidence missing"
+    },
+    {
+      "id": "independent_real_physics",
+      "domain": "frontier",
+      "status": "TODO",
+      "detail": "Capability absent or independent source evidence missing"
+    },
+    {
+      "id": "semantic_object_discovery",
+      "domain": "frontier",
+      "status": "TODO",
+      "detail": "Capability absent or independent source evidence missing"
+    },
+    {
+      "id": "real_occlusion_reconstruction",
+      "domain": "frontier",
+      "status": "TODO",
+      "detail": "Capability absent or independent source evidence missing"
+    },
+    {
+      "id": "autonomous_external_exploration",
+      "domain": "frontier",
+      "status": "TODO",
+      "detail": "Capability absent or independent source evidence missing"
+    }
+  ],
+  "digest": "02a72f525cac3a184ee9ff75690ef375b4bd767224b3b88114abf8d6cac85dce"
+}

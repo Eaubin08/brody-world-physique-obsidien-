@@ -1,0 +1,422 @@
+{
+  "canonical_promotion": false,
+  "checkpoint_restore_verified": true,
+  "checkpoint_sha256": "252e6620f2a3d77fa27f56b337ad2af678146707af284fd7fed378122b8eb1e2",
+  "curriculum": [
+    {
+      "evidence_source": "LOCAL_BACKTEST",
+      "feedback": {
+        "canonical_promotion": false,
+        "context": "vertical|speeding_up",
+        "decision_authority": "KX108_ONLY",
+        "errors_px": {
+          "ACCELERATION": 0.0,
+          "STILL": 10.0,
+          "VELOCITY": 2.0
+        },
+        "experiences": 1,
+        "native_memory_write": false,
+        "original_forecast_immutable": true,
+        "schema": "BRODY_CONTEXTUAL_PHYSICS_CORRECTION_V2"
+      },
+      "lesson": "ball_falling_A",
+      "memory_after_sha": "5f759fa8ef740591b36835ab3a5ec881361d9f75acb77dc727cd3422be11a5c2",
+      "memory_before_sha": null,
+      "phase": "TRAIN",
+      "predicted_before_feedback": true,
+      "representation_roundtrip": {
+        "ACCELERATION": {
+          "generated_sha256": "87f6a7269634317a27ab0510841d5c9df0b33131182e9eeeabe5bd5180ca48dd",
+          "predicted_xy": [
+            25.0,
+            38.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            25.0,
+            38.0
+          ],
+          "truth_error_px": 0.0
+        },
+        "STILL": {
+          "generated_sha256": "d62b0b644c49c44f0b133f434fbe808b7486588965174511bee8438db711c566",
+          "predicted_xy": [
+            25.0,
+            28.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            25.0,
+            28.0
+          ],
+          "truth_error_px": 10.0
+        },
+        "VELOCITY": {
+          "generated_sha256": "8f513825fecb75a5d22ff15357c327c69742842e8440344e8f9be780b1da4789",
+          "predicted_xy": [
+            25.0,
+            36.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            25.0,
+            36.0
+          ],
+          "truth_error_px": 2.0
+        }
+      },
+      "selected": "ACCELERATION",
+      "status": "EXPERIENCE_CANDIDATE"
+    },
+    {
+      "evidence_source": "LOCAL_BACKTEST",
+      "feedback": {
+        "canonical_promotion": false,
+        "context": "vertical|speeding_up",
+        "decision_authority": "KX108_ONLY",
+        "errors_px": {
+          "ACCELERATION": 0.0,
+          "STILL": 10.0,
+          "VELOCITY": 2.0
+        },
+        "experiences": 2,
+        "native_memory_write": false,
+        "original_forecast_immutable": true,
+        "schema": "BRODY_CONTEXTUAL_PHYSICS_CORRECTION_V2"
+      },
+      "lesson": "ball_falling_B",
+      "memory_after_sha": "86b2a9e4a013b505010ca76265953d6186577f01d63abfac1f2556cced856ee8",
+      "memory_before_sha": "5f759fa8ef740591b36835ab3a5ec881361d9f75acb77dc727cd3422be11a5c2",
+      "phase": "TRAIN",
+      "predicted_before_feedback": true,
+      "representation_roundtrip": {
+        "ACCELERATION": {
+          "generated_sha256": "72d423ade3277d803e7baff0a3d9cb480a5511f84a873ec1e3e8368231c95ffa",
+          "predicted_xy": [
+            28.0,
+            45.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            28.0,
+            45.0
+          ],
+          "truth_error_px": 0.0
+        },
+        "STILL": {
+          "generated_sha256": "c9e175a2aab16f6f87f9e32c065bf3ba9515695e2ac9a836b733c8001f789ec9",
+          "predicted_xy": [
+            28.0,
+            35.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            28.0,
+            35.0
+          ],
+          "truth_error_px": 10.0
+        },
+        "VELOCITY": {
+          "generated_sha256": "623e4b76e4d6c2a2ac0c436dc2922273b7e7aa984c1ef3b909f8def5f2693e5e",
+          "predicted_xy": [
+            28.0,
+            43.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            28.0,
+            43.0
+          ],
+          "truth_error_px": 2.0
+        }
+      },
+      "selected": "ACCELERATION",
+      "status": "EXPERIENCE_CANDIDATE"
+    },
+    {
+      "evidence_source": "LOCAL_BACKTEST",
+      "feedback": {
+        "canonical_promotion": false,
+        "context": "vertical|steady",
+        "decision_authority": "KX108_ONLY",
+        "errors_px": {
+          "ACCELERATION": 0.0,
+          "STILL": 5.0,
+          "VELOCITY": 0.0
+        },
+        "experiences": 3,
+        "native_memory_write": false,
+        "original_forecast_immutable": true,
+        "schema": "BRODY_CONTEXTUAL_PHYSICS_CORRECTION_V2"
+      },
+      "lesson": "different_skill_steady",
+      "memory_after_sha": "723f91ed33e1abf0013bba96b66583e2fa01c43e53da953ccd6012a1ad030852",
+      "memory_before_sha": "86b2a9e4a013b505010ca76265953d6186577f01d63abfac1f2556cced856ee8",
+      "phase": "TRAIN",
+      "predicted_before_feedback": true,
+      "representation_roundtrip": {
+        "ACCELERATION": {
+          "generated_sha256": "7862183eaf3acae6de1ebe1d9246b7af25b8ce58536d3f4de05c18970e94ed14",
+          "predicted_xy": [
+            31.0,
+            29.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            31.0,
+            29.0
+          ],
+          "truth_error_px": 0.0
+        },
+        "STILL": {
+          "generated_sha256": "cf122e7be099562b354d0b443ad181888ebc199f5e48b96060c917fca3c7258b",
+          "predicted_xy": [
+            31.0,
+            24.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            31.0,
+            24.0
+          ],
+          "truth_error_px": 5.0
+        },
+        "VELOCITY": {
+          "generated_sha256": "7862183eaf3acae6de1ebe1d9246b7af25b8ce58536d3f4de05c18970e94ed14",
+          "predicted_xy": [
+            31.0,
+            29.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            31.0,
+            29.0
+          ],
+          "truth_error_px": 0.0
+        }
+      },
+      "selected": null,
+      "status": "EXPERIENCE_CANDIDATE"
+    }
+  ],
+  "decision_authority": "KX108_ONLY",
+  "education_integrated_full": false,
+  "exams": [
+    {
+      "baseline_choice": "ACCELERATION",
+      "baseline_error_px": 0.0,
+      "baseline_visual_roundtrip": {
+        "ACCELERATION": {
+          "generated_sha256": "b920cbfa7cb384d44aed6387dbb2c5572002c4964b18035fb7a278526de8c657",
+          "predicted_xy": [
+            41.0,
+            50.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            50.0
+          ],
+          "truth_error_px": 0.0
+        },
+        "STILL": {
+          "generated_sha256": "553e1690069b73ed1e574a503559fd80b2ed2855964ad691b303de7f8f25a30f",
+          "predicted_xy": [
+            41.0,
+            40.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            40.0
+          ],
+          "truth_error_px": 10.0
+        },
+        "VELOCITY": {
+          "generated_sha256": "c640b0293203d9be8c6e5d33474e17160927f600d3ca81b361024297a446f0db",
+          "predicted_xy": [
+            41.0,
+            48.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            48.0
+          ],
+          "truth_error_px": 2.0
+        }
+      },
+      "delta_px": 0.0,
+      "exam": "unseen_fall",
+      "exam_feedback_reused_for_training": false,
+      "learned_visual_roundtrip": {
+        "ACCELERATION": {
+          "generated_sha256": "b920cbfa7cb384d44aed6387dbb2c5572002c4964b18035fb7a278526de8c657",
+          "predicted_xy": [
+            41.0,
+            50.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            50.0
+          ],
+          "truth_error_px": 0.0
+        },
+        "STILL": {
+          "generated_sha256": "553e1690069b73ed1e574a503559fd80b2ed2855964ad691b303de7f8f25a30f",
+          "predicted_xy": [
+            41.0,
+            40.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            40.0
+          ],
+          "truth_error_px": 10.0
+        },
+        "VELOCITY": {
+          "generated_sha256": "c640b0293203d9be8c6e5d33474e17160927f600d3ca81b361024297a446f0db",
+          "predicted_xy": [
+            41.0,
+            48.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            48.0
+          ],
+          "truth_error_px": 2.0
+        }
+      },
+      "memory_choice": "ACCELERATION",
+      "memory_eligible_episodes": 2,
+      "memory_error_px": 0.0,
+      "memory_evidence_source": "EXPERIENCE_MATCHED",
+      "observation_vs_prediction_distinct": true
+    },
+    {
+      "baseline_choice": "ACCELERATION",
+      "baseline_error_px": 14.0,
+      "baseline_visual_roundtrip": {
+        "ACCELERATION": {
+          "generated_sha256": "100b70e2fdf22c82b92b26aadaa1a9fc672842597e602677b901f1e9360983ca",
+          "predicted_xy": [
+            41.0,
+            39.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            39.0
+          ],
+          "truth_error_px": 14.0
+        },
+        "STILL": {
+          "generated_sha256": "cc1bc1c9a4426a7ea8cb505acb35908c69ed0c2baa87ac834662a2549fe7ba3d",
+          "predicted_xy": [
+            41.0,
+            29.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            29.0
+          ],
+          "truth_error_px": 4.0
+        },
+        "VELOCITY": {
+          "generated_sha256": "3dad194b4ef215126d62f798cbd120fdd50aa382d0eca9d39291d7c52c33dcdb",
+          "predicted_xy": [
+            41.0,
+            37.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            37.0
+          ],
+          "truth_error_px": 12.0
+        }
+      },
+      "delta_px": 0.0,
+      "exam": "contradictory_reversal",
+      "exam_feedback_reused_for_training": false,
+      "learned_visual_roundtrip": {
+        "ACCELERATION": {
+          "generated_sha256": "100b70e2fdf22c82b92b26aadaa1a9fc672842597e602677b901f1e9360983ca",
+          "predicted_xy": [
+            41.0,
+            39.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            39.0
+          ],
+          "truth_error_px": 14.0
+        },
+        "STILL": {
+          "generated_sha256": "cc1bc1c9a4426a7ea8cb505acb35908c69ed0c2baa87ac834662a2549fe7ba3d",
+          "predicted_xy": [
+            41.0,
+            29.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            29.0
+          ],
+          "truth_error_px": 4.0
+        },
+        "VELOCITY": {
+          "generated_sha256": "3dad194b4ef215126d62f798cbd120fdd50aa382d0eca9d39291d7c52c33dcdb",
+          "predicted_xy": [
+            41.0,
+            37.0
+          ],
+          "roundtrip_error_px": 0.0,
+          "roundtrip_xy": [
+            41.0,
+            37.0
+          ],
+          "truth_error_px": 12.0
+        }
+      },
+      "memory_choice": "ACCELERATION",
+      "memory_eligible_episodes": 2,
+      "memory_error_px": 14.0,
+      "memory_evidence_source": "EXPERIENCE_MATCHED",
+      "observation_vs_prediction_distinct": true
+    }
+  ],
+  "full_reverse_360": false,
+  "generalization_proven": false,
+  "generated_images_are_existing_model_renderings": true,
+  "learned_physical_law_proven": false,
+  "lock_flex_ignore_contract": {
+    "FLEX": [
+      "screen_position",
+      "illumination",
+      "context",
+      "viewpoint"
+    ],
+    "IGNORE": [
+      "background_unrelated_to_motion"
+    ],
+    "LOCK": [
+      "identity_candidate",
+      "object_count",
+      "temporal_order"
+    ]
+  },
+  "native_memory_write": false,
+  "p156_shared_skill_state": false,
+  "roundtrip_is_programmatic_reanalysis": true,
+  "same_experience_perception_prediction_render_comparison": true,
+  "schema": "BRODY_INTEGRATED_EDUCATION_V0",
+  "sens_cognition_mmonde_connected": false,
+  "skill_history_dependencies_explicit": true,
+  "verdict": "INTEGRATED_EDUCATION_V0_CANDIDATE_ONLY"
+}

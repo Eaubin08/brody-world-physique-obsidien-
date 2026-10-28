@@ -1,0 +1,8 @@
+
+test_blind_regeneration_known_unknown_and_composition (test_image_blind_symbolic_regeneration_p135.BlindSymbolicTests.test_blind_regeneration_known_unknown_and_composition) ... ok
+test_group_leak_rejected_before_output (test_image_blind_symbolic_regeneration_p135.BlindSymbolicTests.test_group_leak_rejected_before_output) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.060s
+
+OK

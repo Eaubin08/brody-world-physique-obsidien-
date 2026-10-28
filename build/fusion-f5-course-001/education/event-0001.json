@@ -1,0 +1,15 @@
+{
+  "index": 1,
+  "previous": null,
+  "kind": "TRAIN_CANDIDATE",
+  "payload": {
+    "skill_id": "rectangle",
+    "train_sha256": "1171c1ef06de111818f10fcd06f25506619269bbad17e137fbe82ee87fbed728",
+    "registry_version": 1,
+    "registry_digest": "735b7776a87c7adf7de7ec84f8c63cc1ad3b46530c4572709519dc26d8f81d6a"
+  },
+  "native_memory_write": false,
+  "canonical_promotion": false,
+  "decision_authority": "KX108_ONLY",
+  "digest": "42c7e75b06cee6aa6d341e9f7607d5c108429cbe6e2a56700cf994d7ce46cafe"
+}

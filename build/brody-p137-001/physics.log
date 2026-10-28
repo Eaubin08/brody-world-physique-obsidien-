@@ -1,0 +1,8 @@
+
+test_grouped_full_campaign (test_image_motion_independent_campaign_v1.CampaignTests.test_grouped_full_campaign) ... ok
+test_reject_group_leak (test_image_motion_independent_campaign_v1.CampaignTests.test_reject_group_leak) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.175s
+
+OK

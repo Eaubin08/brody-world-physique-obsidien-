@@ -1,0 +1,7 @@
+{
+  "schema": "BRODY_SIMULATED_EXPERIENCE_MEMORY_V0",
+  "canonical_memory": false,
+  "memory_write_allowed": false,
+  "training": [],
+  "experiences": []
+}
